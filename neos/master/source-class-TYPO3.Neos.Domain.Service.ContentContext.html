@@ -1144,7 +1144,7 @@
 </span></span><span id="60" class="l"><span class="php-comment">     * NOTE: This is for internal use only, you should use the ContextFactory for creating Context instances.
 </span></span><span id="61" class="l"><span class="php-comment">     *
 </span></span><span id="62" class="l"><span class="php-comment">     * @param string $workspaceName Name of the current workspace
-</span></span><span id="63" class="l"><span class="php-comment">     * @param \DateTime $currentDateTime The current date and time
+</span></span><span id="63" class="l"><span class="php-comment">     * @param \DateTimeInterface $currentDateTime The current date and time
 </span></span><span id="64" class="l"><span class="php-comment">     * @param array $dimensions Array of dimensions with array of ordered values
 </span></span><span id="65" class="l"><span class="php-comment">     * @param array $targetDimensions Array of dimensions used when creating / modifying content
 </span></span><span id="66" class="l"><span class="php-comment">     * @param boolean $invisibleContentShown If invisible content should be returned in query results
@@ -1154,7 +1154,7 @@
 </span></span><span id="70" class="l"><span class="php-comment">     * @param Domain $currentDomain The current Domain object
 </span></span><span id="71" class="l"><span class="php-comment">     * @see ContextFactoryInterface
 </span></span><span id="72" class="l"><span class="php-comment">     */</span>
-</span><span id="73" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$workspaceName</span>, \DateTime <span class="php-var">$currentDateTime</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span>, <span class="php-keyword1">array</span> <span class="php-var">$targetDimensions</span>, <span class="php-var">$invisibleContentShown</span>, <span class="php-var">$removedContentShown</span>, <span class="php-var">$inaccessibleContentShown</span>, Site <span class="php-var">$currentSite</span> = <span class="php-keyword1">null</span>, Domain <span class="php-var">$currentDomain</span> = <span class="php-keyword1">null</span>)
+</span><span id="73" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$workspaceName</span>, \DateTimeInterface <span class="php-var">$currentDateTime</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span>, <span class="php-keyword1">array</span> <span class="php-var">$targetDimensions</span>, <span class="php-var">$invisibleContentShown</span>, <span class="php-var">$removedContentShown</span>, <span class="php-var">$inaccessibleContentShown</span>, Site <span class="php-var">$currentSite</span> = <span class="php-keyword1">null</span>, Domain <span class="php-var">$currentDomain</span> = <span class="php-keyword1">null</span>)
 </span><span id="74" class="l">    {
 </span><span id="75" class="l">        parent::__construct(<span class="php-var">$workspaceName</span>, <span class="php-var">$currentDateTime</span>, <span class="php-var">$dimensions</span>, <span class="php-var">$targetDimensions</span>, <span class="php-var">$invisibleContentShown</span>, <span class="php-var">$removedContentShown</span>, <span class="php-var">$inaccessibleContentShown</span>);
 </span><span id="76" class="l">        <span class="php-var">$this</span>-&gt;currentSite = <span class="php-var">$currentSite</span>;

@@ -1447,7 +1447,7 @@
 </span><span id="363" class="l">
 </span><span id="364" class="l">            <span class="php-var">$this</span>-&gt;xmlWriter-&gt;writeAttribute(<span class="php-quote">'__type'</span>, <span class="php-keyword2">gettype</span>(<span class="php-var">$propertyValue</span>));
 </span><span id="365" class="l">            <span class="php-keyword1">try</span> {
-</span><span id="366" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$propertyValue</span>) &amp;&amp; !<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="366" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$propertyValue</span>) &amp;&amp; !<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="367" class="l">                    <span class="php-var">$objectIdentifier</span> = <span class="php-var">$this</span>-&gt;persistenceManager-&gt;getIdentifierByObject(<span class="php-var">$propertyValue</span>);
 </span><span id="368" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$objectIdentifier</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="369" class="l">                        <span class="php-var">$this</span>-&gt;xmlWriter-&gt;writeAttribute(<span class="php-quote">'__identifier'</span>, <span class="php-var">$objectIdentifier</span>);
@@ -1467,7 +1467,7 @@
 </span><span id="383" class="l">                        <span class="php-var">$this</span>-&gt;writeConvertedElement(<span class="php-var">$propertyValue</span>, <span class="php-var">$key</span>, <span class="php-quote">'entry'</span> . <span class="php-var">$key</span>);
 </span><span id="384" class="l">                    }
 </span><span id="385" class="l">                } <span class="php-keyword1">else</span> {
-</span><span id="386" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="386" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="387" class="l">                        <span class="php-var">$this</span>-&gt;xmlWriter-&gt;writeAttribute(<span class="php-quote">'__classname'</span>, <span class="php-quote">'DateTime'</span>);
 </span><span id="388" class="l">                    }
 </span><span id="389" class="l">                    <span class="php-var">$this</span>-&gt;xmlWriter-&gt;text(<span class="php-var">$this</span>-&gt;propertyMapper-&gt;convert(<span class="php-var">$propertyValue</span>, <span class="php-quote">'string'</span>, <span class="php-var">$this</span>-&gt;propertyMappingConfiguration));

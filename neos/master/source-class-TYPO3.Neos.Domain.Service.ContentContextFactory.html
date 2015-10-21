@@ -1197,7 +1197,7 @@
 </span><span id="113" class="l">                    <span class="php-var">$stringParts</span>[] = <span class="php-var">$dimensionName</span> . <span class="php-quote">'='</span> . <span class="php-var">$dimensionValue</span>;
 </span><span id="114" class="l">                }
 </span><span id="115" class="l">                <span class="php-var">$stringValue</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$stringParts</span>);
-</span><span id="116" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="116" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="117" class="l">                <span class="php-var">$stringValue</span> = <span class="php-var">$propertyValue</span>-&gt;getTimestamp();
 </span><span id="118" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> Site) {
 </span><span id="119" class="l">                <span class="php-var">$stringValue</span> = <span class="php-var">$propertyValue</span>-&gt;getNodeName();

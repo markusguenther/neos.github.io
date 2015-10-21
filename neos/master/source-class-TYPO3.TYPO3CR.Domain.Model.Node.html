@@ -1300,7 +1300,7 @@
 </span><span id="216" class="l">    }
 </span><span id="217" class="l">
 </span><span id="218" class="l">    <span class="php-comment">/**
-</span></span><span id="219" class="l"><span class="php-comment">     * @return \DateTime
+</span></span><span id="219" class="l"><span class="php-comment">     * @return \DateTimeInterface
 </span></span><span id="220" class="l"><span class="php-comment">     */</span>
 </span><span id="221" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getCreationDateTime()
 </span><span id="222" class="l">    {
@@ -1308,7 +1308,7 @@
 </span><span id="224" class="l">    }
 </span><span id="225" class="l">
 </span><span id="226" class="l">    <span class="php-comment">/**
-</span></span><span id="227" class="l"><span class="php-comment">     * @return \DateTime
+</span></span><span id="227" class="l"><span class="php-comment">     * @return \DateTimeInterface
 </span></span><span id="228" class="l"><span class="php-comment">     */</span>
 </span><span id="229" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getLastModificationDateTime()
 </span><span id="230" class="l">    {
@@ -1316,10 +1316,10 @@
 </span><span id="232" class="l">    }
 </span><span id="233" class="l">
 </span><span id="234" class="l">    <span class="php-comment">/**
-</span></span><span id="235" class="l"><span class="php-comment">     * @param \DateTime $lastModificationDateTime
+</span></span><span id="235" class="l"><span class="php-comment">     * @param \DateTimeInterface $lastModificationDateTime
 </span></span><span id="236" class="l"><span class="php-comment">     * @return void
 </span></span><span id="237" class="l"><span class="php-comment">     */</span>
-</span><span id="238" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setLastPublicationDateTime(\DateTime <span class="php-var">$lastModificationDateTime</span>)
+</span><span id="238" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setLastPublicationDateTime(\DateTimeInterface <span class="php-var">$lastModificationDateTime</span>)
 </span><span id="239" class="l">    {
 </span><span id="240" class="l">        <span class="php-var">$this</span>-&gt;nodeData-&gt;setLastPublicationDateTime(<span class="php-var">$lastModificationDateTime</span>);
 </span><span id="241" class="l">    }
@@ -2329,7 +2329,7 @@
 </span><span id="1245" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isNodeDataMatchingContext()) {
 </span><span id="1246" class="l">            <span class="php-var">$this</span>-&gt;materializeNodeData();
 </span><span id="1247" class="l">        }
-</span><span id="1248" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;getHiddenAfterDateTime() <span class="php-keyword1">instanceof</span> \DateTime &amp;&amp; <span class="php-var">$dateTime</span> <span class="php-keyword1">instanceof</span> \DateTime &amp;&amp; <span class="php-var">$this</span>-&gt;getHiddenAfterDateTime()-&gt;format(\DateTime::W3C) === <span class="php-var">$dateTime</span>-&gt;format(\DateTime::W3C)) {
+</span><span id="1248" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;getHiddenAfterDateTime() <span class="php-keyword1">instanceof</span> \DateTimeInterface &amp;&amp; <span class="php-var">$dateTime</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface &amp;&amp; <span class="php-var">$this</span>-&gt;getHiddenAfterDateTime()-&gt;format(\DateTime::W3C) === <span class="php-var">$dateTime</span>-&gt;format(\DateTime::W3C)) {
 </span><span id="1249" class="l">            <span class="php-keyword1">return</span>;
 </span><span id="1250" class="l">        }
 </span><span id="1251" class="l">        <span class="php-var">$this</span>-&gt;nodeData-&gt;setHiddenAfterDateTime(<span class="php-var">$dateTime</span>);

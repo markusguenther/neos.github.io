@@ -1316,7 +1316,7 @@
 </span><span id="232" class="l">
 </span><span id="233" class="l">        <span class="php-comment">// Serialize date values to String</span>
 </span><span id="234" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$dataType</span> === <span class="php-quote">'DateTime'</span>) {
-</span><span id="235" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="235" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="236" class="l">                <span class="php-keyword1">return</span> <span class="php-quote">''</span>;
 </span><span id="237" class="l">            }
 </span><span id="238" class="l">            <span class="php-var">$value</span> = <span class="php-keyword1">clone</span> <span class="php-var">$propertyValue</span>;

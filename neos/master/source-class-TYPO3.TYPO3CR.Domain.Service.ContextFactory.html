@@ -1256,7 +1256,7 @@
 </span><span id="172" class="l">                }
 </span><span id="173" class="l">                <span class="php-var">$stringValue</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$stringParts</span>);
 </span><span id="174" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="175" class="l">                <span class="php-var">$stringValue</span> = <span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTime ? <span class="php-var">$propertyValue</span>-&gt;getTimestamp() : (string)<span class="php-var">$propertyValue</span>;
+</span><span id="175" class="l">                <span class="php-var">$stringValue</span> = <span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface ? <span class="php-var">$propertyValue</span>-&gt;getTimestamp() : (string)<span class="php-var">$propertyValue</span>;
 </span><span id="176" class="l">            }
 </span><span id="177" class="l">            <span class="php-var">$identifierSource</span> .= <span class="php-quote">':'</span> . <span class="php-var">$stringValue</span>;
 </span><span id="178" class="l">        }
@@ -1292,7 +1292,7 @@
 </span><span id="208" class="l">            }
 </span><span id="209" class="l">        }
 </span><span id="210" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'currentDateTime'</span>])) {
-</span><span id="211" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$contextProperties</span>[<span class="php-quote">'currentDateTime'</span>] <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="211" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$contextProperties</span>[<span class="php-quote">'currentDateTime'</span>] <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="212" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeContextException(<span class="php-quote">'You tried to set currentDateTime in the context and did not provide a DateTime object as value.'</span>, <span class="php-num">1373145297</span>);
 </span><span id="213" class="l">            }
 </span><span id="214" class="l">        }
