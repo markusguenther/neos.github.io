@@ -1836,14 +1836,14 @@
 </span></span><span id="84" class="l"><span class="php-comment">     * Format is remembered in this classes cache and won't be parsed again for
 </span></span><span id="85" class="l"><span class="php-comment">     * some time.
 </span></span><span id="86" class="l"><span class="php-comment">     *
-</span></span><span id="87" class="l"><span class="php-comment">     * @param \DateTime $dateTime PHP object representing particular point in time
+</span></span><span id="87" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime PHP object representing particular point in time
 </span></span><span id="88" class="l"><span class="php-comment">     * @param string $format Format string
 </span></span><span id="89" class="l"><span class="php-comment">     * @param \TYPO3\Flow\I18n\Locale $locale A locale used for finding literals array
 </span></span><span id="90" class="l"><span class="php-comment">     * @return string Formatted date / time. Unimplemented subformats in format string will be silently ignored
 </span></span><span id="91" class="l"><span class="php-comment">     * @api
 </span></span><span id="92" class="l"><span class="php-comment">     * @see \TYPO3\Flow\I18n\Cldr\Reader\DatesReader
 </span></span><span id="93" class="l"><span class="php-comment">     */</span>
-</span><span id="94" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatDateTimeWithCustomPattern(\DateTime <span class="php-var">$dateTime</span>, <span class="php-var">$format</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>)
+</span><span id="94" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatDateTimeWithCustomPattern(\DateTimeInterface <span class="php-var">$dateTime</span>, <span class="php-var">$format</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>)
 </span><span id="95" class="l">    {
 </span><span id="96" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;doFormattingWithParsedFormat(<span class="php-var">$dateTime</span>, <span class="php-var">$this</span>-&gt;datesReader-&gt;parseCustomFormat(<span class="php-var">$format</span>), <span class="php-var">$this</span>-&gt;datesReader-&gt;getLocalizedLiteralsForLocale(<span class="php-var">$locale</span>));
 </span><span id="97" class="l">    }
@@ -1852,13 +1852,13 @@
 </span></span><span id="100" class="l"><span class="php-comment">     * Formats date with format string for date defined in CLDR for particular
 </span></span><span id="101" class="l"><span class="php-comment">     * locale.
 </span></span><span id="102" class="l"><span class="php-comment">     *
-</span></span><span id="103" class="l"><span class="php-comment">     * @param \DateTime $date PHP object representing particular point in time
+</span></span><span id="103" class="l"><span class="php-comment">     * @param \DateTimeInterface $date PHP object representing particular point in time
 </span></span><span id="104" class="l"><span class="php-comment">     * @param \TYPO3\Flow\I18n\Locale $locale
 </span></span><span id="105" class="l"><span class="php-comment">     * @param string $formatLength One of DatesReader FORMAT_LENGTH constants
 </span></span><span id="106" class="l"><span class="php-comment">     * @return string Formatted date
 </span></span><span id="107" class="l"><span class="php-comment">     * @api
 </span></span><span id="108" class="l"><span class="php-comment">     */</span>
-</span><span id="109" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatDate(\DateTime <span class="php-var">$date</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_LENGTH_DEFAULT)
+</span><span id="109" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatDate(\DateTimeInterface <span class="php-var">$date</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_LENGTH_DEFAULT)
 </span><span id="110" class="l">    {
 </span><span id="111" class="l">        \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::validateFormatLength(<span class="php-var">$formatLength</span>);
 </span><span id="112" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;doFormattingWithParsedFormat(<span class="php-var">$date</span>, <span class="php-var">$this</span>-&gt;datesReader-&gt;parseFormatFromCldr(<span class="php-var">$locale</span>, \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_TYPE_DATE, <span class="php-var">$formatLength</span>), <span class="php-var">$this</span>-&gt;datesReader-&gt;getLocalizedLiteralsForLocale(<span class="php-var">$locale</span>));
@@ -1868,13 +1868,13 @@
 </span></span><span id="116" class="l"><span class="php-comment">     * Formats time with format string for time defined in CLDR for particular
 </span></span><span id="117" class="l"><span class="php-comment">     * locale.
 </span></span><span id="118" class="l"><span class="php-comment">     *
-</span></span><span id="119" class="l"><span class="php-comment">     * @param \DateTime $time PHP object representing particular point in time
+</span></span><span id="119" class="l"><span class="php-comment">     * @param \DateTimeInterface $time PHP object representing particular point in time
 </span></span><span id="120" class="l"><span class="php-comment">     * @param \TYPO3\Flow\I18n\Locale $locale
 </span></span><span id="121" class="l"><span class="php-comment">     * @param string $formatLength One of DatesReader FORMAT_LENGTH constants
 </span></span><span id="122" class="l"><span class="php-comment">     * @return string Formatted time
 </span></span><span id="123" class="l"><span class="php-comment">     * @api
 </span></span><span id="124" class="l"><span class="php-comment">     */</span>
-</span><span id="125" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatTime(\DateTime <span class="php-var">$time</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_LENGTH_DEFAULT)
+</span><span id="125" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatTime(\DateTimeInterface <span class="php-var">$time</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_LENGTH_DEFAULT)
 </span><span id="126" class="l">    {
 </span><span id="127" class="l">        \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::validateFormatLength(<span class="php-var">$formatLength</span>);
 </span><span id="128" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;doFormattingWithParsedFormat(<span class="php-var">$time</span>, <span class="php-var">$this</span>-&gt;datesReader-&gt;parseFormatFromCldr(<span class="php-var">$locale</span>, \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_TYPE_TIME, <span class="php-var">$formatLength</span>), <span class="php-var">$this</span>-&gt;datesReader-&gt;getLocalizedLiteralsForLocale(<span class="php-var">$locale</span>));
@@ -1887,13 +1887,13 @@
 </span></span><span id="135" class="l"><span class="php-comment">     * First date and time are formatted separately, and then dateTime format
 </span></span><span id="136" class="l"><span class="php-comment">     * from CLDR is used to place date and time in correct order.
 </span></span><span id="137" class="l"><span class="php-comment">     *
-</span></span><span id="138" class="l"><span class="php-comment">     * @param \DateTime $dateTime PHP object representing particular point in time
+</span></span><span id="138" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime PHP object representing particular point in time
 </span></span><span id="139" class="l"><span class="php-comment">     * @param \TYPO3\Flow\I18n\Locale $locale
 </span></span><span id="140" class="l"><span class="php-comment">     * @param string $formatLength One of DatesReader FORMAT_LENGTH constants
 </span></span><span id="141" class="l"><span class="php-comment">     * @return string Formatted date and time
 </span></span><span id="142" class="l"><span class="php-comment">     * @api
 </span></span><span id="143" class="l"><span class="php-comment">     */</span>
-</span><span id="144" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatDateTime(\DateTime <span class="php-var">$dateTime</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_LENGTH_DEFAULT)
+</span><span id="144" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> formatDateTime(\DateTimeInterface <span class="php-var">$dateTime</span>, \TYPO3\Flow\I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_LENGTH_DEFAULT)
 </span><span id="145" class="l">    {
 </span><span id="146" class="l">        \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::validateFormatLength(<span class="php-var">$formatLength</span>);
 </span><span id="147" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;doFormattingWithParsedFormat(<span class="php-var">$dateTime</span>, <span class="php-var">$this</span>-&gt;datesReader-&gt;parseFormatFromCldr(<span class="php-var">$locale</span>, \TYPO3\Flow\I18n\Cldr\Reader\DatesReader::FORMAT_TYPE_DATETIME, <span class="php-var">$formatLength</span>), <span class="php-var">$this</span>-&gt;datesReader-&gt;getLocalizedLiteralsForLocale(<span class="php-var">$locale</span>));
@@ -1905,12 +1905,12 @@
 </span></span><span id="153" class="l"><span class="php-comment">     * Format rules defined in $parsedFormat array are used. Localizable literals
 </span></span><span id="154" class="l"><span class="php-comment">     * are replaced with elements from $localizedLiterals array.
 </span></span><span id="155" class="l"><span class="php-comment">     *
-</span></span><span id="156" class="l"><span class="php-comment">     * @param \DateTime $dateTime PHP object representing particular point in time
+</span></span><span id="156" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime PHP object representing particular point in time
 </span></span><span id="157" class="l"><span class="php-comment">     * @param array $parsedFormat An array describing format (as in $parsedFormats property)
 </span></span><span id="158" class="l"><span class="php-comment">     * @param array $localizedLiterals An array with literals to use (as in $localizedLiterals property)
 </span></span><span id="159" class="l"><span class="php-comment">     * @return string Formatted date / time
 </span></span><span id="160" class="l"><span class="php-comment">     */</span>
-</span><span id="161" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doFormattingWithParsedFormat(\DateTime <span class="php-var">$dateTime</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFormat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedLiterals</span>)
+</span><span id="161" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doFormattingWithParsedFormat(\DateTimeInterface <span class="php-var">$dateTime</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFormat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedLiterals</span>)
 </span><span id="162" class="l">    {
 </span><span id="163" class="l">        <span class="php-var">$formattedDateTime</span> = <span class="php-quote">''</span>;
 </span><span id="164" class="l">
@@ -1938,14 +1938,14 @@
 </span></span><span id="186" class="l"><span class="php-comment">     * Cases in the code are ordered in such way that probably mostly used are
 </span></span><span id="187" class="l"><span class="php-comment">     * on the top (but they are also grouped by similarity).
 </span></span><span id="188" class="l"><span class="php-comment">     *
-</span></span><span id="189" class="l"><span class="php-comment">     * @param \DateTime $dateTime PHP object representing particular point in time
+</span></span><span id="189" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime PHP object representing particular point in time
 </span></span><span id="190" class="l"><span class="php-comment">     * @param string $subformat One element of format string (e.g., 'yyyy', 'mm', etc)
 </span></span><span id="191" class="l"><span class="php-comment">     * @param array $localizedLiterals Array of date / time literals from CLDR
 </span></span><span id="192" class="l"><span class="php-comment">     * @return string Formatted part of date / time
 </span></span><span id="193" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\I18n\Exception\InvalidArgumentException When $subformat use symbol that is not recognized
 </span></span><span id="194" class="l"><span class="php-comment">     * @see \TYPO3\Flow\I18n\Cldr\Reader\DatesReader
 </span></span><span id="195" class="l"><span class="php-comment">     */</span>
-</span><span id="196" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doFormattingForSubpattern(\DateTime <span class="php-var">$dateTime</span>, <span class="php-var">$subformat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedLiterals</span>)
+</span><span id="196" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doFormattingForSubpattern(\DateTimeInterface <span class="php-var">$dateTime</span>, <span class="php-var">$subformat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedLiterals</span>)
 </span><span id="197" class="l">    {
 </span><span id="198" class="l">        <span class="php-var">$formatLengthOfSubformat</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$subformat</span>);
 </span><span id="199" class="l">

@@ -2021,7 +2021,7 @@
 </span></span><span id="269" class="l"><span class="php-comment">     */</span>
 </span><span id="270" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> transformObject(<span class="php-var">$object</span>, <span class="php-keyword1">array</span> <span class="php-var">$configuration</span>)
 </span><span id="271" class="l">    {
-</span><span id="272" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="272" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="273" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$object</span>-&gt;format(\DateTime::ISO8601);
 </span><span id="274" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="275" class="l">            <span class="php-var">$propertyNames</span> = \TYPO3\Flow\Reflection\ObjectAccess::getGettablePropertyNames(<span class="php-var">$object</span>);

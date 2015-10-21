@@ -1858,7 +1858,7 @@
 </span><span id="106" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-quote">'The &quot;Set-Cookie&quot; headers must be set via setCookie().'</span>, <span class="php-num">1345128153</span>);
 </span><span id="107" class="l">        }
 </span><span id="108" class="l">
-</span><span id="109" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$values</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="109" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$values</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="110" class="l">            <span class="php-var">$date</span> = <span class="php-keyword1">clone</span> <span class="php-var">$values</span>;
 </span><span id="111" class="l">            <span class="php-var">$date</span>-&gt;setTimezone(<span class="php-keyword1">new</span> \DateTimeZone(<span class="php-quote">'GMT'</span>));
 </span><span id="112" class="l">            <span class="php-var">$values</span> = <span class="php-keyword1">array</span>(<span class="php-var">$date</span>-&gt;format(<span class="php-quote">'D, d M Y H:i:s'</span>) . <span class="php-quote">' GMT'</span>);

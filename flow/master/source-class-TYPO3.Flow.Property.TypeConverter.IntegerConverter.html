@@ -1805,7 +1805,7 @@
 </span></span><span id="53" class="l"><span class="php-comment">     */</span>
 </span><span id="54" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = <span class="php-keyword1">array</span>(), \TYPO3\Flow\Property\PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>)
 </span><span id="55" class="l">    {
-</span><span id="56" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$source</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="56" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$source</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="57" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$source</span>-&gt;format(<span class="php-quote">'U'</span>);
 </span><span id="58" class="l">        }
 </span><span id="59" class="l">

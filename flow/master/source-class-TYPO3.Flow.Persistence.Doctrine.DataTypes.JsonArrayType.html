@@ -1921,7 +1921,7 @@
 </span><span id="169" class="l">
 </span><span id="170" class="l">            <span class="php-var">$propertyClassName</span> = TypeHandling::getTypeForValue(<span class="php-var">$value</span>);
 </span><span id="171" class="l">
-</span><span id="172" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$value</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="172" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$value</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="173" class="l">                <span class="php-var">$value</span> = <span class="php-keyword1">array</span>(
 </span><span id="174" class="l">                    <span class="php-quote">'date'</span> =&gt; <span class="php-var">$value</span>-&gt;format(<span class="php-quote">'Y-m-d H:i:s.u'</span>),
 </span><span id="175" class="l">                    <span class="php-quote">'timezone'</span> =&gt; <span class="php-var">$value</span>-&gt;format(<span class="php-quote">'e'</span>),

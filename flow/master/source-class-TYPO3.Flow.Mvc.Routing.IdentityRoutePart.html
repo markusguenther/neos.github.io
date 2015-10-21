@@ -2025,7 +2025,7 @@
 </span><span id="273" class="l">                <span class="php-var">$propertyPath</span> = <span class="php-var">$dynamicPathSegmentParts</span>[<span class="php-num">0</span>];
 </span><span id="274" class="l">                <span class="php-var">$dynamicPathSegment</span> = ObjectAccess::getPropertyPath(<span class="php-var">$object</span>, <span class="php-var">$propertyPath</span>);
 </span><span id="275" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$dynamicPathSegment</span>)) {
-</span><span id="276" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$dynamicPathSegment</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="276" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$dynamicPathSegment</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="277" class="l">                        <span class="php-var">$dateFormat</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$dynamicPathSegmentParts</span>[<span class="php-num">1</span>]) ? <span class="php-keyword2">trim</span>(<span class="php-var">$dynamicPathSegmentParts</span>[<span class="php-num">1</span>]) : <span class="php-quote">'Y-m-d'</span>;
 </span><span id="278" class="l">                        <span class="php-var">$pathSegment</span> .= <span class="php-var">$this</span>-&gt;rewriteForUri(<span class="php-var">$dynamicPathSegment</span>-&gt;format(<span class="php-var">$dateFormat</span>));
 </span><span id="279" class="l">                    } <span class="php-keyword1">else</span> {

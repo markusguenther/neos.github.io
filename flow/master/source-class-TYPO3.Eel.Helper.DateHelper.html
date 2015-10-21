@@ -1796,7 +1796,7 @@
 </span></span><span id="44" class="l"><span class="php-comment">     */</span>
 </span><span id="45" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> format(<span class="php-var">$date</span>, <span class="php-var">$format</span>)
 </span><span id="46" class="l">    {
-</span><span id="47" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$date</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="47" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$date</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="48" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-var">$format</span>);
 </span><span id="49" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-var">$date</span> <span class="php-keyword1">instanceof</span> \DateInterval) {
 </span><span id="50" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-var">$format</span>);
@@ -1879,10 +1879,10 @@
 </span><span id="127" class="l">    <span class="php-comment">/**
 </span></span><span id="128" class="l"><span class="php-comment">     * Get the day of month of a date
 </span></span><span id="129" class="l"><span class="php-comment">     *
-</span></span><span id="130" class="l"><span class="php-comment">     * @param \DateTime $dateTime
+</span></span><span id="130" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime
 </span></span><span id="131" class="l"><span class="php-comment">     * @return integer The day of month of the given date
 </span></span><span id="132" class="l"><span class="php-comment">     */</span>
-</span><span id="133" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> dayOfMonth(\DateTime <span class="php-var">$dateTime</span>)
+</span><span id="133" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> dayOfMonth(\DateTimeInterface <span class="php-var">$dateTime</span>)
 </span><span id="134" class="l">    {
 </span><span id="135" class="l">        <span class="php-keyword1">return</span> (integer)<span class="php-var">$dateTime</span>-&gt;format(<span class="php-quote">'d'</span>);
 </span><span id="136" class="l">    }
@@ -1890,10 +1890,10 @@
 </span><span id="138" class="l">    <span class="php-comment">/**
 </span></span><span id="139" class="l"><span class="php-comment">     * Get the month of a date
 </span></span><span id="140" class="l"><span class="php-comment">     *
-</span></span><span id="141" class="l"><span class="php-comment">     * @param \DateTime $dateTime
+</span></span><span id="141" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime
 </span></span><span id="142" class="l"><span class="php-comment">     * @return integer The month of the given date
 </span></span><span id="143" class="l"><span class="php-comment">     */</span>
-</span><span id="144" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> month(\DateTime <span class="php-var">$dateTime</span>)
+</span><span id="144" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> month(\DateTimeInterface <span class="php-var">$dateTime</span>)
 </span><span id="145" class="l">    {
 </span><span id="146" class="l">        <span class="php-keyword1">return</span> (integer)<span class="php-var">$dateTime</span>-&gt;format(<span class="php-quote">'m'</span>);
 </span><span id="147" class="l">    }
@@ -1901,10 +1901,10 @@
 </span><span id="149" class="l">    <span class="php-comment">/**
 </span></span><span id="150" class="l"><span class="php-comment">     * Get the year of a date
 </span></span><span id="151" class="l"><span class="php-comment">     *
-</span></span><span id="152" class="l"><span class="php-comment">     * @param \DateTime $dateTime
+</span></span><span id="152" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime
 </span></span><span id="153" class="l"><span class="php-comment">     * @return integer The year of the given date
 </span></span><span id="154" class="l"><span class="php-comment">     */</span>
-</span><span id="155" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> year(\DateTime <span class="php-var">$dateTime</span>)
+</span><span id="155" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> year(\DateTimeInterface <span class="php-var">$dateTime</span>)
 </span><span id="156" class="l">    {
 </span><span id="157" class="l">        <span class="php-keyword1">return</span> (integer)<span class="php-var">$dateTime</span>-&gt;format(<span class="php-quote">'Y'</span>);
 </span><span id="158" class="l">    }
@@ -1912,10 +1912,10 @@
 </span><span id="160" class="l">    <span class="php-comment">/**
 </span></span><span id="161" class="l"><span class="php-comment">     * Get the hour of a date (24 hour format)
 </span></span><span id="162" class="l"><span class="php-comment">     *
-</span></span><span id="163" class="l"><span class="php-comment">     * @param \DateTime $dateTime
+</span></span><span id="163" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime
 </span></span><span id="164" class="l"><span class="php-comment">     * @return integer The hour of the given date
 </span></span><span id="165" class="l"><span class="php-comment">     */</span>
-</span><span id="166" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hour(\DateTime <span class="php-var">$dateTime</span>)
+</span><span id="166" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hour(\DateTimeInterface <span class="php-var">$dateTime</span>)
 </span><span id="167" class="l">    {
 </span><span id="168" class="l">        <span class="php-keyword1">return</span> (integer)<span class="php-var">$dateTime</span>-&gt;format(<span class="php-quote">'H'</span>);
 </span><span id="169" class="l">    }
@@ -1923,10 +1923,10 @@
 </span><span id="171" class="l">    <span class="php-comment">/**
 </span></span><span id="172" class="l"><span class="php-comment">     * Get the minute of a date
 </span></span><span id="173" class="l"><span class="php-comment">     *
-</span></span><span id="174" class="l"><span class="php-comment">     * @param \DateTime $dateTime
+</span></span><span id="174" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime
 </span></span><span id="175" class="l"><span class="php-comment">     * @return integer The minute of the given date
 </span></span><span id="176" class="l"><span class="php-comment">     */</span>
-</span><span id="177" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> minute(\DateTime <span class="php-var">$dateTime</span>)
+</span><span id="177" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> minute(\DateTimeInterface <span class="php-var">$dateTime</span>)
 </span><span id="178" class="l">    {
 </span><span id="179" class="l">        <span class="php-keyword1">return</span> (integer)<span class="php-var">$dateTime</span>-&gt;format(<span class="php-quote">'i'</span>);
 </span><span id="180" class="l">    }
@@ -1934,10 +1934,10 @@
 </span><span id="182" class="l">    <span class="php-comment">/**
 </span></span><span id="183" class="l"><span class="php-comment">     * Get the second of a date
 </span></span><span id="184" class="l"><span class="php-comment">     *
-</span></span><span id="185" class="l"><span class="php-comment">     * @param \DateTime $dateTime
+</span></span><span id="185" class="l"><span class="php-comment">     * @param \DateTimeInterface $dateTime
 </span></span><span id="186" class="l"><span class="php-comment">     * @return integer The second of the given date
 </span></span><span id="187" class="l"><span class="php-comment">     */</span>
-</span><span id="188" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> second(\DateTime <span class="php-var">$dateTime</span>)
+</span><span id="188" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> second(\DateTimeInterface <span class="php-var">$dateTime</span>)
 </span><span id="189" class="l">    {
 </span><span id="190" class="l">        <span class="php-keyword1">return</span> (integer)<span class="php-var">$dateTime</span>-&gt;format(<span class="php-quote">'s'</span>);
 </span><span id="191" class="l">    }

@@ -2334,7 +2334,7 @@
 </span><span id="582" class="l">
 </span><span id="583" class="l">        <span class="php-var">$values</span> = <span class="php-keyword1">array</span>();
 </span><span id="584" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$array</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
-</span><span id="585" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$value</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="585" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$value</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="586" class="l">                <span class="php-var">$values</span>[] = <span class="php-keyword1">array</span>(
 </span><span id="587" class="l">                    <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'DateTime'</span>,
 </span><span id="588" class="l">                    <span class="php-quote">'index'</span> =&gt; <span class="php-var">$key</span>,
@@ -2469,7 +2469,7 @@
 </span><span id="717" class="l">
 </span><span id="718" class="l">        <span class="php-var">$values</span> = <span class="php-keyword1">array</span>();
 </span><span id="719" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$splObjectStorage</span> <span class="php-keyword1">as</span> <span class="php-var">$object</span>) {
-</span><span id="720" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="720" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="721" class="l">                <span class="php-var">$values</span>[] = <span class="php-keyword1">array</span>(
 </span><span id="722" class="l">                    <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'DateTime'</span>,
 </span><span id="723" class="l">                    <span class="php-quote">'index'</span> =&gt; <span class="php-keyword1">null</span>,
@@ -2527,9 +2527,9 @@
 </span></span><span id="775" class="l"><span class="php-comment">     * @param \DateTime $dateTime
 </span></span><span id="776" class="l"><span class="php-comment">     * @return integer
 </span></span><span id="777" class="l"><span class="php-comment">     */</span>
-</span><span id="778" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> processDateTime(\DateTime <span class="php-var">$dateTime</span> = <span class="php-keyword1">null</span>)
+</span><span id="778" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> processDateTime(\DateTimeInterface <span class="php-var">$dateTime</span> = <span class="php-keyword1">null</span>)
 </span><span id="779" class="l">    {
-</span><span id="780" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$dateTime</span> <span class="php-keyword1">instanceof</span> \DateTime) {
+</span><span id="780" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$dateTime</span> <span class="php-keyword1">instanceof</span> \DateTimeInterface) {
 </span><span id="781" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$dateTime</span>-&gt;getTimestamp();
 </span><span id="782" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="783" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">null</span>;
