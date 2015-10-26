@@ -33,7 +33,6 @@
 					<li class="active">
 <span>Class</span>					</li>
 
-					<li class="divider-vertical"></li>
 
 
 						<li>
@@ -824,7 +823,7 @@
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#20-244" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/Routing/Router.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#21-265" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/Routing/Router.php</a>
 		<br>
 	</div>
 
@@ -844,7 +843,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRoutesConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#71-81" title="Go to source code">setRoutesConfiguration</a>( <span>array <var>$routesConfiguration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#78-88" title="Go to source code">setRoutesConfiguration</a>( <span>array <var>$routesConfiguration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the routes configuration.</p>
@@ -857,7 +856,7 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$routesConfiguration</var></dt>
-						<dd>The routes configuration</dd>
+						<dd>The routes configuration or NULL if it should be fetched from configuration</dd>
 					</dl></div>
 
 
@@ -878,7 +877,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_route">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#83-114" title="Go to source code">route</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#90-121" title="Go to source code">route</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
 
 			<div class="description short">
 				<p>Iterates through all configured routes and calls matches() on them.
@@ -922,7 +921,7 @@ route could be found.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastMatchedRoute">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#116-125" title="Go to source code">getLastMatchedRoute</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#123-132" title="Go to source code">getLastMatchedRoute</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the route that has been matched with the last route() call.
@@ -957,7 +956,7 @@ Returns NULL if no route matched or route() has not been called yet</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRoutes">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#127-136" title="Go to source code">getRoutes</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#134-143" title="Go to source code">getRoutes</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a list of configured routes</p>
@@ -990,7 +989,7 @@ Returns NULL if no route matched or route() has not been called yet</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addRoute">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#138-148" title="Go to source code">addRoute</a>( <span><code><a href="class-TYPO3.Flow.Mvc.Routing.Route.html">TYPO3\Flow\Mvc\Routing\Route</a></code> <var>$route</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#145-155" title="Go to source code">addRoute</a>( <span><code><a href="class-TYPO3.Flow.Mvc.Routing.Route.html">TYPO3\Flow\Mvc\Routing\Route</a></code> <var>$route</var></span> )</code>
 
 			<div class="description short">
 				<p>Manually adds a route to the beginning of the configured routes</p>
@@ -1024,7 +1023,7 @@ Returns NULL if no route matched or route() has not been called yet</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolve">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#150-183" title="Go to source code">resolve</a>( <span>array <var>$routeValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#157-190" title="Go to source code">resolve</a>( <span>array <var>$routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds the corresponding uri (excluding protocol and host) by iterating
@@ -1074,7 +1073,7 @@ Note: calls of this message are cached by RouterCachingAspect</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastResolvedRoute">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#185-194" title="Go to source code">getLastResolvedRoute</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#192-201" title="Go to source code">getLastResolvedRoute</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the route that has been resolved with the last resolve() call.
@@ -1109,7 +1108,7 @@ Returns NULL if no route was found or resolve() has not been called yet</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createRoutesFromConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#196-243" title="Go to source code">createRoutesFromConfiguration</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#203-252" title="Go to source code">createRoutesFromConfiguration</a>( )</code>
 
 			<div class="description short">
 				<p>Creates \TYPO3\Flow\Mvc\Routing\Route objects from the injected routes
@@ -1127,6 +1126,35 @@ configuration.</p>
 					<div class="list">
 						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidRouteSetupException.html">TYPO3\Flow\Mvc\Exception\InvalidRouteSetupException</a></code>
 					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="initializeRoutesConfiguration" id="_initializeRoutesConfiguration">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_initializeRoutesConfiguration">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#254-264" title="Go to source code">initializeRoutesConfiguration</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if a routes configuration was set and otherwise loads the configuration from the configuration manager.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if a routes configuration was set and otherwise loads the configuration from the configuration manager.</p>
+
+
+
+
 
 
 
@@ -1156,7 +1184,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#28-32" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#29-33" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -1177,6 +1205,34 @@ configuration.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="configurationManager" id="$configurationManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Configuration.ConfigurationManager.html">TYPO3\Flow\Configuration\ConfigurationManager</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#35-39" title="Go to source code"><var>$configurationManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$configurationManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="routerCachingService" id="$routerCachingService">
 			<td class="attributes"><code>
 				protected  
@@ -1184,7 +1240,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#34-38" title="Go to source code"><var>$routerCachingService</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#41-45" title="Go to source code"><var>$routerCachingService</var></a>
 
 				<div class="description short">
 					
@@ -1212,7 +1268,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#40-45" title="Go to source code"><var>$routesConfiguration</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#47-52" title="Go to source code"><var>$routesConfiguration</var></a>
 
 				<div class="description short">
 					<p>Array containing the configuration for all routes</p>
@@ -1226,7 +1282,7 @@ configuration.</p>
 			<td class="value">
 				<div>
 					<a href="#$routesConfiguration" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code><span class="php-keyword1">null</span></code>
 				</div>
 			</td>
 		</tr>
@@ -1237,7 +1293,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#47-52" title="Go to source code"><var>$routes</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#54-59" title="Go to source code"><var>$routes</var></a>
 
 				<div class="description short">
 					<p>Array of routes to match against</p>
@@ -1262,7 +1318,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#54-59" title="Go to source code"><var>$routesCreated</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#61-66" title="Go to source code"><var>$routesCreated</var></a>
 
 				<div class="description short">
 					<p>TRUE if route object have been created, otherwise FALSE</p>
@@ -1287,7 +1343,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#61-64" title="Go to source code"><var>$lastMatchedRoute</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#68-71" title="Go to source code"><var>$lastMatchedRoute</var></a>
 
 				<div class="description short">
 					
@@ -1312,7 +1368,7 @@ configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#66-69" title="Go to source code"><var>$lastResolvedRoute</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Routing.Router.html#73-76" title="Go to source code"><var>$lastResolvedRoute</var></a>
 
 				<div class="description short">
 					
