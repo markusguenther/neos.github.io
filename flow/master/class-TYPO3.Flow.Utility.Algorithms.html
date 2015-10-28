@@ -853,7 +853,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Algorithms.html#18-70" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Utility/Algorithms.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Algorithms.html#19-77" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Utility/Algorithms.php</a>
 		<br>
 	</div>
 
@@ -873,7 +873,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateUUID">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#25-35" title="Go to source code">generateUUID</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#26-42" title="Go to source code">generateUUID</a>( )</code>
 
 			<div class="description short">
 				<p>Generates a universally unique identifier (UUID) according to RFC 4122.
@@ -883,6 +883,8 @@ The algorithm used here, might not be completely random.</p>
 			<div class="description detailed hidden">
 				<p>Generates a universally unique identifier (UUID) according to RFC 4122.
 The algorithm used here, might not be completely random.</p>
+
+<p>If php-uuid was installed it will be used instead to speed up the process.</p>
 
 
 
@@ -894,7 +896,7 @@ The algorithm used here, might not be completely random.</p>
 
 					<h4>Todo</h4>
 					<div class="list">
-							check for randomness, optionally generate type 1 and type 5 UUIDs, use php5-uuid extension if available<br>
+							Optionally generate type 1 and type 5 UUIDs.<br>
 					</div>
 
 
@@ -912,7 +914,7 @@ The algorithm used here, might not be completely random.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateRandomBytes">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#37-46" title="Go to source code">generateRandomBytes</a>( <span>integer <var>$count</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#44-53" title="Go to source code">generateRandomBytes</a>( <span>integer <var>$count</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a string of random bytes.</p>
@@ -950,7 +952,7 @@ The algorithm used here, might not be completely random.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateRandomToken">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#48-57" title="Go to source code">generateRandomToken</a>( <span>integer <var>$count</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#55-64" title="Go to source code">generateRandomToken</a>( <span>integer <var>$count</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a random token in hex format.</p>
@@ -988,7 +990,7 @@ The algorithm used here, might not be completely random.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateRandomString">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#59-69" title="Go to source code">generateRandomString</a>( <span>integer <var>$count</var></span>, <span>string <var>$characters</var> = <span class="php-quote">'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Algorithms.html#66-76" title="Go to source code">generateRandomString</a>( <span>integer <var>$count</var></span>, <span>string <var>$characters</var> = <span class="php-quote">'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns a random string with alpha-numeric characters.</p>
