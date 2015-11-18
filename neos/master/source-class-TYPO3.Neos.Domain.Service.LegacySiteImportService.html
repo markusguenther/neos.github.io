@@ -1272,9 +1272,9 @@
 </span><span id="188" class="l">
 </span><span id="189" class="l">            <span class="php-var">$rootNode</span> = <span class="php-var">$contentContext</span>-&gt;getRootNode();
 </span><span id="190" class="l">
-</span><span id="191" class="l">            <span class="php-var">$sitesNode</span> = <span class="php-var">$rootNode</span>-&gt;getNode(<span class="php-quote">'/sites'</span>);
+</span><span id="191" class="l">            <span class="php-var">$sitesNode</span> = <span class="php-var">$rootNode</span>-&gt;getNode(SiteService::SITES_ROOT_PATH);
 </span><span id="192" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$sitesNode</span> === <span class="php-keyword1">null</span>) {
-</span><span id="193" class="l">                <span class="php-var">$sitesNode</span> = <span class="php-var">$rootNode</span>-&gt;createSingleNode(<span class="php-quote">'sites'</span>);
+</span><span id="193" class="l">                <span class="php-var">$sitesNode</span> = <span class="php-var">$rootNode</span>-&gt;createSingleNode(NodePaths::getNodeNameFromPath(SiteService::SITES_ROOT_PATH));
 </span><span id="194" class="l">            }
 </span><span id="195" class="l">            <span class="php-comment">// We fetch the workspace to be sure it's known to the persistence manager and persist all</span>
 </span><span id="196" class="l">            <span class="php-comment">// so the workspace and site node are persisted before we import any nodes to it.</span>
