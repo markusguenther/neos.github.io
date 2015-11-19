@@ -699,7 +699,7 @@ TYPO3\Flow\Cli\CommandController
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#20-341" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Command/WorkspaceCommandController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#21-366" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Command/WorkspaceCommandController.php</a>
 		<br>
 	</div>
 
@@ -719,7 +719,7 @@ TYPO3\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#39-110" title="Go to source code">publishCommand</a>( <span>string <var>$workspace</var></span>, <span>string <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#47-118" title="Go to source code">publishCommand</a>( <span>string <var>$workspace</var></span>, <span>string <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Publish changes of a workspace</p>
@@ -762,7 +762,7 @@ If a target workspace is specified, the content is published to that workspace i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_discardCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#112-155" title="Go to source code">discardCommand</a>( <span>string <var>$workspace</var></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#120-163" title="Go to source code">discardCommand</a>( <span>string <var>$workspace</var></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Discard changes in workspace</p>
@@ -802,7 +802,7 @@ If a target workspace is specified, the content is published to that workspace i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#157-194" title="Go to source code">createCommand</a>( <span>string <var>$workspace</var></span>, <span>string <var>$baseWorkspace</var> = <span class="php-quote">'live'</span></span>, <span>string <var>$title</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#165-217" title="Go to source code">createCommand</a>( <span>string <var>$workspace</var></span>, <span>string <var>$baseWorkspace</var> = <span class="php-quote">'live'</span></span>, <span>string <var>$title</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$owner</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new workspace</p>
@@ -824,6 +824,8 @@ If a target workspace is specified, the content is published to that workspace i
 						<dd>Human friendly title of the workspace, for example "Christmas Campaign"</dd>
 						<dt><var>$description</var></dt>
 						<dd>A description explaining the purpose of the new workspace</dd>
+						<dt><var>$owner</var></dt>
+						<dd>The identifier of a User to own the workspace</dd>
 					</dl></div>
 
 
@@ -844,7 +846,7 @@ If a target workspace is specified, the content is published to that workspace i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#196-252" title="Go to source code">deleteCommand</a>( <span>string <var>$workspace</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#219-276" title="Go to source code">deleteCommand</a>( <span>string <var>$workspace</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Deletes a workspace</p>
@@ -887,7 +889,7 @@ workspace itself, use <i>workspace:discard</i> instead.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rebaseCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#254-285" title="Go to source code">rebaseCommand</a>( <span>string <var>$workspace</var></span>, <span>string <var>$baseWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#278-309" title="Go to source code">rebaseCommand</a>( <span>string <var>$workspace</var></span>, <span>string <var>$baseWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Rebase a workspace</p>
@@ -927,7 +929,7 @@ results when being published.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishAllCommand">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#287-301" title="Go to source code">publishAllCommand</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#311-325" title="Go to source code">publishAllCommand</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Publish changes of a workspace</p>
@@ -973,7 +975,7 @@ results when being published.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_discardAllCommand">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#303-317" title="Go to source code">discardAllCommand</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#327-341" title="Go to source code">discardAllCommand</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Discard changes in workspace</p>
@@ -1019,7 +1021,7 @@ results when being published.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#319-340" title="Go to source code">listCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#343-365" title="Go to source code">listCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Display a list of existing workspaces</p>
@@ -1060,7 +1062,7 @@ results when being published.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#27-31" title="Go to source code"><var>$publishingService</var></a>
+					<a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#29-33" title="Go to source code"><var>$publishingService</var></a>
 
 				<div class="description short">
 					
@@ -1088,7 +1090,7 @@ results when being published.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#33-37" title="Go to source code"><var>$workspaceRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#35-39" title="Go to source code"><var>$workspaceRepository</var></a>
 
 				<div class="description short">
 					
@@ -1105,6 +1107,34 @@ results when being published.</p>
 			<td class="value">
 				<div>
 					<a href="#$workspaceRepository" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="userService" id="$userService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Neos.Domain.Service.UserService.html">TYPO3\Neos\Domain\Service\UserService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Command.WorkspaceCommandController.html#41-45" title="Go to source code"><var>$userService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$userService" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

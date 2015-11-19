@@ -701,7 +701,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#24-472" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/Context.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#24-494" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/Context.php</a>
 		<br>
 	</div>
 
@@ -773,7 +773,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#140-164" title="Go to source code">getWorkspace</a>( <span>boolean <var>$createWorkspaceIfNecessary</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#140-166" title="Go to source code">getWorkspace</a>( <span>boolean <var>$createWorkspaceIfNecessary</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the current workspace.</p>
@@ -803,6 +803,48 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="validateWorkspace" id="_validateWorkspace">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validateWorkspace">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#168-186" title="Go to source code">validateWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+
+			<div class="description short">
+				<p>This method is called in order to check if a workspace is accessible.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>This method is called in order to check if a workspace is accessible.</p>
+
+<p>At the time of this writing, it is not possible in Flow to restrict access to Workspace through Entity Privileges
+because Workspaces are used at a very early stage during routing where the security context is not yet initialized.
+As a workaround, we use a Method Privilege which protects this validateWorkspace() method and thus prevents
+unauthorized access to a workspace when calling this context's getWorkspace() method.</p>
+
+<p>Since some privilege definitions check the "owner" property of a Workspace, we need a real Workspace object and
+not just the name - hence this method.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$workspace</var></dt>
+						<dd>The workspace to check</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getWorkspaceName" id="_getWorkspaceName">
 
 			<td class="attributes"><code>
@@ -814,7 +856,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWorkspaceName">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#166-175" title="Go to source code">getWorkspaceName</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#188-197" title="Go to source code">getWorkspaceName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of the workspace.</p>
@@ -850,7 +892,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#177-191" title="Go to source code">getCurrentDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#199-213" title="Go to source code">getCurrentDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current date and time in form of a \DateTime
@@ -892,7 +934,7 @@ time in unit tests or in the actual application (for realizing previews etc).</p
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRootNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#193-203" title="Go to source code">getRootNode</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#215-225" title="Go to source code">getRootNode</a>( )</code>
 
 			<div class="description short">
 				<p>Convenience method returns the root node for
@@ -930,7 +972,7 @@ this context workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#205-234" title="Go to source code">getNode</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#227-256" title="Go to source code">getNode</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a node specified by the given absolute path.</p>
@@ -975,7 +1017,7 @@ this context workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeByIdentifier">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#236-256" title="Go to source code">getNodeByIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#258-278" title="Go to source code">getNodeByIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a node by identifier and this context</p>
@@ -1013,7 +1055,7 @@ this context workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeVariantsByIdentifier">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#258-281" title="Go to source code">getNodeVariantsByIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#280-303" title="Go to source code">getNodeVariantsByIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Get all node variants for the given identifier</p>
@@ -1054,7 +1096,7 @@ The resulting node instances might belong to a different context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodesOnPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#283-308" title="Go to source code">getNodesOnPath</a>( <span>mixed <var>$startingPoint</var></span>, <span>mixed <var>$endPoint</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#305-330" title="Go to source code">getNodesOnPath</a>( <span>mixed <var>$startingPoint</var></span>, <span>mixed <var>$endPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds all nodes lying on the path specified by (and including) the given
@@ -1099,7 +1141,7 @@ starting point and end point.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_adoptNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#310-356" title="Go to source code">adoptNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#332-378" title="Go to source code">adoptNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Adopts a node from a (possibly) different context to this context</p>
@@ -1145,7 +1187,7 @@ new, more specific node is created and returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeAdoptNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#358-366" title="Go to source code">emitBeforeAdoptNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Service.Context.html">TYPO3\TYPO3CR\Domain\Service\Context</a></code> <var>$context</var></span>, <span> <var>$recursive</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#380-388" title="Go to source code">emitBeforeAdoptNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Service.Context.html">TYPO3\TYPO3CR\Domain\Service\Context</a></code> <var>$context</var></span>, <span> <var>$recursive</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1186,7 +1228,7 @@ new, more specific node is created and returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterAdoptNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#368-376" title="Go to source code">emitAfterAdoptNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Service.Context.html">TYPO3\TYPO3CR\Domain\Service\Context</a></code> <var>$context</var></span>, <span> <var>$recursive</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#390-398" title="Go to source code">emitAfterAdoptNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Service.Context.html">TYPO3\TYPO3CR\Domain\Service\Context</a></code> <var>$context</var></span>, <span> <var>$recursive</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1227,7 +1269,7 @@ new, more specific node is created and returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInvisibleContentShown">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#378-388" title="Go to source code">isInvisibleContentShown</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#400-410" title="Go to source code">isInvisibleContentShown</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if nodes which are usually invisible should be accessible through the Node API and queries</p>
@@ -1267,7 +1309,7 @@ new, more specific node is created and returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemovedContentShown">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#390-401" title="Go to source code">isRemovedContentShown</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#412-423" title="Go to source code">isRemovedContentShown</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if nodes which have their "removed" flag set should be accessible through
@@ -1309,7 +1351,7 @@ the Node API and queries</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInaccessibleContentShown">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#403-413" title="Go to source code">isInaccessibleContentShown</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#425-435" title="Go to source code">isInaccessibleContentShown</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if nodes which have access restrictions should be accessible through
@@ -1347,7 +1389,7 @@ the Node API and queries even without the necessary roles / rights</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#415-423" title="Go to source code">getDimensions</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#437-445" title="Go to source code">getDimensions</a>( )</code>
 
 			<div class="description short">
 				<p>An indexed array of dimensions with ordered list of values for matching nodes by content dimensions</p>
@@ -1380,7 +1422,7 @@ the Node API and queries even without the necessary roles / rights</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTargetDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#425-433" title="Go to source code">getTargetDimensions</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#447-455" title="Go to source code">getTargetDimensions</a>( )</code>
 
 			<div class="description short">
 				<p>An indexed array of dimensions with a set of values that should be applied when updating or creating</p>
@@ -1413,7 +1455,7 @@ the Node API and queries even without the necessary roles / rights</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTargetDimensionValues">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#435-443" title="Go to source code">getTargetDimensionValues</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#457-465" title="Go to source code">getTargetDimensionValues</a>( )</code>
 
 			<div class="description short">
 				<p>An indexed array of dimensions with a set of values that should be applied when updating or creating</p>
@@ -1446,7 +1488,7 @@ the Node API and queries even without the necessary roles / rights</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperties">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#445-461" title="Go to source code">getProperties</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#467-483" title="Go to source code">getProperties</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the properties of this context.</p>
@@ -1479,7 +1521,7 @@ the Node API and queries even without the necessary roles / rights</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFirstLevelNodeCache">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#463-471" title="Go to source code">getFirstLevelNodeCache</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.Context.html#485-493" title="Go to source code">getFirstLevelNodeCache</a>( )</code>
 
 			<div class="description short">
 				<p>Not public API!</p>

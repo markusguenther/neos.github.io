@@ -676,6 +676,10 @@
 	<div class="description">
 	<p>The user service provides general context information about the currently
 authenticated backend user.</p>
+
+<p>The methods getters of this class are accessible via the "context.userInformation" variable in security policies
+and thus are implicitly considered to be part of the public API. This UserService should be replaced by
+\TYPO3\Neos\Domain\Service\UserService in the long run.</p>
 	</div>
 
 
@@ -692,9 +696,11 @@ authenticated backend user.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Neos.html">Neos</a>\<a href="namespace-TYPO3.Neos.Service.html">Service</a><br>
 		
 
+				<b>Api</b>
+				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Service.UserService.html#20-106" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Service/UserService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Service.UserService.html#19-148" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Service/UserService.php</a>
 		<br>
 	</div>
 
@@ -714,14 +720,14 @@ authenticated backend user.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBackendUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#46-55" title="Go to source code">getBackendUser</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#51-60" title="Go to source code">getBackendUser</a>( )</code>
 
 			<div class="description short">
-				
+				<p>Returns the current backend user</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Returns the current backend user</p>
 
 
 
@@ -731,6 +737,83 @@ authenticated backend user.</p>
 					</div>
 
 
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPersonalWorkspace" id="_getPersonalWorkspace">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPersonalWorkspace">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#62-74" title="Go to source code">getPersonalWorkspace</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the current user's personal workspace or null if no user is logged in</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the current user's personal workspace or null if no user is logged in</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPersonalWorkspaceName" id="_getPersonalWorkspaceName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPersonalWorkspaceName">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#76-94" title="Go to source code">getPersonalWorkspaceName</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the name of the currently logged in user's personal workspace (even if that might not exist at that time).
+If no user is logged in this method returns null.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the name of the currently logged in user's personal workspace (even if that might not exist at that time).
+If no user is logged in this method returns null.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -747,17 +830,21 @@ authenticated backend user.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserWorkspace">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#57-66" title="Go to source code">getUserWorkspace</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Neos.Service.UserService.html#96-107" title="Go to source code">getUserWorkspace</a>( )</code>
 
 			<div class="description short">
-				<p>Returns the Workspace of the currently logged in user or NULL if no matching workspace was found.
-If no user is logged in this returns the live workspace</p>
+				<p>Returns the current user's personal workspace or null if no user is logged in.
+Deprecated, use getPersonalWorkspace() instead.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the Workspace of the currently logged in user or NULL if no matching workspace was found.
-If no user is logged in this returns the live workspace</p>
+				<p>Returns the current user's personal workspace or null if no user is logged in.
+Deprecated, use getPersonalWorkspace() instead.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							2.1<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -766,6 +853,9 @@ If no user is logged in this returns the live workspace</p>
 					</div>
 
 
+					<h4>Api</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -782,17 +872,23 @@ If no user is logged in this returns the live workspace</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserWorkspaceName">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#68-81" title="Go to source code">getUserWorkspaceName</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Neos.Service.UserService.html#109-121" title="Go to source code">getUserWorkspaceName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of the currently logged in user's personal workspace (even if that might not exist at that time).
-If no user is logged in this method returns "live".</p>
+If no user is logged in this method returns null.
+Deprecated, use getPersonalWorkspaceName() instead.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Returns the name of the currently logged in user's personal workspace (even if that might not exist at that time).
-If no user is logged in this method returns "live".</p>
+If no user is logged in this method returns null.
+Deprecated, use getPersonalWorkspaceName() instead.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							2.1<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -801,6 +897,9 @@ If no user is logged in this method returns "live".</p>
 					</div>
 
 
+					<h4>Api</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -817,14 +916,14 @@ If no user is logged in this method returns "live".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserPreference">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#83-95" title="Go to source code">getUserPreference</a>( <span>string <var>$preference</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#123-136" title="Go to source code">getUserPreference</a>( <span>string <var>$preference</var></span> )</code>
 
 			<div class="description short">
-				<p>Returns the preference of a user</p>
+				<p>Returns the stored preferences of a user</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the preference of a user</p>
+				<p>Returns the stored preferences of a user</p>
 
 
 					<h4>Parameters</h4>
@@ -839,6 +938,9 @@ If no user is logged in this method returns "live".</p>
 					</div>
 
 
+					<h4>Api</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -855,7 +957,7 @@ If no user is logged in this method returns "live".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInterfaceLanguage">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#97-105" title="Go to source code">getInterfaceLanguage</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.UserService.html#138-147" title="Go to source code">getInterfaceLanguage</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the interface language the user selected. Will fall back to the default language defined in settings</p>
@@ -872,6 +974,9 @@ If no user is logged in this method returns "live".</p>
 					</div>
 
 
+					<h4>Api</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -893,14 +998,14 @@ If no user is logged in this method returns "live".</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="securityContext" id="$securityContext">
+		<tr data-order="userDomainService" id="$userDomainService">
 			<td class="attributes"><code>
 				protected  
-				TYPO3\Flow\Security\Context
+				<code><a href="class-TYPO3.Neos.Domain.Service.UserService.html">TYPO3\Neos\Domain\Service\UserService</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.UserService.html#28-32" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-TYPO3.Neos.Service.UserService.html#33-37" title="Go to source code"><var>$userDomainService</var></a>
 
 				<div class="description short">
 					
@@ -916,7 +1021,7 @@ If no user is logged in this method returns "live".</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$securityContext" class="anchor">#</a>
+					<a href="#$userDomainService" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -928,7 +1033,7 @@ If no user is logged in this method returns "live".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.UserService.html#34-38" title="Go to source code"><var>$workspaceRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Service.UserService.html#39-43" title="Go to source code"><var>$workspaceRepository</var></a>
 
 				<div class="description short">
 					
@@ -956,7 +1061,7 @@ If no user is logged in this method returns "live".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.UserService.html#40-44" title="Go to source code"><var>$defaultLanguageIdentifier</var></a>
+					<a href="source-class-TYPO3.Neos.Service.UserService.html#45-49" title="Go to source code"><var>$defaultLanguageIdentifier</var></a>
 
 				<div class="description short">
 					

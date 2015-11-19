@@ -698,7 +698,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#20-115" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Service/WorkspacesController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#20-154" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Service/WorkspacesController.php</a>
 		<br>
 	</div>
 
@@ -718,7 +718,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#52-60" title="Go to source code">indexAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#59-89" title="Go to source code">indexAction</a>( )</code>
 
 			<div class="description short">
 				<p>Shows a list of existing workspaces</p>
@@ -751,7 +751,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#62-71" title="Go to source code">showAction</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#91-100" title="Go to source code">showAction</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Shows details of the given workspace</p>
@@ -789,14 +789,14 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#73-90" title="Go to source code">createAction</a>( <span>string <var>$workspaceName</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$baseWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#102-129" title="Go to source code">createAction</a>( <span>string <var>$workspaceName</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$baseWorkspace</var></span>, <span>string <var>$ownerAccountIdentifier</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Shows details of the given workspace</p>
+				<p>Create a workspace</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Shows details of the given workspace</p>
+				<p>Create a workspace</p>
 
 
 					<h4>Parameters</h4>
@@ -804,6 +804,8 @@ TYPO3\Flow\Mvc\Controller\ActionController
 						<dt><var>$workspaceName</var></dt>
 						<dd></dd>
 						<dt><var>$baseWorkspace</var></dt>
+						<dd></dd>
+						<dt><var>$ownerAccountIdentifier</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -829,7 +831,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeUpdateAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#92-102" title="Go to source code">initializeUpdateAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#131-141" title="Go to source code">initializeUpdateAction</a>( )</code>
 
 			<div class="description short">
 				<p>Configure property mapping for the updateAction</p>
@@ -858,7 +860,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#104-114" title="Go to source code">updateAction</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#143-153" title="Go to source code">updateAction</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates a workspace</p>
@@ -904,7 +906,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#27-31" title="Go to source code"><var>$workspaceRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#28-32" title="Go to source code"><var>$workspaceRepository</var></a>
 
 				<div class="description short">
 					
@@ -925,6 +927,34 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				</div>
 			</td>
 		</tr>
+		<tr data-order="userService" id="$userService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Neos.Domain.Service.UserService.html">TYPO3\Neos\Domain\Service\UserService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#34-38" title="Go to source code"><var>$userService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$userService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="viewFormatToObjectNameMap" id="$viewFormatToObjectNameMap">
 			<td class="attributes"><code>
 				protected  
@@ -932,7 +962,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#33-39" title="Go to source code"><var>$viewFormatToObjectNameMap</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#40-46" title="Go to source code"><var>$viewFormatToObjectNameMap</var></a>
 
 				<div class="description short">
 					
@@ -946,10 +976,10 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			<td class="value">
 				<div>
 					<a href="#$viewFormatToObjectNameMap" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-quote">'html'</span> =&gt; <span class="php-quote">'TYPO3\Fluid\View\TemplateView'</span>,
     <span class="php-quote">'json'</span> =&gt; <span class="php-quote">'TYPO3\Neos\View\Service\NodeJsonView'</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>
@@ -960,7 +990,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#41-50" title="Go to source code"><var>$supportedMediaTypes</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Service.WorkspacesController.html#48-57" title="Go to source code"><var>$supportedMediaTypes</var></a>
 
 				<div class="description short">
 					<p>A list of IANA media types which are supported by this controller</p>
@@ -978,10 +1008,10 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			<td class="value">
 				<div>
 					<a href="#$supportedMediaTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-quote">'text/html'</span>,
     <span class="php-quote">'application/json'</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>
