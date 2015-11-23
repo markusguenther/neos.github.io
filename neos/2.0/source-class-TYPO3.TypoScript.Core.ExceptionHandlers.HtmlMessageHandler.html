@@ -1111,7 +1111,7 @@
 </span><span id="36" class="l">    {
 </span><span id="37" class="l">        <span class="php-var">$messageArray</span> = <span class="php-keyword1">array</span>(
 </span><span id="38" class="l">            <span class="php-quote">'header'</span> =&gt; <span class="php-quote">'An exception was thrown while Neos tried to render your page'</span>,
-</span><span id="39" class="l">            <span class="php-quote">'content'</span> =&gt; <span class="php-var">$exception</span>-&gt;getMessage(),
+</span><span id="39" class="l">            <span class="php-quote">'content'</span> =&gt; <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$exception</span>-&gt;getMessage()),
 </span><span id="40" class="l">            <span class="php-quote">'stacktrace'</span> =&gt; <span class="php-var">$this</span>-&gt;formatTypoScriptPath(<span class="php-var">$typoScriptPath</span>),
 </span><span id="41" class="l">            <span class="php-quote">'referenceCode'</span> =&gt; <span class="php-var">$this</span>-&gt;formatErrorCodeMessage(<span class="php-var">$referenceCode</span>)
 </span><span id="42" class="l">        );

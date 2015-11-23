@@ -1278,7 +1278,7 @@
 </span><span id="203" class="l">                <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Selected changes have been discarded'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(), <span class="php-num">412420851</span>);
 </span><span id="204" class="l">            <span class="php-keyword1">break</span>;
 </span><span id="205" class="l">            <span class="php-keyword1">default</span>:
-</span><span id="206" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">'Invalid action &quot;'</span> . <span class="php-var">$action</span> . <span class="php-quote">'&quot; given.'</span>, <span class="php-num">1346167441</span>);
+</span><span id="206" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">'Invalid action &quot;'</span> . <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$action</span>) . <span class="php-quote">'&quot; given.'</span>, <span class="php-num">1346167441</span>);
 </span><span id="207" class="l">        }
 </span><span id="208" class="l">
 </span><span id="209" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
@@ -1292,7 +1292,7 @@
 </span><span id="217" class="l">    {
 </span><span id="218" class="l">        <span class="php-var">$liveWorkspace</span> = <span class="php-var">$this</span>-&gt;workspaceRepository-&gt;findOneByName(<span class="php-quote">'live'</span>);
 </span><span id="219" class="l">        <span class="php-var">$workspace</span>-&gt;publish(<span class="php-var">$liveWorkspace</span>);
-</span><span id="220" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Changes in workspace &quot;%s&quot; have been published'</span>, <span class="php-quote">'Changes published'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-var">$workspace</span>-&gt;getName()), <span class="php-num">1412420808</span>);
+</span><span id="220" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Changes in workspace &quot;%s&quot; have been published'</span>, <span class="php-quote">'Changes published'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$workspace</span>-&gt;getName())), <span class="php-num">1412420808</span>);
 </span><span id="221" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="222" class="l">    }
 </span><span id="223" class="l">
@@ -1304,7 +1304,7 @@
 </span><span id="229" class="l">    {
 </span><span id="230" class="l">        <span class="php-var">$unpublishedNodes</span> = <span class="php-var">$this</span>-&gt;publishingService-&gt;getUnpublishedNodes(<span class="php-var">$workspace</span>);
 </span><span id="231" class="l">        <span class="php-var">$this</span>-&gt;publishingService-&gt;discardNodes(<span class="php-var">$unpublishedNodes</span>);
-</span><span id="232" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Changes in workspace &quot;%s&quot; have been discarded'</span>, <span class="php-quote">'Changes discarded'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-var">$workspace</span>-&gt;getName()), <span class="php-num">1412420835</span>);
+</span><span id="232" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Changes in workspace &quot;%s&quot; have been discarded'</span>, <span class="php-quote">'Changes discarded'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$workspace</span>-&gt;getName())), <span class="php-num">1412420835</span>);
 </span><span id="233" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="234" class="l">    }
 </span><span id="235" class="l">}
