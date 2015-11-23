@@ -1458,7 +1458,7 @@
 </span><span id="371" class="l">                <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-quote">'workspaces.selectedChangesHaveBeenDiscarded'</span>, [], <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'Modules'</span>, <span class="php-quote">'TYPO3.Neos'</span>));
 </span><span id="372" class="l">            <span class="php-keyword1">break</span>;
 </span><span id="373" class="l">            <span class="php-keyword1">default</span>:
-</span><span id="374" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">'Invalid action &quot;'</span> . <span class="php-var">$action</span> . <span class="php-quote">'&quot; given.'</span>, <span class="php-num">1346167441</span>);
+</span><span id="374" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">'Invalid action &quot;'</span> . <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$action</span>) . <span class="php-quote">'&quot; given.'</span>, <span class="php-num">1346167441</span>);
 </span><span id="375" class="l">        }
 </span><span id="376" class="l">
 </span><span id="377" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'show'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'workspace'</span> =&gt; <span class="php-var">$selectedWorkspace</span>]);
@@ -1476,7 +1476,7 @@
 </span><span id="389" class="l">            <span class="php-var">$targetWorkspace</span> = <span class="php-var">$this</span>-&gt;workspaceRepository-&gt;findOneByName(<span class="php-quote">'live'</span>);
 </span><span id="390" class="l">        }
 </span><span id="391" class="l">        <span class="php-var">$workspace</span>-&gt;publish(<span class="php-var">$targetWorkspace</span>);
-</span><span id="392" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-quote">'workspaces.allChangesInWorkspaceHaveBeenPublished'</span>, [<span class="php-var">$workspace</span>-&gt;getTitle(), <span class="php-var">$targetWorkspace</span>-&gt;getTitle()], <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'Modules'</span>, <span class="php-quote">'TYPO3.Neos'</span>));
+</span><span id="392" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-quote">'workspaces.allChangesInWorkspaceHaveBeenPublished'</span>, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$workspace</span>-&gt;getTitle()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$targetWorkspace</span>-&gt;getTitle())], <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'Modules'</span>, <span class="php-quote">'TYPO3.Neos'</span>));
 </span><span id="393" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="394" class="l">    }
 </span><span id="395" class="l">
@@ -1490,7 +1490,7 @@
 </span><span id="403" class="l">    {
 </span><span id="404" class="l">        <span class="php-var">$unpublishedNodes</span> = <span class="php-var">$this</span>-&gt;publishingService-&gt;getUnpublishedNodes(<span class="php-var">$workspace</span>);
 </span><span id="405" class="l">        <span class="php-var">$this</span>-&gt;publishingService-&gt;discardNodes(<span class="php-var">$unpublishedNodes</span>);
-</span><span id="406" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-quote">'workspaces.allChangesInWorkspaceHaveBeenDiscarded'</span>, [<span class="php-var">$workspace</span>-&gt;getTitle()], <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'Modules'</span>, <span class="php-quote">'TYPO3.Neos'</span>));
+</span><span id="406" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-quote">'workspaces.allChangesInWorkspaceHaveBeenDiscarded'</span>, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$workspace</span>-&gt;getTitle())], <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'Modules'</span>, <span class="php-quote">'TYPO3.Neos'</span>));
 </span><span id="407" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="408" class="l">    }
 </span><span id="409" class="l">
