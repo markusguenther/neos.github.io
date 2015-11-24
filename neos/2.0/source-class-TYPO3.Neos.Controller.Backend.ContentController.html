@@ -1477,7 +1477,7 @@
 </span><span id="402" class="l">                    <span class="php-keyword1">continue</span>;
 </span><span id="403" class="l">                }
 </span><span id="404" class="l">                <span class="php-var">$translationHelper</span> = <span class="php-keyword1">new</span> TranslationHelper();
-</span><span id="405" class="l">                <span class="php-var">$masterPlugins</span>[<span class="php-var">$pluginNode</span>-&gt;getIdentifier()] = <span class="php-var">$translationHelper</span>-&gt;translate(
+</span><span id="405" class="l">                <span class="php-var">$masterPlugins</span>[<span class="php-var">$pluginNode</span>-&gt;getPath()] = <span class="php-var">$translationHelper</span>-&gt;translate(
 </span><span id="406" class="l">                    <span class="php-quote">'masterPlugins.nodeTypeOnPageLabel'</span>,
 </span><span id="407" class="l">                    <span class="php-keyword1">null</span>,
 </span><span id="408" class="l">                    [<span class="php-quote">'nodeTypeName'</span> =&gt; <span class="php-var">$translationHelper</span>-&gt;translate(<span class="php-var">$pluginNode</span>-&gt;getNodeType()-&gt;getLabel()), <span class="php-quote">'pageLabel'</span> =&gt; <span class="php-var">$page</span>-&gt;getLabel()],
