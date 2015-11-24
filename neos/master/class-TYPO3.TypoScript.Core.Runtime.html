@@ -697,7 +697,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TypoScript.html">TypoScript</a>\<a href="namespace-TYPO3.TypoScript.Core.html">Core</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Runtime.html#28-797" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Runtime.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Runtime.html#28-815" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Runtime.php</a>
 		<br>
 	</div>
 
@@ -776,6 +776,47 @@ these, it must call popContext() to reset the context to the last state.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="addCacheTag" id="_addCacheTag">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addCacheTag">#</a>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#146-162" title="Go to source code">addCacheTag</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
+
+			<div class="description short">
+				<p>Add a tag to the current cache segment</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Add a tag to the current cache segment</p>
+
+<p>During TS rendering the method can be used to add tag dynamicaly for the current cache segment.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd></dd>
+						<dt><var>$value</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="pushContextArray" id="_pushContextArray">
 
 			<td class="attributes"><code>
@@ -787,7 +828,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pushContextArray">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#146-157" title="Go to source code">pushContextArray</a>( <span>array <var>$contextArray</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#164-175" title="Go to source code">pushContextArray</a>( <span>array <var>$contextArray</var></span> )</code>
 
 			<div class="description short">
 				<p>Completely replace the context array with the new $contextArray.</p>
@@ -823,7 +864,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pushContext">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#159-171" title="Go to source code">pushContext</a>( <span>string <var>$key</var></span>, <span>mixed <var>$context</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#177-189" title="Go to source code">pushContext</a>( <span>string <var>$key</var></span>, <span>mixed <var>$context</var></span> )</code>
 
 			<div class="description short">
 				<p>Push a new context object to the rendering stack</p>
@@ -859,7 +900,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_popContext">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#173-181" title="Go to source code">popContext</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#191-199" title="Go to source code">popContext</a>( )</code>
 
 			<div class="description short">
 				<p>Remove the topmost context objects and return them</p>
@@ -892,7 +933,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentContext">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#183-191" title="Go to source code">getCurrentContext</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#201-209" title="Go to source code">getCurrentContext</a>( )</code>
 
 			<div class="description short">
 				<p>Get the current context array</p>
@@ -925,7 +966,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#193-203" title="Go to source code">evaluate</a>( <span>string <var>$typoScriptPath</var></span>, <span>object <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#211-221" title="Go to source code">evaluate</a>( <span>string <var>$typoScriptPath</var></span>, <span>object <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an absolute TypoScript path and return the result</p>
@@ -965,7 +1006,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastEvaluationStatus">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#205-211" title="Go to source code">getLastEvaluationStatus</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#223-229" title="Go to source code">getLastEvaluationStatus</a>( )</code>
 
 			<div class="description short">
 				
@@ -998,7 +1039,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#213-243" title="Go to source code">render</a>( <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#231-261" title="Go to source code">render</a>( <span>string <var>$typoScriptPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Render an absolute TypoScript path and return the result.</p>
@@ -1044,7 +1085,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleRenderingException">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#245-299" title="Go to source code">handleRenderingException</a>( <span>array <var>$typoScriptPath</var></span>, <span><code><a href="class-TYPO3.TypoScript.Exception.html">TYPO3\TypoScript\Exception</a></code> <var>$exception</var></span>, <span>boolean <var>$useInnerExceptionHandler</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#263-317" title="Go to source code">handleRenderingException</a>( <span>array <var>$typoScriptPath</var></span>, <span><code><a href="class-TYPO3.TypoScript.Exception.html">TYPO3\TypoScript\Exception</a></code> <var>$exception</var></span>, <span>boolean <var>$useInnerExceptionHandler</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Handle an Exception thrown while rendering TypoScript according to
@@ -1094,7 +1135,7 @@ settings specified in TYPO3.TypoScript.rendering.exceptionHandler</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canRender">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#301-313" title="Go to source code">canRender</a>( <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#319-331" title="Go to source code">canRender</a>( <span>string <var>$typoScriptPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Determine if the given TypoScript path is renderable, which means it exists
@@ -1134,7 +1175,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canRenderWithConfiguration">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#315-335" title="Go to source code">canRenderWithConfiguration</a>( <span>array <var>$typoScriptConfiguration</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#333-353" title="Go to source code">canRenderWithConfiguration</a>( <span>array <var>$typoScriptConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal evaluation if given configuration is renderable.</p>
@@ -1172,7 +1213,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateInternal">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#337-467" title="Go to source code">evaluateInternal</a>( <span>string <var>$typoScriptPath</var></span>, <span>string <var>$behaviorIfPathNotFound</var></span>, <span>mixed <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#355-485" title="Go to source code">evaluateInternal</a>( <span>string <var>$typoScriptPath</var></span>, <span>string <var>$behaviorIfPathNotFound</var></span>, <span>mixed <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Internal evaluation method of absolute $typoScriptPath</p>
@@ -1226,7 +1267,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigurationForPath">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#469-575" title="Go to source code">getConfigurationForPath</a>( <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#487-593" title="Go to source code">getConfigurationForPath</a>( <span>string <var>$typoScriptPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the TypoScript Configuration for the given TypoScript path</p>
@@ -1268,7 +1309,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_instantiateTypoScriptObject">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#577-613" title="Go to source code">instantiateTypoScriptObject</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$typoScriptConfiguration</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#595-631" title="Go to source code">instantiateTypoScriptObject</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$typoScriptConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Instantiates a TypoScript object specified by the given path and configuration</p>
@@ -1312,7 +1353,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPropertiesOnTypoScriptObject">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#615-632" title="Go to source code">setPropertiesOnTypoScriptObject</a>( <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$typoScriptObject</var></span>, <span>array <var>$typoScriptConfiguration</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#633-650" title="Go to source code">setPropertiesOnTypoScriptObject</a>( <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$typoScriptObject</var></span>, <span>array <var>$typoScriptConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Set options on the given (AbstractArray)TypoScript object</p>
@@ -1348,7 +1389,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateEelExpressionOrSimpleValueWithProcessor">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#634-654" title="Go to source code">evaluateEelExpressionOrSimpleValueWithProcessor</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$valueConfiguration</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#652-672" title="Go to source code">evaluateEelExpressionOrSimpleValueWithProcessor</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$valueConfiguration</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate a simple value or eel expression with processors</p>
@@ -1390,7 +1431,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateEelExpression">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#656-683" title="Go to source code">evaluateEelExpression</a>( <span>string <var>$expression</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#674-701" title="Go to source code">evaluateEelExpression</a>( <span>string <var>$expression</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an Eel expression</p>
@@ -1434,7 +1475,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateProcessors">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#685-718" title="Go to source code">evaluateProcessors</a>( <span>mixed <var>$valueToProcess</var></span>, <span>array <var>$configurationWithEventualProcessors</var></span>, <span>string <var>$typoScriptPath</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#703-736" title="Go to source code">evaluateProcessors</a>( <span>mixed <var>$valueToProcess</var></span>, <span>array <var>$configurationWithEventualProcessors</var></span>, <span>string <var>$typoScriptPath</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate processors on given value.</p>
@@ -1478,7 +1519,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateIfCondition">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#720-740" title="Go to source code">evaluateIfCondition</a>( <span>array <var>$configurationWithEventualIf</var></span>, <span>string <var>$configurationPath</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#738-758" title="Go to source code">evaluateIfCondition</a>( <span>array <var>$configurationWithEventualIf</var></span>, <span>string <var>$configurationPath</var></span>, <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate eventually existing meta "@if" conditionals inside the given configuration and path.</p>
@@ -1520,7 +1561,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getControllerContext">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#742-750" title="Go to source code">getControllerContext</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#760-768" title="Go to source code">getControllerContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the context which has been passed by the currently active MVC Controller</p>
@@ -1553,7 +1594,7 @@ and has an implementation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultContextVariables">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#752-768" title="Go to source code">getDefaultContextVariables</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#770-786" title="Go to source code">getDefaultContextVariables</a>( )</code>
 
 			<div class="description short">
 				<p>Get variables from configuration that should be set in the context by default.
@@ -1588,7 +1629,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDebugMode">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#770-777" title="Go to source code">setDebugMode</a>( <span>boolean <var>$debugMode</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#788-795" title="Go to source code">setDebugMode</a>( <span>boolean <var>$debugMode</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1622,7 +1663,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isDebugMode">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#779-785" title="Go to source code">isDebugMode</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#797-803" title="Go to source code">isDebugMode</a>( )</code>
 
 			<div class="description short">
 				
@@ -1655,7 +1696,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setEnableContentCache">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#787-796" title="Go to source code">setEnableContentCache</a>( <span>boolean <var>$flag</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Runtime.html#805-814" title="Go to source code">setEnableContentCache</a>( <span>boolean <var>$flag</var></span> )</code>
 
 			<div class="description short">
 				<p>If the TypoScript content cache should be enabled at all</p>
