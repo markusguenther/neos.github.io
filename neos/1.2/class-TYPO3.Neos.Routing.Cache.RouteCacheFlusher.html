@@ -593,7 +593,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#19-90" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Routing/Cache/RouteCacheFlusher.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#19-87" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Routing/Cache/RouteCacheFlusher.php</a>
 		<br>
 	</div>
 
@@ -602,42 +602,6 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="registerNodePathChange" id="_registerNodePathChange">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_registerNodePathChange">#</a>
-			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#37-53" title="Go to source code">registerNodePathChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
-
-			<div class="description short">
-				<p>Schedules flushing of the routing cache entry for the given $nodeData
-Note: This is not done recursively because the nodePathChanged signal is triggered for any affected node data instance</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Schedules flushing of the routing cache entry for the given $nodeData
-Note: This is not done recursively because the nodePathChanged signal is triggered for any affected node data instance</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$nodeData</var></dt>
-						<dd>The affected node data instance</dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="registerNodeChange" id="_registerNodeChange">
 
 			<td class="attributes"><code>
@@ -649,19 +613,57 @@ Note: This is not done recursively because the nodePathChanged signal is trigger
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerNodeChange">#</a>
-			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#55-68" title="Go to source code">registerNodeChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#37-47" title="Go to source code">registerNodeChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
-				<p>Schedules recursive flushing of the routing cache entries for the given $node</p>
+				<p>Schedules flushing of the routing cache entries for the given $node
+Note that child nodes are flushed automatically because they are tagged with all parents.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Schedules recursive flushing of the routing cache entries for the given $node</p>
+				<p>Schedules flushing of the routing cache entries for the given $node
+Note that child nodes are flushed automatically because they are tagged with all parents.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="registerNodeDataChange" id="_registerNodeDataChange">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registerNodeDataChange">#</a>
+			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#49-65" title="Go to source code">registerNodeDataChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+
+			<div class="description short">
+				<p>Schedules flushing of the routing cache entries for the given $nodeData
+Note that child nodes are flushed automatically because they are tagged with all parents.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Schedules flushing of the routing cache entries for the given $nodeData
+Note that child nodes are flushed automatically because they are tagged with all parents.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeData</var></dt>
 						<dd>The node which has changed in some way</dd>
 					</dl></div>
 
@@ -683,7 +685,7 @@ Note: This is not done recursively because the nodePathChanged signal is trigger
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commit">#</a>
-			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#70-81" title="Go to source code">commit</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#67-78" title="Go to source code">commit</a>( )</code>
 
 			<div class="description short">
 				<p>Flush caches according to the previously registered node changes.</p>
@@ -712,7 +714,7 @@ Note: This is not done recursively because the nodePathChanged signal is trigger
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#83-89" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Routing.Cache.RouteCacheFlusher.html#80-86" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				
