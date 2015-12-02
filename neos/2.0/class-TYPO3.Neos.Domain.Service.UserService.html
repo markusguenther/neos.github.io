@@ -696,7 +696,7 @@
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#34-545" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Domain/Service/UserService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#34-589" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Domain/Service/UserService.php</a>
 		<br>
 	</div>
 
@@ -716,7 +716,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsers">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#114-123" title="Go to source code">getUsers</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#119-128" title="Go to source code">getUsers</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieves a list of all existing users</p>
@@ -752,7 +752,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#125-145" title="Go to source code">getUser</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#130-163" title="Go to source code">getUser</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Retrieves an existing user by the given username</p>
@@ -788,6 +788,49 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getUsername" id="_getUsername">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUsername">#</a>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#165-185" title="Go to source code">getUsername</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the username of the given user</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the username of the given user</p>
+
+<p>Technically, this method will look for the user's backend account (or, if authenticationProviderName is specified,
+for the account matching the given authentication provider) and return the account's identifier.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$user</var></dt>
+						<dd></dd>
+						<dt><var>$authenticationProviderName</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The username or null if the given user does not have a backend account
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getCurrentUser" id="_getCurrentUser">
 
 			<td class="attributes"><code>
@@ -799,7 +842,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#147-159" title="Go to source code">getCurrentUser</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#187-203" title="Go to source code">getCurrentUser</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the currently logged in user, if any</p>
@@ -835,7 +878,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#161-182" title="Go to source code">createUser</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span>string <var>$firstName</var></span>, <span>string <var>$lastName</var></span>, <span>array <var>$roleIdentifiers</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#205-226" title="Go to source code">createUser</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span>string <var>$firstName</var></span>, <span>string <var>$lastName</var></span>, <span>array <var>$roleIdentifiers</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates a user based on the given information</p>
@@ -888,7 +931,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#184-213" title="Go to source code">addUser</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>array <var>$roleIdentifiers</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#228-257" title="Go to source code">addUser</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>array <var>$roleIdentifiers</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds a user whose User object has been created elsewhere</p>
@@ -941,7 +984,7 @@ to call this method for registering the new user instead of adding it to the Par
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitUserCreated">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#215-224" title="Go to source code">emitUserCreated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#259-268" title="Go to source code">emitUserCreated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a new user, including a new account has been created.</p>
@@ -978,7 +1021,7 @@ to call this method for registering the new user instead of adding it to the Par
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#226-241" title="Go to source code">deleteUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#270-285" title="Go to source code">deleteUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Deletes the specified user</p>
@@ -1019,7 +1062,7 @@ to call this method for registering the new user instead of adding it to the Par
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitUserDeleted">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#243-252" title="Go to source code">emitUserDeleted</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#287-296" title="Go to source code">emitUserDeleted</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the given user has been deleted.</p>
@@ -1056,7 +1099,7 @@ to call this method for registering the new user instead of adding it to the Par
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setUserPassword">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#254-282" title="Go to source code">setUserPassword</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$password</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#298-326" title="Go to source code">setUserPassword</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$password</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets a new password for the given user</p>
@@ -1098,7 +1141,7 @@ sets a new password accordingly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#284-299" title="Go to source code">updateUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#328-343" title="Go to source code">updateUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the given user in the respective repository and potentially executes further actions depending on what
@@ -1140,7 +1183,7 @@ setRolesForAccount() and setUserPassword() for changing account properties.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addRoleToUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#301-317" title="Go to source code">addRoleToUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#345-361" title="Go to source code">addRoleToUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds the specified role to all accounts of the given user and potentially carries out further actions which are needed to
@@ -1185,7 +1228,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeRoleFromUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#319-335" title="Go to source code">removeRoleFromUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#363-379" title="Go to source code">removeRoleFromUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified role from all accounts of the given user and potentially carries out further actions which are needed to
@@ -1230,7 +1273,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitUserUpdated">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#337-346" title="Go to source code">emitUserUpdated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#381-390" title="Go to source code">emitUserUpdated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the given user data has been updated.</p>
@@ -1267,7 +1310,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRolesForAccount">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#348-373" title="Go to source code">setRolesForAccount</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>array <var>$newRoleIdentifiers</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#392-417" title="Go to source code">setRolesForAccount</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>array <var>$newRoleIdentifiers</var></span> )</code>
 
 			<div class="description short">
 				<p>Overrides any assigned roles of the given account and potentially carries out further actions which are needed
@@ -1308,7 +1351,7 @@ to properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addRoleToAccount">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#375-397" title="Go to source code">addRoleToAccount</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#419-441" title="Go to source code">addRoleToAccount</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds the specified role to the given account and potentially carries out further actions which are needed to
@@ -1353,7 +1396,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitRolesAdded">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#399-409" title="Go to source code">emitRolesAdded</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>array <var>$roles</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#443-453" title="Go to source code">emitRolesAdded</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>array <var>$roles</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that new roles have been assigned to the given account</p>
@@ -1392,7 +1435,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeRoleFromAccount">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#411-434" title="Go to source code">removeRoleFromAccount</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#455-478" title="Go to source code">removeRoleFromAccount</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified role from the given account and potentially carries out further actions which are needed to
@@ -1437,7 +1480,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitRolesRemoved">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#436-446" title="Go to source code">emitRolesRemoved</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>array <var>$roles</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#480-490" title="Go to source code">emitRolesRemoved</a>( <span>TYPO3\Flow\Security\Account <var>$account</var></span>, <span>array <var>$roles</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that roles have been removed to the given account</p>
@@ -1476,7 +1519,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#448-463" title="Go to source code">activateUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#492-507" title="Go to source code">activateUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Reactivates the given user</p>
@@ -1513,7 +1556,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitUserActivated">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#465-474" title="Go to source code">emitUserActivated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#509-518" title="Go to source code">emitUserActivated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the given user has been activated</p>
@@ -1550,7 +1593,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateUser">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#476-491" title="Go to source code">deactivateUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#520-535" title="Go to source code">deactivateUser</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Deactivates the given user</p>
@@ -1587,7 +1630,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultAuthenticationProviderName">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#493-501" title="Go to source code">getDefaultAuthenticationProviderName</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#537-545" title="Go to source code">getDefaultAuthenticationProviderName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the default authentication provider name</p>
@@ -1620,7 +1663,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitUserDeactivated">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#503-512" title="Go to source code">emitUserDeactivated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#547-556" title="Go to source code">emitUserDeactivated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the given user has been activated</p>
@@ -1657,7 +1700,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_normalizeRoleIdentifiers">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#514-526" title="Go to source code">normalizeRoleIdentifiers</a>( <span>array <var>$roleIdentifiers</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#558-570" title="Go to source code">normalizeRoleIdentifiers</a>( <span>array <var>$roleIdentifiers</var></span> )</code>
 
 			<div class="description short">
 				<p>Replaces role identifiers not containing a "." into fully qualified role identifiers from the TYPO3.Neos namespace.</p>
@@ -1695,7 +1738,7 @@ properly reflect these changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_normalizeRoleIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#528-544" title="Go to source code">normalizeRoleIdentifier</a>( <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#572-588" title="Go to source code">normalizeRoleIdentifier</a>( <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Replaces a role identifier not containing a "." into fully qualified role identifier from the TYPO3.Neos namespace.</p>
@@ -2073,6 +2116,31 @@ properly reflect these changes.</p>
 				<div>
 					<a href="#$now" class="anchor">#</a>
 					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="runtimeUserCache" id="$runtimeUserCache">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#114-117" title="Go to source code"><var>$runtimeUserCache</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$runtimeUserCache" class="anchor">#</a>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
