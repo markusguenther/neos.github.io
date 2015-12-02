@@ -2346,7 +2346,7 @@
 </span><span id="602" class="l">        <span class="php-var">$includeCachedConfigurationsCode</span> = &lt;&lt;&lt; <span class="php-quote">&quot;EOD&quot;</span>
 </span><span id="603" class="l"><span class="xlang">&lt;?php</span>
 </span><span id="604" class="l"><span class="php-keyword1">if</span> (FLOW_PATH_ROOT !== <span class="php-quote">'$flowRootPath'</span> || !<span class="php-keyword2">file_exists</span>(<span class="php-quote">'$cachePathAndFilename'</span>)) {
-</span><span id="605" class="l">    <span class="php-keyword2">unlink</span>(__FILE__);
+</span><span id="605" class="l">    @<span class="php-keyword2">unlink</span>(__FILE__);
 </span><span id="606" class="l">    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
 </span><span id="607" class="l">}
 </span><span id="608" class="l"><span class="php-keyword1">return</span> <span class="php-keyword1">require</span> <span class="php-quote">'$cachePathAndFilename'</span>;
