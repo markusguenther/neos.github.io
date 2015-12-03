@@ -784,7 +784,7 @@
 	<div class="description">
 	<p>A flock based lock strategy.</p>
 
-<p>This lock strategy is based on Flock. This strategy is currently disabled on Windows.</p>
+<p>This lock strategy is based on Flock.</p>
 	</div>
 
 	<dl class="tree well">
@@ -812,7 +812,7 @@
 
 				<b>Flow\scope("prototype")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#19-124" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Utility/Lock/FlockLockStrategy.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#19-161" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Utility/Lock/FlockLockStrategy.php</a>
 		<br>
 	</div>
 
@@ -832,7 +832,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_acquire">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#51-87" title="Go to source code">acquire</a>( <span>string <var>$subject</var></span>, <span>boolean <var>$exclusiveLock</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#55-71" title="Go to source code">acquire</a>( <span>string <var>$subject</var></span>, <span>boolean <var>$exclusiveLock</var></span> )</code>
 
 			<div class="description short">
 				
@@ -851,16 +851,125 @@
 					</dl></div>
 
 
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-TYPO3.Flow.Utility.Exception.LockNotAcquiredException.html">TYPO3\Flow\Utility\Exception\LockNotAcquiredException</a></code><br>
-						<code><a href="class-TYPO3.Flow.Utility.Exception.html">TYPO3\Flow\Utility\Exception</a></code>
-					</div>
 
 
 
 					<h4>Implementation of</h4>
 					<div class="list"><code><a href="class-TYPO3.Flow.Utility.Lock.LockStrategyInterface.html#_acquire">TYPO3\Flow\Utility\Lock\LockStrategyInterface::acquire()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="configureTemporaryDirectory" id="_configureTemporaryDirectory">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_configureTemporaryDirectory">#</a>
+			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#73-89" title="Go to source code">configureTemporaryDirectory</a>( )</code>
+
+			<div class="description short">
+				<p>Sets the temporaryDirectory as static variable for the lock class.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the temporaryDirectory as static variable for the lock class.</p>
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Utility.Exception.LockNotAcquiredException.html">TYPO3\Flow\Utility\Exception\LockNotAcquiredException</a></code><br>
+						<code><a href="class-TYPO3.Flow.Utility.Exception.html">TYPO3\Flow\Utility\Exception</a></code><br>return void;
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="tryToAquireLock" id="_tryToAquireLock">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_tryToAquireLock">#</a>
+			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#91-118" title="Go to source code">tryToAquireLock</a>( <span>boolean <var>$exclusiveLock</var></span> )</code>
+
+			<div class="description short">
+				<p>Tries to open a lock file and apply the lock to it.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Tries to open a lock file and apply the lock to it.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$exclusiveLock</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>Was a lock aquired?
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Utility.Exception.LockNotAcquiredException.html">TYPO3\Flow\Utility\Exception\LockNotAcquiredException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="applyFlock" id="_applyFlock">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_applyFlock">#</a>
+			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#120-133" title="Go to source code">applyFlock</a>( <span>boolean <var>$exclusiveLock</var></span> )</code>
+
+			<div class="description short">
+				<p>apply flock to the opened lock file.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>apply flock to the opened lock file.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$exclusiveLock</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Utility.Exception.LockNotAcquiredException.html">TYPO3\Flow\Utility\Exception\LockNotAcquiredException</a></code>
+					</div>
+
+
+
 			</div>
 			</div></td>
 		</tr>
@@ -875,7 +984,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_release">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#89-107" title="Go to source code">release</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#135-152" title="Go to source code">release</a>( )</code>
 
 			<div class="description short">
 				<p>Releases the lock</p>
@@ -910,7 +1019,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLockFileName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#109-115" title="Go to source code">getLockFileName</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#154-160" title="Go to source code">getLockFileName</a>( )</code>
 
 			<div class="description short">
 				
@@ -924,39 +1033,6 @@
 					<h4>Returns</h4>
 					<div class="list">
 						string
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="isWindowsOS" id="_isWindowsOS">
-
-			<td class="attributes"><code>
-				 protected 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_isWindowsOS">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#117-123" title="Go to source code">isWindowsOS</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean
 					</div>
 
 
@@ -988,7 +1064,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#28-31" title="Go to source code"><var>$temporaryDirectory</var></a>
+					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#29-32" title="Go to source code"><var>$temporaryDirectory</var></a>
 
 				<div class="description short">
 					
@@ -1013,7 +1089,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#33-37" title="Go to source code"><var>$id</var></a>
+					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#34-39" title="Go to source code"><var>$id</var></a>
 
 				<div class="description short">
 					<p>Identifier used for this lock</p>
@@ -1038,7 +1114,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#39-43" title="Go to source code"><var>$lockFileName</var></a>
+					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#41-46" title="Go to source code"><var>$lockFileName</var></a>
 
 				<div class="description short">
 					<p>File name used for this lock</p>
@@ -1063,7 +1139,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#45-49" title="Go to source code"><var>$filePointer</var></a>
+					<a href="source-class-TYPO3.Flow.Utility.Lock.FlockLockStrategy.html#48-53" title="Go to source code"><var>$filePointer</var></a>
 
 				<div class="description short">
 					<p>File pointer if using flock method</p>
