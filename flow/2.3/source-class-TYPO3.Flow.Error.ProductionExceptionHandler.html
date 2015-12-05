@@ -1680,10 +1680,10 @@
 </span><span id="23" class="l">    <span class="php-comment">/**
 </span></span><span id="24" class="l"><span class="php-comment">     * Echoes an exception for the web.
 </span></span><span id="25" class="l"><span class="php-comment">     *
-</span></span><span id="26" class="l"><span class="php-comment">     * @param \Exception $exception The exception
+</span></span><span id="26" class="l"><span class="php-comment">     * @param object $exception \Exception or \Throwable
 </span></span><span id="27" class="l"><span class="php-comment">     * @return void
 </span></span><span id="28" class="l"><span class="php-comment">     */</span>
-</span><span id="29" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> echoExceptionWeb(\Exception <span class="php-var">$exception</span>)
+</span><span id="29" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> echoExceptionWeb(<span class="php-var">$exception</span>)
 </span><span id="30" class="l">    {
 </span><span id="31" class="l">        <span class="php-var">$statusCode</span> = <span class="php-num">500</span>;
 </span><span id="32" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$exception</span> <span class="php-keyword1">instanceof</span> \TYPO3\Flow\Exception) {
@@ -1811,10 +1811,10 @@
 </span><span id="154" class="l">    <span class="php-comment">/**
 </span></span><span id="155" class="l"><span class="php-comment">     * Echoes an exception for the command line.
 </span></span><span id="156" class="l"><span class="php-comment">     *
-</span></span><span id="157" class="l"><span class="php-comment">     * @param \Exception $exception The exception
+</span></span><span id="157" class="l"><span class="php-comment">     * @param object $exception \Exception or \Throwable
 </span></span><span id="158" class="l"><span class="php-comment">     * @return void
 </span></span><span id="159" class="l"><span class="php-comment">     */</span>
-</span><span id="160" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> echoExceptionCli(\Exception <span class="php-var">$exception</span>)
+</span><span id="160" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> echoExceptionCli(<span class="php-var">$exception</span>)
 </span><span id="161" class="l">    {
 </span><span id="162" class="l">        <span class="php-var">$response</span> = <span class="php-keyword1">new</span> \TYPO3\Flow\Cli\Response();
 </span><span id="163" class="l">
