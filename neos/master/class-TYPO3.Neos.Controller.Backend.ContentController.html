@@ -685,7 +685,9 @@ TYPO3\Flow\Mvc\Controller\ActionController
 <b><span>TYPO3\Neos\Controller\Backend\ContentController</span></b>			
 			
 			 uses 
-					<a href="class-TYPO3.Neos.Controller.BackendUserTranslationTrait.html"><span>TYPO3\Neos\Controller\BackendUserTranslationTrait</span></a>
+					<a href="class-TYPO3.Neos.Controller.BackendUserTranslationTrait.html"><span>TYPO3\Neos\Controller\BackendUserTranslationTrait</span></a>, 
+			
+					<a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html"><span>TYPO3\Neos\Controller\CreateContentContextTrait</span></a>
 			
 		</dd>
 	</dl>
@@ -705,7 +707,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#33-414" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Backend/ContentController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#34-423" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Backend/ContentController.php</a>
 		<br>
 	</div>
 
@@ -725,7 +727,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeUploadAssetAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#98-108" title="Go to source code">initializeUploadAssetAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#100-110" title="Go to source code">initializeUploadAssetAction</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize property mapping as the upload usually comes from the Inspector JavaScript</p>
@@ -754,7 +756,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_uploadAssetAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#110-149" title="Go to source code">uploadAssetAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span>, <span>string <var>$metadata</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#112-151" title="Go to source code">uploadAssetAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span>, <span>string <var>$metadata</var></span> )</code>
 
 			<div class="description short">
 				<p>Upload a new image, and return its metadata.</p>
@@ -797,7 +799,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeCreateImageVariantAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#151-162" title="Go to source code">initializeCreateImageVariantAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#153-164" title="Go to source code">initializeCreateImageVariantAction</a>( )</code>
 
 			<div class="description short">
 				<p>Configure property mapping for adding a new image variant.</p>
@@ -826,7 +828,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createImageVariantAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#164-177" title="Go to source code">createImageVariantAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageVariant.html">TYPO3\Media\Domain\Model\ImageVariant</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#166-179" title="Go to source code">createImageVariantAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageVariant.html">TYPO3\Media\Domain\Model\ImageVariant</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate a new image variant from given data.</p>
@@ -864,7 +866,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_imageWithMetadataAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#179-192" title="Go to source code">imageWithMetadataAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#181-194" title="Go to source code">imageWithMetadataAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetch the metadata for a given image</p>
@@ -902,7 +904,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImageInterfacePreviewData">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#194-219" title="Go to source code">getImageInterfacePreviewData</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#196-221" title="Go to source code">getImageInterfacePreviewData</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns important meta data for the given object implementing ImageInterface.</p>
@@ -943,7 +945,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImagePreviewData">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#221-236" title="Go to source code">getImagePreviewData</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Image.html">TYPO3\Media\Domain\Model\Image</a></code> <var>$image</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#223-238" title="Go to source code">getImagePreviewData</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Image.html">TYPO3\Media\Domain\Model\Image</a></code> <var>$image</var></span> )</code>
 
 			<div class="description short">
 				
@@ -981,7 +983,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImageVariantPreviewData">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#238-247" title="Go to source code">getImageVariantPreviewData</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageVariant.html">TYPO3\Media\Domain\Model\ImageVariant</a></code> <var>$imageVariant</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#240-249" title="Go to source code">getImageVariantPreviewData</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageVariant.html">TYPO3\Media\Domain\Model\ImageVariant</a></code> <var>$imageVariant</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1019,7 +1021,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeAssetsWithMetadataAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#249-256" title="Go to source code">initializeAssetsWithMetadataAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#251-258" title="Go to source code">initializeAssetsWithMetadataAction</a>( )</code>
 
 			<div class="description short">
 				
@@ -1048,7 +1050,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_assetsWithMetadataAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#258-273" title="Go to source code">assetsWithMetadataAction</a>( <span>array <var>$assets</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#260-275" title="Go to source code">assetsWithMetadataAction</a>( <span>array <var>$assets</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetch the metadata for multiple assets</p>
@@ -1086,7 +1088,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAssetProperties">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#275-289" title="Go to source code">getAssetProperties</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#277-291" title="Go to source code">getAssetProperties</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1124,7 +1126,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDocumentIconSize">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#291-308" title="Go to source code">getDocumentIconSize</a>( <span>integer <var>$maximumWidth</var></span>, <span>integer <var>$maximumHeight</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#293-310" title="Go to source code">getDocumentIconSize</a>( <span>integer <var>$maximumWidth</var></span>, <span>integer <var>$maximumHeight</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1164,7 +1166,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAssetThumbnailImage">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#310-334" title="Go to source code">getAssetThumbnailImage</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>integer <var>$maximumWidth</var></span>, <span>integer <var>$maximumHeight</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#312-336" title="Go to source code">getAssetThumbnailImage</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>integer <var>$maximumWidth</var></span>, <span>integer <var>$maximumHeight</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1206,7 +1208,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pluginViewsAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#336-376" title="Go to source code">pluginViewsAction</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#338-382" title="Go to source code">pluginViewsAction</a>( <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Fetch the configured views for the given master plugin</p>
@@ -1218,8 +1220,12 @@ or image metadata for the ImageEditor</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$node</var></dt>
-						<dd></dd>
+						<dt><var>$identifier</var></dt>
+						<dd>Specifies the node to look up</dd>
+						<dt><var>$workspaceName</var></dt>
+						<dd>Name of the workspace to use for querying the node</dd>
+						<dt><var>$dimensions</var></dt>
+						<dd>Optional list of dimensions and their values which should be used for querying the specified node</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1228,9 +1234,6 @@ or image metadata for the ImageEditor</p>
 					</div>
 
 
-					<h4>Flow\ignorevalidation("node")</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1247,7 +1250,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_masterPluginsAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#378-413" title="Go to source code">masterPluginsAction</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#384-422" title="Go to source code">masterPluginsAction</a>( <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Fetch all master plugins that are available in the current
@@ -1261,8 +1264,10 @@ workspace.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$node</var></dt>
-						<dd></dd>
+						<dt><var>$workspaceName</var></dt>
+						<dd>Name of the workspace to use for querying the node</dd>
+						<dt><var>$dimensions</var></dt>
+						<dd>Optional list of dimensions and their values which should be used for querying the specified node</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1286,6 +1291,12 @@ workspace.</p>
 				<code><a href="class-TYPO3.Neos.Controller.BackendUserTranslationTrait.html#_initializeObject">initializeObject()</a></code>
 			</p>
 		</div>
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods used from <a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#methods">TYPO3\Neos\Controller\CreateContentContextTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#_createContentContext">createContentContext()</a></code>
+			</p>
+		</div>
 
 
 
@@ -1305,7 +1316,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#42-46" title="Go to source code"><var>$assetRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#44-48" title="Go to source code"><var>$assetRepository</var></a>
 
 				<div class="description short">
 					
@@ -1333,7 +1344,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#48-52" title="Go to source code"><var>$imageRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#50-54" title="Go to source code"><var>$imageRepository</var></a>
 
 				<div class="description short">
 					
@@ -1361,7 +1372,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#54-58" title="Go to source code"><var>$assetCollectionRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#56-60" title="Go to source code"><var>$assetCollectionRepository</var></a>
 
 				<div class="description short">
 					
@@ -1389,7 +1400,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#60-64" title="Go to source code"><var>$siteRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#62-66" title="Go to source code"><var>$siteRepository</var></a>
 
 				<div class="description short">
 					
@@ -1417,7 +1428,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#66-70" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#68-72" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1445,7 +1456,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#72-76" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#74-78" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1473,7 +1484,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#78-84" title="Go to source code"><var>$pluginService</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#80-86" title="Go to source code"><var>$pluginService</var></a>
 
 				<div class="description short">
 					<p>The pluginService</p>
@@ -1501,7 +1512,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#86-90" title="Go to source code"><var>$imageInterfaceArrayPresenter</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#88-92" title="Go to source code"><var>$imageInterfaceArrayPresenter</var></a>
 
 				<div class="description short">
 					
@@ -1529,7 +1540,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#92-96" title="Go to source code"><var>$entityToIdentityConverter</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.ContentController.html#94-98" title="Go to source code"><var>$entityToIdentityConverter</var></a>
 
 				<div class="description short">
 					
@@ -1559,6 +1570,14 @@ workspace.</p>
 			<p class="elementList">
 				<code><a href="class-TYPO3.Neos.Controller.BackendUserTranslationTrait.html#$_localizationService"><var>$_localizationService</var></a></code>, 
 				<code><a href="class-TYPO3.Neos.Controller.BackendUserTranslationTrait.html#$_userService"><var>$_userService</var></a></code>
+			</p>
+		</div>
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties used from <a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#properties">TYPO3\Neos\Controller\CreateContentContextTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_contextFactory"><var>$_contextFactory</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_domainRepository"><var>$_domainRepository</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_siteRepository"><var>$_siteRepository</var></a></code>
 			</p>
 		</div>
 
