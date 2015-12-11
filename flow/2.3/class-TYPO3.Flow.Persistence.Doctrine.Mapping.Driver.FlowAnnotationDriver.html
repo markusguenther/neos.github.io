@@ -777,9 +777,17 @@
 
 
 	<div class="description">
-	<p>This driver reads the mapping metadata from docblock annotations.
-It gives precedence to Doctrine annotations but fills gaps from other info
-if possible: Entity.repositoryClass is set to the repository found in the class schema Table.name is set to a sane value Column.type is set to @var type *.targetEntity is set to @var type</p>
+	<p>This driver reads the mapping metadata from docblock annotations.</p>
+
+<p>It gives precedence to Doctrine annotations but fills gaps from other info
+if possible:</p>
+
+<ul>
+<li>Entity.repositoryClass is set to the repository found in the class schema</li>
+<li>Table.name is set to a sane value</li>
+<li>Column.type is set to property type</li>
+<li>*.targetEntity is set to property type</li>
+</ul>
 
 <p>If a property is not marked as an association the mapping type is set to
 "object" for objects.</p>
@@ -812,7 +820,7 @@ if possible: Entity.repositoryClass is set to the repository found in the class 
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#16-1045" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/Mapping/Driver/FlowAnnotationDriver.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#35-1098" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/Mapping/Driver/FlowAnnotationDriver.php</a>
 		<br>
 	</div>
 
@@ -832,7 +840,7 @@ if possible: Entity.repositoryClass is set to the repository found in the class 
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#63-70" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#84-91" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes a new AnnotationDriver that uses the given AnnotationReader for reading
@@ -863,7 +871,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectReflectionService">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#72-79" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#93-100" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
 
 			<div class="description short">
 				
@@ -897,7 +905,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setEntityManager">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#81-88" title="Go to source code">setEntityManager</a>( <span>Doctrine\Common\Persistence\ObjectManager <var>$entityManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#102-109" title="Go to source code">setEntityManager</a>( <span>Doctrine\Common\Persistence\ObjectManager <var>$entityManager</var></span> )</code>
 
 			<div class="description short">
 				
@@ -931,7 +939,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassSchema">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#90-106" title="Go to source code">getClassSchema</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#111-128" title="Go to source code">getClassSchema</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetch a class schema for the given class, if possible.</p>
@@ -973,7 +981,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAggregateRoot">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#108-125" title="Go to source code">isAggregateRoot</a>( <span>string <var>$className</var></span>, <span>string <var>$propertySourceHint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#130-148" title="Go to source code">isAggregateRoot</a>( <span>string <var>$className</var></span>, <span>string <var>$propertySourceHint</var></span> )</code>
 
 			<div class="description short">
 				<p>Check for $className being an aggregate root.</p>
@@ -1017,7 +1025,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadMetadataForClass">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#127-360" title="Go to source code">loadMetadataForClass</a>( <span>string <var>$className</var></span>, <span>Doctrine\Common\Persistence\Mapping\ClassMetadata <var>$metadata</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#150-393" title="Go to source code">loadMetadataForClass</a>( <span>string <var>$className</var></span>, <span>Doctrine\Common\Persistence\Mapping\ClassMetadata <var>$metadata</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads the metadata for the specified class into the provided container.</p>
@@ -1058,7 +1066,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_inferTableNameFromClassName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#362-372" title="Go to source code">inferTableNameFromClassName</a>( <span>string <var>$className</var></span>, <span>integer <var>$lengthLimit</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#395-405" title="Go to source code">inferTableNameFromClassName</a>( <span>string <var>$className</var></span>, <span>integer <var>$lengthLimit</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Given a class name a table name is returned. That name should be reasonably unique.</p>
@@ -1098,7 +1106,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_truncateIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#374-391" title="Go to source code">truncateIdentifier</a>( <span>string <var>$identifier</var></span>, <span>integer <var>$lengthLimit</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$hashSource</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#407-425" title="Go to source code">truncateIdentifier</a>( <span>string <var>$identifier</var></span>, <span>integer <var>$lengthLimit</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$hashSource</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Truncate an identifier if needed and append a hash to ensure uniqueness.</p>
@@ -1140,7 +1148,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_inferJoinTableNameFromClassAndPropertyName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#393-415" title="Go to source code">inferJoinTableNameFromClassAndPropertyName</a>( <span>string <var>$className</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#427-449" title="Go to source code">inferJoinTableNameFromClassAndPropertyName</a>( <span>string <var>$className</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Given a class and property name a table name is returned. That name should be reasonably unique.</p>
@@ -1180,7 +1188,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildJoinTableColumnName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#417-434" title="Go to source code">buildJoinTableColumnName</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#451-468" title="Go to source code">buildJoinTableColumnName</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Build a name for a column in a jointable.</p>
@@ -1218,7 +1226,7 @@ docblock annotations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildJoinColumnsIfNeeded">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#436-475" title="Go to source code">buildJoinColumnsIfNeeded</a>( <span>array <var>$joinColumns</var></span>, <span>array <var>$mapping</var></span>, <span>ReflectionProperty <var>$property</var></span>, <span>integer <var>$direction</var> = <code><a href="class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#MAPPING_REGULAR">TYPO3\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver::<b>MAPPING_REGULAR</b></a></code></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#470-509" title="Go to source code">buildJoinColumnsIfNeeded</a>( <span>array <var>$joinColumns</var></span>, <span>array <var>$mapping</var></span>, <span>ReflectionProperty <var>$property</var></span>, <span>integer <var>$direction</var> = self::MAPPING_REGULAR</span> )</code>
 
 			<div class="description short">
 				<p>Check if the referenced column name is set (and valid) and if not make sure
@@ -1264,7 +1272,7 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluatePropertyAnnotations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#477-673" title="Go to source code">evaluatePropertyAnnotations</a>( <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#511-708" title="Go to source code">evaluatePropertyAnnotations</a>( <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate the property annotations and amend the metadata accordingly.</p>
@@ -1302,7 +1310,7 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateJoinTableAnnotation">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#675-725" title="Go to source code">evaluateJoinTableAnnotation</a>( <span>Doctrine\ORM\Mapping\JoinTable <var>$joinTableAnnotation</var></span>, <span>ReflectionProperty <var>$property</var></span>, <span>string <var>$className</var></span>, <span>array <var>$mapping</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#710-760" title="Go to source code">evaluateJoinTableAnnotation</a>( <span>Doctrine\ORM\Mapping\JoinTable <var>$joinTableAnnotation</var></span>, <span>ReflectionProperty <var>$property</var></span>, <span>string <var>$className</var></span>, <span>array <var>$mapping</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate JoinTable annotations and fill missing bits as needed.</p>
@@ -1346,7 +1354,7 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateJoinColumnAnnotations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#727-748" title="Go to source code">evaluateJoinColumnAnnotations</a>( <span>ReflectionProperty <var>$property</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#762-784" title="Go to source code">evaluateJoinColumnAnnotations</a>( <span>ReflectionProperty <var>$property</var></span> )</code>
 
 			<div class="description short">
 				<p>Check for and build JoinColummn/JoinColumns annotations.</p>
@@ -1386,7 +1394,7 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateOverridesAnnotations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#750-807" title="Go to source code">evaluateOverridesAnnotations</a>( <span>array <var>$classAnnotations</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#786-843" title="Go to source code">evaluateOverridesAnnotations</a>( <span>array <var>$classAnnotations</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate the association overrides annotations and amend the metadata accordingly.</p>
@@ -1422,7 +1430,7 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateLifeCycleAnnotations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#809-860" title="Go to source code">evaluateLifeCycleAnnotations</a>( <span>ReflectionClass <var>$class</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#845-866" title="Go to source code">evaluateLifeCycleAnnotations</a>( <span>ReflectionClass <var>$class</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate the lifecycle annotations and amend the metadata accordingly.</p>
@@ -1447,6 +1455,44 @@ it is initialized properly.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getMethodCallbacks" id="_getMethodCallbacks">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMethodCallbacks">#</a>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#868-914" title="Go to source code">getMethodCallbacks</a>( <span>ReflectionMethod <var>$method</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns an array of callbacks for lifecycle annotations on the given method.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an array of callbacks for lifecycle annotations on the given method.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$method</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getMaxIdentifierLength" id="_getMaxIdentifierLength">
 
 			<td class="attributes"><code>
@@ -1458,7 +1504,7 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMaxIdentifierLength">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#862-873" title="Go to source code">getMaxIdentifierLength</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#916-927" title="Go to source code">getMaxIdentifierLength</a>( )</code>
 
 			<div class="description short">
 				<p>Derive maximum identifier length from doctrine DBAL</p>
@@ -1491,18 +1537,16 @@ it is initialized properly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isTransient">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#875-892" title="Go to source code">isTransient</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#929-945" title="Go to source code">isTransient</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
-				<p>Whether the class with the specified name should have its metadata loaded.
-This is only the case if it is either mapped as an Entity or a
-MappedSuperclass (i.e. is not transient).</p>
+				<p>Returns whether the class with the specified name is transient. Only non-transient
+classes, that is entities and mapped superclasses, should have their metadata loaded.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Whether the class with the specified name should have its metadata loaded.
-This is only the case if it is either mapped as an Entity or a
-MappedSuperclass (i.e. is not transient).</p>
+				<p>Returns whether the class with the specified name is transient. Only non-transient
+classes, that is entities and mapped superclasses, should have their metadata loaded.</p>
 
 
 					<h4>Parameters</h4>
@@ -1533,7 +1577,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAllClassNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#894-919" title="Go to source code">getAllClassNames</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#947-972" title="Go to source code">getAllClassNames</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of all mapped (non-transient) classes known to this driver.</p>
@@ -1566,7 +1610,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_joinColumnToArray">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#921-938" title="Go to source code">joinColumnToArray</a>( <span>Doctrine\ORM\Mapping\JoinColumn <var>$joinColumnAnnotation</var></span>, <span>string <var>$propertyName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#974-991" title="Go to source code">joinColumnToArray</a>( <span>Doctrine\ORM\Mapping\JoinColumn <var>$joinColumnAnnotation</var></span>, <span>string <var>$propertyName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Parse the given JoinColumn into an array</p>
@@ -1606,7 +1650,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addColumnToMappingArray">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#940-974" title="Go to source code">addColumnToMappingArray</a>( <span>Doctrine\ORM\Mapping\Column <var>$columnAnnotation</var></span>, <span>array <var>$mapping</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$fieldName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#993-1027" title="Go to source code">addColumnToMappingArray</a>( <span>Doctrine\ORM\Mapping\Column <var>$columnAnnotation</var></span>, <span>array <var>$mapping</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$fieldName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Parse the given Column into an array</p>
@@ -1648,7 +1692,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFetchMode">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#976-992" title="Go to source code">getFetchMode</a>( <span>string <var>$className</var></span>, <span>string <var>$fetchMode</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1029-1045" title="Go to source code">getFetchMode</a>( <span>string <var>$className</var></span>, <span>string <var>$fetchMode</var></span> )</code>
 
 			<div class="description short">
 				<p>Attempts to resolve the fetch mode.</p>
@@ -1692,7 +1736,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matches">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#994-1013" title="Go to source code">matches</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>string <var>$methodDeclaringClassName</var></span>, <span>mixed <var>$pointcutQueryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1047-1066" title="Go to source code">matches</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>string <var>$methodDeclaringClassName</var></span>, <span>mixed <var>$pointcutQueryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the specified class has a property annotated with Id</p>
@@ -1738,7 +1782,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasRuntimeEvaluationsDefinition">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1015-1023" title="Go to source code">hasRuntimeEvaluationsDefinition</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1068-1076" title="Go to source code">hasRuntimeEvaluationsDefinition</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if this filter holds runtime evaluations for a previously matched pointcut</p>
@@ -1773,7 +1817,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRuntimeEvaluationsDefinition">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1025-1033" title="Go to source code">getRuntimeEvaluationsDefinition</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1078-1086" title="Go to source code">getRuntimeEvaluationsDefinition</a>( )</code>
 
 			<div class="description short">
 				<p>Returns runtime evaluations for a previously matched pointcut</p>
@@ -1808,7 +1852,7 @@ MappedSuperclass (i.e. is not transient).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reduceTargetClassNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1035-1044" title="Go to source code">reduceTargetClassNames</a>( <span><code><a href="class-TYPO3.Flow.Aop.Builder.ClassNameIndex.html">TYPO3\Flow\Aop\Builder\ClassNameIndex</a></code> <var>$classNameIndex</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1088-1097" title="Go to source code">reduceTargetClassNames</a>( <span><code><a href="class-TYPO3.Flow.Aop.Builder.ClassNameIndex.html">TYPO3\Flow\Aop\Builder\ClassNameIndex</a></code> <var>$classNameIndex</var></span> )</code>
 
 			<div class="description short">
 				<p>This method is used to optimize the matching process.</p>
@@ -1855,7 +1899,7 @@ MappedSuperclass (i.e. is not transient).</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#32-35" title="Go to source code"><b>MAPPING_REGULAR</b></a>
+						<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#53-56" title="Go to source code"><b>MAPPING_REGULAR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1879,7 +1923,7 @@ MappedSuperclass (i.e. is not transient).</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#36" title="Go to source code"><b>MAPPING_MM_REGULAR</b></a>
+						<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#57" title="Go to source code"><b>MAPPING_MM_REGULAR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1914,7 +1958,7 @@ MappedSuperclass (i.e. is not transient).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#38-41" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#59-62" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1939,7 +1983,7 @@ MappedSuperclass (i.e. is not transient).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#43-46" title="Go to source code"><var>$reader</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#64-67" title="Go to source code"><var>$reader</var></a>
 
 				<div class="description short">
 					
@@ -1964,7 +2008,7 @@ MappedSuperclass (i.e. is not transient).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#48-51" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#69-72" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					
@@ -1989,7 +2033,7 @@ MappedSuperclass (i.e. is not transient).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#53-56" title="Go to source code"><var>$classNames</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#74-77" title="Go to source code"><var>$classNames</var></a>
 
 				<div class="description short">
 					
@@ -2014,7 +2058,7 @@ MappedSuperclass (i.e. is not transient).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#58-61" title="Go to source code"><var>$tableNameLengthLimit</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#79-82" title="Go to source code"><var>$tableNameLengthLimit</var></a>
 
 				<div class="description short">
 					
