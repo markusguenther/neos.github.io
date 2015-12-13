@@ -605,7 +605,7 @@
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#22-146" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/NodeService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#22-147" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/NodeService.php</a>
 		<br>
 	</div>
 
@@ -697,14 +697,18 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cleanUpProperties">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#83-101" title="Go to source code">cleanUpProperties</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#83-102" title="Go to source code">cleanUpProperties</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
-				<p>Remove all property not configured in the current Node Type</p>
+				<p>Remove all properties not configured in the current Node Type.
+This will not do anything on Nodes marked as removed as those could be queued up for deletion
+which contradicts updates (that would be necessary to remove the properties).</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Remove all property not configured in the current Node Type</p>
+				<p>Remove all properties not configured in the current Node Type.
+This will not do anything on Nodes marked as removed as those could be queued up for deletion
+which contradicts updates (that would be necessary to remove the properties).</p>
 
 
 					<h4>Parameters</h4>
@@ -731,7 +735,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeOfType">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#103-115" title="Go to source code">isNodeOfType</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#104-116" title="Go to source code">isNodeOfType</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				
@@ -771,7 +775,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_nodePathExistsInAnyContext">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#117-126" title="Go to source code">nodePathExistsInAnyContext</a>( <span>string <var>$nodePath</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#118-127" title="Go to source code">nodePathExistsInAnyContext</a>( <span>string <var>$nodePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given node path exists in any possible context already.</p>
@@ -809,7 +813,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_nodePathAvailableForNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#128-145" title="Go to source code">nodePathAvailableForNode</a>( <span>string <var>$nodePath</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.NodeService.html#129-146" title="Go to source code">nodePathAvailableForNode</a>( <span>string <var>$nodePath</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given node path can be used for the given node.</p>
