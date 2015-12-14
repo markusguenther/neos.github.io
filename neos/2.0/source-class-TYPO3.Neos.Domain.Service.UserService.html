@@ -1324,7 +1324,7 @@
 </span><span id="247" class="l">        }
 </span><span id="248" class="l">        <span class="php-var">$roleIdentifiers</span> = <span class="php-var">$this</span>-&gt;normalizeRoleIdentifiers(<span class="php-var">$roleIdentifiers</span>);
 </span><span id="249" class="l">        <span class="php-var">$account</span> = <span class="php-var">$this</span>-&gt;accountFactory-&gt;createAccountWithPassword(<span class="php-var">$username</span>, <span class="php-var">$password</span>, <span class="php-var">$roleIdentifiers</span>, <span class="php-var">$authenticationProviderName</span> ?: <span class="php-var">$this</span>-&gt;defaultAuthenticationProviderName);
-</span><span id="250" class="l">        <span class="php-var">$user</span>-&gt;addAccount(<span class="php-var">$account</span>);
+</span><span id="250" class="l">        <span class="php-var">$this</span>-&gt;partyService-&gt;assignAccountToParty(<span class="php-var">$account</span>, <span class="php-var">$user</span>);
 </span><span id="251" class="l">
 </span><span id="252" class="l">        <span class="php-var">$this</span>-&gt;partyRepository-&gt;add(<span class="php-var">$user</span>);
 </span><span id="253" class="l">        <span class="php-var">$this</span>-&gt;accountRepository-&gt;add(<span class="php-var">$account</span>);
