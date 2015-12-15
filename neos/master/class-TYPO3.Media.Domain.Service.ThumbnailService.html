@@ -673,6 +673,7 @@
 			<ul>
 				<li><a href="class-TYPO3.Media.Domain.Service.AssetService.html">AssetService</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Service.ImageService.html">ImageService</a></li>
+				<li><a href="class-TYPO3.Media.Domain.Service.ThumbnailGenerator.html">ThumbnailGenerator</a></li>
 				<li class="active"><a href="class-TYPO3.Media.Domain.Service.ThumbnailService.html">ThumbnailService</a></li>
 			</ul>
 
@@ -714,7 +715,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#25-109" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Service/ThumbnailService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#26-216" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Service/ThumbnailService.php</a>
 		<br>
 	</div>
 
@@ -734,7 +735,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getThumbnail">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#70-108" title="Go to source code">getThumbnail</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#76-141" title="Go to source code">getThumbnail</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a thumbnail of the given asset</p>
@@ -770,6 +771,155 @@ the original asset is used.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getPresets" id="_getPresets">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPresets">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#143-149" title="Go to source code">getPresets</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Returns preset configuration for all presets
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getThumbnailConfigurationForPreset" id="_getThumbnailConfigurationForPreset">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getThumbnailConfigurationForPreset">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#151-173" title="Go to source code">getThumbnailConfigurationForPreset</a>( <span>string <var>$preset</var></span>, <span>boolean <var>$async</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$preset</var></dt>
+						<dd>The preset identifier</dd>
+						<dt><var>$async</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code>
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Media.Exception.ThumbnailServiceException.html">TYPO3\Media\Exception\ThumbnailServiceException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="refreshThumbnail" id="_refreshThumbnail">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_refreshThumbnail">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#175-186" title="Go to source code">refreshThumbnail</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Thumbnail.html">TYPO3\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+
+			<div class="description short">
+				<p>Refreshes a thumbnail and persists the thumbnail</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Refreshes a thumbnail and persists the thumbnail</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$thumbnail</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUriForThumbnail" id="_getUriForThumbnail">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUriForThumbnail">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#188-215" title="Go to source code">getUriForThumbnail</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Thumbnail.html">TYPO3\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$thumbnail</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 			</table>
 		</div>
 
@@ -793,7 +943,7 @@ the original asset is used.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#34-38" title="Go to source code"><var>$imageService</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#35-39" title="Go to source code"><var>$imageService</var></a>
 
 				<div class="description short">
 					
@@ -821,7 +971,7 @@ the original asset is used.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#40-44" title="Go to source code"><var>$thumbnailRepository</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#41-45" title="Go to source code"><var>$thumbnailRepository</var></a>
 
 				<div class="description short">
 					
@@ -842,34 +992,6 @@ the original asset is used.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="signalSlotDispatcher" id="$signalSlotDispatcher">
-			<td class="attributes"><code>
-				protected  
-				TYPO3\Flow\SignalSlot\Dispatcher
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#46-50" title="Go to source code"><var>$signalSlotDispatcher</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$signalSlotDispatcher" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="persistenceManager" id="$persistenceManager">
 			<td class="attributes"><code>
 				protected  
@@ -877,7 +999,7 @@ the original asset is used.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#52-56" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#47-51" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -898,6 +1020,34 @@ the original asset is used.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="resourceManager" id="$resourceManager">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Resource\ResourceManager
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#53-57" title="Go to source code"><var>$resourceManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$resourceManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="systemLogger" id="$systemLogger">
 			<td class="attributes"><code>
 				protected  
@@ -905,7 +1055,7 @@ the original asset is used.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#58-62" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#59-63" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -926,14 +1076,14 @@ the original asset is used.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="resourceManager" id="$resourceManager">
+		<tr data-order="presets" id="$presets">
 			<td class="attributes"><code>
 				protected  
-				TYPO3\Flow\Resource\ResourceManager
+				boolean
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#64-68" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#65-69" title="Go to source code"><var>$presets</var></a>
 
 				<div class="description short">
 					
@@ -942,15 +1092,40 @@ the original asset is used.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
+						<h4>Flow\injectconfiguration("thumbnailpresets")</h4>
 						<div class="list">
 						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$resourceManager" class="anchor">#</a>
+					<a href="#$presets" class="anchor">#</a>
 					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="thumbnailCache" id="$thumbnailCache">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Media.Domain.Service.ThumbnailService.html#71-74" title="Go to source code"><var>$thumbnailCache</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$thumbnailCache" class="anchor">#</a>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>

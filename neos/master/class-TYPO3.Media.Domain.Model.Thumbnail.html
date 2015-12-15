@@ -743,13 +743,13 @@
 
 				<b>Flow\entity</b>
 				<br>
-				<b>Orm\index(name="originalasset_configurationhash",columns={"originalasset",:</b>
-				<p>"configurationhash"})
-   }
-)</p><br>
 				<b>Orm\table(:</b>
-				indexes={<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#22-206" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Model/Thumbnail.php</a>
+				uniqueConstraints={<br>
+				<b>Orm\uniqueconstraint(name="originalasset_configurationhash",columns={"originalasset",:</b>
+				<p>"configurationhash"})
+ }
+)</p><br>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#22-208" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Model/Thumbnail.php</a>
 		<br>
 	</div>
 
@@ -769,7 +769,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#81-92" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$originalAsset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#74-87" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$originalAsset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span>, <span>boolean <var>$async</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Constructs a new Thumbnail</p>
@@ -784,6 +784,8 @@
 						<dt><var>$originalAsset</var></dt>
 						<dd>The original asset this variant is derived from</dd>
 						<dt><var>$configuration</var></dt>
+						<dd></dd>
+						<dt><var>$async</var>,…</dt>
 						<dd></dd>
 					</dl></div>
 
@@ -809,7 +811,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#94-104" title="Go to source code">initializeObject</a>( <span>integer <var>$initializationCause</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#89-103" title="Go to source code">initializeObject</a>( <span>integer <var>$initializationCause</var></span> )</code>
 
 			<div class="description short">
 				<p>Initializes this thumbnail</p>
@@ -843,7 +845,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOriginalAsset">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#106-114" title="Go to source code">getOriginalAsset</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#105-113" title="Go to source code">getOriginalAsset</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the Asset this thumbnail is derived from</p>
@@ -865,41 +867,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getResource" id="_getResource">
-
-			<td class="attributes"><code>
-				 public 
-				TYPO3\Flow\Resource\Resource
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getResource">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#116-124" title="Go to source code">getResource</a>( )</code>
-
-			<div class="description short">
-				<p>Resource of this thumbnail</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Resource of this thumbnail</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						TYPO3\Flow\Resource\Resource
-					</div>
-
-
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-TYPO3.Media.Domain.Model.ResourceBasedInterface.html#_getResource">TYPO3\Media\Domain\Model\ResourceBasedInterface::getResource()</a></code></div>
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="setConfiguration" id="_setConfiguration">
 
 			<td class="attributes"><code>
@@ -911,7 +878,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#126-133" title="Go to source code">setConfiguration</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#115-123" title="Go to source code">setConfiguration</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				
@@ -945,7 +912,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigurationValue">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#135-142" title="Go to source code">getConfigurationValue</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#125-132" title="Go to source code">getConfigurationValue</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -969,6 +936,41 @@
 
 
 
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getResource" id="_getResource">
+
+			<td class="attributes"><code>
+				 public 
+				TYPO3\Flow\Resource\Resource
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getResource">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#134-142" title="Go to source code">getResource</a>( )</code>
+
+			<div class="description short">
+				<p>Resource of this thumbnail</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Resource of this thumbnail</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						TYPO3\Flow\Resource\Resource
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Media.Domain.Model.ResourceBasedInterface.html#_getResource">TYPO3\Media\Domain\Model\ResourceBasedInterface::getResource()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
@@ -1006,6 +1008,73 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getStaticResource" id="_getStaticResource">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStaticResource">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#153-159" title="Go to source code">getStaticResource</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setStaticResource" id="_setStaticResource">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setStaticResource">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#161-168" title="Go to source code">setStaticResource</a>( <span>string <var>$staticResource</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$staticResource</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setWidth" id="_setWidth">
 
 			<td class="attributes"><code>
@@ -1017,7 +1086,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setWidth">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#153-160" title="Go to source code">setWidth</a>( <span>integer <var>$width</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#170-177" title="Go to source code">setWidth</a>( <span>integer <var>$width</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1051,7 +1120,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHeight">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#162-169" title="Go to source code">setHeight</a>( <span>integer <var>$height</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#179-186" title="Go to source code">setHeight</a>( <span>integer <var>$height</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1074,106 +1143,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="isTransient" id="_isTransient">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_isTransient">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#171-177" title="Go to source code">isTransient</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getStaticResource" id="_getStaticResource">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getStaticResource">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#179-185" title="Go to source code">getStaticResource</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="setStaticResource" id="_setStaticResource">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_setStaticResource">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#187-195" title="Go to source code">setStaticResource</a>( <span>string <var>$staticResource</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$staticResource</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="refresh" id="_refresh">
 
 			<td class="attributes"><code>
@@ -1185,7 +1154,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refresh">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#197-205" title="Go to source code">refresh</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#188-196" title="Go to source code">refresh</a>( )</code>
 
 			<div class="description short">
 				<p>Refreshes this asset after the Resource has been modified</p>
@@ -1202,6 +1171,43 @@
 
 					<h4>Implementation of</h4>
 					<div class="list"><code><a href="class-TYPO3.Media.Domain.Model.ResourceBasedInterface.html#_refresh">TYPO3\Media\Domain\Model\ResourceBasedInterface::refresh()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="emitThumbnailCreated" id="_emitThumbnailCreated">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_emitThumbnailCreated">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#198-207" title="Go to source code">emitThumbnailCreated</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Thumbnail.html">TYPO3\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+
+			<div class="description short">
+				<p>Signals that a thumbnail was created.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Signals that a thumbnail was created.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$thumbnail</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Flow\signal</h4>
+					<div class="list">
+					</div>
+
+
 			</div>
 			</div></td>
 		</tr>
@@ -1327,7 +1333,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#49-55" title="Go to source code"><var>$resource</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#49-54" title="Go to source code"><var>$resource</var></a>
 
 				<div class="description short">
 					
@@ -1336,11 +1342,7 @@
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\validate(type</h4>
-						<div class="list">
-								= "NotEmpty")<br>
-						</div>
-						<h4>Orm\joincolumn(nullable=false)</h4>
+						<h4>Orm\joincolumn(nullable=true)</h4>
 						<div class="list">
 						</div>
 						<h4>Orm\onetoone(orphanremoval</h4>
@@ -1363,16 +1365,16 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#57-61" title="Go to source code"><var>$staticResource</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#56-60" title="Go to source code"><var>$staticResource</var></a>
 
 				<div class="description short">
-					
+					<p>Supports the 'resource://Package.Key/Public/File' format</p>
 				</div>
 
 				<div class="description detailed hidden">
-					
+					<p>Supports the 'resource://Package.Key/Public/File' format</p>
 
-						<h4>Flow\transient</h4>
+						<h4>Orm\column(nullable=true)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -1391,7 +1393,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#63-67" title="Go to source code"><var>$configuration</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#62-66" title="Go to source code"><var>$configuration</var></a>
 
 				<div class="description short">
 					
@@ -1419,7 +1421,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#69-73" title="Go to source code"><var>$configurationHash</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#68-72" title="Go to source code"><var>$configurationHash</var></a>
 
 				<div class="description short">
 					
@@ -1437,34 +1439,6 @@
 				<div>
 					<a href="#$configurationHash" class="anchor">#</a>
 					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="transient" id="$transient">
-			<td class="attributes"><code>
-				protected  
-				boolean
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.Thumbnail.html#75-79" title="Go to source code"><var>$transient</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\transient</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$transient" class="anchor">#</a>
-					<code><span class="php-keyword1">false</span></code>
 				</div>
 			</td>
 		</tr>

@@ -673,6 +673,7 @@
 			<ul>
 				<li class="active"><a href="class-TYPO3.Media.Domain.Service.AssetService.html">AssetService</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Service.ImageService.html">ImageService</a></li>
+				<li><a href="class-TYPO3.Media.Domain.Service.ThumbnailGenerator.html">ThumbnailGenerator</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Service.ThumbnailService.html">ThumbnailService</a></li>
 			</ul>
 
@@ -707,7 +708,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Media.html">Media</a>\<a href="namespace-TYPO3.Media.Domain.html">Domain</a>\<a href="namespace-TYPO3.Media.Domain.Service.html">Service</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#21-84" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Service/AssetService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#24-84" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Service/AssetService.php</a>
 		<br>
 	</div>
 
@@ -727,7 +728,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getThumbnailUriAndSizeForAsset">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#35-62" title="Go to source code">getThumbnailUriAndSizeForAsset</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#44-83" title="Go to source code">getThumbnailUriAndSizeForAsset</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span>, <span>TYPO3\Flow\Mvc\ActionRequest <var>$request</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Calculates the dimensions of the thumbnail to be generated and returns the thumbnail URI.
@@ -745,6 +746,8 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 						<dd></dd>
 						<dt><var>$configuration</var></dt>
 						<dd></dd>
+						<dt><var>$request</var></dt>
+						<dd>Request argument must be provided for asynchronous thumbnails</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -752,48 +755,10 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 						array|null<br>Array with keys "width", "height" and "src" if the thumbnail generation work or null
 					</div>
 
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getImageThumbnail" id="_getImageThumbnail">
-
-			<td class="attributes"><code>
-				 protected 
-				<code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getImageThumbnail">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#64-83" title="Go to source code">getImageThumbnail</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
-
-			<div class="description short">
-				<p>Calculates the dimensions of the thumbnail to be generated and returns the thumbnail image if the new dimensions
-differ from the specified image dimensions, otherwise the original image is returned.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Calculates the dimensions of the thumbnail to be generated and returns the thumbnail image if the new dimensions
-differ from the specified image dimensions, otherwise the original image is returned.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$asset</var></dt>
-						<dd></dd>
-						<dt><var>$configuration</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
+					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code>
+						<code><a href="class-TYPO3.Media.Exception.AssetServiceException.html">TYPO3\Media\Exception\AssetServiceException</a></code>
 					</div>
-
 
 
 
@@ -823,7 +788,7 @@ differ from the specified image dimensions, otherwise the original image is retu
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#23-27" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#26-30" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -851,7 +816,7 @@ differ from the specified image dimensions, otherwise the original image is retu
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#29-33" title="Go to source code"><var>$thumbnailService</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#32-36" title="Go to source code"><var>$thumbnailService</var></a>
 
 				<div class="description short">
 					
@@ -868,6 +833,34 @@ differ from the specified image dimensions, otherwise the original image is retu
 			<td class="value">
 				<div>
 					<a href="#$thumbnailService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="uriBuilder" id="$uriBuilder">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Mvc\Routing\UriBuilder
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#38-42" title="Go to source code"><var>$uriBuilder</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$uriBuilder" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

@@ -764,7 +764,7 @@ TYPO3\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Media.html">Media</a>\<a href="namespace-TYPO3.Media.ViewHelpers.html">ViewHelpers</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Media.ViewHelpers.ThumbnailViewHelper.html#19-134" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/ViewHelpers/ThumbnailViewHelper.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.ViewHelpers.ThumbnailViewHelper.html#19-140" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/ViewHelpers/ThumbnailViewHelper.php</a>
 		<br>
 	</div>
 
@@ -813,7 +813,7 @@ TYPO3\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper
 
 			<td class="name"><div>
 			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-TYPO3.Media.ViewHelpers.ThumbnailViewHelper.html#105-133" title="Go to source code">render</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$width</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumWidth</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$height</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumHeight</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$allowCropping</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$allowUpScaling</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.ViewHelpers.ThumbnailViewHelper.html#105-139" title="Go to source code">render</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$width</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumWidth</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$height</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumHeight</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$allowCropping</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$allowUpScaling</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$async</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$preset</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Renders an HTML img tag with a thumbnail image, created from a given asset.</p>
@@ -839,6 +839,10 @@ TYPO3\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper
 						<dd>Whether the thumbnail should be cropped if the given sizes would hurt the aspect ratio</dd>
 						<dt><var>$allowUpScaling</var></dt>
 						<dd>Whether the resulting thumbnail size might exceed the size of the original asset</dd>
+						<dt><var>$async</var></dt>
+						<dd>Return asynchronous image URI in case the requested image does not exist already</dd>
+						<dt><var>$preset</var></dt>
+						<dd>Preset used to determine image configuration</dd>
 					</dl></div>
 
 					<h4>Returns</h4>

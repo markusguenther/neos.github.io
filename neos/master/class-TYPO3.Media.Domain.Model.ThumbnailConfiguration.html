@@ -730,7 +730,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Media.html">Media</a>\<a href="namespace-TYPO3.Media.Domain.html">Domain</a>\<a href="namespace-TYPO3.Media.Domain.Model.html">Model</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#18-204" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Model/ThumbnailConfiguration.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#18-219" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Model/ThumbnailConfiguration.php</a>
 		<br>
 	</div>
 
@@ -750,7 +750,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#70-86" title="Go to source code">__construct</a>( <span>integer <var>$width</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumWidth</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$height</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumHeight</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$allowCropping</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$allowUpScaling</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#75-93" title="Go to source code">__construct</a>( <span>integer <var>$width</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumWidth</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$height</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumHeight</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$allowCropping</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$allowUpScaling</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$async</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -774,6 +774,8 @@
 						<dd>Whether the image should be cropped if the given sizes would hurt the aspect ratio</dd>
 						<dt><var>$allowUpScaling</var></dt>
 						<dd>Whether the resulting image size might exceed the size of the original image</dd>
+						<dt><var>$async</var></dt>
+						<dd>Whether the thumbnail can be generated asynchronously</dd>
 					</dl></div>
 
 
@@ -794,7 +796,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWidth">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#88-104" title="Go to source code">getWidth</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#95-111" title="Go to source code">getWidth</a>( )</code>
 
 			<div class="description short">
 				
@@ -827,7 +829,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMaximumWidth">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#106-112" title="Go to source code">getMaximumWidth</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#113-119" title="Go to source code">getMaximumWidth</a>( )</code>
 
 			<div class="description short">
 				
@@ -860,7 +862,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHeight">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#114-130" title="Go to source code">getHeight</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#121-137" title="Go to source code">getHeight</a>( )</code>
 
 			<div class="description short">
 				
@@ -893,7 +895,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMaximumHeight">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#132-138" title="Go to source code">getMaximumHeight</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#139-145" title="Go to source code">getMaximumHeight</a>( )</code>
 
 			<div class="description short">
 				
@@ -926,7 +928,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRatioMode">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#140-146" title="Go to source code">getRatioMode</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#147-153" title="Go to source code">getRatioMode</a>( )</code>
 
 			<div class="description short">
 				
@@ -959,7 +961,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isCroppingAllowed">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#148-154" title="Go to source code">isCroppingAllowed</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#155-161" title="Go to source code">isCroppingAllowed</a>( )</code>
 
 			<div class="description short">
 				
@@ -992,7 +994,40 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isUpScalingAllowed">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#156-162" title="Go to source code">isUpScalingAllowed</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#163-169" title="Go to source code">isUpScalingAllowed</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isAsync" id="_isAsync">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isAsync">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#171-177" title="Go to source code">isAsync</a>( )</code>
 
 			<div class="description short">
 				
@@ -1025,7 +1060,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHash">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#164-170" title="Go to source code">getHash</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#179-185" title="Go to source code">getHash</a>( )</code>
 
 			<div class="description short">
 				
@@ -1058,7 +1093,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toArray">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#172-189" title="Go to source code">toArray</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#187-204" title="Go to source code">toArray</a>( )</code>
 
 			<div class="description short">
 				
@@ -1091,7 +1126,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logDeprecation">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#191-203" title="Go to source code">logDeprecation</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#206-218" title="Go to source code">logDeprecation</a>( )</code>
 
 			<div class="description short">
 				<p>Log a deprecation message once</p>
@@ -1275,6 +1310,31 @@
 				</div>
 			</td>
 		</tr>
+		<tr data-order="async" id="$async">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#53-56" title="Go to source code"><var>$async</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$async" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="behaviourFlag" id="$behaviourFlag">
 			<td class="attributes"><code>
 				protected  
@@ -1282,7 +1342,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#53-57" title="Go to source code"><var>$behaviourFlag</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#58-62" title="Go to source code"><var>$behaviourFlag</var></a>
 
 				<div class="description short">
 					
@@ -1310,7 +1370,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#59-63" title="Go to source code"><var>$logger</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#64-68" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1338,7 +1398,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#65-68" title="Go to source code"><var>$loggedDeprecation</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html#70-73" title="Go to source code"><var>$loggedDeprecation</var></a>
 
 				<div class="description short">
 					
