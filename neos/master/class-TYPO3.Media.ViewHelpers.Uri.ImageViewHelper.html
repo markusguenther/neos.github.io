@@ -99,6 +99,10 @@
 						<a href="namespace-TYPO3.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Model.ThumbnailGenerator.html">
+							ThumbnailGenerator						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-TYPO3.Media.Domain.Repository.html">
@@ -644,6 +648,7 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-TYPO3.Media.ViewHelpers.Uri.ImageViewHelper.html">ImageViewHelper</a></li>
+				<li><a href="class-TYPO3.Media.ViewHelpers.Uri.ThumbnailViewHelper.html">ThumbnailViewHelper</a></li>
 			</ul>
 
 
@@ -663,7 +668,7 @@
 
 
 	<div class="description">
-	<p>Renders the src path of a thumbnail image of a given TYPO3.Media asset instance</p>
+	<p>Renders the src path of a thumbnail image of a given TYPO3.Media image instance</p>
 
 <p>= Examples =</p>
 
@@ -676,7 +681,7 @@ _Resources/Persistent/b29[...]95d.jpeg
 </output></p>
 
 <p><code title="Rendering an image path with scaling at a given width only">
-{typo3.media:uri.image(image: assetObject, maximumWidth: 80)}
+{typo3.media:uri.image(image: imageObject, maximumWidth: 80)}
 </code>
 <output>
 (depending on the image; has scaled keeping the aspect ratio)
@@ -765,11 +770,11 @@ TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper
 			<code><a href="source-class-TYPO3.Media.ViewHelpers.Uri.ImageViewHelper.html#72-91" title="Go to source code">render</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.ImageInterface.html">TYPO3\Media\Domain\Model\ImageInterface</a></code> <var>$image</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$width</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumWidth</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$height</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumHeight</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$allowCropping</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$allowUpScaling</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Renders the path to a thumbnail image, created from a given asset.</p>
+				<p>Renders the path to a thumbnail image, created from a given image.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Renders the path to a thumbnail image, created from a given asset.</p>
+				<p>Renders the path to a thumbnail image, created from a given image.</p>
 
 
 					<h4>Parameters</h4>
