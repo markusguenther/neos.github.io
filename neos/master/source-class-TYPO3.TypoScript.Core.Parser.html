@@ -1255,7 +1255,7 @@
 </span></span><span id="149" class="l"><span class="php-quote">        )
 </span></span><span id="150" class="l"><span class="php-quote">        \s*
 </span></span><span id="151" class="l"><span class="php-quote">        (?P&lt;OpeningConfinement&gt;
-</span></span><span id="152" class="l"><span class="php-quote">            [^\${]\{              # optionally followed by an opening confinement
+</span></span><span id="152" class="l"><span class="php-quote">            (?&lt;![${])\{           # optionally followed by an opening confinement
 </span></span><span id="153" class="l"><span class="php-quote">        )?
 </span></span><span id="154" class="l"><span class="php-quote">        \s*$
 </span></span><span id="155" class="l"><span class="php-quote">    /x'</span>;

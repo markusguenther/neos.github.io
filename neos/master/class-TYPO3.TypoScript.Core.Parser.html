@@ -1944,7 +1944,7 @@ and detect the latter</p>
     )
     \s*
     (?P&lt;OpeningConfinement&gt;
-        [^\${]\{              # optionally followed by an opening confinement
+        (?&lt;![${])\{           # optionally followed by an opening confinement
     )?
     \s*$
 /x'</span></code>
