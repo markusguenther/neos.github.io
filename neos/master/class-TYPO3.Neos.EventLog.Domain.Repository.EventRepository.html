@@ -699,7 +699,7 @@ TYPO3\Flow\Persistence\Doctrine\Repository
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#18-69" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/EventLog/Domain/Repository/EventRepository.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#19-103" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/EventLog/Domain/Repository/EventRepository.php</a>
 		<br>
 	</div>
 
@@ -708,6 +708,52 @@ TYPO3\Flow\Persistence\Doctrine\Repository
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="findRelevantEventsByWorkspace" id="_findRelevantEventsByWorkspace">
+
+			<td class="attributes"><code>
+				 public 
+				TYPO3\Flow\Persistence\QueryResultInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findRelevantEventsByWorkspace">#</a>
+			<code><a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#33-53" title="Go to source code">findRelevantEventsByWorkspace</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$limit</var></span>, <span>string <var>$workspaceName</var></span> )</code>
+
+			<div class="description short">
+				<p>Find all events which are "top-level" and in a given workspace (or are not NodeEvents)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find all events which are "top-level" and in a given workspace (or are not NodeEvents)</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd></dd>
+						<dt><var>$limit</var></dt>
+						<dd></dd>
+						<dt><var>$workspaceName</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						TYPO3\Flow\Persistence\QueryResultInterface
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						TYPO3\Flow\Reflection\Exception\PropertyNotAccessibleException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="findRelevantEvents" id="_findRelevantEvents">
 
 			<td class="attributes"><code>
@@ -719,7 +765,7 @@ TYPO3\Flow\Persistence\Doctrine\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findRelevantEvents">#</a>
-			<code><a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#32-54" title="Go to source code">findRelevantEvents</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$limit</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#55-71" title="Go to source code">findRelevantEvents</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$limit</var></span> )</code>
 
 			<div class="description short">
 				<p>Find all events which are "top-level", i.e. do not have a parent event.</p>
@@ -752,6 +798,39 @@ TYPO3\Flow\Persistence\Doctrine\Repository
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="prepareRelevantEventsQuery" id="_prepareRelevantEventsQuery">
+
+			<td class="attributes"><code>
+				 protected 
+				TYPO3\Flow\Persistence\Doctrine\Query
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_prepareRelevantEventsQuery">#</a>
+			<code><a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#73-88" title="Go to source code">prepareRelevantEventsQuery</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						TYPO3\Flow\Persistence\Doctrine\Query
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="removeAll" id="_removeAll">
 
 			<td class="attributes"><code>
@@ -763,7 +842,7 @@ TYPO3\Flow\Persistence\Doctrine\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeAll">#</a>
-			<code><a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#56-68" title="Go to source code">removeAll</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#90-102" title="Go to source code">removeAll</a>( )</code>
 
 			<div class="description short">
 				<p>Remove all events without checking foreign keys. Needed for clearing the table during tests.</p>
@@ -804,7 +883,7 @@ TYPO3\Flow\Persistence\Doctrine\Repository
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#25-30" title="Go to source code"><var>$defaultOrderings</var></a>
+					<a href="source-class-TYPO3.Neos.EventLog.Domain.Repository.EventRepository.html#26-31" title="Go to source code"><var>$defaultOrderings</var></a>
 
 				<div class="description short">
 					
