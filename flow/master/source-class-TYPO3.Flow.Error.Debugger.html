@@ -2008,8 +2008,8 @@
 </span><span id="259" class="l">                    <span class="php-var">$dump</span> .= self::renderObjectDump(<span class="php-var">$value</span>, <span class="php-num">0</span>, <span class="php-keyword1">false</span>, <span class="php-var">$plaintext</span>, <span class="php-var">$ansiColors</span>);
 </span><span id="260" class="l">                }
 </span><span id="261" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="262" class="l">                <span class="php-var">$classReflection</span> = <span class="php-keyword1">new</span> \ReflectionClass(<span class="php-var">$className</span>);
-</span><span id="263" class="l">                <span class="php-var">$properties</span> = <span class="php-var">$classReflection</span>-&gt;getProperties();
+</span><span id="262" class="l">                <span class="php-var">$objectReflection</span> = <span class="php-keyword1">new</span> \ReflectionObject(<span class="php-var">$object</span>);
+</span><span id="263" class="l">                <span class="php-var">$properties</span> = <span class="php-var">$objectReflection</span>-&gt;getProperties();
 </span><span id="264" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$properties</span> <span class="php-keyword1">as</span> <span class="php-var">$property</span>) {
 </span><span id="265" class="l">                    <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(self::<span class="php-var">$blacklistedPropertyNames</span>, <span class="php-var">$property</span>-&gt;getName())) {
 </span><span id="266" class="l">                        <span class="php-keyword1">continue</span>;
