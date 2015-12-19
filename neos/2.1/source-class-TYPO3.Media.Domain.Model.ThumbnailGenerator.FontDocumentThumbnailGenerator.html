@@ -701,7 +701,6 @@
 				<li><a href="class-TYPO3.Media.Domain.Model.ThumbnailGenerator.FontDocumentThumbnailGenerator.html">TYPO3\Media\Domain\Model\ThumbnailGenerator\FontDocumentThumbnailGenerator</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Model.ThumbnailGenerator.IconThumbnailGenerator.html">TYPO3\Media\Domain\Model\ThumbnailGenerator\IconThumbnailGenerator</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html">TYPO3\Media\Domain\Model\ThumbnailGenerator\ImageThumbnailGenerator</a></li>
-				<li><a href="class-TYPO3.Media.Domain.Model.ThumbnailGenerator.SvgThumbnailGenerator.html">TYPO3\Media\Domain\Model\ThumbnailGenerator\SvgThumbnailGenerator</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Model.Video.html">TYPO3\Media\Domain\Model\Video</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Repository.AssetCollectionRepository.html">TYPO3\Media\Domain\Repository\AssetCollectionRepository</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Repository.AssetRepository.html">TYPO3\Media\Domain\Repository\AssetRepository</a></li>
@@ -1218,7 +1217,7 @@
 </span><span id="75" class="l">            <span class="php-var">$red</span> = <span class="php-keyword2">imagecolorallocate</span>(<span class="php-var">$im</span>, <span class="php-num">0xFF</span>, <span class="php-num">0xFF</span>, <span class="php-num">0xFF</span>);
 </span><span id="76" class="l">            <span class="php-var">$black</span> = <span class="php-keyword2">imagecolorallocate</span>(<span class="php-var">$im</span>, <span class="php-num">0x00</span>, <span class="php-num">0x00</span>, <span class="php-num">0x00</span>);
 </span><span id="77" class="l">
-</span><span id="78" class="l">            <span class="php-keyword2">imagefilledrectangle</span>(<span class="php-var">$im</span>, <span class="php-num">0</span>, <span class="php-num">0</span>, <span class="php-num">1000</span>, <span class="php-num">1000</span>, <span class="php-var">$red</span>);
+</span><span id="78" class="l">            <span class="php-keyword2">imagefilledrectangle</span>(<span class="php-var">$im</span>, <span class="php-num">0</span>, <span class="php-num">0</span>, <span class="php-var">$width</span>, <span class="php-var">$height</span>, <span class="php-var">$red</span>);
 </span><span id="79" class="l">            <span class="php-keyword2">imagefttext</span>(<span class="php-var">$im</span>, <span class="php-num">48</span>, <span class="php-num">0</span>, <span class="php-num">80</span>, <span class="php-num">150</span>, <span class="php-var">$black</span>, <span class="php-var">$temporaryLocalCopyFilename</span>, <span class="php-quote">'Neos Font Preview'</span>);
 </span><span id="80" class="l">            <span class="php-keyword2">imagefttext</span>(<span class="php-var">$im</span>, <span class="php-num">32</span>, <span class="php-num">0</span>, <span class="php-num">80</span>, <span class="php-num">280</span>, <span class="php-var">$black</span>, <span class="php-var">$temporaryLocalCopyFilename</span>, <span class="php-quote">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span>);
 </span><span id="81" class="l">            <span class="php-keyword2">imagefttext</span>(<span class="php-var">$im</span>, <span class="php-num">32</span>, <span class="php-num">0</span>, <span class="php-num">80</span>, <span class="php-num">360</span>, <span class="php-var">$black</span>, <span class="php-var">$temporaryLocalCopyFilename</span>, <span class="php-quote">'abcdefghijklmopqrstuvwxyz'</span>);
@@ -1277,6 +1276,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?932ad43d9a2d9e844f12d83a25c891665e473e09"></script>
+<script src="elementlist.js?e9d4b81d97c63d9e450a6e2535419cbc35539e3a"></script>
 </body>
 </html>
