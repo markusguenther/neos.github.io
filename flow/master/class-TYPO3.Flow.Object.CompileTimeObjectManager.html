@@ -33,7 +33,6 @@
 					<li class="active">
 <span>Class</span>					</li>
 
-					<li class="divider-vertical"></li>
 
 
 						<li>
@@ -867,7 +866,7 @@ class based DI mechanism is not yet available.</p>
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Object.CompileTimeObjectManager.html#19-460" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Object/CompileTimeObjectManager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Object.CompileTimeObjectManager.html#19-472" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Object/CompileTimeObjectManager.php</a>
 		<br>
 	</div>
 
@@ -1460,6 +1459,39 @@ defined in the object configuration of the specified object.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="shutdown" id="_shutdown">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_shutdown">#</a>
+			<code><a href="source-class-TYPO3.Flow.Object.CompileTimeObjectManager.html#461-471" title="Go to source code">shutdown</a>( )</code>
+
+			<div class="description short">
+				<p>Shuts down this Object Container by calling the shutdown methods of all
+object instances which were configured to be shut down.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Shuts down this Object Container by calling the shutdown methods of all
+object instances which were configured to be shut down.</p>
+
+
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_shutdown">TYPO3\Flow\Object\ObjectManager::shutdown</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
 			</table>
 		</div>
 
@@ -1468,6 +1500,7 @@ defined in the object configuration of the specified object.</p>
 			<p class="elementList">
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#___construct">__construct()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_buildObjectByFactory">buildObjectByFactory()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_callShutdownMethods">callShutdownMethods()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_createLazyDependency">createLazyDependency()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_forgetInstance">forgetInstance()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_getCaseSensitiveObjectName">getCaseSensitiveObjectName()</a></code>, 
@@ -1485,8 +1518,7 @@ defined in the object configuration of the specified object.</p>
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_instantiateClass">instantiateClass()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_isRegistered">isRegistered()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_registerShutdownObject">registerShutdownObject()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_setObjects">setObjects()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_shutdown">shutdown()</a></code>
+				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#_setObjects">setObjects()</a></code>
 			</p>
 		</div>
 
@@ -1724,6 +1756,7 @@ defined in the object configuration of the specified object.</p>
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$classesBeingInstantiated"><var>$classesBeingInstantiated</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$context"><var>$context</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$dependencyProxies"><var>$dependencyProxies</var></a></code>, 
+				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$internalShutdownObjects"><var>$internalShutdownObjects</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$objectSerializer"><var>$objectSerializer</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$objects"><var>$objects</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Object.ObjectManager.html#$shutdownObjects"><var>$shutdownObjects</var></a></code>
