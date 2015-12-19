@@ -849,7 +849,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#17-295" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cli/RequestBuilder.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#22-303" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cli/RequestBuilder.php</a>
 		<br>
 	</div>
 
@@ -960,40 +960,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="injectReflectionService" id="_injectReflectionService">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_injectReflectionService">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#94-101" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$reflectionService</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="injectCommandManager" id="_injectCommandManager">
 
 			<td class="attributes"><code>
@@ -1005,7 +971,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectCommandManager">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#103-110" title="Go to source code">injectCommandManager</a>( <span><code><a href="class-TYPO3.Flow.Cli.CommandManager.html">TYPO3\Flow\Cli\CommandManager</a></code> <var>$commandManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#94-101" title="Go to source code">injectCommandManager</a>( <span><code><a href="class-TYPO3.Flow.Cli.CommandManager.html">TYPO3\Flow\Cli\CommandManager</a></code> <var>$commandManager</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1039,7 +1005,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_build">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#112-167" title="Go to source code">build</a>( <span>mixed <var>$commandLine</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#103-166" title="Go to source code">build</a>( <span>mixed <var>$commandLine</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a CLI request object from a command line.</p>
@@ -1066,6 +1032,7 @@ name (like in $argv) but start with command right away.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidArgumentMixingException.html">TYPO3\Flow\Mvc\Exception\InvalidArgumentMixingException</a></code><br>
 						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidArgumentNameException.html">TYPO3\Flow\Mvc\Exception\InvalidArgumentNameException</a></code>
 					</div>
 
@@ -1085,7 +1052,7 @@ name (like in $argv) but start with command right away.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseRawCommandLineArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#169-240" title="Go to source code">parseRawCommandLineArguments</a>( <span>array <var>$rawCommandLineArguments</var></span>, <span>string <var>$controllerObjectName</var></span>, <span>string <var>$controllerCommandName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#168-245" title="Go to source code">parseRawCommandLineArguments</a>( <span>array <var>$rawCommandLineArguments</var></span>, <span>string <var>$controllerObjectName</var></span>, <span>string <var>$controllerCommandName</var></span> )</code>
 
 			<div class="description short">
 				<p>Takes an array of unparsed command line arguments and options and converts it separated
@@ -1133,7 +1100,7 @@ by named arguments, options and unnamed arguments.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_extractArgumentNameFromCommandLinePart">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#242-252" title="Go to source code">extractArgumentNameFromCommandLinePart</a>( <span>string <var>$commandLinePart</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#247-258" title="Go to source code">extractArgumentNameFromCommandLinePart</a>( <span>string <var>$commandLinePart</var></span> )</code>
 
 			<div class="description short">
 				<p>Extracts the option or argument name from the name / value pair of a command line.</p>
@@ -1171,7 +1138,7 @@ by named arguments, options and unnamed arguments.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValueOfCurrentCommandLineOption">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#254-294" title="Go to source code">getValueOfCurrentCommandLineOption</a>( <span>string <var>$currentArgument</var></span>, <span>array <var>&amp; $rawCommandLineArguments</var></span>, <span>string <var>$expectedArgumentType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#260-302" title="Go to source code">getValueOfCurrentCommandLineOption</a>( <span>string <var>$currentArgument</var></span>, <span>array <var>&amp; $rawCommandLineArguments</var></span>, <span>string <var>$expectedArgumentType</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the value of the first argument of the given input array. Shifts the parsed argument off the array.</p>
@@ -1220,7 +1187,7 @@ by named arguments, options and unnamed arguments.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#24-40" title="Go to source code"><b>ARGUMENT_MATCHING_EXPRESSION</b></a>
+						<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#29-45" title="Go to source code"><b>ARGUMENT_MATCHING_EXPRESSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -1268,7 +1235,7 @@ by named arguments, options and unnamed arguments.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#42-45" title="Go to source code"><var>$environment</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#47-50" title="Go to source code"><var>$environment</var></a>
 
 				<div class="description short">
 					
@@ -1293,7 +1260,7 @@ by named arguments, options and unnamed arguments.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#47-50" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#52-55" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1318,7 +1285,7 @@ by named arguments, options and unnamed arguments.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#52-55" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#57-60" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1332,31 +1299,6 @@ by named arguments, options and unnamed arguments.</p>
 			<td class="value">
 				<div>
 					<a href="#$packageManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="reflectionService" id="$reflectionService">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.RequestBuilder.html#57-60" title="Go to source code"><var>$reflectionService</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$reflectionService" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

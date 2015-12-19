@@ -877,7 +877,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cli.CommandController.html#27-345" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cli.CommandController.html#27-364" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandController.php</a>
 		<br>
 	</div>
 
@@ -897,7 +897,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#71-78" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#76-83" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Constructs the command controller</p>
@@ -915,7 +915,7 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="injectReflectionService" id="_injectReflectionService">
+		<tr data-order="injectCommandManager" id="_injectCommandManager">
 
 			<td class="attributes"><code>
 				 public 
@@ -925,8 +925,42 @@
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_injectReflectionService">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#80-89" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
+			<a class="anchor" href="#_injectCommandManager">#</a>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#85-92" title="Go to source code">injectCommandManager</a>( <span><code><a href="class-TYPO3.Flow.Cli.CommandManager.html">TYPO3\Flow\Cli\CommandManager</a></code> <var>$commandManager</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$commandManager</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectObjectManager" id="_injectObjectManager">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectObjectManager">#</a>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#94-103" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the reflection service</p>
@@ -938,7 +972,7 @@
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$reflectionService</var></dt>
+						<dt><var>$objectManager</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -960,7 +994,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_processRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#91-114" title="Go to source code">processRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-TYPO3.Flow.Mvc.ResponseInterface.html">TYPO3\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#105-128" title="Go to source code">processRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-TYPO3.Flow.Mvc.ResponseInterface.html">TYPO3\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
 
 			<div class="description short">
 				<p>Processes a command line request.</p>
@@ -1005,7 +1039,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveCommandMethodName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#116-131" title="Go to source code">resolveCommandMethodName</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#130-146" title="Go to source code">resolveCommandMethodName</a>( )</code>
 
 			<div class="description short">
 				<p>Resolves and checks the current command method name</p>
@@ -1044,7 +1078,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeCommandMethodArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#133-158" title="Go to source code">initializeCommandMethodArguments</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#148-173" title="Go to source code">initializeCommandMethodArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the arguments array of this controller by creating an empty argument object for each of the
@@ -1079,7 +1113,7 @@ method arguments found in the designated command method.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mapRequestArgumentsToControllerArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#160-189" title="Go to source code">mapRequestArgumentsToControllerArguments</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#175-204" title="Go to source code">mapRequestArgumentsToControllerArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Maps arguments delivered by the request object to the local controller arguments.</p>
@@ -1108,7 +1142,7 @@ method arguments found in the designated command method.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_forward">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#191-214" title="Go to source code">forward</a>( <span>string <var>$commandName</var></span>, <span>string <var>$controllerObjectName</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#206-229" title="Go to source code">forward</a>( <span>string <var>$commandName</var></span>, <span>string <var>$controllerObjectName</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Forwards the request to another command and / or CommandController.</p>
@@ -1153,7 +1187,7 @@ without the need for a new request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_callCommandMethod">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#216-255" title="Go to source code">callCommandMethod</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#231-273" title="Go to source code">callCommandMethod</a>( )</code>
 
 			<div class="description short">
 				<p>Calls the specified command method and passes the arguments.</p>
@@ -1186,7 +1220,7 @@ view exists, the view is rendered automatically.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFlowInvocationString">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#257-269" title="Go to source code">getFlowInvocationString</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#275-287" title="Go to source code">getFlowInvocationString</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the CLI Flow command depending on the environment</p>
@@ -1219,7 +1253,7 @@ view exists, the view is rendered automatically.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_output">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#271-284" title="Go to source code">output</a>( <span>string <var>$text</var></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#289-303" title="Go to source code">output</a>( <span>string <var>$text</var></span>, <span>array <var>$arguments</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Outputs specified text to the console window
@@ -1264,7 +1298,7 @@ You can specify arguments that will be passed to the text via sprintf</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_outputLine">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#286-299" title="Go to source code">outputLine</a>( <span>string <var>$text</var> = <span class="php-quote">''</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#305-318" title="Go to source code">outputLine</a>( <span>string <var>$text</var> = <span class="php-quote">''</span></span>, <span>array <var>$arguments</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Outputs specified text to the console window and appends a line break</p>
@@ -1308,7 +1342,7 @@ You can specify arguments that will be passed to the text via sprintf</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_outputFormatted">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#301-315" title="Go to source code">outputFormatted</a>( <span>string <var>$text</var> = <span class="php-quote">''</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$leftPadding</var> = <span class="php-num">0</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#320-334" title="Go to source code">outputFormatted</a>( <span>string <var>$text</var> = <span class="php-quote">''</span></span>, <span>array <var>$arguments</var> = []</span>, <span>integer <var>$leftPadding</var> = <span class="php-num">0</span></span> )</code>
 
 			<div class="description short">
 				<p>Formats the given text to fit into MAXIMUM_LINE_LENGTH and outputs it to the
@@ -1355,7 +1389,7 @@ console window</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_quit">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#317-331" title="Go to source code">quit</a>( <span>integer <var>$exitCode</var> = <span class="php-num">0</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#336-350" title="Go to source code">quit</a>( <span>integer <var>$exitCode</var> = <span class="php-num">0</span></span> )</code>
 
 			<div class="description short">
 				<p>Exits the CLI through the dispatcher and makes sure that Flow is properly shut down.</p>
@@ -1396,7 +1430,7 @@ shutdown (such as the persistence framework), you must use quit() instead of exi
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sendAndExit">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#333-344" title="Go to source code">sendAndExit</a>( <span>integer <var>$exitCode</var> = <span class="php-num">0</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandController.html#352-363" title="Go to source code">sendAndExit</a>( <span>integer <var>$exitCode</var> = <span class="php-num">0</span></span> )</code>
 
 			<div class="description short">
 				<p>Sends the response and exits the CLI without any further code execution
@@ -1549,14 +1583,14 @@ Should be used for commands that flush code caches.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="reflectionService" id="$reflectionService">
+		<tr data-order="objectManager" id="$objectManager">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code>
+				<code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.CommandController.html#60-63" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.CommandController.html#60-63" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1569,7 +1603,32 @@ Should be used for commands that flush code caches.</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$reflectionService" class="anchor">#</a>
+					<a href="#$objectManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="commandManager" id="$commandManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Cli.CommandManager.html">TYPO3\Flow\Cli\CommandManager</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Cli.CommandController.html#65-68" title="Go to source code"><var>$commandManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$commandManager" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1581,7 +1640,7 @@ Should be used for commands that flush code caches.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.CommandController.html#65-69" title="Go to source code"><var>$output</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.CommandController.html#70-74" title="Go to source code"><var>$output</var></a>
 
 				<div class="description short">
 					
