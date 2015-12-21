@@ -1751,9 +1751,9 @@
 </span><span id="94" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> unlockSite()
 </span><span id="95" class="l">    {
 </span><span id="96" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_resource</span>(<span class="php-var">$this</span>-&gt;lockResource)) {
-</span><span id="97" class="l">            <span class="php-keyword2">unlink</span>(<span class="php-var">$this</span>-&gt;lockPathAndFilename);
-</span><span id="98" class="l">            <span class="php-keyword2">flock</span>(<span class="php-var">$this</span>-&gt;lockResource, LOCK_UN);
-</span><span id="99" class="l">            <span class="php-keyword2">fclose</span>(<span class="php-var">$this</span>-&gt;lockResource);
+</span><span id="97" class="l">            <span class="php-keyword2">flock</span>(<span class="php-var">$this</span>-&gt;lockResource, LOCK_UN);
+</span><span id="98" class="l">            <span class="php-keyword2">fclose</span>(<span class="php-var">$this</span>-&gt;lockResource);
+</span><span id="99" class="l">            <span class="php-keyword2">unlink</span>(<span class="php-var">$this</span>-&gt;lockPathAndFilename);
 </span><span id="100" class="l">        }
 </span><span id="101" class="l">    }
 </span><span id="102" class="l">
