@@ -837,7 +837,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Core.html">Core</a>\<a href="namespace-TYPO3.Flow.Core.Migrations.html">Migrations</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#16-448" title="Go to source code">TYPO3.Flow/Scripts/Migrations/Manager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#16-451" title="Go to source code">TYPO3.Flow/Scripts/Migrations/Manager.php</a>
 		<br>
 	</div>
 
@@ -1011,14 +1011,14 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shouldPackageBeSkippedByDefault">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#143-157" title="Go to source code">shouldPackageBeSkippedByDefault</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#143-160" title="Go to source code">shouldPackageBeSkippedByDefault</a>( )</code>
 
 			<div class="description short">
-				<p>By default we skip "TYPO3.*" packages and all packages of the ignored categories (@see ignoredPackageCategories)</p>
+				<p>By default we skip "TYPO3.<em>" and "Neos.</em>" packages and all packages of the ignored categories (@see ignoredPackageCategories)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>By default we skip "TYPO3.*" packages and all packages of the ignored categories (@see ignoredPackageCategories)</p>
+				<p>By default we skip "TYPO3.<em>" and "Neos.</em>" packages and all packages of the ignored categories (@see ignoredPackageCategories)</p>
 
 
 
@@ -1044,7 +1044,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migratePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#159-214" title="Go to source code">migratePackage</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#162-217" title="Go to source code">migratePackage</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Apply the given migration to the package and commit the result.</p>
@@ -1084,7 +1084,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasMigrationApplied">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#216-229" title="Go to source code">hasMigrationApplied</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#219-232" title="Go to source code">hasMigrationApplied</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span> )</code>
 
 			<div class="description short">
 				<p>Whether or not the given $migration has been applied to the current package</p>
@@ -1122,7 +1122,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_writeComposerManifest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#231-238" title="Go to source code">writeComposerManifest</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#234-241" title="Go to source code">writeComposerManifest</a>( )</code>
 
 			<div class="description short">
 				
@@ -1151,7 +1151,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importMigrationLogFromGitHistory">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#240-282" title="Go to source code">importMigrationLogFromGitHistory</a>( <span>boolean <var>$commitChanges</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#243-285" title="Go to source code">importMigrationLogFromGitHistory</a>( <span>boolean <var>$commitChanges</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Imports the core migration log from the git history if it has not been imported previously (the "applied-flow-migrations" composer manifest property does not exist)</p>
@@ -1189,7 +1189,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_markMigrationApplied">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#284-298" title="Go to source code">markMigrationApplied</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#287-301" title="Go to source code">markMigrationApplied</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span> )</code>
 
 			<div class="description short">
 				<p>Whether or not the given migration has been applied in the given path</p>
@@ -1227,7 +1227,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commitMigration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#300-334" title="Go to source code">commitMigration</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span>, <span>string <var>$commitMessageNotice</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#303-337" title="Go to source code">commitMigration</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span>, <span>string <var>$commitMessageNotice</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Commit changes done to the package described by $packageData. The migration
@@ -1271,7 +1271,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_on">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#336-345" title="Go to source code">on</a>( <span>string <var>$eventIdentifier</var></span>, <span>Closure <var>$callback</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#339-348" title="Go to source code">on</a>( <span>string <var>$eventIdentifier</var></span>, <span>Closure <var>$callback</var></span> )</code>
 
 			<div class="description short">
 				<p>Attaches a new event handler</p>
@@ -1307,7 +1307,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_triggerEvent">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#347-362" title="Go to source code">triggerEvent</a>( <span>string <var>$eventIdentifier</var></span>, <span>array <var>$eventData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#350-365" title="Go to source code">triggerEvent</a>( <span>string <var>$eventIdentifier</var></span>, <span>array <var>$eventData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Trigger a custom event</p>
@@ -1343,7 +1343,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initialize">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#365-382" title="Go to source code">initialize</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#368-385" title="Go to source code">initialize</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize the manager: read package information and register migrations.</p>
@@ -1372,7 +1372,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerMigrationFiles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#384-409" title="Go to source code">registerMigrationFiles</a>( <span>string <var>$packagePath</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#387-412" title="Go to source code">registerMigrationFiles</a>( <span>string <var>$packagePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Look for code migration files in the given package path and register them
@@ -1408,7 +1408,7 @@ for further action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMigrations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#412-428" title="Go to source code">getMigrations</a>( <span>string <var>$versionNumber</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#415-431" title="Go to source code">getMigrations</a>( <span>string <var>$versionNumber</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1450,7 +1450,7 @@ for further action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackagesData">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#431-447" title="Go to source code">getPackagesData</a>( <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#434-450" title="Go to source code">getPackagesData</a>( <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
