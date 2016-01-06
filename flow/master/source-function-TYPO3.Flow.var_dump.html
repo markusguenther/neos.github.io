@@ -1944,13 +1944,13 @@
 </span><span id="195" class="l">            <span class="php-var">$objectName</span> = self::<span class="php-var">$objectManager</span>-&gt;getObjectNameByClassName(<span class="php-keyword2">get_class</span>(<span class="php-var">$object</span>));
 </span><span id="196" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$objectName</span> !== <span class="php-keyword1">false</span>) {
 </span><span id="197" class="l">                <span class="php-keyword1">switch</span> (self::<span class="php-var">$objectManager</span>-&gt;getScope(<span class="php-var">$objectName</span>)) {
-</span><span id="198" class="l">                    <span class="php-keyword1">case</span> \TYPO3\Flow\Object\Configuration\Configuration::SCOPE_PROTOTYPE :
+</span><span id="198" class="l">                    <span class="php-keyword1">case</span> \TYPO3\Flow\Object\Configuration\Configuration::SCOPE_PROTOTYPE:
 </span><span id="199" class="l">                        <span class="php-var">$scope</span> = <span class="php-quote">'prototype'</span>;
 </span><span id="200" class="l">                        <span class="php-keyword1">break</span>;
-</span><span id="201" class="l">                    <span class="php-keyword1">case</span> \TYPO3\Flow\Object\Configuration\Configuration::SCOPE_SINGLETON :
+</span><span id="201" class="l">                    <span class="php-keyword1">case</span> \TYPO3\Flow\Object\Configuration\Configuration::SCOPE_SINGLETON:
 </span><span id="202" class="l">                        <span class="php-var">$scope</span> = <span class="php-quote">'singleton'</span>;
 </span><span id="203" class="l">                        <span class="php-keyword1">break</span>;
-</span><span id="204" class="l">                    <span class="php-keyword1">case</span> \TYPO3\Flow\Object\Configuration\Configuration::SCOPE_SESSION :
+</span><span id="204" class="l">                    <span class="php-keyword1">case</span> \TYPO3\Flow\Object\Configuration\Configuration::SCOPE_SESSION:
 </span><span id="205" class="l">                        <span class="php-var">$scope</span> = <span class="php-quote">'session'</span>;
 </span><span id="206" class="l">                        <span class="php-keyword1">break</span>;
 </span><span id="207" class="l">                }
