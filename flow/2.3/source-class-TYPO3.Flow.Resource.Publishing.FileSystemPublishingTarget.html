@@ -1906,11 +1906,11 @@
 </span><span id="249" class="l">        }
 </span><span id="250" class="l">
 </span><span id="251" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'publishing'</span>][<span class="php-quote">'fileSystem'</span>][<span class="php-quote">'mirrorMode'</span>]) {
-</span><span id="252" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'copy'</span> :
+</span><span id="252" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'copy'</span>:
 </span><span id="253" class="l">                <span class="php-keyword2">copy</span>(<span class="php-var">$sourcePathAndFilename</span>, <span class="php-var">$targetPathAndFilename</span>);
 </span><span id="254" class="l">                <span class="php-keyword2">touch</span>(<span class="php-var">$targetPathAndFilename</span>, <span class="php-keyword2">filemtime</span>(<span class="php-var">$sourcePathAndFilename</span>));
 </span><span id="255" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="256" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'link'</span> :
+</span><span id="256" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'link'</span>:
 </span><span id="257" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">file_exists</span>(<span class="php-var">$targetPathAndFilename</span>)) {
 </span><span id="258" class="l">                    <span class="php-keyword1">if</span> (\TYPO3\Flow\Utility\Files::<span class="php-keyword2">is_link</span>(<span class="php-var">$targetPathAndFilename</span>) &amp;&amp; (<span class="php-var">$this</span>-&gt;<span class="php-keyword2">realpath</span>(<span class="php-var">$targetPathAndFilename</span>) === <span class="php-var">$this</span>-&gt;<span class="php-keyword2">realpath</span>(<span class="php-var">$sourcePathAndFilename</span>))) {
 </span><span id="259" class="l">                        <span class="php-keyword1">break</span>;
@@ -1921,7 +1921,7 @@
 </span><span id="264" class="l">                    <span class="php-keyword2">symlink</span>(<span class="php-var">$sourcePathAndFilename</span>, <span class="php-var">$targetPathAndFilename</span>);
 </span><span id="265" class="l">                }
 </span><span id="266" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="267" class="l">            <span class="php-keyword1">default</span> :
+</span><span id="267" class="l">            <span class="php-keyword1">default</span>:
 </span><span id="268" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \TYPO3\Flow\Resource\Exception(<span class="php-quote">'An invalid mirror mode ('</span> . <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'publishing'</span>][<span class="php-quote">'fileSystem'</span>][<span class="php-quote">'mirrorMode'</span>] . <span class="php-quote">') has been configured.'</span>, <span class="php-num">1256133400</span>);
 </span><span id="269" class="l">        }
 </span><span id="270" class="l">

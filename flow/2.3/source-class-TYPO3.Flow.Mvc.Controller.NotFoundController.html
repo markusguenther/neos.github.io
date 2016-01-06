@@ -1727,11 +1727,11 @@
 </span><span id="70" class="l">            <span class="php-var">$this</span>-&gt;notFoundView-&gt;assign(<span class="php-quote">'errorMessage'</span>, <span class="php-var">$this</span>-&gt;exception-&gt;getMessage());
 </span><span id="71" class="l">        }
 </span><span id="72" class="l">        <span class="php-keyword1">switch</span> (<span class="php-keyword2">get_class</span>(<span class="php-var">$request</span>)) {
-</span><span id="73" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'TYPO3\Flow\Mvc\ActionRequest'</span> :
+</span><span id="73" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'TYPO3\Flow\Mvc\ActionRequest'</span>:
 </span><span id="74" class="l">                <span class="php-var">$response</span>-&gt;setStatus(<span class="php-num">404</span>);
 </span><span id="75" class="l">                <span class="php-var">$response</span>-&gt;setContent(<span class="php-var">$this</span>-&gt;notFoundView-&gt;render());
 </span><span id="76" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="77" class="l">            <span class="php-keyword1">default</span> :
+</span><span id="77" class="l">            <span class="php-keyword1">default</span>:
 </span><span id="78" class="l">                <span class="php-var">$response</span>-&gt;setContent(<span class="php-quote">&quot;\nUnknown command\n\n&quot;</span>);
 </span><span id="79" class="l">        }
 </span><span id="80" class="l">    }
