@@ -1917,7 +1917,7 @@
 </span><span id="773" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$nodeType</span>-&gt;hasConfiguration(<span class="php-quote">'properties.'</span> . <span class="php-var">$propertyName</span>)) {
 </span><span id="774" class="l">                <span class="php-var">$expectedPropertyType</span> = <span class="php-var">$nodeType</span>-&gt;getPropertyType(<span class="php-var">$propertyName</span>);
 </span><span id="775" class="l">                <span class="php-keyword1">switch</span> (<span class="php-var">$expectedPropertyType</span>) {
-</span><span id="776" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'references'</span> :
+</span><span id="776" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'references'</span>:
 </span><span id="777" class="l">                        <span class="php-keyword1">if</span> (<span class="php-var">$returnNodesAsIdentifiers</span> === <span class="php-keyword1">false</span>) {
 </span><span id="778" class="l">                            <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
 </span><span id="779" class="l">                            <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeIdentifier</span>) {
@@ -1930,7 +1930,7 @@
 </span><span id="786" class="l">                            <span class="php-var">$value</span> = <span class="php-var">$nodes</span>;
 </span><span id="787" class="l">                        }
 </span><span id="788" class="l">                        <span class="php-keyword1">break</span>;
-</span><span id="789" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'reference'</span> :
+</span><span id="789" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'reference'</span>:
 </span><span id="790" class="l">                        <span class="php-keyword1">if</span> (<span class="php-var">$returnNodesAsIdentifiers</span> === <span class="php-keyword1">false</span>) {
 </span><span id="791" class="l">                            <span class="php-var">$value</span> = <span class="php-var">$this</span>-&gt;context-&gt;getNodeByIdentifier(<span class="php-var">$value</span>);
 </span><span id="792" class="l">                        }
