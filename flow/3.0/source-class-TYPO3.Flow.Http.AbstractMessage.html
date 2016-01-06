@@ -1855,7 +1855,7 @@
 </span><span id="113" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setHeader(<span class="php-var">$name</span>, <span class="php-var">$values</span>, <span class="php-var">$replaceExistingHeader</span> = <span class="php-keyword1">true</span>)
 </span><span id="114" class="l">    {
 </span><span id="115" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$name</span>) {
-</span><span id="116" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'Content-Type'</span> :
+</span><span id="116" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'Content-Type'</span>:
 </span><span id="117" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">stripos</span>(<span class="php-var">$values</span>, <span class="php-quote">'charset'</span>) === <span class="php-keyword1">false</span> &amp;&amp; <span class="php-keyword2">stripos</span>(<span class="php-var">$values</span>, <span class="php-quote">'text/'</span>) === <span class="php-num">0</span>) {
 </span><span id="118" class="l">                    <span class="php-var">$values</span> .= <span class="php-quote">'; charset='</span> . <span class="php-var">$this</span>-&gt;charset;
 </span><span id="119" class="l">                }
