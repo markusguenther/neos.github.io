@@ -2228,14 +2228,14 @@
 </span><span id="479" class="l">        <span class="php-var">$factoryMethodArguments</span> = <span class="php-keyword1">array</span>();
 </span><span id="480" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;objects[<span class="php-var">$objectName</span>][<span class="php-quote">'fa'</span>] <span class="php-keyword1">as</span> <span class="php-var">$index</span> =&gt; <span class="php-var">$argumentInformation</span>) {
 </span><span id="481" class="l">            <span class="php-keyword1">switch</span> (<span class="php-var">$argumentInformation</span>[<span class="php-quote">'t'</span>]) {
-</span><span id="482" class="l">                <span class="php-keyword1">case</span> ObjectConfigurationArgument::ARGUMENT_TYPES_SETTING :
+</span><span id="482" class="l">                <span class="php-keyword1">case</span> ObjectConfigurationArgument::ARGUMENT_TYPES_SETTING:
 </span><span id="483" class="l">                    <span class="php-var">$settingPath</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">'.'</span>, <span class="php-var">$argumentInformation</span>[<span class="php-quote">'v'</span>]);
 </span><span id="484" class="l">                    <span class="php-var">$factoryMethodArguments</span>[<span class="php-var">$index</span>] = Arrays::getValueByPath(<span class="php-var">$this</span>-&gt;allSettings, <span class="php-var">$settingPath</span>);
 </span><span id="485" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="486" class="l">                <span class="php-keyword1">case</span> ObjectConfigurationArgument::ARGUMENT_TYPES_STRAIGHTVALUE :
+</span><span id="486" class="l">                <span class="php-keyword1">case</span> ObjectConfigurationArgument::ARGUMENT_TYPES_STRAIGHTVALUE:
 </span><span id="487" class="l">                    <span class="php-var">$factoryMethodArguments</span>[<span class="php-var">$index</span>] = <span class="php-var">$argumentInformation</span>[<span class="php-quote">'v'</span>];
 </span><span id="488" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="489" class="l">                <span class="php-keyword1">case</span> ObjectConfigurationArgument::ARGUMENT_TYPES_OBJECT :
+</span><span id="489" class="l">                <span class="php-keyword1">case</span> ObjectConfigurationArgument::ARGUMENT_TYPES_OBJECT:
 </span><span id="490" class="l">                    <span class="php-var">$factoryMethodArguments</span>[<span class="php-var">$index</span>] = <span class="php-var">$this</span>-&gt;get(<span class="php-var">$argumentInformation</span>[<span class="php-quote">'v'</span>]);
 </span><span id="491" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="492" class="l">            }

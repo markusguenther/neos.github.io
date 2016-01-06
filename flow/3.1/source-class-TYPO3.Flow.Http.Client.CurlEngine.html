@@ -1829,7 +1829,7 @@
 </span><span id="80" class="l">        }
 </span><span id="81" class="l">
 </span><span id="82" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$request</span>-&gt;getMethod()) {
-</span><span id="83" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'GET'</span> :
+</span><span id="83" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'GET'</span>:
 </span><span id="84" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$request</span>-&gt;getContent()) {
 </span><span id="85" class="l">                    <span class="php-comment">// workaround because else the request would implicitly fall into POST:</span>
 </span><span id="86" class="l">                    <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curlHandle</span>, CURLOPT_CUSTOMREQUEST, <span class="php-quote">'GET'</span>);
@@ -1838,14 +1838,14 @@
 </span><span id="89" class="l">                    }
 </span><span id="90" class="l">                }
 </span><span id="91" class="l">            <span class="php-keyword1">break</span>;
-</span><span id="92" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'POST'</span> :
+</span><span id="92" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'POST'</span>:
 </span><span id="93" class="l">                <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curlHandle</span>, CURLOPT_POST, <span class="php-keyword1">true</span>);
 </span><span id="94" class="l">                <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_resource</span>(<span class="php-var">$content</span>)) {
 </span><span id="95" class="l">                    <span class="php-var">$body</span> = <span class="php-var">$content</span> !== <span class="php-quote">''</span> ? <span class="php-var">$content</span> : <span class="php-keyword2">http_build_query</span>(<span class="php-var">$request</span>-&gt;getArguments());
 </span><span id="96" class="l">                    <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curlHandle</span>, CURLOPT_POSTFIELDS, <span class="php-var">$body</span>);
 </span><span id="97" class="l">                }
 </span><span id="98" class="l">            <span class="php-keyword1">break</span>;
-</span><span id="99" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'PUT'</span> :
+</span><span id="99" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'PUT'</span>:
 </span><span id="100" class="l">                <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curlHandle</span>, CURLOPT_PUT, <span class="php-keyword1">true</span>);
 </span><span id="101" class="l">                <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_resource</span>(<span class="php-var">$content</span>) &amp;&amp; <span class="php-var">$content</span> !== <span class="php-quote">''</span>) {
 </span><span id="102" class="l">                    <span class="php-var">$inFileHandler</span> = <span class="php-keyword2">fopen</span>(<span class="php-quote">'php://temp'</span>, <span class="php-quote">'r+'</span>);
