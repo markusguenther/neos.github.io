@@ -1295,7 +1295,7 @@
 </span><span id="151" class="l">        <span class="php-var">$lines</span> = <span class="php-keyword2">array_map</span>(<span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'ExpandTabs'</span>), <span class="php-var">$lines</span>);
 </span><span id="152" class="l">        <span class="php-var">$lines</span> = <span class="php-keyword2">array_map</span>(<span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'HtmlSafe'</span>), <span class="php-var">$lines</span>);
 </span><span id="153" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$lines</span> <span class="php-keyword1">as</span> &amp;<span class="php-var">$line</span>) {
-</span><span id="154" class="l">            <span class="php-var">$line</span> = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'# ( +)|^ #'</span>, <span class="php-keyword1">function</span>(<span class="php-keyword1">array</span> <span class="php-var">$matches</span>) {
+</span><span id="154" class="l">            <span class="php-var">$line</span> = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'# ( +)|^ #'</span>, <span class="php-keyword1">function</span> (<span class="php-keyword1">array</span> <span class="php-var">$matches</span>) {
 </span><span id="155" class="l">                <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">1</span>]) ? <span class="php-var">$matches</span>[<span class="php-num">1</span>] : <span class="php-quote">''</span>);
 </span><span id="156" class="l">            }, <span class="php-var">$line</span>);
 </span><span id="157" class="l">        }
@@ -1308,7 +1308,7 @@
 </span></span><span id="164" class="l"><span class="php-comment">     * @param string $spaces The string of spaces.
 </span></span><span id="165" class="l"><span class="php-comment">     * @return string The HTML representation of the string.
 </span></span><span id="166" class="l"><span class="php-comment">     */</span>
-</span><span id="167" class="l">    <span class="php-keyword1">function</span> fixSpaces(<span class="php-var">$spaces</span> = <span class="php-quote">''</span>)
+</span><span id="167" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> fixSpaces(<span class="php-var">$spaces</span> = <span class="php-quote">''</span>)
 </span><span id="168" class="l">    {
 </span><span id="169" class="l">        <span class="php-var">$count</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$spaces</span>);
 </span><span id="170" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$count</span> == <span class="php-num">0</span>) {

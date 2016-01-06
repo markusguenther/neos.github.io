@@ -1529,19 +1529,19 @@
 </span><span id="385" class="l">    {
 </span><span id="386" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(self::SPLIT_PATTERN_COMMENTTYPE, <span class="php-var">$typoScriptLine</span>, <span class="php-var">$matches</span>, PREG_OFFSET_CAPTURE) === <span class="php-num">1</span>) {
 </span><span id="387" class="l">            <span class="php-keyword1">switch</span> (<span class="php-var">$matches</span>[<span class="php-num">1</span>][<span class="php-num">0</span>]) {
-</span><span id="388" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'/*'</span> :
+</span><span id="388" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'/*'</span>:
 </span><span id="389" class="l">                    <span class="php-var">$this</span>-&gt;currentBlockCommentState = <span class="php-keyword1">true</span>;
 </span><span id="390" class="l">                    <span class="php-keyword1">break</span>;
-</span><span id="391" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'*/'</span> :
+</span><span id="391" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'*/'</span>:
 </span><span id="392" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;currentBlockCommentState !== <span class="php-keyword1">true</span>) {
 </span><span id="393" class="l">                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'Unexpected closing block comment without matching opening block comment.'</span>, <span class="php-num">1180615119</span>);
 </span><span id="394" class="l">                    }
 </span><span id="395" class="l">                    <span class="php-var">$this</span>-&gt;currentBlockCommentState = <span class="php-keyword1">false</span>;
 </span><span id="396" class="l">                    <span class="php-var">$this</span>-&gt;parseTypoScriptLine(<span class="php-keyword2">substr</span>(<span class="php-var">$typoScriptLine</span>, (<span class="php-var">$matches</span>[<span class="php-num">1</span>][<span class="php-num">1</span>] + <span class="php-num">2</span>)));
 </span><span id="397" class="l">                    <span class="php-keyword1">break</span>;
-</span><span id="398" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'#'</span> :
-</span><span id="399" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'//'</span> :
-</span><span id="400" class="l">                <span class="php-keyword1">default</span> :
+</span><span id="398" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'#'</span>:
+</span><span id="399" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'//'</span>:
+</span><span id="400" class="l">                <span class="php-keyword1">default</span>:
 </span><span id="401" class="l">                    <span class="php-keyword1">break</span>;
 </span><span id="402" class="l">            }
 </span><span id="403" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;currentBlockCommentState === <span class="php-keyword1">false</span>) {
@@ -1585,10 +1585,10 @@
 </span><span id="441" class="l">        }
 </span><span id="442" class="l">
 </span><span id="443" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$matches</span>[<span class="php-quote">'declarationType'</span>]) {
-</span><span id="444" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'namespace'</span> :
+</span><span id="444" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'namespace'</span>:
 </span><span id="445" class="l">                <span class="php-var">$this</span>-&gt;parseNamespaceDeclaration(<span class="php-var">$matches</span>[<span class="php-quote">'declaration'</span>]);
 </span><span id="446" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="447" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'include'</span> :
+</span><span id="447" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'include'</span>:
 </span><span id="448" class="l">                <span class="php-var">$this</span>-&gt;parseInclude(<span class="php-var">$matches</span>[<span class="php-quote">'declaration'</span>]);
 </span><span id="449" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="450" class="l">        }
@@ -1610,13 +1610,13 @@
 </span><span id="466" class="l">
 </span><span id="467" class="l">        <span class="php-var">$objectPath</span> = <span class="php-var">$this</span>-&gt;getCurrentObjectPathPrefix() . <span class="php-var">$matches</span>[<span class="php-quote">'ObjectPath'</span>];
 </span><span id="468" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$matches</span>[<span class="php-quote">'Operator'</span>]) {
-</span><span id="469" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'='</span> :
+</span><span id="469" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'='</span>:
 </span><span id="470" class="l">                <span class="php-var">$this</span>-&gt;parseValueAssignment(<span class="php-var">$objectPath</span>, <span class="php-var">$matches</span>[<span class="php-quote">'Value'</span>]);
 </span><span id="471" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="472" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'&gt;'</span> :
+</span><span id="472" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'&gt;'</span>:
 </span><span id="473" class="l">                <span class="php-var">$this</span>-&gt;parseValueUnAssignment(<span class="php-var">$objectPath</span>);
 </span><span id="474" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="475" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'&lt;'</span> :
+</span><span id="475" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'&lt;'</span>:
 </span><span id="476" class="l">                <span class="php-var">$this</span>-&gt;parseValueCopy(<span class="php-var">$matches</span>[<span class="php-quote">'Value'</span>], <span class="php-var">$objectPath</span>);
 </span><span id="477" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="478" class="l">        }
