@@ -1086,7 +1086,7 @@
 </span><span id="183" class="l">                <span class="php-var">$dimensions</span> = <span class="php-var">$context</span> !== <span class="php-keyword1">null</span> ? <span class="php-var">$context</span>-&gt;getDimensions() : <span class="php-keyword1">array</span>();
 </span><span id="184" class="l">                <span class="php-var">$workspace</span> = <span class="php-var">$context</span> !== <span class="php-keyword1">null</span> ? <span class="php-var">$context</span>-&gt;getWorkspace() : <span class="php-var">$this</span>-&gt;getWorkspace();
 </span><span id="185" class="l">                <span class="php-keyword1">switch</span> (<span class="php-var">$this</span>-&gt;getNodeType()-&gt;getPropertyType(<span class="php-var">$propertyName</span>)) {
-</span><span id="186" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'references'</span> :
+</span><span id="186" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'references'</span>:
 </span><span id="187" class="l">                        <span class="php-var">$nodeDatas</span> = <span class="php-keyword1">array</span>();
 </span><span id="188" class="l">                        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$value</span>)) {
 </span><span id="189" class="l">                            <span class="php-var">$value</span> = <span class="php-keyword1">array</span>();
@@ -1121,7 +1121,7 @@
 </span><span id="218" class="l">                        }
 </span><span id="219" class="l">                        <span class="php-var">$value</span> = <span class="php-var">$nodeDatas</span>;
 </span><span id="220" class="l">                        <span class="php-keyword1">break</span>;
-</span><span id="221" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'reference'</span> :
+</span><span id="221" class="l">                    <span class="php-keyword1">case</span> <span class="php-quote">'reference'</span>:
 </span><span id="222" class="l">                        <span class="php-comment">// in cases where a reference is a NodeData instance, fix this</span>
 </span><span id="223" class="l">                        <span class="php-keyword1">if</span> (<span class="php-var">$value</span> <span class="php-keyword1">instanceof</span> NodeData) {
 </span><span id="224" class="l">                            <span class="php-var">$value</span> = <span class="php-var">$value</span>-&gt;getIdentifier();

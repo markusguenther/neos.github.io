@@ -1575,7 +1575,7 @@
 </span><span id="672" class="l">        <span class="php-var">$value</span> = <span class="php-var">$this</span>-&gt;nodeData-&gt;getProperty(<span class="php-var">$propertyName</span>, <span class="php-var">$returnNodesAsIdentifiers</span>, <span class="php-var">$this</span>-&gt;context);
 </span><span id="673" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$value</span>) &amp;&amp; <span class="php-var">$returnNodesAsIdentifiers</span> === <span class="php-keyword1">false</span>) {
 </span><span id="674" class="l">            <span class="php-keyword1">switch</span> (<span class="php-var">$this</span>-&gt;getNodeType()-&gt;getPropertyType(<span class="php-var">$propertyName</span>)) {
-</span><span id="675" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'references'</span> :
+</span><span id="675" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'references'</span>:
 </span><span id="676" class="l">                    <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
 </span><span id="677" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeData</span>) {
 </span><span id="678" class="l">                        <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;nodeFactory-&gt;createFromNodeData(<span class="php-var">$nodeData</span>, <span class="php-var">$this</span>-&gt;context);
@@ -1586,7 +1586,7 @@
 </span><span id="683" class="l">                    }
 </span><span id="684" class="l">                    <span class="php-var">$value</span> = <span class="php-var">$nodes</span>;
 </span><span id="685" class="l">                <span class="php-keyword1">break</span>;
-</span><span id="686" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'reference'</span> :
+</span><span id="686" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'reference'</span>:
 </span><span id="687" class="l">                    <span class="php-var">$value</span> = <span class="php-var">$this</span>-&gt;nodeFactory-&gt;createFromNodeData(<span class="php-var">$value</span>, <span class="php-var">$this</span>-&gt;context);
 </span><span id="688" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="689" class="l">            }
