@@ -2096,7 +2096,7 @@
 </span><span id="439" class="l">            <span class="php-var">$proxyClass</span>-&gt;addProperty(<span class="php-var">$propertyIntroduction</span>-&gt;getPropertyName(), <span class="php-quote">'NULL'</span>, <span class="php-var">$propertyIntroduction</span>-&gt;getPropertyVisibility(), <span class="php-var">$propertyIntroduction</span>-&gt;getPropertyDocComment());
 </span><span id="440" class="l">        }
 </span><span id="441" class="l">
-</span><span id="442" class="l">        <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'Flow_Aop_Proxy_buildMethodsAndAdvicesArray'</span>)-&gt;addPreParentCallCode(<span class="php-quote">&quot;\t\tif (method_exists(get_parent_class(\</span><span class="php-var">$this</span><span class="php-quote">), 'Flow_Aop_Proxy_buildMethodsAndAdvicesArray') &amp;&amp; is_callable('parent::Flow_Aop_Proxy_buildMethodsAndAdvicesArray')) parent::Flow_Aop_Proxy_buildMethodsAndAdvicesArray();\n&quot;</span>);
+</span><span id="442" class="l">        <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'Flow_Aop_Proxy_buildMethodsAndAdvicesArray'</span>)-&gt;addPreParentCallCode(<span class="php-quote">&quot;\t\tif (method_exists(get_parent_class(), 'Flow_Aop_Proxy_buildMethodsAndAdvicesArray') &amp;&amp; is_callable('parent::Flow_Aop_Proxy_buildMethodsAndAdvicesArray')) parent::Flow_Aop_Proxy_buildMethodsAndAdvicesArray();\n&quot;</span>);
 </span><span id="443" class="l">        <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'Flow_Aop_Proxy_buildMethodsAndAdvicesArray'</span>)-&gt;addPreParentCallCode(<span class="php-var">$this</span>-&gt;buildMethodsAndAdvicesArrayCode(<span class="php-var">$interceptedMethods</span>));
 </span><span id="444" class="l">        <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'Flow_Aop_Proxy_buildMethodsAndAdvicesArray'</span>)-&gt;overrideMethodVisibility(<span class="php-quote">'protected'</span>);
 </span><span id="445" class="l">
@@ -2105,7 +2105,7 @@
 </span><span id="448" class="l">        <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'__wakeup'</span>)-&gt;addPreParentCallCode(<span class="php-var">$callBuildMethodsAndAdvicesArrayCode</span>);
 </span><span id="449" class="l">
 </span><span id="450" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;reflectionService-&gt;hasMethod(<span class="php-var">$targetClassName</span>, <span class="php-quote">'__wakeup'</span>)) {
-</span><span id="451" class="l">            <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'__wakeup'</span>)-&gt;addPostParentCallCode(<span class="php-quote">&quot;\t\tif (method_exists(get_parent_class(\</span><span class="php-var">$this</span><span class="php-quote">), '__wakeup') &amp;&amp; is_callable('parent::__wakeup')) parent::__wakeup();\n&quot;</span>);
+</span><span id="451" class="l">            <span class="php-var">$proxyClass</span>-&gt;getMethod(<span class="php-quote">'__wakeup'</span>)-&gt;addPostParentCallCode(<span class="php-quote">&quot;\t\tif (method_exists(get_parent_class(), '__wakeup') &amp;&amp; is_callable('parent::__wakeup')) parent::__wakeup();\n&quot;</span>);
 </span><span id="452" class="l">        }
 </span><span id="453" class="l">
 </span><span id="454" class="l">        <span class="php-comment">// FIXME this can be removed again once Doctrine is fixed (see fixMethodsAndAdvicesArrayForDoctrineProxiesCode())</span>
@@ -2203,7 +2203,7 @@
 </span><span id="546" class="l">        <span class="php-var">$code</span> = <span class="php-quote">&lt;&lt;&lt;EOT
 </span></span><span id="547" class="l"><span class="php-quote">        if (!isset(\$this-&gt;Flow_Aop_Proxy_targetMethodsAndGroupedAdvices) || empty(\$this-&gt;Flow_Aop_Proxy_targetMethodsAndGroupedAdvices)) {
 </span></span><span id="548" class="l"><span class="php-quote">            \$this-&gt;Flow_Aop_Proxy_buildMethodsAndAdvicesArray();
-</span></span><span id="549" class="l"><span class="php-quote">            if (is_callable('parent::Flow_Aop_Proxy_fixMethodsAndAdvicesArrayForDoctrineProxies')) parent::Flow_Aop_Proxy_fixMethodsAndAdvicesArrayForDoctrineProxies();
+</span></span><span id="549" class="l"><span class="php-quote">            if (method_exists(get_parent_class(), 'Flow_Aop_Proxy_fixMethodsAndAdvicesArrayForDoctrineProxies') &amp;&amp; is_callable('parent::Flow_Aop_Proxy_fixMethodsAndAdvicesArrayForDoctrineProxies')) parent::Flow_Aop_Proxy_fixMethodsAndAdvicesArrayForDoctrineProxies();
 </span></span><span id="550" class="l"><span class="php-quote">        }
 </span></span><span id="551" class="l"><span class="php-quote">EOT;
 </span></span><span id="552" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$code</span>;
@@ -2225,7 +2225,7 @@
 </span></span><span id="568" class="l"><span class="php-quote">            return;
 </span></span><span id="569" class="l"><span class="php-quote">        }
 </span></span><span id="570" class="l"><span class="php-quote">        \$this-&gt;Flow_Proxy_injectProperties_fixInjectedPropertiesForDoctrineProxies = TRUE;
-</span></span><span id="571" class="l"><span class="php-quote">        if (is_callable(array(\$this, 'Flow_Proxy_injectProperties'))) {
+</span></span><span id="571" class="l"><span class="php-quote">        if (method_exists(get_class(), 'Flow_Proxy_injectProperties') &amp;&amp; is_callable(array(\$this, 'Flow_Proxy_injectProperties'))) {
 </span></span><span id="572" class="l"><span class="php-quote">            \$this-&gt;Flow_Proxy_injectProperties();
 </span></span><span id="573" class="l"><span class="php-quote">        }
 </span></span><span id="574" class="l"><span class="php-quote">EOT;
