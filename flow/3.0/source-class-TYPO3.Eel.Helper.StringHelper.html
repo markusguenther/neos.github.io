@@ -2023,7 +2023,7 @@
 </span><span id="281" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> startsWith(<span class="php-var">$string</span>, <span class="php-var">$search</span>, <span class="php-var">$position</span> = <span class="php-keyword1">null</span>)
 </span><span id="282" class="l">    {
 </span><span id="283" class="l">        <span class="php-var">$position</span> = <span class="php-var">$position</span> !== <span class="php-keyword1">null</span> ? <span class="php-var">$position</span> : <span class="php-num">0</span>;
-</span><span id="284" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">mb_strrpos</span>(<span class="php-var">$string</span>, <span class="php-var">$search</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'UTF-8'</span>) === <span class="php-var">$position</span>;
+</span><span id="284" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">mb_strpos</span>(<span class="php-var">$string</span>, <span class="php-var">$search</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'UTF-8'</span>) === <span class="php-var">$position</span>;
 </span><span id="285" class="l">    }
 </span><span id="286" class="l">
 </span><span id="287" class="l">    <span class="php-comment">/**
