@@ -802,6 +802,7 @@
 				<li class="active"><a href="class-TYPO3.Flow.Package.Package.html">Package</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageFactory.html">PackageFactory</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageManager.html">PackageManager</a></li>
+				<li><a href="class-TYPO3.Flow.Package.PackageOrderResolver.html">PackageOrderResolver</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -868,7 +869,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Package.Package.html#17-521" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Package/Package.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Package.Package.html#19-578" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Package/Package.php</a>
 		<br>
 	</div>
 
@@ -888,7 +889,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#111-156" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Package.PackageManager.html">TYPO3\Flow\Package\PackageManager</a></code> <var>$packageManager</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$packagePath</var></span>, <span>string <var>$classesPath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$manifestPath</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#101-116" title="Go to source code">__construct</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$composerName</var></span>, <span>string <var>$packagePath</var></span>, <span>array <var>$autoloadConfiguration</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -900,24 +901,20 @@
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$packageManager</var></dt>
-						<dd>the package manager which knows this package</dd>
 						<dt><var>$packageKey</var></dt>
 						<dd>Key of this package</dd>
+						<dt><var>$composerName</var></dt>
+						<dd></dd>
 						<dt><var>$packagePath</var></dt>
 						<dd>Absolute path to the location of the package's composer manifest</dd>
-						<dt><var>$classesPath</var></dt>
-						<dd>Path the classes of the package are in, relative to $packagePath. Optional, PSR-0/PSR-4 mappings of the composer manifest overrule this argument, if present</dd>
-						<dt><var>$manifestPath</var></dt>
-						<dd>Path the composer manifest of the package, relative to $packagePath. Optional, defaults to ''</dd>
+						<dt><var>$autoloadConfiguration</var></dt>
+						<dd></dd>
 					</dl></div>
 
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageKeyException.html">TYPO3\Flow\Package\Exception\InvalidPackageKeyException</a></code><br>if an invalid package key was passed<br>
-						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackagePathException.html">TYPO3\Flow\Package\Exception\InvalidPackagePathException</a></code><br>if an invalid package path was passed<br>
-						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageManifestException.html">TYPO3\Flow\Package\Exception\InvalidPackageManifestException</a></code><br>if no composer manifest file could be found
+						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageKeyException.html">TYPO3\Flow\Package\Exception\InvalidPackageKeyException</a></code>
 					</div>
 
 
@@ -936,7 +933,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_boot">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#158-166" title="Go to source code">boot</a>( <span><code><a href="class-TYPO3.Flow.Core.Bootstrap.html">TYPO3\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#118-126" title="Go to source code">boot</a>( <span><code><a href="class-TYPO3.Flow.Core.Bootstrap.html">TYPO3\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
 
 			<div class="description short">
 				<p>Invokes custom PHP code directly after the package manager has been initialized.</p>
@@ -972,15 +969,23 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageMetaData">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#168-198" title="Go to source code">getPackageMetaData</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#128-146" title="Go to source code">getPackageMetaData</a>( )</code>
 
 			<div class="description short">
-				<p>Returns the package meta data object of this package.</p>
+				<p>Returns the package meta data object of this package.
+Note that since Flow 3.1 the MetaData won't contain any constraints,
+please use the composer manifest directly if you need this information.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the package meta data object of this package.</p>
+				<p>Returns the package meta data object of this package.
+Note that since Flow 3.1 the MetaData won't contain any constraints,
+please use the composer manifest directly if you need this information.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							To be removed in Flow 4.0<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -996,56 +1001,18 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="packageRequirementIsComposerPackage" id="_packageRequirementIsComposerPackage">
-
-			<td class="attributes"><code>
-				 protected 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_packageRequirementIsComposerPackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#200-209" title="Go to source code">packageRequirementIsComposerPackage</a>( <span>string <var>$requirement</var></span> )</code>
-
-			<div class="description short">
-				<p>Check whether the given package requirement (like "typo3/flow" or "php") is a composer package or not</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Check whether the given package requirement (like "typo3/flow" or "php") is a composer package or not</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$requirement</var></dt>
-						<dd>the composer requirement string</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br>TRUE if $requirement is a composer package (contains a slash), FALSE otherwise
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getClassFiles" id="_getClassFiles">
 
 			<td class="attributes"><code>
 				 public 
-				array
+				Generator
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassFiles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#211-222" title="Go to source code">getClassFiles</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#148-164" title="Go to source code">getClassFiles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the array of filenames of the class files</p>
@@ -1058,7 +1025,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>An array of class names (key) and their filename, including the relative path to the package's directory
+						Generator<br>A Generator for class names (key) and their filename, including the absolute path.
 					</div>
 
 
@@ -1080,7 +1047,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFunctionalTestsClassFiles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#224-233" title="Go to source code">getFunctionalTestsClassFiles</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#166-183" title="Go to source code">getFunctionalTestsClassFiles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the array of filenames of class files provided by functional tests contained in this package</p>
@@ -1113,7 +1080,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#235-244" title="Go to source code">getPackageKey</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#185-194" title="Go to source code">getPackageKey</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the package key of this package.</p>
@@ -1140,6 +1107,76 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getComposerName" id="_getComposerName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getComposerName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#196-205" title="Go to source code">getComposerName</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the packages composer name</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the packages composer name</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>TODO: Should be added to the interface in the next major Flow version (4.0)
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNamespaces" id="_getNamespaces">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNamespaces">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#207-221" title="Go to source code">getNamespaces</a>( )</code>
+
+			<div class="description short">
+				<p>Returns array of all declared autoload namespaces contained in this package</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns array of all declared autoload namespaces contained in this package</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							TODO: Should be added to the interface in the next major Flow version (4.0)<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getNamespace" id="_getNamespace">
 
 			<td class="attributes"><code>
@@ -1151,7 +1188,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNamespace">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#246-267" title="Go to source code">getNamespace</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#223-235" title="Go to source code">getNamespace</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the PHP namespace of classes in this package.</p>
@@ -1160,6 +1197,10 @@
 			<div class="description detailed hidden">
 				<p>Returns the PHP namespace of classes in this package.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							see getNamespaces()<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1167,10 +1208,6 @@
 						string
 					</div>
 
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageStateException.html">TYPO3\Flow\Package\Exception\InvalidPackageStateException</a></code>
-					</div>
 
 					<h4>Api</h4>
 					<div class="list">
@@ -1179,6 +1216,39 @@
 
 					<h4>Implementation of</h4>
 					<div class="list"><code><a href="class-TYPO3.Flow.Package.PackageInterface.html#_getNamespace">TYPO3\Flow\Package\PackageInterface::getNamespace()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAutoloadTypes" id="_getAutoloadTypes">
+
+			<td class="attributes"><code>
+				 public 
+				string[]
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAutoloadTypes">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#237-247" title="Go to source code">getAutoloadTypes</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string[]
+					</div>
+
+
+
+
 			</div>
 			</div></td>
 		</tr>
@@ -1193,7 +1263,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAutoloadType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#269-292" title="Go to source code">getAutoloadType</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#249-265" title="Go to source code">getAutoloadType</a>( )</code>
 
 			<div class="description short">
 				<p>PSR autoloading type</p>
@@ -1202,6 +1272,10 @@
 			<div class="description detailed hidden">
 				<p>PSR autoloading type</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							see getAutoloadTypes()<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1210,9 +1284,6 @@
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1229,7 +1300,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isProtected">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#294-303" title="Go to source code">isProtected</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#267-276" title="Go to source code">isProtected</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this package is protected and therefore cannot be deactivated or deleted</p>
@@ -1267,7 +1338,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isObjectManagementEnabled">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#305-313" title="Go to source code">isObjectManagementEnabled</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#278-286" title="Go to source code">isObjectManagementEnabled</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if files in the Classes directory should be registered and object management enabled for this package.</p>
@@ -1302,7 +1373,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProtected">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#315-325" title="Go to source code">setProtected</a>( <span>boolean <var>$protected</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#288-298" title="Go to source code">setProtected</a>( <span>boolean <var>$protected</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the protection flag of the package</p>
@@ -1341,7 +1412,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackagePath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#327-336" title="Go to source code">getPackagePath</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#300-309" title="Go to source code">getPackagePath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to this package's main directory</p>
@@ -1368,39 +1439,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getManifestPath" id="_getManifestPath">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getManifestPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#338-346" title="Go to source code">getManifestPath</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the full path to the packages Composer manifest</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the full path to the packages Composer manifest</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getClassesPath" id="_getClassesPath">
 
 			<td class="attributes"><code>
@@ -1412,7 +1450,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassesPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#348-357" title="Go to source code">getClassesPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#311-328" title="Go to source code">getClassesPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to this package's Classes directory</p>
@@ -1421,6 +1459,9 @@
 			<div class="description detailed hidden">
 				<p>Returns the full path to this package's Classes directory</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1439,6 +1480,39 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getAutoloadPaths" id="_getAutoloadPaths">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAutoloadPaths">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#330-338" title="Go to source code">getAutoloadPaths</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getClassesNamespaceEntryPath" id="_getClassesNamespaceEntryPath">
 
 			<td class="attributes"><code>
@@ -1450,7 +1524,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassesNamespaceEntryPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#359-370" title="Go to source code">getClassesNamespaceEntryPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#340-361" title="Go to source code">getClassesNamespaceEntryPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to the package's classes namespace entry path,
@@ -1461,11 +1535,14 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 				<p>Returns the full path to the package's classes namespace entry path,
 e.g. "My.Package/ClassesPath/My/Package/"</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>Path to this package's Classes directory
+						string<br>Path to this package's autoload directory
 					</div>
 
 
@@ -1490,7 +1567,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFunctionalTestsPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#372-381" title="Go to source code">getFunctionalTestsPath</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#363-373" title="Go to source code">getFunctionalTestsPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to this package's functional tests directory</p>
@@ -1509,6 +1586,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 					<h4>Api</h4>
 					<div class="list">
+							TODO: Should be replaced by using autoload-dev<br>
 					</div>
 
 
@@ -1526,7 +1604,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResourcesPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#383-392" title="Go to source code">getResourcesPath</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#375-384" title="Go to source code">getResourcesPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to this package's Resources directory</p>
@@ -1564,7 +1642,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigurationPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#394-403" title="Go to source code">getConfigurationPath</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#386-395" title="Go to source code">getConfigurationPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to this package's Configuration directory</p>
@@ -1602,7 +1680,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMetaPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#405-414" title="Go to source code">getMetaPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#397-407" title="Go to source code">getMetaPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to the package's meta data directory</p>
@@ -1611,6 +1689,10 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 			<div class="description detailed hidden">
 				<p>Returns the full path to the package's meta data directory</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							To be removed in Flow 4.0<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1640,7 +1722,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDocumentationPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#416-425" title="Go to source code">getDocumentationPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#409-419" title="Go to source code">getDocumentationPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to the package's documentation directory</p>
@@ -1649,6 +1731,10 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 			<div class="description detailed hidden">
 				<p>Returns the full path to the package's documentation directory</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							To be removed in Flow 4.0<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1667,6 +1753,262 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getAutoloadConfiguration" id="_getAutoloadConfiguration">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAutoloadConfiguration">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#421-429" title="Go to source code">getAutoloadConfiguration</a>( )</code>
+
+			<div class="description short">
+				<p>Get the autoload configuration for this package. Any valid composer "autoload" configuration.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the autoload configuration for this package. Any valid composer "autoload" configuration.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFlattenedAutoloadConfiguration" id="_getFlattenedAutoloadConfiguration">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFlattenedAutoloadConfiguration">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#431-443" title="Go to source code">getFlattenedAutoloadConfiguration</a>( )</code>
+
+			<div class="description short">
+				<p>Get a flattened array of autoload configurations that have a predictable pattern (PSR-0, PSR-4)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get a flattened array of autoload configurations that have a predictable pattern (PSR-0, PSR-4)</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Keys: "namespace", "classPath", "mappingType"
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getComposerManifest" id="_getComposerManifest">
+
+			<td class="attributes"><code>
+				 public 
+				array|mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getComposerManifest">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#445-456" title="Go to source code">getComposerManifest</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns contents of Composer manifest - or part there of.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns contents of Composer manifest - or part there of.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd>Optional. Only return the part of the manifest indexed by 'key'</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|mixed
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							TODO: Should be added to the interface in the next major Flow version (4.0)<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getInstalledVersion" id="_getInstalledVersion">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getInstalledVersion">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#458-468" title="Go to source code">getInstalledVersion</a>( )</code>
+
+			<div class="description short">
+				<p>Get the installed package version (from composer)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the installed package version (from composer)</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							TODO: Should be added to the interface in the next major Flow version (4.0)<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="normalizeAutoloadPath" id="_normalizeAutoloadPath">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_normalizeAutoloadPath">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#470-487" title="Go to source code">normalizeAutoloadPath</a>( <span>string <var>$autoloadType</var></span>, <span>string <var>$autoloadNamespace</var></span>, <span>string <var>$autoloadPath</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$autoloadType</var></dt>
+						<dd></dd>
+						<dt><var>$autoloadNamespace</var></dt>
+						<dd></dd>
+						<dt><var>$autoloadPath</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getClassesInNormalizedAutoloadPath" id="_getClassesInNormalizedAutoloadPath">
+
+			<td class="attributes"><code>
+				 protected 
+				Generator
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getClassesInNormalizedAutoloadPath">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#489-519" title="Go to source code">getClassesInNormalizedAutoloadPath</a>( <span>string <var>$baseAutoloadPath</var></span>, <span>string <var>$autoloadNamespace</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$baseAutoloadPath</var></dt>
+						<dd></dd>
+						<dt><var>$autoloadNamespace</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Generator
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="explodeAutoloadConfiguration" id="_explodeAutoloadConfiguration">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_explodeAutoloadConfiguration">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.Package.html#521-548" title="Go to source code">explodeAutoloadConfiguration</a>( )</code>
+
+			<div class="description short">
+				<p>Brings the composer autoload configuration into an easy to use format for various parts of Flow.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Brings the composer autoload configuration into an easy to use format for various parts of Flow.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getPackageDocumentations" id="_getPackageDocumentations">
 
 			<td class="attributes"><code>
@@ -1678,7 +2020,7 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageDocumentations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#427-451" title="Go to source code">getPackageDocumentations</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.Package.html#550-577" title="Go to source code">getPackageDocumentations</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the available documentations for this package</p>
@@ -1687,6 +2029,10 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 			<div class="description detailed hidden">
 				<p>Returns the available documentations for this package</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							To be removed in Flow 4.0<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1705,100 +2051,6 @@ e.g. "My.Package/ClassesPath/My/Package/"</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getComposerManifest" id="_getComposerManifest">
-
-			<td class="attributes"><code>
-				 public 
-				mixed|null
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getComposerManifest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#453-467" title="Go to source code">getComposerManifest</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
-
-			<div class="description short">
-				<p>Returns contents of Composer manifest - or part there of.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns contents of Composer manifest - or part there of.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$key</var></dt>
-						<dd>Optional. Only return the part of the manifest indexed by 'key'</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						mixed|null
-					</div>
-
-
-					<h4>See</h4>
-					<div class="list">
-							json_decode for return values<br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="buildArrayOfClassFiles" id="_buildArrayOfClassFiles">
-
-			<td class="attributes"><code>
-				 protected 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_buildArrayOfClassFiles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.Package.html#469-520" title="Go to source code">buildArrayOfClassFiles</a>( <span>string <var>$classesPath</var></span>, <span>string <var>$extraNamespaceSegment</var> = <span class="php-quote">''</span></span>, <span>string <var>$subDirectory</var> = <span class="php-quote">''</span></span>, <span>integer <var>$recursionLevel</var> = <span class="php-num">0</span></span> )</code>
-
-			<div class="description short">
-				<p>Builds and returns an array of class names => file names of all
-*.php files in the package's Classes directory and its sub-
-directories.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Builds and returns an array of class names => file names of all
-*.php files in the package's Classes directory and its sub-
-directories.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$classesPath</var></dt>
-						<dd>Base path acting as the parent directory for potential class files</dd>
-						<dt><var>$extraNamespaceSegment</var></dt>
-						<dd>A PHP class namespace segment which should be inserted like so: \TYPO3\PackageKey&#123;namespacePrefix&#125;PathSegment\PathSegment\Filename</dd>
-						<dt><var>$subDirectory</var></dt>
-						<dd>Used internally</dd>
-						<dt><var>$recursionLevel</var></dt>
-						<dd>Used internally</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						array
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.Exception.html">TYPO3\Flow\Package\Exception</a></code><br>if recursion into directories was too deep or another error occurred
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
 			</table>
 		</div>
 
@@ -1811,109 +2063,12 @@ directories.</p>
 
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Constants summary</h2></div>
-			<table class="summary table table-bordered table-striped constants" id="constants">
-			<tr data-order="AUTOLOADER_TYPE_PSR0" id="AUTOLOADER_TYPE_PSR0">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-class-TYPO3.Flow.Package.Package.html#24-27" title="Go to source code"><b>AUTOLOADER_TYPE_PSR0</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#AUTOLOADER_TYPE_PSR0" class="anchor">#</a>
-						<code><span class="php-quote">'psr-0'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="AUTOLOADER_TYPE_PSR4" id="AUTOLOADER_TYPE_PSR4">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-class-TYPO3.Flow.Package.Package.html#29-32" title="Go to source code"><b>AUTOLOADER_TYPE_PSR4</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#AUTOLOADER_TYPE_PSR4" class="anchor">#</a>
-						<code><span class="php-quote">'psr-4'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="AUTOLOADER_TYPE_CLASSMAP" id="AUTOLOADER_TYPE_CLASSMAP">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-class-TYPO3.Flow.Package.Package.html#34-37" title="Go to source code"><b>AUTOLOADER_TYPE_CLASSMAP</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#AUTOLOADER_TYPE_CLASSMAP" class="anchor">#</a>
-						<code><span class="php-quote">'classmap'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="AUTOLOADER_TYPE_FILES" id="AUTOLOADER_TYPE_FILES">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-class-TYPO3.Flow.Package.Package.html#39-42" title="Go to source code"><b>AUTOLOADER_TYPE_FILES</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#AUTOLOADER_TYPE_FILES" class="anchor">#</a>
-						<code><span class="php-quote">'files'</span></code>
-					</div>
-				</td>
-			</tr>
-			</table>
 		</div>
 
 		<div class="panel panel-default">
             <div class="panel-heading"><h3>Constants inherited from <a href="class-TYPO3.Flow.Package.PackageInterface.html#constants">TYPO3\Flow\Package\PackageInterface</a></h3></div>
 			<p class="elementList">
+				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DEFAULT_COMPOSER_TYPE"><b>DEFAULT_COMPOSER_TYPE</b></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DIRECTORY_CLASSES"><b>DIRECTORY_CLASSES</b></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DIRECTORY_CONFIGURATION"><b>DIRECTORY_CONFIGURATION</b></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DIRECTORY_DOCUMENTATION"><b>DIRECTORY_DOCUMENTATION</b></a></code>, 
@@ -1937,7 +2092,7 @@ directories.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#44-48" title="Go to source code"><var>$packageKey</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#26-31" title="Go to source code"><var>$packageKey</var></a>
 
 				<div class="description short">
 					<p>Unique key of this package. Example for the Flow package: "TYPO3.Flow"</p>
@@ -1955,27 +2110,27 @@ directories.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="manifestPath" id="$manifestPath">
+		<tr data-order="composerName" id="$composerName">
 			<td class="attributes"><code>
 				protected  
 				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#50-53" title="Go to source code"><var>$manifestPath</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#33-38" title="Go to source code"><var>$composerName</var></a>
 
 				<div class="description short">
-					
+					<p>composer name for this package</p>
 				</div>
 
 				<div class="description detailed hidden">
-					
+					<p>composer name for this package</p>
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$manifestPath" class="anchor">#</a>
+					<a href="#$composerName" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1987,7 +2142,7 @@ directories.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#55-59" title="Go to source code"><var>$packagePath</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#40-45" title="Go to source code"><var>$packagePath</var></a>
 
 				<div class="description short">
 					<p>Full path to this package's main directory</p>
@@ -2005,31 +2160,6 @@ directories.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="classesPath" id="$classesPath">
-			<td class="attributes"><code>
-				protected  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#61-65" title="Go to source code"><var>$classesPath</var></a>
-
-				<div class="description short">
-					<p>Full path to this package's PSR-0 class loader entry point</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Full path to this package's PSR-0 class loader entry point</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$classesPath" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="protected" id="$protected">
 			<td class="attributes"><code>
 				protected  
@@ -2037,7 +2167,7 @@ directories.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#67-72" title="Go to source code"><var>$protected</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#47-53" title="Go to source code"><var>$protected</var></a>
 
 				<div class="description short">
 					<p>If this package is protected and therefore cannot be deactivated or deleted</p>
@@ -2058,31 +2188,6 @@ directories.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="composerManifest" id="$composerManifest">
-			<td class="attributes"><code>
-				protected  
-				stdClass
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#74-77" title="Go to source code"><var>$composerManifest</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$composerManifest" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="packageMetaData" id="$packageMetaData">
 			<td class="attributes"><code>
 				protected  
@@ -2090,7 +2195,7 @@ directories.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#79-83" title="Go to source code"><var>$packageMetaData</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#55-61" title="Go to source code"><var>$packageMetaData</var></a>
 
 				<div class="description short">
 					<p>Meta information about this package</p>
@@ -2108,31 +2213,6 @@ directories.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="classFiles" id="$classFiles">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#85-89" title="Go to source code"><var>$classFiles</var></a>
-
-				<div class="description short">
-					<p>Names and relative paths (to this package directory) of files containing classes</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Names and relative paths (to this package directory) of files containing classes</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$classFiles" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="namespace" id="$namespace">
 			<td class="attributes"><code>
 				protected  
@@ -2140,7 +2220,7 @@ directories.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#91-95" title="Go to source code"><var>$namespace</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#63-68" title="Go to source code"><var>$namespace</var></a>
 
 				<div class="description short">
 					<p>The namespace of the classes contained in this package</p>
@@ -2158,6 +2238,56 @@ directories.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="namespaces" id="$namespaces">
+			<td class="attributes"><code>
+				protected  
+				string[]
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Package.Package.html#70-75" title="Go to source code"><var>$namespaces</var></a>
+
+				<div class="description short">
+					<p>Array of all declared autoload namespaces contained in this package</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Array of all declared autoload namespaces contained in this package</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$namespaces" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="autoloadTypes" id="$autoloadTypes">
+			<td class="attributes"><code>
+				protected  
+				string[]
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Package.Package.html#77-80" title="Go to source code"><var>$autoloadTypes</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$autoloadTypes" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="objectManagementEnabled" id="$objectManagementEnabled">
 			<td class="attributes"><code>
 				protected  
@@ -2165,7 +2295,7 @@ directories.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#97-104" title="Go to source code"><var>$objectManagementEnabled</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#82-89" title="Go to source code"><var>$objectManagementEnabled</var></a>
 
 				<div class="description short">
 					<p>If enabled, the files in the Classes directory are registered and Reflection, Dependency Injection, AOP etc. are supported.
@@ -2188,14 +2318,14 @@ Disable this flag if you don't need object management for your package and want 
 				</div>
 			</td>
 		</tr>
-		<tr data-order="packageManager" id="$packageManager">
+		<tr data-order="autoloadConfiguration" id="$autoloadConfiguration">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-TYPO3.Flow.Package.PackageManager.html">TYPO3\Flow\Package\PackageManager</a></code>
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.Package.html#106-109" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-TYPO3.Flow.Package.Package.html#91-94" title="Go to source code"><var>$autoloadConfiguration</var></a>
 
 				<div class="description short">
 					
@@ -2208,7 +2338,32 @@ Disable this flag if you don't need object management for your package and want 
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$packageManager" class="anchor">#</a>
+					<a href="#$autoloadConfiguration" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="flattenedAutoloadConfiguration" id="$flattenedAutoloadConfiguration">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Package.Package.html#96-99" title="Go to source code"><var>$flattenedAutoloadConfiguration</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$flattenedAutoloadConfiguration" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

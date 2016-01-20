@@ -802,6 +802,7 @@
 				<li><a href="class-TYPO3.Flow.Package.Package.html">Package</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageFactory.html">PackageFactory</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageManager.html">PackageManager</a></li>
+				<li><a href="class-TYPO3.Flow.Package.PackageOrderResolver.html">PackageOrderResolver</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -856,7 +857,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#14-214" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Package/PackageManagerInterface.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#14-203" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Package/PackageManagerInterface.php</a>
 		<br>
 	</div>
 
@@ -876,7 +877,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initialize">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#21-27" title="Go to source code">initialize</a>( <span><code><a href="class-TYPO3.Flow.Core.Bootstrap.html">TYPO3\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#25-31" title="Go to source code">initialize</a>( <span><code><a href="class-TYPO3.Flow.Core.Bootstrap.html">TYPO3\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
 
 			<div class="description short">
 				<p>Initializes the package manager</p>
@@ -910,7 +911,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageAvailable">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#29-37" title="Go to source code">isPackageAvailable</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#33-41" title="Go to source code">isPackageAvailable</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a package is available (the package's files exist in the packages directory)
@@ -953,7 +954,7 @@ or FALSE if it's not. If a package is available it doesn't mean necessarily that
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageActive">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#39-46" title="Go to source code">isPackageActive</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#43-50" title="Go to source code">isPackageActive</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a package is activated or FALSE if it's not.</p>
@@ -994,7 +995,7 @@ or FALSE if it's not. If a package is available it doesn't mean necessarily that
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#48-56" title="Go to source code">getPackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#52-60" title="Go to source code">getPackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a \TYPO3\Flow\Package\PackageInterface object for the specified package.
@@ -1037,7 +1038,7 @@ A package is available, if the package directory contains valid meta information
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageOfObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#58-65" title="Go to source code">getPackageOfObject</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#62-69" title="Go to source code">getPackageOfObject</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds a package by a given object of that package; if no such package
@@ -1077,7 +1078,7 @@ could be found, NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageByClassName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#67-74" title="Go to source code">getPackageByClassName</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#71-78" title="Go to source code">getPackageByClassName</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds a package by a given class name of that package</p>
@@ -1119,7 +1120,7 @@ could be found, NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAvailablePackages">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#76-83" title="Go to source code">getAvailablePackages</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#80-87" title="Go to source code">getAvailablePackages</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array of \TYPO3\Flow\Package\PackageInterface objects of all available packages.
@@ -1157,7 +1158,7 @@ A package is available, if the package directory contains valid meta information
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getActivePackages">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#85-93" title="Go to source code">getActivePackages</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#89-97" title="Go to source code">getActivePackages</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array of \TYPO3\Flow\PackageInterface objects of all active packages.
@@ -1197,7 +1198,7 @@ manager settings.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFilteredPackages">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#95-106" title="Go to source code">getFilteredPackages</a>( <span>string <var>$packageState</var> = <span class="php-quote">'available'</span></span>, <span>string <var>$packagePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#99-110" title="Go to source code">getFilteredPackages</a>( <span>string <var>$packageState</var> = <span class="php-quote">'available'</span></span>, <span>string <var>$packagePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of \TYPO3\Flow\PackageInterface objects of all packages that match
@@ -1244,7 +1245,7 @@ the given package state, path, and type filters. All three filters must match, i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCaseSensitivePackageKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#108-116" title="Go to source code">getCaseSensitivePackageKey</a>( <span>string <var>$unknownCasedPackageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#112-120" title="Go to source code">getCaseSensitivePackageKey</a>( <span>string <var>$unknownCasedPackageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the upper camel cased version of the given package key or FALSE
@@ -1287,7 +1288,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageKeyValid">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#118-124" title="Go to source code">isPackageKeyValid</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#122-128" title="Go to source code">isPackageKeyValid</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Check the conformance of the given package key</p>
@@ -1324,7 +1325,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createPackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#126-136" title="Go to source code">createPackage</a>( <span>string <var>$packageKey</var></span>, <span><code><a href="class-TYPO3.Flow.Package.MetaData.html">TYPO3\Flow\Package\MetaData</a></code> <var>$packageMetaData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packagesPath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#130-143" title="Go to source code">createPackage</a>( <span>string <var>$packageKey</var></span>, <span><code><a href="class-TYPO3.Flow.Package.MetaData.html">TYPO3\Flow\Package\MetaData</a></code> <var>$packageMetaData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packagesPath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new package, given the package key</p>
@@ -1333,6 +1334,12 @@ if no such package is available.</p>
 			<div class="description detailed hidden">
 				<p>Create a new package, given the package key</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							<p>This methods signature is deprecated and will change with Flow 4.0</p>
+
+<p>TODO: Change signature for Flow 4.0 to ($packageKey, $manifest, $packagesPath)</p><br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1371,7 +1378,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivatePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#138-145" title="Go to source code">deactivatePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#145-152" title="Go to source code">deactivatePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Deactivates a package if it is in the list of active packages</p>
@@ -1408,7 +1415,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activatePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#147-154" title="Go to source code">activatePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#154-161" title="Go to source code">activatePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Activates a package</p>
@@ -1445,7 +1452,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_freezePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#156-162" title="Go to source code">freezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#163-169" title="Go to source code">freezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Freezes a package</p>
@@ -1479,7 +1486,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageFrozen">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#164-170" title="Go to source code">isPackageFrozen</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#171-177" title="Go to source code">isPackageFrozen</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Tells if a package is frozen</p>
@@ -1517,7 +1524,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unfreezePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#172-178" title="Go to source code">unfreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#179-185" title="Go to source code">unfreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Unfreezes a package</p>
@@ -1551,7 +1558,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refreezePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#180-186" title="Go to source code">refreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#187-193" title="Go to source code">refreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Refreezes a package</p>
@@ -1574,88 +1581,6 @@ if no such package is available.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="registerPackage" id="_registerPackage">
-
-			<td class="attributes"><code>
-				 public 
-				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html">TYPO3\Flow\Package\PackageInterface</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_registerPackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#188-196" title="Go to source code">registerPackage</a>( <span><code><a href="class-TYPO3.Flow.Package.PackageInterface.html">TYPO3\Flow\Package\PackageInterface</a></code> <var>$package</var></span>, <span>boolean <var>$sortAndSave</var> = <span class="php-keyword1">true</span></span> )</code>
-
-			<div class="description short">
-				<p>Register a native Flow package</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Register a native Flow package</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$package</var></dt>
-						<dd>The Package to be registered</dd>
-						<dt><var>$sortAndSave</var></dt>
-						<dd>allows for not saving packagestates when used in loops etc.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.PackageInterface.html">TYPO3\Flow\Package\PackageInterface</a></code>
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.Exception.CorruptPackageException.html">TYPO3\Flow\Package\Exception\CorruptPackageException</a></code>
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="unregisterPackage" id="_unregisterPackage">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_unregisterPackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#198-204" title="Go to source code">unregisterPackage</a>( <span><code><a href="class-TYPO3.Flow.Package.PackageInterface.html">TYPO3\Flow\Package\PackageInterface</a></code> <var>$package</var></span> )</code>
-
-			<div class="description short">
-				<p>Unregisters a package from the list of available packages</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Unregisters a package from the list of available packages</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$package</var></dt>
-						<dd>The package to be unregistered</dd>
-					</dl></div>
-
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageStateException.html">TYPO3\Flow\Package\Exception\InvalidPackageStateException</a></code>
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="deletePackage" id="_deletePackage">
 
 			<td class="attributes"><code>
@@ -1667,7 +1592,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deletePackage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#206-213" title="Go to source code">deletePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#195-202" title="Go to source code">deletePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes a package from registry and deletes it from filesystem</p>
@@ -1702,6 +1627,60 @@ if no such package is available.</p>
 
 
 
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="PACKAGE_STATE_INACTIVE" id="PACKAGE_STATE_INACTIVE">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#21" title="Go to source code"><b>PACKAGE_STATE_INACTIVE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#PACKAGE_STATE_INACTIVE" class="anchor">#</a>
+						<code><span class="php-quote">'inactive'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="PACKAGE_STATE_ACTIVE" id="PACKAGE_STATE_ACTIVE">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.Flow.Package.PackageManagerInterface.html#23" title="Go to source code"><b>PACKAGE_STATE_ACTIVE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#PACKAGE_STATE_ACTIVE" class="anchor">#</a>
+						<code><span class="php-quote">'active'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
 
 
 

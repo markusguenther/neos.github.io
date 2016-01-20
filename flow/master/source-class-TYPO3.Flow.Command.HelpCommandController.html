@@ -923,6 +923,7 @@
 				<li><a href="class-TYPO3.Flow.Command.SecurityCommandController.html">TYPO3\Flow\Command\SecurityCommandController</a></li>
 				<li><a href="class-TYPO3.Flow.Command.ServerCommandController.html">TYPO3\Flow\Command\ServerCommandController</a></li>
 				<li><a href="class-TYPO3.Flow.Command.TypeConverterCommandController.html">TYPO3\Flow\Command\TypeConverterCommandController</a></li>
+				<li><a href="class-TYPO3.Flow.Composer.ComposerUtility.html">TYPO3\Flow\Composer\ComposerUtility</a></li>
 				<li><a href="class-TYPO3.Flow.Composer.InstallerScripts.html">TYPO3\Flow\Composer\InstallerScripts</a></li>
 				<li><a href="class-TYPO3.Flow.Configuration.ConfigurationManager.html">TYPO3\Flow\Configuration\ConfigurationManager</a></li>
 				<li><a href="class-TYPO3.Flow.Configuration.ConfigurationSchemaValidator.html">TYPO3\Flow\Configuration\ConfigurationSchemaValidator</a></li>
@@ -1054,6 +1055,7 @@
 				<li><a href="class-TYPO3.Flow.Package.Package.html">TYPO3\Flow\Package\Package</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageFactory.html">TYPO3\Flow\Package\PackageFactory</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageManager.html">TYPO3\Flow\Package\PackageManager</a></li>
+				<li><a href="class-TYPO3.Flow.Package.PackageOrderResolver.html">TYPO3\Flow\Package\PackageOrderResolver</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.AbstractPersistenceManager.html">TYPO3\Flow\Persistence\AbstractPersistenceManager</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html">TYPO3\Flow\Persistence\Aspect\PersistenceMagicAspect</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html">TYPO3\Flow\Persistence\Doctrine\ArrayTypeConverter</a></li>
@@ -1512,6 +1514,7 @@
 				<li><a href="class-TYPO3.Flow.Cache.Exception.NotSupportedByBackendException.html">TYPO3\Flow\Cache\Exception\NotSupportedByBackendException</a></li>
 				<li><a href="class-TYPO3.Flow.Composer.Exception.html">TYPO3\Flow\Composer\Exception</a></li>
 				<li><a href="class-TYPO3.Flow.Composer.Exception.InvalidConfigurationException.html">TYPO3\Flow\Composer\Exception\InvalidConfigurationException</a></li>
+				<li><a href="class-TYPO3.Flow.Composer.Exception.MissingPackageManifestException.html">TYPO3\Flow\Composer\Exception\MissingPackageManifestException</a></li>
 				<li><a href="class-TYPO3.Flow.Composer.Exception.UnexpectedOperationException.html">TYPO3\Flow\Composer\Exception\UnexpectedOperationException</a></li>
 				<li><a href="class-TYPO3.Flow.Configuration.Exception.html">TYPO3\Flow\Configuration\Exception</a></li>
 				<li><a href="class-TYPO3.Flow.Configuration.Exception.ContainerIsLockedException.html">TYPO3\Flow\Configuration\Exception\ContainerIsLockedException</a></li>
@@ -1615,7 +1618,6 @@
 				<li><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageManifestException.html">TYPO3\Flow\Package\Exception\InvalidPackageManifestException</a></li>
 				<li><a href="class-TYPO3.Flow.Package.Exception.InvalidPackagePathException.html">TYPO3\Flow\Package\Exception\InvalidPackagePathException</a></li>
 				<li><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageStateException.html">TYPO3\Flow\Package\Exception\InvalidPackageStateException</a></li>
-				<li><a href="class-TYPO3.Flow.Package.Exception.MissingPackageManifestException.html">TYPO3\Flow\Package\Exception\MissingPackageManifestException</a></li>
 				<li><a href="class-TYPO3.Flow.Package.Exception.PackageKeyAlreadyExistsException.html">TYPO3\Flow\Package\Exception\PackageKeyAlreadyExistsException</a></li>
 				<li><a href="class-TYPO3.Flow.Package.Exception.PackageRepositoryException.html">TYPO3\Flow\Package\Exception\PackageRepositoryException</a></li>
 				<li><a href="class-TYPO3.Flow.Package.Exception.PackageStatesFileNotWritableException.html">TYPO3\Flow\Package\Exception\PackageStatesFileNotWritableException</a></li>
@@ -1812,8 +1814,8 @@
 </span><span id="63" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> helpStubCommand()
 </span><span id="64" class="l">    {
 </span><span id="65" class="l">        <span class="php-var">$context</span> = <span class="php-var">$this</span>-&gt;bootstrap-&gt;getContext();
-</span><span id="66" class="l">        <span class="php-var">$composerManifest</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$this</span>-&gt;applicationPackageKey)-&gt;getComposerManifest();
-</span><span id="67" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%s %s (&quot;%s&quot; context)&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$composerManifest</span>-&gt;description, <span class="php-var">$composerManifest</span>-&gt;version ?: <span class="php-quote">'dev'</span>, <span class="php-var">$context</span>));
+</span><span id="66" class="l">        <span class="php-var">$applicationPackage</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$this</span>-&gt;applicationPackageKey);
+</span><span id="67" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%s %s (&quot;%s&quot; context)&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$applicationPackage</span>-&gt;getComposerManifest(<span class="php-quote">'description'</span>), <span class="php-var">$applicationPackage</span>-&gt;getInstalledVersion() ?: <span class="php-quote">'dev'</span>, <span class="php-var">$context</span>));
 </span><span id="68" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;i&gt;usage: %s &lt;command identifier&gt;&lt;/i&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$this</span>-&gt;getFlowInvocationString()));
 </span><span id="69" class="l">        <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="70" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'See &quot;%s help&quot; for a list of all available commands.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$this</span>-&gt;getFlowInvocationString()));
@@ -1859,8 +1861,8 @@
 </span><span id="110" class="l">    {
 </span><span id="111" class="l">        <span class="php-var">$context</span> = <span class="php-var">$this</span>-&gt;bootstrap-&gt;getContext();
 </span><span id="112" class="l">
-</span><span id="113" class="l">        <span class="php-var">$composerManifest</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$this</span>-&gt;applicationPackageKey)-&gt;getComposerManifest();
-</span><span id="114" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%s %s (&quot;%s&quot; context)&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$composerManifest</span>-&gt;description, <span class="php-var">$composerManifest</span>-&gt;version ?: <span class="php-quote">'dev'</span>, <span class="php-var">$context</span>));
+</span><span id="113" class="l">        <span class="php-var">$applicationPackage</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$this</span>-&gt;applicationPackageKey);
+</span><span id="114" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%s %s (&quot;%s&quot; context)&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$applicationPackage</span>-&gt;getComposerManifest(<span class="php-quote">'description'</span>), <span class="php-var">$applicationPackage</span>-&gt;getInstalledVersion() ?: <span class="php-quote">'dev'</span>, <span class="php-var">$context</span>));
 </span><span id="115" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;i&gt;usage: %s &lt;command identifier&gt;&lt;/i&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$this</span>-&gt;getFlowInvocationString()));
 </span><span id="116" class="l">        <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="117" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'The following commands are currently available:'</span>);
@@ -2040,6 +2042,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?2012998e39171426eda4c1eeb9dc92ee61de278e"></script>
+<script src="elementlist.js?5bcfd92a52017fd34cb8397bb47a2780e79589b1"></script>
 </body>
 </html>

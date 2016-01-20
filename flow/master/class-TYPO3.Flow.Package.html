@@ -910,27 +910,34 @@
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-TYPO3.Flow.Package.Package.html#methods">TYPO3\Flow\Package\Package</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-TYPO3.Flow.Package.Package.html#___construct">__construct()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_buildArrayOfClassFiles">buildArrayOfClassFiles()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getAutoloadType">getAutoloadType()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_explodeAutoloadConfiguration">explodeAutoloadConfiguration()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getAutoloadConfiguration">getAutoloadConfiguration()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getAutoloadPaths">getAutoloadPaths()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getAutoloadType"><span class="deprecated">getAutoloadType()</span></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getAutoloadTypes">getAutoloadTypes()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getClassFiles">getClassFiles()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getClassesNamespaceEntryPath">getClassesNamespaceEntryPath()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getClassesPath">getClassesPath()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getClassesInNormalizedAutoloadPath">getClassesInNormalizedAutoloadPath()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getClassesNamespaceEntryPath"><span class="deprecated">getClassesNamespaceEntryPath()</span></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getClassesPath"><span class="deprecated">getClassesPath()</span></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getComposerManifest">getComposerManifest()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getComposerName">getComposerName()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getConfigurationPath">getConfigurationPath()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getDocumentationPath">getDocumentationPath()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getDocumentationPath"><span class="deprecated">getDocumentationPath()</span></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getFlattenedAutoloadConfiguration">getFlattenedAutoloadConfiguration()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getFunctionalTestsClassFiles">getFunctionalTestsClassFiles()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getFunctionalTestsPath">getFunctionalTestsPath()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getManifestPath">getManifestPath()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getMetaPath">getMetaPath()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getNamespace">getNamespace()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getPackageDocumentations">getPackageDocumentations()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getInstalledVersion">getInstalledVersion()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getMetaPath"><span class="deprecated">getMetaPath()</span></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getNamespace"><span class="deprecated">getNamespace()</span></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getNamespaces">getNamespaces()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getPackageDocumentations"><span class="deprecated">getPackageDocumentations()</span></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getPackageKey">getPackageKey()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_getPackageMetaData">getPackageMetaData()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_getPackageMetaData"><span class="deprecated">getPackageMetaData()</span></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getPackagePath">getPackagePath()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_getResourcesPath">getResourcesPath()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_isObjectManagementEnabled">isObjectManagementEnabled()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_isProtected">isProtected()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#_packageRequirementIsComposerPackage">packageRequirementIsComposerPackage()</a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#_normalizeAutoloadPath">normalizeAutoloadPath()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#_setProtected">setProtected()</a></code>
 			</p>
 		</div>
@@ -946,17 +953,9 @@
 		</div>
 
 		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Constants inherited from <a href="class-TYPO3.Flow.Package.Package.html#constants">TYPO3\Flow\Package\Package</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-TYPO3.Flow.Package.Package.html#AUTOLOADER_TYPE_CLASSMAP"><b>AUTOLOADER_TYPE_CLASSMAP</b></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#AUTOLOADER_TYPE_FILES"><b>AUTOLOADER_TYPE_FILES</b></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#AUTOLOADER_TYPE_PSR0"><b>AUTOLOADER_TYPE_PSR0</b></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#AUTOLOADER_TYPE_PSR4"><b>AUTOLOADER_TYPE_PSR4</b></a></code>
-			</p>
-		</div>
-		<div class="panel panel-default">
             <div class="panel-heading"><h3>Constants inherited from <a href="class-TYPO3.Flow.Package.PackageInterface.html#constants">TYPO3\Flow\Package\PackageInterface</a></h3></div>
 			<p class="elementList">
+				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DEFAULT_COMPOSER_TYPE"><b>DEFAULT_COMPOSER_TYPE</b></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DIRECTORY_CLASSES"><b>DIRECTORY_CLASSES</b></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DIRECTORY_CONFIGURATION"><b>DIRECTORY_CONFIGURATION</b></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.PackageInterface.html#DIRECTORY_DOCUMENTATION"><b>DIRECTORY_DOCUMENTATION</b></a></code>, 
@@ -1004,14 +1003,14 @@
 		<div class="panel panel-default">
             <div class="panel-heading"><h3>Properties inherited from <a href="class-TYPO3.Flow.Package.Package.html#properties">TYPO3\Flow\Package\Package</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-TYPO3.Flow.Package.Package.html#$classFiles"><var>$classFiles</var></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#$classesPath"><var>$classesPath</var></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#$composerManifest"><var>$composerManifest</var></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#$manifestPath"><var>$manifestPath</var></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#$autoloadConfiguration"><var>$autoloadConfiguration</var></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#$autoloadTypes"><var>$autoloadTypes</var></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#$composerName"><var>$composerName</var></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#$flattenedAutoloadConfiguration"><var>$flattenedAutoloadConfiguration</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#$namespace"><var>$namespace</var></a></code>, 
+				<code><a href="class-TYPO3.Flow.Package.Package.html#$namespaces"><var>$namespaces</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#$objectManagementEnabled"><var>$objectManagementEnabled</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#$packageKey"><var>$packageKey</var></a></code>, 
-				<code><a href="class-TYPO3.Flow.Package.Package.html#$packageManager"><var>$packageManager</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#$packageMetaData"><var>$packageMetaData</var></a></code>, 
 				<code><a href="class-TYPO3.Flow.Package.Package.html#$packagePath"><var>$packagePath</var></a></code>
 			</p>

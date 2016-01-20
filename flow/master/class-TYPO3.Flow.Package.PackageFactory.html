@@ -802,6 +802,7 @@
 				<li><a href="class-TYPO3.Flow.Package.Package.html">Package</a></li>
 				<li class="active"><a href="class-TYPO3.Flow.Package.PackageFactory.html">PackageFactory</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageManager.html">PackageManager</a></li>
+				<li><a href="class-TYPO3.Flow.Package.PackageOrderResolver.html">PackageOrderResolver</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -848,7 +849,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Package.html">Package</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Package.PackageFactory.html#18-121" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Package/PackageFactory.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Package.PackageFactory.html#19-92" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Package/PackageFactory.php</a>
 		<br>
 	</div>
 
@@ -857,40 +858,6 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="__construct" id="___construct">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageFactory.html#28-34" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Package.PackageManagerInterface.html">TYPO3\Flow\Package\PackageManagerInterface</a></code> <var>$packageManager</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageManager</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="create" id="_create">
 
 			<td class="attributes"><code>
@@ -902,7 +869,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageFactory.html#36-76" title="Go to source code">create</a>( <span>string <var>$packagesBasePath</var></span>, <span>string <var>$packagePath</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$classesPath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$manifestPath</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageFactory.html#24-57" title="Go to source code">create</a>( <span>string <var>$packagesBasePath</var></span>, <span>string <var>$packagePath</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$composerName</var></span>, <span>array <var>$autoloadConfiguration</var> = []</span>, <span>array <var>$packageClassInformation</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns a package instance.</p>
@@ -920,10 +887,12 @@
 						<dd>path to package, relative to base path</dd>
 						<dt><var>$packageKey</var></dt>
 						<dd>key / name of the package</dd>
-						<dt><var>$classesPath</var></dt>
-						<dd>path to the classes directory, relative to the package path</dd>
-						<dt><var>$manifestPath</var></dt>
-						<dd>path to the package's Composer manifest, relative to package path, defaults to same path</dd>
+						<dt><var>$composerName</var></dt>
+						<dd></dd>
+						<dt><var>$autoloadConfiguration</var></dt>
+						<dd>Autoload configuration as defined in composer.json</dd>
+						<dt><var>$packageClassInformation</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -941,52 +910,46 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getPackageKeyFromManifest" id="_getPackageKeyFromManifest">
+		<tr data-order="detectFlowPackageFilePath" id="_detectFlowPackageFilePath">
 
 			<td class="attributes"><code>
-				 public static
-				string
+				 public 
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getPackageKeyFromManifest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Package.PackageFactory.html#78-120" title="Go to source code">getPackageKeyFromManifest</a>( <span>object <var>$manifest</var></span>, <span>string <var>$packagePath</var></span>, <span>string <var>$packagesBasePath</var></span> )</code>
+			<a class="anchor" href="#_detectFlowPackageFilePath">#</a>
+			<code><a href="source-class-TYPO3.Flow.Package.PackageFactory.html#59-91" title="Go to source code">detectFlowPackageFilePath</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$absolutePackagePath</var></span>, <span>array <var>$autoloadDirectives</var> = []</span> )</code>
 
 			<div class="description short">
-				<p>Resolves package key from Composer manifest</p>
+				<p>Detects if the package contains a package file and returns the path and classname.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Resolves package key from Composer manifest</p>
-
-<p>If it is a Flow package the name of the containing directory will be used.</p>
-
-<p>Else if the composer name of the package matches the first part of the lowercased namespace of the package, the mixed
-case version of the composer name / namespace will be used, with backslashes replaced by dots.</p>
-
-<p>Else the composer name will be used with the slash replaced by a dot</p>
+				<p>Detects if the package contains a package file and returns the path and classname.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$manifest</var></dt>
-						<dd></dd>
-						<dt><var>$packagePath</var></dt>
-						<dd></dd>
-						<dt><var>$packagesBasePath</var></dt>
+						<dt><var>$packageKey</var></dt>
+						<dd>The package key</dd>
+						<dt><var>$absolutePackagePath</var></dt>
+						<dd>Absolute path to the package</dd>
+						<dt><var>$autoloadDirectives</var></dt>
 						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string
+						array<br>The path to the package file and classname for this package or an empty array if none was found.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackageManifestException.html">TYPO3\Flow\Package\Exception\InvalidPackageManifestException</a></code>
+						<code><a href="class-TYPO3.Flow.Package.Exception.CorruptPackageException.html">TYPO3\Flow\Package\Exception\CorruptPackageException</a></code><br>
+						<code><a href="class-TYPO3.Flow.Package.Exception.InvalidPackagePathException.html">TYPO3\Flow\Package\Exception\InvalidPackagePathException</a></code>
 					</div>
 
 
@@ -1001,42 +964,6 @@ case version of the composer name / namespace will be used, with backslashes rep
 
 
 
-
-
-
-
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="packageManager" id="$packageManager">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-TYPO3.Flow.Package.PackageManagerInterface.html">TYPO3\Flow\Package\PackageManagerInterface</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Flow.Package.PackageFactory.html#23-26" title="Go to source code"><var>$packageManager</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$packageManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-			</table>
-		</div>
 
 
 
