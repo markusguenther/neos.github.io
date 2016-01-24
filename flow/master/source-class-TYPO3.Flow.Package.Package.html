@@ -2108,7 +2108,7 @@
 </span><span id="357" class="l">            <span class="php-var">$pathifiedNamespace</span> = <span class="php-keyword2">str_replace</span>(<span class="php-quote">'\\'</span>, <span class="php-quote">'/'</span>, <span class="php-var">$firstAutoload</span>[<span class="php-quote">'namespace'</span>]);
 </span><span id="358" class="l">        }
 </span><span id="359" class="l">
-</span><span id="360" class="l">        <span class="php-keyword1">return</span> Files::concatenatePaths(<span class="php-var">$basePath</span> . <span class="php-var">$pathifiedNamespace</span>);
+</span><span id="360" class="l">        <span class="php-keyword1">return</span> Files::concatenatePaths([<span class="php-var">$basePath</span>, <span class="php-var">$pathifiedNamespace</span>]) . <span class="php-quote">'/'</span>;
 </span><span id="361" class="l">    }
 </span><span id="362" class="l">
 </span><span id="363" class="l">    <span class="php-comment">/**
