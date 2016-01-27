@@ -880,7 +880,7 @@ security information like roles oder details of authenticated users.</p>
 				<p>Lets you switch off authorization checks (CSRF token, policies, content security, ...) for the runtime of $callback</p>
 
 <p>Usage:
-$this->securityContext->withoutAuthorizationChecks(function ($accountRepository, $username, $providerName, &amp;$account) { // this will disable the PersistenceQueryRewritingAspect for this one call $account = $accountRepository->findActiveByAccountIdentifierAndAuthenticationProviderName($username, $providerName)
+$this->securityContext->withoutAuthorizationChecks(function () use ($accountRepository, $username, $providerName, &amp;$account) { // this will disable the PersistenceQueryRewritingAspect for this one call $account = $accountRepository->findActiveByAccountIdentifierAndAuthenticationProviderName($username, $providerName)
 });</p>
 
 

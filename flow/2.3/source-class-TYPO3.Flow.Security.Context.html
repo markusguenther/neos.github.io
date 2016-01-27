@@ -1845,7 +1845,7 @@
 </span></span><span id="188" class="l"><span class="php-comment">     * Lets you switch off authorization checks (CSRF token, policies, content security, ...) for the runtime of $callback
 </span></span><span id="189" class="l"><span class="php-comment">     *
 </span></span><span id="190" class="l"><span class="php-comment">     * Usage:
-</span></span><span id="191" class="l"><span class="php-comment">     * $this-&gt;securityContext-&gt;withoutAuthorizationChecks(function ($accountRepository, $username, $providerName, &amp;$account) {
+</span></span><span id="191" class="l"><span class="php-comment">     * $this-&gt;securityContext-&gt;withoutAuthorizationChecks(function () use ($accountRepository, $username, $providerName, &amp;$account) {
 </span></span><span id="192" class="l"><span class="php-comment">     *   // this will disable the PersistenceQueryRewritingAspect for this one call
 </span></span><span id="193" class="l"><span class="php-comment">     *   $account = $accountRepository-&gt;findActiveByAccountIdentifierAndAuthenticationProviderName($username, $providerName)
 </span></span><span id="194" class="l"><span class="php-comment">     * });
