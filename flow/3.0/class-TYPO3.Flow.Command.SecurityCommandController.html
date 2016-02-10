@@ -863,7 +863,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#28-321" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Command/SecurityCommandController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#28-335" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Command/SecurityCommandController.php</a>
 		<br>
 	</div>
 
@@ -953,7 +953,7 @@ RSAWalletService.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importPrivateKeyCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#99-123" title="Go to source code">importPrivateKeyCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#99-137" title="Go to source code">importPrivateKeyCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Import a private key</p>
@@ -965,6 +965,15 @@ RSAWalletService.</p>
 <p>Read a PEM formatted private key from stdin and import it into the
 RSAWalletService. The public key will be automatically extracted and stored
 together with the private key as a key pair.</p>
+
+<p>You can generate the same fingerprint returned from this using these commands:
+ ssh-keygen -yf my-key.pem > my-key.pub ssh-keygen -lf my-key.pub</p>
+
+<p>To create a private key to import using this method, you can use:
+ ssh-keygen -t rsa -f my-key ./flow security:importprivatekey &lt; my-key</p>
+
+<p>Again, the fingerprint can also be generated using:
+ ssh-keygen -lf my-key.pub</p>
 
 
 					<h4>Parameters</h4>
@@ -995,7 +1004,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showEffectivePolicyCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#125-216" title="Go to source code">showEffectivePolicyCommand</a>( <span>string <var>$privilegeType</var></span>, <span>string <var>$roles</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#139-230" title="Go to source code">showEffectivePolicyCommand</a>( <span>string <var>$privilegeType</var></span>, <span>string <var>$roles</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Shows a list of all defined privilege targets and the effective permissions</p>
@@ -1031,7 +1040,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showUnprotectedActionsCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#218-262" title="Go to source code">showUnprotectedActionsCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#232-276" title="Go to source code">showUnprotectedActionsCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Lists all public controller actions not covered by the active security policy</p>
@@ -1060,7 +1069,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showMethodsForPrivilegeTargetCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#264-320" title="Go to source code">showMethodsForPrivilegeTargetCommand</a>( <span>string <var>$privilegeTarget</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#278-334" title="Go to source code">showMethodsForPrivilegeTargetCommand</a>( <span>string <var>$privilegeTarget</var></span> )</code>
 
 			<div class="description short">
 				<p>Shows the methods represented by the given security privilege target</p>
