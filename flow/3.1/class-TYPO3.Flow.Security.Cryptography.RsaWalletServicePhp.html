@@ -857,7 +857,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#16-426" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Cryptography/RsaWalletServicePhp.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#16-432" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Cryptography/RsaWalletServicePhp.php</a>
 		<br>
 	</div>
 
@@ -947,11 +947,11 @@
 			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#78-101" title="Go to source code">generateNewKeypair</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Generates a new keypair and returns a UUID to refer to it</p>
+				<p>Generates a new keypair and returns a fingerprint to refer to it</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Generates a new keypair and returns a UUID to refer to it</p>
+				<p>Generates a new keypair and returns a fingerprint to refer to it</p>
 
 
 					<h4>Parameters</h4>
@@ -962,7 +962,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The RSA public key fingerprint as UUID for reference
+						string<br>The RSA public key fingerprint for reference
 					</div>
 
 					<h4>Throws</h4>
@@ -991,11 +991,11 @@
 			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#103-121" title="Go to source code">registerKeyPairFromPrivateKeyString</a>( <span>string <var>$privateKeyString</var></span>, <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Adds the specified keypair to the local store and returns a UUID to refer to it.</p>
+				<p>Adds the specified keypair to the local store and returns a fingerprint to refer to it.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Adds the specified keypair to the local store and returns a UUID to refer to it.</p>
+				<p>Adds the specified keypair to the local store and returns a fingerprint to refer to it.</p>
 
 
 					<h4>Parameters</h4>
@@ -1008,7 +1008,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The RSA public key fingerprint as UUID for reference
+						string<br>The RSA public key fingerprint for reference
 					</div>
 
 
@@ -1033,13 +1033,13 @@
 			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#123-139" title="Go to source code">registerPublicKeyFromString</a>( <span>string <var>$publicKeyString</var></span> )</code>
 
 			<div class="description short">
-				<p>Adds the specified public key to the wallet and returns a UUID to refer to it.
+				<p>Adds the specified public key to the wallet and returns a fingerprint to refer to it.
 This is helpful if you have not private key and want to use this key only to
 verify incoming data.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Adds the specified public key to the wallet and returns a UUID to refer to it.
+				<p>Adds the specified public key to the wallet and returns a fingerprint to refer to it.
 This is helpful if you have not private key and want to use this key only to
 verify incoming data.</p>
 
@@ -1052,7 +1052,7 @@ verify incoming data.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The RSA public key fingerprint as UUID for reference
+						string<br>The RSA public key fingerprint for reference
 					</div>
 
 
@@ -1074,20 +1074,20 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#141-155" title="Go to source code">getPublicKey</a>( <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#141-155" title="Go to source code">getPublicKey</a>( <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
-				<p>Returns the public key for the given UUID</p>
+				<p>Returns the public key for the given fingerprint</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the public key for the given UUID</p>
+				<p>Returns the public key for the given fingerprint</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID of the stored key</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint of the stored key</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1097,7 +1097,7 @@ verify incoming data.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given UUID identifies no valid key pair
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given fingerprint identifies no valid key pair
 					</div>
 
 
@@ -1118,22 +1118,22 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_encryptWithPublicKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#157-170" title="Go to source code">encryptWithPublicKey</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#157-170" title="Go to source code">encryptWithPublicKey</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
-				<p>Encrypts the given plaintext with the public key identified by the given UUID</p>
+				<p>Encrypts the given plaintext with the public key identified by the given fingerprint</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Encrypts the given plaintext with the public key identified by the given UUID</p>
+				<p>Encrypts the given plaintext with the public key identified by the given fingerprint</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$plaintext</var></dt>
 						<dd>The plaintext to encrypt</dd>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID to identify to correct public key</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint to identify to correct public key</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1160,16 +1160,16 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_decrypt">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#172-196" title="Go to source code">decrypt</a>( <span>string <var>$cipher</var></span>, <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#172-196" title="Go to source code">decrypt</a>( <span>string <var>$cipher</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
-				<p>Decrypts the given cipher with the private key identified by the given UUID
+				<p>Decrypts the given cipher with the private key identified by the given fingerprint
 Note: You should never decrypt a password with this function. Use checkRSAEncryptedPassword()
 to check passwords!</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Decrypts the given cipher with the private key identified by the given UUID
+				<p>Decrypts the given cipher with the private key identified by the given fingerprint
 Note: You should never decrypt a password with this function. Use checkRSAEncryptedPassword()
 to check passwords!</p>
 
@@ -1178,8 +1178,8 @@ to check passwords!</p>
 					<div class="list"><dl>
 						<dt><var>$cipher</var></dt>
 						<dd>cipher text to decrypt</dd>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID to identify the private key (RSA public key fingerprint)</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint to identify the private key (RSA public key fingerprint)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1189,8 +1189,8 @@ to check passwords!</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given UUID identifies no valid keypair<br>
-						<code><a href="class-TYPO3.Flow.Security.Exception.DecryptionNotAllowedException.html">TYPO3\Flow\Security\Exception\DecryptionNotAllowedException</a></code><br>If the given UUID identifies a keypair for encrypted passwords
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given fingerprint identifies no valid keypair<br>
+						<code><a href="class-TYPO3.Flow.Security.Exception.DecryptionNotAllowedException.html">TYPO3\Flow\Security\Exception\DecryptionNotAllowedException</a></code><br>If the given fingerprint identifies a keypair for encrypted passwords
 					</div>
 
 
@@ -1211,22 +1211,22 @@ to check passwords!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sign">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#198-216" title="Go to source code">sign</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#198-216" title="Go to source code">sign</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
-				<p>Signs the given plaintext with the private key identified by the given UUID</p>
+				<p>Signs the given plaintext with the private key identified by the given fingerprint</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Signs the given plaintext with the private key identified by the given UUID</p>
+				<p>Signs the given plaintext with the private key identified by the given fingerprint</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$plaintext</var></dt>
 						<dd>The plaintext to sign</dd>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID to identify the private key (RSA public key fingerprint)</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint to identify the private key (RSA public key fingerprint)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1236,7 +1236,7 @@ to check passwords!</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given UUID identifies no valid keypair
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given fingerprint identifies no valid keypair
 					</div>
 
 
@@ -1257,16 +1257,16 @@ to check passwords!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifySignature">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#218-237" title="Go to source code">verifySignature</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$signature</var></span>, <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#218-237" title="Go to source code">verifySignature</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$signature</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether the given signature is valid for the given plaintext
-with the public key identified by the given UUID</p>
+with the public key identified by the given fingerprint</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Checks whether the given signature is valid for the given plaintext
-with the public key identified by the given UUID</p>
+with the public key identified by the given fingerprint</p>
 
 
 					<h4>Parameters</h4>
@@ -1275,8 +1275,8 @@ with the public key identified by the given UUID</p>
 						<dd>The plaintext to sign</dd>
 						<dt><var>$signature</var></dt>
 						<dd>The signature that should be verified</dd>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID to identify the public key (RSA public key fingerprint)</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint to identify the public key (RSA public key fingerprint)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1307,7 +1307,7 @@ with the public key identified by the given UUID</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_checkRSAEncryptedPassword">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#239-259" title="Go to source code">checkRSAEncryptedPassword</a>( <span>string <var>$encryptedPassword</var></span>, <span>string <var>$passwordHash</var></span>, <span>string <var>$salt</var></span>, <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#239-259" title="Go to source code">checkRSAEncryptedPassword</a>( <span>string <var>$encryptedPassword</var></span>, <span>string <var>$passwordHash</var></span>, <span>string <var>$salt</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given encrypted password is correct by
@@ -1327,8 +1327,8 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 						<dd>The md5 hashed password string (md5(md5(password) . salt))</dd>
 						<dt><var>$salt</var></dt>
 						<dd>The salt used in the md5 password hash</dd>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID to identify the private key (RSA public key fingerprint)</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint to identify the private key (RSA public key fingerprint)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1338,7 +1338,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given UUID identifies no valid keypair
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given fingerprint identifies no valid keypair
 					</div>
 
 
@@ -1359,26 +1359,26 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_destroyKeypair">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#261-276" title="Go to source code">destroyKeypair</a>( <span>string <var>$uuid</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#261-276" title="Go to source code">destroyKeypair</a>( <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
-				<p>Destroys the keypair identified by the given UUID</p>
+				<p>Destroys the keypair identified by the given fingerprint</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Destroys the keypair identified by the given UUID</p>
+				<p>Destroys the keypair identified by the given fingerprint</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$uuid</var></dt>
-						<dd>The UUID</dd>
+						<dt><var>$fingerprint</var></dt>
+						<dd>The fingerprint</dd>
 					</dl></div>
 
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given UUID identifies no valid key pair
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidKeyPairIdException.html">TYPO3\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given fingerprint identifies no valid key pair
 					</div>
 
 
@@ -1631,7 +1631,7 @@ consistent key access.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFingerprintByPublicKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#384-404" title="Go to source code">getFingerprintByPublicKey</a>( <span>string <var>$publicKeyString</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#384-410" title="Go to source code">getFingerprintByPublicKey</a>( <span>string <var>$publicKeyString</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate an OpenSSH fingerprint for a RSA public key</p>
@@ -1643,6 +1643,10 @@ consistent key access.</p>
 <p>See <a href="http://tools.ietf.org/html/rfc4253#page-15">http://tools.ietf.org/html/rfc4253#page-15</a> for reference of OpenSSH
 "ssh-rsa" key format. The fingerprint is obtained by applying an MD5
 hash on the raw public key bytes.</p>
+
+<p>If you have a PEM encoded private key, you can generate the same fingerprint
+using this:
+ ssh-keygen -yf my-key.pem > my-key.pub ssh-keygen -lf my-key.pub</p>
 
 
 					<h4>Parameters</h4>
@@ -1673,7 +1677,7 @@ hash on the raw public key bytes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sshConvertMpint">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#406-425" title="Go to source code">sshConvertMpint</a>( <span>string <var>$bytes</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServicePhp.html#412-431" title="Go to source code">sshConvertMpint</a>( <span>string <var>$bytes</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a binary representation of a multiple precision integer

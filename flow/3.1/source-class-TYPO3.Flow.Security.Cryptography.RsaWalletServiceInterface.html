@@ -1767,83 +1767,83 @@
 </span><span id="18" class="l"><span class="php-keyword1">interface</span> RsaWalletServiceInterface
 </span><span id="19" class="l">{
 </span><span id="20" class="l">    <span class="php-comment">/**
-</span></span><span id="21" class="l"><span class="php-comment">     * Generates a new keypair and returns a UUID to refer to it
+</span></span><span id="21" class="l"><span class="php-comment">     * Generates a new keypair and returns a fingerprint to refer to it
 </span></span><span id="22" class="l"><span class="php-comment">     *
 </span></span><span id="23" class="l"><span class="php-comment">     * @param boolean $usedForPasswords TRUE if this keypair should be used to encrypt passwords (then decryption won't be allowed!).
-</span></span><span id="24" class="l"><span class="php-comment">     * @return string An UUID that identifies the generated keypair
+</span></span><span id="24" class="l"><span class="php-comment">     * @return string An fingerprint that identifies the generated keypair
 </span></span><span id="25" class="l"><span class="php-comment">     */</span>
 </span><span id="26" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> generateNewKeypair(<span class="php-var">$usedForPasswords</span> = <span class="php-keyword1">false</span>);
 </span><span id="27" class="l">
 </span><span id="28" class="l">    <span class="php-comment">/**
-</span></span><span id="29" class="l"><span class="php-comment">     * Adds the specified keypair to the local store and returns a UUID to refer to it.
+</span></span><span id="29" class="l"><span class="php-comment">     * Adds the specified keypair to the local store and returns a fingerprint to refer to it.
 </span></span><span id="30" class="l"><span class="php-comment">     *
 </span></span><span id="31" class="l"><span class="php-comment">     * @param string $privateKeyString The private key in its string representation
 </span></span><span id="32" class="l"><span class="php-comment">     * @param boolean $usedForPasswords TRUE if this keypair should be used to encrypt passwords (then decryption won't be allowed!).
-</span></span><span id="33" class="l"><span class="php-comment">     * @return string The UUID used for storing
+</span></span><span id="33" class="l"><span class="php-comment">     * @return string The fingerprint used for storing
 </span></span><span id="34" class="l"><span class="php-comment">     */</span>
 </span><span id="35" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> registerKeyPairFromPrivateKeyString(<span class="php-var">$privateKeyString</span>, <span class="php-var">$usedForPasswords</span> = <span class="php-keyword1">false</span>);
 </span><span id="36" class="l">
 </span><span id="37" class="l">    <span class="php-comment">/**
-</span></span><span id="38" class="l"><span class="php-comment">     * Adds the specified public key to the wallet and returns a UUID to refer to it.
+</span></span><span id="38" class="l"><span class="php-comment">     * Adds the specified public key to the wallet and returns a fingerprint to refer to it.
 </span></span><span id="39" class="l"><span class="php-comment">     * This is helpful if you have not private key and want to use this key only to
 </span></span><span id="40" class="l"><span class="php-comment">     * verify incoming data.
 </span></span><span id="41" class="l"><span class="php-comment">     *
 </span></span><span id="42" class="l"><span class="php-comment">     * @param string $publicKeyString The public key in its string representation
-</span></span><span id="43" class="l"><span class="php-comment">     * @return string The UUID used for storing
+</span></span><span id="43" class="l"><span class="php-comment">     * @return string The fingerprint used for storing
 </span></span><span id="44" class="l"><span class="php-comment">     */</span>
 </span><span id="45" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> registerPublicKeyFromString(<span class="php-var">$publicKeyString</span>);
 </span><span id="46" class="l">
 </span><span id="47" class="l">    <span class="php-comment">/**
-</span></span><span id="48" class="l"><span class="php-comment">     * Returns the public key for the given UUID
+</span></span><span id="48" class="l"><span class="php-comment">     * Returns the public key for the given fingerprint
 </span></span><span id="49" class="l"><span class="php-comment">     *
-</span></span><span id="50" class="l"><span class="php-comment">     * @param string $uuid The UUID
+</span></span><span id="50" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint
 </span></span><span id="51" class="l"><span class="php-comment">     * @return \TYPO3\Flow\Security\Cryptography\OpenSslRsaKey The public key
-</span></span><span id="52" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given UUID identifies no valid key pair
+</span></span><span id="52" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given fingerprint identifies no valid key pair
 </span></span><span id="53" class="l"><span class="php-comment">     */</span>
-</span><span id="54" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getPublicKey(<span class="php-var">$uuid</span>);
+</span><span id="54" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getPublicKey(<span class="php-var">$fingerprint</span>);
 </span><span id="55" class="l">
 </span><span id="56" class="l">    <span class="php-comment">/**
-</span></span><span id="57" class="l"><span class="php-comment">     * Decrypts the given cypher with the private key identified by the given UUID
+</span></span><span id="57" class="l"><span class="php-comment">     * Decrypts the given cypher with the private key identified by the given fingerprint
 </span></span><span id="58" class="l"><span class="php-comment">     * Note: You should never decrypt a password with this function. Use checkRSAEncryptedPassword()
 </span></span><span id="59" class="l"><span class="php-comment">     * to check passwords!
 </span></span><span id="60" class="l"><span class="php-comment">     *
 </span></span><span id="61" class="l"><span class="php-comment">     * @param string $cypher Cypher text to decrypt
-</span></span><span id="62" class="l"><span class="php-comment">     * @param string $uuid The uuid to identify to correct private key
+</span></span><span id="62" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint to identify to correct private key
 </span></span><span id="63" class="l"><span class="php-comment">     * @return string The decrypted text
-</span></span><span id="64" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given UUID identifies no valid keypair
-</span></span><span id="65" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\DecryptionNotAllowedException If the given UUID identifies a keypair for encrypted passwords
+</span></span><span id="64" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given fingerprint identifies no valid keypair
+</span></span><span id="65" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\DecryptionNotAllowedException If the given fingerprint identifies a keypair for encrypted passwords
 </span></span><span id="66" class="l"><span class="php-comment">     */</span>
-</span><span id="67" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> decrypt(<span class="php-var">$cypher</span>, <span class="php-var">$uuid</span>);
+</span><span id="67" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> decrypt(<span class="php-var">$cypher</span>, <span class="php-var">$fingerprint</span>);
 </span><span id="68" class="l">
 </span><span id="69" class="l">    <span class="php-comment">/**
-</span></span><span id="70" class="l"><span class="php-comment">     * Signs the given plaintext with the private key identified by the given UUID
+</span></span><span id="70" class="l"><span class="php-comment">     * Signs the given plaintext with the private key identified by the given fingerprint
 </span></span><span id="71" class="l"><span class="php-comment">     *
 </span></span><span id="72" class="l"><span class="php-comment">     * @param string $plaintext The plaintext to sign
-</span></span><span id="73" class="l"><span class="php-comment">     * @param string $uuid The uuid to identify to correct private key
+</span></span><span id="73" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint to identify to correct private key
 </span></span><span id="74" class="l"><span class="php-comment">     * @return string The signature of the given plaintext
-</span></span><span id="75" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given UUID identifies no valid keypair
+</span></span><span id="75" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given fingerprint identifies no valid keypair
 </span></span><span id="76" class="l"><span class="php-comment">     */</span>
-</span><span id="77" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> sign(<span class="php-var">$plaintext</span>, <span class="php-var">$uuid</span>);
+</span><span id="77" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> sign(<span class="php-var">$plaintext</span>, <span class="php-var">$fingerprint</span>);
 </span><span id="78" class="l">
 </span><span id="79" class="l">    <span class="php-comment">/**
 </span></span><span id="80" class="l"><span class="php-comment">     * Checks whether the given signature is valid for the given plaintext
-</span></span><span id="81" class="l"><span class="php-comment">     * with the public key identified by the given UUID
+</span></span><span id="81" class="l"><span class="php-comment">     * with the public key identified by the given fingerprint
 </span></span><span id="82" class="l"><span class="php-comment">     *
 </span></span><span id="83" class="l"><span class="php-comment">     * @param string $plaintext The plaintext to sign
 </span></span><span id="84" class="l"><span class="php-comment">     * @param string $signature The signature that should be verified
-</span></span><span id="85" class="l"><span class="php-comment">     * @param string $uuid The uuid to identify to correct public key
+</span></span><span id="85" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint to identify to correct public key
 </span></span><span id="86" class="l"><span class="php-comment">     * @return boolean TRUE if the signature is correct for the given plaintext and public key
 </span></span><span id="87" class="l"><span class="php-comment">     */</span>
-</span><span id="88" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> verifySignature(<span class="php-var">$plaintext</span>, <span class="php-var">$signature</span>, <span class="php-var">$uuid</span>);
+</span><span id="88" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> verifySignature(<span class="php-var">$plaintext</span>, <span class="php-var">$signature</span>, <span class="php-var">$fingerprint</span>);
 </span><span id="89" class="l">
 </span><span id="90" class="l">    <span class="php-comment">/**
-</span></span><span id="91" class="l"><span class="php-comment">     * Encrypts the given plaintext with the public key identified by the given UUID
+</span></span><span id="91" class="l"><span class="php-comment">     * Encrypts the given plaintext with the public key identified by the given fingerprint
 </span></span><span id="92" class="l"><span class="php-comment">     *
 </span></span><span id="93" class="l"><span class="php-comment">     * @param string $plaintext The plaintext to encrypt
-</span></span><span id="94" class="l"><span class="php-comment">     * @param string $uuid The uuid to identify to correct public key
+</span></span><span id="94" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint to identify to correct public key
 </span></span><span id="95" class="l"><span class="php-comment">     * @return string The ciphertext
 </span></span><span id="96" class="l"><span class="php-comment">     */</span>
-</span><span id="97" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> encryptWithPublicKey(<span class="php-var">$plaintext</span>, <span class="php-var">$uuid</span>);
+</span><span id="97" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> encryptWithPublicKey(<span class="php-var">$plaintext</span>, <span class="php-var">$fingerprint</span>);
 </span><span id="98" class="l">
 </span><span id="99" class="l">    <span class="php-comment">/**
 </span></span><span id="100" class="l"><span class="php-comment">     * Checks if the given encrypted password is correct by
@@ -1852,19 +1852,19 @@
 </span></span><span id="103" class="l"><span class="php-comment">     * @param string $encryptedPassword The received, RSA encrypted password to check
 </span></span><span id="104" class="l"><span class="php-comment">     * @param string $passwordHash The md5 hashed password string (md5(md5(password) . salt))
 </span></span><span id="105" class="l"><span class="php-comment">     * @param string $salt The salt used in the md5 password hash
-</span></span><span id="106" class="l"><span class="php-comment">     * @param string $uuid The uuid to identify to correct private key
+</span></span><span id="106" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint to identify to correct private key
 </span></span><span id="107" class="l"><span class="php-comment">     * @return boolean TRUE if the password is correct
 </span></span><span id="108" class="l"><span class="php-comment">     */</span>
-</span><span id="109" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> checkRSAEncryptedPassword(<span class="php-var">$encryptedPassword</span>, <span class="php-var">$passwordHash</span>, <span class="php-var">$salt</span>, <span class="php-var">$uuid</span>);
+</span><span id="109" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> checkRSAEncryptedPassword(<span class="php-var">$encryptedPassword</span>, <span class="php-var">$passwordHash</span>, <span class="php-var">$salt</span>, <span class="php-var">$fingerprint</span>);
 </span><span id="110" class="l">
 </span><span id="111" class="l">    <span class="php-comment">/**
-</span></span><span id="112" class="l"><span class="php-comment">     * Destroys the keypair identified by the given UUID
+</span></span><span id="112" class="l"><span class="php-comment">     * Destroys the keypair identified by the given fingerprint
 </span></span><span id="113" class="l"><span class="php-comment">     *
-</span></span><span id="114" class="l"><span class="php-comment">     * @param string $uuid The UUID
+</span></span><span id="114" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint
 </span></span><span id="115" class="l"><span class="php-comment">     * @return void
-</span></span><span id="116" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given UUID identifies no valid key pair
+</span></span><span id="116" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Security\Exception\InvalidKeyPairIdException If the given fingerprint identifies no valid key pair
 </span></span><span id="117" class="l"><span class="php-comment">     */</span>
-</span><span id="118" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> destroyKeypair(<span class="php-var">$uuid</span>);
+</span><span id="118" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> destroyKeypair(<span class="php-var">$fingerprint</span>);
 </span><span id="119" class="l">}
 </span><span id="120" class="l"></span></code></pre>
 </div>
