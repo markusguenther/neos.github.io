@@ -251,6 +251,16 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-TYPO3.Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Eel.FlowQueryOperations.html">
+							FlowQueryOperations						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-TYPO3.Neos.EventLog.html">
 							EventLog<span></span>
 						</a>
@@ -808,6 +818,8 @@
 				<li><a href="class-TYPO3.Neos.Domain.Service.TypoScriptService.html">TYPO3\Neos\Domain\Service\TypoScriptService</a></li>
 				<li><a href="class-TYPO3.Neos.Domain.Service.UserInterfaceModeService.html">TYPO3\Neos\Domain\Service\UserInterfaceModeService</a></li>
 				<li><a href="class-TYPO3.Neos.Domain.Service.UserService.html">TYPO3\Neos\Domain\Service\UserService</a></li>
+				<li><a href="class-TYPO3.Neos.Eel.FlowQueryOperations.ParentsOperation.html">TYPO3\Neos\Eel\FlowQueryOperations\ParentsOperation</a></li>
+				<li><a href="class-TYPO3.Neos.Eel.FlowQueryOperations.ParentsUntilOperation.html">TYPO3\Neos\Eel\FlowQueryOperations\ParentsUntilOperation</a></li>
 				<li><a href="class-TYPO3.Neos.EventLog.Domain.Model.Event.html">TYPO3\Neos\EventLog\Domain\Model\Event</a></li>
 				<li><a href="class-TYPO3.Neos.EventLog.Domain.Model.EventsOnDate.html">TYPO3\Neos\EventLog\Domain\Model\EventsOnDate</a></li>
 				<li><a href="class-TYPO3.Neos.EventLog.Domain.Model.NodeEvent.html">TYPO3\Neos\EventLog\Domain\Model\NodeEvent</a></li>
@@ -1401,7 +1413,7 @@
 </span><span id="257" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> removeProperty(<span class="php-var">$propertyName</span>)
 </span><span id="258" class="l">    {
 </span><span id="259" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_object</span>(<span class="php-var">$this</span>-&gt;contentObjectProxy)) {
-</span><span id="260" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;properties[<span class="php-var">$propertyName</span>])) {
+</span><span id="260" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$propertyName</span>, <span class="php-var">$this</span>-&gt;properties)) {
 </span><span id="261" class="l">                <span class="php-keyword1">unset</span>(<span class="php-var">$this</span>-&gt;properties[<span class="php-var">$propertyName</span>]);
 </span><span id="262" class="l">                <span class="php-var">$this</span>-&gt;addOrUpdate();
 </span><span id="263" class="l">            } <span class="php-keyword1">else</span> {
@@ -1706,6 +1718,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?2e3fc480349b50580c1c0363dc4d1df4ac85efc7"></script>
+<script src="elementlist.js?6bb4a98ad4d78ba08c80023dfc685bcb49c0d707"></script>
 </body>
 </html>

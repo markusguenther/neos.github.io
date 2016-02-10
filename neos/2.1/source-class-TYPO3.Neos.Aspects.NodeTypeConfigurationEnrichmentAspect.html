@@ -251,6 +251,16 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-TYPO3.Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Eel.FlowQueryOperations.html">
+							FlowQueryOperations						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-TYPO3.Neos.EventLog.html">
 							EventLog<span></span>
 						</a>
@@ -808,6 +818,8 @@
 				<li><a href="class-TYPO3.Neos.Domain.Service.TypoScriptService.html">TYPO3\Neos\Domain\Service\TypoScriptService</a></li>
 				<li><a href="class-TYPO3.Neos.Domain.Service.UserInterfaceModeService.html">TYPO3\Neos\Domain\Service\UserInterfaceModeService</a></li>
 				<li><a href="class-TYPO3.Neos.Domain.Service.UserService.html">TYPO3\Neos\Domain\Service\UserService</a></li>
+				<li><a href="class-TYPO3.Neos.Eel.FlowQueryOperations.ParentsOperation.html">TYPO3\Neos\Eel\FlowQueryOperations\ParentsOperation</a></li>
+				<li><a href="class-TYPO3.Neos.Eel.FlowQueryOperations.ParentsUntilOperation.html">TYPO3\Neos\Eel\FlowQueryOperations\ParentsUntilOperation</a></li>
 				<li><a href="class-TYPO3.Neos.EventLog.Domain.Model.Event.html">TYPO3\Neos\EventLog\Domain\Model\Event</a></li>
 				<li><a href="class-TYPO3.Neos.EventLog.Domain.Model.EventsOnDate.html">TYPO3\Neos\EventLog\Domain\Model\EventsOnDate</a></li>
 				<li><a href="class-TYPO3.Neos.EventLog.Domain.Model.NodeEvent.html">TYPO3\Neos\EventLog\Domain\Model\NodeEvent</a></li>
@@ -1221,7 +1233,7 @@
 </span></span><span id="77" class="l"><span class="php-comment">     * @param array $configuration
 </span></span><span id="78" class="l"><span class="php-comment">     * @return void
 </span></span><span id="79" class="l"><span class="php-comment">     */</span>
-</span><span id="80" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> addLabelsToNodeTypeConfiguration(<span class="php-var">$nodeTypeName</span>, &amp;<span class="php-var">$configuration</span>)
+</span><span id="80" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> addLabelsToNodeTypeConfiguration(<span class="php-var">$nodeTypeName</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$configuration</span>)
 </span><span id="81" class="l">    {
 </span><span id="82" class="l">        <span class="php-var">$nodeTypeLabelIdPrefix</span> = <span class="php-var">$this</span>-&gt;generateNodeTypeLabelIdPrefix(<span class="php-var">$nodeTypeName</span>);
 </span><span id="83" class="l">
@@ -1240,7 +1252,7 @@
 </span></span><span id="96" class="l"><span class="php-comment">     * @throws \TYPO3\Neos\Exception
 </span></span><span id="97" class="l"><span class="php-comment">     * @return void
 </span></span><span id="98" class="l"><span class="php-comment">     */</span>
-</span><span id="99" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> addEditorDefaultsToNodeTypeConfiguration(<span class="php-var">$nodeTypeName</span>, &amp;<span class="php-var">$configuration</span>)
+</span><span id="99" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> addEditorDefaultsToNodeTypeConfiguration(<span class="php-var">$nodeTypeName</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$configuration</span>)
 </span><span id="100" class="l">    {
 </span><span id="101" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'properties'</span>]) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'properties'</span>])) {
 </span><span id="102" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$configuration</span>[<span class="php-quote">'properties'</span>] <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; &amp;<span class="php-var">$propertyConfiguration</span>) {
@@ -1292,7 +1304,7 @@
 </span></span><span id="148" class="l"><span class="php-comment">     * @param array $configuration
 </span></span><span id="149" class="l"><span class="php-comment">     * @return void
 </span></span><span id="150" class="l"><span class="php-comment">     */</span>
-</span><span id="151" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> setPropertyLabels(<span class="php-var">$nodeTypeLabelIdPrefix</span>, &amp;<span class="php-var">$configuration</span>)
+</span><span id="151" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> setPropertyLabels(<span class="php-var">$nodeTypeLabelIdPrefix</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$configuration</span>)
 </span><span id="152" class="l">    {
 </span><span id="153" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$configuration</span>[<span class="php-quote">'properties'</span>] <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; &amp;<span class="php-var">$propertyConfiguration</span>) {
 </span><span id="154" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'ui'</span>])) {
@@ -1319,7 +1331,7 @@
 </span></span><span id="175" class="l"><span class="php-comment">     * @param array $propertyConfiguration
 </span></span><span id="176" class="l"><span class="php-comment">     * @return void
 </span></span><span id="177" class="l"><span class="php-comment">     */</span>
-</span><span id="178" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> applyInspectorEditorLabels(<span class="php-var">$nodeTypeLabelIdPrefix</span>, <span class="php-var">$propertyName</span>, &amp;<span class="php-var">$propertyConfiguration</span>)
+</span><span id="178" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> applyInspectorEditorLabels(<span class="php-var">$nodeTypeLabelIdPrefix</span>, <span class="php-var">$propertyName</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$propertyConfiguration</span>)
 </span><span id="179" class="l">    {
 </span><span id="180" class="l">        <span class="php-var">$editorName</span> = <span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'ui'</span>][<span class="php-quote">'inspector'</span>][<span class="php-quote">'editor'</span>];
 </span><span id="181" class="l">
@@ -1356,7 +1368,7 @@
 </span></span><span id="212" class="l"><span class="php-comment">     * @param array $configuration
 </span></span><span id="213" class="l"><span class="php-comment">     * @return void
 </span></span><span id="214" class="l"><span class="php-comment">     */</span>
-</span><span id="215" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> setGlobalUiElementLabels(<span class="php-var">$nodeTypeLabelIdPrefix</span>, &amp;<span class="php-var">$configuration</span>)
+</span><span id="215" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> setGlobalUiElementLabels(<span class="php-var">$nodeTypeLabelIdPrefix</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$configuration</span>)
 </span><span id="216" class="l">    {
 </span><span id="217" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;shouldFetchTranslation(<span class="php-var">$configuration</span>[<span class="php-quote">'ui'</span>])) {
 </span><span id="218" class="l">            <span class="php-var">$configuration</span>[<span class="php-quote">'ui'</span>][<span class="php-quote">'label'</span>] = <span class="php-var">$this</span>-&gt;getInspectorElementTranslationId(<span class="php-var">$nodeTypeLabelIdPrefix</span>, <span class="php-quote">'ui'</span>, <span class="php-quote">'label'</span>);
@@ -1366,7 +1378,7 @@
 </span><span id="222" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$inspectorConfiguration</span>)) {
 </span><span id="223" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$inspectorConfiguration</span> <span class="php-keyword1">as</span> <span class="php-var">$elementTypeName</span> =&gt; <span class="php-var">$elementTypeItems</span>) {
 </span><span id="224" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$elementTypeItems</span> <span class="php-keyword1">as</span> <span class="php-var">$elementName</span> =&gt; <span class="php-var">$elementConfiguration</span>) {
-</span><span id="225" class="l">                    <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;shouldFetchTranslation(<span class="php-var">$elementConfiguration</span>)) {
+</span><span id="225" class="l">                    <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$elementConfiguration</span>) || !<span class="php-var">$this</span>-&gt;shouldFetchTranslation(<span class="php-var">$elementConfiguration</span>)) {
 </span><span id="226" class="l">                        <span class="php-keyword1">continue</span>;
 </span><span id="227" class="l">                    }
 </span><span id="228" class="l">
@@ -1384,7 +1396,7 @@
 </span></span><span id="240" class="l"><span class="php-comment">     * @param string $fieldName Name of the possibly existing subfield
 </span></span><span id="241" class="l"><span class="php-comment">     * @return boolean
 </span></span><span id="242" class="l"><span class="php-comment">     */</span>
-</span><span id="243" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> shouldFetchTranslation(<span class="php-var">$parentConfiguration</span>, <span class="php-var">$fieldName</span> = <span class="php-quote">'label'</span>)
+</span><span id="243" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> shouldFetchTranslation(<span class="php-keyword1">array</span> <span class="php-var">$parentConfiguration</span>, <span class="php-var">$fieldName</span> = <span class="php-quote">'label'</span>)
 </span><span id="244" class="l">    {
 </span><span id="245" class="l">        <span class="php-var">$fieldValue</span> = <span class="php-keyword2">array_key_exists</span>(<span class="php-var">$fieldName</span>, <span class="php-var">$parentConfiguration</span>) ? <span class="php-var">$parentConfiguration</span>[<span class="php-var">$fieldName</span>] : <span class="php-quote">''</span>;
 </span><span id="246" class="l">
@@ -1589,6 +1601,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?2e3fc480349b50580c1c0363dc4d1df4ac85efc7"></script>
+<script src="elementlist.js?6bb4a98ad4d78ba08c80023dfc685bcb49c0d707"></script>
 </body>
 </html>
