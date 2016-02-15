@@ -737,7 +737,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Neos.html">Neos</a>\<a href="namespace-TYPO3.Neos.Controller.html">Controller</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.LoginController.html#25-174" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/LoginController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.LoginController.html#26-221" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/LoginController.php</a>
 		<br>
 	</div>
 
@@ -757,7 +757,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeIndexAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#70-81" title="Go to source code">initializeIndexAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#84-95" title="Go to source code">initializeIndexAction</a>( )</code>
 
 			<div class="description short">
 				
@@ -786,7 +786,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#83-105" title="Go to source code">indexAction</a>( <span>string <var>$username</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$unauthorized</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#97-119" title="Go to source code">indexAction</a>( <span>string <var>$username</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$unauthorized</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Default action, displays the login screen</p>
@@ -811,6 +811,40 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="tokenLoginAction" id="_tokenLoginAction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_tokenLoginAction">#</a>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#121-140" title="Go to source code">tokenLoginAction</a>( <span>string <var>$token</var></span> )</code>
+
+			<div class="description short">
+				<p>Logs a user in if a session identifier is available under the given token in the token cache.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Logs a user in if a session identifier is available under the given token in the token cache.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$token</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="onAuthenticationFailure" id="_onAuthenticationFailure">
 
 			<td class="attributes"><code>
@@ -822,7 +856,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onAuthenticationFailure">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#107-116" title="Go to source code">onAuthenticationFailure</a>( <span>TYPO3\Flow\Security\Exception\AuthenticationRequiredException <var>$exception</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#142-151" title="Go to source code">onAuthenticationFailure</a>( <span>TYPO3\Flow\Security\Exception\AuthenticationRequiredException <var>$exception</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Is called if authentication failed.</p>
@@ -848,7 +882,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 		<tr data-order="onAuthenticationSuccess" id="_onAuthenticationSuccess">
 
 			<td class="attributes"><code>
-				 public 
+				 protected 
 				
 				
 				</code>
@@ -856,7 +890,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onAuthenticationSuccess">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#118-139" title="Go to source code">onAuthenticationSuccess</a>( <span>TYPO3\Flow\Mvc\ActionRequest <var>$originalRequest</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#153-174" title="Go to source code">onAuthenticationSuccess</a>( <span>TYPO3\Flow\Mvc\ActionRequest <var>$originalRequest</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Is called if authentication was successful.</p>
@@ -890,7 +924,7 @@ TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logoutAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#141-163" title="Go to source code">logoutAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#176-198" title="Go to source code">logoutAction</a>( )</code>
 
 			<div class="description short">
 				<p>Logs out a - possibly - currently logged in account.
@@ -923,7 +957,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getErrorFlashMessage">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#165-173" title="Go to source code">getErrorFlashMessage</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#200-208" title="Go to source code">getErrorFlashMessage</a>( )</code>
 
 			<div class="description short">
 				<p>Disable the default error flash message</p>
@@ -938,6 +972,40 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 					<div class="list">
 						boolean
 					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="replaceSessionCookie" id="_replaceSessionCookie">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_replaceSessionCookie">#</a>
+			<code><a href="source-class-TYPO3.Neos.Controller.LoginController.html#210-220" title="Go to source code">replaceSessionCookie</a>( <span>string <var>$sessionIdentifier</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the session cookie to the given identifier, overriding an existing cookie.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the session cookie to the given identifier, overriding an existing cookie.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$sessionIdentifier</var></dt>
+						<dd></dd>
+					</dl></div>
+
 
 
 
@@ -968,7 +1036,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#30-34" title="Go to source code"><var>$session</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#32-36" title="Go to source code"><var>$session</var></a>
 
 				<div class="description short">
 					
@@ -996,7 +1064,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#36-40" title="Go to source code"><var>$backendRedirectionService</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#38-42" title="Go to source code"><var>$backendRedirectionService</var></a>
 
 				<div class="description short">
 					
@@ -1024,7 +1092,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#42-46" title="Go to source code"><var>$domainRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#44-48" title="Go to source code"><var>$domainRepository</var></a>
 
 				<div class="description short">
 					
@@ -1052,7 +1120,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#48-52" title="Go to source code"><var>$siteRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#50-54" title="Go to source code"><var>$siteRepository</var></a>
 
 				<div class="description short">
 					
@@ -1073,6 +1141,63 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 				</div>
 			</td>
 		</tr>
+		<tr data-order="loginTokenCache" id="$loginTokenCache">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Cache\Frontend\StringFrontend
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#56-60" title="Go to source code"><var>$loginTokenCache</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$loginTokenCache" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="sessionName" id="$sessionName">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#62-66" title="Go to source code"><var>$sessionName</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\injectconfiguration(package="typo3.flow",</h4>
+						<div class="list">
+								path="session.name")<br>
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$sessionName" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="viewFormatToObjectNameMap" id="$viewFormatToObjectNameMap">
 			<td class="attributes"><code>
 				protected  
@@ -1080,7 +1205,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#54-60" title="Go to source code"><var>$viewFormatToObjectNameMap</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#68-74" title="Go to source code"><var>$viewFormatToObjectNameMap</var></a>
 
 				<div class="description short">
 					
@@ -1108,7 +1233,7 @@ at first, before the actual logout takes place, and the session gets destroyed.<
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#62-68" title="Go to source code"><var>$supportedMediaTypes</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.LoginController.html#76-82" title="Go to source code"><var>$supportedMediaTypes</var></a>
 
 				<div class="description short">
 					

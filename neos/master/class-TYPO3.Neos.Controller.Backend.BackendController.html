@@ -741,7 +741,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#17-61" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Backend/BackendController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#18-103" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Backend/BackendController.php</a>
 		<br>
 	</div>
 
@@ -761,7 +761,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#36-48" title="Go to source code">indexAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#50-62" title="Go to source code">indexAction</a>( )</code>
 
 			<div class="description short">
 				<p>Default action of the backend controller.</p>
@@ -771,6 +771,40 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				<p>Default action of the backend controller.</p>
 
 
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="switchSiteAction" id="_switchSiteAction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_switchSiteAction">#</a>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#64-89" title="Go to source code">switchSiteAction</a>( <span>string <var>$hostname</var></span> )</code>
+
+			<div class="description short">
+				<p>Redirects to the Neos backend on the given hostname, passing a one-time login token</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Redirects to the Neos backend on the given hostname, passing a one-time login token</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$hostname</var></dt>
+						<dd></dd>
+					</dl></div>
 
 
 
@@ -790,7 +824,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_xliffAsJsonAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#50-60" title="Go to source code">xliffAsJsonAction</a>( <span>string <var>$locale</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#91-102" title="Go to source code">xliffAsJsonAction</a>( <span>string <var>$locale</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the cached json array with the xliff labels</p>
@@ -840,7 +874,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#24-28" title="Go to source code"><var>$backendRedirectionService</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#26-30" title="Go to source code"><var>$backendRedirectionService</var></a>
 
 				<div class="description short">
 					
@@ -868,7 +902,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#30-34" title="Go to source code"><var>$xliffService</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#32-36" title="Go to source code"><var>$xliffService</var></a>
 
 				<div class="description short">
 					
@@ -885,6 +919,62 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			<td class="value">
 				<div>
 					<a href="#$xliffService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="loginTokenCache" id="$loginTokenCache">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Cache\Frontend\StringFrontend
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#38-42" title="Go to source code"><var>$loginTokenCache</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$loginTokenCache" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="currentSession" id="$currentSession">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Session\SessionInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Backend.BackendController.html#44-48" title="Go to source code"><var>$currentSession</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$currentSession" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
