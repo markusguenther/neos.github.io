@@ -1823,7 +1823,7 @@
 </span><span id="74" class="l">            <span class="php-var">$this</span>-&gt;quit(<span class="php-num">1</span>);
 </span><span id="75" class="l">        }
 </span><span id="76" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$packageType</span>, <span class="php-num">0</span>, <span class="php-num">11</span>) !== <span class="php-quote">'typo3-flow-'</span>) {
-</span><span id="77" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'The package must be a Flow package, but &quot;%s&quot; is not a valid Flow package type.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$packageKey</span>));
+</span><span id="77" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'The package must be a Flow package, but &quot;%s&quot; is not a valid Flow package type.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$packageType</span>));
 </span><span id="78" class="l">            <span class="php-var">$this</span>-&gt;quit(<span class="php-num">1</span>);
 </span><span id="79" class="l">        }
 </span><span id="80" class="l">        <span class="php-var">$package</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;createPackage(<span class="php-var">$packageKey</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-var">$packageType</span>);
