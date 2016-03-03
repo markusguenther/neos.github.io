@@ -3937,7 +3937,7 @@
 </span></span><span id="2186" class="l"><span class="php-comment">     */</span>
 </span><span id="2187" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> hasFrozenCacheInProduction()
 </span><span id="2188" class="l">    {
-</span><span id="2189" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;context-&gt;isProduction() &amp;&amp; <span class="php-var">$this</span>-&gt;reflectionDataRuntimeCache-&gt;getBackend()-&gt;isFrozen();
+</span><span id="2189" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;environment-&gt;getContext()-&gt;isProduction() &amp;&amp; <span class="php-var">$this</span>-&gt;reflectionDataRuntimeCache-&gt;getBackend()-&gt;isFrozen();
 </span><span id="2190" class="l">    }
 </span><span id="2191" class="l">}
 </span><span id="2192" class="l"></span></code></pre>
