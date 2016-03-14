@@ -953,7 +953,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Resource.html">Resource</a>\<a href="namespace-TYPO3.Flow.Resource.Storage.html">Storage</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#19-178" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Storage/FileSystemStorage.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#19-183" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Storage/FileSystemStorage.php</a>
 		<br>
 	</div>
 
@@ -1158,14 +1158,14 @@ stored in this storage.</p>
 
 			<td class="attributes"><code>
 				 public 
-				array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+				Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjects">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#128-140" title="Go to source code">getObjects</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#128-139" title="Go to source code">getObjects</a>( <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve all Objects stored in this storage.</p>
@@ -1175,10 +1175,15 @@ stored in this storage.</p>
 				<p>Retrieve all Objects stored in this storage.</p>
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$callback</var></dt>
+						<dd>Function called after each iteration</dd>
+					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+						Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 					</div>
 
 
@@ -1193,14 +1198,14 @@ stored in this storage.</p>
 
 			<td class="attributes"><code>
 				 public 
-				array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+				Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectsByCollection">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#142-163" title="Go to source code">getObjectsByCollection</a>( <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#141-168" title="Go to source code">getObjectsByCollection</a>( <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve all Objects stored in this storage, filtered by the given collection name</p>
@@ -1213,12 +1218,14 @@ stored in this storage.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$collection</var></dt>
-						<dd></dd>
+						<dd>$callback Function called after each iteration</dd>
+						<dt><var>$callback</var></dt>
+						<dd>$collection</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+						Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 					</div>
 
 
@@ -1240,7 +1247,7 @@ stored in this storage.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStoragePathAndFilenameByHash">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#165-177" title="Go to source code">getStoragePathAndFilenameByHash</a>( <span>string <var>$sha1Hash</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.FileSystemStorage.html#170-182" title="Go to source code">getStoragePathAndFilenameByHash</a>( <span>string <var>$sha1Hash</var></span> )</code>
 
 			<div class="description short">
 				<p>Determines and returns the absolute path and filename for a storage file identified by the given SHA1 hash.</p>

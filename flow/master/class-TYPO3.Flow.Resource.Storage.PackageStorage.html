@@ -953,7 +953,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Resource.html">Resource</a>\<a href="namespace-TYPO3.Flow.Resource.Storage.html">Storage</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#20-133" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Storage/PackageStorage.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#20-139" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Storage/PackageStorage.php</a>
 		<br>
 	</div>
 
@@ -1001,14 +1001,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+				Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjects">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#41-49" title="Go to source code">getObjects</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#41-50" title="Go to source code">getObjects</a>( <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve all Objects stored in this storage.</p>
@@ -1018,10 +1018,15 @@
 				<p>Retrieve all Objects stored in this storage.</p>
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$callback</var></dt>
+						<dd>Function called after each iteration</dd>
+					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+						Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 					</div>
 
 
@@ -1036,14 +1041,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+				Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectsByPathPattern">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#51-101" title="Go to source code">getObjectsByPathPattern</a>( <span>string <var>$pattern</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#52-107" title="Go to source code">getObjectsByPathPattern</a>( <span>string <var>$pattern</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Return all Objects stored in this storage filtered by the given directory / filename pattern</p>
@@ -1057,11 +1062,13 @@
 					<div class="list"><dl>
 						<dt><var>$pattern</var></dt>
 						<dd>A glob compatible directory / filename pattern</dd>
+						<dt><var>$callback</var></dt>
+						<dd>Function called after each object</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+						Generator&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
 					</div>
 
 
@@ -1081,7 +1088,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStreamByResource">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#103-112" title="Go to source code">getStreamByResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#109-118" title="Go to source code">getStreamByResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Because we cannot store persistent resources in a PackageStorage, this method always returns FALSE.</p>
@@ -1121,7 +1128,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicResourcePaths">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#114-132" title="Go to source code">getPublicResourcePaths</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.PackageStorage.html#120-138" title="Go to source code">getPublicResourcePaths</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the absolute paths of public resources directories of all active packages.

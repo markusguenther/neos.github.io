@@ -949,7 +949,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Resource.html">Resource</a>\<a href="namespace-TYPO3.Flow.Resource.Target.html">Target</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#22-376" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Target/FileSystemTarget.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#22-377" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Target/FileSystemTarget.php</a>
 		<br>
 	</div>
 
@@ -1073,7 +1073,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishCollection">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#162-180" title="Go to source code">publishCollection</a>( <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#162-181" title="Go to source code">publishCollection</a>( <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the whole collection to this target</p>
@@ -1087,6 +1087,8 @@
 					<div class="list"><dl>
 						<dt><var>$collection</var></dt>
 						<dd>The collection to publish</dd>
+						<dt><var>$callback</var></dt>
+						<dd>Function called after each resource publishing</dd>
 					</dl></div>
 
 
@@ -1113,7 +1115,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishResource">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#182-198" title="Go to source code">publishResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span>, <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#183-199" title="Go to source code">publishResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span>, <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given persistent resource from the given storage</p>
@@ -1155,7 +1157,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unpublishResource">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#200-213" title="Go to source code">unpublishResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#201-214" title="Go to source code">unpublishResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Unpublishes the given persistent resource</p>
@@ -1191,7 +1193,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicStaticResourceUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#215-224" title="Go to source code">getPublicStaticResourceUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#216-225" title="Go to source code">getPublicStaticResourceUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the web accessible URI pointing to the given static resource</p>
@@ -1231,7 +1233,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicPersistentResourceUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#226-236" title="Go to source code">getPublicPersistentResourceUri</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#227-237" title="Go to source code">getPublicPersistentResourceUri</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the web accessible URI pointing to the specified persistent resource</p>
@@ -1275,7 +1277,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_encodeRelativePathAndFilenameForUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#238-247" title="Go to source code">encodeRelativePathAndFilenameForUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#239-248" title="Go to source code">encodeRelativePathAndFilenameForUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Applies rawurlencode() to all path segments of the given $relativePathAndFilename</p>
@@ -1313,7 +1315,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishFile">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#249-292" title="Go to source code">publishFile</a>( <span>resource <var>$sourceStream</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#250-293" title="Go to source code">publishFile</a>( <span>resource <var>$sourceStream</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given source stream to this target, with the given relative path.</p>
@@ -1355,7 +1357,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unpublishFile">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#294-312" title="Go to source code">unpublishFile</a>( <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#295-313" title="Go to source code">unpublishFile</a>( <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified target file from the public directory</p>
@@ -1391,7 +1393,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResourcesBaseUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#314-326" title="Go to source code">getResourcesBaseUri</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#315-327" title="Go to source code">getResourcesBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the resolved absolute base URI for resources of this target.</p>
@@ -1424,7 +1426,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_detectResourcesBaseUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#328-349" title="Go to source code">detectResourcesBaseUri</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#329-350" title="Go to source code">detectResourcesBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Detects and returns the website's absolute base URI</p>
@@ -1461,7 +1463,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRelativePublicationPathAndFilename">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#351-375" title="Go to source code">getRelativePublicationPathAndFilename</a>( <span><code><a href="class-TYPO3.Flow.Resource.ResourceMetaDataInterface.html">TYPO3\Flow\Resource\ResourceMetaDataInterface</a></code> <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#352-376" title="Go to source code">getRelativePublicationPathAndFilename</a>( <span><code><a href="class-TYPO3.Flow.Resource.ResourceMetaDataInterface.html">TYPO3\Flow\Resource\ResourceMetaDataInterface</a></code> <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Determines and returns the relative path and filename for the given Storage Object or Resource. If the given
