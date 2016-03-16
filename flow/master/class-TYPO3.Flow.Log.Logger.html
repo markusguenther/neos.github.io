@@ -898,6 +898,7 @@
 				<li><a href="class-TYPO3.Flow.Log.LoggerInterface.html">LoggerInterface</a></li>
 				<li><a href="class-TYPO3.Flow.Log.SecurityLoggerInterface.html">SecurityLoggerInterface</a></li>
 				<li><a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html">SystemLoggerInterface</a></li>
+				<li><a href="class-TYPO3.Flow.Log.ThrowableLoggerInterface.html">ThrowableLoggerInterface</a></li>
 			</ul>
 
 
@@ -929,6 +930,8 @@
 			 implements 
 				<a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html"><span>TYPO3\Flow\Log\SystemLoggerInterface</span></a>, 
 			
+				<a href="class-TYPO3.Flow.Log.ThrowableLoggerInterface.html"><span>TYPO3\Flow\Log\ThrowableLoggerInterface</span></a>, 
+			
 				<a href="class-TYPO3.Flow.Log.SecurityLoggerInterface.html"><span>TYPO3\Flow\Log\SecurityLoggerInterface</span></a>
 			
 			
@@ -950,7 +953,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Log.Logger.html#20-241" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Log/Logger.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Log.Logger.html#20-262" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Log/Logger.php</a>
 		<br>
 	</div>
 
@@ -1171,14 +1174,14 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logException">#</a>
-			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#114-150" title="Go to source code">logException</a>( <span><code><a href="class-TYPO3.Flow.Log.Exception.html">TYPO3\Flow\Log\Exception</a></code> <var>$exception</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#114-123" title="Go to source code">logException</a>( <span><code><a href="class-TYPO3.Flow.Log.Exception.html">TYPO3\Flow\Log\Exception</a></code> <var>$exception</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
-				<p>Writes information about the given exception into the log.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Writes information about the given exception into the log.</p>
+				
 
 
 					<h4>Parameters</h4>
@@ -1201,7 +1204,84 @@ from the logger.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="renderExceptionInfo" id="_renderExceptionInfo">
+		<tr data-order="logThrowable" id="_logThrowable">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_logThrowable">#</a>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#125-134" title="Go to source code">logThrowable</a>( <span>Throwable <var>$throwable</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$throwable</var></dt>
+						<dd>The throwable to log</dd>
+						<dt><var>$additionalData</var></dt>
+						<dd>Additional data to log</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Log.ThrowableLoggerInterface.html#_logThrowable">TYPO3\Flow\Log\ThrowableLoggerInterface::logThrowable()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="logError" id="_logError">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_logError">#</a>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#136-171" title="Go to source code">logError</a>( <span>object <var>$error</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				<p>Writes information about the given exception into the log.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Writes information about the given exception into the log.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error</var></dt>
+						<dd>\Exception or \Throwable</dd>
+						<dt><var>$additionalData</var></dt>
+						<dd>Additional data to log</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="renderErrorInfo" id="_renderErrorInfo">
 
 			<td class="attributes"><code>
 				 protected 
@@ -1211,21 +1291,21 @@ from the logger.</p>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_renderExceptionInfo">#</a>
-			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#152-180" title="Go to source code">renderExceptionInfo</a>( <span><code><a href="class-TYPO3.Flow.Log.Exception.html">TYPO3\Flow\Log\Exception</a></code> <var>$exception</var></span> )</code>
+			<a class="anchor" href="#_renderErrorInfo">#</a>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#173-201" title="Go to source code">renderErrorInfo</a>( <span>object <var>$error</var></span> )</code>
 
 			<div class="description short">
-				<p>Get current exception post mortem informations with support for exception chaining</p>
+				<p>Get current error post mortem informations with support for error chaining</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Get current exception post mortem informations with support for exception chaining</p>
+				<p>Get current error post mortem informations with support for error chaining</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$exception</var></dt>
-						<dd></dd>
+						<dt><var>$error</var></dt>
+						<dd>\Exception or \Throwable</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1239,7 +1319,7 @@ from the logger.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getExceptionLogMessage" id="_getExceptionLogMessage">
+		<tr data-order="getErrorLogMessage" id="_getErrorLogMessage">
 
 			<td class="attributes"><code>
 				 protected 
@@ -1249,8 +1329,8 @@ from the logger.</p>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getExceptionLogMessage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#182-192" title="Go to source code">getExceptionLogMessage</a>( <span><code><a href="class-TYPO3.Flow.Log.Exception.html">TYPO3\Flow\Log\Exception</a></code> <var>$exception</var></span> )</code>
+			<a class="anchor" href="#_getErrorLogMessage">#</a>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#203-213" title="Go to source code">getErrorLogMessage</a>( <span>object <var>$error</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1262,8 +1342,8 @@ from the logger.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$exception</var></dt>
-						<dd></dd>
+						<dt><var>$error</var></dt>
+						<dd>\Exception or \Throwable</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1288,7 +1368,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderBacktrace">#</a>
-			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#194-204" title="Go to source code">renderBacktrace</a>( <span>string <var>$message</var></span>, <span>array <var>$backTrace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#215-225" title="Go to source code">renderBacktrace</a>( <span>string <var>$message</var></span>, <span>array <var>$backTrace</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders background information about the circumstances of the exception.</p>
@@ -1328,7 +1408,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderRequestInfo">#</a>
-			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#206-228" title="Go to source code">renderRequestInfo</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#227-249" title="Go to source code">renderRequestInfo</a>( )</code>
 
 			<div class="description short">
 				<p>Render information about the current request, if possible</p>
@@ -1361,7 +1441,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#230-240" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Log.Logger.html#251-261" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				<p>Cleanly closes all registered backends before destructing this Logger</p>

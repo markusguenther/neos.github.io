@@ -898,6 +898,7 @@
 				<li><a href="class-TYPO3.Flow.Log.LoggerInterface.html">LoggerInterface</a></li>
 				<li><a href="class-TYPO3.Flow.Log.SecurityLoggerInterface.html">SecurityLoggerInterface</a></li>
 				<li><a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html">SystemLoggerInterface</a></li>
+				<li><a href="class-TYPO3.Flow.Log.ThrowableLoggerInterface.html">ThrowableLoggerInterface</a></li>
 			</ul>
 
 
@@ -928,7 +929,9 @@ injection</p>
 		<dd style="padding-left:0px">
 <b><span class="deprecated">TYPO3\Flow\Log\EarlyLogger</span></b>			
 			 implements 
-				<a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html"><span>TYPO3\Flow\Log\SystemLoggerInterface</span></a>
+				<a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html"><span>TYPO3\Flow\Log\SystemLoggerInterface</span></a>, 
+			
+				<a href="class-TYPO3.Flow.Log.ThrowableLoggerInterface.html"><span>TYPO3\Flow\Log\ThrowableLoggerInterface</span></a>
 			
 			
 		</dd>
@@ -949,7 +952,7 @@ injection</p>
 
 				<b>Deprecated:</b>
 				Will be removed in Flow 4.0<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#14-121" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Log/EarlyLogger.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#14-145" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Log/EarlyLogger.php</a>
 		<br>
 	</div>
 
@@ -969,7 +972,7 @@ injection</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addBackend">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#32-41" title="Go to source code">addBackend</a>( <span><code><a href="class-TYPO3.Flow.Log.Backend.BackendInterface.html">TYPO3\Flow\Log\Backend\BackendInterface</a></code> <var>$backend</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#37-46" title="Go to source code">addBackend</a>( <span><code><a href="class-TYPO3.Flow.Log.Backend.BackendInterface.html">TYPO3\Flow\Log\Backend\BackendInterface</a></code> <var>$backend</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds a backend to which the logger sends the logging data</p>
@@ -1005,7 +1008,7 @@ injection</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeBackend">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#43-53" title="Go to source code">removeBackend</a>( <span><code><a href="class-TYPO3.Flow.Log.Backend.BackendInterface.html">TYPO3\Flow\Log\Backend\BackendInterface</a></code> <var>$backend</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#48-58" title="Go to source code">removeBackend</a>( <span><code><a href="class-TYPO3.Flow.Log.Backend.BackendInterface.html">TYPO3\Flow\Log\Backend\BackendInterface</a></code> <var>$backend</var></span> )</code>
 
 			<div class="description short">
 				<p>Runs the close() method of a backend and removes the backend
@@ -1047,7 +1050,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resetInternalLogs">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#55-64" title="Go to source code">resetInternalLogs</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#60-70" title="Go to source code">resetInternalLogs</a>( )</code>
 
 			<div class="description short">
 				<p>Resets internal log arrays</p>
@@ -1076,7 +1079,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_log">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#66-80" title="Go to source code">log</a>( <span>string <var>$message</var></span>, <span>integer <var>$severity</var> = LOG_INFO</span>, <span>mixed <var>$additionalData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$methodName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#72-86" title="Go to source code">log</a>( <span>string <var>$message</var></span>, <span>integer <var>$severity</var> = LOG_INFO</span>, <span>mixed <var>$additionalData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$methodName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Writes the given message along with the additional information into the log.</p>
@@ -1122,7 +1125,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logException">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#82-92" title="Go to source code">logException</a>( <span><code><a href="class-TYPO3.Flow.Log.Exception.html">TYPO3\Flow\Log\Exception</a></code> <var>$exception</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#88-98" title="Go to source code">logException</a>( <span><code><a href="class-TYPO3.Flow.Log.Exception.html">TYPO3\Flow\Log\Exception</a></code> <var>$exception</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Writes information about the given exception into the log.</p>
@@ -1149,6 +1152,47 @@ from the logger.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="logThrowable" id="_logThrowable">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_logThrowable">#</a>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#100-111" title="Go to source code">logThrowable</a>( <span>Throwable <var>$throwable</var></span>, <span>array <var>$additionalData</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				<p>Writes information about the given exception into the log.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Writes information about the given exception into the log.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$throwable</var></dt>
+						<dd>The exception to log</dd>
+						<dt><var>$additionalData</var></dt>
+						<dd>Additional data to log</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Log.ThrowableLoggerInterface.html#_logThrowable">TYPO3\Flow\Log\ThrowableLoggerInterface::logThrowable()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="replayLogsOn" id="_replayLogsOn">
 
 			<td class="attributes"><code>
@@ -1160,7 +1204,7 @@ from the logger.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replayLogsOn">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#94-120" title="Go to source code">replayLogsOn</a>( <span><code><a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html">TYPO3\Flow\Log\SystemLoggerInterface</a></code> <var>$logger</var></span>, <span>boolean <var>$resetLogs</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#113-144" title="Go to source code">replayLogsOn</a>( <span><code><a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html">TYPO3\Flow\Log\SystemLoggerInterface</a></code> <var>$logger</var></span>, <span>boolean <var>$resetLogs</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Replays internal logs on provided logger. Use to transfer early logs to real logger when available.</p>
@@ -1251,6 +1295,31 @@ from the logger.</p>
 			<td class="value">
 				<div>
 					<a href="#$exceptions" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="throwables" id="$throwables">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Log.EarlyLogger.html#32-35" title="Go to source code"><var>$throwables</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$throwables" class="anchor">#</a>
 					<code><span class="php-keyword1">array</span>()</code>
 				</div>
 			</td>
