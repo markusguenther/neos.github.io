@@ -2035,7 +2035,7 @@
 </span><span id="175" class="l">        <span class="php-var">$scope</span> = <span class="php-quote">''</span>;
 </span><span id="176" class="l">        <span class="php-var">$additionalAttributes</span> = <span class="php-quote">''</span>;
 </span><span id="177" class="l">
-</span><span id="178" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \Doctrine\Common\Collections\Collection) {
+</span><span id="178" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \Doctrine\Common\Collections\Collection || <span class="php-var">$object</span> <span class="php-keyword1">instanceof</span> \ArrayObject) {
 </span><span id="179" class="l">            <span class="php-keyword1">return</span> self::renderArrayDump(\Doctrine\Common\Util\Debug::export(<span class="php-var">$object</span>, <span class="php-num">3</span>), <span class="php-var">$level</span>, <span class="php-var">$plaintext</span>, <span class="php-var">$ansiColors</span>);
 </span><span id="180" class="l">        }
 </span><span id="181" class="l">
