@@ -954,7 +954,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#24-426" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Command/DoctrineCommandController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#26-491" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Command/DoctrineCommandController.php</a>
 		<br>
 	</div>
 
@@ -974,7 +974,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#48-57" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#56-65" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the Flow settings, only the persistence part is kept for further use</p>
@@ -1008,7 +1008,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compileProxiesCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#59-68" title="Go to source code">compileProxiesCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#67-76" title="Go to source code">compileProxiesCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Compile the Doctrine proxy classes</p>
@@ -1040,7 +1040,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validateCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#70-99" title="Go to source code">validateCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#78-107" title="Go to source code">validateCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Validate the class/table mappings</p>
@@ -1080,7 +1080,7 @@ any way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#101-129" title="Go to source code">createCommand</a>( <span>string <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#109-137" title="Go to source code">createCommand</a>( <span>string <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Create the database schema</p>
@@ -1124,7 +1124,7 @@ exist, this will lead to errors.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#131-159" title="Go to source code">updateCommand</a>( <span>boolean <var>$unsafeMode</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#139-167" title="Go to source code">updateCommand</a>( <span>boolean <var>$unsafeMode</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Update the database schema</p>
@@ -1169,7 +1169,7 @@ exist, this will lead to errors.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_entityStatusCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#161-196" title="Go to source code">entityStatusCommand</a>( <span>boolean <var>$dumpMappingData</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#169-221" title="Go to source code">entityStatusCommand</a>( <span>boolean <var>$dumpMappingData</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$entityClassName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Show the current status of entities and mappings</p>
@@ -1188,6 +1188,8 @@ mapping information contains errors or not.</p>
 					<div class="list"><dl>
 						<dt><var>$dumpMappingData</var></dt>
 						<dd>If set, the mapping data will be output</dd>
+						<dt><var>$entityClassName</var></dt>
+						<dd>If given, the mapping data for just this class will be output</dd>
 					</dl></div>
 
 
@@ -1212,7 +1214,7 @@ mapping information contains errors or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dqlCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#198-231" title="Go to source code">dqlCommand</a>( <span>integer <var>$depth</var> = <span class="php-num">3</span></span>, <span>string <var>$hydrationMode</var> = <span class="php-quote">'array'</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#223-256" title="Go to source code">dqlCommand</a>( <span>integer <var>$depth</var> = <span class="php-num">3</span></span>, <span>string <var>$hydrationMode</var> = <span class="php-quote">'array'</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Run arbitrary DQL and display results</p>
@@ -1260,7 +1262,7 @@ mapping information contains errors or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationStatusCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#233-255" title="Go to source code">migrationStatusCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#258-285" title="Go to source code">migrationStatusCommand</a>( <span>boolean <var>$showMigrations</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$showDescriptions</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Show the current migration status</p>
@@ -1273,6 +1275,13 @@ mapping information contains errors or not.</p>
 available, executed and pending migrations.</p>
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$showMigrations</var></dt>
+						<dd>Output a list of all migrations and their status</dd>
+						<dt><var>$showDescriptions</var></dt>
+						<dd>Show descriptions for the migrations (enables versions display)</dd>
+					</dl></div>
 
 
 
@@ -1299,7 +1308,7 @@ available, executed and pending migrations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrateCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#257-296" title="Go to source code">migrateCommand</a>( <span>string <var>$version</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#287-330" title="Go to source code">migrateCommand</a>( <span>string <var>$version</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Migrate the database schema</p>
@@ -1349,7 +1358,7 @@ migrations provided by currently active packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterDatabaseMigration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#298-304" title="Go to source code">emitAfterDatabaseMigration</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#332-338" title="Go to source code">emitAfterDatabaseMigration</a>( )</code>
 
 			<div class="description short">
 				
@@ -1381,7 +1390,7 @@ migrations provided by currently active packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationExecuteCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#306-331" title="Go to source code">migrationExecuteCommand</a>( <span>string <var>$version</var></span>, <span>string <var>$direction</var> = <span class="php-quote">'up'</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#340-369" title="Go to source code">migrationExecuteCommand</a>( <span>string <var>$version</var></span>, <span>string <var>$direction</var> = <span class="php-quote">'up'</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Execute a single migration</p>
@@ -1430,14 +1439,14 @@ migrations provided by currently active packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationVersionCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#333-367" title="Go to source code">migrationVersionCommand</a>( <span>string <var>$version</var></span>, <span>boolean <var>$add</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$delete</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#371-405" title="Go to source code">migrationVersionCommand</a>( <span>string <var>$version</var></span>, <span>boolean <var>$add</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$delete</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Mark/unmark a migration as migrated</p>
+				<p>Mark/unmark migrations as migrated</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Mark/unmark a migration as migrated</p>
+				<p>Mark/unmark migrations as migrated</p>
 
 <p>If <u>all</u> is given as version, all available migrations are marked
 as requested.</p>
@@ -1482,7 +1491,7 @@ as requested.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationGenerateCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#369-425" title="Go to source code">migrationGenerateCommand</a>( <span>boolean <var>$diffAgainstCurrent</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#407-475" title="Go to source code">migrationGenerateCommand</a>( <span>boolean <var>$diffAgainstCurrent</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filterExpression</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Generate a new migration</p>
@@ -1492,15 +1501,23 @@ as requested.</p>
 				<p>Generate a new migration</p>
 
 <p>If $diffAgainstCurrent is TRUE (the default), it generates a migration file
-with the diff between current DB structure and the found mapping metadata.</p>
+with the diff between current DB structure and the found mapping metadata.
+Otherwise an empty migration skeleton is generated.</p>
 
-<p>Otherwise an empty migration skeleton is generated.</p>
+<p>Only includes tables/sequences matching the $filterExpression regexp when
+diffing models and existing schema. Include delimiters in the expression!
+The use of
+ --filter-expression '/^acme_com/'</p>
+
+<p>would only create a migration touching tables starting with "acme_com".</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$diffAgainstCurrent</var></dt>
 						<dd>Whether to base the migration on the current schema structure</dd>
+						<dt><var>$filterExpression</var></dt>
+						<dd>Only include tables/sequences matching the filter expression regexp</dd>
 					</dl></div>
 
 
@@ -1512,6 +1529,40 @@ with the diff between current DB structure and the found mapping metadata.</p>
 							typo3.flow:doctrine:migrationexecute<br>
 							typo3.flow:doctrine:migrationversion<br>
 					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="handleException" id="_handleException">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_handleException">#</a>
+			<code><a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#477-490" title="Go to source code">handleException</a>( <span>Exception <var>$exception</var></span> )</code>
+
+			<div class="description short">
+				<p>Output an error message and log the exception.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Output an error message and log the exception.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$exception</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
 
 
 			</div>
@@ -1560,7 +1611,7 @@ with the diff between current DB structure and the found mapping metadata.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#31-34" title="Go to source code"><var>$settings</var></a>
+					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#33-36" title="Go to source code"><var>$settings</var></a>
 
 				<div class="description short">
 					
@@ -1585,7 +1636,7 @@ with the diff between current DB structure and the found mapping metadata.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#36-40" title="Go to source code"><var>$doctrineService</var></a>
+					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#38-42" title="Go to source code"><var>$doctrineService</var></a>
 
 				<div class="description short">
 					
@@ -1613,7 +1664,7 @@ with the diff between current DB structure and the found mapping metadata.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#42-46" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#44-48" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1630,6 +1681,34 @@ with the diff between current DB structure and the found mapping metadata.</p>
 			<td class="value">
 				<div>
 					<a href="#$packageManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="systemLogger" id="$systemLogger">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Log.SystemLoggerInterface.html">TYPO3\Flow\Log\SystemLoggerInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Command.DoctrineCommandController.html#50-54" title="Go to source code"><var>$systemLogger</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$systemLogger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
