@@ -1806,7 +1806,7 @@
 </span><span id="148" class="l">            <span class="php-var">$defaultServerEnvironment</span>[<span class="php-quote">'HTTP_CONTENT_TYPE'</span>] = <span class="php-quote">'application/x-www-form-urlencoded'</span>;
 </span><span id="149" class="l">        }
 </span><span id="150" class="l">
-</span><span id="151" class="l">        <span class="php-var">$query</span> = <span class="php-var">$uri</span>-&gt;getQuery();
+</span><span id="151" class="l">        <span class="php-var">$query</span> = (string)<span class="php-var">$uri</span>-&gt;getQuery();
 </span><span id="152" class="l">        <span class="php-var">$fragment</span> = <span class="php-var">$uri</span>-&gt;getFragment();
 </span><span id="153" class="l">        <span class="php-var">$overrideValues</span> = <span class="php-keyword1">array</span>(
 </span><span id="154" class="l">            <span class="php-quote">'REQUEST_URI'</span> =&gt; <span class="php-var">$uri</span>-&gt;getPath() . (<span class="php-var">$query</span> !== <span class="php-quote">''</span> ? <span class="php-quote">'?'</span> . <span class="php-var">$query</span> : <span class="php-quote">''</span>) . (<span class="php-var">$fragment</span> !== <span class="php-quote">''</span> ? <span class="php-quote">'#'</span> . <span class="php-var">$fragment</span> : <span class="php-quote">''</span>),
