@@ -722,7 +722,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Utility.html#16-67" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Utility.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Utility.html#16-84" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Utility.php</a>
 		<br>
 	</div>
 
@@ -805,6 +805,49 @@ Then, calculates and returns the dimensionsHash.</p>
 					<h4>Returns</h4>
 					<div class="list">
 						string<br>the calculated DimensionsHash
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="buildAutoCreatedChildNodeIdentifier" id="_buildAutoCreatedChildNodeIdentifier">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_buildAutoCreatedChildNodeIdentifier">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Utility.html#68-83" title="Go to source code">buildAutoCreatedChildNodeIdentifier</a>( <span>string <var>$childNodeName</var></span>, <span>string <var>$identifier</var></span> )</code>
+
+			<div class="description short">
+				<p>Generate a stable identifier for auto-created child nodes</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Generate a stable identifier for auto-created child nodes</p>
+
+<p>This is needed if multiple node variants are created through "createNode" with different dimension values. If
+child nodes with the same path and different identifiers exist, bad things can happen.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$childNodeName</var></dt>
+						<dd></dd>
+						<dt><var>$identifier</var></dt>
+						<dd>Identifier of the node where the child node should be created</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The generated UUID like identifier
 					</div>
 
 
