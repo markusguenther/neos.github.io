@@ -955,7 +955,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Mvc.html">Mvc</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#25-144" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/DispatchComponent.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#25-147" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/DispatchComponent.php</a>
 		<br>
 	</div>
 
@@ -975,7 +975,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#68-74" title="Go to source code">__construct</a>( <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#61-67" title="Go to source code">__construct</a>( <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				
@@ -998,40 +998,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="injectMediaTypeConverter" id="_injectMediaTypeConverter">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_injectMediaTypeConverter">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#76-84" title="Go to source code">injectMediaTypeConverter</a>( <span><code><a href="class-TYPO3.Flow.Property.TypeConverter.MediaTypeConverterInterface.html">TYPO3\Flow\Property\TypeConverter\MediaTypeConverterInterface</a></code> <var>$mediaTypeConverter</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$mediaTypeConverter</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="handle" id="_handle">
 
 			<td class="attributes"><code>
@@ -1043,7 +1009,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handle">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#86-106" title="Go to source code">handle</a>( <span><code><a href="class-TYPO3.Flow.Http.Component.ComponentContext.html">TYPO3\Flow\Http\Component\ComponentContext</a></code> <var>$componentContext</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#69-89" title="Go to source code">handle</a>( <span><code><a href="class-TYPO3.Flow.Http.Component.ComponentContext.html">TYPO3\Flow\Http\Component\ComponentContext</a></code> <var>$componentContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Create an action request from stored route match values and dispatch to that</p>
@@ -1079,7 +1045,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mergeArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#108-127" title="Go to source code">mergeArguments</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span>, <span>array <var>$routingMatchResults</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#91-108" title="Go to source code">mergeArguments</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span>, <span>array <var>$routingMatchResults</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1108,6 +1074,44 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="parseRequestBody" id="_parseRequestBody">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseRequestBody">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#110-130" title="Go to source code">parseRequestBody</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
+
+			<div class="description short">
+				<p>Parses the request body according to the media type.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parses the request body according to the media type.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$httpRequest</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setDefaultControllerAndActionNameIfNoneSpecified" id="_setDefaultControllerAndActionNameIfNoneSpecified">
 
 			<td class="attributes"><code>
@@ -1119,7 +1123,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDefaultControllerAndActionNameIfNoneSpecified">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#129-143" title="Go to source code">setDefaultControllerAndActionNameIfNoneSpecified</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$actionRequest</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#132-146" title="Go to source code">setDefaultControllerAndActionNameIfNoneSpecified</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$actionRequest</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the default controller and action names if none has been specified.</p>
@@ -1174,7 +1178,7 @@
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
+						<h4>Flow\inject(lazy=false)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -1202,7 +1206,7 @@
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
+						<h4>Flow\inject(lazy=false)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -1230,7 +1234,7 @@
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
+						<h4>Flow\inject(lazy=false)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -1270,31 +1274,6 @@
 				</div>
 			</td>
 		</tr>
-		<tr data-order="propertyMappingConfiguration" id="$propertyMappingConfiguration">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-TYPO3.Flow.Property.PropertyMappingConfiguration.html">TYPO3\Flow\Property\PropertyMappingConfiguration</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#54-59" title="Go to source code"><var>$propertyMappingConfiguration</var></a>
-
-				<div class="description short">
-					<p>PropertyMapping configuration set in injectMediaTypeConverter()</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>PropertyMapping configuration set in injectMediaTypeConverter()</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$propertyMappingConfiguration" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="options" id="$options">
 			<td class="attributes"><code>
 				protected  
@@ -1302,7 +1281,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#61-66" title="Go to source code"><var>$options</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.DispatchComponent.html#54-59" title="Go to source code"><var>$options</var></a>
 
 				<div class="description short">
 					<p>Options of this component</p>
