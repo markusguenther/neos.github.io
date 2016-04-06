@@ -1221,7 +1221,7 @@
 </span><span id="64" class="l">            <span class="php-var">$active</span> = <span class="php-keyword1">false</span>;
 </span><span id="65" class="l">            <span class="php-comment">/** @var $site \TYPO3\Neos\Domain\Model\Site */</span>
 </span><span id="66" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$site</span>-&gt;hasActiveDomains()) {
-</span><span id="67" class="l">                <span class="php-var">$hostname</span> = <span class="php-var">$site</span>-&gt;getFirstActiveDomain()-&gt;<span class="php-keyword2">getHostname</span>();
+</span><span id="67" class="l">                <span class="php-var">$hostname</span> = <span class="php-var">$site</span>-&gt;getFirstActiveDomain()-&gt;getHostPattern();
 </span><span id="68" class="l">                <span class="php-var">$active</span> = <span class="php-var">$hostname</span> === <span class="php-var">$requestUriHost</span>;
 </span><span id="69" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$active</span>) {
 </span><span id="70" class="l">                    <span class="php-var">$uri</span> = <span class="php-var">$controllerContext</span>-&gt;getUriBuilder()
