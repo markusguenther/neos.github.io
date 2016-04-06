@@ -1198,7 +1198,7 @@
 </span><span id="41" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$label</span>;
 </span><span id="42" class="l">        }
 </span><span id="43" class="l">
-</span><span id="44" class="l">        <span class="php-var">$croppedLabel</span> = \TYPO3\Flow\Utility\Unicode\Functions::<span class="php-keyword2">substr</span>(<span class="php-var">$label</span>, <span class="php-num">0</span>, <span class="php-num">30</span>);
+</span><span id="44" class="l">        <span class="php-var">$croppedLabel</span> = <span class="php-keyword2">trim</span>(\TYPO3\Flow\Utility\Unicode\Functions::<span class="php-keyword2">substr</span>(<span class="php-var">$label</span>, <span class="php-num">0</span>, <span class="php-num">30</span>));
 </span><span id="45" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$croppedLabel</span> . (<span class="php-keyword2">strlen</span>(<span class="php-var">$croppedLabel</span>) &lt; <span class="php-keyword2">strlen</span>(<span class="php-var">$label</span>) ? <span class="php-quote">' …'</span> : <span class="php-quote">''</span>);
 </span><span id="46" class="l">    }
 </span><span id="47" class="l">}
