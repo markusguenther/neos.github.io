@@ -730,6 +730,8 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			<a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html"><span>TYPO3\Neos\Controller\Module\Management\AssetController</span></a>
 			
 			
+			 uses 
+					<a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html"><span>TYPO3\Neos\Controller\CreateContentContextTrait</span></a>
 			
 		</dd>
 		<dd style="padding-left:90px">
@@ -774,9 +776,12 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			<p class="elementList">
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_deleteAction">deleteAction()</a></code>, 
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_deleteAssetCollectionAction">deleteAssetCollectionAction()</a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_editAction">editAction()</a></code>, 
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_errorAction">errorAction()</a></code>, 
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_getErrorFlashMessage">getErrorFlashMessage()</a></code>, 
-				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_initializeObject">initializeObject()</a></code>
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_getRelatedNodes">getRelatedNodes()</a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_initializeObject">initializeObject()</a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#_relatedDocumentNodesAction">relatedDocumentNodesAction()</a></code>
 			</p>
 		</div>
 		<div class="panel panel-default">
@@ -787,7 +792,6 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_createAssetCollectionAction">createAssetCollectionAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_createTagAction">createTagAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_deleteTagAction">deleteTagAction()</a></code>, 
-				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_editAction">editAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_editAssetCollectionAction">editAssetCollectionAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_editTagAction">editTagAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_indexAction">indexAction()</a></code>, 
@@ -805,6 +809,12 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</p>
 		</div>
 
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods used from <a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#methods">TYPO3\Neos\Controller\CreateContentContextTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#_createContentContext">createContentContext()</a></code>
+			</p>
+		</div>
 
 
 
@@ -893,7 +903,11 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$configurationManager"><var>$configurationManager</var></a></code>, 
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$domainRepository"><var>$domainRepository</var></a></code>, 
 				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$nodeDataRepository"><var>$nodeDataRepository</var></a></code>, 
-				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$siteRepository"><var>$siteRepository</var></a></code>
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$nodeFactory"><var>$nodeFactory</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$securityContext"><var>$securityContext</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$siteRepository"><var>$siteRepository</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$userService"><var>$userService</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.Module.Management.AssetController.html#$workspaceRepository"><var>$workspaceRepository</var></a></code>
 			</p>
 		</div>
 		<div class="panel panel-default">
@@ -906,6 +920,14 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</p>
 		</div>
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties used from <a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#properties">TYPO3\Neos\Controller\CreateContentContextTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_contextFactory"><var>$_contextFactory</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_domainRepository"><var>$_domainRepository</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_siteRepository"><var>$_siteRepository</var></a></code>
+			</p>
+		</div>
 
 
 

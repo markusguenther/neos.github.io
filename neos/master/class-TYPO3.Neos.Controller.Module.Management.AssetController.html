@@ -723,6 +723,8 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>TYPO3\Neos\Controller\Module\Management\AssetController</span></b>			
 			
+			 uses 
+					<a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html"><span>TYPO3\Neos\Controller\CreateContentContextTrait</span></a>
 			
 		</dd>
 	</dl>
@@ -754,7 +756,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#24-147" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Module/Management/AssetController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#34-238" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Module/Management/AssetController.php</a>
 		<br>
 	</div>
 
@@ -774,7 +776,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#55-67" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#91-103" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				
@@ -792,6 +794,42 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="editAction" id="_editAction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_editAction">#</a>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#105-125" title="Go to source code">editAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
+
+			<div class="description short">
+				<p>Edit an asset</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Edit an asset</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asset</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-TYPO3.Media.Controller.AssetController.html#_editAction">TYPO3\Media\Controller\AssetController::editAction</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="deleteAction" id="_deleteAction">
 
 			<td class="attributes"><code>
@@ -803,7 +841,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#69-100" title="Go to source code">deleteAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#127-145" title="Go to source code">deleteAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Delete an asset</p>
@@ -828,6 +866,78 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="relatedDocumentNodesAction" id="_relatedDocumentNodesAction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_relatedDocumentNodesAction">#</a>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#147-169" title="Go to source code">relatedDocumentNodesAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
+
+			<div class="description short">
+				<p>Get Related Document Nodes from an asset</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get Related Document Nodes from an asset</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asset</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRelatedNodes" id="_getRelatedNodes">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRelatedNodes">#</a>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#171-191" title="Go to source code">getRelatedNodes</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Asset.html">TYPO3\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asset</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="deleteAssetCollectionAction" id="_deleteAssetCollectionAction">
 
 			<td class="attributes"><code>
@@ -839,7 +949,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteAssetCollectionAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#102-113" title="Go to source code">deleteAssetCollectionAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#193-204" title="Go to source code">deleteAssetCollectionAction</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var></span> )</code>
 
 			<div class="description short">
 				
@@ -875,7 +985,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_errorAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#115-129" title="Go to source code">errorAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#206-220" title="Go to source code">errorAction</a>( )</code>
 
 			<div class="description short">
 				<p>This custom errorAction adds FlashMessages for validation results to give more information in the</p>
@@ -908,7 +1018,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getErrorFlashMessage">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#131-146" title="Go to source code">getErrorFlashMessage</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#222-237" title="Go to source code">getErrorFlashMessage</a>( )</code>
 
 			<div class="description short">
 				<p>Individual error FlashMessage that hides which action fails in production.</p>
@@ -941,7 +1051,6 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_createAssetCollectionAction">createAssetCollectionAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_createTagAction">createTagAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_deleteTagAction">deleteTagAction()</a></code>, 
-				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_editAction">editAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_editAssetCollectionAction">editAssetCollectionAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_editTagAction">editTagAction()</a></code>, 
 				<code><a href="class-TYPO3.Media.Controller.AssetController.html#_indexAction">indexAction()</a></code>, 
@@ -959,6 +1068,12 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</p>
 		</div>
 
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods used from <a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#methods">TYPO3\Neos\Controller\CreateContentContextTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#_createContentContext">createContentContext()</a></code>
+			</p>
+		</div>
 
 
 
@@ -992,7 +1107,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#31-35" title="Go to source code"><var>$nodeDataRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#43-47" title="Go to source code"><var>$nodeDataRepository</var></a>
 
 				<div class="description short">
 					
@@ -1013,6 +1128,34 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				</div>
 			</td>
 		</tr>
+		<tr data-order="nodeFactory" id="$nodeFactory">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Factory.NodeFactory.html">TYPO3\TYPO3CR\Domain\Factory\NodeFactory</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#49-53" title="Go to source code"><var>$nodeFactory</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$nodeFactory" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="configurationManager" id="$configurationManager">
 			<td class="attributes"><code>
 				protected  
@@ -1020,7 +1163,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#37-41" title="Go to source code"><var>$configurationManager</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#55-59" title="Go to source code"><var>$configurationManager</var></a>
 
 				<div class="description short">
 					
@@ -1048,7 +1191,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#43-47" title="Go to source code"><var>$siteRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#61-65" title="Go to source code"><var>$siteRepository</var></a>
 
 				<div class="description short">
 					
@@ -1076,7 +1219,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#49-53" title="Go to source code"><var>$domainRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#67-71" title="Go to source code"><var>$domainRepository</var></a>
 
 				<div class="description short">
 					
@@ -1097,6 +1240,90 @@ TYPO3\Flow\Mvc\Controller\ActionController
 				</div>
 			</td>
 		</tr>
+		<tr data-order="securityContext" id="$securityContext">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Security\Context
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#73-77" title="Go to source code"><var>$securityContext</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$securityContext" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="workspaceRepository" id="$workspaceRepository">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Repository.WorkspaceRepository.html">TYPO3\TYPO3CR\Domain\Repository\WorkspaceRepository</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#79-83" title="Go to source code"><var>$workspaceRepository</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$workspaceRepository" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="userService" id="$userService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Neos.Service.UserService.html">TYPO3\Neos\Service\UserService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Controller.Module.Management.AssetController.html#85-89" title="Go to source code"><var>$userService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$userService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -1111,6 +1338,14 @@ TYPO3\Flow\Mvc\Controller\ActionController
 			</p>
 		</div>
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties used from <a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#properties">TYPO3\Neos\Controller\CreateContentContextTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_contextFactory"><var>$_contextFactory</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_domainRepository"><var>$_domainRepository</var></a></code>, 
+				<code><a href="class-TYPO3.Neos.Controller.CreateContentContextTrait.html#$_siteRepository"><var>$_siteRepository</var></a></code>
+			</p>
+		</div>
 
 
 
