@@ -1229,7 +1229,7 @@
 </span><span id="72" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$text</span>) === <span class="php-num">0</span>) {
 </span><span id="73" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \TYPO3\Neos\Exception(<span class="php-quote">'Given text was empty.'</span>, <span class="php-num">1457591815</span>);
 </span><span id="74" class="l">        }
-</span><span id="75" class="l">        <span class="php-var">$text</span> = <span class="php-var">$this</span>-&gt;transliterationService-&gt;<span class="php-keyword2">transliterate</span>(<span class="php-var">$text</span>, <span class="php-var">$language</span> ?: <span class="php-keyword1">null</span>);
+</span><span id="75" class="l">        <span class="php-var">$text</span> = <span class="php-var">$this</span>-&gt;transliterationService-&gt;<span class="php-keyword2">transliterate</span>(<span class="php-var">$text</span>, <span class="php-keyword1">isset</span>(<span class="php-var">$language</span>) ? <span class="php-var">$language</span> : <span class="php-keyword1">null</span>);
 </span><span id="76" class="l">        <span class="php-keyword1">return</span> \Behat\Transliterator\Transliterator::urlize(<span class="php-var">$text</span>);
 </span><span id="77" class="l">    }
 </span><span id="78" class="l">}
