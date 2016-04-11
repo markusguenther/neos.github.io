@@ -739,7 +739,7 @@
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#39-799" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Domain/Service/UserService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#39-821" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Domain/Service/UserService.php</a>
 		<br>
 	</div>
 
@@ -1723,6 +1723,47 @@ ACL object), but for now, this method exists in order to at least centralize and
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="currentUserCanReadWorkspace" id="_currentUserCanReadWorkspace">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_currentUserCanReadWorkspace">#</a>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#602-622" title="Go to source code">currentUserCanReadWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if the current user may read the given workspace according to one the roles of the user's accounts</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the current user may read the given workspace according to one the roles of the user's accounts</p>
+
+<p>In future versions, this logic may be implemented in Neos in a more generic way (for example, by means of an
+ACL object), but for now, this method exists in order to at least centralize and encapsulate the required logic.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$workspace</var></dt>
+						<dd>The workspace</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="currentUserCanManageWorkspace" id="_currentUserCanManageWorkspace">
 
 			<td class="attributes"><code>
@@ -1734,7 +1775,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_currentUserCanManageWorkspace">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#602-630" title="Go to source code">currentUserCanManageWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#624-652" title="Go to source code">currentUserCanManageWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the current user may manage the given workspace according to one the roles of the user's accounts</p>
@@ -1775,7 +1816,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_currentUserCanTransferOwnershipOfWorkspace">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#632-651" title="Go to source code">currentUserCanTransferOwnershipOfWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#654-673" title="Go to source code">currentUserCanTransferOwnershipOfWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the current user may transfer ownership of the given workspace</p>
@@ -1816,7 +1857,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultAuthenticationProviderName">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#653-662" title="Go to source code">getDefaultAuthenticationProviderName</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#675-684" title="Go to source code">getDefaultAuthenticationProviderName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the default authentication provider name</p>
@@ -1852,7 +1893,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitUserDeactivated">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#664-674" title="Go to source code">emitUserDeactivated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#686-696" title="Go to source code">emitUserDeactivated</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the given user has been activated</p>
@@ -1892,7 +1933,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_normalizeRoleIdentifiers">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#676-689" title="Go to source code">normalizeRoleIdentifiers</a>( <span>array <var>$roleIdentifiers</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#698-711" title="Go to source code">normalizeRoleIdentifiers</a>( <span>array <var>$roleIdentifiers</var></span> )</code>
 
 			<div class="description short">
 				<p>Replaces role identifiers not containing a "." into fully qualified role identifiers from the TYPO3.Neos namespace.</p>
@@ -1930,7 +1971,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_normalizeRoleIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#691-708" title="Go to source code">normalizeRoleIdentifier</a>( <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#713-730" title="Go to source code">normalizeRoleIdentifier</a>( <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Replaces a role identifier not containing a "." into fully qualified role identifier from the TYPO3.Neos namespace.</p>
@@ -1972,7 +2013,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAllRoles">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#710-742" title="Go to source code">getAllRoles</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#732-764" title="Go to source code">getAllRoles</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array with all roles of a user's accounts, including parent roles, the "Everybody" role and the
@@ -2012,7 +2053,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createPersonalWorkspace">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#744-767" title="Go to source code">createPersonalWorkspace</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>TYPO3\Flow\Security\Account <var>$account</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#766-789" title="Go to source code">createPersonalWorkspace</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span>, <span>TYPO3\Flow\Security\Account <var>$account</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a personal workspace for the given user's account if it does not exist already.</p>
@@ -2052,7 +2093,7 @@ ACL object), but for now, this method exists in order to at least centralize and
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deletePersonalWorkspace">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#769-783" title="Go to source code">deletePersonalWorkspace</a>( <span>string <var>$accountIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#791-805" title="Go to source code">deletePersonalWorkspace</a>( <span>string <var>$accountIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all personal workspaces of the given user's account if these workspaces exist. Also removes
@@ -2088,7 +2129,7 @@ all possibly existing content of these workspaces.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeOwnerFromUsersWorkspaces">#</a>
-			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#785-798" title="Go to source code">removeOwnerFromUsersWorkspaces</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Domain.Service.UserService.html#807-820" title="Go to source code">removeOwnerFromUsersWorkspaces</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.User.html">TYPO3\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes ownership of all workspaces currently owned by the given user</p>
