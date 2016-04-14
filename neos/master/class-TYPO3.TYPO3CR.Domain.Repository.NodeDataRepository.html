@@ -740,7 +740,7 @@ TYPO3\Flow\Persistence\Repository
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#28-1467" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Repository/NodeDataRepository.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#28-1479" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Repository/NodeDataRepository.php</a>
 		<br>
 	</div>
 
@@ -1835,7 +1835,7 @@ try to find a corresponding node in one of the base workspaces (if any).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByProperties">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#913-960" title="Go to source code">findByProperties</a>( <span>string <var>$term</var></span>, <span>string <var>$nodeTypeFilter</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var></span>, <span>string <var>$pathStartingPoint</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#913-971" title="Go to source code">findByProperties</a>( <span>string|array <var>$term</var></span>, <span>string <var>$nodeTypeFilter</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var></span>, <span>string <var>$pathStartingPoint</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find nodes by a value in properties</p>
@@ -1883,7 +1883,7 @@ try to find a corresponding node in one of the base workspaces (if any).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushNodeRegistry">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#962-975" title="Go to source code">flushNodeRegistry</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#973-986" title="Go to source code">flushNodeRegistry</a>( )</code>
 
 			<div class="description short">
 				<p>Flushes the addedNodes and removedNodes registry.</p>
@@ -1915,7 +1915,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addNodeTypeFilterConstraintsToQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#977-995" title="Go to source code">addNodeTypeFilterConstraintsToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$nodeTypeFilter</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#988-1006" title="Go to source code">addNodeTypeFilterConstraintsToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$nodeTypeFilter</var></span> )</code>
 
 			<div class="description short">
 				<p>Add node type filter constraints to the query builder</p>
@@ -1951,7 +1951,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeTypeFilterConstraintsForDql">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#997-1035" title="Go to source code">getNodeTypeFilterConstraintsForDql</a>( <span>string <var>$nodeTypeFilter</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1008-1046" title="Go to source code">getNodeTypeFilterConstraintsForDql</a>( <span>string <var>$nodeTypeFilter</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates a two dimensional array with the filters. First level is:
@@ -1995,7 +1995,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeTypeFilterConstraints">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1037-1072" title="Go to source code">getNodeTypeFilterConstraints</a>( <span>TYPO3\Flow\Persistence\QueryInterface <var>$query</var></span>, <span> <var>$nodeTypeFilter</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1048-1083" title="Go to source code">getNodeTypeFilterConstraints</a>( <span>TYPO3\Flow\Persistence\QueryInterface <var>$query</var></span>, <span> <var>$nodeTypeFilter</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2035,7 +2035,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterOutRemovedObjects">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1074-1090" title="Go to source code">filterOutRemovedObjects</a>( <span>array <var>&amp; $objects</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1085-1101" title="Go to source code">filterOutRemovedObjects</a>( <span>array <var>&amp; $objects</var></span> )</code>
 
 			<div class="description short">
 				<p>Iterates of the array of objects and removes all those which have recently been removed from the repository,
@@ -2073,7 +2073,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterRemovedNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1092-1112" title="Go to source code">filterRemovedNodes</a>( <span>array <var>$nodes</var></span>, <span>boolean|null <var>$removedNodes</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1103-1123" title="Go to source code">filterRemovedNodes</a>( <span>array <var>$nodes</var></span>, <span>boolean|null <var>$removedNodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes NodeData with the removed property set from the given array.</p>
@@ -2113,7 +2113,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistEntities">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1114-1130" title="Go to source code">persistEntities</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1125-1141" title="Go to source code">persistEntities</a>( )</code>
 
 			<div class="description short">
 				<p>Persists all entities managed by the repository and all cascading dependencies</p>
@@ -2142,7 +2142,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitRepositoryObjectsPersisted">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1132-1140" title="Go to source code">emitRepositoryObjectsPersisted</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1143-1151" title="Go to source code">emitRepositoryObjectsPersisted</a>( )</code>
 
 			<div class="description short">
 				<p>Signals that persistEntities() in this repository finished correctly.</p>
@@ -2174,7 +2174,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reset">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1142-1152" title="Go to source code">reset</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1153-1163" title="Go to source code">reset</a>( )</code>
 
 			<div class="description short">
 				<p>Reset instances (internal).</p>
@@ -2211,7 +2211,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addDimensionJoinConstraintsToQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1154-1171" title="Go to source code">addDimensionJoinConstraintsToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>array <var>$dimensions</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1165-1182" title="Go to source code">addDimensionJoinConstraintsToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>array <var>$dimensions</var></span> )</code>
 
 			<div class="description short">
 				<p>If $dimensions is not empty, adds join constraints to the given $queryBuilder
@@ -2249,7 +2249,7 @@ limiting the query result to matching hits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reduceNodeVariantsByWorkspacesAndDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1173-1222" title="Go to source code">reduceNodeVariantsByWorkspacesAndDimensions</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span>, <span>array <var>$dimensions</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1184-1234" title="Go to source code">reduceNodeVariantsByWorkspacesAndDimensions</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span>, <span>array <var>$dimensions</var></span> )</code>
 
 			<div class="description short">
 				<p>Given an array with duplicate nodes (from different workspaces and dimensions) those are reduced to uniqueness (by node identifier)</p>
@@ -2274,6 +2274,10 @@ limiting the query result to matching hits.</p>
 						array<br>Array of unique node results indexed by identifier
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeException.html">TYPO3\TYPO3CR\Exception\NodeException</a></code>
+					</div>
 
 
 
@@ -2291,7 +2295,7 @@ limiting the query result to matching hits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reduceNodeVariantsByWorkspaces">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1224-1250" title="Go to source code">reduceNodeVariantsByWorkspaces</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1236-1262" title="Go to source code">reduceNodeVariantsByWorkspaces</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span> )</code>
 
 			<div class="description short">
 				<p>Given an array with duplicate nodes (from different workspaces) those are reduced to uniqueness (by node identifier and dimensions hash)</p>
@@ -2331,7 +2335,7 @@ limiting the query result to matching hits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1252-1274" title="Go to source code">findByWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1264-1286" title="Go to source code">findByWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Find all NodeData objects inside a given workspace sorted by path to be used
@@ -2373,7 +2377,7 @@ in publishing. The order makes sure that parent nodes are published first.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pathExists">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1276-1300" title="Go to source code">pathExists</a>( <span>string <var>$nodePath</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1288-1312" title="Go to source code">pathExists</a>( <span>string <var>$nodePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Find out if the given path exists anywhere in the CR. (internal)
@@ -2413,7 +2417,7 @@ If you need this functionality use \TYPO3\TYPO3CR\Domain\Service\NodeService::no
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByPathWithoutReduce">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1302-1340" title="Go to source code">findByPathWithoutReduce</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>boolean <var>$includeRemovedNodes</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1314-1352" title="Go to source code">findByPathWithoutReduce</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>boolean <var>$includeRemovedNodes</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Find all node data in a path matching the given workspace hierarchy</p>
@@ -2459,7 +2463,7 @@ If you need this functionality use \TYPO3\TYPO3CR\Domain\Service\NodeService::no
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findNodesByRelatedEntities">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1342-1378" title="Go to source code">findNodesByRelatedEntities</a>( <span>array <var>$relationMap</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1354-1390" title="Go to source code">findNodesByRelatedEntities</a>( <span>array <var>$relationMap</var></span> )</code>
 
 			<div class="description short">
 				<p>Searches for possible relations to the given entity identifiers in NodeData.
@@ -2504,7 +2508,7 @@ Will return all possible NodeData objects that contain this identifiers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeAllInPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1380-1392" title="Go to source code">removeAllInPath</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1392-1404" title="Go to source code">removeAllInPath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove all nodes below a given path. Does not care about workspaces and dimensions.</p>
@@ -2538,7 +2542,7 @@ Will return all possible NodeData objects that contain this identifiers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInRemovedNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1394-1403" title="Go to source code">isInRemovedNodes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1406-1415" title="Go to source code">isInRemovedNodes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Test if a given NodeData is in the set of removed node data objects</p>
@@ -2576,7 +2580,7 @@ Will return all possible NodeData objects that contain this identifiers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1405-1421" title="Go to source code">createQueryBuilder</a>( <span>array <var>$workspaces</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1417-1433" title="Go to source code">createQueryBuilder</a>( <span>array <var>$workspaces</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2614,7 +2618,7 @@ Will return all possible NodeData objects that contain this identifiers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addParentPathConstraintToQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1423-1438" title="Go to source code">addParentPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$parentPath</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1435-1450" title="Go to source code">addParentPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$parentPath</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -2652,7 +2656,7 @@ Will return all possible NodeData objects that contain this identifiers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addPathConstraintToQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1440-1455" title="Go to source code">addPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1452-1467" title="Go to source code">addPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -2690,7 +2694,7 @@ Will return all possible NodeData objects that contain this identifiers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addIdentifierConstraintToQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1457-1466" title="Go to source code">addIdentifierConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html#1469-1478" title="Go to source code">addIdentifierConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				

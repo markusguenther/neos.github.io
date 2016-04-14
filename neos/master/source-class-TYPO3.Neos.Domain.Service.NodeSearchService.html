@@ -1205,7 +1205,7 @@
 </span></span><span id="48" class="l"><span class="php-comment">     *
 </span></span><span id="49" class="l"><span class="php-comment">     * TODO: Implement a better search when Flow offer the possibility
 </span></span><span id="50" class="l"><span class="php-comment">     *
-</span></span><span id="51" class="l"><span class="php-comment">     * @param string $term
+</span></span><span id="51" class="l"><span class="php-comment">     * @param string|array $term search term
 </span></span><span id="52" class="l"><span class="php-comment">     * @param array $searchNodeTypes
 </span></span><span id="53" class="l"><span class="php-comment">     * @param Context $context
 </span></span><span id="54" class="l"><span class="php-comment">     * @param NodeInterface $startingPoint
@@ -1213,7 +1213,7 @@
 </span></span><span id="56" class="l"><span class="php-comment">     */</span>
 </span><span id="57" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> findByProperties(<span class="php-var">$term</span>, <span class="php-keyword1">array</span> <span class="php-var">$searchNodeTypes</span>, Context <span class="php-var">$context</span>, NodeInterface <span class="php-var">$startingPoint</span> = <span class="php-keyword1">null</span>)
 </span><span id="58" class="l">    {
-</span><span id="59" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$term</span>) === <span class="php-num">0</span>) {
+</span><span id="59" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$term</span>)) {
 </span><span id="60" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-quote">'&quot;term&quot; cannot be empty: provide a term to search for.'</span>, <span class="php-num">1421329285</span>);
 </span><span id="61" class="l">        }
 </span><span id="62" class="l">        <span class="php-var">$searchResult</span> = <span class="php-keyword1">array</span>();
