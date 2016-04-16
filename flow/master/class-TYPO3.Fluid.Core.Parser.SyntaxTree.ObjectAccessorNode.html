@@ -954,7 +954,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Fluid.html">Fluid</a>\<a href="namespace-TYPO3.Fluid.Core.html">Core</a>\<a href="namespace-TYPO3.Fluid.Core.Parser.html">Parser</a>\<a href="namespace-TYPO3.Fluid.Core.Parser.SyntaxTree.html">SyntaxTree</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Fluid.Core.Parser.SyntaxTree.ObjectAccessorNode.html#19-110" title="Go to source code">TYPO3.Fluid/Classes/TYPO3/Fluid/Core/Parser/SyntaxTree/ObjectAccessorNode.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Fluid.Core.Parser.SyntaxTree.ObjectAccessorNode.html#19-120" title="Go to source code">TYPO3.Fluid/Classes/TYPO3/Fluid/Core/Parser/SyntaxTree/ObjectAccessorNode.php</a>
 		<br>
 	</div>
 
@@ -1093,7 +1093,7 @@ TemplateVariableContainer.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyPath">#</a>
-			<code><a href="source-class-TYPO3.Fluid.Core.Parser.SyntaxTree.ObjectAccessorNode.html#74-109" title="Go to source code">getPropertyPath</a>( <span>mixed <var>$subject</var></span>, <span>string <var>$propertyPath</var></span>, <span><code><a href="class-TYPO3.Fluid.Core.Rendering.RenderingContextInterface.html">TYPO3\Fluid\Core\Rendering\RenderingContextInterface</a></code> <var>$renderingContext</var></span> )</code>
+			<code><a href="source-class-TYPO3.Fluid.Core.Parser.SyntaxTree.ObjectAccessorNode.html#74-119" title="Go to source code">getPropertyPath</a>( <span>mixed <var>$subject</var></span>, <span>string <var>$propertyPath</var></span>, <span><code><a href="class-TYPO3.Fluid.Core.Rendering.RenderingContextInterface.html">TYPO3\Fluid\Core\Rendering\RenderingContextInterface</a></code> <var>$renderingContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets a property path from a given object or array.</p>
@@ -1103,7 +1103,9 @@ TemplateVariableContainer.</p>
 				<p>Gets a property path from a given object or array.</p>
 
 <p>If propertyPath is "bla.blubb", then we first call getProperty($object, 'bla'),
-and on the resulting object we call getProperty(..., 'blubb').</p>
+and on the resulting object we call getProperty(..., 'blubb').
+If propertyPath is "bla.isBlubb" or "bla.hasBlubb", and calling getProperty(..., 'isBlubb'/'hasBlubb')
+fails, we directly call $bla->isBlubb()/$bla->hasBlubb().</p>
 
 <p>For arrays the keys are checked likewise.</p>
 
