@@ -893,6 +893,7 @@
 				<li><a href="class-TYPO3.Flow.Aop.InterfaceIntroduction.html">InterfaceIntroduction</a></li>
 				<li><a href="class-TYPO3.Flow.Aop.JoinPoint.html">JoinPoint</a></li>
 				<li><a href="class-TYPO3.Flow.Aop.PropertyIntroduction.html">PropertyIntroduction</a></li>
+				<li><a href="class-TYPO3.Flow.Aop.TraitIntroduction.html">TraitIntroduction</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -960,7 +961,7 @@ used to introduce the annotated property into the target class.</p>
 
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#16-208" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Aop/AspectContainer.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#16-239" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Aop/AspectContainer.php</a>
 		<br>
 	</div>
 
@@ -980,7 +981,7 @@ used to introduce the annotated property into the target class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#73-81" title="Go to source code">__construct</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#80-88" title="Go to source code">__construct</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>The constructor</p>
@@ -1014,7 +1015,7 @@ used to introduce the annotated property into the target class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#83-91" title="Go to source code">getClassName</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#90-98" title="Go to source code">getClassName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of the aspect class</p>
@@ -1047,7 +1048,7 @@ used to introduce the annotated property into the target class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAdvisors">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#93-101" title="Go to source code">getAdvisors</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#100-108" title="Go to source code">getAdvisors</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the advisors which were defined in the aspect</p>
@@ -1080,7 +1081,7 @@ used to introduce the annotated property into the target class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInterfaceIntroductions">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#103-111" title="Go to source code">getInterfaceIntroductions</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#110-118" title="Go to source code">getInterfaceIntroductions</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the interface introductions which were defined in the aspect</p>
@@ -1113,7 +1114,7 @@ used to introduce the annotated property into the target class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyIntroductions">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#113-121" title="Go to source code">getPropertyIntroductions</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#120-128" title="Go to source code">getPropertyIntroductions</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the property introductions which were defined in the aspect</p>
@@ -1135,6 +1136,39 @@ used to introduce the annotated property into the target class.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getTraitIntroductions" id="_getTraitIntroductions">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTraitIntroductions">#</a>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#130-138" title="Go to source code">getTraitIntroductions</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the trait introductions which were defined in the aspect</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the trait introductions which were defined in the aspect</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Array of \TYPO3\Flow\Aop\TraitIntroduction objects
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getPointcuts" id="_getPointcuts">
 
 			<td class="attributes"><code>
@@ -1146,7 +1180,7 @@ used to introduce the annotated property into the target class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPointcuts">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#123-133" title="Go to source code">getPointcuts</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#140-150" title="Go to source code">getPointcuts</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the pointcuts which were declared in the aspect. This
@@ -1183,7 +1217,7 @@ expressions for the advisors!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addAdvisor">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#135-144" title="Go to source code">addAdvisor</a>( <span><code><a href="class-TYPO3.Flow.Aop.Advisor.html">TYPO3\Flow\Aop\Advisor</a></code> <var>$advisor</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#152-161" title="Go to source code">addAdvisor</a>( <span><code><a href="class-TYPO3.Flow.Aop.Advisor.html">TYPO3\Flow\Aop\Advisor</a></code> <var>$advisor</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds an advisor to this aspect container</p>
@@ -1217,7 +1251,7 @@ expressions for the advisors!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addInterfaceIntroduction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#146-155" title="Go to source code">addInterfaceIntroduction</a>( <span><code><a href="class-TYPO3.Flow.Aop.InterfaceIntroduction.html">TYPO3\Flow\Aop\InterfaceIntroduction</a></code> <var>$introduction</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#163-172" title="Go to source code">addInterfaceIntroduction</a>( <span><code><a href="class-TYPO3.Flow.Aop.InterfaceIntroduction.html">TYPO3\Flow\Aop\InterfaceIntroduction</a></code> <var>$introduction</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds an introduction declaration to this aspect container</p>
@@ -1251,7 +1285,41 @@ expressions for the advisors!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addPropertyIntroduction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#157-166" title="Go to source code">addPropertyIntroduction</a>( <span><code><a href="class-TYPO3.Flow.Aop.PropertyIntroduction.html">TYPO3\Flow\Aop\PropertyIntroduction</a></code> <var>$introduction</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#174-183" title="Go to source code">addPropertyIntroduction</a>( <span><code><a href="class-TYPO3.Flow.Aop.PropertyIntroduction.html">TYPO3\Flow\Aop\PropertyIntroduction</a></code> <var>$introduction</var></span> )</code>
+
+			<div class="description short">
+				<p>Adds an introduction declaration to this aspect container</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Adds an introduction declaration to this aspect container</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$introduction</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addTraitIntroduction" id="_addTraitIntroduction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addTraitIntroduction">#</a>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#185-194" title="Go to source code">addTraitIntroduction</a>( <span><code><a href="class-TYPO3.Flow.Aop.TraitIntroduction.html">TYPO3\Flow\Aop\TraitIntroduction</a></code> <var>$introduction</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds an introduction declaration to this aspect container</p>
@@ -1285,7 +1353,7 @@ expressions for the advisors!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addPointcut">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#168-177" title="Go to source code">addPointcut</a>( <span><code><a href="class-TYPO3.Flow.Aop.Pointcut.Pointcut.html">TYPO3\Flow\Aop\Pointcut\Pointcut</a></code> <var>$pointcut</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#196-205" title="Go to source code">addPointcut</a>( <span><code><a href="class-TYPO3.Flow.Aop.Pointcut.Pointcut.html">TYPO3\Flow\Aop\Pointcut\Pointcut</a></code> <var>$pointcut</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds a pointcut (from a pointcut declaration) to this aspect container</p>
@@ -1319,7 +1387,7 @@ expressions for the advisors!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reduceTargetClassNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#179-199" title="Go to source code">reduceTargetClassNames</a>( <span><code><a href="class-TYPO3.Flow.Aop.Builder.ClassNameIndex.html">TYPO3\Flow\Aop\Builder\ClassNameIndex</a></code> <var>$classNameIndex</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#207-230" title="Go to source code">reduceTargetClassNames</a>( <span><code><a href="class-TYPO3.Flow.Aop.Builder.ClassNameIndex.html">TYPO3\Flow\Aop\Builder\ClassNameIndex</a></code> <var>$classNameIndex</var></span> )</code>
 
 			<div class="description short">
 				<p>This method is used to optimize the matching process.</p>
@@ -1357,7 +1425,7 @@ expressions for the advisors!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedTargetClassNameCandidates">#</a>
-			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#201-207" title="Go to source code">getCachedTargetClassNameCandidates</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#232-238" title="Go to source code">getCachedTargetClassNameCandidates</a>( )</code>
 
 			<div class="description short">
 				
@@ -1495,6 +1563,31 @@ expressions for the advisors!</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="traitIntroductions" id="$traitIntroductions">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#62-67" title="Go to source code"><var>$traitIntroductions</var></a>
+
+				<div class="description short">
+					<p>An array of \TYPO3\Flow\Aop\TraitIntroduction objects</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>An array of \TYPO3\Flow\Aop\TraitIntroduction objects</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$traitIntroductions" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="pointcuts" id="$pointcuts">
 			<td class="attributes"><code>
 				protected  
@@ -1502,7 +1595,7 @@ expressions for the advisors!</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#62-66" title="Go to source code"><var>$pointcuts</var></a>
+					<a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#69-73" title="Go to source code"><var>$pointcuts</var></a>
 
 				<div class="description short">
 					<p>An array of explicitly declared \TYPO3\Flow\Pointcut objects</p>
@@ -1527,7 +1620,7 @@ expressions for the advisors!</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#68-71" title="Go to source code"><var>$cachedTargetClassNameCandidates</var></a>
+					<a href="source-class-TYPO3.Flow.Aop.AspectContainer.html#75-78" title="Go to source code"><var>$cachedTargetClassNameCandidates</var></a>
 
 				<div class="description short">
 					
