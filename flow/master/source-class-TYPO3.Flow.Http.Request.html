@@ -1227,6 +1227,7 @@
 				<li><a href="class-TYPO3.Flow.Reflection.PropertyReflection.html">TYPO3\Flow\Reflection\PropertyReflection</a></li>
 				<li><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></li>
 				<li><a href="class-TYPO3.Flow.Resource.Collection.html">TYPO3\Flow\Resource\Collection</a></li>
+				<li><a href="class-TYPO3.Flow.Resource.Publishing.MessageCollector.html">TYPO3\Flow\Resource\Publishing\MessageCollector</a></li>
 				<li><a href="class-TYPO3.Flow.Resource.Publishing.ResourcePublisher.html" class="deprecated">TYPO3\Flow\Resource\Publishing\ResourcePublisher</a></li>
 				<li><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></li>
 				<li><a href="class-TYPO3.Flow.Resource.ResourceManager.html">TYPO3\Flow\Resource\ResourceManager</a></li>
@@ -2009,7 +2010,7 @@
 </span><span id="148" class="l">            <span class="php-var">$defaultServerEnvironment</span>[<span class="php-quote">'HTTP_CONTENT_TYPE'</span>] = <span class="php-quote">'application/x-www-form-urlencoded'</span>;
 </span><span id="149" class="l">        }
 </span><span id="150" class="l">
-</span><span id="151" class="l">        <span class="php-var">$query</span> = <span class="php-var">$uri</span>-&gt;getQuery();
+</span><span id="151" class="l">        <span class="php-var">$query</span> = (string)<span class="php-var">$uri</span>-&gt;getQuery();
 </span><span id="152" class="l">        <span class="php-var">$fragment</span> = <span class="php-var">$uri</span>-&gt;getFragment();
 </span><span id="153" class="l">        <span class="php-var">$overrideValues</span> = <span class="php-keyword1">array</span>(
 </span><span id="154" class="l">            <span class="php-quote">'REQUEST_URI'</span> =&gt; <span class="php-var">$uri</span>-&gt;getPath() . (<span class="php-var">$query</span> !== <span class="php-quote">''</span> ? <span class="php-quote">'?'</span> . <span class="php-var">$query</span> : <span class="php-quote">''</span>) . (<span class="php-var">$fragment</span> !== <span class="php-quote">''</span> ? <span class="php-quote">'#'</span> . <span class="php-var">$fragment</span> : <span class="php-quote">''</span>),
@@ -2604,6 +2605,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?987af4aaad1e7f6967ae84ce51fa5d010184a0af"></script>
+<script src="elementlist.js?1a74f9d3524b888e50230aae16b6078a50c8e040"></script>
 </body>
 </html>
