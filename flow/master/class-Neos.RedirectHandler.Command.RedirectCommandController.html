@@ -1029,7 +1029,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#26-380" title="Go to source code">Neos.RedirectHandler/Classes/Command/RedirectCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#26-404" title="Go to source code">Neos.RedirectHandler/Classes/Command/RedirectCommandController.php</a>
 		<br>
 	</div>
 
@@ -1049,22 +1049,25 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#51-104" title="Go to source code">listCommand</a>( <span>string <var>$host</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$match</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#51-109" title="Go to source code">listCommand</a>( <span>string <var>$host</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$match</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				
+				<p>List all redirects</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>List all redirects</p>
+
+<p>Lists all saved redirects. Optionally it is possible to filter by <code>host</code> and to use the argument <code>match</code> to
+look for certain <code>source</code> or <code>target</code> paths.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$host</var></dt>
-						<dd>Filter redirects by the given hostname</dd>
+						<dd>(optional) Filter redirects by the given hostname</dd>
 						<dt><var>$match</var></dt>
-						<dd>Match source or target URI by a regular expression</dd>
+						<dd>(optional) A string to match for the <code>source</code> or the <code>target</code></dd>
 					</dl></div>
 
 
@@ -1085,22 +1088,27 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_exportCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#106-141" title="Go to source code">exportCommand</a>( <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$host</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#111-151" title="Go to source code">exportCommand</a>( <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$host</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Save all redirectection to a CSV file</p>
+				<p>Export redirects to CSV</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Save all redirectection to a CSV file</p>
+				<p>Export redirects to CSV</p>
+
+<p>This command will export all redirects in CSV format. You can set a preferred
+filename before the export with the optional <code>filename</code> argument. If no <code>filename</code> argument is supplied, the
+export will be returned within the CLI. This operation requires the package <code>league/csv</code>. Install it by running
+<code>composer require league/csv</code>.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$filename</var></dt>
-						<dd>CSV file path, if null use standard output</dd>
+						<dd>(optional) The filename for the CSV file</dd>
 						<dt><var>$host</var></dt>
-						<dd>Optional full qualified host name</dd>
+						<dd>(optional) Only export hosts for a specified host</dd>
 					</dl></div>
 
 
@@ -1121,14 +1129,24 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#143-222" title="Go to source code">importCommand</a>( <span>string <var>$filename</var></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#153-242" title="Go to source code">importCommand</a>( <span>string <var>$filename</var></span> )</code>
 
 			<div class="description short">
-				<p>Import redirects from a CSV file</p>
+				<p>Import redirects from CSV file</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Import redirects from a CSV file</p>
+				<p>Import redirects from CSV file</p>
+
+<p>This command is used to (re)import CSV files containing redirects.
+The argument <code>filename</code> is the name of the file you uploaded to the root folder.
+This operation requires the package <code>league/csv</code>. Install it by running <code>composer require league/csv</code>.
+Structure per line is:
+<code>sourcePath</code>,<code>targetPath</code>,<code>statusCode</code>,<code>host</code> (optional)
+After a successful import a report will be shown. While <code>++</code> marks newly created redirects, <code>~~</code> marks already
+existing redirect source paths along with the used status code and <code>source</code>.
+<code>redirect:import</code> will not delete pre-existing redirects. To do this run <code>redirect:removeall</code> before
+the import. Be aware that this will also delete all automatically generated redirects.</p>
 
 
 					<h4>Parameters</h4>
@@ -1155,7 +1173,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isSame">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#224-238" title="Go to source code">isSame</a>( <span><code><a href="class-Neos.RedirectHandler.RedirectInterface.html">Neos\RedirectHandler\RedirectInterface</a></code> <var>$sourceUriPath</var></span>, <span>string <var>$targetUriPath</var></span>, <span>string <var>$host</var></span>, <span>string <var>$statusCode</var></span>, <span><code><a href="class-Neos.RedirectHandler.RedirectInterface.html">Neos\RedirectHandler\RedirectInterface</a></code> <var>$redirect</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#244-258" title="Go to source code">isSame</a>( <span><code><a href="class-Neos.RedirectHandler.RedirectInterface.html">Neos\RedirectHandler\RedirectInterface</a></code> <var>$sourceUriPath</var></span>, <span>string <var>$targetUriPath</var></span>, <span>string <var>$host</var></span>, <span>string <var>$statusCode</var></span>, <span><code><a href="class-Neos.RedirectHandler.RedirectInterface.html">Neos\RedirectHandler\RedirectInterface</a></code> <var>$redirect</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1201,7 +1219,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_outputWarningForLeagueCsvPackage">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#240-252" title="Go to source code">outputWarningForLeagueCsvPackage</a>( )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#260-272" title="Go to source code">outputWarningForLeagueCsvPackage</a>( )</code>
 
 			<div class="description short">
 				
@@ -1230,24 +1248,25 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#254-272" title="Go to source code">removeCommand</a>( <span>string <var>$source</var></span>, <span>string <var>$host</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#274-293" title="Go to source code">removeCommand</a>( <span>string <var>$source</var></span>, <span>string <var>$host</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Removes a redirect</p>
+				<p>Remove a single redirect</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Removes a redirect</p>
+				<p>Remove a single redirect</p>
 
-<p>This command deletes a redirect from the RedirectRepository</p>
+<p>This command is used the delete a single redirect. The redirect is identified by the <code>source</code> argument.
+When using multiple domains for redirects the <code>host</code> argument is necessary to identify the correct one.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$source</var></dt>
-						<dd>The source URI path of the redirect to remove, as given by redirect:list</dd>
+						<dd>The source URI path of the redirect to remove, as given by <code>redirect:list</code></dd>
 						<dt><var>$host</var></dt>
-						<dd>Full qualified host name</dd>
+						<dd>(optional) Only remove redirects that use this host</dd>
 					</dl></div>
 
 
@@ -1268,7 +1287,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeAllCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#274-285" title="Go to source code">removeAllCommand</a>( )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#295-306" title="Go to source code">removeAllCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Removes all redirects</p>
@@ -1299,14 +1318,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeByHostCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#287-305" title="Go to source code">removeByHostCommand</a>( <span>string <var>$host</var></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#308-326" title="Go to source code">removeByHostCommand</a>( <span>string <var>$host</var></span> )</code>
 
 			<div class="description short">
-				<p>Removes all redirects by host</p>
+				<p>Remove all redirects by host</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Removes all redirects by host</p>
+				<p>Remove all redirects by host</p>
 
 <p>This command deletes all redirects from the RedirectRepository by host value.
 If <code>all</code> is entered the redirects valid for all hosts are deleted.</p>
@@ -1336,16 +1355,19 @@ If <code>all</code> is entered the redirects valid for all hosts are deleted.</p
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addCommand">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#307-349" title="Go to source code">addCommand</a>( <span>string <var>$source</var></span>, <span>string <var>$target</var></span>, <span>integer <var>$statusCode</var></span>, <span>string <var>$host</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#328-373" title="Go to source code">addCommand</a>( <span>string <var>$source</var></span>, <span>string <var>$target</var></span>, <span>integer <var>$statusCode</var></span>, <span>string <var>$host</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Adds a redirect</p>
+				<p>Add a redirect</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Adds a redirect</p>
+				<p>Add a redirect</p>
 
-<p>This command adds a new redirect to the RedirectRepository using the RedirectService</p>
+<p>Creates a new custom redirect. The optional argument <code>host</code> is used to define a specific redirect only valid
+for a certain domain If no <code>host</code> argument is supplied, the redirect will act as a fallback redirect for all
+domains in use. If any redirect exists with the same <code>source</code> property, it will be replaced if the <code>force</code>
+property has been set.</p>
 
 
 					<h4>Parameters</h4>
@@ -1353,11 +1375,11 @@ If <code>all</code> is entered the redirects valid for all hosts are deleted.</p
 						<dt><var>$source</var></dt>
 						<dd>The relative URI path that should trigger the redirect</dd>
 						<dt><var>$target</var></dt>
-						<dd>The relative URI path that should be redirected to</dd>
+						<dd>The relative URI path that the redirect should point to</dd>
 						<dt><var>$statusCode</var></dt>
 						<dd>The status code of the redirect header</dd>
 						<dt><var>$host</var></dt>
-						<dd>Full qualified host name</dd>
+						<dd>(optional) The host the redirect is valid for. If none is set, the redirect is valid for all</dd>
 						<dt><var>$force</var></dt>
 						<dd>Replace existing redirect (based on the source URI)</dd>
 					</dl></div>
@@ -1380,7 +1402,7 @@ If <code>all</code> is entered the redirects valid for all hosts are deleted.</p
 
 			<td class="name"><div>
 			<a class="anchor" href="#_outputRedirectLine">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#351-365" title="Go to source code">outputRedirectLine</a>( <span>string <var>$prefix</var></span>, <span><code><a href="class-Neos.RedirectHandler.RedirectInterface.html">Neos\RedirectHandler\RedirectInterface</a></code> <var>$redirect</var></span> )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#375-389" title="Go to source code">outputRedirectLine</a>( <span>string <var>$prefix</var></span>, <span><code><a href="class-Neos.RedirectHandler.RedirectInterface.html">Neos\RedirectHandler\RedirectInterface</a></code> <var>$redirect</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1416,7 +1438,7 @@ If <code>all</code> is entered the redirects valid for all hosts are deleted.</p
 
 			<td class="name"><div>
 			<a class="anchor" href="#_outputLegend">#</a>
-			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#367-379" title="Go to source code">outputLegend</a>( )</code>
+			<code><a href="source-class-Neos.RedirectHandler.Command.RedirectCommandController.html#391-403" title="Go to source code">outputLegend</a>( )</code>
 
 			<div class="description short">
 				
