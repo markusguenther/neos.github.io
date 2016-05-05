@@ -86,21 +86,6 @@
 						<a href="namespace-Neos.Diff.Renderer.Text.html">
 							Text						</a>
 							</li>
-								</ul></li></ul></li>
-					<li>
-						<a href="namespace-Neos.RedirectHandler.html">
-							RedirectHandler<span></span>
-						</a>
-							<ul>
-					<li>
-						<a href="namespace-Neos.RedirectHandler.NeosAdapter.html">
-							NeosAdapter<span></span>
-						</a>
-							<ul>
-					<li>
-						<a href="namespace-Neos.RedirectHandler.NeosAdapter.Service.html">
-							Service						</a>
-							</li>
 								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-TYPO3.html">
@@ -704,8 +689,6 @@
 				<li><a href="class-Neos.Diff.Renderer.Text.TextContextRenderer.html">Neos\Diff\Renderer\Text\TextContextRenderer</a></li>
 				<li><a href="class-Neos.Diff.Renderer.Text.TextUnifiedRenderer.html">Neos\Diff\Renderer\Text\TextUnifiedRenderer</a></li>
 				<li><a href="class-Neos.Diff.SequenceMatcher.html">Neos\Diff\SequenceMatcher</a></li>
-				<li><a href="class-Neos.RedirectHandler.NeosAdapter.Package.html">Neos\RedirectHandler\NeosAdapter\Package</a></li>
-				<li><a href="class-Neos.RedirectHandler.NeosAdapter.Service.NodeRedirectService.html">Neos\RedirectHandler\NeosAdapter\Service\NodeRedirectService</a></li>
 				<li><a href="class-TYPO3.Media.Command.MediaCommandController.html">TYPO3\Media\Command\MediaCommandController</a></li>
 				<li><a href="class-TYPO3.Media.Controller.AssetController.html">TYPO3\Media\Controller\AssetController</a></li>
 				<li><a href="class-TYPO3.Media.Controller.ThumbnailController.html">TYPO3\Media\Controller\ThumbnailController</a></li>
@@ -1124,7 +1107,6 @@
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-Neos.RedirectHandler.NeosAdapter.Service.NodeRedirectServiceInterface.html">Neos\RedirectHandler\NeosAdapter\Service\NodeRedirectServiceInterface</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Model.Adjustment.AdjustmentInterface.html">TYPO3\Media\Domain\Model\Adjustment\AdjustmentInterface</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Model.Adjustment.ImageAdjustmentInterface.html">TYPO3\Media\Domain\Model\Adjustment\ImageAdjustmentInterface</a></li>
 				<li><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></li>
@@ -1408,8 +1390,8 @@
 </span><span id="228" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimensionName</span>])) {
 </span><span id="229" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeContextException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Failed creating a %s because the specified target dimension &quot;%s&quot; does not exist'</span>, <span class="php-var">$this</span>-&gt;contextImplementation, <span class="php-var">$dimensionName</span>), <span class="php-num">1391340781</span>);
 </span><span id="230" class="l">            }
-</span><span id="231" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$dimensionValue</span>, <span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimensionName</span>])) {
-</span><span id="232" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeContextException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Failed creating a %s because the specified target dimension value %s for dimension %s is not in the list of dimension values (%s)'</span>, <span class="php-var">$this</span>-&gt;contextImplementation, <span class="php-var">$dimensionValue</span>, <span class="php-var">$dimensionName</span>, <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, <span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimensionName</span>])), <span class="php-num">1391340741</span>);
+</span><span id="231" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$dimensionValue</span> !== <span class="php-keyword1">null</span> &amp;&amp; !<span class="php-keyword2">in_array</span>(<span class="php-var">$dimensionValue</span>, <span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimensionName</span>])) {
+</span><span id="232" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeContextException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Failed creating a %s because the specified target dimension value &quot;%s&quot; for dimension &quot;%s&quot; is not in the list of dimension values (%s)'</span>, <span class="php-var">$this</span>-&gt;contextImplementation, <span class="php-var">$dimensionValue</span>, <span class="php-var">$dimensionName</span>, <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, <span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimensionName</span>])), <span class="php-num">1391340741</span>);
 </span><span id="233" class="l">            }
 </span><span id="234" class="l">        }
 </span><span id="235" class="l">    }
@@ -1505,6 +1487,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?a1d4962270cb96cb4c139d014963af8c5818f252"></script>
+<script src="elementlist.js?92a74c065b9d60bec981d94e799c5a0c7b043d67"></script>
 </body>
 </html>
