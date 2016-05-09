@@ -124,6 +124,10 @@
 							Adjustment						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Domain.Model.Dto.html">
+							Dto						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.Domain.Model.ThumbnailGenerator.html">
 							ThumbnailGenerator						</a>
 							</li>
@@ -239,8 +243,14 @@
 							</li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Domain.Model.html">
-							Model						</a>
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Model.Dto.html">
+							Dto						</a>
 							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Domain.Repository.html">
 							Repository						</a>
@@ -248,6 +258,10 @@
 					<li>
 						<a href="namespace-TYPO3.Neos.Domain.Service.html">
 							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Strategy.html">
+							Strategy						</a>
 							</li>
 								</ul></li>
 					<li>
@@ -749,7 +763,7 @@ TYPO3\Flow\Persistence\Repository
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#23-280" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Repository/AssetRepository.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#24-313" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Repository/AssetRepository.php</a>
 		<br>
 	</div>
 
@@ -769,7 +783,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findBySearchTermOrTags">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#44-67" title="Go to source code">findBySearchTermOrTags</a>( <span>string <var>$searchTerm</var></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#51-74" title="Go to source code">findBySearchTermOrTags</a>( <span>string <var>$searchTerm</var></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find assets by title or given tags</p>
@@ -811,7 +825,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByTag">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#69-83" title="Go to source code">findByTag</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Tag.html">TYPO3\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#76-90" title="Go to source code">findByTag</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Tag.html">TYPO3\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find Assets with the given Tag assigned</p>
@@ -851,7 +865,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countByTag">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#85-109" title="Go to source code">countByTag</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Tag.html">TYPO3\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#92-116" title="Go to source code">countByTag</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.Tag.html">TYPO3\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Counts Assets with the given Tag assigned</p>
@@ -891,7 +905,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findAll">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#111-120" title="Go to source code">findAll</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#118-127" title="Go to source code">findAll</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -924,7 +938,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countAll">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#122-134" title="Go to source code">countAll</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#129-141" title="Go to source code">countAll</a>( )</code>
 
 			<div class="description short">
 				
@@ -957,7 +971,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findUntagged">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#136-149" title="Go to source code">findUntagged</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#143-156" title="Go to source code">findUntagged</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find Assets without any tag</p>
@@ -995,7 +1009,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countUntagged">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#151-173" title="Go to source code">countUntagged</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#158-180" title="Go to source code">countUntagged</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Counts Assets without any tag</p>
@@ -1033,7 +1047,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByAssetCollection">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#175-185" title="Go to source code">findByAssetCollection</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#182-192" title="Go to source code">findByAssetCollection</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1071,7 +1085,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countByAssetCollection">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#187-203" title="Go to source code">countByAssetCollection</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#194-210" title="Go to source code">countByAssetCollection</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var></span> )</code>
 
 			<div class="description short">
 				<p>Count assets by asset collection</p>
@@ -1109,7 +1123,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addAssetCollectionToQueryConstraints">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#205-218" title="Go to source code">addAssetCollectionToQueryConstraints</a>( <span>TYPO3\Flow\Persistence\Doctrine\Query <var>$query</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#212-225" title="Go to source code">addAssetCollectionToQueryConstraints</a>( <span>TYPO3\Flow\Persistence\Doctrine\Query <var>$query</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.AssetCollection.html">TYPO3\Media\Domain\Model\AssetCollection</a></code> <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1145,7 +1159,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addImageVariantFilterClause">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#220-229" title="Go to source code">addImageVariantFilterClause</a>( <span>TYPO3\Flow\Persistence\Doctrine\Query <var>$query</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#227-236" title="Go to source code">addImageVariantFilterClause</a>( <span>TYPO3\Flow\Persistence\Doctrine\Query <var>$query</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1182,7 +1196,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findOneByResourceSha1">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#231-240" title="Go to source code">findOneByResourceSha1</a>( <span>string <var>$sha1</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#238-247" title="Go to source code">findOneByResourceSha1</a>( <span>string <var>$sha1</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1220,7 +1234,7 @@ TYPO3\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_iterate">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#242-263" title="Go to source code">iterate</a>( <span>Doctrine\ORM\Internal\Hydration\IterableResult <var>$iterator</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#249-270" title="Go to source code">iterate</a>( <span>Doctrine\ORM\Internal\Hydration\IterableResult <var>$iterator</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Iterate over an IterableResult and return a Generator</p>
@@ -1263,7 +1277,7 @@ manager and detaches the current object on each iteration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findAllIterator">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#265-279" title="Go to source code">findAllIterator</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#272-286" title="Go to source code">findAllIterator</a>( )</code>
 
 			<div class="description short">
 				<p>Find all objects and return an IterableResult</p>
@@ -1278,6 +1292,80 @@ manager and detaches the current object on each iteration.</p>
 					<div class="list">
 						Doctrine\ORM\Internal\Hydration\IterableResult
 					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="remove" id="_remove">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_remove">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#288-299" title="Go to source code">remove</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
+
+			<div class="description short">
+				<p>Remove an asset while first validating if the object can be removed or
+if removal is blocked because the asset is still in use.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Remove an asset while first validating if the object can be removed or
+if removal is blocked because the asset is still in use.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$object</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="removeWithoutUsageChecks" id="_removeWithoutUsageChecks">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_removeWithoutUsageChecks">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#301-312" title="Go to source code">removeWithoutUsageChecks</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
+
+			<div class="description short">
+				<p>Remove the asset even if it is still in use. Use with care, it is probably
+better to first make sure the asset is not used anymore and then use
+the remove() method for removal.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Remove the asset even if it is still in use. Use with care, it is probably
+better to first make sure the asset is not used anymore and then use
+the remove() method for removal.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$object</var></dt>
+						<dd></dd>
+					</dl></div>
+
 
 
 
@@ -1308,7 +1396,7 @@ manager and detaches the current object on each iteration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#30-37" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#31-38" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					<p>Doctrine's Entity Manager. Note that "ObjectManager" is the name of the related
@@ -1338,7 +1426,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#39-42" title="Go to source code"><var>$defaultOrderings</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#40-43" title="Go to source code"><var>$defaultOrderings</var></a>
 
 				<div class="description short">
 					
@@ -1353,6 +1441,34 @@ interface ...</p>
 				<div>
 					<a href="#$defaultOrderings" class="anchor">#</a>
 					<code><span class="php-keyword1">array</span>(<span class="php-quote">'lastModified'</span> =&gt; QueryInterface::ORDER_DESCENDING)</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="assetService" id="$assetService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Media.Domain.Service.AssetService.html">TYPO3\Media\Domain\Service\AssetService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Media.Domain.Repository.AssetRepository.html#45-49" title="Go to source code"><var>$assetService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$assetService" class="anchor">#</a>
+					<code></code>
 				</div>
 			</td>
 		</tr>
