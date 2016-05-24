@@ -1204,7 +1204,7 @@
 </span><span id="44" class="l">            <span class="php-var">$packageGroup</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$packagePath</span>, <span class="php-num">0</span>, <span class="php-keyword2">strpos</span>(<span class="php-var">$packagePath</span>, <span class="php-quote">'/'</span>));
 </span><span id="45" class="l">            <span class="php-var">$packageGroups</span>[<span class="php-var">$packageGroup</span>][<span class="php-var">$package</span>-&gt;getPackageKey()] = <span class="php-keyword1">array</span>(
 </span><span id="46" class="l">                <span class="php-quote">'sanitizedPackageKey'</span> =&gt; <span class="php-keyword2">str_replace</span>(<span class="php-quote">'.'</span>, <span class="php-quote">''</span>, <span class="php-var">$package</span>-&gt;getPackageKey()),
-</span><span id="47" class="l">                <span class="php-quote">'version'</span> =&gt; <span class="php-var">$package</span>-&gt;getPackageMetaData()-&gt;getVersion(),
+</span><span id="47" class="l">                <span class="php-quote">'version'</span> =&gt; <span class="php-var">$package</span>-&gt;getInstalledVersion(),
 </span><span id="48" class="l">                <span class="php-quote">'name'</span> =&gt; <span class="php-var">$package</span>-&gt;getComposerManifest(<span class="php-quote">'name'</span>),
 </span><span id="49" class="l">                <span class="php-quote">'type'</span> =&gt; <span class="php-var">$package</span>-&gt;getComposerManifest(<span class="php-quote">'type'</span>),
 </span><span id="50" class="l">                <span class="php-quote">'description'</span> =&gt; <span class="php-var">$package</span>-&gt;getPackageMetaData()-&gt;getDescription(),
