@@ -2145,7 +2145,7 @@
 </span><span id="261" class="l">
 </span><span id="262" class="l">        <span class="php-var">$commandControllerMethodArgumentMap</span> = [];
 </span><span id="263" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$reflectionService</span>-&gt;getAllSubClassNamesForClass(CommandController::<span class="php-keyword1">class</span>) <span class="php-keyword1">as</span> <span class="php-var">$className</span>) {
-</span><span id="264" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-var">$className</span>)) {
+</span><span id="264" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-var">$className</span>) || <span class="php-var">$reflectionService</span>-&gt;isClassAbstract(<span class="php-var">$className</span>)) {
 </span><span id="265" class="l">                <span class="php-keyword1">continue</span>;
 </span><span id="266" class="l">            }
 </span><span id="267" class="l">            <span class="php-var">$controllerObjectName</span> = <span class="php-var">$objectManager</span>-&gt;getObjectNameByClassName(<span class="php-var">$className</span>);
