@@ -148,6 +148,10 @@
 						<a href="namespace-TYPO3.Media.Domain.Strategy.html">
 							Strategy						</a>
 							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Validator.html">
+							Validator						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-TYPO3.Media.Exception.html">
@@ -326,10 +330,15 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-TYPO3.Neos.NodeTypes.TypoScriptObjects.html">
-							TypoScriptObjects						</a>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html">
+							DataSource						</a>
 							</li>
-								</ul></li>
+								</ul></li></ul></li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Routing.html">
 							Routing<span></span>
@@ -765,7 +774,7 @@
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#21-260" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/PublishingService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#22-272" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/PublishingService.php</a>
 		<br>
 	</div>
 
@@ -785,7 +794,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUnpublishedNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#53-83" title="Go to source code">getUnpublishedNodes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#60-90" title="Go to source code">getUnpublishedNodes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a list of nodes contained in the given workspace which are not yet published</p>
@@ -828,7 +837,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUnpublishedNodesCount">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#85-95" title="Go to source code">getUnpublishedNodesCount</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#92-102" title="Go to source code">getUnpublishedNodesCount</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the number of unpublished nodes contained in the given workspace</p>
@@ -871,7 +880,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#97-115" title="Go to source code">publishNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#104-122" title="Go to source code">publishNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given node to the specified target workspace. If no workspace is specified, the source workspace's
@@ -914,7 +923,7 @@ base workspace is assumed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#117-132" title="Go to source code">publishNodes</a>( <span>array <var>$nodes</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#124-139" title="Go to source code">publishNodes</a>( <span>array <var>$nodes</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given nodes to the specified target workspace. If no workspace is specified, the source workspace's
@@ -957,7 +966,7 @@ base workspace is assumed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_discardNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#134-157" title="Go to source code">discardNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#141-164" title="Go to source code">discardNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Discards the given node.</p>
@@ -1000,7 +1009,7 @@ base workspace is assumed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_discardNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#159-171" title="Go to source code">discardNodes</a>( <span>array <var>$nodes</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#166-178" title="Go to source code">discardNodes</a>( <span>array <var>$nodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Discards the given nodes.</p>
@@ -1039,7 +1048,7 @@ base workspace is assumed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_discardAllNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#173-195" title="Go to source code">discardAllNodes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#180-202" title="Go to source code">discardAllNodes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Discards all unpublished nodes of the given workspace.</p>
@@ -1084,7 +1093,7 @@ base workspace is assumed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sortNodesForPublishing">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#197-208" title="Go to source code">sortNodesForPublishing</a>( <span>array <var>$nodes</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#204-215" title="Go to source code">sortNodesForPublishing</a>( <span>array <var>$nodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Sort an unsorted list of nodes in a publishable order</p>
@@ -1126,7 +1135,7 @@ base workspace is assumed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePublished">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#210-224" title="Go to source code">emitNodePublished</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#217-231" title="Go to source code">emitNodePublished</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node has been published.</p>
@@ -1171,7 +1180,7 @@ workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodeDiscarded">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#226-238" title="Go to source code">emitNodeDiscarded</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#233-245" title="Go to source code">emitNodeDiscarded</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node has been discarded.</p>
@@ -1213,7 +1222,7 @@ workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createContext">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#240-259" title="Go to source code">createContext</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span>, <span>array <var>$contextProperties</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#247-271" title="Go to source code">createContext</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span>, <span>array <var>$contextProperties</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Creates a new content context based on the given workspace and the NodeData object.</p>
@@ -1267,7 +1276,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#29-33" title="Go to source code"><var>$workspaceRepository</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#30-34" title="Go to source code"><var>$workspaceRepository</var></a>
 
 				<div class="description short">
 					
@@ -1295,7 +1304,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#35-39" title="Go to source code"><var>$nodeDataRepository</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#36-40" title="Go to source code"><var>$nodeDataRepository</var></a>
 
 				<div class="description short">
 					
@@ -1323,7 +1332,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#41-45" title="Go to source code"><var>$nodeFactory</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#42-46" title="Go to source code"><var>$nodeFactory</var></a>
 
 				<div class="description short">
 					
@@ -1351,7 +1360,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#47-51" title="Go to source code"><var>$contextFactory</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#48-52" title="Go to source code"><var>$contextFactory</var></a>
 
 				<div class="description short">
 					
@@ -1368,6 +1377,34 @@ workspace.</p>
 			<td class="value">
 				<div>
 					<a href="#$contextFactory" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="contentDimensionPresetSource" id="$contentDimensionPresetSource">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Service.ContentDimensionPresetSourceInterface.html">TYPO3\TYPO3CR\Domain\Service\ContentDimensionPresetSourceInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.PublishingService.html#54-58" title="Go to source code"><var>$contentDimensionPresetSource</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$contentDimensionPresetSource" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

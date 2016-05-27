@@ -148,6 +148,10 @@
 						<a href="namespace-TYPO3.Media.Domain.Strategy.html">
 							Strategy						</a>
 							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Validator.html">
+							Validator						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-TYPO3.Media.Exception.html">
@@ -326,10 +330,15 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-TYPO3.Neos.NodeTypes.TypoScriptObjects.html">
-							TypoScriptObjects						</a>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html">
+							DataSource						</a>
 							</li>
-								</ul></li>
+								</ul></li></ul></li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Routing.html">
 							Routing<span></span>
@@ -764,7 +773,7 @@
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#18-176" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/ConfigurationContentDimensionPresetSource.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#18-240" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/ConfigurationContentDimensionPresetSource.php</a>
 		<br>
 	</div>
 
@@ -819,7 +828,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultPreset">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#49-60" title="Go to source code">getDefaultPreset</a>( <span>string <var>$dimensionName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#49-62" title="Go to source code">getDefaultPreset</a>( <span>string <var>$dimensionName</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the default preset of a dimension</p>
@@ -859,7 +868,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findPresetByDimensionValues">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#62-76" title="Go to source code">findPresetByDimensionValues</a>( <span>string <var>$dimensionName</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#64-80" title="Go to source code">findPresetByDimensionValues</a>( <span>string <var>$dimensionName</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Find a dimension preset by dimension values</p>
@@ -901,7 +910,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAllowedDimensionPresetsAccordingToPreselection">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#78-105" title="Go to source code">getAllowedDimensionPresetsAccordingToPreselection</a>( <span>string <var>$dimensionName</var></span>, <span>array <var>$preselectedDimensionPresets</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#82-109" title="Go to source code">getAllowedDimensionPresetsAccordingToPreselection</a>( <span>string <var>$dimensionName</var></span>, <span>array <var>$preselectedDimensionPresets</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a list of presets of the specified dimension which are allowed in combination with the given presets
@@ -945,7 +954,7 @@ of other dimensions.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPresetCombinationAllowedByConstraints">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#107-134" title="Go to source code">isPresetCombinationAllowedByConstraints</a>( <span>array <var>$dimensionsNamesAndPresetIdentifiers</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#111-139" title="Go to source code">isPresetCombinationAllowedByConstraints</a>( <span>array <var>$dimensionsNamesAndPresetIdentifiers</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given combination of presets is allowed, according to possibly defined constraints in the
@@ -987,7 +996,7 @@ content dimension configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPresetAllowedByConstraints">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#136-159" title="Go to source code">isPresetAllowedByConstraints</a>( <span>string <var>$dimensionName</var></span>, <span>string <var>$presetIdentifier</var></span>, <span>array <var>$constraints</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#141-165" title="Go to source code">isPresetAllowedByConstraints</a>( <span>string <var>$dimensionName</var></span>, <span>string <var>$presetIdentifier</var></span>, <span>array <var>$constraints</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given preset of the specified dimension is allowed according to the given constraints</p>
@@ -1029,7 +1038,7 @@ content dimension configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setConfiguration">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#161-175" title="Go to source code">setConfiguration</a>( <span>array <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#167-181" title="Go to source code">setConfiguration</a>( <span>array <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1050,6 +1059,90 @@ content dimension configuration.</p>
 					<div class="list">
 						<code><a href="class-TYPO3.TYPO3CR.Exception.html">TYPO3\TYPO3CR\Exception</a></code>
 					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findPresetsByTargetValues" id="_findPresetsByTargetValues">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findPresetsByTargetValues">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#183-207" title="Go to source code">findPresetsByTargetValues</a>( <span>array <var>$targetValues</var></span> )</code>
+
+			<div class="description short">
+				<p>Finds for each configured dimension the best matching preset based on given target value for that dimension.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Finds for each configured dimension the best matching preset based on given target value for that dimension.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$targetValues</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.TYPO3CR.Domain.Service.ContentDimensionPresetSourceInterface.html#_findPresetsByTargetValues">TYPO3\TYPO3CR\Domain\Service\ContentDimensionPresetSourceInterface::findPresetsByTargetValues()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="comparePresetsForTargetValue" id="_comparePresetsForTargetValue">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_comparePresetsForTargetValue">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ConfigurationContentDimensionPresetSource.html#209-239" title="Go to source code">comparePresetsForTargetValue</a>( <span>array <var>$possibleBetterPreset</var></span>, <span>array <var>$targetValues</var></span>, <span>array <var>$currentBestPreset</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Compares the given $possibleBetterPreset to the $targetValues (based on the position of the contained values)
+and returns either $possibleBetterPreset or the $currentBestPreset, depending on the result.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Compares the given $possibleBetterPreset to the $targetValues (based on the position of the contained values)
+and returns either $possibleBetterPreset or the $currentBestPreset, depending on the result.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$possibleBetterPreset</var></dt>
+						<dd></dd>
+						<dt><var>$targetValues</var></dt>
+						<dd></dd>
+						<dt><var>$currentBestPreset</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
 
 
 

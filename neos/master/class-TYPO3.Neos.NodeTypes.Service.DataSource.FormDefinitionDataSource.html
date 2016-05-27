@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Deprecated Class TYPO3\Neos\NodeTypes\TypoScriptObjects\AssetListImplementation | Neos (master branch)</title>
+	<title>Class TYPO3\Neos\NodeTypes\Service\DataSource\FormDefinitionDataSource | Neos (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-TYPO3.Neos.NodeTypes.TypoScriptObjects.html" title="Summary of TYPO3\Neos\NodeTypes\TypoScriptObjects"><span>Namespace</span></a>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html" title="Summary of TYPO3\Neos\NodeTypes\Service\DataSource"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -147,6 +147,10 @@
 					<li>
 						<a href="namespace-TYPO3.Media.Domain.Strategy.html">
 							Strategy						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Validator.html">
+							Validator						</a>
 							</li>
 								</ul></li>
 					<li>
@@ -326,10 +330,15 @@
 						</a>
 							<ul>
 					<li class="active">
-						<a href="namespace-TYPO3.Neos.NodeTypes.TypoScriptObjects.html">
-							TypoScriptObjects						</a>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html">
+							DataSource						</a>
 							</li>
-								</ul></li>
+								</ul></li></ul></li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Routing.html">
 							Routing<span></span>
@@ -695,7 +704,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-TYPO3.Neos.NodeTypes.TypoScriptObjects.AssetListImplementation.html" class="deprecated">AssetListImplementation</a></li>
+				<li class="active"><a href="class-TYPO3.Neos.NodeTypes.Service.DataSource.FormDefinitionDataSource.html">FormDefinitionDataSource</a></li>
 			</ul>
 
 
@@ -711,48 +720,25 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1 class="deprecated">Class AssetListImplementation</h1>
+	<h1>Class FormDefinitionDataSource</h1>
 
 
 	<div class="description">
-	<p>In the site import command we load images and assets and Doctrine
-serializes them in when we store the node properties as ObjectArray.</p>
-
-<p>This serialize removes the resource property without a clear reason
-and there's no solution for this issue available yet. THIS TYPOSCRIPT
-OBJECT IS A WORKAROUND! Usage is discouraged and on own risk of breakage
-on further releases of Neos.
-#</p>
+	<p>Data source interface for getting data.</p>
 	</div>
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html"><span>TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</span></a>
+			<a href="class-TYPO3.Neos.Service.DataSource.AbstractDataSource.html"><span>TYPO3\Neos\Service\DataSource\AbstractDataSource</span></a>
 			
 			 implements 
-<span>ArrayAccess</span>
+				<a href="class-TYPO3.Neos.Service.DataSource.DataSourceInterface.html"><span>TYPO3\Neos\Service\DataSource\DataSourceInterface</span></a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-			<a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html"><span>TYPO3\TypoScript\TypoScriptObjects\AbstractArrayTypoScriptObject</span></a>
-			
-			 implements 
-<span>ArrayAccess</span>
-			
-			
-		</dd>
-		<dd style="padding-left:60px">
-			<img src="resources/inherit.png" alt="Extended by">
-			<a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html"><span>TYPO3\TypoScript\TypoScriptObjects\TemplateImplementation</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:90px">
-			<img src="resources/inherit.png" alt="Extended by">
-<b><span class="deprecated">TYPO3\Neos\NodeTypes\TypoScriptObjects\AssetListImplementation</span></b>			
+<b><span>TYPO3\Neos\NodeTypes\Service\DataSource\FormDefinitionDataSource</span></b>			
 			
 			
 		</dd>
@@ -768,14 +754,12 @@ on further releases of Neos.
 	<div class="alert alert-info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Neos.html">Neos</a>\<a href="namespace-TYPO3.Neos.NodeTypes.html">NodeTypes</a>\<a href="namespace-TYPO3.Neos.NodeTypes.TypoScriptObjects.html">TypoScriptObjects</a><br>
+		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Neos.html">Neos</a>\<a href="namespace-TYPO3.Neos.NodeTypes.html">NodeTypes</a>\<a href="namespace-TYPO3.Neos.NodeTypes.Service.html">Service</a>\<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html">DataSource</a><br>
 		
 
-				<b>Deprecated:</b>
-				DO NOT USE!<br>
-				<b>See:</b>
-				NEOS-121<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.NodeTypes.TypoScriptObjects.AssetListImplementation.html#22-74" title="Go to source code">TYPO3.Neos.NodeTypes/Classes/TYPO3/Neos/NodeTypes/TypoScriptObjects/AssetListImplementation.php</a>
+				<b>Api</b>
+				<br>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.NodeTypes.Service.DataSource.FormDefinitionDataSource.html#18-48" title="Go to source code">TYPO3.Neos.NodeTypes/Classes/TYPO3/Neos/NodeTypes/Service/DataSource/FormDefinitionDataSource.php</a>
 		<br>
 	</div>
 
@@ -784,18 +768,18 @@ on further releases of Neos.
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="initializeView" id="_initializeView">
+		<tr data-order="getData" id="_getData">
 
 			<td class="attributes"><code>
 				 public 
-				
+				TYPO3\Flow\Persistence\QueryResultInterface
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_initializeView">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Neos.NodeTypes.TypoScriptObjects.AssetListImplementation.html#48-73" title="Go to source code">initializeView</a>( <span><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.Helpers.FluidView.html">TYPO3\TypoScript\TypoScriptObjects\Helpers\FluidView</a></code> <var>$view</var></span> )</code>
+			<a class="anchor" href="#_getData">#</a>
+			<code><a href="source-class-TYPO3.Neos.NodeTypes.Service.DataSource.FormDefinitionDataSource.html#32-47" title="Go to source code">getData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>array <var>$arguments</var></span> )</code>
 
 			<div class="description short">
 				
@@ -807,15 +791,19 @@ on further releases of Neos.
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$view</var></dt>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+						<dt><var>$arguments</var></dt>
 						<dd></dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						TYPO3\Flow\Persistence\QueryResultInterface
+					</div>
 
 
 
-					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_initializeView">TYPO3\TypoScript\TypoScriptObjects\TemplateImplementation::initializeView</a></code></div>
 
 			</div>
 			</div></td>
@@ -824,32 +812,10 @@ on further releases of Neos.
 		</div>
 
 		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#methods">TYPO3\TypoScript\TypoScriptObjects\TemplateImplementation</a></h3></div>
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-TYPO3.Neos.Service.DataSource.AbstractDataSource.html#methods">TYPO3\Neos\Service\DataSource\AbstractDataSource</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_evaluate">evaluate()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_getLayoutRootPath">getLayoutRootPath()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_getPartialRootPath">getPartialRootPath()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_getPath">getPath()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_getSectionName">getSectionName()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.TemplateImplementation.html#_getTemplatePath">getTemplatePath()</a></code>
-			</p>
-		</div>
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#methods">TYPO3\TypoScript\TypoScriptObjects\AbstractArrayTypoScriptObject</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#_offsetExists">offsetExists()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#_offsetGet">offsetGet()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#_offsetSet">offsetSet()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#_offsetUnset">offsetUnset()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#_setIgnoreProperties">setIgnoreProperties()</a></code>
-			</p>
-		</div>
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#methods">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#___construct">__construct()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#_getTsRuntime">getTsRuntime()</a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#_tsValue">tsValue()</a></code>
+				<code><a href="class-TYPO3.Neos.Service.DataSource.AbstractDataSource.html#_getIdentifier">getIdentifier()</a></code>, 
+				<code><a href="class-TYPO3.Neos.Service.DataSource.AbstractDataSource.html#_setControllerContext">setControllerContext()</a></code>
 			</p>
 		</div>
 
@@ -865,14 +831,14 @@ on further releases of Neos.
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="imageRepository" id="$imageRepository">
+		<tr data-order="identifier" id="$identifier">
 			<td class="attributes"><code>
-				protected  
-				<code><a href="class-TYPO3.Media.Domain.Repository.ImageRepository.html">TYPO3\Media\Domain\Repository\ImageRepository</a></code>
+				protected static 
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.NodeTypes.TypoScriptObjects.AssetListImplementation.html#36-40" title="Go to source code"><var>$imageRepository</var></a>
+					<a href="source-class-TYPO3.Neos.NodeTypes.Service.DataSource.FormDefinitionDataSource.html#21-24" title="Go to source code"><var>$identifier</var></a>
 
 				<div class="description short">
 					
@@ -881,26 +847,23 @@ on further releases of Neos.
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$imageRepository" class="anchor">#</a>
-					<code></code>
+					<a href="#$identifier" class="anchor">#</a>
+					<code><span class="php-quote">'neos-nodetypes-form-definitions'</span></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="assetRepository" id="$assetRepository">
+		<tr data-order="yamlPersistenceManager" id="$yamlPersistenceManager">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-TYPO3.Media.Domain.Repository.AssetRepository.html">TYPO3\Media\Domain\Repository\AssetRepository</a></code>
+				TYPO3\Form\Persistence\YamlPersistenceManager
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.NodeTypes.TypoScriptObjects.AssetListImplementation.html#42-46" title="Go to source code"><var>$assetRepository</var></a>
+					<a href="source-class-TYPO3.Neos.NodeTypes.Service.DataSource.FormDefinitionDataSource.html#26-30" title="Go to source code"><var>$yamlPersistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -916,7 +879,7 @@ on further releases of Neos.
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$assetRepository" class="anchor">#</a>
+					<a href="#$yamlPersistenceManager" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -925,19 +888,9 @@ on further releases of Neos.
 		</div>
 
 		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#properties">TYPO3\TypoScript\TypoScriptObjects\AbstractArrayTypoScriptObject</a></h3></div>
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-TYPO3.Neos.Service.DataSource.AbstractDataSource.html#properties">TYPO3\Neos\Service\DataSource\AbstractDataSource</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#$ignoreProperties"><var>$ignoreProperties</var></a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractArrayTypoScriptObject.html#$properties"><var>$properties</var></a></code>
-			</p>
-		</div>
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#properties">TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#$path"><var>$path</var></a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#$tsRuntime"><var>$tsRuntime</var></a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#$tsValueCache"><var>$tsValueCache</var></a></code>, 
-				<code><a href="class-TYPO3.TypoScript.TypoScriptObjects.AbstractTypoScriptObject.html#$typoScriptObjectName"><var>$typoScriptObjectName</var></a></code>
+				<code><a href="class-TYPO3.Neos.Service.DataSource.AbstractDataSource.html#$controllerContext"><var>$controllerContext</var></a></code>
 			</p>
 		</div>
 

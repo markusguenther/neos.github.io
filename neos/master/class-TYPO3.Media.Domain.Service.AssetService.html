@@ -148,6 +148,10 @@
 						<a href="namespace-TYPO3.Media.Domain.Strategy.html">
 							Strategy						</a>
 							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Validator.html">
+							Validator						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-TYPO3.Media.Exception.html">
@@ -326,10 +330,15 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-TYPO3.Neos.NodeTypes.TypoScriptObjects.html">
-							TypoScriptObjects						</a>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html">
+							DataSource						</a>
 							</li>
-								</ul></li>
+								</ul></li></ul></li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Routing.html">
 							Routing<span></span>
@@ -739,7 +748,7 @@ about usage of assets and rendering thumbnails.</p>
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#31-221" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Service/AssetService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#33-302" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/Domain/Service/AssetService.php</a>
 		<br>
 	</div>
 
@@ -759,7 +768,7 @@ about usage of assets and rendering thumbnails.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRepository">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#74-90" title="Go to source code">getRepository</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#82-98" title="Go to source code">getRepository</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the repository for an asset</p>
@@ -800,7 +809,7 @@ about usage of assets and rendering thumbnails.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getThumbnailUriAndSizeForAsset">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#92-131" title="Go to source code">getThumbnailUriAndSizeForAsset</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span>, <span>TYPO3\Flow\Mvc\ActionRequest <var>$request</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#100-139" title="Go to source code">getThumbnailUriAndSizeForAsset</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-TYPO3.Media.Domain.Model.ThumbnailConfiguration.html">TYPO3\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span>, <span>TYPO3\Flow\Mvc\ActionRequest <var>$request</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Calculates the dimensions of the thumbnail to be generated and returns the thumbnail URI.
@@ -848,7 +857,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsageStrategies">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#133-151" title="Go to source code">getUsageStrategies</a>( )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#141-159" title="Go to source code">getUsageStrategies</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all registered asset usage strategies</p>
@@ -885,7 +894,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsageReferences">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#153-168" title="Go to source code">getUsageReferences</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#161-176" title="Go to source code">getUsageReferences</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of asset usage references.</p>
@@ -923,7 +932,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsageCount">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#170-185" title="Go to source code">getUsageCount</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#178-193" title="Go to source code">getUsageCount</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the total count of times an asset is used.</p>
@@ -961,7 +970,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInUse">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#187-203" title="Go to source code">isInUse</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#195-211" title="Go to source code">isInUse</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns true if the asset is used.</p>
@@ -999,7 +1008,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validateRemoval">#</a>
-			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#205-220" title="Go to source code">validateRemoval</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#213-228" title="Go to source code">validateRemoval</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Validates if the asset can be removed</p>
@@ -1021,6 +1030,81 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 						<code><a href="class-TYPO3.Media.Exception.AssetServiceException.html">TYPO3\Media\Exception\AssetServiceException</a></code><br>Thrown if the asset can not be removed
 					</div>
 
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="replaceAssetResource" id="_replaceAssetResource">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_replaceAssetResource">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#230-290" title="Go to source code">replaceAssetResource</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>TYPO3\Flow\Resource\Resource <var>$resource</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Replace resource on an asset. Takes variants and redirect handling into account.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Replace resource on an asset. Takes variants and redirect handling into account.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asset</var></dt>
+						<dd></dd>
+						<dt><var>$resource</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="emitAssetResourceReplaced" id="_emitAssetResourceReplaced">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_emitAssetResourceReplaced">#</a>
+			<code><a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#292-301" title="Go to source code">emitAssetResourceReplaced</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+
+			<div class="description short">
+				<p>Signals that a resource on an asset has been replaced</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Signals that a resource on an asset has been replaced</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asset</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Flow\signal</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -1049,7 +1133,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#39-43" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#41-45" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1077,7 +1161,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#45-49" title="Go to source code"><var>$thumbnailService</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#47-51" title="Go to source code"><var>$thumbnailService</var></a>
 
 				<div class="description short">
 					
@@ -1105,7 +1189,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#51-55" title="Go to source code"><var>$uriBuilder</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#53-57" title="Go to source code"><var>$uriBuilder</var></a>
 
 				<div class="description short">
 					
@@ -1133,7 +1217,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#57-61" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#59-63" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1161,7 +1245,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#63-67" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#65-69" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1189,7 +1273,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#69-72" title="Go to source code"><var>$usageStrategies</var></a>
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#71-74" title="Go to source code"><var>$usageStrategies</var></a>
 
 				<div class="description short">
 					
@@ -1203,6 +1287,34 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			<td class="value">
 				<div>
 					<a href="#$usageStrategies" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="packageManager" id="$packageManager">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Package\PackageManagerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Media.Domain.Service.AssetService.html#76-80" title="Go to source code"><var>$packageManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$packageManager" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
