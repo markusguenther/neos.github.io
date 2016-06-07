@@ -2260,8 +2260,8 @@
 </span><span id="602" class="l">    {
 </span><span id="603" class="l">        <span class="php-var">$acceptedTypes</span> = <span class="php-keyword2">array_map</span>(
 </span><span id="604" class="l">            <span class="php-keyword1">function</span> (<span class="php-var">$acceptType</span>) {
-</span><span id="605" class="l">                    <span class="php-var">$typeAndQuality</span> = <span class="php-keyword2">preg_split</span>(<span class="php-quote">'/;\s*q=/'</span>, <span class="php-var">$acceptType</span>);
-</span><span id="606" class="l">                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$typeAndQuality</span>[<span class="php-num">0</span>], (<span class="php-keyword1">isset</span>(<span class="php-var">$typeAndQuality</span>[<span class="php-num">1</span>]) ? (float)<span class="php-var">$typeAndQuality</span>[<span class="php-num">1</span>] : <span class="php-quote">''</span>));
+</span><span id="605" class="l">                <span class="php-var">$typeAndQuality</span> = <span class="php-keyword2">preg_split</span>(<span class="php-quote">'/;\s*q=/'</span>, <span class="php-var">$acceptType</span>);
+</span><span id="606" class="l">                <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$typeAndQuality</span>[<span class="php-num">0</span>], (<span class="php-keyword1">isset</span>(<span class="php-var">$typeAndQuality</span>[<span class="php-num">1</span>]) ? (float)<span class="php-var">$typeAndQuality</span>[<span class="php-num">1</span>] : <span class="php-quote">''</span>));
 </span><span id="607" class="l">            }, <span class="php-keyword2">preg_split</span>(<span class="php-quote">'/,\s*/'</span>, <span class="php-var">$rawValues</span>)
 </span><span id="608" class="l">        );
 </span><span id="609" class="l">
