@@ -961,7 +961,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Utility.html">Utility</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Files.html#16-478" title="Go to source code">Neos.Utility.Files/Classes/TYPO3/Flow/Utility/Files.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Files.html#16-555" title="Go to source code">Neos.Utility.Files/Classes/TYPO3/Flow/Utility/Files.php</a>
 		<br>
 	</div>
 
@@ -1711,6 +1711,98 @@ and will return TRUE. If the file still exists though, this method will return F
 						<code><a href="class-TYPO3.Flow.Utility.Exception.html">TYPO3\Flow\Utility\Exception</a></code><br>if the specified unit could not be resolved
 					</div>
 
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="createRelativeSymlink" id="_createRelativeSymlink">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createRelativeSymlink">#</a>
+			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#479-508" title="Go to source code">createRelativeSymlink</a>( <span>string <var>$target</var></span>, <span>string <var>$link</var></span> )</code>
+
+			<div class="description short">
+				<p>Will create relative symlinks by given absolute paths, falling back to Windows' mklink command because PHP's symlink() does not support relative paths there.
+If the file exists already, it will be deleted regardless of its attributes.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Will create relative symlinks by given absolute paths, falling back to Windows' mklink command because PHP's symlink() does not support relative paths there.
+If the file exists already, it will be deleted regardless of its attributes.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$target</var></dt>
+						<dd>The absolute target where the the symlink should point to relativiely</dd>
+						<dt><var>$link</var></dt>
+						<dd>The absolute path to the link where the symlink will be created</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Exception.html">TYPO3\Flow\Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRelativePath" id="_getRelativePath">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRelativePath">#</a>
+			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#510-554" title="Go to source code">getRelativePath</a>( <span>string <var>$from</var></span>, <span>string <var>$to</var></span> )</code>
+
+			<div class="description short">
+				<p>Finds the relative path between two given absolute paths.
+Credits go to stackoverflow member "Gordon".</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Finds the relative path between two given absolute paths.
+Credits go to stackoverflow member "Gordon".</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$from</var></dt>
+						<dd>An absolute path to base on</dd>
+						<dt><var>$to</var></dt>
+						<dd>An absolute path to find the relative representation onto $from</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							http://stackoverflow.com/questions/2637945/<br>
+					</div>
 
 
 			</div>
