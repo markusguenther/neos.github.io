@@ -1924,7 +1924,7 @@
 </span><span id="39" class="l">
 </span><span id="40" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getMockMessage(<span class="php-var">$type</span>)
 </span><span id="41" class="l">    {
-</span><span id="42" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getMock(<span class="php-quote">'TYPO3\Flow\Error\\'</span> . <span class="php-var">$type</span>, <span class="php-keyword1">array</span>(), <span class="php-keyword1">array</span>(), <span class="php-quote">''</span>, <span class="php-keyword1">false</span>);
+</span><span id="42" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getMockBuilder(<span class="php-quote">'TYPO3\Flow\Error\\'</span> . <span class="php-var">$type</span>)-&gt;disableOriginalConstructor()-&gt;getMock();
 </span><span id="43" class="l">    }
 </span><span id="44" class="l">
 </span><span id="45" class="l">    <span class="php-comment">/**
