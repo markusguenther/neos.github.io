@@ -979,7 +979,7 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Http.Request.html#19-736" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Http/Request.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Http.Request.html#22-868" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Http/Request.php</a>
 		<br>
 	</div>
 
@@ -999,7 +999,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#61-109" title="Go to source code">__construct</a>( <span>array <var>$get</var></span>, <span>array <var>$post</var></span>, <span>array <var>$files</var></span>, <span>array <var>$server</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#81-139" title="Go to source code">__construct</a>( <span>array <var>$get</var></span>, <span>array <var>$post</var></span>, <span>array <var>$files</var></span>, <span>array <var>$server</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs a new Request object based on the given environment data.</p>
@@ -1049,7 +1049,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#111-161" title="Go to source code">create</a>( <span><code><a href="class-TYPO3.Flow.Http.Uri.html">TYPO3\Flow\Http\Uri</a></code> <var>$uri</var></span>, <span>string <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$files</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$server</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#141-191" title="Go to source code">create</a>( <span><code><a href="class-TYPO3.Flow.Http.Uri.html">TYPO3\Flow\Http\Uri</a></code> <var>$uri</var></span>, <span>string <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$files</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$server</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Creates a new Request object from the given data.</p>
@@ -1098,7 +1098,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createFromEnvironment">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#163-176" title="Go to source code">createFromEnvironment</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#193-206" title="Go to source code">createFromEnvironment</a>( )</code>
 
 			<div class="description short">
 				<p>Considers the environment information found in PHP's superglobals and Flow's
@@ -1138,7 +1138,7 @@ matching that data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createActionRequest">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#178-189" title="Go to source code">createActionRequest</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#208-219" title="Go to source code">createActionRequest</a>( )</code>
 
 			<div class="description short">
 				<p>Creates a new Action Request request as a sub request to this HTTP request.
@@ -1166,6 +1166,35 @@ Maps the arguments of this request to the new Action Request.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="initializeTrustedProxiesConfiguration" id="_initializeTrustedProxiesConfiguration">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_initializeTrustedProxiesConfiguration">#</a>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#221-231" title="Go to source code">initializeTrustedProxiesConfiguration</a>( )</code>
+
+			<div class="description short">
+				<p>Initialize the static trustedProxiesSettings property from ConfigurationManager if not yet set.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Initialize the static trustedProxiesSettings property from ConfigurationManager if not yet set.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getUri" id="_getUri">
 
 			<td class="attributes"><code>
@@ -1177,7 +1206,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#191-200" title="Go to source code">getUri</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#233-242" title="Go to source code">getUri</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the request URI</p>
@@ -1213,7 +1242,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBaseUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#202-214" title="Go to source code">getBaseUri</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#244-256" title="Go to source code">getBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the detected base URI</p>
@@ -1249,7 +1278,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setBaseUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#216-222" title="Go to source code">setBaseUri</a>( <span><code><a href="class-TYPO3.Flow.Http.Uri.html">TYPO3\Flow\Http\Uri</a></code> <var>$baseUri</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#258-264" title="Go to source code">setBaseUri</a>( <span><code><a href="class-TYPO3.Flow.Http.Uri.html">TYPO3\Flow\Http\Uri</a></code> <var>$baseUri</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1283,7 +1312,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isSecure">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#224-233" title="Go to source code">isSecure</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#266-275" title="Go to source code">isSecure</a>( )</code>
 
 			<div class="description short">
 				<p>Indicates if this request has been received through a secure channel.</p>
@@ -1319,7 +1348,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setMethod">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#235-245" title="Go to source code">setMethod</a>( <span>string <var>$method</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#277-287" title="Go to source code">setMethod</a>( <span>string <var>$method</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the request method</p>
@@ -1356,7 +1385,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMethod">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#247-256" title="Go to source code">getMethod</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#289-298" title="Go to source code">getMethod</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the request method</p>
@@ -1392,7 +1421,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPort">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#258-267" title="Go to source code">getPort</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#300-309" title="Go to source code">getPort</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the port used for this request</p>
@@ -1428,7 +1457,7 @@ Maps the arguments of this request to the new Action Request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isMethodSafe">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#269-279" title="Go to source code">isMethodSafe</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#311-321" title="Go to source code">isMethodSafe</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if the request method is "safe", that is, it is expected to not take any
@@ -1466,7 +1495,7 @@ other action than retrieval. This should the case with "GET" and "HEAD" requests
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#281-293" title="Go to source code">getArguments</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#323-335" title="Go to source code">getArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the unified arguments of this request.</p>
@@ -1505,7 +1534,7 @@ array of arguments.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasArgument">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#295-306" title="Go to source code">hasArgument</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#337-348" title="Go to source code">hasArgument</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if an argument of the given name exists in this request.
@@ -1548,7 +1577,7 @@ Applies to GET, POST and PUT arguments similarly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArgument">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#308-318" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#350-360" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the value of the specified GET / POST / PUT argument.</p>
@@ -1589,7 +1618,7 @@ Applies to GET, POST and PUT arguments similarly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setContent">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#320-341" title="Go to source code">setContent</a>( <span>string|resource <var>$content</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#362-383" title="Go to source code">setContent</a>( <span>string|resource <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Explicitly sets the content of the request body</p>
@@ -1633,7 +1662,7 @@ into a stream resource is probably: $resource = fopen('file://path/to/file', 'rb
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContent">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#343-373" title="Go to source code">getContent</a>( <span>boolean <var>$asResource</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#385-415" title="Go to source code">getContent</a>( <span>boolean <var>$asResource</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the content of the request body</p>
@@ -1676,6 +1705,159 @@ resource, that resource will be returned, no matter if $asResource is set.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getTrustedProxyHeaderValues" id="_getTrustedProxyHeaderValues">
+
+			<td class="attributes"><code>
+				 protected 
+				array|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTrustedProxyHeaderValues">#</a>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#417-431" title="Go to source code">getTrustedProxyHeaderValues</a>( <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				<p>Get the values of trusted proxy header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the values of trusted proxy header.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$type</var></dt>
+						<dd>One of the HEADER_* constants</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|null<br>An array of the values for this header type or NULL if this header type should not be trusted
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="ipIsTrustedProxy" id="_ipIsTrustedProxy">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ipIsTrustedProxy">#</a>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#433-453" title="Go to source code">ipIsTrustedProxy</a>( <span>string <var>$ipAddress</var></span> )</code>
+
+			<div class="description short">
+				<p>Check if the given IP address is from a trusted proxy.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check if the given IP address is from a trusted proxy.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ipAddress</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isFromTrustedProxy" id="_isFromTrustedProxy">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isFromTrustedProxy">#</a>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#455-468" title="Go to source code">isFromTrustedProxy</a>( )</code>
+
+			<div class="description short">
+				<p>Check if this request is coming from a trusted Proxy.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check if this request is coming from a trusted Proxy.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTrustedClientIpAddress" id="_getTrustedClientIpAddress">
+
+			<td class="attributes"><code>
+				 public 
+				string|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTrustedClientIpAddress">#</a>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#470-505" title="Go to source code">getTrustedClientIpAddress</a>( )</code>
+
+			<div class="description short">
+				<p>Get the most trusted client's IP address.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the most trusted client's IP address.</p>
+
+<p>This is the right-most address in the trusted client IP header, that is not a trusted proxy address.
+If all proxies are trusted, this is the left-most address in the header.
+If no proxies are trusted or no client IP header is trusted, this is the remote address of the machine
+directly connected to the server.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string|boolean<br>The most trusted client's IP address or FALSE if no remote address can be found
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getClientIpAddress" id="_getClientIpAddress">
 
 			<td class="attributes"><code>
@@ -1687,7 +1869,7 @@ resource, that resource will be returned, no matter if $asResource is set.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClientIpAddress">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#375-402" title="Go to source code">getClientIpAddress</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#507-534" title="Go to source code">getClientIpAddress</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the best guess of the client's IP address.</p>
@@ -1730,7 +1912,7 @@ results.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAcceptedMediaTypes">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#404-425" title="Go to source code">getAcceptedMediaTypes</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#536-557" title="Go to source code">getAcceptedMediaTypes</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an list of IANA media types defined in the Accept header.</p>
@@ -1773,7 +1955,7 @@ is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNegotiatedMediaType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#427-449" title="Go to source code">getNegotiatedMediaType</a>( <span>array <var>$supportedMediaTypes</var></span>, <span>boolean <var>$trim</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#559-581" title="Go to source code">getNegotiatedMediaType</a>( <span>array <var>$supportedMediaTypes</var></span>, <span>boolean <var>$trim</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the best fitting IANA media type after applying the content negotiation
@@ -1818,7 +2000,7 @@ rules on a possible Accept header.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getScriptRequestPathAndFilename">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#451-467" title="Go to source code">getScriptRequestPathAndFilename</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#583-599" title="Go to source code">getScriptRequestPathAndFilename</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the relative path (ie. relative to the web root) and name of the
@@ -1856,7 +2038,7 @@ script as it was accessed through the web server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getScriptRequestPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#469-481" title="Go to source code">getScriptRequestPath</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#601-613" title="Go to source code">getScriptRequestPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the relative path (ie. relative to the web root) to the script as
@@ -1894,7 +2076,7 @@ it was accessed through the web server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRelativePath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#483-495" title="Go to source code">getRelativePath</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#615-627" title="Go to source code">getRelativePath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the request's path relative to the $baseUri</p>
@@ -1927,7 +2109,7 @@ it was accessed through the web server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRequestLine">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#497-513" title="Go to source code">getRequestLine</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#629-645" title="Go to source code">getRequestLine</a>( )</code>
 
 			<div class="description short">
 				<p>Return the Request-Line of this Request Message, consisting of the method, the uri and the HTTP version
@@ -1973,7 +2155,7 @@ actual requestUri of the Request cannot be determined during the creation of the
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStartLine">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#515-525" title="Go to source code">getStartLine</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#647-657" title="Go to source code">getStartLine</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the first line of this Request Message, which is the Request-Line in this case</p>
@@ -2013,7 +2195,7 @@ actual requestUri of the Request cannot be determined during the creation of the
 
 			<td class="name"><div>
 			<a class="anchor" href="#_detectBaseUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#527-540" title="Go to source code">detectBaseUri</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#659-672" title="Go to source code">detectBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Tries to detect the base URI of request.</p>
@@ -2042,7 +2224,7 @@ actual requestUri of the Request cannot be determined during the creation of the
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildUnifiedArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#542-558" title="Go to source code">buildUnifiedArguments</a>( <span>array <var>$getArguments</var></span>, <span>array <var>$postArguments</var></span>, <span>array <var>$uploadArguments</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#674-690" title="Go to source code">buildUnifiedArguments</a>( <span>array <var>$getArguments</var></span>, <span>array <var>$postArguments</var></span>, <span>array <var>$uploadArguments</var></span> )</code>
 
 			<div class="description short">
 				<p>Takes the raw GET &amp; POST arguments and maps them into the request object.
@@ -2088,7 +2270,7 @@ have been GET, POST or PUT arguments before.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_untangleFilesArray">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#560-599" title="Go to source code">untangleFilesArray</a>( <span>array <var>$convolutedFiles</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#692-731" title="Go to source code">untangleFilesArray</a>( <span>array <var>$convolutedFiles</var></span> )</code>
 
 			<div class="description short">
 				<p>Transforms the convoluted _FILES superglobal into a manageable form.</p>
@@ -2126,7 +2308,7 @@ have been GET, POST or PUT arguments before.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculateFieldPaths">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#601-624" title="Go to source code">calculateFieldPaths</a>( <span>array <var>$structure</var></span>, <span>string <var>$firstLevelFieldName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#733-756" title="Go to source code">calculateFieldPaths</a>( <span>array <var>$structure</var></span>, <span>string <var>$firstLevelFieldName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns and array of all possibles "field paths" for the given array.</p>
@@ -2166,7 +2348,7 @@ have been GET, POST or PUT arguments before.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseContentNegotiationQualityValues">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#626-664" title="Go to source code">parseContentNegotiationQualityValues</a>( <span>string <var>$rawValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#758-796" title="Go to source code">parseContentNegotiationQualityValues</a>( <span>string <var>$rawValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a RFC 2616 content negotiation header field by evaluating the Quality
@@ -2206,7 +2388,7 @@ Values and splitting the options into an array list, ordered by user preference.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderHeaders">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#666-683" title="Go to source code">renderHeaders</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#798-815" title="Go to source code">renderHeaders</a>( )</code>
 
 			<div class="description short">
 				<p>Renders the HTTP headers - including the status header - of this request</p>
@@ -2242,7 +2424,7 @@ Values and splitting the options into an array list, ordered by user preference.
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Request.html#685-694" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Request.html#817-826" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Cast the request to a string: return the content part of this response</p>
@@ -2278,7 +2460,7 @@ Values and splitting the options into an array list, ordered by user preference.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseMediaType">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#696-707" title="Go to source code">parseMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#828-839" title="Go to source code">parseMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a RFC 2616 Media Type and returns its parts in an associative array.</p>
@@ -2324,7 +2506,7 @@ Values and splitting the options into an array list, ordered by user preference.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mediaRangeMatches">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#709-721" title="Go to source code">mediaRangeMatches</a>( <span>string <var>$mediaRange</var></span>, <span>string <var>$mediaType</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#841-853" title="Go to source code">mediaRangeMatches</a>( <span>string <var>$mediaRange</var></span>, <span>string <var>$mediaType</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given media range and the media type match.</p>
@@ -2372,7 +2554,7 @@ Values and splitting the options into an array list, ordered by user preference.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_trimMediaType">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#723-735" title="Go to source code">trimMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Http.Request.html#855-867" title="Go to source code">trimMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
 
 			<div class="description short">
 				<p>Strips off any parameters from the given media type and returns just the type
@@ -2437,6 +2619,108 @@ and subtype in the format "type/subtype".</p>
 
 
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="HEADER_CLIENT_IP" id="HEADER_CLIENT_IP">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.Flow.Http.Request.html#30" title="Go to source code"><b>HEADER_CLIENT_IP</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#HEADER_CLIENT_IP" class="anchor">#</a>
+						<code><span class="php-quote">'clientIp'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="HEADER_HOST" id="HEADER_HOST">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.Flow.Http.Request.html#31" title="Go to source code"><b>HEADER_HOST</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#HEADER_HOST" class="anchor">#</a>
+						<code><span class="php-quote">'host'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="HEADER_PORT" id="HEADER_PORT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.Flow.Http.Request.html#32" title="Go to source code"><b>HEADER_PORT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#HEADER_PORT" class="anchor">#</a>
+						<code><span class="php-quote">'port'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="HEADER_PROTOCOL" id="HEADER_PROTOCOL">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.Flow.Http.Request.html#33" title="Go to source code"><b>HEADER_PROTOCOL</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#HEADER_PROTOCOL" class="anchor">#</a>
+						<code><span class="php-quote">'proto'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
 
 
 
@@ -2450,7 +2734,7 @@ and subtype in the format "type/subtype".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Request.html#27-30" title="Go to source code"><var>$method</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Request.html#35-38" title="Go to source code"><var>$method</var></a>
 
 				<div class="description short">
 					
@@ -2475,7 +2759,7 @@ and subtype in the format "type/subtype".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Request.html#32-35" title="Go to source code"><var>$uri</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Request.html#40-43" title="Go to source code"><var>$uri</var></a>
 
 				<div class="description short">
 					
@@ -2500,7 +2784,7 @@ and subtype in the format "type/subtype".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Request.html#37-40" title="Go to source code"><var>$baseUri</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Request.html#45-48" title="Go to source code"><var>$baseUri</var></a>
 
 				<div class="description short">
 					
@@ -2525,7 +2809,7 @@ and subtype in the format "type/subtype".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Request.html#42-45" title="Go to source code"><var>$arguments</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Request.html#50-53" title="Go to source code"><var>$arguments</var></a>
 
 				<div class="description short">
 					
@@ -2550,7 +2834,7 @@ and subtype in the format "type/subtype".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Request.html#47-52" title="Go to source code"><var>$server</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Request.html#55-60" title="Go to source code"><var>$server</var></a>
 
 				<div class="description short">
 					<p>Data similar to that which is typically provided by $_SERVER</p>
@@ -2575,7 +2859,7 @@ and subtype in the format "type/subtype".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Request.html#54-59" title="Go to source code"><var>$inputStreamUri</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Request.html#62-67" title="Go to source code"><var>$inputStreamUri</var></a>
 
 				<div class="description short">
 					<p>URI for the "input" stream wrapper which can be modified for testing purposes</p>
@@ -2590,6 +2874,56 @@ and subtype in the format "type/subtype".</p>
 				<div>
 					<a href="#$inputStreamUri" class="anchor">#</a>
 					<code><span class="php-quote">'php://input'</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="trustedProxy" id="$trustedProxy">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Http.Request.html#69-72" title="Go to source code"><var>$trustedProxy</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$trustedProxy" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="trustedProxiesSettings" id="$trustedProxiesSettings">
+			<td class="attributes"><code>
+				protected static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Http.Request.html#74-79" title="Go to source code"><var>$trustedProxiesSettings</var></a>
+
+				<div class="description short">
+					<p>The "Trusted Proxies" settings from configuration.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The "Trusted Proxies" settings from configuration.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$trustedProxiesSettings" class="anchor">#</a>
+					<code></code>
 				</div>
 			</td>
 		</tr>
