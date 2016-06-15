@@ -1391,7 +1391,7 @@
 </span><span id="231" class="l">        <span class="php-var">$nodeDataVariantsAndChildren</span> = <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findByPathWithoutReduce(<span class="php-var">$originalPath</span>, <span class="php-var">$this</span>-&gt;context-&gt;getWorkspace(), <span class="php-keyword1">true</span>, <span class="php-keyword1">true</span>);
 </span><span id="232" class="l">
 </span><span id="233" class="l">        <span class="php-var">$changedNodePathsCollection</span> = <span class="php-keyword2">array_map</span>(<span class="php-keyword1">function</span> (<span class="php-var">$nodeData</span>) <span class="php-keyword1">use</span> (<span class="php-var">$destinationPath</span>, <span class="php-var">$originalPath</span>, <span class="php-var">$recursiveCall</span>) {
-</span><span id="234" class="l">           <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;moveNodeData(<span class="php-var">$nodeData</span>, <span class="php-var">$originalPath</span>, <span class="php-var">$destinationPath</span>, <span class="php-var">$recursiveCall</span>);
+</span><span id="234" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;moveNodeData(<span class="php-var">$nodeData</span>, <span class="php-var">$originalPath</span>, <span class="php-var">$destinationPath</span>, <span class="php-var">$recursiveCall</span>);
 </span><span id="235" class="l">        }, <span class="php-var">$nodeDataVariantsAndChildren</span>);
 </span><span id="236" class="l">
 </span><span id="237" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">array_filter</span>(<span class="php-var">$changedNodePathsCollection</span>);
