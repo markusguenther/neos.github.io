@@ -793,7 +793,7 @@ container that could be exchanged in the future.</p>
    indexes={</p><br>
 				<b>Orm\uniqueconstraint(name="path_workspace_dimensions",columns={"pathhash",:</b>
 				"workspace", "dimensionshash"}),<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#27-1060" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/NodeData.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#27-1055" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/NodeData.php</a>
 		<br>
 	</div>
 
@@ -2129,14 +2129,14 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="attributes"><code>
 				 protected 
-				<code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code>
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code>|null
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getExistingShadowNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#909-925" title="Go to source code">getExistingShadowNodeData</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#909-920" title="Go to source code">getExistingShadowNodeData</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Find an existing shadow node data on the given path for the current node data of the node (used by setPath)</p>
@@ -2158,7 +2158,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code>
+						<code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code>|null
 					</div>
 
 
@@ -2178,7 +2178,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createShadow">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#927-942" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#922-937" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a shadow NodeData at the given path with the same workspace and dimensions as this</p>
@@ -2218,7 +2218,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAsShadowOf">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#944-956" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#939-951" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>This becomes a shdow of the given NodeData object.
@@ -2254,7 +2254,7 @@ If NULL or no argument is given then movedTo is nulled and removed is set to FAL
 
 			<td class="name"><div>
 			<a class="anchor" href="#_materializeToWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#958-975" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#953-970" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Materializes the original node data (of a different workspace) into the current
@@ -2296,7 +2296,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addOrUpdate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#977-1000" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#972-995" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds this node to the Node Repository or updates it if it has been added earlier</p>
@@ -2336,7 +2336,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1002-1011" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#997-1006" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the attached content object</p>
@@ -2372,7 +2372,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculatePathHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1013-1021" title="Go to source code">calculatePathHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1008-1016" title="Go to source code">calculatePathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the path of this instance.</p>
@@ -2401,7 +2401,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculateParentPathHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1023-1031" title="Go to source code">calculateParentPathHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1018-1026" title="Go to source code">calculateParentPathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the dimensions and their values for this instance.</p>
@@ -2430,7 +2430,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1033-1048" title="Go to source code">__clone</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1028-1043" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Create a fresh collection instance and clone dimensions</p>
@@ -2459,7 +2459,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePathChanged">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1050-1059" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1045-1054" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node has changed its path.</p>
