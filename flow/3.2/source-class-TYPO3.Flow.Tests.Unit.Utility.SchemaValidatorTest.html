@@ -1910,7 +1910,7 @@
 </span><span id="26" class="l">
 </span><span id="27" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setUp()
 </span><span id="28" class="l">    {
-</span><span id="29" class="l">        <span class="php-var">$this</span>-&gt;configurationValidator = <span class="php-var">$this</span>-&gt;getMock(SchemaValidator::<span class="php-keyword1">class</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'getError'</span>));
+</span><span id="29" class="l">        <span class="php-var">$this</span>-&gt;configurationValidator = <span class="php-var">$this</span>-&gt;getMockBuilder(SchemaValidator::<span class="php-keyword1">class</span>)-&gt;setMethods(<span class="php-keyword1">array</span>(<span class="php-quote">'getError'</span>))-&gt;getMock();
 </span><span id="30" class="l">    }
 </span><span id="31" class="l">
 </span><span id="32" class="l">    <span class="php-comment">/**
