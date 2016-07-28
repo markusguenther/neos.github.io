@@ -1918,15 +1918,15 @@
 </span><span id="33" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> postUpdateAndInstall(Event <span class="php-var">$event</span>)
 </span><span id="34" class="l">    {
 </span><span id="35" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">defined</span>(<span class="php-quote">'FLOW_PATH_ROOT'</span>)) {
-</span><span id="36" class="l">            <span class="php-keyword2">define</span>(<span class="php-quote">'FLOW_PATH_ROOT'</span>, <span class="php-keyword2">getcwd</span>() . <span class="php-quote">'/'</span>);
+</span><span id="36" class="l">            <span class="php-keyword2">define</span>(<span class="php-quote">'FLOW_PATH_ROOT'</span>, Files::getUnixStylePath(<span class="php-keyword2">getcwd</span>()) . <span class="php-quote">'/'</span>);
 </span><span id="37" class="l">        }
 </span><span id="38" class="l">
 </span><span id="39" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">defined</span>(<span class="php-quote">'FLOW_PATH_PACKAGES'</span>)) {
-</span><span id="40" class="l">            <span class="php-keyword2">define</span>(<span class="php-quote">'FLOW_PATH_PACKAGES'</span>, <span class="php-keyword2">getcwd</span>() . <span class="php-quote">'/Packages/'</span>);
+</span><span id="40" class="l">            <span class="php-keyword2">define</span>(<span class="php-quote">'FLOW_PATH_PACKAGES'</span>, Files::getUnixStylePath(<span class="php-keyword2">getcwd</span>()) . <span class="php-quote">'/Packages/'</span>);
 </span><span id="41" class="l">        }
 </span><span id="42" class="l">
 </span><span id="43" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">defined</span>(<span class="php-quote">'FLOW_PATH_CONFIGURATION'</span>)) {
-</span><span id="44" class="l">            <span class="php-keyword2">define</span>(<span class="php-quote">'FLOW_PATH_CONFIGURATION'</span>, <span class="php-keyword2">getcwd</span>() . <span class="php-quote">'/Configuration/'</span>);
+</span><span id="44" class="l">            <span class="php-keyword2">define</span>(<span class="php-quote">'FLOW_PATH_CONFIGURATION'</span>, Files::getUnixStylePath(<span class="php-keyword2">getcwd</span>()) . <span class="php-quote">'/Configuration/'</span>);
 </span><span id="45" class="l">        }
 </span><span id="46" class="l">
 </span><span id="47" class="l">        Files::createDirectoryRecursively(<span class="php-quote">'Configuration'</span>);
