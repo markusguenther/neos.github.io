@@ -122,6 +122,10 @@
 							Exception						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.TypeConverter.html">
 							TypeConverter						</a>
 							</li>
@@ -701,7 +705,7 @@ rendered by the TypoScript Runtime.</p>
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#20-372" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/ContentCache.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#20-384" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/ContentCache.php</a>
 		<br>
 	</div>
 
@@ -710,6 +714,35 @@ rendered by the TypoScript Runtime.</p>
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#92-95" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="createCacheSegment" id="_createCacheSegment">
 
 			<td class="attributes"><code>
@@ -721,7 +754,7 @@ rendered by the TypoScript Runtime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCacheSegment">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#85-112" title="Go to source code">createCacheSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#97-124" title="Go to source code">createCacheSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Takes the given content and adds markers for later use as a cached content segment.</p>
@@ -776,7 +809,7 @@ as a string.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createUncachedSegment">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#114-129" title="Go to source code">createUncachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#126-141" title="Go to source code">createUncachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span> )</code>
 
 			<div class="description short">
 				<p>Similar to createCacheSegment() creates a content segment with markers added, but in contrast to that function
@@ -822,7 +855,7 @@ this method is used for rendering a segment which is not supposed to be cached.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderContentCacheEntryIdentifier">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#131-156" title="Go to source code">renderContentCacheEntryIdentifier</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#143-168" title="Go to source code">renderContentCacheEntryIdentifier</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders an identifier for a content cache entry</p>
@@ -866,7 +899,7 @@ this method is used for rendering a segment which is not supposed to be cached.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_processCacheSegments">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#158-187" title="Go to source code">processCacheSegments</a>( <span>string <var>$content</var></span>, <span>boolean <var>$storeCacheEntries</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#170-199" title="Go to source code">processCacheSegments</a>( <span>string <var>$content</var></span>, <span>boolean <var>$storeCacheEntries</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Takes a string of content which includes cache segment markers, extracts the marked segments, writes those
@@ -910,7 +943,7 @@ segments which can be cached to the actual cache and returns the cleaned up orig
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedSegment">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#189-228" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#201-240" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Tries to retrieve the specified content segment from the cache – further nested inline segments are retrieved
@@ -952,7 +985,7 @@ as well and segments which were not cacheable are rendered.</p>
 		<tr data-order="replaceCachePlaceholders" id="_replaceCachePlaceholders">
 
 			<td class="attributes"><code>
-				 public 
+				 protected 
 				integer|boolean
 				
 				</code>
@@ -960,7 +993,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceCachePlaceholders">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#230-259" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#242-271" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
 
 			<div class="description short">
 				<p>Find cache placeholders in a cached segment and return the identifiers</p>
@@ -1000,7 +1033,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceUncachedPlaceholders">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#261-284" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#273-296" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace segments which are marked as not-cacheable by their actual content by invoking the TypoScript Runtime.</p>
@@ -1040,7 +1073,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_serializeContext">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#286-305" title="Go to source code">serializeContext</a>( <span>array <var>$contextVariables</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#298-317" title="Go to source code">serializeContext</a>( <span>array <var>$contextVariables</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates a string from the given array of context variables</p>
@@ -1082,7 +1115,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeForContextValue">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#307-325" title="Go to source code">getTypeForContextValue</a>( <span>mixed <var>$contextValue</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#319-337" title="Go to source code">getTypeForContextValue</a>( <span>mixed <var>$contextValue</var></span> )</code>
 
 			<div class="description short">
 				<p>TODO: Adapt to Flow change https://review.typo3.org/#/c/33138/</p>
@@ -1120,7 +1153,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushByTag">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#327-336" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#339-348" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Flush content cache entries by tag</p>
@@ -1158,7 +1191,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#338-346" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#350-358" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Flush all content cache entries</p>
@@ -1187,7 +1220,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sanitizeTag">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#348-357" title="Go to source code">sanitizeTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#360-369" title="Go to source code">sanitizeTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Sanitizes the given tag for use with the cache framework</p>
@@ -1225,7 +1258,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sanitizeTags">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#359-371" title="Go to source code">sanitizeTags</a>( <span>array <var>$tags</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#371-383" title="Go to source code">sanitizeTags</a>( <span>array <var>$tags</var></span> )</code>
 
 			<div class="description short">
 				<p>Sanitizes multiple tags with sanitizeTag()</p>
@@ -1337,12 +1370,36 @@ as well and segments which were not cacheable are rendered.</p>
 					</div>
 				</td>
 			</tr>
+			<tr data-order="CACHE_SEGMENT_MARKER" id="CACHE_SEGMENT_MARKER">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#47" title="Go to source code"><b>CACHE_SEGMENT_MARKER</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#CACHE_SEGMENT_MARKER" class="anchor">#</a>
+						<code><span class="php-quote">'CONTENT_CACHE'</span></code>
+					</div>
+				</td>
+			</tr>
 			<tr data-order="CACHE_PLACEHOLDER_REGEX" id="CACHE_PLACEHOLDER_REGEX">
 
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#47" title="Go to source code"><b>CACHE_PLACEHOLDER_REGEX</b></a>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#49" title="Go to source code"><b>CACHE_PLACEHOLDER_REGEX</b></a>
 					</code>
 
 					<div class="description short">
@@ -1357,7 +1414,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="value">
 					<div>
 						<a href="#CACHE_PLACEHOLDER_REGEX" class="anchor">#</a>
-						<code><span class="php-quote">&quot;/\x02(?P&lt;identifier&gt;[a-f0-9]+)\x03/&quot;</span></code>
+						<code><span class="php-quote">&quot;/\x02CONTENT_CACHE(?P&lt;identifier&gt;[a-f0-9]+)\x03CONTENT_CACHE/&quot;</span></code>
 					</div>
 				</td>
 			</tr>
@@ -1366,7 +1423,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#48" title="Go to source code"><b>EVAL_PLACEHOLDER_REGEX</b></a>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#50" title="Go to source code"><b>EVAL_PLACEHOLDER_REGEX</b></a>
 					</code>
 
 					<div class="description short">
@@ -1381,7 +1438,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="value">
 					<div>
 						<a href="#EVAL_PLACEHOLDER_REGEX" class="anchor">#</a>
-						<code><span class="php-quote">&quot;/\x02(?P&lt;command&gt;[^\x02\x1f\x03]+)\x1f(?P&lt;context&gt;[^\x02\x1f\x03]+)\x03/&quot;</span></code>
+						<code><span class="php-quote">&quot;/\x02CONTENT_CACHE(?P&lt;command&gt;[^\x02\x1f\x03]+)\x1fCONTENT_CACHE(?P&lt;context&gt;[^\x02\x1f\x03]+)\x03CONTENT_CACHE/&quot;</span></code>
 					</div>
 				</td>
 			</tr>
@@ -1390,7 +1447,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#50" title="Go to source code"><b>MAXIMUM_NESTING_LEVEL</b></a>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#52" title="Go to source code"><b>MAXIMUM_NESTING_LEVEL</b></a>
 					</code>
 
 					<div class="description short">
@@ -1414,7 +1471,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#52-56" title="Go to source code"><b>TAG_EVERYTHING</b></a>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#54-58" title="Go to source code"><b>TAG_EVERYTHING</b></a>
 					</code>
 
 					<div class="description short">
@@ -1440,7 +1497,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#58" title="Go to source code"><b>SEGMENT_TYPE_CACHED</b></a>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#60" title="Go to source code"><b>SEGMENT_TYPE_CACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1464,7 +1521,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#59" title="Go to source code"><b>SEGMENT_TYPE_UNCACHED</b></a>
+						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#61" title="Go to source code"><b>SEGMENT_TYPE_UNCACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1499,7 +1556,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#61-65" title="Go to source code"><var>$parser</var></a>
+					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#63-67" title="Go to source code"><var>$parser</var></a>
 
 				<div class="description short">
 					
@@ -1527,7 +1584,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#67-71" title="Go to source code"><var>$cache</var></a>
+					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#69-73" title="Go to source code"><var>$cache</var></a>
 
 				<div class="description short">
 					
@@ -1555,7 +1612,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#73-77" title="Go to source code"><var>$propertyMapper</var></a>
+					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#75-79" title="Go to source code"><var>$propertyMapper</var></a>
 
 				<div class="description short">
 					
@@ -1583,7 +1640,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#79-83" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#81-85" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
 					
@@ -1600,6 +1657,31 @@ the application.</p>
 			<td class="value">
 				<div>
 					<a href="#$securityContext" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="randomCacheMarker" id="$randomCacheMarker">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#87-90" title="Go to source code"><var>$randomCacheMarker</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$randomCacheMarker" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

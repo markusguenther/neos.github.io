@@ -122,6 +122,10 @@
 							Exception						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.TypeConverter.html">
 							TypeConverter						</a>
 							</li>
@@ -682,6 +686,7 @@
 				<li><a href="class-TYPO3.Media.Exception.ImageFileException.html">TYPO3\Media\Exception\ImageFileException</a></li>
 				<li><a href="class-TYPO3.Media.Exception.ImageServiceException.html">TYPO3\Media\Exception\ImageServiceException</a></li>
 				<li><a href="class-TYPO3.Media.Exception.NoThumbnailAvailableException.html">TYPO3\Media\Exception\NoThumbnailAvailableException</a></li>
+				<li><a href="class-TYPO3.Media.Imagine.Box.html">TYPO3\Media\Imagine\Box</a></li>
 				<li><a href="class-TYPO3.Media.TypeConverter.ArrayConverter.html">TYPO3\Media\TypeConverter\ArrayConverter</a></li>
 				<li><a href="class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html">TYPO3\Media\TypeConverter\AssetInterfaceConverter</a></li>
 				<li><a href="class-TYPO3.Media.TypeConverter.ImageConverter.html">TYPO3\Media\TypeConverter\ImageConverter</a></li>
@@ -1129,14 +1134,14 @@
 </span><span id="40" class="l">        <span class="php-comment">// More than 11 months ago</span>
 </span><span id="41" class="l">        <span class="php-var">$now</span> = <span class="php-keyword1">new</span> \TYPO3\Flow\Utility\Now();
 </span><span id="42" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$date</span> &lt; <span class="php-var">$now</span>-&gt;modify(<span class="php-quote">'-11 months'</span>)) {
-</span><span id="43" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-quote">'Y M n'</span>);
+</span><span id="43" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-quote">'Y M j'</span>);
 </span><span id="44" class="l">        }
 </span><span id="45" class="l">        <span class="php-comment">// Same day of same year</span>
 </span><span id="46" class="l">        <span class="php-var">$now</span> = <span class="php-keyword1">new</span> \TYPO3\Flow\Utility\Now();
 </span><span id="47" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$date</span>-&gt;format(<span class="php-quote">'Y z'</span>) === <span class="php-var">$now</span>-&gt;format(<span class="php-quote">'Y z'</span>)) {
 </span><span id="48" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-quote">'H:i'</span>);
 </span><span id="49" class="l">        }
-</span><span id="50" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-quote">'M n'</span>);
+</span><span id="50" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$date</span>-&gt;format(<span class="php-quote">'M j'</span>);
 </span><span id="51" class="l">    }
 </span><span id="52" class="l">}
 </span><span id="53" class="l"></span></code></pre>
@@ -1148,6 +1153,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?aabc3213442850ece79bc9ae0bfd5deb9910b099"></script>
+<script src="elementlist.js?187c766214fc082171c4a0ed5c391c62ff0cae8c"></script>
 </body>
 </html>
