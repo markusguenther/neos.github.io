@@ -158,6 +158,10 @@
 							Exception						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.TypeConverter.html">
 							TypeConverter						</a>
 							</li>
@@ -384,6 +388,10 @@
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.DataSource.html">
 							DataSource						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.Mapping.html">
+							Mapping						</a>
 							</li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.View.html">
@@ -774,7 +782,7 @@
 				<br>
 				<b>Flow\scope("prototype")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#28-1897" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/Node.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#28-1900" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/Node.php</a>
 		<br>
 	</div>
 
@@ -1870,7 +1878,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveBefore">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#548-590" title="Go to source code">moveBefore</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#548-591" title="Go to source code">moveBefore</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$newName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Moves this node before the given node</p>
@@ -1884,14 +1892,16 @@ with the same parent node.</p>
 					<div class="list"><dl>
 						<dt><var>$referenceNode</var></dt>
 						<dd></dd>
+						<dt><var>$newName</var></dt>
+						<dd></dd>
 					</dl></div>
 
 
 					<h4>Throws</h4>
 					<div class="list">
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeConstraintException.html">TYPO3\TYPO3CR\Exception\NodeConstraintException</a></code><br>if a node constraint prevents moving the node<br>
 						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeException.html">TYPO3\TYPO3CR\Exception\NodeException</a></code><br>if you try to move the root node<br>
-						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeExistsException.html">TYPO3\TYPO3CR\Exception\NodeExistsException</a></code><br>
-						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeConstraintException.html">TYPO3\TYPO3CR\Exception\NodeConstraintException</a></code><br>if a node constraint prevents moving the node
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeExistsException.html">TYPO3\TYPO3CR\Exception\NodeExistsException</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -1915,7 +1925,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveAfter">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#592-634" title="Go to source code">moveAfter</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#593-636" title="Go to source code">moveAfter</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$newName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Moves this node after the given node</p>
@@ -1929,14 +1939,16 @@ with the same parent node.</p>
 					<div class="list"><dl>
 						<dt><var>$referenceNode</var></dt>
 						<dd></dd>
+						<dt><var>$newName</var></dt>
+						<dd></dd>
 					</dl></div>
 
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeExistsException.html">TYPO3\TYPO3CR\Exception\NodeExistsException</a></code><br>
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeConstraintException.html">TYPO3\TYPO3CR\Exception\NodeConstraintException</a></code><br>if a node constraint prevents moving the node<br>
 						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeException.html">TYPO3\TYPO3CR\Exception\NodeException</a></code><br>
-						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeConstraintException.html">TYPO3\TYPO3CR\Exception\NodeConstraintException</a></code><br>if a node constraint prevents moving the node
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeExistsException.html">TYPO3\TYPO3CR\Exception\NodeExistsException</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -1960,7 +1972,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveInto">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#636-672" title="Go to source code">moveInto</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#638-675" title="Go to source code">moveInto</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$newName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Moves this node into the given node</p>
@@ -1974,14 +1986,16 @@ with the same parent node.</p>
 					<div class="list"><dl>
 						<dt><var>$referenceNode</var></dt>
 						<dd></dd>
+						<dt><var>$newName</var></dt>
+						<dd></dd>
 					</dl></div>
 
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeExistsException.html">TYPO3\TYPO3CR\Exception\NodeExistsException</a></code><br>
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeConstraintException.html">TYPO3\TYPO3CR\Exception\NodeConstraintException</a></code><br>
 						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeException.html">TYPO3\TYPO3CR\Exception\NodeException</a></code><br>
-						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeConstraintException.html">TYPO3\TYPO3CR\Exception\NodeConstraintException</a></code>
+						<code><a href="class-TYPO3.TYPO3CR.Exception.NodeExistsException.html">TYPO3\TYPO3CR\Exception\NodeExistsException</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -2005,7 +2019,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeNodeMove">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#674-683" title="Go to source code">emitBeforeNodeMove</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$movedNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>integer <var>$movePosition</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#677-686" title="Go to source code">emitBeforeNodeMove</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$movedNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>integer <var>$movePosition</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2046,7 +2060,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterNodeMove">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#685-694" title="Go to source code">emitAfterNodeMove</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$movedNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>integer <var>$movePosition</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#688-697" title="Go to source code">emitAfterNodeMove</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$movedNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>integer <var>$movePosition</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2087,7 +2101,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyBefore">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#696-725" title="Go to source code">copyBefore</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#699-728" title="Go to source code">copyBefore</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies this node before the given node</p>
@@ -2137,7 +2151,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeNodeCopy">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#727-735" title="Go to source code">emitBeforeNodeCopy</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$sourceNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$targetParentNode</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#730-738" title="Go to source code">emitBeforeNodeCopy</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$sourceNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$targetParentNode</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2176,7 +2190,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterNodeCopy">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#737-745" title="Go to source code">emitAfterNodeCopy</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$copiedNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$targetParentNode</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#740-748" title="Go to source code">emitAfterNodeCopy</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$copiedNode</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$targetParentNode</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2215,7 +2229,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyAfter">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#747-776" title="Go to source code">copyAfter</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#750-779" title="Go to source code">copyAfter</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies this node after the given node</p>
@@ -2265,7 +2279,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyInto">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#778-795" title="Go to source code">copyInto</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#781-798" title="Go to source code">copyInto</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies this node into the given node</p>
@@ -2315,7 +2329,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyIntoInternal">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#797-828" title="Go to source code">copyIntoInternal</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span> <var>$nodeName</var></span>, <span>boolean <var>$detachedCopy</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#800-831" title="Go to source code">copyIntoInternal</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span> <var>$nodeName</var></span>, <span>boolean <var>$detachedCopy</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal method to do the actual copying.</p>
@@ -2364,7 +2378,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#830-857" title="Go to source code">setProperty</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#833-860" title="Go to source code">setProperty</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the specified property.</p>
@@ -2412,7 +2426,7 @@ if it is settable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#859-872" title="Go to source code">hasProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#862-875" title="Go to source code">hasProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>If this node has a property with the given name.</p>
@@ -2458,7 +2472,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#874-907" title="Go to source code">getProperty</a>( <span>string <var>$propertyName</var></span>, <span>boolean <var>$returnNodesAsIdentifiers</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#877-910" title="Go to source code">getProperty</a>( <span>string <var>$propertyName</var></span>, <span>boolean <var>$returnNodesAsIdentifiers</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the specified property.</p>
@@ -2510,7 +2524,7 @@ there if it is gettable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolvePropertyReferences">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#909-922" title="Go to source code">resolvePropertyReferences</a>( <span>array <var>$value</var> = []</span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#912-925" title="Go to source code">resolvePropertyReferences</a>( <span>array <var>$value</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Maps the property value (an array of node identifiers) to the Node objects if needed.</p>
@@ -2548,7 +2562,7 @@ there if it is gettable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#924-946" title="Go to source code">removeProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#927-949" title="Go to source code">removeProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified property.</p>
@@ -2591,7 +2605,7 @@ that object if it exists.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperties">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#948-966" title="Go to source code">getProperties</a>( <span>boolean <var>$returnNodesAsIdentifiers</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#951-969" title="Go to source code">getProperties</a>( <span>boolean <var>$returnNodesAsIdentifiers</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns all properties of this node.</p>
@@ -2637,7 +2651,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyNames">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#968-977" title="Go to source code">getPropertyNames</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#971-980" title="Go to source code">getPropertyNames</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of all properties of this node.</p>
@@ -2675,7 +2689,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#979-998" title="Go to source code">setContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#982-1001" title="Go to source code">setContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets a content object for this node.</p>
@@ -2718,7 +2732,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1000-1009" title="Go to source code">getContentObject</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1003-1012" title="Go to source code">getContentObject</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the content object of this node (if any).</p>
@@ -2756,7 +2770,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unsetContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1011-1026" title="Go to source code">unsetContentObject</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1014-1029" title="Go to source code">unsetContentObject</a>( )</code>
 
 			<div class="description short">
 				<p>Unsets the content object of this node.</p>
@@ -2790,7 +2804,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNodeType">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1028-1047" title="Go to source code">setNodeType</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1031-1050" title="Go to source code">setNodeType</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the node type of this node.</p>
@@ -2829,7 +2843,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeType">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1049-1058" title="Go to source code">getNodeType</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1052-1061" title="Go to source code">getNodeType</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the node type of this node.</p>
@@ -2867,7 +2881,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1060-1097" title="Go to source code">createNode</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1063-1100" title="Go to source code">createNode</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates, adds and returns a child node of this node. Also sets default
@@ -2921,7 +2935,7 @@ properties and creates default subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createSingleNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1099-1127" title="Go to source code">createSingleNode</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1102-1130" title="Go to source code">createSingleNode</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates, adds and returns a child node of this node, without setting default
@@ -2974,7 +2988,7 @@ TODO: New SiteImportService uses createNode() and DQL. When we drop the LegagcyS
 
 			<td class="name"><div>
 			<a class="anchor" href="#_willChildNodeBeAutoCreated">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1129-1140" title="Go to source code">willChildNodeBeAutoCreated</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1132-1143" title="Go to source code">willChildNodeBeAutoCreated</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given Node $name is configured as auto-created childNode in the NodeType configuration.</p>
@@ -3012,7 +3026,7 @@ TODO: New SiteImportService uses createNode() and DQL. When we drop the LegagcyS
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNodeFromTemplate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1142-1159" title="Go to source code">createNodeFromTemplate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeTemplate.html">TYPO3\TYPO3CR\Domain\Model\NodeTemplate</a></code> <var>$nodeTemplate</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1145-1162" title="Go to source code">createNodeFromTemplate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeTemplate.html">TYPO3\TYPO3CR\Domain\Model\NodeTemplate</a></code> <var>$nodeTemplate</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates and persists a node from the given $nodeTemplate as child node</p>
@@ -3057,7 +3071,7 @@ TODO: New SiteImportService uses createNode() and DQL. When we drop the LegagcyS
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1161-1179" title="Go to source code">getNode</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1164-1182" title="Go to source code">getNode</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a node specified by the given relative path.</p>
@@ -3100,7 +3114,7 @@ TODO: New SiteImportService uses createNode() and DQL. When we drop the LegagcyS
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPrimaryChildNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1181-1193" title="Go to source code">getPrimaryChildNode</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1184-1196" title="Go to source code">getPrimaryChildNode</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the primary child node of this node.</p>
@@ -3141,7 +3155,7 @@ node type. For now it is just the first child node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getChildNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1195-1220" title="Go to source code">getChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1198-1223" title="Go to source code">getChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns all direct child nodes of this node.
@@ -3190,7 +3204,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNumberOfChildNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1222-1232" title="Go to source code">getNumberOfChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1225-1235" title="Go to source code">getNumberOfChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the number of child nodes a similar getChildNodes() call would return.</p>
@@ -3231,7 +3245,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasChildNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1234-1244" title="Go to source code">hasChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1237-1247" title="Go to source code">hasChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Checks if this node has any child nodes.</p>
@@ -3274,7 +3288,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1246-1255" title="Go to source code">remove</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1249-1258" title="Go to source code">remove</a>( )</code>
 
 			<div class="description short">
 				<p>Removes this node and all its child nodes. This is an alias for setRemoved(TRUE)</p>
@@ -3308,7 +3322,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRemoved">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1257-1284" title="Go to source code">setRemoved</a>( <span>boolean <var>$removed</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1260-1287" title="Go to source code">setRemoved</a>( <span>boolean <var>$removed</var></span> )</code>
 
 			<div class="description short">
 				<p>Enables using the remove method when only setters are available</p>
@@ -3347,7 +3361,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemoved">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1286-1295" title="Go to source code">isRemoved</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1289-1298" title="Go to source code">isRemoved</a>( )</code>
 
 			<div class="description short">
 				<p>If this node is a removed node.</p>
@@ -3385,7 +3399,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHidden">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1297-1316" title="Go to source code">setHidden</a>( <span>boolean <var>$hidden</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1300-1319" title="Go to source code">setHidden</a>( <span>boolean <var>$hidden</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the "hidden" flag for this node.</p>
@@ -3424,7 +3438,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isHidden">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1318-1327" title="Go to source code">isHidden</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1321-1330" title="Go to source code">isHidden</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current state of the hidden flag</p>
@@ -3462,7 +3476,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenBeforeDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1329-1348" title="Go to source code">setHiddenBeforeDateTime</a>( <span>DateTime <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1332-1351" title="Go to source code">setHiddenBeforeDateTime</a>( <span>DateTime <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the date and time when this node becomes potentially visible.</p>
@@ -3501,7 +3515,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHiddenBeforeDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1350-1359" title="Go to source code">getHiddenBeforeDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1353-1362" title="Go to source code">getHiddenBeforeDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date and time before which this node will be automatically hidden.</p>
@@ -3539,7 +3553,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenAfterDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1361-1380" title="Go to source code">setHiddenAfterDateTime</a>( <span>DateTime <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1364-1383" title="Go to source code">setHiddenAfterDateTime</a>( <span>DateTime <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the date and time when this node should be automatically hidden</p>
@@ -3578,7 +3592,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHiddenAfterDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1382-1391" title="Go to source code">getHiddenAfterDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1385-1394" title="Go to source code">getHiddenAfterDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date and time after which this node will be automatically hidden.</p>
@@ -3616,7 +3630,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenInIndex">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1393-1412" title="Go to source code">setHiddenInIndex</a>( <span>boolean <var>$hidden</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1396-1415" title="Go to source code">setHiddenInIndex</a>( <span>boolean <var>$hidden</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets if this node should be hidden in indexes, such as a site navigation.</p>
@@ -3655,7 +3669,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isHiddenInIndex">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1414-1423" title="Go to source code">isHiddenInIndex</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1417-1426" title="Go to source code">isHiddenInIndex</a>( )</code>
 
 			<div class="description short">
 				<p>If this node should be hidden in indexes</p>
@@ -3693,7 +3707,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAccessRoles">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1425-1444" title="Go to source code">setAccessRoles</a>( <span>array <var>$accessRoles</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1428-1447" title="Go to source code">setAccessRoles</a>( <span>array <var>$accessRoles</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the roles which are required to access this node</p>
@@ -3732,7 +3746,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAccessRoles">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1446-1455" title="Go to source code">getAccessRoles</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1449-1458" title="Go to source code">getAccessRoles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of defined access roles</p>
@@ -3770,7 +3784,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasAccessRestrictions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1457-1467" title="Go to source code">hasAccessRestrictions</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1460-1470" title="Go to source code">hasAccessRestrictions</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if a node, in general,  has access restrictions, independent of the
@@ -3810,7 +3824,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isVisible">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1469-1492" title="Go to source code">isVisible</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1472-1495" title="Go to source code">isVisible</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this node is "visible".</p>
@@ -3851,7 +3865,7 @@ taken into account.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAccessible">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1494-1503" title="Go to source code">isAccessible</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1497-1506" title="Go to source code">isAccessible</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this node may be accessed according to the current security context.</p>
@@ -3889,7 +3903,7 @@ taken into account.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContext">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1505-1514" title="Go to source code">getContext</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1508-1517" title="Go to source code">getContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the context this node operates in.</p>
@@ -3927,7 +3941,7 @@ taken into account.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_materializeNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1516-1541" title="Go to source code">materializeNodeData</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1519-1544" title="Go to source code">materializeNodeData</a>( )</code>
 
 			<div class="description short">
 				<p>Materializes the original node data (of a different workspace) into the current
@@ -3958,7 +3972,7 @@ workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createRecursiveCopy">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1543-1588" title="Go to source code">createRecursiveCopy</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>boolean <var>$nodeName</var></span>, <span>string <var>$detachedCopy</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1546-1591" title="Go to source code">createRecursiveCopy</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>boolean <var>$nodeName</var></span>, <span>string <var>$detachedCopy</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a recursive copy of this node below $referenceNode with $nodeName.</p>
@@ -4011,7 +4025,7 @@ otherwise.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeDataMatchingContext">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1590-1604" title="Go to source code">isNodeDataMatchingContext</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1593-1607" title="Go to source code">isNodeDataMatchingContext</a>( )</code>
 
 			<div class="description short">
 				<p>The NodeData matches the context if the workspace matches exactly.
@@ -4046,7 +4060,7 @@ Needs to be adjusted for further context dimensions.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_similarize">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1606-1616" title="Go to source code">similarize</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$sourceNode</var></span>, <span>boolean <var>$isCopy</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1609-1619" title="Go to source code">similarize</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$sourceNode</var></span>, <span>boolean <var>$isCopy</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>For internal use in createRecursiveCopy.</p>
@@ -4082,7 +4096,7 @@ Needs to be adjusted for further context dimensions.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1618-1624" title="Go to source code">getNodeData</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1621-1627" title="Go to source code">getNodeData</a>( )</code>
 
 			<div class="description short">
 				
@@ -4117,7 +4131,7 @@ Needs to be adjusted for further context dimensions.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheEntryIdentifier">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1626-1635" title="Go to source code">getCacheEntryIdentifier</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1629-1638" title="Go to source code">getCacheEntryIdentifier</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a string which distinctly identifies this object and thus can be used as an identifier for cache entries
@@ -4152,7 +4166,7 @@ related to this object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1637-1645" title="Go to source code">getDimensions</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1640-1648" title="Go to source code">getDimensions</a>( )</code>
 
 			<div class="description short">
 				<p>Return the assigned content dimensions of the node.</p>
@@ -4187,7 +4201,7 @@ related to this object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1647-1655" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1650-1658" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>For debugging purposes, the node can be converted to a string.</p>
@@ -4220,7 +4234,7 @@ related to this object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createVariantForContext">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1657-1696" title="Go to source code">createVariantForContext</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Service.Context.html">TYPO3\TYPO3CR\Domain\Service\Context</a></code> <var>$context</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1660-1699" title="Go to source code">createVariantForContext</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Service.Context.html">TYPO3\TYPO3CR\Domain\Service\Context</a></code> <var>$context</var></span> )</code>
 
 			<div class="description short">
 				<p>Given a context a new node is returned that is like this node, but
@@ -4262,7 +4276,7 @@ lives in the new context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dimensionsAreMatchingTargetDimensionValues">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1698-1733" title="Go to source code">dimensionsAreMatchingTargetDimensionValues</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1701-1736" title="Go to source code">dimensionsAreMatchingTargetDimensionValues</a>( )</code>
 
 			<div class="description short">
 				<p>Internal method</p>
@@ -4297,7 +4311,7 @@ lives in the new context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1735-1749" title="Go to source code">setNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1738-1752" title="Go to source code">setNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the associated NodeData in regards to the Context.</p>
@@ -4335,7 +4349,7 @@ lives in the new context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeTypeAllowedAsChildNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1751-1764" title="Go to source code">isNodeTypeAllowedAsChildNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1754-1767" title="Go to source code">isNodeTypeAllowedAsChildNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given $nodeType would be allowed as a child node of this node according to the configured constraints.</p>
@@ -4375,7 +4389,7 @@ lives in the new context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAutoCreated">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1766-1784" title="Go to source code">isAutoCreated</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1769-1787" title="Go to source code">isAutoCreated</a>( )</code>
 
 			<div class="description short">
 				<p>Determine if this node is configured as auto-created childNode of the parent node. If that is the case, it
@@ -4412,7 +4426,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNodeDataIsMatchingContext">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1786-1797" title="Go to source code">setNodeDataIsMatchingContext</a>( <span>boolean <var>$status</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1789-1800" title="Go to source code">setNodeDataIsMatchingContext</a>( <span>boolean <var>$status</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the status of the associated NodeData in regards to the Context.</p>
@@ -4448,7 +4462,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeNodeCreate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1799-1811" title="Go to source code">emitBeforeNodeCreate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$name</var></span>, <span>string <var>$nodeType</var></span>, <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1802-1814" title="Go to source code">emitBeforeNodeCreate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$name</var></span>, <span>string <var>$nodeType</var></span>, <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node will be created.</p>
@@ -4491,7 +4505,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterNodeCreate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1813-1822" title="Go to source code">emitAfterNodeCreate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1816-1825" title="Go to source code">emitAfterNodeCreate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node was created.</p>
@@ -4528,7 +4542,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodeAdded">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1824-1833" title="Go to source code">emitNodeAdded</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1827-1836" title="Go to source code">emitNodeAdded</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node was added.</p>
@@ -4565,7 +4579,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodeUpdated">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1835-1844" title="Go to source code">emitNodeUpdated</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1838-1847" title="Go to source code">emitNodeUpdated</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node was updated.</p>
@@ -4602,7 +4616,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodeRemoved">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1846-1855" title="Go to source code">emitNodeRemoved</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1849-1858" title="Go to source code">emitNodeRemoved</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node was removed.</p>
@@ -4639,7 +4653,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeNodePropertyChange">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1857-1869" title="Go to source code">emitBeforeNodePropertyChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span>, <span>mixed <var>$oldValue</var></span>, <span>mixed <var>$newValue</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1860-1872" title="Go to source code">emitBeforeNodePropertyChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span>, <span>mixed <var>$oldValue</var></span>, <span>mixed <var>$newValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the property of a node will be changed.</p>
@@ -4682,7 +4696,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePropertyChanged">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1871-1883" title="Go to source code">emitNodePropertyChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span>, <span>mixed <var>$oldValue</var></span>, <span>mixed <var>$newValue</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1874-1886" title="Go to source code">emitNodePropertyChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span>, <span>mixed <var>$oldValue</var></span>, <span>mixed <var>$newValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the property of a node was changed.</p>
@@ -4725,7 +4739,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePathChanged">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1885-1896" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$oldPath</var></span>, <span>string <var>$newPath</var></span>, <span>boolean <var>$recursion</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Node.html#1888-1899" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$oldPath</var></span>, <span>string <var>$newPath</var></span>, <span>boolean <var>$recursion</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the node path has been changed.</p>

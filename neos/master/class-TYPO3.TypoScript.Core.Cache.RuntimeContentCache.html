@@ -158,6 +158,10 @@
 							Exception						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.TypeConverter.html">
 							TypeConverter						</a>
 							</li>
@@ -384,6 +388,10 @@
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.DataSource.html">
 							DataSource						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.Mapping.html">
+							Mapping						</a>
 							</li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.View.html">
@@ -746,7 +754,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TypoScript.html">TypoScript</a>\<a href="namespace-TYPO3.TypoScript.Core.html">Core</a>\<a href="namespace-TYPO3.TypoScript.Core.Cache.html">Cache</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#20-344" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/RuntimeContentCache.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#20-391" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/RuntimeContentCache.php</a>
 		<br>
 	</div>
 
@@ -766,7 +774,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#65-71" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.TypoScript.Core.Runtime.html">TYPO3\TypoScript\Core\Runtime</a></code> <var>$runtime</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#71-77" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.TypoScript.Core.Runtime.html">TYPO3\TypoScript\Core\Runtime</a></code> <var>$runtime</var></span> )</code>
 
 			<div class="description short">
 				
@@ -800,14 +808,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addTag">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#73-91" title="Go to source code">addTag</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#79-99" title="Go to source code">addTag</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
-				
+				<p>Adds a tag built from the given key and value.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Adds a tag built from the given key and value.</p>
 
 
 					<h4>Parameters</h4>
@@ -840,14 +848,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushTags">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#93-101" title="Go to source code">flushTags</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#101-111" title="Go to source code">flushTags</a>( )</code>
 
 			<div class="description short">
-				
+				<p>Resets the assigned tags, returning the previously set tags.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Resets the assigned tags, returning the previously set tags.</p>
 
 
 
@@ -873,7 +881,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_enter">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#103-138" title="Go to source code">enter</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#113-148" title="Go to source code">enter</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Enter an evaluation</p>
@@ -920,7 +928,7 @@ like the cache entry point.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_preEvaluate">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#140-188" title="Go to source code">preEvaluate</a>( <span>array <var>&amp; $evaluateContext</var></span>, <span>object <var>$tsObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#150-217" title="Go to source code">preEvaluate</a>( <span>array <var>&amp; $evaluateContext</var></span>, <span>object <var>$tsObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Check for cached evaluation and or collect metadata for evaluation</p>
@@ -964,7 +972,7 @@ minimum maximumLifetime).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_postProcess">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#190-232" title="Go to source code">postProcess</a>( <span>array <var>$evaluateContext</var></span>, <span>object <var>$tsObject</var></span>, <span>mixed <var>$output</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#219-274" title="Go to source code">postProcess</a>( <span>array <var>$evaluateContext</var></span>, <span>object <var>$tsObject</var></span>, <span>mixed <var>$output</var></span> )</code>
 
 			<div class="description short">
 				<p>Post process output for caching information</p>
@@ -1010,7 +1018,7 @@ store cache entries.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_leave">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#234-247" title="Go to source code">leave</a>( <span>array <var>$evaluateContext</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#276-289" title="Go to source code">leave</a>( <span>array <var>$evaluateContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Leave the evaluation of a path</p>
@@ -1046,7 +1054,7 @@ store cache entries.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateUncached">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#249-269" title="Go to source code">evaluateUncached</a>( <span>string <var>$path</var></span>, <span>array <var>$contextArray</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#291-311" title="Go to source code">evaluateUncached</a>( <span>string <var>$path</var></span>, <span>array <var>$contextArray</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate a TypoScript path with a given context without content caching</p>
@@ -1088,7 +1096,7 @@ store cache entries.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildCacheIdentifierValues">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#271-297" title="Go to source code">buildCacheIdentifierValues</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>object <var>$tsObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#313-329" title="Go to source code">buildCacheIdentifierValues</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>object <var>$tsObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds an array of additional key / values which must go into the calculation of the cache entry identifier for
@@ -1132,7 +1140,7 @@ a cached content segment.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildCacheTags">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#299-326" title="Go to source code">buildCacheTags</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>object <var>$tsObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#331-358" title="Go to source code">buildCacheTags</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>object <var>$tsObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds an array of string which must be used as tags for the cache entry identifier of a specific cached content segment.</p>
@@ -1163,6 +1171,44 @@ a cached content segment.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="unserializeContext" id="_unserializeContext">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unserializeContext">#</a>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#360-373" title="Go to source code">unserializeContext</a>( <span>array <var>$contextArray</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$contextArray</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setEnableContentCache" id="_setEnableContentCache">
 
 			<td class="attributes"><code>
@@ -1174,7 +1220,7 @@ a cached content segment.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setEnableContentCache">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#328-335" title="Go to source code">setEnableContentCache</a>( <span>boolean <var>$enableContentCache</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#375-382" title="Go to source code">setEnableContentCache</a>( <span>boolean <var>$enableContentCache</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1208,7 +1254,7 @@ a cached content segment.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getEnableContentCache">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#337-343" title="Go to source code">getEnableContentCache</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#384-390" title="Go to source code">getEnableContentCache</a>( )</code>
 
 			<div class="description short">
 				
@@ -1367,7 +1413,7 @@ a cached content segment.</p>
 			<td class="value">
 				<div>
 					<a href="#$cacheMetadata" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1421,6 +1467,34 @@ a cached content segment.</p>
 				<div>
 					<a href="#$tags" class="anchor">#</a>
 					<code>[]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="propertyMapper" id="$propertyMapper">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Property\PropertyMapper
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TypoScript.Core.Cache.RuntimeContentCache.html#65-69" title="Go to source code"><var>$propertyMapper</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$propertyMapper" class="anchor">#</a>
+					<code></code>
 				</div>
 			</td>
 		</tr>

@@ -158,6 +158,10 @@
 							Exception						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.TypeConverter.html">
 							TypeConverter						</a>
 							</li>
@@ -384,6 +388,10 @@
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.DataSource.html">
 							DataSource						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.Mapping.html">
+							Mapping						</a>
 							</li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.View.html">
@@ -758,7 +766,7 @@ of the Neos Backend.</p>
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#25-316" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Service/ContentElementWrappingService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#22-324" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Service/ContentElementWrappingService.php</a>
 		<br>
 	</div>
 
@@ -778,7 +786,7 @@ of the Neos Backend.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_wrapContentObject">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#70-168" title="Go to source code">wrapContentObject</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>string <var>$content</var></span>, <span>boolean <var>$renderCurrentDocumentMetadata</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#55-77" title="Go to source code">wrapContentObject</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Wrap the $content identified by $node with the needed markup for the backend.</p>
@@ -792,12 +800,52 @@ of the Neos Backend.</p>
 					<div class="list"><dl>
 						<dt><var>$node</var></dt>
 						<dd></dd>
+						<dt><var>$content</var></dt>
+						<dd></dd>
 						<dt><var>$typoScriptPath</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="wrapCurrentDocumentMetadata" id="_wrapCurrentDocumentMetadata">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_wrapCurrentDocumentMetadata">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#79-99" title="Go to source code">wrapCurrentDocumentMetadata</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$node</var></dt>
 						<dd></dd>
 						<dt><var>$content</var></dt>
 						<dd></dd>
-						<dt><var>$renderCurrentDocumentMetadata</var></dt>
-						<dd>When this flag is set we will render the global metadata for the current document</dd>
+						<dt><var>$typoScriptPath</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -814,7 +862,7 @@ of the Neos Backend.</p>
 		<tr data-order="addNodePropertyAttributes" id="_addNodePropertyAttributes">
 
 			<td class="attributes"><code>
-				 public 
+				 protected 
 				array
 				
 				</code>
@@ -822,7 +870,7 @@ of the Neos Backend.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addNodePropertyAttributes">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#170-200" title="Go to source code">addNodePropertyAttributes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>array <var>$attributes</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#101-119" title="Go to source code">addNodePropertyAttributes</a>( <span>array <var>$attributes</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds node properties to the given $attributes collection and returns the extended array</p>
@@ -834,9 +882,9 @@ of the Neos Backend.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$node</var></dt>
-						<dd></dd>
 						<dt><var>$attributes</var></dt>
+						<dd></dd>
+						<dt><var>$node</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -851,27 +899,25 @@ of the Neos Backend.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getNodeProperty" id="_getNodeProperty">
+		<tr data-order="renderNodePropertyAttribute" id="_renderNodePropertyAttribute">
 
 			<td class="attributes"><code>
 				 protected 
-				string
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getNodeProperty">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#202-290" title="Go to source code">getNodeProperty</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span>, <span>string <var>&amp; $dataType</var></span> )</code>
+			<a class="anchor" href="#_renderNodePropertyAttribute">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#121-152" title="Go to source code">renderNodePropertyAttribute</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
-				<p>TODO This implementation is directly linked to the inspector editors, since they need the actual values,
-this should change to use TypeConverters</p>
+				<p>Renders data attributes needed for the given node property.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>TODO This implementation is directly linked to the inspector editors, since they need the actual values,
-this should change to use TypeConverters</p>
+				<p>Renders data attributes needed for the given node property.</p>
 
 
 					<h4>Parameters</h4>
@@ -880,13 +926,209 @@ this should change to use TypeConverters</p>
 						<dd></dd>
 						<dt><var>$propertyName</var></dt>
 						<dd></dd>
-						<dt><var>$dataType</var></dt>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addCssClasses" id="_addCssClasses">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addCssClasses">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#154-175" title="Go to source code">addCssClasses</a>( <span>array <var>$attributes</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>array <var>$initialClasses</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Add required CSS classes to the attributes.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Add required CSS classes to the attributes.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$attributes</var></dt>
+						<dd></dd>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+						<dt><var>$initialClasses</var></dt>
 						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addDocumentMetadata" id="_addDocumentMetadata">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addDocumentMetadata">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#177-200" title="Go to source code">addDocumentMetadata</a>( <span>array <var>$attributes</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+
+			<div class="description short">
+				<p>Collects metadata for the Neos backend specifically for document nodes.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Collects metadata for the Neos backend specifically for document nodes.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$attributes</var></dt>
+						<dd></dd>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addGenericEditingMetadata" id="_addGenericEditingMetadata">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addGenericEditingMetadata">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#202-240" title="Go to source code">addGenericEditingMetadata</a>( <span>array <var>$attributes</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+
+			<div class="description short">
+				<p>Collects metadata attributes used to allow editing of the node in the Neos backend.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Collects metadata attributes used to allow editing of the node in the Neos backend.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$attributes</var></dt>
+						<dd></dd>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="collectEditingClassNames" id="_collectEditingClassNames">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_collectEditingClassNames">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#242-272" title="Go to source code">collectEditingClassNames</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+
+			<div class="description short">
+				<p>Collects CSS class names used for styling editable elements in the Neos backend.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Collects CSS class names used for styling editable elements in the Neos backend.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isInlineEditable" id="_isInlineEditable">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isInlineEditable">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#274-287" title="Go to source code">isInlineEditable</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+
+			<div class="description short">
+				<p>Determine if the Node or one of it's properties is inline editable.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Determine if the Node or one of it's properties is inline editable.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
 					</div>
 
 
@@ -906,7 +1148,45 @@ this should change to use TypeConverters</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasInlineEditableProperties">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#292-304" title="Go to source code">hasInlineEditableProperties</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#289-300" title="Go to source code">hasInlineEditableProperties</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if the given Node has any properties configured as 'inlineEditable'</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the given Node has any properties configured as 'inlineEditable'</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="needsMetadata" id="_needsMetadata">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_needsMetadata">#</a>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#302-312" title="Go to source code">needsMetadata</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>boolean <var>$renderCurrentDocumentMetadata</var></span> )</code>
 
 			<div class="description short">
 				
@@ -919,6 +1199,8 @@ this should change to use TypeConverters</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$node</var></dt>
+						<dd></dd>
+						<dt><var>$renderCurrentDocumentMetadata</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -944,7 +1226,7 @@ this should change to use TypeConverters</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dasherize">#</a>
-			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#306-315" title="Go to source code">dasherize</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#314-323" title="Go to source code">dasherize</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts camelCased strings to lower cased and non-camel-cased strings</p>
@@ -987,62 +1269,6 @@ this should change to use TypeConverters</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="objectManager" id="$objectManager">
-			<td class="attributes"><code>
-				protected  
-				TYPO3\Flow\Object\ObjectManagerInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#34-38" title="Go to source code"><var>$objectManager</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$objectManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="persistenceManager" id="$persistenceManager">
-			<td class="attributes"><code>
-				protected  
-				TYPO3\Flow\Persistence\PersistenceManagerInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#40-44" title="Go to source code"><var>$persistenceManager</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$persistenceManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="privilegeManager" id="$privilegeManager">
 			<td class="attributes"><code>
 				protected  
@@ -1050,7 +1276,7 @@ this should change to use TypeConverters</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#46-50" title="Go to source code"><var>$privilegeManager</var></a>
+					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#31-35" title="Go to source code"><var>$privilegeManager</var></a>
 
 				<div class="description short">
 					
@@ -1078,7 +1304,7 @@ this should change to use TypeConverters</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#52-56" title="Go to source code"><var>$nodeAuthorizationService</var></a>
+					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#37-41" title="Go to source code"><var>$nodeAuthorizationService</var></a>
 
 				<div class="description short">
 					
@@ -1106,7 +1332,7 @@ this should change to use TypeConverters</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#58-62" title="Go to source code"><var>$htmlAugmenter</var></a>
+					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#43-47" title="Go to source code"><var>$htmlAugmenter</var></a>
 
 				<div class="description short">
 					
@@ -1127,14 +1353,14 @@ this should change to use TypeConverters</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="entityToIdentityConverter" id="$entityToIdentityConverter">
+		<tr data-order="nodePropertyConverterService" id="$nodePropertyConverterService">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-TYPO3.Neos.TypeConverter.EntityToIdentityConverter.html">TYPO3\Neos\TypeConverter\EntityToIdentityConverter</a></code>
+				<code><a href="class-TYPO3.Neos.Service.Mapping.NodePropertyConverterService.html">TYPO3\Neos\Service\Mapping\NodePropertyConverterService</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#64-68" title="Go to source code"><var>$entityToIdentityConverter</var></a>
+					<a href="source-class-TYPO3.Neos.Service.ContentElementWrappingService.html#49-53" title="Go to source code"><var>$nodePropertyConverterService</var></a>
 
 				<div class="description short">
 					
@@ -1150,7 +1376,7 @@ this should change to use TypeConverters</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$entityToIdentityConverter" class="anchor">#</a>
+					<a href="#$nodePropertyConverterService" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>

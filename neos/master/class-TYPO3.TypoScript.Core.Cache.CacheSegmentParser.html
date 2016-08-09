@@ -158,6 +158,10 @@
 							Exception						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
 						<a href="namespace-TYPO3.Media.TypeConverter.html">
 							TypeConverter						</a>
 							</li>
@@ -384,6 +388,10 @@
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.DataSource.html">
 							DataSource						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.Mapping.html">
+							Mapping						</a>
 							</li>
 					<li>
 						<a href="namespace-TYPO3.Neos.Service.View.html">
@@ -744,7 +752,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TypoScript.html">TypoScript</a>\<a href="namespace-TYPO3.TypoScript.Core.html">Core</a>\<a href="namespace-TYPO3.TypoScript.Core.Cache.html">Cache</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#16-166" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/CacheSegmentParser.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#16-175" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/CacheSegmentParser.php</a>
 		<br>
 	</div>
 
@@ -764,7 +772,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_extractRenderedSegments">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#31-143" title="Go to source code">extractRenderedSegments</a>( <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#31-152" title="Go to source code">extractRenderedSegments</a>( <span>string <var>$content</var></span>, <span>string <var>$randomCacheMarker</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Parses the given content and extracts segments by searching for start end end markers. Those segments can later
@@ -782,6 +790,8 @@ be retrieved via getCacheSegments() and stored in a cache.</p>
 					<div class="list"><dl>
 						<dt><var>$content</var></dt>
 						<dd>The content to process, ie. the rendered content with some segment markers already in place</dd>
+						<dt><var>$randomCacheMarker</var></dt>
+						<dd>A random cache marker that should be used to "protect" against content containing special characters used to mark cache segments</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -810,7 +820,7 @@ be retrieved via getCacheSegments() and stored in a cache.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOutput">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#145-154" title="Go to source code">getOutput</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#154-163" title="Go to source code">getOutput</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the fully intact content as originally given to extractRenderedSegments() but without the markers. This
@@ -845,7 +855,7 @@ content is suitable for being used as output for the user.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheSegments">#</a>
-			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#156-165" title="Go to source code">getCacheSegments</a>( )</code>
+			<code><a href="source-class-TYPO3.TypoScript.Core.Cache.CacheSegmentParser.html#165-174" title="Go to source code">getCacheSegments</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array with extracted content segments, including the type (if they can be cached or not) and tags to
