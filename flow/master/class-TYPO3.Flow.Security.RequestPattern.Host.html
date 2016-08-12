@@ -961,7 +961,7 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a>\<a href="namespace-TYPO3.Flow.Security.RequestPattern.html">RequestPattern</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#18-63" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/RequestPattern/Host.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#19-71" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/RequestPattern/Host.php</a>
 		<br>
 	</div>
 
@@ -970,38 +970,37 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="getPattern" id="_getPattern">
+		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getPattern">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#32-38" title="Go to source code">getPattern</a>( )</code>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#33-41" title="Go to source code">__construct</a>( <span>array <var>$options</var></span> )</code>
 
 			<div class="description short">
-				
+				<p>Expects options in the form array('hostPattern' => '<host pattern>')</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Expects options in the form array('hostPattern' => '<host pattern>')</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+					</dl></div>
 
 
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The set pattern
-					</div>
 
 
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-TYPO3.Flow.Security.RequestPatternInterface.html#_getPattern">TYPO3\Flow\Security\RequestPatternInterface::getPattern()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
@@ -1016,7 +1015,7 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPattern">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#40-47" title="Go to source code">setPattern</a>( <span>string <var>$hostPattern</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#43-51" title="Go to source code">setPattern</a>( <span>string <var>$hostPattern</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1025,6 +1024,10 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 			<div class="description detailed hidden">
 				
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							since 3.3 this is not used - use options instead (@see __construct())<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1036,8 +1039,6 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 
 
 
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-TYPO3.Flow.Security.RequestPatternInterface.html#_setPattern">TYPO3\Flow\Security\RequestPatternInterface::setPattern()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
@@ -1052,7 +1053,7 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#49-62" title="Go to source code">matchRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#53-70" title="Go to source code">matchRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Matches a \TYPO3\Flow\Mvc\RequestInterface against its set host pattern rules</p>
@@ -1073,6 +1074,10 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 						boolean<br>TRUE if the pattern matched, FALSE otherwise
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidRequestPatternException.html">TYPO3\Flow\Security\Exception\InvalidRequestPatternException</a></code>
+					</div>
 
 
 
@@ -1097,14 +1102,14 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="hostPattern" id="$hostPattern">
+		<tr data-order="options" id="$options">
 			<td class="attributes"><code>
 				protected  
-				string
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#27-30" title="Go to source code"><var>$hostPattern</var></a>
+					<a href="source-class-TYPO3.Flow.Security.RequestPattern.Host.html#28-31" title="Go to source code"><var>$options</var></a>
 
 				<div class="description short">
 					
@@ -1117,8 +1122,8 @@ Note: the pattern is a simple wildcard matching pattern, with * as the wildcard 
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$hostPattern" class="anchor">#</a>
-					<code><span class="php-quote">''</span></code>
+					<a href="#$options" class="anchor">#</a>
+					<code></code>
 				</div>
 			</td>
 		</tr>

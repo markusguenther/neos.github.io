@@ -958,7 +958,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a>\<a href="namespace-TYPO3.Flow.Security.RequestPattern.html">RequestPattern</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#15-58" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/RequestPattern/ControllerObjectName.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#18-64" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/RequestPattern/ControllerObjectName.php</a>
 		<br>
 	</div>
 
@@ -967,38 +967,37 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="getPattern" id="_getPattern">
+		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getPattern">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#27-35" title="Go to source code">getPattern</a>( )</code>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#28-36" title="Go to source code">__construct</a>( <span>array <var>$options</var></span> )</code>
 
 			<div class="description short">
-				<p>Returns the set pattern</p>
+				<p>Expects options in the form array('controllerObjectNamePatterns' => '<regularExpression>')</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the set pattern</p>
+				<p>Expects options in the form array('controllerObjectNamePatterns' => '<regularExpression>')</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+					</dl></div>
 
 
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The set pattern
-					</div>
 
 
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-TYPO3.Flow.Security.RequestPatternInterface.html#_getPattern">TYPO3\Flow\Security\RequestPatternInterface::getPattern()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
@@ -1013,7 +1012,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPattern">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#37-46" title="Go to source code">setPattern</a>( <span>string <var>$controllerObjectNamePattern</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#38-48" title="Go to source code">setPattern</a>( <span>string <var>$controllerObjectNamePattern</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets an controller object name pattern (preg_match() syntax)</p>
@@ -1022,6 +1021,10 @@
 			<div class="description detailed hidden">
 				<p>Sets an controller object name pattern (preg_match() syntax)</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							since 3.3 this is not used - use options instead (@see __construct())<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1033,8 +1036,6 @@
 
 
 
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-TYPO3.Flow.Security.RequestPatternInterface.html#_setPattern">TYPO3\Flow\Security\RequestPatternInterface::setPattern()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
@@ -1049,7 +1050,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#48-57" title="Go to source code">matchRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#50-63" title="Go to source code">matchRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Matches a \TYPO3\Flow\Mvc\RequestInterface against its set controller object name pattern rules</p>
@@ -1070,6 +1071,10 @@
 						boolean<br>TRUE if the pattern matched, FALSE otherwise
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Security.Exception.InvalidRequestPatternException.html">TYPO3\Flow\Security\Exception\InvalidRequestPatternException</a></code>
+					</div>
 
 
 
@@ -1094,28 +1099,28 @@
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="controllerObjectNamePattern" id="$controllerObjectNamePattern">
+		<tr data-order="options" id="$options">
 			<td class="attributes"><code>
 				protected  
-				string
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#21-25" title="Go to source code"><var>$controllerObjectNamePattern</var></a>
+					<a href="source-class-TYPO3.Flow.Security.RequestPattern.ControllerObjectName.html#23-26" title="Go to source code"><var>$options</var></a>
 
 				<div class="description short">
-					<p>The preg_match() styled controller object name pattern</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The preg_match() styled controller object name pattern</p>
+					
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$controllerObjectNamePattern" class="anchor">#</a>
-					<code><span class="php-quote">''</span></code>
+					<a href="#$options" class="anchor">#</a>
+					<code></code>
 				</div>
 			</td>
 		</tr>
