@@ -736,8 +736,12 @@
 
 
 	<div class="description">
-	<p>A plugin for the TYPO3CR NodeCommandController which adds a task adding missing URI segments to the node:repair
-command.</p>
+	<p>A plugin for the TYPO3CR NodeCommandController which adds some tasks to the node:repair command:</p>
+
+<ul>
+<li>adding missing URI segments</li>
+<li>removing dimensions on nodes / and /sites</li>
+</ul>
 	</div>
 
 	<dl class="tree well">
@@ -765,7 +769,7 @@ command.</p>
 
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#29-211" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Command/NodeCommandControllerPlugin.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#31-291" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Command/NodeCommandControllerPlugin.php</a>
 		<br>
 	</div>
 
@@ -785,7 +789,7 @@ command.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSubCommandShortDescription">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#78-90" title="Go to source code">getSubCommandShortDescription</a>( <span>string <var>$controllerCommandName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#88-100" title="Go to source code">getSubCommandShortDescription</a>( <span>string <var>$controllerCommandName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a short description</p>
@@ -825,7 +829,7 @@ command.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSubCommandDescription">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#92-108" title="Go to source code">getSubCommandDescription</a>( <span>string <var>$controllerCommandName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#102-125" title="Go to source code">getSubCommandDescription</a>( <span>string <var>$controllerCommandName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a piece of description for the specific task the plugin solves for the specified command</p>
@@ -865,7 +869,7 @@ command.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_invokeSubCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#110-128" title="Go to source code">invokeSubCommand</a>( <span>string <var>$controllerCommandName</var></span>, <span>TYPO3\Flow\Cli\ConsoleOutput <var>$output</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$cleanup</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#127-166" title="Go to source code">invokeSubCommand</a>( <span>string <var>$controllerCommandName</var></span>, <span>TYPO3\Flow\Cli\ConsoleOutput <var>$output</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$cleanup</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$skip</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$only</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>A method which runs the task implemented by the plugin for the given command</p>
@@ -889,6 +893,10 @@ command.</p>
 						<dd>If TRUE, don't do any changes, just simulate what you would do</dd>
 						<dt><var>$cleanup</var></dt>
 						<dd>If FALSE, cleanup tasks are skipped</dd>
+						<dt><var>$skip</var></dt>
+						<dd>Skip the given check or checks (comma separated)</dd>
+						<dt><var>$only</var></dt>
+						<dd>Only execute the given check or checks (comma separated)</dd>
 					</dl></div>
 
 
@@ -911,7 +919,7 @@ command.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateUriPathSegments">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#130-166" title="Go to source code">generateUriPathSegments</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#168-204" title="Go to source code">generateUriPathSegments</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate missing URI path segments</p>
@@ -950,7 +958,7 @@ a path segment set yet.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateUriPathSegmentsForNode">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#168-191" title="Go to source code">generateUriPathSegmentsForNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#206-229" title="Go to source code">generateUriPathSegmentsForNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
 
 			<div class="description short">
 				<p>Traverses through the tree starting at the given root node and sets the uriPathSegment property derived from
@@ -977,6 +985,45 @@ the node label.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="removeContentDimensionsFromRootAndSitesNode" id="_removeContentDimensionsFromRootAndSitesNode">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_removeContentDimensionsFromRootAndSitesNode">#</a>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#231-271" title="Go to source code">removeContentDimensionsFromRootAndSitesNode</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
+
+			<div class="description short">
+				<p>Remove dimensions on nodes "/" and "/sites"</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Remove dimensions on nodes "/" and "/sites"</p>
+
+<p>This empties the content dimensions on those nodes, so when traversing via the Node API from the root node,
+the nodes below "/sites" are always reachable.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$workspaceName</var></dt>
+						<dd></dd>
+						<dt><var>$dryRun</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="createContext" id="_createContext">
 
 			<td class="attributes"><code>
@@ -988,7 +1035,7 @@ the node label.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createContext">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#193-210" title="Go to source code">createContext</a>( <span>string <var>$workspaceName</var></span>, <span>array <var>$dimensions</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#273-290" title="Go to source code">createContext</a>( <span>string <var>$workspaceName</var></span>, <span>array <var>$dimensions</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a content context for given workspace and language identifiers</p>
@@ -1040,7 +1087,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#37-41" title="Go to source code"><var>$contextFactory</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#41-45" title="Go to source code"><var>$contextFactory</var></a>
 
 				<div class="description short">
 					
@@ -1068,7 +1115,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#43-47" title="Go to source code"><var>$workspaceRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#47-51" title="Go to source code"><var>$workspaceRepository</var></a>
 
 				<div class="description short">
 					
@@ -1096,7 +1143,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#49-53" title="Go to source code"><var>$contentDimensionRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#53-57" title="Go to source code"><var>$contentDimensionRepository</var></a>
 
 				<div class="description short">
 					
@@ -1117,6 +1164,34 @@ the node label.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="nodeDataRepository" id="$nodeDataRepository">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html">TYPO3\TYPO3CR\Domain\Repository\NodeDataRepository</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#59-63" title="Go to source code"><var>$nodeDataRepository</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$nodeDataRepository" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="dimensionCombinator" id="$dimensionCombinator">
 			<td class="attributes"><code>
 				protected  
@@ -1124,7 +1199,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#55-59" title="Go to source code"><var>$dimensionCombinator</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#65-69" title="Go to source code"><var>$dimensionCombinator</var></a>
 
 				<div class="description short">
 					
@@ -1152,7 +1227,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#61-65" title="Go to source code"><var>$nodeUriPathSegmentGenerator</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#71-75" title="Go to source code"><var>$nodeUriPathSegmentGenerator</var></a>
 
 				<div class="description short">
 					
@@ -1180,7 +1255,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#67-70" title="Go to source code"><var>$output</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#77-80" title="Go to source code"><var>$output</var></a>
 
 				<div class="description short">
 					
@@ -1205,7 +1280,7 @@ the node label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#72-76" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Neos.Command.NodeCommandControllerPlugin.html#82-86" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
