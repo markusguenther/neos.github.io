@@ -1989,12 +1989,12 @@
 </span><span id="104" class="l">    {
 </span><span id="105" class="l">        <span class="php-var">$essentialsPath</span> = <span class="php-var">$installerResourcesDirectory</span> . <span class="php-quote">'Distribution/Essentials'</span>;
 </span><span id="106" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$essentialsPath</span>)) {
-</span><span id="107" class="l">            Files::copyDirectoryRecursively(<span class="php-var">$essentialsPath</span>, <span class="php-keyword2">getcwd</span>() . <span class="php-quote">'/'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">true</span>);
+</span><span id="107" class="l">            Files::copyDirectoryRecursively(<span class="php-var">$essentialsPath</span>, Files::getUnixStylePath(<span class="php-keyword2">getcwd</span>()) . <span class="php-quote">'/'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">true</span>);
 </span><span id="108" class="l">        }
 </span><span id="109" class="l">
 </span><span id="110" class="l">        <span class="php-var">$defaultsPath</span> = <span class="php-var">$installerResourcesDirectory</span> . <span class="php-quote">'Distribution/Defaults'</span>;
 </span><span id="111" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$defaultsPath</span>)) {
-</span><span id="112" class="l">            Files::copyDirectoryRecursively(<span class="php-var">$defaultsPath</span>, <span class="php-keyword2">getcwd</span>() . <span class="php-quote">'/'</span>, <span class="php-keyword1">true</span>, <span class="php-keyword1">true</span>);
+</span><span id="112" class="l">            Files::copyDirectoryRecursively(<span class="php-var">$defaultsPath</span>, Files::getUnixStylePath(<span class="php-keyword2">getcwd</span>()) . <span class="php-quote">'/'</span>, <span class="php-keyword1">true</span>, <span class="php-keyword1">true</span>);
 </span><span id="113" class="l">        }
 </span><span id="114" class="l">    }
 </span><span id="115" class="l">
