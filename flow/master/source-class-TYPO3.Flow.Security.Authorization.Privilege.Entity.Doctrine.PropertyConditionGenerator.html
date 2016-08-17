@@ -1617,7 +1617,6 @@
 			<ul>
 				<li><a href="class-TYPO3.Flow.Aop.AdvicesTrait.html">TYPO3\Flow\Aop\AdvicesTrait</a></li>
 				<li><a href="class-TYPO3.Flow.Object.DependencyInjection.PropertyInjectionTrait.html">TYPO3\Flow\Object\DependencyInjection\PropertyInjectionTrait</a></li>
-				<li><a href="class-TYPO3.Flow.Object.Proxy.DoctrineProxyFixingTrait.html">TYPO3\Flow\Object\Proxy\DoctrineProxyFixingTrait</a></li>
 				<li><a href="class-TYPO3.Flow.Object.Proxy.ObjectSerializationTrait.html">TYPO3\Flow\Object\Proxy\ObjectSerializationTrait</a></li>
 			</ul>
 
@@ -2223,7 +2222,7 @@
 </span><span id="337" class="l">            }
 </span><span id="338" class="l">            <span class="php-var">$quotedColumnName</span> = <span class="php-var">$quoteStrategy</span>-&gt;getJoinColumnName(<span class="php-var">$joinColumn</span>, <span class="php-var">$targetEntity</span>, <span class="php-var">$this</span>-&gt;entityManager-&gt;getConnection()-&gt;getDatabasePlatform());
 </span><span id="339" class="l">            <span class="php-var">$subselectIdentifier</span> = <span class="php-quote">'subselect'</span> . <span class="php-keyword2">md5</span>(<span class="php-var">$subselectSql</span>);
-</span><span id="340" class="l">            <span class="php-var">$subselectConstraintQueries</span>[] = <span class="php-var">$targetTableAlias</span> . <span class="php-quote">'.'</span> . <span class="php-var">$quotedColumnName</span> . <span class="php-quote">' IN (SELECT '</span> . <span class="php-var">$subselectIdentifier</span> . <span class="php-quote">'.'</span> . <span class="php-var">$joinColumn</span>[<span class="php-quote">'referencedColumnName'</span>] . <span class="php-quote">'0 FROM ('</span> . <span class="php-var">$subselectSql</span> . <span class="php-quote">') AS '</span> . <span class="php-var">$subselectIdentifier</span> . <span class="php-quote">' ) '</span>;
+</span><span id="340" class="l">            <span class="php-var">$subselectConstraintQueries</span>[] = <span class="php-var">$targetTableAlias</span> . <span class="php-quote">'.'</span> . <span class="php-var">$quotedColumnName</span> . <span class="php-quote">' IN (SELECT '</span> . <span class="php-var">$subselectIdentifier</span> . <span class="php-quote">'.'</span> . <span class="php-var">$joinColumn</span>[<span class="php-quote">'referencedColumnName'</span>] . <span class="php-quote">'_0 FROM ('</span> . <span class="php-var">$subselectSql</span> . <span class="php-quote">') AS '</span> . <span class="php-var">$subselectIdentifier</span> . <span class="php-quote">' ) '</span>;
 </span><span id="341" class="l">        }
 </span><span id="342" class="l">
 </span><span id="343" class="l">        <span class="php-keyword1">return</span> <span class="php-quote">' ('</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">' ) AND ( '</span>, <span class="php-var">$subselectConstraintQueries</span>) . <span class="php-quote">') '</span>;
@@ -2408,6 +2407,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?0e353490a9d2938b91ca611383682ae1de1faf8e"></script>
+<script src="elementlist.js?915be7c7723db59f64c57ba49bb90010c90a39e3"></script>
 </body>
 </html>
