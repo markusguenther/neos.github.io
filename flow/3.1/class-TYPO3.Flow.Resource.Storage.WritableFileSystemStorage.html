@@ -864,7 +864,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Resource.html">Resource</a>\<a href="namespace-TYPO3.Flow.Resource.Storage.html">Storage</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#18-178" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Storage/WritableFileSystemStorage.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#18-182" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Storage/WritableFileSystemStorage.php</a>
 		<br>
 	</div>
 
@@ -1059,7 +1059,7 @@ important because the resource management will derive the IANA Media Type from i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importTemporaryFile">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#120-145" title="Go to source code">importTemporaryFile</a>( <span>string <var>$temporaryFile</var></span>, <span>string <var>$collectionName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#120-149" title="Go to source code">importTemporaryFile</a>( <span>string <var>$temporaryPathAndFileName</var></span>, <span>string <var>$collectionName</var></span> )</code>
 
 			<div class="description short">
 				<p>Imports the given temporary file into the storage and creates the new resource object.</p>
@@ -1068,10 +1068,12 @@ important because the resource management will derive the IANA Media Type from i
 			<div class="description detailed hidden">
 				<p>Imports the given temporary file into the storage and creates the new resource object.</p>
 
+<p>Note: the temporary file is (re-)moved by this method.</p>
+
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$temporaryFile</var></dt>
+						<dt><var>$temporaryPathAndFileName</var></dt>
 						<dd></dd>
 						<dt><var>$collectionName</var></dt>
 						<dd></dd>
@@ -1103,7 +1105,7 @@ important because the resource management will derive the IANA Media Type from i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveTemporaryFileToFinalDestination">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#147-166" title="Go to source code">moveTemporaryFileToFinalDestination</a>( <span>string <var>$temporaryFile</var></span>, <span>string <var>$finalTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#151-170" title="Go to source code">moveTemporaryFileToFinalDestination</a>( <span>string <var>$temporaryFile</var></span>, <span>string <var>$finalTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Move a temporary file to the final destination, creating missing path segments on the way.</p>
@@ -1143,7 +1145,7 @@ important because the resource management will derive the IANA Media Type from i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_fixFilePermissions">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#168-177" title="Go to source code">fixFilePermissions</a>( <span>string <var>$pathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Storage.WritableFileSystemStorage.html#172-181" title="Go to source code">fixFilePermissions</a>( <span>string <var>$pathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Fixes the permissions as needed for Flow to run fine in web and cli context.</p>

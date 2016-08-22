@@ -2199,7 +2199,7 @@
 </span><span id="448" class="l">            }
 </span><span id="449" class="l">        }
 </span><span id="450" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$suitableRequestHandlers</span>)) {
-</span><span id="451" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> FlowException(<span class="php-quote">'No suitable request handler could be found for the current request. This is most likely a setup-problem, so please check your package.json and/or try removing Configuration/PackageStates.php'</span>, <span class="php-num">1464882543</span>);
+</span><span id="451" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \TYPO3\Flow\Exception(<span class="php-quote">'No suitable request handler could be found for the current request. This is most likely a setup-problem, so please check your package.json and/or try removing Configuration/PackageStates.php'</span>, <span class="php-num">1464882543</span>);
 </span><span id="452" class="l">        }
 </span><span id="453" class="l">        <span class="php-keyword2">ksort</span>(<span class="php-var">$suitableRequestHandlers</span>);
 </span><span id="454" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">array_pop</span>(<span class="php-var">$suitableRequestHandlers</span>);
