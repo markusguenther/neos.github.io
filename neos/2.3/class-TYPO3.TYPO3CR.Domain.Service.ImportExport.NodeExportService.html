@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class TYPO3\TYPO3CR\Domain\Service\ImportExport\NodeExportService | Neos (2.3 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Neos (2.3 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Service.ImportExport.html" title="Summary of TYPO3\TYPO3CR\Domain\Service\ImportExport"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Diff.html">
+							Diff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Diff.Renderer.html">
+							Renderer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Diff.Renderer.Html.html">
+							Html						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Diff.Renderer.Text.html">
+							Text						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li class="active">
+						<a href="namespace-TYPO3.html">
+							TYPO3<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Media.html">
+							Media<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Media.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.EventListener.html">
+							EventListener						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Model.html">
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Model.Adjustment.html">
+							Adjustment						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Model.Dto.html">
+							Dto						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Model.ThumbnailGenerator.html">
+							ThumbnailGenerator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Session.html">
+							Session						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Strategy.html">
+							Strategy						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Domain.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Media.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.TypeConverter.html">
+							TypeConverter						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.Validator.html">
+							Validator						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Media.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Media.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Aspects.html">
+							Aspects						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Frontend.html">
+							Frontend						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Module.html">
+							Module<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Module.Administration.html">
+							Administration						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Module.Management.html">
+							Management						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Module.User.html">
+							User						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Controller.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.EventListener.html">
+							EventListener						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Model.html">
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Model.Dto.html">
+							Dto						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Domain.Strategy.html">
+							Strategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Eel.FlowQueryOperations.html">
+							FlowQueryOperations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.EventLog.html">
+							EventLog<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.EventLog.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.EventLog.Domain.Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.EventLog.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.EventLog.Domain.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.EventLog.Integrations.html">
+							Integrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Kickstarter.html">
+							Kickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Kickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Kickstarter.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypePostprocessor.html">
+							NodeTypePostprocessor						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypes.html">
+							NodeTypes<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.NodeTypes.Service.DataSource.html">
+							DataSource						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Routing.Aspects.html">
+							Aspects						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Routing.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Security.Authorization.Privilege.html">
+							Privilege						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.DataSource.html">
+							DataSource						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.Mapping.html">
+							Mapping						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Service.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Setup.html">
+							Setup<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Setup.Step.html">
+							Step						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.TypeConverter.html">
+							TypeConverter						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.TYPO3CR.html">
+							TYPO3CR<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.TYPO3CR.Transformations.html">
+							Transformations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.TypoScript.html">
+							TypoScript<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.TypoScript.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.TypoScript.ExceptionHandlers.html">
+							ExceptionHandlers						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.TypoScript.Helper.html">
+							Helper						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.View.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.ContentElement.html">
+							ContentElement						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.Node.html">
+							Node						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Neos.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+								</ul></li></ul></li>
+					<li class="active">
+						<a href="namespace-TYPO3.TYPO3CR.html">
+							TYPO3CR<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Command.html">
+							Command						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-TYPO3.TYPO3CR.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Factory.html">
+							Factory						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Service.Cache.html">
+							Cache						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Service.ImportExport.html">
+							ImportExport						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Domain.Utility.html">
+							Utility						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Eel.FlowQueryOperations.html">
+							FlowQueryOperations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.html">
+							Migration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Domain.Factory.html">
+							Factory						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Domain.Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Domain.Repository.html">
+							Repository						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Filters.html">
+							Filters						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Migration.Transformations.html">
+							Transformations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.NodeTypePostprocessor.html">
+							NodeTypePostprocessor						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Security.Authorization.Privilege.Node.html">
+							Node<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Security.Authorization.Privilege.Node.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Service.Utility.html">
+							Utility						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.TypeConverter.html">
+							TypeConverter						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.html">
+							TypoScript<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.Core.ExceptionHandlers.html">
+							ExceptionHandlers						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.TypoScriptObjects.html">
+							TypoScriptObjects<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.TypoScriptObjects.Helpers.html">
+							Helpers						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.TypoScriptObjects.Http.html">
+							Http						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.View.html">
+							View						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.TypoScript.ViewHelpers.html">
+							ViewHelpers						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TYPO3.TYPO3CR.Domain.Service.ImportExport.ImportExportPropertyMappingConfiguration.html">ImportExportPropertyMappingConfiguration</a></li>
+				<li class="active"><a href="class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html">NodeExportService</a></li>
+				<li><a href="class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html">NodeImportService</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class NodeExportService</h1>
+
+
+	<div class="description">
+	<p>Service for exporting content repository nodes as an XML structure</p>
+
+<p>Internally, uses associative arrays instead of Domain Models for performance reasons, so "nodeData" in this
+class is always an associative array.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TYPO3CR.html">TYPO3CR</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.html">Domain</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.Service.html">Service</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.Service.ImportExport.html">ImportExport</a><br>
+		
+
+				<b>Flow\scope("singleton")</b>
+				<br>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#18-417" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/ImportExport/NodeExportService.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="export" id="_export">
+
+			<td class="attributes"><code>
+				 public 
+				XMLWriter
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_export">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#104-147" title="Go to source code">export</a>( <span>string <var>$startingPointNodePath</var> = <span class="php-quote">'/'</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>XMLWriter <var>$xmlWriter</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$tidy</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$endDocument</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$resourceSavePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Exports the node data of all nodes in the given sub-tree
+by writing them to the given XMLWriter.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Exports the node data of all nodes in the given sub-tree
+by writing them to the given XMLWriter.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$startingPointNodePath</var></dt>
+						<dd>path to the root node of the sub-tree to export. The specified node will not be included, only its sub nodes.</dd>
+						<dt><var>$workspaceName</var></dt>
+						<dd></dd>
+						<dt><var>$xmlWriter</var></dt>
+						<dd></dd>
+						<dt><var>$tidy</var></dt>
+						<dd></dd>
+						<dt><var>$endDocument</var></dt>
+						<dd></dd>
+						<dt><var>$resourceSavePath</var></dt>
+						<dd></dd>
+						<dt><var>$nodeTypeFilter</var></dt>
+						<dd>Filter the node type of the nodes, allows complex expressions (e.g. "TYPO3.Neos:Page", "!TYPO3.Neos:Page,TYPO3.Neos:Text")</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						XMLWriter
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findNodeDataListToExport" id="_findNodeDataListToExport">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findNodeDataListToExport">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#149-212" title="Go to source code">findNodeDataListToExport</a>( <span>string <var>$pathStartingPoint</var></span>, <span>string <var>$workspace</var> = <span class="php-quote">'live'</span></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Find all nodes of the specified workspace lying below the path specified by
+(and including) the given starting point.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find all nodes of the specified workspace lying below the path specified by
+(and including) the given starting point.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pathStartingPoint</var></dt>
+						<dd>Absolute path specifying the starting point</dd>
+						<dt><var>$workspace</var></dt>
+						<dd>The containing workspace</dd>
+						<dt><var>$nodeTypeFilter</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>an array of node-data in array format.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exportNodeDataList" id="_exportNodeDataList">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exportNodeDataList">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#214-236" title="Go to source code">exportNodeDataList</a>( <span>array <var>&amp; $nodeDataList</var></span> )</code>
+
+			<div class="description short">
+				<p>Exports the given Nodes into the XML structure, contained in <nodes> </nodes> tags.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Exports the given Nodes into the XML structure, contained in <nodes> </nodes> tags.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeDataList</var></dt>
+						<dd>The nodes to export</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>The result is written directly into $this->xmlWriter
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exportNodeData" id="_exportNodeData">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exportNodeData">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#238-336" title="Go to source code">exportNodeData</a>( <span>array <var>&amp; $nodeData</var></span>, <span>array <var>&amp; $nodesStack</var></span> )</code>
+
+			<div class="description short">
+				<p>Exports a single Node into the XML structure</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Exports a single Node into the XML structure</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeData</var></dt>
+						<dd>The node data as an array</dd>
+						<dt><var>$nodesStack</var></dt>
+						<dd>The stack keeping track of open tags, as passed by exportNodeDataList()</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<br>The result is written directly into $this->xmlWriter
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="writeConvertedElement" id="_writeConvertedElement">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_writeConvertedElement">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#338-400" title="Go to source code">writeConvertedElement</a>( <span>array <var>&amp; $data</var></span>, <span>string <var>$propertyName</var></span>, <span>string <var>$elementName</var> = <span class="php-keyword1">null</span></span>, <span> <var>$declaredPropertyType</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Writes out a single property into the XML structure.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Writes out a single property into the XML structure.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd>The data as an array, the given property name is looked up there</dd>
+						<dt><var>$propertyName</var></dt>
+						<dd>The name of the property</dd>
+						<dt><var>$elementName</var></dt>
+						<dd>an optional name to use, defaults to $propertyName</dd>
+						<dt><var>$declaredPropertyType</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="handleExceptionsDuringExport" id="_handleExceptionsDuringExport">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_handleExceptionsDuringExport">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#402-416" title="Go to source code">handleExceptionsDuringExport</a>( )</code>
+
+			<div class="description short">
+				<p>If $this->exceptionsDuringImport is non-empty, build up a new composite exception which contains the individual messages and
+re-throw that one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>If $this->exceptionsDuringImport is non-empty, build up a new composite exception which contains the individual messages and
+re-throw that one.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="SUPPORTED_FORMAT_VERSION" id="SUPPORTED_FORMAT_VERSION">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#28-31" title="Go to source code"><b>SUPPORTED_FORMAT_VERSION</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#SUPPORTED_FORMAT_VERSION" class="anchor">#</a>
+						<code><span class="php-quote">'2.0'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="systemLogger" id="$systemLogger">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Log\SystemLoggerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#33-37" title="Go to source code"><var>$systemLogger</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$systemLogger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="objectManager" id="$objectManager">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Object\ObjectManagerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#39-43" title="Go to source code"><var>$objectManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$objectManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="persistenceManager" id="$persistenceManager">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Persistence\PersistenceManagerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#45-49" title="Go to source code"><var>$persistenceManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$persistenceManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="propertyMapper" id="$propertyMapper">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Property\PropertyMapper
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#51-55" title="Go to source code"><var>$propertyMapper</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$propertyMapper" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="entityManager" id="$entityManager">
+			<td class="attributes"><code>
+				protected  
+				Doctrine\Common\Persistence\ObjectManager
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#57-64" title="Go to source code"><var>$entityManager</var></a>
+
+				<div class="description short">
+					<p>Doctrine's Entity Manager. Note that "ObjectManager" is the name of the related
+interface ...</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Doctrine's Entity Manager. Note that "ObjectManager" is the name of the related
+interface ...</p>
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$entityManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="nodeTypeManager" id="$nodeTypeManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Service.NodeTypeManager.html">TYPO3\TYPO3CR\Domain\Service\NodeTypeManager</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#66-70" title="Go to source code"><var>$nodeTypeManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$nodeTypeManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="nodeDataRepository" id="$nodeDataRepository">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Repository.NodeDataRepository.html">TYPO3\TYPO3CR\Domain\Repository\NodeDataRepository</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#72-76" title="Go to source code"><var>$nodeDataRepository</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$nodeDataRepository" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="securityContext" id="$securityContext">
+			<td class="attributes"><code>
+				protected  
+				TYPO3\Flow\Security\Context
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#78-82" title="Go to source code"><var>$securityContext</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$securityContext" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="propertyMappingConfiguration" id="$propertyMappingConfiguration">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Service.ImportExport.ImportExportPropertyMappingConfiguration.html">TYPO3\TYPO3CR\Domain\Service\ImportExport\ImportExportPropertyMappingConfiguration</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#84-87" title="Go to source code"><var>$propertyMappingConfiguration</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$propertyMappingConfiguration" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="xmlWriter" id="$xmlWriter">
+			<td class="attributes"><code>
+				protected  
+				XMLWriter
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#89-92" title="Go to source code"><var>$xmlWriter</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$xmlWriter" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="exceptionsDuringExport" id="$exceptionsDuringExport">
+			<td class="attributes"><code>
+				protected  
+				array&lt;\Exception&gt;
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#94-97" title="Go to source code"><var>$exceptionsDuringExport</var></a>
+
+				<div class="description short">
+					<p>a list of exceptions which happened during export</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>a list of exceptions which happened during export</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$exceptionsDuringExport" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="exportedNodePaths" id="$exportedNodePaths">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeExportService.html#99-102" title="Go to source code"><var>$exportedNodePaths</var></a>
+
+				<div class="description short">
+					<p>Node paths that have been exported, this is used for consistency checks of broken node rootlines</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Node paths that have been exported, this is used for consistency checks of broken node rootlines</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$exportedNodePaths" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Neos (2.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
