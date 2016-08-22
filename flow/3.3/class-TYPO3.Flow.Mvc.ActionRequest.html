@@ -1,0 +1,2693 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class TYPO3\Flow\Mvc\ActionRequest | Flow Framework (3.3 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Flow Framework (3.3 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.html" title="Summary of TYPO3\Flow\Mvc"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.html">
+							Error<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.html">
+							Messages<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.Tests.html">
+							Tests<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.Tests.Unit.html">
+							Unit						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Arrays.html">
+							Arrays<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Arrays.Tests.html">
+							Tests<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Arrays.Tests.Unit.html">
+							Unit						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.ObjectHandling.html">
+							ObjectHandling<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.ObjectHandling.Tests.html">
+							Tests<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.ObjectHandling.Tests.Unit.html">
+							Unit<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.ObjectHandling.Tests.Unit.Fixture.html">
+							Fixture<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.ObjectHandling.Tests.Unit.Fixture.Model.html">
+							Model						</a>
+							</li>
+								</ul></li></ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.html">
+							Unicode<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.Tests.html">
+							Tests<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.Tests.Unit.html">
+							Unit						</a>
+							</li>
+								</ul></li></ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-TYPO3.html">
+							TYPO3<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Eel.FlowQuery.html">
+							FlowQuery<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Eel.FlowQuery.Operations.html">
+							Operations<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Eel.FlowQuery.Operations.Object.html">
+							Object						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Eel.Helper.html">
+							Helper						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Eel.Validation.html">
+							Validation						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-TYPO3.Flow.html">
+							Flow<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Annotations.html">
+							Annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Aop.html">
+							Aop<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Aop.Advice.html">
+							Advice						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Aop.Builder.html">
+							Builder						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Aop.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Aop.Pointcut.html">
+							Pointcut						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Cache.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Cache.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Cache.Frontend.html">
+							Frontend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Cli.html">
+							Cli						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Composer.html">
+							Composer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Composer.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Configuration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Configuration.Source.html">
+							Source						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Core.Booting.html">
+							Booting<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Core.Booting.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Core.Migrations.html">
+							Migrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Error.html">
+							Error						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Http.html">
+							Http<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Http.Client.html">
+							Client						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Http.Component.html">
+							Component						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.html">
+							I18n<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Cldr.html">
+							Cldr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Cldr.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Cldr.Reader.html">
+							Reader<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Cldr.Reader.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.EelHelper.html">
+							EelHelper						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Formatter.html">
+							Formatter						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Parser.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.TranslationProvider.html">
+							TranslationProvider<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.TranslationProvider.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Xliff.html">
+							Xliff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.I18n.Xliff.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Log.html">
+							Log<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Log.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Log.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Monitor.html">
+							Monitor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Monitor.ChangeDetectionStrategy.html">
+							ChangeDetectionStrategy						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-TYPO3.Flow.Mvc.html">
+							Mvc<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.Controller.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Mvc.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Object.html">
+							Object<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Object.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Object.DependencyInjection.html">
+							DependencyInjection						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Object.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Object.Proxy.html">
+							Proxy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Package.html">
+							Package<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Package.Documentation.html">
+							Documentation						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Package.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Package.MetaData.html">
+							MetaData						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.html">
+							Doctrine<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.DataTypes.html">
+							DataTypes						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.Logging.html">
+							Logging						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.Mapping.html">
+							Mapping<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.Mapping.Driver.html">
+							Driver						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Doctrine.Mapping.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Generic.html">
+							Generic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Generic.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Generic.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Generic.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Persistence.Generic.Qom.html">
+							Qom						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Property.html">
+							Property<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Property.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Property.TypeConverter.html">
+							TypeConverter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Property.TypeConverter.Error.html">
+							Error						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Reflection.html">
+							Reflection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Reflection.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Resource.html">
+							Resource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Resource.Filter.html">
+							Filter						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Resource.Publishing.html">
+							Publishing						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Resource.Storage.html">
+							Storage						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Resource.Streams.html">
+							Streams						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Resource.Target.html">
+							Target						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authentication.html">
+							Authentication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authentication.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authentication.EntryPoint.html">
+							EntryPoint						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authentication.Provider.html">
+							Provider						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authentication.Token.html">
+							Token						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.Privilege.Entity.html">
+							Entity<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.Privilege.Entity.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.Privilege.Method.html">
+							Method						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Authorization.Privilege.Parameter.html">
+							Parameter						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Channel.html">
+							Channel						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Cryptography.html">
+							Cryptography						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.Policy.html">
+							Policy						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Security.RequestPattern.html">
+							RequestPattern						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Session.html">
+							Session<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Session.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Session.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.SignalSlot.html">
+							SignalSlot<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.SignalSlot.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Tests.html">
+							Tests<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Tests.Unit.html">
+							Unit<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Tests.Unit.Utility.html">
+							Utility						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Utility.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Utility.Lock.html">
+							Lock<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Utility.Lock.Tests.html">
+							Tests<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Utility.Lock.Tests.Unit.html">
+							Unit						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Utility.Unicode.html">
+							Unicode						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Flow.Validation.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Flow.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.html">
+							Fluid<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Compiler.html">
+							Compiler						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Parser.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Parser.SyntaxTree.html">
+							SyntaxTree						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.ViewHelper.html">
+							ViewHelper<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.ViewHelper.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.ViewHelper.Facets.html">
+							Facets						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Core.Widget.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.View.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Security.html">
+							Security						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Validation.html">
+							Validation						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Fluid.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.html">
+							Kickstart<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-TYPO3.Kickstart.ViewHelpers.Inflect.html">
+							Inflect						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">ActionRequest</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.DispatchComponent.html">DispatchComponent</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.Dispatcher.html">Dispatcher</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.FlashMessageContainer.html">FlashMessageContainer</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.RequestMatcher.html">RequestMatcher</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.Response.html">Response</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.ViewConfigurationManager.html">ViewConfigurationManager</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">RequestInterface</a></li>
+				<li><a href="class-TYPO3.Flow.Mvc.ResponseInterface.html">ResponseInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TYPO3.Flow.Mvc.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class ActionRequest</h1>
+
+
+	<div class="description">
+	<p>Represents an internal request targeted to a controller action</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>TYPO3\Flow\Mvc\ActionRequest</span></b>			
+			 implements 
+				<a href="class-TYPO3.Flow.Mvc.RequestInterface.html"><span>TYPO3\Flow\Mvc\RequestInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Mvc.html">Mvc</a><br>
+		
+
+				<b>Api</b>
+				<br>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#22-692" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/ActionRequest.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#131-144" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>|<code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$parentRequest</var></span> )</code>
+
+			<div class="description short">
+				<p>Constructs this action request</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Constructs this action request</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$parentRequest</var></dt>
+						<dd>Either an HTTP request or another ActionRequest</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getParentRequest" id="_getParentRequest">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>|<code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getParentRequest">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#146-155" title="Go to source code">getParentRequest</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the parent request</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the parent request</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>|<code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHttpRequest" id="_getHttpRequest">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHttpRequest">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#157-169" title="Go to source code">getHttpRequest</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the top level request: the HTTP request object</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the top level request: the HTTP request object</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMainRequest" id="_getMainRequest">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMainRequest">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#171-180" title="Go to source code">getMainRequest</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the top level ActionRequest: the one just below the HTTP request</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the top level ActionRequest: the one just below the HTTP request</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html#_getMainRequest">TYPO3\Flow\Mvc\RequestInterface::getMainRequest()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isMainRequest" id="_isMainRequest">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isMainRequest">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#182-192" title="Go to source code">isMainRequest</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if this request is the uppermost ActionRequest, just one below the
+HTTP request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this request is the uppermost ActionRequest, just one below the
+HTTP request.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html#_isMainRequest">TYPO3\Flow\Mvc\RequestInterface::isMainRequest()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getReferringRequest" id="_getReferringRequest">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getReferringRequest">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#194-230" title="Go to source code">getReferringRequest</a>( )</code>
+
+			<div class="description short">
+				<p>Returns an ActionRequest which referred to this request, if any.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an ActionRequest which referred to this request, if any.</p>
+
+<p>The referring request is not set or determined automatically but must be
+explicitly set through the corresponding internal argument "__referrer".
+This mechanism is used by Flow's form and validation mechanisms.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code><br>the referring request, or NULL if no referrer found
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setDispatched" id="_setDispatched">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setDispatched">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#232-246" title="Go to source code">setDispatched</a>( <span>boolean <var>$flag</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the dispatched flag</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the dispatched flag</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$flag</var></dt>
+						<dd>If this request has been dispatched</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html#_setDispatched">TYPO3\Flow\Mvc\RequestInterface::setDispatched()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isDispatched" id="_isDispatched">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isDispatched">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#248-261" title="Go to source code">isDispatched</a>( )</code>
+
+			<div class="description short">
+				<p>If this request has been dispatched and addressed by the responsible
+controller and the response is ready to be sent.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>If this request has been dispatched and addressed by the responsible
+controller and the response is ready to be sent.</p>
+
+<p>The dispatcher will try to dispatch the request again if it has not been
+addressed yet.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>TRUE if this request has been dispatched successfully
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html#_isDispatched">TYPO3\Flow\Mvc\RequestInterface::isDispatched()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getControllerObjectName" id="_getControllerObjectName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getControllerObjectName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#263-280" title="Go to source code">getControllerObjectName</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the object name of the controller defined by the package key and
+controller name</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the object name of the controller defined by the package key and
+controller name</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The controller's Object Name
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html#_getControllerObjectName">TYPO3\Flow\Mvc\RequestInterface::getControllerObjectName()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setControllerObjectName" id="_setControllerObjectName">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setControllerObjectName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#282-314" title="Go to source code">setControllerObjectName</a>( <span>string <var>$unknownCasedControllerObjectName</var></span> )</code>
+
+			<div class="description short">
+				<p>Explicitly sets the object name of the controller</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Explicitly sets the object name of the controller</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$unknownCasedControllerObjectName</var></dt>
+						<dd>The fully qualified controller object name</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Object.Exception.UnknownObjectException.html">TYPO3\Flow\Object\Exception\UnknownObjectException</a></code>
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setControllerPackageKey" id="_setControllerPackageKey">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setControllerPackageKey">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#316-331" title="Go to source code">setControllerPackageKey</a>( <span>string <var>$packageKey</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the package key of the controller.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the package key of the controller.</p>
+
+<p>This function tries to determine the correct case for the given package key.
+If the Package Manager does not know the specified package, the package key
+cannot be verified or corrected and is stored as is.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$packageKey</var></dt>
+						<dd>The package key</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getControllerPackageKey" id="_getControllerPackageKey">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getControllerPackageKey">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#333-342" title="Go to source code">getControllerPackageKey</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the package key of the specified controller.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the package key of the specified controller.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The package key
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setControllerSubpackageKey" id="_setControllerSubpackageKey">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setControllerSubpackageKey">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#344-353" title="Go to source code">setControllerSubpackageKey</a>( <span>string <var>$subpackageKey</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the subpackage key of the controller.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the subpackage key of the controller.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$subpackageKey</var></dt>
+						<dd>The subpackage key.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getControllerSubpackageKey" id="_getControllerSubpackageKey">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getControllerSubpackageKey">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#355-372" title="Go to source code">getControllerSubpackageKey</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the subpackage key of the specified controller.
+If there is no subpackage key set, the method returns NULL.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the subpackage key of the specified controller.
+If there is no subpackage key set, the method returns NULL.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The subpackage key
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setControllerName" id="_setControllerName">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setControllerName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#374-393" title="Go to source code">setControllerName</a>( <span>string <var>$controllerName</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the name of the controller which is supposed to handle the request.
+Note: This is not the object name of the controller!</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the name of the controller which is supposed to handle the request.
+Note: This is not the object name of the controller!</p>
+
+<p>Examples: "Standard", "Account", ...</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$controllerName</var></dt>
+						<dd>Name of the controller</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidControllerNameException.html">TYPO3\Flow\Mvc\Exception\InvalidControllerNameException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getControllerName" id="_getControllerName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getControllerName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#395-413" title="Go to source code">getControllerName</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the object name of the controller supposed to handle this request, if one
+was set already (if not, the name of the default controller is returned)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the object name of the controller supposed to handle this request, if one
+was set already (if not, the name of the default controller is returned)</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Name of the controller
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setControllerActionName" id="_setControllerActionName">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setControllerActionName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#415-436" title="Go to source code">setControllerActionName</a>( <span>string <var>$actionName</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the name of the action contained in this request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the name of the action contained in this request.</p>
+
+<p>Note that the action name must start with a lower case letter and is case sensitive.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$actionName</var></dt>
+						<dd>Name of the action to execute by the controller</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidActionNameException.html">TYPO3\Flow\Mvc\Exception\InvalidActionNameException</a></code><br>if the action name is not valid
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getControllerActionName" id="_getControllerActionName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getControllerActionName">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#438-458" title="Go to source code">getControllerActionName</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the name of the action the controller is supposed to execute.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the name of the action the controller is supposed to execute.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Action name
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setArgument" id="_setArgument">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setArgument">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#460-508" title="Go to source code">setArgument</a>( <span>string <var>$argumentName</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the value of the specified argument</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the value of the specified argument</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$argumentName</var></dt>
+						<dd>Name of the argument to set</dd>
+						<dt><var>$value</var></dt>
+						<dd>The new value</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidArgumentNameException.html">TYPO3\Flow\Mvc\Exception\InvalidArgumentNameException</a></code><br>if the given argument name is no string<br>
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidArgumentTypeException.html">TYPO3\Flow\Mvc\Exception\InvalidArgumentTypeException</a></code><br>if the given argument value is an object
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getArgument" id="_getArgument">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getArgument">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#510-524" title="Go to source code">getArgument</a>( <span>string <var>$argumentName</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the value of the specified argument</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the value of the specified argument</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$argumentName</var></dt>
+						<dd>Name of the argument</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Value of the argument
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.NoSuchArgumentException.html">TYPO3\Flow\Mvc\Exception\NoSuchArgumentException</a></code><br>if such an argument does not exist
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasArgument" id="_hasArgument">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasArgument">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#526-536" title="Go to source code">hasArgument</a>( <span>string <var>$argumentName</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if an argument of the given name exists (is set)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if an argument of the given name exists (is set)</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$argumentName</var></dt>
+						<dd>Name of the argument to check</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>TRUE if the argument is set, otherwise FALSE
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setArguments" id="_setArguments">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setArguments">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#538-555" title="Go to source code">setArguments</a>( <span>array <var>$arguments</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the specified arguments.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the specified arguments.</p>
+
+<p>The arguments array will be reset therefore any arguments
+which existed before will be overwritten!</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$arguments</var></dt>
+						<dd>An array of argument names and their values</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidArgumentNameException.html">TYPO3\Flow\Mvc\Exception\InvalidArgumentNameException</a></code><br>if an argument name is not a string<br>
+						<code><a href="class-TYPO3.Flow.Mvc.Exception.InvalidArgumentTypeException.html">TYPO3\Flow\Mvc\Exception\InvalidArgumentTypeException</a></code><br>if an argument value is an object
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getArguments" id="_getArguments">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getArguments">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#557-566" title="Go to source code">getArguments</a>( )</code>
+
+			<div class="description short">
+				<p>Returns an Array of arguments and their values</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an Array of arguments and their values</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Array of arguments and their values (which may be arguments and values as well)
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getInternalArgument" id="_getInternalArgument">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getInternalArgument">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#568-580" title="Go to source code">getInternalArgument</a>( <span>string <var>$argumentName</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the value of the specified internal argument.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the value of the specified internal argument.</p>
+
+<p>Internal arguments are set via setArgument(). In order to be handled as an
+internal argument, its name must start with two underscores.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$argumentName</var></dt>
+						<dd>Name of the argument, for example "__fooBar"</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Value of the argument, or NULL if not set.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getInternalArguments" id="_getInternalArguments">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getInternalArguments">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#582-591" title="Go to source code">getInternalArguments</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the internal arguments of the request, that is, all arguments whose
+name starts with two underscores.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the internal arguments of the request, that is, all arguments whose
+name starts with two underscores.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setArgumentNamespace" id="_setArgumentNamespace">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setArgumentNamespace">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#593-606" title="Go to source code">setArgumentNamespace</a>( <span>string <var>$namespace</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets a namespace for the arguments of this request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets a namespace for the arguments of this request.</p>
+
+<p>This doesn't affect the actual behavior of argument handling within this
+classes' methods but is used in other parts of Flow and its libraries to
+render argument names which don't conflict with each other.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$namespace</var></dt>
+						<dd>Argument namespace</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getArgumentNamespace" id="_getArgumentNamespace">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getArgumentNamespace">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#608-616" title="Go to source code">getArgumentNamespace</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the argument namespace, if any.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the argument namespace, if any.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPluginArguments" id="_getPluginArguments">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPluginArguments">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#618-626" title="Go to source code">getPluginArguments</a>( )</code>
+
+			<div class="description short">
+				<p>Returns an array of plugin argument configurations</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an array of plugin argument configurations</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setFormat" id="_setFormat">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setFormat">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#628-637" title="Go to source code">setFormat</a>( <span>string <var>$format</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the requested representation format</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the requested representation format</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$format</var></dt>
+						<dd>The desired format, something like "html", "xml", "png", "json" or the like. Can even be something like "rss.xml".</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFormat" id="_getFormat">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFormat">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#639-648" title="Go to source code">getFormat</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the requested representation format</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the requested representation format</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The desired format, something like "html", "xml", "png", "json" or the like.
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="emitRequestDispatched" id="_emitRequestDispatched">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_emitRequestDispatched">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#650-668" title="Go to source code">emitRequestDispatched</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span> )</code>
+
+			<div class="description short">
+				<p>Emits a signal when a Request has been dispatched</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Emits a signal when a Request has been dispatched</p>
+
+<p>The action request is not proxyable, so the signal is dispatched manually here.
+The safeguard allows unit tests without the dispatcher dependency.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$request</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Flow\signal</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__clone" id="___clone">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___clone">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#670-676" title="Go to source code">__clone</a>( )</code>
+
+			<div class="description short">
+				<p>Resets the dispatched status to FALSE</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Resets the dispatched status to FALSE</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__sleep" id="___sleep">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___sleep">#</a>
+			<code><a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#678-691" title="Go to source code">__sleep</a>( )</code>
+
+			<div class="description short">
+				<p>We provide our own __sleep method, where we serialize all properties <em>except</em> the parentRequest if it is
+a HTTP request -- as this one contains $_SERVER etc.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>We provide our own __sleep method, where we serialize all properties <em>except</em> the parentRequest if it is
+a HTTP request -- as this one contains $_SERVER etc.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="objectManager" id="$objectManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#29-33" title="Go to source code"><var>$objectManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$objectManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="hashService" id="$hashService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Security.Cryptography.HashService.html">TYPO3\Flow\Security\Cryptography\HashService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#35-39" title="Go to source code"><var>$hashService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$hashService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="packageManager" id="$packageManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Package.PackageManagerInterface.html">TYPO3\Flow\Package\PackageManagerInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#41-45" title="Go to source code"><var>$packageManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$packageManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="controllerPackageKey" id="$controllerPackageKey">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#47-51" title="Go to source code"><var>$controllerPackageKey</var></a>
+
+				<div class="description short">
+					<p>Package key of the controller which is supposed to handle this request.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Package key of the controller which is supposed to handle this request.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$controllerPackageKey" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="controllerSubpackageKey" id="$controllerSubpackageKey">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#53-57" title="Go to source code"><var>$controllerSubpackageKey</var></a>
+
+				<div class="description short">
+					<p>Subpackage key of the controller which is supposed to handle this request.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Subpackage key of the controller which is supposed to handle this request.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$controllerSubpackageKey" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="controllerName" id="$controllerName">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#59-63" title="Go to source code"><var>$controllerName</var></a>
+
+				<div class="description short">
+					<p>Object name of the controller which is supposed to handle this request.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Object name of the controller which is supposed to handle this request.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$controllerName" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="controllerActionName" id="$controllerActionName">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#65-69" title="Go to source code"><var>$controllerActionName</var></a>
+
+				<div class="description short">
+					<p>Name of the action the controller is supposed to take.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Name of the action the controller is supposed to take.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$controllerActionName" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="arguments" id="$arguments">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#71-76" title="Go to source code"><var>$arguments</var></a>
+
+				<div class="description short">
+					<p>The arguments for this request. They must be only simple types, no
+objects allowed.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The arguments for this request. They must be only simple types, no
+objects allowed.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$arguments" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="internalArguments" id="$internalArguments">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#78-85" title="Go to source code"><var>$internalArguments</var></a>
+
+				<div class="description short">
+					<p>Framework-internal arguments for this request, such as <strong>referrer.
+All framework-internal arguments start with double underscore (</strong>),
+and are only used from within the framework. Not for user consumption.
+Internal Arguments can be objects, in contrast to public arguments.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Framework-internal arguments for this request, such as <strong>referrer.
+All framework-internal arguments start with double underscore (</strong>),
+and are only used from within the framework. Not for user consumption.
+Internal Arguments can be objects, in contrast to public arguments.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$internalArguments" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="pluginArguments" id="$pluginArguments">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#87-92" title="Go to source code"><var>$pluginArguments</var></a>
+
+				<div class="description short">
+					<p>Arguments and configuration for plugins – including widgets – which are
+sub controllers to the controller referred to by this request.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Arguments and configuration for plugins – including widgets – which are
+sub controllers to the controller referred to by this request.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$pluginArguments" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="argumentNamespace" id="$argumentNamespace">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#94-99" title="Go to source code"><var>$argumentNamespace</var></a>
+
+				<div class="description short">
+					<p>An optional namespace for arguments of this request. Used, for example, in
+plugins and widgets.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>An optional namespace for arguments of this request. Used, for example, in
+plugins and widgets.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$argumentNamespace" class="anchor">#</a>
+					<code><span class="php-quote">''</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="format" id="$format">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#101-105" title="Go to source code"><var>$format</var></a>
+
+				<div class="description short">
+					<p>The requested representation format</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The requested representation format</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$format" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="dispatched" id="$dispatched">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#107-111" title="Go to source code"><var>$dispatched</var></a>
+
+				<div class="description short">
+					<p>If this request has been changed and needs to be dispatched again</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>If this request has been changed and needs to be dispatched again</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$dispatched" class="anchor">#</a>
+					<code><span class="php-keyword1">false</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="parentRequest" id="$parentRequest">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>|<code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#113-117" title="Go to source code"><var>$parentRequest</var></a>
+
+				<div class="description short">
+					<p>The parent request – either another ActionRequest or Http Request</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The parent request – either another ActionRequest or Http Request</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$parentRequest" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="rootRequest" id="$rootRequest">
+			<td class="attributes"><code>
+				protected  
+				object
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#119-123" title="Go to source code"><var>$rootRequest</var></a>
+
+				<div class="description short">
+					<p>Cached pointer to the root request (usually an HTTP request)</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Cached pointer to the root request (usually an HTTP request)</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$rootRequest" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="referringRequest" id="$referringRequest">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Mvc.ActionRequest.html#125-129" title="Go to source code"><var>$referringRequest</var></a>
+
+				<div class="description short">
+					<p>Cached pointer to a request referring to this one (if any)</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Cached pointer to a request referring to this one (if any)</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$referringRequest" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
