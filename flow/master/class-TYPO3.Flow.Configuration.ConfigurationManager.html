@@ -956,7 +956,7 @@
 				<br>
 				<b>Flow\scope("singleton")</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#22-860" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#22-894" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php</a>
 		<br>
 	</div>
 
@@ -1577,7 +1577,7 @@ in the context's Configuration directory.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_postProcessConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#642-672" title="Go to source code">postProcessConfiguration</a>( <span>array <var>&amp; $configurations</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#642-660" title="Go to source code">postProcessConfiguration</a>( <span>array <var>&amp; $configurations</var></span> )</code>
 
 			<div class="description short">
 				<p>Post processes the given configuration array by replacing constants with their
@@ -1602,6 +1602,46 @@ actual value.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="replaceVariablesInValue" id="_replaceVariablesInValue">
+
+			<td class="attributes"><code>
+				 protected 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_replaceVariablesInValue">#</a>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#662-706" title="Go to source code">replaceVariablesInValue</a>( <span>string <var>$value</var></span> )</code>
+
+			<div class="description short">
+				<p>Replaces variables (in the format %CONSTANT% or %ENV::ENVIRONMENT_VARIABLE)
+in the given (configuration) value string.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Replaces variables (in the format %CONSTANT% or %ENV::ENVIRONMENT_VARIABLE)
+in the given (configuration) value string.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="mergeRoutesWithSubRoutes" id="_mergeRoutesWithSubRoutes">
 
 			<td class="attributes"><code>
@@ -1613,7 +1653,7 @@ actual value.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mergeRoutesWithSubRoutes">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#674-723" title="Go to source code">mergeRoutesWithSubRoutes</a>( <span>array <var>&amp; $routesConfiguration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#708-757" title="Go to source code">mergeRoutesWithSubRoutes</a>( <span>array <var>&amp; $routesConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads specified sub routes and builds composite routes.</p>
@@ -1652,7 +1692,7 @@ actual value.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildSubRouteConfigurations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#725-764" title="Go to source code">buildSubRouteConfigurations</a>( <span>array <var>$routesConfiguration</var></span>, <span>array <var>$subRoutesConfiguration</var></span>, <span>string <var>$subRouteKey</var></span>, <span>array <var>$subRouteOptions</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#759-798" title="Go to source code">buildSubRouteConfigurations</a>( <span>array <var>$routesConfiguration</var></span>, <span>array <var>$subRoutesConfiguration</var></span>, <span>string <var>$subRouteKey</var></span>, <span>array <var>$subRouteOptions</var></span> )</code>
 
 			<div class="description short">
 				<p>Merges all routes in $routesConfiguration with the sub routes in $subRoutesConfiguration</p>
@@ -1700,7 +1740,7 @@ actual value.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_includeSubRoutesFromSettings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#766-800" title="Go to source code">includeSubRoutesFromSettings</a>( <span>array <var>&amp; $routeDefinitions</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#800-834" title="Go to source code">includeSubRoutesFromSettings</a>( <span>array <var>&amp; $routeDefinitions</var></span> )</code>
 
 			<div class="description short">
 				<p>Merges routes from TYPO3.Flow.mvc.routes settings into $routeDefinitions
@@ -1736,7 +1776,7 @@ NOTE: Routes from settings will always be appended to existing route definitions
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replacePlaceholders">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#802-815" title="Go to source code">replacePlaceholders</a>( <span>string <var>$string</var></span>, <span>array <var>$variables</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#836-849" title="Go to source code">replacePlaceholders</a>( <span>string <var>$string</var></span>, <span>array <var>$variables</var></span> )</code>
 
 			<div class="description short">
 				<p>Replaces placeholders in the format <variableName> with the corresponding variable of the specified $variables collection.</p>
@@ -1776,7 +1816,7 @@ NOTE: Routes from settings will always be appended to existing route definitions
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mergePolicyConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#817-837" title="Go to source code">mergePolicyConfiguration</a>( <span>array <var>$firstConfigurationArray</var></span>, <span>array <var>$secondConfigurationArray</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#851-871" title="Go to source code">mergePolicyConfiguration</a>( <span>array <var>$firstConfigurationArray</var></span>, <span>array <var>$secondConfigurationArray</var></span> )</code>
 
 			<div class="description short">
 				<p>Merges two policy configuration arrays.</p>
@@ -1816,7 +1856,7 @@ NOTE: Routes from settings will always be appended to existing route definitions
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validatePolicyConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#839-859" title="Go to source code">validatePolicyConfiguration</a>( <span>array <var>$policyConfiguration</var></span>, <span><code><a href="class-TYPO3.Flow.Package.PackageInterface.html">TYPO3\Flow\Package\PackageInterface</a></code> <var>$package</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Configuration.ConfigurationManager.html#873-893" title="Go to source code">validatePolicyConfiguration</a>( <span>array <var>$policyConfiguration</var></span>, <span><code><a href="class-TYPO3.Flow.Package.PackageInterface.html">TYPO3\Flow\Package\PackageInterface</a></code> <var>$package</var></span> )</code>
 
 			<div class="description short">
 				<p>Validates the given $policyConfiguration and throws an exception if its not valid</p>
