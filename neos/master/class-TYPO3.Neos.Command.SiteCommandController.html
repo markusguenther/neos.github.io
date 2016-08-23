@@ -833,7 +833,7 @@ directory of the given package (Resources/Private/Content/Sites.xml).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_exportCommand">#</a>
-			<code><a href="source-class-TYPO3.Neos.Command.SiteCommandController.html#117-168" title="Go to source code">exportCommand</a>( <span>string <var>$siteNode</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$tidy</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Command.SiteCommandController.html#117-168" title="Go to source code">exportCommand</a>( <span>string <var>$siteNode</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$tidy</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Export sites content (e.g. site:export --package-key "Neos.Demo")</p>
@@ -859,7 +859,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 						<dt><var>$siteNode</var></dt>
 						<dd>the node name of the site to be exported; if none given will export all sites</dd>
 						<dt><var>$tidy</var></dt>
-						<dd>Whether to export formatted XML</dd>
+						<dd>Whether to export formatted XML. This is defaults to true</dd>
 						<dt><var>$filename</var></dt>
 						<dd>relative path and filename to the XML file to create. Any resource will be stored in a sub folder "Resources".</dd>
 						<dt><var>$packageKey</var></dt>

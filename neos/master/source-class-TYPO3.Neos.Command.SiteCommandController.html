@@ -1341,13 +1341,13 @@
 </span></span><span id="129" class="l"><span class="php-comment">     * assets will be embedded into the XML in base64 encoded form.
 </span></span><span id="130" class="l"><span class="php-comment">     *
 </span></span><span id="131" class="l"><span class="php-comment">     * @param string $siteNode the node name of the site to be exported; if none given will export all sites
-</span></span><span id="132" class="l"><span class="php-comment">     * @param boolean $tidy Whether to export formatted XML
+</span></span><span id="132" class="l"><span class="php-comment">     * @param boolean $tidy Whether to export formatted XML. This is defaults to true
 </span></span><span id="133" class="l"><span class="php-comment">     * @param string $filename relative path and filename to the XML file to create. Any resource will be stored in a sub folder &quot;Resources&quot;.
 </span></span><span id="134" class="l"><span class="php-comment">     * @param string $packageKey Package to store the XML file in. Any resource will be stored in a sub folder &quot;Resources&quot;.
 </span></span><span id="135" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Filter the node type of the nodes, allows complex expressions (e.g. &quot;TYPO3.Neos:Page&quot;, &quot;!TYPO3.Neos:Page,TYPO3.Neos:Text&quot;)
 </span></span><span id="136" class="l"><span class="php-comment">     * @return void
 </span></span><span id="137" class="l"><span class="php-comment">     */</span>
-</span><span id="138" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> exportCommand(<span class="php-var">$siteNode</span> = <span class="php-keyword1">null</span>, <span class="php-var">$tidy</span> = <span class="php-keyword1">false</span>, <span class="php-var">$filename</span> = <span class="php-keyword1">null</span>, <span class="php-var">$packageKey</span> = <span class="php-keyword1">null</span>, <span class="php-var">$nodeTypeFilter</span> = <span class="php-keyword1">null</span>)
+</span><span id="138" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> exportCommand(<span class="php-var">$siteNode</span> = <span class="php-keyword1">null</span>, <span class="php-var">$tidy</span> = <span class="php-keyword1">true</span>, <span class="php-var">$filename</span> = <span class="php-keyword1">null</span>, <span class="php-var">$packageKey</span> = <span class="php-keyword1">null</span>, <span class="php-var">$nodeTypeFilter</span> = <span class="php-keyword1">null</span>)
 </span><span id="139" class="l">    {
 </span><span id="140" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$siteNode</span> === <span class="php-keyword1">null</span>) {
 </span><span id="141" class="l">            <span class="php-var">$sites</span> = <span class="php-var">$this</span>-&gt;siteRepository-&gt;findAll()-&gt;toArray();
