@@ -606,6 +606,16 @@
 							NodeTypePostprocessor						</a>
 							</li>
 					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-TYPO3.TYPO3CR.Persistence.Ast.html">
+							Ast						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-TYPO3.TYPO3CR.Security.html">
 							Security<span></span>
 						</a>
@@ -1084,6 +1094,7 @@
 				<li><a href="class-TYPO3.TYPO3CR.Migration.Transformations.SetDimensions.html">TYPO3\TYPO3CR\Migration\Transformations\SetDimensions</a></li>
 				<li><a href="class-TYPO3.TYPO3CR.Migration.Transformations.StripTagsOnProperty.html">TYPO3\TYPO3CR\Migration\Transformations\StripTagsOnProperty</a></li>
 				<li><a href="class-TYPO3.TYPO3CR.Package.html">TYPO3\TYPO3CR\Package</a></li>
+				<li><a href="class-TYPO3.TYPO3CR.Persistence.Ast.ToStringFunction.html">TYPO3\TYPO3CR\Persistence\Ast\ToStringFunction</a></li>
 				<li><a href="class-TYPO3.TYPO3CR.Security.Authorization.Privilege.Node.AbstractNodePrivilege.html">TYPO3\TYPO3CR\Security\Authorization\Privilege\Node\AbstractNodePrivilege</a></li>
 				<li><a href="class-TYPO3.TYPO3CR.Security.Authorization.Privilege.Node.AbstractNodePropertyPrivilege.html">TYPO3\TYPO3CR\Security\Authorization\Privilege\Node\AbstractNodePropertyPrivilege</a></li>
 				<li><a href="class-TYPO3.TYPO3CR.Security.Authorization.Privilege.Node.CreateNodePrivilege.html">TYPO3\TYPO3CR\Security\Authorization\Privilege\Node\CreateNodePrivilege</a></li>
@@ -2192,7 +2203,7 @@
 </span><span id="980" class="l">            <span class="php-var">$likeParameter</span> = <span class="php-quote">'%'</span> . <span class="php-keyword2">trim</span>(<span class="php-keyword2">json_encode</span>(UnicodeFunctions::<span class="php-keyword2">strtolower</span>(<span class="php-var">$term</span>), JSON_UNESCAPED_UNICODE), <span class="php-quote">'&quot;'</span>) . <span class="php-quote">'%'</span>;
 </span><span id="981" class="l">        }
 </span><span id="982" class="l">
-</span><span id="983" class="l">        <span class="php-var">$queryBuilder</span>-&gt;andWhere(<span class="php-quote">&quot;LOWER(CONCAT('', n.properties)) LIKE :term&quot;</span>)-&gt;setParameter(<span class="php-quote">'term'</span>, <span class="php-var">$likeParameter</span>);
+</span><span id="983" class="l">        <span class="php-var">$queryBuilder</span>-&gt;andWhere(<span class="php-quote">&quot;LOWER(NEOSCR_TOSTRING(n.properties)) LIKE :term&quot;</span>)-&gt;setParameter(<span class="php-quote">'term'</span>, <span class="php-var">$likeParameter</span>);
 </span><span id="984" class="l">
 </span><span id="985" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$pathStartingPoint</span>) &gt; <span class="php-num">0</span>) {
 </span><span id="986" class="l">            <span class="php-var">$pathStartingPoint</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$pathStartingPoint</span>);
@@ -2639,7 +2650,7 @@
 </span><span id="1427" class="l">        <span class="php-var">$parameters</span> = [];
 </span><span id="1428" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$relationMap</span> <span class="php-keyword1">as</span> <span class="php-var">$relatedObjectType</span> =&gt; <span class="php-var">$relatedIdentifiers</span>) {
 </span><span id="1429" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$relatedIdentifiers</span> <span class="php-keyword1">as</span> <span class="php-var">$relatedIdentifier</span>) {
-</span><span id="1430" class="l">                <span class="php-var">$constraints</span>[] = <span class="php-quote">'(LOWER(CONCAT(\'\', n.properties)) LIKE :entity'</span> . <span class="php-keyword2">md5</span>(<span class="php-var">$relatedIdentifier</span>) . <span class="php-quote">' )'</span>;
+</span><span id="1430" class="l">                <span class="php-var">$constraints</span>[] = <span class="php-quote">'(LOWER(NEOSCR_TOSTRING(n.properties)) LIKE :entity'</span> . <span class="php-keyword2">md5</span>(<span class="php-var">$relatedIdentifier</span>) . <span class="php-quote">' )'</span>;
 </span><span id="1431" class="l">                <span class="php-var">$parameters</span>[<span class="php-quote">'entity'</span> . <span class="php-keyword2">md5</span>(<span class="php-var">$relatedIdentifier</span>)] = <span class="php-quote">'%&quot;__identifier&quot;: &quot;'</span> . <span class="php-keyword2">strtolower</span>(<span class="php-var">$relatedIdentifier</span>) . <span class="php-quote">'&quot;%'</span>;
 </span><span id="1432" class="l">            }
 </span><span id="1433" class="l">        }
@@ -2825,6 +2836,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?66f191159b366a2b211ad86fb670e6318704403f"></script>
+<script src="elementlist.js?2a3bc574aa91afcbc9e7f440fbb1cc3695a67494"></script>
 </body>
 </html>
