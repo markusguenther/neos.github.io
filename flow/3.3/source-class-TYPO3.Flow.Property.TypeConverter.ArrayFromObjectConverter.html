@@ -1939,9 +1939,9 @@
 </span><span id="52" class="l">    {
 </span><span id="53" class="l">        <span class="php-var">$gettableProperties</span> = ObjectAccess::getGettableProperties(<span class="php-var">$source</span>);
 </span><span id="54" class="l">        <span class="php-var">$propertiesToConvert</span> = <span class="php-keyword1">array</span>();
-</span><span id="55" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$gettableProperties</span> <span class="php-keyword1">as</span> <span class="php-var">$gettableProperty</span>) {
+</span><span id="55" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$gettableProperties</span> <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; <span class="php-var">$gettableProperty</span>) {
 </span><span id="56" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$gettableProperty</span>)) {
-</span><span id="57" class="l">                <span class="php-var">$propertiesToConvert</span>[] = <span class="php-var">$gettableProperty</span>;
+</span><span id="57" class="l">                <span class="php-var">$propertiesToConvert</span>[<span class="php-var">$propertyName</span>] = <span class="php-var">$gettableProperty</span>;
 </span><span id="58" class="l">            }
 </span><span id="59" class="l">        }
 </span><span id="60" class="l">
