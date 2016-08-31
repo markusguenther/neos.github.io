@@ -897,7 +897,7 @@ in proportion to the amount of entries and data size.</p>
 Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>, a separate list with all entries is populated<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#16-489" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cache/Backend/RedisBackend.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#17-490" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cache/Backend/RedisBackend.php</a>
 		<br>
 	</div>
 
@@ -917,7 +917,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#85-98" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Core.ApplicationContext.html">TYPO3\Flow\Core\ApplicationContext</a></code> <var>$context</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span>Redis <var>$redis</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#86-99" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Core.ApplicationContext.html">TYPO3\Flow\Core\ApplicationContext</a></code> <var>$context</var></span>, <span>array <var>$options</var> = []</span>, <span>Redis <var>$redis</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -961,7 +961,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#100-137" title="Go to source code">set</a>( <span>string <var>$entryIdentifier</var></span>, <span>string <var>$data</var></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#101-138" title="Go to source code">set</a>( <span>string <var>$entryIdentifier</var></span>, <span>string <var>$data</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Saves data in the cache.</p>
@@ -1010,7 +1010,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#139-149" title="Go to source code">get</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#140-150" title="Go to source code">get</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads data from the cache.</p>
@@ -1053,7 +1053,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_has">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#151-161" title="Go to source code">has</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#152-162" title="Go to source code">has</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if a cache entry with the specified identifier exists.</p>
@@ -1096,7 +1096,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#163-192" title="Go to source code">remove</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#164-193" title="Go to source code">remove</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries matching the specified identifier.
@@ -1147,7 +1147,7 @@ old entries for the identifier still exist, they are removed as well.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#194-222" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#195-223" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries of this cache</p>
@@ -1188,7 +1188,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectGarbage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#224-232" title="Go to source code">collectGarbage</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#225-233" title="Go to source code">collectGarbage</a>( )</code>
 
 			<div class="description short">
 				<p>This backend does not need an externally triggered garbage collection</p>
@@ -1222,7 +1222,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#234-241" title="Go to source code">buildKey</a>( <span> <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#235-242" title="Go to source code">buildKey</a>( <span> <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1260,7 +1260,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushByTag">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#243-272" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#244-273" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries of this cache which are tagged by the specified tag.</p>
@@ -1307,7 +1307,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findIdentifiersByTag">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#274-285" title="Go to source code">findIdentifiersByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#275-286" title="Go to source code">findIdentifiersByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds and returns all cache entry identifiers which are tagged by the
@@ -1352,7 +1352,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_current">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#287-293" title="Go to source code">current</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#288-294" title="Go to source code">current</a>( )</code>
 
 			<div class="description short">
 				
@@ -1383,7 +1383,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_next">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#295-301" title="Go to source code">next</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#296-302" title="Go to source code">next</a>( )</code>
 
 			<div class="description short">
 				
@@ -1414,7 +1414,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_key">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#303-309" title="Go to source code">key</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#304-310" title="Go to source code">key</a>( )</code>
 
 			<div class="description short">
 				
@@ -1445,7 +1445,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_valid">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#311-317" title="Go to source code">valid</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#312-318" title="Go to source code">valid</a>( )</code>
 
 			<div class="description short">
 				
@@ -1476,7 +1476,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rewind">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#319-325" title="Go to source code">rewind</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#320-326" title="Go to source code">rewind</a>( )</code>
 
 			<div class="description short">
 				
@@ -1507,7 +1507,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_freeze">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#327-356" title="Go to source code">freeze</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#328-357" title="Go to source code">freeze</a>( )</code>
 
 			<div class="description short">
 				<p>Freezes this cache backend.</p>
@@ -1548,7 +1548,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isFrozen">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#358-369" title="Go to source code">isFrozen</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#359-370" title="Go to source code">isFrozen</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this backend is frozen.</p>
@@ -1583,7 +1583,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDefaultLifetime">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#371-381" title="Go to source code">setDefaultLifetime</a>( <span>integer <var>$lifetime</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#372-382" title="Go to source code">setDefaultLifetime</a>( <span>integer <var>$lifetime</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the default lifetime for this cache backend</p>
@@ -1626,7 +1626,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHostname">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#383-392" title="Go to source code">setHostname</a>( <span>string <var>$hostname</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#384-393" title="Go to source code">setHostname</a>( <span>string <var>$hostname</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the hostname or the socket of the Redis server</p>
@@ -1663,7 +1663,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPort">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#394-405" title="Go to source code">setPort</a>( <span>string <var>$port</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#395-406" title="Go to source code">setPort</a>( <span>string <var>$port</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the port of the Redis server.</p>
@@ -1702,7 +1702,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDatabase">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#407-416" title="Go to source code">setDatabase</a>( <span>integer <var>$database</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#408-417" title="Go to source code">setDatabase</a>( <span>integer <var>$database</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the database that will be used for this backend</p>
@@ -1739,7 +1739,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCompressionLevel">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#418-424" title="Go to source code">setCompressionLevel</a>( <span>integer <var>$compressionLevel</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#419-425" title="Go to source code">setCompressionLevel</a>( <span>integer <var>$compressionLevel</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1773,7 +1773,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_uncompress">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#426-436" title="Go to source code">uncompress</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#427-437" title="Go to source code">uncompress</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1811,7 +1811,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compress">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#438-445" title="Go to source code">compress</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#439-446" title="Go to source code">compress</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1849,7 +1849,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_useCompression">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#447-453" title="Go to source code">useCompression</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#448-454" title="Go to source code">useCompression</a>( )</code>
 
 			<div class="description short">
 				
@@ -1882,7 +1882,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRedisClient">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#455-470" title="Go to source code">getRedisClient</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#456-471" title="Go to source code">getRedisClient</a>( )</code>
 
 			<div class="description short">
 				
@@ -1919,7 +1919,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyRedisVersionIsSupported">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#472-488" title="Go to source code">verifyRedisVersionIsSupported</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#473-489" title="Go to source code">verifyRedisVersionIsSupported</a>( )</code>
 
 			<div class="description short">
 				
@@ -1968,7 +1968,7 @@ individual cache entries are ignored.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#48" title="Go to source code"><b>MIN_REDIS_VERSION</b></a>
+						<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#49" title="Go to source code"><b>MIN_REDIS_VERSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -2010,7 +2010,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#50-53" title="Go to source code"><var>$redis</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#51-54" title="Go to source code"><var>$redis</var></a>
 
 				<div class="description short">
 					
@@ -2035,7 +2035,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#55-58" title="Go to source code"><var>$entryCursor</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#56-59" title="Go to source code"><var>$entryCursor</var></a>
 
 				<div class="description short">
 					<p>Cursor used for iterating over cache entries</p>
@@ -2060,7 +2060,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#60-63" title="Go to source code"><var>$frozen</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#61-64" title="Go to source code"><var>$frozen</var></a>
 
 				<div class="description short">
 					
@@ -2085,7 +2085,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#65-68" title="Go to source code"><var>$hostname</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#66-69" title="Go to source code"><var>$hostname</var></a>
 
 				<div class="description short">
 					
@@ -2110,7 +2110,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#70-73" title="Go to source code"><var>$port</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#71-74" title="Go to source code"><var>$port</var></a>
 
 				<div class="description short">
 					
@@ -2135,7 +2135,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#75-78" title="Go to source code"><var>$database</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#76-79" title="Go to source code"><var>$database</var></a>
 
 				<div class="description short">
 					
@@ -2160,7 +2160,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#80-83" title="Go to source code"><var>$compressionLevel</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.RedisBackend.html#81-84" title="Go to source code"><var>$compressionLevel</var></a>
 
 				<div class="description short">
 					
