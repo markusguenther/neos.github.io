@@ -1929,7 +1929,7 @@
 </span></span><span id="43" class="l"><span class="php-comment">     *
 </span></span><span id="44" class="l"><span class="php-comment">     * @param mixed $source the source data
 </span></span><span id="45" class="l"><span class="php-comment">     * @param string $originalTargetType the type we originally want to convert to
-</span></span><span id="46" class="l"><span class="php-comment">     * @param \TYPO3\Flow\Property\PropertyMappingConfigurationInterface $configuration
+</span></span><span id="46" class="l"><span class="php-comment">     * @param PropertyMappingConfigurationInterface $configuration
 </span></span><span id="47" class="l"><span class="php-comment">     * @return string
 </span></span><span id="48" class="l"><span class="php-comment">     * @api
 </span></span><span id="49" class="l"><span class="php-comment">     */</span>
@@ -1969,11 +1969,11 @@
 </span></span><span id="83" class="l"><span class="php-comment">     *
 </span></span><span id="84" class="l"><span class="php-comment">     * @param string $targetType
 </span></span><span id="85" class="l"><span class="php-comment">     * @param string $propertyName
-</span></span><span id="86" class="l"><span class="php-comment">     * @param \TYPO3\Flow\Property\PropertyMappingConfigurationInterface $configuration
+</span></span><span id="86" class="l"><span class="php-comment">     * @param PropertyMappingConfigurationInterface $configuration
 </span></span><span id="87" class="l"><span class="php-comment">     * @return string the type of $propertyName in $targetType
 </span></span><span id="88" class="l"><span class="php-comment">     * @api
 </span></span><span id="89" class="l"><span class="php-comment">     */</span>
-</span><span id="90" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getTypeOfChildProperty(<span class="php-var">$targetType</span>, <span class="php-var">$propertyName</span>, \TYPO3\Flow\Property\PropertyMappingConfigurationInterface <span class="php-var">$configuration</span>);
+</span><span id="90" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getTypeOfChildProperty(<span class="php-var">$targetType</span>, <span class="php-var">$propertyName</span>, PropertyMappingConfigurationInterface <span class="php-var">$configuration</span>);
 </span><span id="91" class="l">
 </span><span id="92" class="l">    <span class="php-comment">/**
 </span></span><span id="93" class="l"><span class="php-comment">     * Actually convert from $source to $targetType, taking into account the fully
@@ -1989,12 +1989,12 @@
 </span></span><span id="103" class="l"><span class="php-comment">     * @param mixed $source
 </span></span><span id="104" class="l"><span class="php-comment">     * @param string $targetType
 </span></span><span id="105" class="l"><span class="php-comment">     * @param array $convertedChildProperties
-</span></span><span id="106" class="l"><span class="php-comment">     * @param \TYPO3\Flow\Property\PropertyMappingConfigurationInterface $configuration
+</span></span><span id="106" class="l"><span class="php-comment">     * @param PropertyMappingConfigurationInterface $configuration
 </span></span><span id="107" class="l"><span class="php-comment">     * @return mixed|\TYPO3\Flow\Error\Error the target type, or an error object if a user-error occurred
-</span></span><span id="108" class="l"><span class="php-comment">     * @throws \TYPO3\Flow\Property\Exception\TypeConverterException thrown in case a developer error occurred
+</span></span><span id="108" class="l"><span class="php-comment">     * @throws Exception\TypeConverterException thrown in case a developer error occurred
 </span></span><span id="109" class="l"><span class="php-comment">     * @api
 </span></span><span id="110" class="l"><span class="php-comment">     */</span>
-</span><span id="111" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = <span class="php-keyword1">array</span>(), \TYPO3\Flow\Property\PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>);
+</span><span id="111" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = <span class="php-keyword1">array</span>(), PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>);
 </span><span id="112" class="l">}
 </span><span id="113" class="l"></span></code></pre>
 </div>

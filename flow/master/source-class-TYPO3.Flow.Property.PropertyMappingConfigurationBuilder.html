@@ -1910,18 +1910,18 @@
 </span><span id="24" class="l">    <span class="php-comment">/**
 </span></span><span id="25" class="l"><span class="php-comment">     * Builds the default property mapping configuration.
 </span></span><span id="26" class="l"><span class="php-comment">     *
-</span></span><span id="27" class="l"><span class="php-comment">     * @param string $type the implementation class name of the PropertyMappingConfiguration to instantiate; must be a subclass of TYPO3\Flow\Property\PropertyMappingConfiguration
-</span></span><span id="28" class="l"><span class="php-comment">     * @return \TYPO3\Flow\Property\PropertyMappingConfiguration
+</span></span><span id="27" class="l"><span class="php-comment">     * @param string $type the implementation class name of the PropertyMappingConfiguration to instantiate; must be a subclass of PropertyMappingConfiguration
+</span></span><span id="28" class="l"><span class="php-comment">     * @return PropertyMappingConfiguration
 </span></span><span id="29" class="l"><span class="php-comment">     * @deprecated fully replace by PropertyMapper::buildPropertyMappingConfiguration and removed in next major Flow version
 </span></span><span id="30" class="l"><span class="php-comment">     * @see PropertyMapper::buildPropertyMappingConfiguration
 </span></span><span id="31" class="l"><span class="php-comment">     */</span>
-</span><span id="32" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> build(<span class="php-var">$type</span> = \TYPO3\Flow\Property\PropertyMappingConfiguration::<span class="php-keyword1">class</span>)
+</span><span id="32" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> build(<span class="php-var">$type</span> = PropertyMappingConfiguration::<span class="php-keyword1">class</span>)
 </span><span id="33" class="l">    {
 </span><span id="34" class="l">        <span class="php-var">$configuration</span> = <span class="php-keyword1">new</span> <span class="php-var">$type</span>();
 </span><span id="35" class="l">
-</span><span id="36" class="l">        <span class="php-var">$configuration</span>-&gt;setTypeConverterOptions(\TYPO3\Flow\Property\TypeConverter\PersistentObjectConverter::<span class="php-keyword1">class</span>, <span class="php-keyword1">array</span>(
-</span><span id="37" class="l">            \TYPO3\Flow\Property\TypeConverter\PersistentObjectConverter::CONFIGURATION_CREATION_ALLOWED =&gt; <span class="php-keyword1">true</span>,
-</span><span id="38" class="l">            \TYPO3\Flow\Property\TypeConverter\PersistentObjectConverter::CONFIGURATION_MODIFICATION_ALLOWED =&gt; <span class="php-keyword1">true</span>
+</span><span id="36" class="l">        <span class="php-var">$configuration</span>-&gt;setTypeConverterOptions(TypeConverter\PersistentObjectConverter::<span class="php-keyword1">class</span>, <span class="php-keyword1">array</span>(
+</span><span id="37" class="l">            TypeConverter\PersistentObjectConverter::CONFIGURATION_CREATION_ALLOWED =&gt; <span class="php-keyword1">true</span>,
+</span><span id="38" class="l">            TypeConverter\PersistentObjectConverter::CONFIGURATION_MODIFICATION_ALLOWED =&gt; <span class="php-keyword1">true</span>
 </span><span id="39" class="l">        ));
 </span><span id="40" class="l">        <span class="php-var">$configuration</span>-&gt;allowAllProperties();
 </span><span id="41" class="l">
