@@ -1181,6 +1181,7 @@
 				<li><a href="class-TYPO3.Flow.Package.PackageManager.html">TYPO3\Flow\Package\PackageManager</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageOrderResolver.html">TYPO3\Flow\Package\PackageOrderResolver</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.AbstractPersistenceManager.html">TYPO3\Flow\Persistence\AbstractPersistenceManager</a></li>
+				<li><a href="class-TYPO3.Flow.Persistence.Aspect.EmbeddedValueObjectPointcutFilter.html">TYPO3\Flow\Persistence\Aspect\EmbeddedValueObjectPointcutFilter</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html">TYPO3\Flow\Persistence\Aspect\PersistenceMagicAspect</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html">TYPO3\Flow\Persistence\Doctrine\ArrayTypeConverter</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Doctrine.CacheAdapter.html">TYPO3\Flow\Persistence\Doctrine\CacheAdapter</a></li>
@@ -1883,7 +1884,7 @@
 <div id="right">
 	<div id="rightInner">
 <div id="source">
-	<pre class="numbers"><code><span class="l"><a href="#1"> 1 </a></span><span class="l"><a href="#2"> 2 </a></span><span class="l"><a href="#3"> 3 </a></span><span class="l"><a href="#4"> 4 </a></span></span><span class="l"><a href="#5"> 5 </a></span></span><span class="l"><a href="#6"> 6 </a></span></span><span class="l"><a href="#7"> 7 </a></span></span><span class="l"><a href="#8"> 8 </a></span></span><span class="l"><a href="#9"> 9 </a></span></span><span class="l"><a href="#10">10 </a></span></span><span class="l"><a href="#11">11 </a></span></span><span class="l"><a href="#12">12 </a></span><span class="l"><a href="#13">13 </a></span><span class="l"><a href="#14">14 </a></span></span><span class="l"><a href="#15">15 </a></span></span><span class="l"><a href="#16">16 </a></span></span><span class="l"><a href="#17">17 </a></span></span><span class="l"><a href="#18">18 </a></span></span><span class="l"><a href="#19">19 </a></span></span><span class="l"><a href="#20">20 </a></span></span><span class="l"><a href="#21">21 </a></span></span><span class="l"><a href="#22">22 </a></span></span><span class="l"><a href="#23">23 </a></span><span class="l"><a href="#24">24 </a></span><span class="l"><a href="#25">25 </a></span><span class="l"><a href="#26">26 </a></span><span class="l"><a href="#27">27 </a></span></code></pre>
+	<pre class="numbers"><code><span class="l"><a href="#1"> 1 </a></span><span class="l"><a href="#2"> 2 </a></span><span class="l"><a href="#3"> 3 </a></span><span class="l"><a href="#4"> 4 </a></span></span><span class="l"><a href="#5"> 5 </a></span></span><span class="l"><a href="#6"> 6 </a></span></span><span class="l"><a href="#7"> 7 </a></span></span><span class="l"><a href="#8"> 8 </a></span></span><span class="l"><a href="#9"> 9 </a></span></span><span class="l"><a href="#10">10 </a></span></span><span class="l"><a href="#11">11 </a></span></span><span class="l"><a href="#12">12 </a></span><span class="l"><a href="#13">13 </a></span><span class="l"><a href="#14">14 </a></span></span><span class="l"><a href="#15">15 </a></span></span><span class="l"><a href="#16">16 </a></span></span><span class="l"><a href="#17">17 </a></span></span><span class="l"><a href="#18">18 </a></span></span><span class="l"><a href="#19">19 </a></span></span><span class="l"><a href="#20">20 </a></span></span><span class="l"><a href="#21">21 </a></span></span><span class="l"><a href="#22">22 </a></span></span><span class="l"><a href="#23">23 </a></span><span class="l"><a href="#24">24 </a></span><span class="l"><a href="#25">25 </a></span><span class="l"><a href="#26">26 </a></span></span><span class="l"><a href="#27">27 </a></span></span><span class="l"><a href="#28">28 </a></span></span><span class="l"><a href="#29">29 </a></span><span class="l"><a href="#30">30 </a></span><span class="l"><a href="#31">31 </a></span><span class="l"><a href="#32">32 </a></span></code></pre>
 	<pre class="code"><code><span id="1" class="l"><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l"><span class="php-keyword1">namespace</span> TYPO3\Flow\Annotations;
 </span><span id="3" class="l">
@@ -1909,8 +1910,13 @@
 </span></span><span id="23" class="l"><span class="php-comment"> */</span>
 </span><span id="24" class="l"><span class="php-keyword1">final</span> <span class="php-keyword1">class</span> ValueObject
 </span><span id="25" class="l">{
-</span><span id="26" class="l">}
-</span><span id="27" class="l"></span></code></pre>
+</span><span id="26" class="l">    <span class="php-comment">/**
+</span></span><span id="27" class="l"><span class="php-comment">     * Whether the value object should be embedded.
+</span></span><span id="28" class="l"><span class="php-comment">     * @var boolean
+</span></span><span id="29" class="l"><span class="php-comment">     */</span>
+</span><span id="30" class="l">    <span class="php-keyword1">public</span> <span class="php-var">$embedded</span> = <span class="php-keyword1">false</span>;
+</span><span id="31" class="l">}
+</span><span id="32" class="l"></span></code></pre>
 </div>
 	</div>
 
@@ -1919,6 +1925,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?c529e8353794005fed271ed94e2bd6b0f17acecd"></script>
+<script src="elementlist.js?f4a6f3bde10904852d4033d3b1fad5329c94b0c6"></script>
 </body>
 </html>

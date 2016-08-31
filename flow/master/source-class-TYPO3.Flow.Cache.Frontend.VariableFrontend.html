@@ -1181,6 +1181,7 @@
 				<li><a href="class-TYPO3.Flow.Package.PackageManager.html">TYPO3\Flow\Package\PackageManager</a></li>
 				<li><a href="class-TYPO3.Flow.Package.PackageOrderResolver.html">TYPO3\Flow\Package\PackageOrderResolver</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.AbstractPersistenceManager.html">TYPO3\Flow\Persistence\AbstractPersistenceManager</a></li>
+				<li><a href="class-TYPO3.Flow.Persistence.Aspect.EmbeddedValueObjectPointcutFilter.html">TYPO3\Flow\Persistence\Aspect\EmbeddedValueObjectPointcutFilter</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html">TYPO3\Flow\Persistence\Aspect\PersistenceMagicAspect</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html">TYPO3\Flow\Persistence\Doctrine\ArrayTypeConverter</a></li>
 				<li><a href="class-TYPO3.Flow.Persistence.Doctrine.CacheAdapter.html">TYPO3\Flow\Persistence\Doctrine\CacheAdapter</a></li>
@@ -1938,7 +1939,7 @@
 </span></span><span id="52" class="l"><span class="php-comment">     * @throws \InvalidArgumentException
 </span></span><span id="53" class="l"><span class="php-comment">     * @api
 </span></span><span id="54" class="l"><span class="php-comment">     */</span>
-</span><span id="55" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> set(<span class="php-var">$entryIdentifier</span>, <span class="php-var">$variable</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = <span class="php-keyword1">array</span>(), <span class="php-var">$lifetime</span> = <span class="php-keyword1">null</span>)
+</span><span id="55" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> set(<span class="php-var">$entryIdentifier</span>, <span class="php-var">$variable</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = [], <span class="php-var">$lifetime</span> = <span class="php-keyword1">null</span>)
 </span><span id="56" class="l">    {
 </span><span id="57" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isValidEntryIdentifier(<span class="php-var">$entryIdentifier</span>)) {
 </span><span id="58" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-quote">'&quot;'</span> . <span class="php-var">$entryIdentifier</span> . <span class="php-quote">'&quot; is not a valid cache entry identifier.'</span>, <span class="php-num">1233058264</span>);
@@ -1991,7 +1992,7 @@
 </span><span id="105" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-quote">'&quot;'</span> . <span class="php-var">$tag</span> . <span class="php-quote">'&quot; is not a valid tag for a cache entry.'</span>, <span class="php-num">1233058312</span>);
 </span><span id="106" class="l">        }
 </span><span id="107" class="l">
-</span><span id="108" class="l">        <span class="php-var">$entries</span> = <span class="php-keyword1">array</span>();
+</span><span id="108" class="l">        <span class="php-var">$entries</span> = [];
 </span><span id="109" class="l">        <span class="php-var">$identifiers</span> = <span class="php-var">$this</span>-&gt;backend-&gt;findIdentifiersByTag(<span class="php-var">$tag</span>);
 </span><span id="110" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$identifiers</span> <span class="php-keyword1">as</span> <span class="php-var">$identifier</span>) {
 </span><span id="111" class="l">            <span class="php-var">$rawResult</span> = <span class="php-var">$this</span>-&gt;backend-&gt;get(<span class="php-var">$identifier</span>);
@@ -2026,6 +2027,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d6e0ab6cdfa432eb0a9ff8748900a773ac8f4422"></script>
-<script src="elementlist.js?c529e8353794005fed271ed94e2bd6b0f17acecd"></script>
+<script src="elementlist.js?f4a6f3bde10904852d4033d3b1fad5329c94b0c6"></script>
 </body>
 </html>
