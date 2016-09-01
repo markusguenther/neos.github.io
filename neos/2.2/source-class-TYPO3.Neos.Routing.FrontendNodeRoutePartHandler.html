@@ -1603,7 +1603,7 @@
 </span><span id="427" class="l">        }
 </span><span id="428" class="l">
 </span><span id="429" class="l">        <span class="php-var">$requestPathSegments</span> = [];
-</span><span id="430" class="l">        <span class="php-keyword1">while</span> (<span class="php-var">$node</span>-&gt;getParentPath() !== SiteService::SITES_ROOT_PATH &amp;&amp; <span class="php-var">$node</span> <span class="php-keyword1">instanceof</span> NodeInterface) {
+</span><span id="430" class="l">        <span class="php-keyword1">while</span> (<span class="php-var">$node</span> <span class="php-keyword1">instanceof</span> NodeInterface &amp;&amp; <span class="php-var">$node</span>-&gt;getParentPath() !== SiteService::SITES_ROOT_PATH) {
 </span><span id="431" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$node</span>-&gt;hasProperty(<span class="php-quote">'uriPathSegment'</span>)) {
 </span><span id="432" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\MissingNodePropertyException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Missing &quot;uriPathSegment&quot; property for node &quot;%s&quot;. Nodes can be migrated with the &quot;flow node:repair&quot; command.'</span>, <span class="php-var">$node</span>-&gt;getPath()), <span class="php-num">1415020326</span>);
 </span><span id="433" class="l">            }
