@@ -1,0 +1,2775 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Neos\Flow\Http\Request | Flow Framework (4.0 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Flow Framework (4.0 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Neos.Flow.Http.html" title="Summary of Neos\Flow\Http"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Frontend.html">
+							Frontend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.html">
+							FlowQuery<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.html">
+							Operations<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.Object.html">
+							Object						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.Helper.html">
+							Helper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Eel.Validation.html">
+							Validation						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Error.html">
+							Error<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.html">
+							Messages						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.html">
+							Flow<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Annotations.html">
+							Annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.html">
+							Aop<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Advice.html">
+							Advice						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Builder.html">
+							Builder						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Pointcut.html">
+							Pointcut						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.Backend.html">
+							Backend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cli.html">
+							Cli						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.html">
+							Composer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Source.html">
+							Source						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.html">
+							Booting<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Migrations.html">
+							Migrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Error.html">
+							Error						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.Http.html">
+							Http<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Client.html">
+							Client						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Component.html">
+							Component						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.html">
+							I18n<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.html">
+							Cldr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.html">
+							Reader<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.EelHelper.html">
+							EelHelper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Formatter.html">
+							Formatter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.html">
+							TranslationProvider<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.html">
+							Xliff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.html">
+							Log<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.html">
+							Monitor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.ChangeDetectionStrategy.html">
+							ChangeDetectionStrategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.html">
+							Mvc<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.html">
+							ObjectManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.DependencyInjection.html">
+							DependencyInjection						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Proxy.html">
+							Proxy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.html">
+							Package<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Package.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.MetaData.html">
+							MetaData						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.html">
+							Doctrine<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.DataTypes.html">
+							DataTypes						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Logging.html">
+							Logging						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.html">
+							Mapping<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html">
+							Driver						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.html">
+							Generic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Qom.html">
+							Qom						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.html">
+							Property<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.html">
+							TypeConverter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.Error.html">
+							Error						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.html">
+							Reflection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.html">
+							ResourceManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
+							Filter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Publishing.html">
+							Publishing						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Storage.html">
+							Storage						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Streams.html">
+							Streams						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Target.html">
+							Target						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.html">
+							Authentication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.EntryPoint.html">
+							EntryPoint						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Provider.html">
+							Provider						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Token.html">
+							Token						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.html">
+							Entity<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Method.html">
+							Method						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Parameter.html">
+							Parameter						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Channel.html">
+							Channel						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Cryptography.html">
+							Cryptography						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Policy.html">
+							Policy						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.RequestPattern.html">
+							RequestPattern						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.html">
+							Session<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.html">
+							SignalSlot<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.html">
+							FluidAdaptor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.html">
+							SyntaxTree<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.Expression.html">
+							Expression						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.TemplateProcessor.html">
+							TemplateProcessor						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.html">
+							ViewHelper<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Facets.html">
+							Facets						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Security.html">
+							Security						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Validation.html">
+							Validation						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.html">
+							Kickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Inflect.html">
+							Inflect						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Lock.html">
+							Lock						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.html">
+							Unicode						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
+				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
+				<li class="active"><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
+				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
+				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
+				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">HttpRequestHandlerInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Http.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Request</h1>
+
+
+	<div class="description">
+	<p>Represents an HTTP request</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Neos.Flow.Http.AbstractMessage.html"><span>Neos\Flow\Http\AbstractMessage</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Neos\Flow\Http\Request</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Http.html">Http</a><br>
+		
+
+				<b>Api</b>
+				<br>
+				<b>Flow\proxy(false)</b>
+				<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Request.html#19-827" title="Go to source code">Neos.Flow/Classes/Http/Request.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#78-119" title="Go to source code">__construct</a>( <span>array <var>$get</var></span>, <span>array <var>$post</var></span>, <span>array <var>$files</var></span>, <span>array <var>$server</var></span> )</code>
+
+			<div class="description short">
+				<p>Constructs a new Request object based on the given environment data.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Constructs a new Request object based on the given environment data.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$get</var></dt>
+						<dd>Data similar to that which is typically provided by $_GET</dd>
+						<dt><var>$post</var></dt>
+						<dd>Data similar to that which is typically provided by $_POST</dd>
+						<dt><var>$files</var></dt>
+						<dd>Data similar to that which is typically provided by $_FILES</dd>
+						<dt><var>$server</var></dt>
+						<dd>Data similar to that which is typically provided by $_SERVER</dd>
+					</dl></div>
+
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Request.html#_create">Neos\Flow\Http\Request::create()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.Request.html#_createFromEnvironment">Neos\Flow\Http\Request::createFromEnvironment()</a></code><br>
+					</div>
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#___construct">Neos\Flow\Http\AbstractMessage::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#121-171" title="Go to source code">create</a>( <span><code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code> <var>$uri</var></span>, <span>string <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>array <var>$arguments</var> = []</span>, <span>array <var>$files</var> = []</span>, <span>array <var>$server</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Creates a new Request object from the given data.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates a new Request object from the given data.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$uri</var></dt>
+						<dd>The request URI</dd>
+						<dt><var>$method</var></dt>
+						<dd>Request method, for example "GET"</dd>
+						<dt><var>$arguments</var></dt>
+						<dd>Arguments to send in the request body</dd>
+						<dt><var>$files</var></dt>
+						<dd></dd>
+						<dt><var>$server</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="createFromEnvironment" id="_createFromEnvironment">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createFromEnvironment">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#173-186" title="Go to source code">createFromEnvironment</a>( )</code>
+
+			<div class="description short">
+				<p>Considers the environment information found in PHP's superglobals and Flow's
+environment configuration and creates a new instance of this Request class
+matching that data.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Considers the environment information found in PHP's superglobals and Flow's
+environment configuration and creates a new instance of this Request class
+matching that data.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__clone" id="___clone">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___clone">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#188-198" title="Go to source code">__clone</a>( )</code>
+
+			<div class="description short">
+				<p>Creates a deep clone</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates a deep clone</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUri" id="_getUri">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUri">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#200-209" title="Go to source code">getUri</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the request URI</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the request URI</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getBaseUri" id="_getBaseUri">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getBaseUri">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#211-223" title="Go to source code">getBaseUri</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the detected base URI</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the detected base URI</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setBaseUri" id="_setBaseUri">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setBaseUri">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#225-231" title="Go to source code">setBaseUri</a>( <span><code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code> <var>$baseUri</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$baseUri</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSecure" id="_isSecure">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSecure">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#233-242" title="Go to source code">isSecure</a>( )</code>
+
+			<div class="description short">
+				<p>Indicates if this request has been received through a secure channel.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Indicates if this request has been received through a secure channel.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setMethod" id="_setMethod">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setMethod">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#244-254" title="Go to source code">setMethod</a>( <span>string <var>$method</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the request method</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the request method</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$method</var></dt>
+						<dd>The request method, for example "GET".</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMethod" id="_getMethod">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMethod">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#256-265" title="Go to source code">getMethod</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the request method</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the request method</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The request method
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPort" id="_getPort">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPort">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#267-276" title="Go to source code">getPort</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the port used for this request</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the port used for this request</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isMethodSafe" id="_isMethodSafe">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isMethodSafe">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#278-288" title="Go to source code">isMethodSafe</a>( )</code>
+
+			<div class="description short">
+				<p>Tells if the request method is "safe", that is, it is expected to not take any
+other action than retrieval. This should the case with "GET" and "HEAD" requests.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Tells if the request method is "safe", that is, it is expected to not take any
+other action than retrieval. This should the case with "GET" and "HEAD" requests.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getArguments" id="_getArguments">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getArguments">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#290-302" title="Go to source code">getArguments</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the unified arguments of this request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the unified arguments of this request.</p>
+
+<p>GET, POST and PUT arguments, as well es uploaded files, are merged into a whole
+array of arguments.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasArgument" id="_hasArgument">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasArgument">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#304-315" title="Go to source code">hasArgument</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if an argument of the given name exists in this request.
+Applies to GET, POST and PUT arguments similarly.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if an argument of the given name exists in this request.
+Applies to GET, POST and PUT arguments similarly.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>Name of the argument</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getArgument" id="_getArgument">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getArgument">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#317-327" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the value of the specified GET / POST / PUT argument.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the value of the specified GET / POST / PUT argument.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>Name of the argument</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed<br>Value of the specified argument or NULL if it does not exist
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setContent" id="_setContent">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setContent">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#329-350" title="Go to source code">setContent</a>( <span>string|resource <var>$content</var></span> )</code>
+
+			<div class="description short">
+				<p>Explicitly sets the content of the request body</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Explicitly sets the content of the request body</p>
+
+<p>In most cases, content is just a string representation of the request body.
+In order to reduce memory consumption for uploads and other big data, it is
+also possible to pass a stream resource. The easies way to convert a local file
+into a stream resource is probably: $resource = fopen('file://path/to/file', 'rb');</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$content</var></dt>
+						<dd>The body content, for example arguments of a PUT request, or a stream resource</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setContent">Neos\Flow\Http\AbstractMessage::setContent</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContent" id="_getContent">
+
+			<td class="attributes"><code>
+				 public 
+				string|resource
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContent">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#352-382" title="Go to source code">getContent</a>( <span>boolean <var>$asResource</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the content of the request body</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the content of the request body</p>
+
+<p>If the request body has not been set with setContent() previously, this method
+will try to retrieve it from the input stream. If $asResource was set to TRUE,
+the stream resource will be returned instead of a string.</p>
+
+<p>If the content which has been set by setContent() originally was a stream
+resource, that resource will be returned, no matter if $asResource is set.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asResource</var></dt>
+						<dd>If set, the content is returned as a resource pointing to PHP's input stream</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string|resource
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Exception.html">Neos\Flow\Http\Exception</a></code>
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getContent">Neos\Flow\Http\AbstractMessage::getContent</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getServerParams" id="_getServerParams">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getServerParams">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#384-398" title="Go to source code">getServerParams</a>( )</code>
+
+			<div class="description short">
+				<p>PSR-7</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>PSR-7</p>
+
+<p>Retrieve server parameters.</p>
+
+<p>Retrieves data related to the incoming request environment,
+typically derived from PHP's $_SERVER superglobal. The data IS NOT
+REQUIRED to originate from $_SERVER.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAttributes" id="_getAttributes">
+
+			<td class="attributes"><code>
+				 public 
+				mixed[]
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAttributes">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#400-416" title="Go to source code">getAttributes</a>( )</code>
+
+			<div class="description short">
+				<p>PSR-7</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>PSR-7</p>
+
+<p>Retrieve attributes derived from the request.</p>
+
+<p>The request "attributes" may be used to allow injection of any
+parameters derived from the request: e.g., the results of path
+match operations; the results of decrypting cookies; the results of
+deserializing non-form-encoded message bodies; etc. Attributes
+will be application and request specific, and CAN be mutable.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed[]<br>Attributes derived from the request.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAttribute" id="_getAttribute">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAttribute">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#418-441" title="Go to source code">getAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>PSR-7</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>PSR-7</p>
+
+<p>Retrieve a single derived request attribute.</p>
+
+<p>Retrieves a single derived request attribute as described in
+getAttributes(). If the attribute has not been previously set, returns
+the default value as provided.</p>
+
+<p>This method obviates the need for a hasAttribute() method, as it allows
+specifying a default value to return if the attribute is not found.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>The attribute name.</dd>
+						<dt><var>$default</var></dt>
+						<dd>Default value to return if the attribute does not exist.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Request.html#_getAttributes">Neos\Flow\Http\Request::getAttributes()</a></code><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="withAttribute" id="_withAttribute">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_withAttribute">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#443-465" title="Go to source code">withAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				<p>PSR-7</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>PSR-7</p>
+
+<p>Return an instance with the specified derived request attribute.</p>
+
+<p>This method allows setting a single derived request attribute as
+described in getAttributes().</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that has the
+updated attribute.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>The attribute name.</dd>
+						<dt><var>$value</var></dt>
+						<dd>The value of the attribute.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Request.html#_getAttributes">Neos\Flow\Http\Request::getAttributes()</a></code><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setAttribute" id="_setAttribute">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setAttribute">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#467-474" title="Go to source code">setAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>The attribute name.</dd>
+						<dt><var>$value</var></dt>
+						<dd>The value of the attribute.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="withoutAttribute" id="_withoutAttribute">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_withoutAttribute">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#476-497" title="Go to source code">withoutAttribute</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				<p>PSR-7</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>PSR-7</p>
+
+<p>Return an instance that removes the specified derived request attribute.</p>
+
+<p>This method allows removing a single derived request attribute as
+described in getAttributes().</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that removes
+the attribute.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>The attribute name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Request.html#_getAttributes">Neos\Flow\Http\Request::getAttributes()</a></code><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unsetAttribute" id="_unsetAttribute">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unsetAttribute">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#499-505" title="Go to source code">unsetAttribute</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>The attribute name.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getClientIpAddress" id="_getClientIpAddress">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getClientIpAddress">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#507-534" title="Go to source code">getClientIpAddress</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the best guess of the client's IP address.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the best guess of the client's IP address.</p>
+
+<p>Note that, depending on the actual source used, IP addresses can be spoofed
+and may not be reliable. Although several kinds of proxy headers are taken into
+account, certain combinations of ISPs and proxies might still produce wrong
+results.</p>
+
+<p>Don't rely on the client IP address as the only security measure!</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The client's IP address
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAcceptedMediaTypes" id="_getAcceptedMediaTypes">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAcceptedMediaTypes">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#536-557" title="Go to source code">getAcceptedMediaTypes</a>( )</code>
+
+			<div class="description short">
+				<p>Returns an list of IANA media types defined in the Accept header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an list of IANA media types defined in the Accept header.</p>
+
+<p>The list is ordered by user preference, after evaluating the Quality Values
+specified in the header field value. First items in the list are the most
+preferred.</p>
+
+<p>If no Accept header is present, the media type representing "any" media type
+is returned.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>A list of media types and sub types
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNegotiatedMediaType" id="_getNegotiatedMediaType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNegotiatedMediaType">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#559-581" title="Go to source code">getNegotiatedMediaType</a>( <span>array <var>$supportedMediaTypes</var></span>, <span>boolean <var>$trim</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the best fitting IANA media type after applying the content negotiation
+rules on a possible Accept header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the best fitting IANA media type after applying the content negotiation
+rules on a possible Accept header.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$supportedMediaTypes</var></dt>
+						<dd>A list of media types which are supported by the application / controller</dd>
+						<dt><var>$trim</var></dt>
+						<dd>If TRUE, only the type/subtype of the media type is returned. If FALSE, the full original media type string is returned.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The media type and sub type which matched, NULL if none matched
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getScriptRequestPathAndFilename" id="_getScriptRequestPathAndFilename">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getScriptRequestPathAndFilename">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#583-599" title="Go to source code">getScriptRequestPathAndFilename</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the relative path (ie. relative to the web root) and name of the
+script as it was accessed through the web server.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the relative path (ie. relative to the web root) and name of the
+script as it was accessed through the web server.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Relative path and name of the PHP script as accessed through the web
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getScriptRequestPath" id="_getScriptRequestPath">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getScriptRequestPath">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#601-613" title="Go to source code">getScriptRequestPath</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the relative path (ie. relative to the web root) to the script as
+it was accessed through the web server.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the relative path (ie. relative to the web root) to the script as
+it was accessed through the web server.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Relative path to the PHP script as accessed through the web
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRelativePath" id="_getRelativePath">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRelativePath">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#615-627" title="Go to source code">getRelativePath</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the request's path relative to the $baseUri</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the request's path relative to the $baseUri</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRequestLine" id="_getRequestLine">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRequestLine">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#629-645" title="Go to source code">getRequestLine</a>( )</code>
+
+			<div class="description short">
+				<p>Return the Request-Line of this Request Message, consisting of the method, the uri and the HTTP version
+Would be, for example, "GET /foo?bar=baz HTTP/1.1"
+Note that the URI part is, at the moment, only possible in the form "abs_path" since the
+actual requestUri of the Request cannot be determined during the creation of the Request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the Request-Line of this Request Message, consisting of the method, the uri and the HTTP version
+Would be, for example, "GET /foo?bar=baz HTTP/1.1"
+Note that the URI part is, at the moment, only possible in the form "abs_path" since the
+actual requestUri of the Request cannot be determined during the creation of the Request.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1<br>
+					</div>
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStartLine" id="_getStartLine">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStartLine">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#647-657" title="Go to source code">getStartLine</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the first line of this Request Message, which is the Request-Line in this case</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the first line of this Request Message, which is the Request-Line in this case</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The Request-Line of this Request
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html chapter 4.1 "Message Types"<br>
+					</div>
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="detectBaseUri" id="_detectBaseUri">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_detectBaseUri">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#659-672" title="Go to source code">detectBaseUri</a>( )</code>
+
+			<div class="description short">
+				<p>Tries to detect the base URI of request.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Tries to detect the base URI of request.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="buildUnifiedArguments" id="_buildUnifiedArguments">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_buildUnifiedArguments">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#674-690" title="Go to source code">buildUnifiedArguments</a>( <span>array <var>$getArguments</var></span>, <span>array <var>$postArguments</var></span>, <span>array <var>$uploadArguments</var></span> )</code>
+
+			<div class="description short">
+				<p>Takes the raw GET &amp; POST arguments and maps them into the request object.
+Afterwards all mapped arguments can be retrieved by the getArgument(s) method, no matter if they
+have been GET, POST or PUT arguments before.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Takes the raw GET &amp; POST arguments and maps them into the request object.
+Afterwards all mapped arguments can be retrieved by the getArgument(s) method, no matter if they
+have been GET, POST or PUT arguments before.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$getArguments</var></dt>
+						<dd>Arguments as found in $_GET</dd>
+						<dt><var>$postArguments</var></dt>
+						<dd>Arguments as found in $_POST</dd>
+						<dt><var>$uploadArguments</var></dt>
+						<dd>Arguments as found in $_FILES</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>the unified arguments
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="untangleFilesArray" id="_untangleFilesArray">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_untangleFilesArray">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#692-731" title="Go to source code">untangleFilesArray</a>( <span>array <var>$convolutedFiles</var></span> )</code>
+
+			<div class="description short">
+				<p>Transforms the convoluted _FILES superglobal into a manageable form.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Transforms the convoluted _FILES superglobal into a manageable form.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$convolutedFiles</var></dt>
+						<dd>The _FILES superglobal</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Untangled files
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="calculateFieldPaths" id="_calculateFieldPaths">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_calculateFieldPaths">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#733-756" title="Go to source code">calculateFieldPaths</a>( <span>array <var>$structure</var></span>, <span>string <var>$firstLevelFieldName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns and array of all possibles "field paths" for the given array.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns and array of all possibles "field paths" for the given array.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$structure</var></dt>
+						<dd>The array to walk through</dd>
+						<dt><var>$firstLevelFieldName</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>An array of paths (as strings) in the format "key1/key2/key3" ...
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseContentNegotiationQualityValues" id="_parseContentNegotiationQualityValues">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseContentNegotiationQualityValues">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#758-796" title="Go to source code">parseContentNegotiationQualityValues</a>( <span>string <var>$rawValues</var></span> )</code>
+
+			<div class="description short">
+				<p>Parses a RFC 2616 content negotiation header field by evaluating the Quality
+Values and splitting the options into an array list, ordered by user preference.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parses a RFC 2616 content negotiation header field by evaluating the Quality
+Values and splitting the options into an array list, ordered by user preference.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$rawValues</var></dt>
+						<dd>The raw Accept* Header field value</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>The parsed list of field values, ordered by user preference
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="renderHeaders" id="_renderHeaders">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_renderHeaders">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#798-815" title="Go to source code">renderHeaders</a>( )</code>
+
+			<div class="description short">
+				<p>Renders the HTTP headers - including the status header - of this request</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Renders the HTTP headers - including the status header - of this request</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The HTTP headers, one per line, separated by \r\n as required by RFC 2616 sec 5
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#817-826" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				<p>Cast the request to a string: return the content part of this response</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Cast the request to a string: return the content part of this response</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The same as getContent()
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Http.AbstractMessage.html#methods">Neos\Flow\Http\AbstractMessage</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCharset">getCharset()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookie">getCookie()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookies">getCookies()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">getHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaders">getHeaders()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getVersion">getVersion()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasCookie">hasCookie()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasHeader">hasHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_removeCookie">removeCookie()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCharset">setCharset()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCookie">setCookie()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setHeader">setHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setVersion">setVersion()</a></code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="ATTRIBUTE_CLIENT_IP" id="ATTRIBUTE_CLIENT_IP">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-ATTRIBUTE_CLIENT_IP.html#68-71" title="Go to source code"><b>ATTRIBUTE_CLIENT_IP</b></a>
+					</code>
+
+					<div class="description short">
+						<p>PSR-7 Attribute containing the resolved trusted client IP address as string</p>
+					</div>
+
+					<div class="description detailed hidden">
+						<p>PSR-7 Attribute containing the resolved trusted client IP address as string</p>
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#ATTRIBUTE_CLIENT_IP" class="anchor">#</a>
+						<code><span class="php-quote">'clientIpAddress'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="ATTRIBUTE_TRUSTED_PROXY" id="ATTRIBUTE_TRUSTED_PROXY">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-ATTRIBUTE_TRUSTED_PROXY.html#73-76" title="Go to source code"><b>ATTRIBUTE_TRUSTED_PROXY</b></a>
+					</code>
+
+					<div class="description short">
+						<p>PSR-7 Attribute containing a boolean whether the request is from a trusted proxy</p>
+					</div>
+
+					<div class="description detailed hidden">
+						<p>PSR-7 Attribute containing a boolean whether the request is from a trusted proxy</p>
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#ATTRIBUTE_TRUSTED_PROXY" class="anchor">#</a>
+						<code><span class="php-quote">'fromTrustedProxy'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="method" id="$method">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#27-30" title="Go to source code"><var>$method</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$method" class="anchor">#</a>
+					<code><span class="php-quote">'GET'</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="uri" id="$uri">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#32-35" title="Go to source code"><var>$uri</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$uri" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="baseUri" id="$baseUri">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#37-40" title="Go to source code"><var>$baseUri</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$baseUri" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="arguments" id="$arguments">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#42-45" title="Go to source code"><var>$arguments</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$arguments" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="server" id="$server">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#47-52" title="Go to source code"><var>$server</var></a>
+
+				<div class="description short">
+					<p>Data similar to that which is typically provided by $_SERVER</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Data similar to that which is typically provided by $_SERVER</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$server" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="inputStreamUri" id="$inputStreamUri">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#54-59" title="Go to source code"><var>$inputStreamUri</var></a>
+
+				<div class="description short">
+					<p>URI for the "input" stream wrapper which can be modified for testing purposes</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>URI for the "input" stream wrapper which can be modified for testing purposes</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$inputStreamUri" class="anchor">#</a>
+					<code><span class="php-quote">'php://input'</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="attributes" id="$attributes">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#61-66" title="Go to source code"><var>$attributes</var></a>
+
+				<div class="description short">
+					<p>PSR-7</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>PSR-7</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$attributes" class="anchor">#</a>
+					<code>[]</code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Http.AbstractMessage.html#properties">Neos\Flow\Http\AbstractMessage</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$charset"><var>$charset</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$content"><var>$content</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$headers"><var>$headers</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$version"><var>$version</var></a></code>
+			</p>
+		</div>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Flow Framework (4.0 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?66321cd128a945cf1012f0011cbc8495030dcc7e"></script>
+<script src="elementlist.js?15cef7313bc3bce841fa713591a4a30b8713ecee"></script>
+</body>
+</html>

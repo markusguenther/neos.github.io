@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Neos\Utility\Unicode\TextIterator | Flow Framework (4.0 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Flow Framework (4.0 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.html" title="Summary of Neos\Utility\Unicode"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Frontend.html">
+							Frontend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.html">
+							FlowQuery<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.html">
+							Operations<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.Object.html">
+							Object						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.Helper.html">
+							Helper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Eel.Validation.html">
+							Validation						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Error.html">
+							Error<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.html">
+							Messages						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.html">
+							Flow<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Annotations.html">
+							Annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.html">
+							Aop<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Advice.html">
+							Advice						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Builder.html">
+							Builder						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Pointcut.html">
+							Pointcut						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.Backend.html">
+							Backend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cli.html">
+							Cli						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.html">
+							Composer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Source.html">
+							Source						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.html">
+							Booting<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Migrations.html">
+							Migrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Error.html">
+							Error						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.html">
+							Http<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Client.html">
+							Client						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Component.html">
+							Component						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.html">
+							I18n<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.html">
+							Cldr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.html">
+							Reader<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.EelHelper.html">
+							EelHelper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Formatter.html">
+							Formatter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.html">
+							TranslationProvider<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.html">
+							Xliff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.html">
+							Log<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.html">
+							Monitor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.ChangeDetectionStrategy.html">
+							ChangeDetectionStrategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.html">
+							Mvc<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.html">
+							ObjectManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.DependencyInjection.html">
+							DependencyInjection						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Proxy.html">
+							Proxy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.html">
+							Package<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Package.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.MetaData.html">
+							MetaData						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.html">
+							Doctrine<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.DataTypes.html">
+							DataTypes						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Logging.html">
+							Logging						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.html">
+							Mapping<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html">
+							Driver						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.html">
+							Generic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Qom.html">
+							Qom						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.html">
+							Property<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.html">
+							TypeConverter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.Error.html">
+							Error						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.html">
+							Reflection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.html">
+							ResourceManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
+							Filter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Publishing.html">
+							Publishing						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Storage.html">
+							Storage						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Streams.html">
+							Streams						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Target.html">
+							Target						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.html">
+							Authentication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.EntryPoint.html">
+							EntryPoint						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Provider.html">
+							Provider						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Token.html">
+							Token						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.html">
+							Entity<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Method.html">
+							Method						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Parameter.html">
+							Parameter						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Channel.html">
+							Channel						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Cryptography.html">
+							Cryptography						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Policy.html">
+							Policy						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.RequestPattern.html">
+							RequestPattern						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.html">
+							Session<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.html">
+							SignalSlot<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.html">
+							FluidAdaptor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.html">
+							SyntaxTree<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.Expression.html">
+							Expression						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.TemplateProcessor.html">
+							TemplateProcessor						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.html">
+							ViewHelper<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Facets.html">
+							Facets						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Security.html">
+							Security						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Validation.html">
+							Validation						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.html">
+							Kickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Inflect.html">
+							Inflect						</a>
+							</li>
+								</ul></li></ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Lock.html">
+							Lock						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Utility.Unicode.html">
+							Unicode						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Neos.Utility.Unicode.Functions.html">Functions</a></li>
+				<li class="active"><a href="class-Neos.Utility.Unicode.TextIterator.html">TextIterator</a></li>
+				<li><a href="class-Neos.Utility.Unicode.TextIteratorElement.html">TextIteratorElement</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Neos.Utility.Unicode.Exception.html">Exception</a></li>
+				<li><a href="class-Neos.Utility.Unicode.UnsupportedFeatureException.html">UnsupportedFeatureException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class TextIterator</h1>
+
+
+	<div class="description">
+	<p>A UTF8-aware TextIterator</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Neos\Utility\Unicode\TextIterator</span></b>			
+			 implements 
+<span>Iterator</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Utility.html">Utility</a>\<a href="namespace-Neos.Utility.Unicode.html">Unicode</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Neos.Utility.Unicode.TextIterator.html#16-478" title="Go to source code">Neos.Utility.Unicode/Classes/TextIterator.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#82-104" title="Go to source code">__construct</a>( <span>string <var>$subject</var></span>, <span>integer <var>$iteratorType</var> = self::CHARACTER</span> )</code>
+
+			<div class="description short">
+				<p>Constructs the TextIterator</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Constructs the TextIterator</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$subject</var></dt>
+						<dd></dd>
+						<dt><var>$iteratorType</var></dt>
+						<dd>The type of iterator</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Utility.Unicode.Exception.html">Neos\Utility\Unicode\Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="current" id="_current">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_current">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#106-114" title="Go to source code">current</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the current element</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the current element</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The value of the current element
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>Iterator::current()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="next" id="_next">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_next">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#116-125" title="Go to source code">next</a>( )</code>
+
+			<div class="description short">
+				<p>Advances the iterator to the next element</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Advances the iterator to the next element</p>
+
+
+
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>Iterator::next()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="key" id="_key">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_key">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#127-136" title="Go to source code">key</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the key of the current element. That means the number of the
+current element starting with 0.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the key of the current element. That means the number of the
+current element starting with 0.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed<br>Key (number) of the current element
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>Iterator::key()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="valid" id="_valid">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_valid">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#138-149" title="Go to source code">valid</a>( )</code>
+
+			<div class="description short">
+				<p>Returns true, if the current element is not the end of the iterator</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns true, if the current element is not the end of the iterator</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>True if the iterator has not reached it's end
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>Iterator::valid()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="rewind" id="_rewind">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_rewind">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#151-159" title="Go to source code">rewind</a>( )</code>
+
+			<div class="description short">
+				<p>Sets the iterator back to the first element</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the iterator back to the first element</p>
+
+
+
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code>Iterator::rewind()</code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offset" id="_offset">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offset">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#161-169" title="Go to source code">offset</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the offset in the original given string of the current element</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the offset in the original given string of the current element</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The offset of the current element
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="previous" id="_previous">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_previous">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#171-179" title="Go to source code">previous</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the previous element</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the previous element</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The previous element of the iterator
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="last" id="_last">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_last">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#181-195" title="Go to source code">last</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the last element of the iterator</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the last element of the iterator</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>the last element of the iterator
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="following" id="_following">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_following">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#197-215" title="Go to source code">following</a>( <span>integer <var>$offset</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the next elment following the character of the original string
+given by its offset</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the next elment following the character of the original string
+given by its offset</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd>The offset of the character</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The element following this character
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="preceding" id="_preceding">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_preceding">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#217-235" title="Go to source code">preceding</a>( <span>integer <var>$offset</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the element preceding the character of the original string given by its offset</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the element preceding the character of the original string given by its offset</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd>The offset of the character</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The element preceding this character
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isBoundary" id="_isBoundary">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isBoundary">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#237-251" title="Go to source code">isBoundary</a>( )</code>
+
+			<div class="description short">
+				<p>Returns true if the current element is a boundary element.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns true if the current element is a boundary element.</p>
+
+<p>Boundaries are:
+CHARACTER: none
+WORD:      <space>.,!?;
+SENTENCE:  .,!?;
+LINE:      &lt;\n></p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>True if the current element is a boundary element
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAll" id="_getAll">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAll">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#253-267" title="Go to source code">getAll</a>( )</code>
+
+			<div class="description short">
+				<p>Returns all elements of the iterator in an array</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns all elements of the iterator in an array</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>All elements of the iterator
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRuleStatus" id="_getRuleStatus">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRuleStatus">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#269-275" title="Go to source code">getRuleStatus</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Utility.Unicode.UnsupportedFeatureException.html">Neos\Utility\Unicode\UnsupportedFeatureException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRuleStatusArray" id="_getRuleStatusArray">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRuleStatusArray">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#277-283" title="Go to source code">getRuleStatusArray</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Utility.Unicode.UnsupportedFeatureException.html">Neos\Utility\Unicode\UnsupportedFeatureException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAvailableLocales" id="_getAvailableLocales">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAvailableLocales">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#285-291" title="Go to source code">getAvailableLocales</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Utility.Unicode.UnsupportedFeatureException.html">Neos\Utility\Unicode\UnsupportedFeatureException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="first" id="_first">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_first">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#293-302" title="Go to source code">first</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the first element</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the first element</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The first element of the iterator
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generateIteratorElements" id="_generateIteratorElements">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generateIteratorElements">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#304-333" title="Go to source code">generateIteratorElements</a>( )</code>
+
+			<div class="description short">
+				<p>Helper function to coordinate the "string splitting"</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Helper function to coordinate the "string splitting"</p>
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Utility.Unicode.UnsupportedFeatureException.html">Neos\Utility\Unicode\UnsupportedFeatureException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseSubjectByCharacter" id="_parseSubjectByCharacter">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseSubjectByCharacter">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#335-349" title="Go to source code">parseSubjectByCharacter</a>( )</code>
+
+			<div class="description short">
+				<p>Helper function to do the splitting by character</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Helper function to do the splitting by character</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseSubjectByWord" id="_parseSubjectByWord">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseSubjectByWord">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#351-398" title="Go to source code">parseSubjectByWord</a>( )</code>
+
+			<div class="description short">
+				<p>Helper function to do the splitting by word. Note: punctuation marks are
+treated as words, spaces as boundary elements</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Helper function to do the splitting by word. Note: punctuation marks are
+treated as words, spaces as boundary elements</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseSubjectByLine" id="_parseSubjectByLine">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseSubjectByLine">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#400-422" title="Go to source code">parseSubjectByLine</a>( )</code>
+
+			<div class="description short">
+				<p>Helper function to do the splitting by line. Note: one punctuations mark
+belongs to the preceding sentence.
+"\n" is boundary element.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Helper function to do the splitting by line. Note: one punctuations mark
+belongs to the preceding sentence.
+"\n" is boundary element.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseSubjectBySentence" id="_parseSubjectBySentence">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseSubjectBySentence">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#424-467" title="Go to source code">parseSubjectBySentence</a>( )</code>
+
+			<div class="description short">
+				<p>Helper function to do the splitting by sentence. Note: one punctuations
+mark belongs to the preceding sentence. Whitespace between sentences is
+marked as boundary.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Helper function to do the splitting by sentence. Note: one punctuations
+mark belongs to the preceding sentence. Whitespace between sentences is
+marked as boundary.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCurrentElement" id="_getCurrentElement">
+
+			<td class="attributes"><code>
+				 private 
+				<code><a href="class-Neos.Utility.Unicode.TextIteratorElement.html">Neos\Utility\Unicode\TextIteratorElement</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCurrentElement">#</a>
+			<code><a href="source-class-Neos.Utility.Unicode.TextIterator.html#469-477" title="Go to source code">getCurrentElement</a>( )</code>
+
+			<div class="description short">
+				<p>Helper function to get the current element from the cache.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Helper function to get the current element from the cache.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Utility.Unicode.TextIteratorElement.html">Neos\Utility\Unicode\TextIteratorElement</a></code><br>The current element of the cache
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="CODE_POINT" id="CODE_POINT">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-CODE_POINT.html#22" title="Go to source code"><b>CODE_POINT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#CODE_POINT" class="anchor">#</a>
+						<code><span class="php-num">1</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="COMB_SEQUENCE" id="COMB_SEQUENCE">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-COMB_SEQUENCE.html#23" title="Go to source code"><b>COMB_SEQUENCE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#COMB_SEQUENCE" class="anchor">#</a>
+						<code><span class="php-num">2</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="CHARACTER" id="CHARACTER">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-CHARACTER.html#24" title="Go to source code"><b>CHARACTER</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#CHARACTER" class="anchor">#</a>
+						<code><span class="php-num">3</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD" id="WORD">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD.html#25" title="Go to source code"><b>WORD</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD" class="anchor">#</a>
+						<code><span class="php-num">4</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="LINE" id="LINE">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-LINE.html#26" title="Go to source code"><b>LINE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#LINE" class="anchor">#</a>
+						<code><span class="php-num">5</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="SENTENCE" id="SENTENCE">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-SENTENCE.html#27" title="Go to source code"><b>SENTENCE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#SENTENCE" class="anchor">#</a>
+						<code><span class="php-num">6</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DONE" id="DONE">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-DONE.html#29" title="Go to source code"><b>DONE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DONE" class="anchor">#</a>
+						<code><span class="php-quote">'DONE'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_NONE" id="WORD_NONE">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_NONE.html#31" title="Go to source code"><b>WORD_NONE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_NONE" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_NONE'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_NONE_LIMIT" id="WORD_NONE_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_NONE_LIMIT.html#32" title="Go to source code"><b>WORD_NONE_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_NONE_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_NONE_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_NUMBER" id="WORD_NUMBER">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_NUMBER.html#33" title="Go to source code"><b>WORD_NUMBER</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_NUMBER" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_NUMBER'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_NUMBER_LIMIT" id="WORD_NUMBER_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_NUMBER_LIMIT.html#34" title="Go to source code"><b>WORD_NUMBER_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_NUMBER_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_NUMBER_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_LETTER" id="WORD_LETTER">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_LETTER.html#35" title="Go to source code"><b>WORD_LETTER</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_LETTER" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_LETTER'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_LETTER_LIMIT" id="WORD_LETTER_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_LETTER_LIMIT.html#36" title="Go to source code"><b>WORD_LETTER_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_LETTER_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_LETTER_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_KANA" id="WORD_KANA">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_KANA.html#37" title="Go to source code"><b>WORD_KANA</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_KANA" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_KANA'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="WORD_KANA_LIMIT" id="WORD_KANA_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-WORD_KANA_LIMIT.html#38" title="Go to source code"><b>WORD_KANA_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#WORD_KANA_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'WORD_KANA_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="LINE_SOFT" id="LINE_SOFT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-LINE_SOFT.html#40" title="Go to source code"><b>LINE_SOFT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#LINE_SOFT" class="anchor">#</a>
+						<code><span class="php-quote">'LINE_SOFT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="LINE_SOFT_LIMIT" id="LINE_SOFT_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-LINE_SOFT_LIMIT.html#41" title="Go to source code"><b>LINE_SOFT_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#LINE_SOFT_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'LINE_SOFT_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="LINE_HARD" id="LINE_HARD">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-LINE_HARD.html#42" title="Go to source code"><b>LINE_HARD</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#LINE_HARD" class="anchor">#</a>
+						<code><span class="php-quote">'LINE_HARD'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="LINE_HARD_LIMIT" id="LINE_HARD_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-LINE_HARD_LIMIT.html#43" title="Go to source code"><b>LINE_HARD_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#LINE_HARD_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'LINE_HARD_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="SENTENCE_TERM" id="SENTENCE_TERM">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-SENTENCE_TERM.html#45" title="Go to source code"><b>SENTENCE_TERM</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#SENTENCE_TERM" class="anchor">#</a>
+						<code><span class="php-quote">'SENTENCE_TERM'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="SENTENCE_TERM_LIMIT" id="SENTENCE_TERM_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-SENTENCE_TERM_LIMIT.html#46" title="Go to source code"><b>SENTENCE_TERM_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#SENTENCE_TERM_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'SENTENCE_TERM_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="SENTENCE_SEP" id="SENTENCE_SEP">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-SENTENCE_SEP.html#47" title="Go to source code"><b>SENTENCE_SEP</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#SENTENCE_SEP" class="anchor">#</a>
+						<code><span class="php-quote">'SENTENCE_SEP'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="SENTENCE_SEP_LIMIT" id="SENTENCE_SEP_LIMIT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-SENTENCE_SEP_LIMIT.html#48" title="Go to source code"><b>SENTENCE_SEP_LIMIT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#SENTENCE_SEP_LIMIT" class="anchor">#</a>
+						<code><span class="php-quote">'SENTENCE_SEP_LIMIT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="REGEXP_SENTENCE_DELIMITERS" id="REGEXP_SENTENCE_DELIMITERS">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-REGEXP_SENTENCE_DELIMITERS.html#50" title="Go to source code"><b>REGEXP_SENTENCE_DELIMITERS</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#REGEXP_SENTENCE_DELIMITERS" class="anchor">#</a>
+						<code><span class="php-quote">'[\.|,|!|\?|;]'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="iteratorType" id="$iteratorType">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Utility.Unicode.TextIterator.html#52-55" title="Go to source code"><var>$iteratorType</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$iteratorType" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="subject" id="$subject">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Utility.Unicode.TextIterator.html#57-60" title="Go to source code"><var>$subject</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$subject" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="currentPosition" id="$currentPosition">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Utility.Unicode.TextIterator.html#62-65" title="Go to source code"><var>$currentPosition</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$currentPosition" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="iteratorCache" id="$iteratorCache">
+			<td class="attributes"><code>
+				protected  
+				ArrayObject
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Utility.Unicode.TextIterator.html#67-70" title="Go to source code"><var>$iteratorCache</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$iteratorCache" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="iteratorCacheIterator" id="$iteratorCacheIterator">
+			<td class="attributes"><code>
+				protected  
+				ArrayIterator
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Utility.Unicode.TextIterator.html#72-75" title="Go to source code"><var>$iteratorCacheIterator</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$iteratorCacheIterator" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="previousElement" id="$previousElement">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Utility.Unicode.TextIteratorElement.html">Neos\Utility\Unicode\TextIteratorElement</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Utility.Unicode.TextIterator.html#77-80" title="Go to source code"><var>$previousElement</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$previousElement" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Flow Framework (4.0 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?66321cd128a945cf1012f0011cbc8495030dcc7e"></script>
+<script src="elementlist.js?15cef7313bc3bce841fa713591a4a30b8713ecee"></script>
+</body>
+</html>
