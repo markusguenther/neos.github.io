@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+
+	<title>File Neos.Media/Classes/Domain/Strategy/AssetUsageStrategyInterface.php | Neos (3.0 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Neos (3.0 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Neos.Media.Domain.Strategy.html" title="Summary of Neos\Media\Domain\Strategy"><span>Namespace</span></a>
+					</li>
+					<li>
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.html">
+							ContentRepository<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Factory.html">
+							Factory						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Service.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Service.ImportExport.html">
+							ImportExport						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Utility.html">
+							Utility						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Eel.FlowQueryOperations.html">
+							FlowQueryOperations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.html">
+							Migration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Domain.Factory.html">
+							Factory						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Domain.Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Domain.Repository.html">
+							Repository						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Filters.html">
+							Filters						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Migration.Transformations.html">
+							Transformations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.NodeTypePostprocessor.html">
+							NodeTypePostprocessor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Persistence.Ast.html">
+							Ast						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Security.Authorization.Privilege.Node.html">
+							Node<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Security.Authorization.Privilege.Node.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Service.Utility.html">
+							Utility						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.TypeConverter.html">
+							TypeConverter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Diff.html">
+							Diff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Diff.Renderer.html">
+							Renderer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Diff.Renderer.Html.html">
+							Html						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Diff.Renderer.Text.html">
+							Text						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Fusion.html">
+							Fusion<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Fusion.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Fusion.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Fusion.Core.ExceptionHandlers.html">
+							ExceptionHandlers						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Fusion.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Fusion.FusionObjects.html">
+							FusionObjects<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Fusion.FusionObjects.Helpers.html">
+							Helpers						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Fusion.FusionObjects.Http.html">
+							Http						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Fusion.View.html">
+							View						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Fusion.ViewHelpers.html">
+							ViewHelpers						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Media.html">
+							Media<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Browser.html">
+							Browser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Browser.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Browser.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
+							Session						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Media.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Controller.html">
+							Controller						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Media.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.EventListener.html">
+							EventListener						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.html">
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
+							Adjustment						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
+							Dto						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.ThumbnailGenerator.html">
+							ThumbnailGenerator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Service.html">
+							Service						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Media.Domain.Strategy.html">
+							Strategy						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Media.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Imagine.html">
+							Imagine						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.TypeConverter.html">
+							TypeConverter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.Validator.html">
+							Validator						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Media.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Aspects.html">
+							Aspects						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Frontend.html">
+							Frontend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Module.html">
+							Module<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Module.Administration.html">
+							Administration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Module.Management.html">
+							Management						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Module.User.html">
+							User						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Controller.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.EventListener.html">
+							EventListener						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.Model.html">
+							Model<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.Model.Dto.html">
+							Dto						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Domain.Strategy.html">
+							Strategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Eel.FlowQueryOperations.html">
+							FlowQueryOperations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.EventLog.html">
+							EventLog<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.EventLog.Domain.html">
+							Domain<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.EventLog.Domain.Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.EventLog.Domain.Repository.html">
+							Repository						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.EventLog.Domain.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.EventLog.Integrations.html">
+							Integrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Fusion.html">
+							Fusion<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Fusion.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Fusion.ExceptionHandlers.html">
+							ExceptionHandlers						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Fusion.Helper.html">
+							Helper						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.NodeTypePostprocessor.html">
+							NodeTypePostprocessor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Routing.Aspects.html">
+							Aspects						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Routing.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Security.Authorization.Privilege.html">
+							Privilege						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Service.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Service.DataSource.html">
+							DataSource						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Service.Mapping.html">
+							Mapping						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Service.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Setup.html">
+							Setup<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Setup.Step.html">
+							Step						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.TypeConverter.html">
+							TypeConverter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.TYPO3CR.html">
+							TYPO3CR<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.TYPO3CR.Transformations.html">
+							Transformations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.View.Service.html">
+							Service						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.ContentElement.html">
+							ContentElement						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.Node.html">
+							Node						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Neos.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.NodeTypes.html">
+							NodeTypes<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Service.html">
+							Service<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+							DataSource						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.SiteKickstarter.html">
+							SiteKickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.SiteKickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.SiteKickstarter.Service.html">
+							Service						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Neos.Media.Domain.Strategy.AbstractAssetUsageStrategy.html">AbstractAssetUsageStrategy</a></li>
+				<li><a href="class-Neos.Media.Domain.Strategy.ConfigurationAssetModelMappingStrategy.html">ConfigurationAssetModelMappingStrategy</a></li>
+				<li><a href="class-Neos.Media.Domain.Strategy.ThumbnailGeneratorStrategy.html">ThumbnailGeneratorStrategy</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Neos.Media.Domain.Strategy.AssetModelMappingStrategyInterface.html">AssetModelMappingStrategyInterface</a></li>
+				<li><a href="class-Neos.Media.Domain.Strategy.AssetUsageStrategyInterface.html">AssetUsageStrategyInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="source">
+	<pre class="numbers"><code><span class="l"><a href="#1"> 1 </a></span><span class="l"><a href="#2"> 2 </a></span><span class="l"><a href="#3"> 3 </a></span><span class="l"><a href="#4"> 4 </a></span></span><span class="l"><a href="#5"> 5 </a></span></span><span class="l"><a href="#6"> 6 </a></span></span><span class="l"><a href="#7"> 7 </a></span></span><span class="l"><a href="#8"> 8 </a></span></span><span class="l"><a href="#9"> 9 </a></span></span><span class="l"><a href="#10">10 </a></span></span><span class="l"><a href="#11">11 </a></span></span><span class="l"><a href="#12">12 </a></span><span class="l"><a href="#13">13 </a></span><span class="l"><a href="#14">14 </a></span><span class="l"><a href="#15">15 </a></span><span class="l"><a href="#16">16 </a></span></span><span class="l"><a href="#17">17 </a></span></span><span class="l"><a href="#18">18 </a></span><span class="l"><a href="#19">19 </a></span><span class="l"><a href="#20">20 </a></span><span class="l"><a href="#21">21 </a></span></span><span class="l"><a href="#22">22 </a></span></span><span class="l"><a href="#23">23 </a></span></span><span class="l"><a href="#24">24 </a></span></span><span class="l"><a href="#25">25 </a></span></span><span class="l"><a href="#26">26 </a></span><span class="l"><a href="#27">27 </a></span><span class="l"><a href="#28">28 </a></span><span class="l"><a href="#29">29 </a></span></span><span class="l"><a href="#30">30 </a></span></span><span class="l"><a href="#31">31 </a></span></span><span class="l"><a href="#32">32 </a></span></span><span class="l"><a href="#33">33 </a></span></span><span class="l"><a href="#34">34 </a></span><span class="l"><a href="#35">35 </a></span><span class="l"><a href="#36">36 </a></span><span class="l"><a href="#37">37 </a></span></span><span class="l"><a href="#38">38 </a></span></span><span class="l"><a href="#39">39 </a></span></span><span class="l"><a href="#40">40 </a></span></span><span class="l"><a href="#41">41 </a></span></span><span class="l"><a href="#42">42 </a></span><span class="l"><a href="#43">43 </a></span><span class="l"><a href="#44">44 </a></span><span class="l"><a href="#45">45 </a></span></code></pre>
+	<pre class="code"><code><span id="1" class="l"><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><span class="php-keyword1">namespace</span> Neos\Media\Domain\Strategy;
+</span><span id="3" class="l">
+</span><span id="4" class="l"><span class="php-comment">/*
+</span></span><span id="5" class="l"><span class="php-comment"> * This file is part of the Neos.Media package.
+</span></span><span id="6" class="l"><span class="php-comment"> *
+</span></span><span id="7" class="l"><span class="php-comment"> * (c) Contributors of the Neos Project - www.neos.io
+</span></span><span id="8" class="l"><span class="php-comment"> *
+</span></span><span id="9" class="l"><span class="php-comment"> * This package is Open Source Software. For the full copyright and license
+</span></span><span id="10" class="l"><span class="php-comment"> * information, please view the LICENSE file which was distributed with this
+</span></span><span id="11" class="l"><span class="php-comment"> * source code.
+</span></span><span id="12" class="l"><span class="php-comment"> */</span>
+</span><span id="13" class="l">
+</span><span id="14" class="l"><span class="php-keyword1">use</span> Neos\Media\Domain\Model\AssetInterface;
+</span><span id="15" class="l">
+</span><span id="16" class="l"><span class="php-comment">/**
+</span></span><span id="17" class="l"><span class="php-comment"> * Interface for asset usage strategies
+</span></span><span id="18" class="l"><span class="php-comment"> */</span>
+</span><span id="19" class="l"><span class="php-keyword1">interface</span> AssetUsageStrategyInterface
+</span><span id="20" class="l">{
+</span><span id="21" class="l">    <span class="php-comment">/**
+</span></span><span id="22" class="l"><span class="php-comment">     * Returns true if the asset is used.
+</span></span><span id="23" class="l"><span class="php-comment">     *
+</span></span><span id="24" class="l"><span class="php-comment">     * @param AssetInterface $asset
+</span></span><span id="25" class="l"><span class="php-comment">     * @return boolean
+</span></span><span id="26" class="l"><span class="php-comment">     */</span>
+</span><span id="27" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isInUse(AssetInterface <span class="php-var">$asset</span>);
+</span><span id="28" class="l">
+</span><span id="29" class="l">    <span class="php-comment">/**
+</span></span><span id="30" class="l"><span class="php-comment">     * Returns the total count of usages found.
+</span></span><span id="31" class="l"><span class="php-comment">     *
+</span></span><span id="32" class="l"><span class="php-comment">     * @param AssetInterface $asset
+</span></span><span id="33" class="l"><span class="php-comment">     * @return integer
+</span></span><span id="34" class="l"><span class="php-comment">     */</span>
+</span><span id="35" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getUsageCount(AssetInterface <span class="php-var">$asset</span>);
+</span><span id="36" class="l">
+</span><span id="37" class="l">    <span class="php-comment">/**
+</span></span><span id="38" class="l"><span class="php-comment">     * Returns an array of usage reference objects.
+</span></span><span id="39" class="l"><span class="php-comment">     *
+</span></span><span id="40" class="l"><span class="php-comment">     * @param AssetInterface $asset
+</span></span><span id="41" class="l"><span class="php-comment">     * @return array&lt;\Neos\Media\Domain\Model\Dto\UsageReference&gt;
+</span></span><span id="42" class="l"><span class="php-comment">     */</span>
+</span><span id="43" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getUsageReferences(AssetInterface <span class="php-var">$asset</span>);
+</span><span id="44" class="l">}
+</span><span id="45" class="l"></span></code></pre>
+</div>
+	</div>
+
+	<div id="footer">
+		Neos (3.0 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?236e02b31ef88079eb519d363b91b9d5198d3628"></script>
+</body>
+</html>
