@@ -953,17 +953,37 @@
 used instead.</p>
 
 <p>If source is a string it is expected to be formatted according to DEFAULT_DATE_FORMAT. This default date format
-can be overridden in the initialize*Action() method like this::
- $this->arguments['<argumentName>'] ->getPropertyMappingConfiguration() ->forProperty('<propertyName>') // this line can be skipped in order to specify the format for all properties ->setTypeConverterOption(\TYPO3\Flow\Property\TypeConverter\DateTimeConverter::class, \TYPO3\Flow\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, '<dateFormat>');</p>
+can be overridden in the initialize*Action() method like this::</p>
 
-<p>If the source is of type array, it is possible to override the format in the source::
- array( 'date' => '<dateString>', 'dateFormat' => '<dateFormat>' );</p>
+<p>$this->arguments['<argumentName>']
+   ->getPropertyMappingConfiguration()
+   ->forProperty('<propertyName>') // this line can be skipped in order to specify the format for all properties
+   ->setTypeConverterOption(\TYPO3\Flow\Property\TypeConverter\DateTimeConverter::class, \TYPO3\Flow\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, '<dateFormat>');</p>
 
-<p>By using an array as source you can also override time and timezone of the created DateTime object::
- array( 'date' => '<dateString>', 'hour' => '<hour>', // integer 'minute' => '<minute>', // integer 'seconds' => '<seconds>', // integer 'timezone' => '<timezone>', // string, see http://www.php.net/manual/timezones.php );</p>
+<p>If the source is of type array, it is possible to override the format in the source::</p>
 
-<p>As an alternative to providing the date as string, you might supply day, month and year as array items each::
- array( 'day' => '<day>', // integer 'month' => '<month>', // integer 'year' => '<year>', // integer );</p>
+<p>array(
+  'date' => '<dateString>',
+  'dateFormat' => '<dateFormat>'
+ );</p>
+
+<p>By using an array as source you can also override time and timezone of the created DateTime object::</p>
+
+<p>array(
+  'date' => '<dateString>',
+  'hour' => '<hour>', // integer
+  'minute' => '<minute>', // integer
+  'seconds' => '<seconds>', // integer
+  'timezone' => '<timezone>', // string, see http://www.php.net/manual/timezones.php
+ );</p>
+
+<p>As an alternative to providing the date as string, you might supply day, month and year as array items each::</p>
+
+<p>array(
+  'day' => '<day>', // integer
+  'month' => '<month>', // integer
+  'year' => '<year>', // integer
+ );</p>
 	</div>
 
 	<dl class="tree well">
@@ -998,9 +1018,9 @@ can be overridden in the initialize*Action() method like this::
 
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#16-219" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/DateTimeConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#20-226" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/DateTimeConverter.php</a>
 		<br>
 	</div>
 
@@ -1020,7 +1040,7 @@ can be overridden in the initialize*Action() method like this::
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canConvertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#88-107" title="Go to source code">canConvertFrom</a>( <span>string <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#92-111" title="Go to source code">canConvertFrom</a>( <span>string <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				<p>If conversion is possible.</p>
@@ -1062,7 +1082,7 @@ can be overridden in the initialize*Action() method like this::
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#109-166" title="Go to source code">convertFrom</a>( <span>string|integer|array <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#113-173" title="Go to source code">convertFrom</a>( <span>string|integer|array <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Converts $source to a \DateTime using the configured dateFormat</p>
@@ -1110,7 +1130,7 @@ can be overridden in the initialize*Action() method like this::
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isDatePartKeysProvided">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#168-178" title="Go to source code">isDatePartKeysProvided</a>( <span>array <var>$source</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#175-185" title="Go to source code">isDatePartKeysProvided</a>( <span>array <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns whether date information (day, month, year) are present as keys in $source.</p>
@@ -1148,7 +1168,7 @@ can be overridden in the initialize*Action() method like this::
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultDateFormat">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#180-200" title="Go to source code">getDefaultDateFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#187-207" title="Go to source code">getDefaultDateFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Determines the default date format to use for the conversion.
@@ -1192,7 +1212,7 @@ If no format is specified in the mapping configuration DEFAULT_DATE_FORMAT is us
 
 			<td class="name"><div>
 			<a class="anchor" href="#_overrideTimeIfSpecified">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#202-218" title="Go to source code">overrideTimeIfSpecified</a>( <span>DateTime <var>$date</var></span>, <span>array <var>$source</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#209-225" title="Go to source code">overrideTimeIfSpecified</a>( <span>DateTime <var>$date</var></span>, <span>array <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Overrides hour, minute &amp; second of the given date with the values in the $source array</p>
@@ -1246,7 +1266,7 @@ If no format is specified in the mapping configuration DEFAULT_DATE_FORMAT is us
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#60-63" title="Go to source code"><b>CONFIGURATION_DATE_FORMAT</b></a>
+						<a href="source-constant-CONFIGURATION_DATE_FORMAT.html#64-67" title="Go to source code"><b>CONFIGURATION_DATE_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1270,7 +1290,7 @@ If no format is specified in the mapping configuration DEFAULT_DATE_FORMAT is us
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#65-71" title="Go to source code"><b>DEFAULT_DATE_FORMAT</b></a>
+						<a href="source-constant-DEFAULT_DATE_FORMAT.html#69-75" title="Go to source code"><b>DEFAULT_DATE_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1307,7 +1327,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#73-76" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#77-80" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1321,7 +1341,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'string'</span>, <span class="php-quote">'integer'</span>, <span class="php-quote">'array'</span>)</code>
+					<code>[<span class="php-quote">'string'</span>, <span class="php-quote">'integer'</span>, <span class="php-quote">'array'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1332,7 +1352,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#78-81" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#82-85" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1357,7 +1377,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#83-86" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.DateTimeConverter.html#87-90" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1390,7 +1410,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
 </body>
 </html>

@@ -950,13 +950,13 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Persistence.html">Persistence</a>\<a href="namespace-TYPO3.Flow.Persistence.Aspect.html">Aspect</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>Flow\aspect</b>
 				<br>
-				<b>Flow\introduce("typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentityorvalueobject",:</b>
+				<b>Flow\introduce(&quot;typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentityorvalueobject&quot;,:</b>
 				interfaceName="TYPO3\Flow\Persistence\Aspect\PersistenceMagicInterface")<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#21-158" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Aspect/PersistenceMagicAspect.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#22-159" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Aspect/PersistenceMagicAspect.php</a>
 		<br>
 	</div>
 
@@ -976,7 +976,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isEntity">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#49-54" title="Go to source code">isEntity</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#50-55" title="Go to source code">isEntity</a>( )</code>
 
 			<div class="description short">
 				
@@ -989,7 +989,7 @@
 
 
 
-					<h4>Flow\pointcut("classannotatedwith(typo3\flow\annotations\entity)</h4>
+					<h4>Flow\pointcut(&quot;classannotatedwith(typo3\flow\annotations\entity)</h4>
 					<div class="list">
 							|| classAnnotatedWith(Doctrine\ORM\Mapping\Entity)")<br>
 					</div>
@@ -1009,7 +1009,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNonEmbeddedValueObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#56-61" title="Go to source code">isNonEmbeddedValueObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#57-62" title="Go to source code">isNonEmbeddedValueObject</a>( )</code>
 
 			<div class="description short">
 				
@@ -1022,7 +1022,7 @@
 
 
 
-					<h4>Flow\pointcut("classannotatedwith(typo3\flow\annotations\valueobject)</h4>
+					<h4>Flow\pointcut(&quot;classannotatedwith(typo3\flow\annotations\valueobject)</h4>
 					<div class="list">
 							&amp;&amp; !filter(TYPO3\Flow\Persistence\Aspect\EmbeddedValueObjectPointcutFilter)")<br>
 					</div>
@@ -1042,7 +1042,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isEntityOrValueObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#63-68" title="Go to source code">isEntityOrValueObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#64-69" title="Go to source code">isEntityOrValueObject</a>( )</code>
 
 			<div class="description short">
 				
@@ -1055,7 +1055,7 @@
 
 
 
-					<h4>Flow\pointcut("typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentity</h4>
+					<h4>Flow\pointcut(&quot;typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentity</h4>
 					<div class="list">
 							|| TYPO3\Flow\Persistence\Aspect\PersistenceMagicAspect->isNonEmbeddedValueObject")<br>
 					</div>
@@ -1075,7 +1075,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#78-86" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#79-87" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes this aspect</p>
@@ -1104,7 +1104,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateUuid">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#88-101" title="Go to source code">generateUuid</a>( <span><code><a href="class-TYPO3.Flow.Aop.JoinPointInterface.html">TYPO3\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#89-102" title="Go to source code">generateUuid</a>( <span><code><a href="class-TYPO3.Flow.Aop.JoinPointInterface.html">TYPO3\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>After returning advice, making sure we have an UUID for each and every entity.</p>
@@ -1122,7 +1122,7 @@
 
 
 
-					<h4>Flow\before("typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentity</h4>
+					<h4>Flow\before(&quot;typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentity</h4>
 					<div class="list">
 							&amp;&amp; method(.*->(__construct|__clone)()) &amp;&amp; filter(TYPO3\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver)")<br>
 					</div>
@@ -1142,7 +1142,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateValueHash">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#103-142" title="Go to source code">generateValueHash</a>( <span><code><a href="class-TYPO3.Flow.Aop.JoinPointInterface.html">TYPO3\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#104-143" title="Go to source code">generateValueHash</a>( <span><code><a href="class-TYPO3.Flow.Aop.JoinPointInterface.html">TYPO3\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>After returning advice, generates the value hash for the object</p>
@@ -1160,7 +1160,7 @@
 
 
 
-					<h4>Flow\after("typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isnonembeddedvalueobject</h4>
+					<h4>Flow\after(&quot;typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isnonembeddedvalueobject</h4>
 					<div class="list">
 							&amp;&amp; method(.*->__construct()) &amp;&amp; filter(TYPO3\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver)")<br>
 					</div>
@@ -1180,7 +1180,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cloneObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#144-157" title="Go to source code">cloneObject</a>( <span><code><a href="class-TYPO3.Flow.Aop.JoinPointInterface.html">TYPO3\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#145-158" title="Go to source code">cloneObject</a>( <span><code><a href="class-TYPO3.Flow.Aop.JoinPointInterface.html">TYPO3\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>Mark object as cloned after cloning.</p>
@@ -1201,7 +1201,7 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 
 
 
-					<h4>Flow\afterreturning("typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentityorvalueobject</h4>
+					<h4>Flow\afterreturning(&quot;typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentityorvalueobject</h4>
 					<div class="list">
 							&amp;&amp; method(.*->__clone())")<br>
 					</div>
@@ -1233,7 +1233,7 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#30-35" title="Go to source code"><var>$useIgBinary</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#31-36" title="Go to source code"><var>$useIgBinary</var></a>
 
 				<div class="description short">
 					<p>If the extension "igbinary" is installed, use it for increased performance</p>
@@ -1258,7 +1258,7 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#37-41" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#38-42" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1286,7 +1286,7 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#43-47" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#44-48" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1314,7 +1314,7 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#70-76" title="Go to source code"><var>$Persistence_Object_Identifier</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Aspect.PersistenceMagicAspect.html#71-77" title="Go to source code"><var>$Persistence_Object_Identifier</var></a>
 
 				<div class="description short">
 					
@@ -1323,15 +1323,15 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\introduce("typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentityorvalueobject</h4>
+						<h4>Orm\id</h4>
 						<div class="list">
-								&amp;&amp; filter(TYPO3\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver)")<br>
 						</div>
 						<h4>Orm\column(length=40)</h4>
 						<div class="list">
 						</div>
-						<h4>Orm\id</h4>
+						<h4>Flow\introduce(&quot;typo3\flow\persistence\aspect\persistencemagicaspect-&gt;isentityorvalueobject</h4>
 						<div class="list">
+								&amp;&amp; filter(TYPO3\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver)")<br>
 						</div>
 				</div>
 			</td>
@@ -1357,7 +1357,7 @@ but might be needed by custom backends (like TYPO3.CouchDB).</p>
 		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
 </body>
 </html>

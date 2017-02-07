@@ -950,8 +950,10 @@
 	<p>Converter which transforms simple types to a string.</p>
 
 <ul>
-<li>If the source is a DateTime instance, it will be formatted as string. The format can be set via CONFIGURATION_DATE_FORMAT.</li>
-<li>If the source is an array, it will be converted to a CSV string or JSON, depending on CONFIGURATION_ARRAY_FORMAT.</li>
+<li>If the source is a DateTime instance, it will be formatted as string. The format
+can be set via CONFIGURATION_DATE_FORMAT.</li>
+<li>If the source is an array, it will be converted to a CSV string or JSON, depending
+on CONFIGURATION_ARRAY_FORMAT.</li>
 </ul>
 
 <p>For array to CSV string, the delimiter can be set via CONFIGURATION_CSV_DELIMITER.</p>
@@ -989,9 +991,9 @@
 
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#16-196" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/StringConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#18-199" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/StringConverter.php</a>
 		<br>
 	</div>
 
@@ -1011,7 +1013,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#89-120" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#91-123" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Actually convert from $source to $targetType, taking into account the fully
@@ -1042,7 +1044,7 @@ built $convertedChildProperties and $configuration.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Property.Exception.TypeConverterException.html">TYPO3\Flow\Property\Exception\TypeConverterException</a></code><br>thrown in case a developer error occurred
+						<code><a href="class-TYPO3.Flow.Property.Exception.InvalidPropertyMappingConfigurationException.html">TYPO3\Flow\Property\Exception\InvalidPropertyMappingConfigurationException</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -1064,7 +1066,7 @@ built $convertedChildProperties and $configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDateFormat">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#122-145" title="Go to source code">getDateFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#125-148" title="Go to source code">getDateFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Determines the date format to use for the conversion.</p>
@@ -1108,7 +1110,7 @@ built $convertedChildProperties and $configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCsvDelimiter">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#147-170" title="Go to source code">getCsvDelimiter</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#150-173" title="Go to source code">getCsvDelimiter</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Determines the delimiter to use for the conversion from array to CSV format.</p>
@@ -1152,7 +1154,7 @@ built $convertedChildProperties and $configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArrayFormat">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#172-195" title="Go to source code">getArrayFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#175-198" title="Go to source code">getArrayFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Determines the format to use for the conversion from array to string.</p>
@@ -1215,7 +1217,7 @@ built $convertedChildProperties and $configuration.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#31-34" title="Go to source code"><b>CONFIGURATION_DATE_FORMAT</b></a>
+						<a href="source-constant-CONFIGURATION_DATE_FORMAT.html#33-36" title="Go to source code"><b>CONFIGURATION_DATE_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1239,7 +1241,7 @@ built $convertedChildProperties and $configuration.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#36-42" title="Go to source code"><b>DEFAULT_DATE_FORMAT</b></a>
+						<a href="source-constant-DEFAULT_DATE_FORMAT.html#38-44" title="Go to source code"><b>DEFAULT_DATE_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1265,7 +1267,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#44-47" title="Go to source code"><b>CONFIGURATION_ARRAY_FORMAT</b></a>
+						<a href="source-constant-CONFIGURATION_ARRAY_FORMAT.html#46-49" title="Go to source code"><b>CONFIGURATION_ARRAY_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1289,7 +1291,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#49-52" title="Go to source code"><b>DEFAULT_ARRAY_FORMAT</b></a>
+						<a href="source-constant-DEFAULT_ARRAY_FORMAT.html#51-54" title="Go to source code"><b>DEFAULT_ARRAY_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1313,7 +1315,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#54-57" title="Go to source code"><b>ARRAY_FORMAT_CSV</b></a>
+						<a href="source-constant-ARRAY_FORMAT_CSV.html#56-59" title="Go to source code"><b>ARRAY_FORMAT_CSV</b></a>
 					</code>
 
 					<div class="description short">
@@ -1337,7 +1339,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#59-62" title="Go to source code"><b>ARRAY_FORMAT_JSON</b></a>
+						<a href="source-constant-ARRAY_FORMAT_JSON.html#61-64" title="Go to source code"><b>ARRAY_FORMAT_JSON</b></a>
 					</code>
 
 					<div class="description short">
@@ -1361,7 +1363,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#64-67" title="Go to source code"><b>CONFIGURATION_CSV_DELIMITER</b></a>
+						<a href="source-constant-CONFIGURATION_CSV_DELIMITER.html#66-69" title="Go to source code"><b>CONFIGURATION_CSV_DELIMITER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1385,7 +1387,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#69-72" title="Go to source code"><b>DEFAULT_CSV_DELIMITER</b></a>
+						<a href="source-constant-DEFAULT_CSV_DELIMITER.html#71-74" title="Go to source code"><b>DEFAULT_CSV_DELIMITER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1420,7 +1422,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#74-77" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#76-79" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1434,7 +1436,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'string'</span>, <span class="php-quote">'integer'</span>, <span class="php-quote">'float'</span>, <span class="php-quote">'boolean'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'DateTime'</span>)</code>
+					<code>[<span class="php-quote">'string'</span>, <span class="php-quote">'integer'</span>, <span class="php-quote">'float'</span>, <span class="php-quote">'boolean'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'DateTime'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1445,7 +1447,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#79-82" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#81-84" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1470,7 +1472,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#84-87" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.StringConverter.html#86-89" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1503,7 +1505,7 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
 </body>
 </html>

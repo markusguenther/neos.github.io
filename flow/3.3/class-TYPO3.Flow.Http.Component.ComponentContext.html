@@ -944,6 +944,8 @@
 
 <p>An instance of this class will be passed to each component of the chain allowing them to read/write parameters to/from it.
 Besides handling of the chain is interrupted as soon as the "cancelled" flag is set.</p>
+
+<p>The instance will be created before the bootstrap, so AOP/DI proxying is not possible.</p>
 	</div>
 
 
@@ -962,7 +964,9 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#18-122" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Http/Component/ComponentContext.php</a>
+				<b>Flow\proxy(false)</b>
+				<br>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#18-125" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Http/Component/ComponentContext.php</a>
 		<br>
 	</div>
 
@@ -982,7 +986,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#50-58" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span>, <span><code><a href="class-TYPO3.Flow.Http.Response.html">TYPO3\Flow\Http\Response</a></code> <var>$httpResponse</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#53-61" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span>, <span><code><a href="class-TYPO3.Flow.Http.Response.html">TYPO3\Flow\Http\Response</a></code> <var>$httpResponse</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1018,7 +1022,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHttpRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#60-67" title="Go to source code">getHttpRequest</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#63-70" title="Go to source code">getHttpRequest</a>( )</code>
 
 			<div class="description short">
 				
@@ -1054,7 +1058,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceHttpRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#69-77" title="Go to source code">replaceHttpRequest</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#72-80" title="Go to source code">replaceHttpRequest</a>( <span><code><a href="class-TYPO3.Flow.Http.Request.html">TYPO3\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1091,7 +1095,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHttpResponse">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#79-86" title="Go to source code">getHttpResponse</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#82-89" title="Go to source code">getHttpResponse</a>( )</code>
 
 			<div class="description short">
 				
@@ -1127,7 +1131,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceHttpResponse">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#88-96" title="Go to source code">replaceHttpResponse</a>( <span><code><a href="class-TYPO3.Flow.Http.Response.html">TYPO3\Flow\Http\Response</a></code> <var>$httpResponse</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#91-99" title="Go to source code">replaceHttpResponse</a>( <span><code><a href="class-TYPO3.Flow.Http.Response.html">TYPO3\Flow\Http\Response</a></code> <var>$httpResponse</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1164,7 +1168,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParameter">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#98-107" title="Go to source code">getParameter</a>( <span>string <var>$componentClassName</var></span>, <span>string <var>$parameterName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#101-110" title="Go to source code">getParameter</a>( <span>string <var>$componentClassName</var></span>, <span>string <var>$parameterName</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1207,7 +1211,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setParameter">#</a>
-			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#109-121" title="Go to source code">setParameter</a>( <span>string <var>$componentClassName</var></span>, <span>string <var>$parameterName</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#112-124" title="Go to source code">setParameter</a>( <span>string <var>$componentClassName</var></span>, <span>string <var>$parameterName</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1260,7 +1264,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#28-33" title="Go to source code"><var>$httpRequest</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#31-36" title="Go to source code"><var>$httpRequest</var></a>
 
 				<div class="description short">
 					<p>The current HTTP request</p>
@@ -1285,7 +1289,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#35-40" title="Go to source code"><var>$httpResponse</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#38-43" title="Go to source code"><var>$httpResponse</var></a>
 
 				<div class="description short">
 					<p>The current HTTP response</p>
@@ -1310,7 +1314,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#42-48" title="Go to source code"><var>$parameters</var></a>
+					<a href="source-class-TYPO3.Flow.Http.Component.ComponentContext.html#45-51" title="Go to source code"><var>$parameters</var></a>
 
 				<div class="description short">
 					<p>Two-dimensional array storing an parameter dictionary (containing variables that can be read/written by all components)
@@ -1326,7 +1330,7 @@ The first dimension is the fully qualified Component name, the second dimension 
 			<td class="value">
 				<div>
 					<a href="#$parameters" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1345,7 +1349,7 @@ The first dimension is the fully qualified Component name, the second dimension 
 		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
 </body>
 </html>

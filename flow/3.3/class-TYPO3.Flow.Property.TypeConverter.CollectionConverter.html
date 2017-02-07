@@ -985,9 +985,9 @@ type converters and the result will be used to populate a Doctrine ArrayCollecti
 
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#16-87" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/CollectionConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#19-90" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/CollectionConverter.php</a>
 		<br>
 	</div>
 
@@ -1007,7 +1007,7 @@ type converters and the result will be used to populate a Doctrine ArrayCollecti
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#42-56" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#45-59" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Actually convert from $source to $targetType, taking into account the fully
@@ -1038,7 +1038,7 @@ built $convertedChildProperties and $configuration.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Property.Exception.TypeConverterException.html">TYPO3\Flow\Property\Exception\TypeConverterException</a></code><br>thrown in case a developer error occurred
+						Exception\TypeConverterException<br>thrown in case a developer error occurred
 					</div>
 
 					<h4>Api</h4>
@@ -1060,7 +1060,7 @@ built $convertedChildProperties and $configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSourceChildPropertiesToBeConverted">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#58-71" title="Go to source code">getSourceChildPropertiesToBeConverted</a>( <span>mixed <var>$source</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#61-74" title="Go to source code">getSourceChildPropertiesToBeConverted</a>( <span>mixed <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the source, if it is an array, otherwise an empty array.</p>
@@ -1103,7 +1103,7 @@ built $convertedChildProperties and $configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeOfChildProperty">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#73-86" title="Go to source code">getTypeOfChildProperty</a>( <span>string <var>$targetType</var></span>, <span>string <var>$propertyName</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#76-89" title="Go to source code">getTypeOfChildProperty</a>( <span>string <var>$targetType</var></span>, <span>string <var>$propertyName</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Return the type of a given sub-property inside the $targetType</p>
@@ -1172,7 +1172,7 @@ built $convertedChildProperties and $configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#27-30" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#30-33" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1186,7 +1186,7 @@ built $convertedChildProperties and $configuration.</p>
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'string'</span>, <span class="php-quote">'array'</span>)</code>
+					<code>[<span class="php-quote">'string'</span>, <span class="php-quote">'array'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1197,7 +1197,7 @@ built $convertedChildProperties and $configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#32-35" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#35-38" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1222,7 +1222,7 @@ built $convertedChildProperties and $configuration.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#37-40" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.CollectionConverter.html#40-43" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1255,7 +1255,7 @@ built $convertedChildProperties and $configuration.</p>
 		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
 </body>
 </html>

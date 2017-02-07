@@ -950,11 +950,11 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Validation.html">Validation</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#22-464" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Validation/ValidatorResolver.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#25-467" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Validation/ValidatorResolver.php</a>
 		<br>
 	</div>
 
@@ -974,17 +974,17 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createValidator">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#79-117" title="Go to source code">createValidator</a>( <span>string <var>$validatorType</var></span>, <span>array <var>$validatorOptions</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#82-120" title="Go to source code">createValidator</a>( <span>string <var>$validatorType</var></span>, <span>array <var>$validatorOptions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Get a validator for a given data type. Returns a validator implementing
-the TYPO3\Flow\Validation\Validator\ValidatorInterface or NULL if no validator
+the ValidatorInterface or NULL if no validator
 could be resolved.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Get a validator for a given data type. Returns a validator implementing
-the TYPO3\Flow\Validation\Validator\ValidatorInterface or NULL if no validator
+the ValidatorInterface or NULL if no validator
 could be resolved.</p>
 
 
@@ -1026,7 +1026,7 @@ could be resolved.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBaseValidatorConjunction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#119-138" title="Go to source code">getBaseValidatorConjunction</a>( <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'Default'</span>)</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#122-141" title="Go to source code">getBaseValidatorConjunction</a>( <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var> = [<span class="php-quote">'Default'</span>]</span> )</code>
 
 			<div class="description short">
 				<p>Resolves and returns the base validator conjunction for the given data type.</p>
@@ -1071,7 +1071,7 @@ could be resolved.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildMethodArgumentsValidatorConjunctions">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#140-211" title="Go to source code">buildMethodArgumentsValidatorConjunctions</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>array <var>$methodParameters</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$methodValidateAnnotations</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#143-214" title="Go to source code">buildMethodArgumentsValidatorConjunctions</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>array <var>$methodParameters</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$methodValidateAnnotations</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Detects and registers any validators for arguments:
@@ -1125,7 +1125,7 @@ could be resolved.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reset">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#213-222" title="Go to source code">reset</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#216-225" title="Go to source code">reset</a>( )</code>
 
 			<div class="description short">
 				<p>Resets the baseValidatorConjunctions
@@ -1156,7 +1156,7 @@ It is usually not required to reset the ValidatorResolver during one request. Th
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildSubObjectValidator">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#224-247" title="Go to source code">buildSubObjectValidator</a>( <span>array <var>$objectPath</var></span>, <span><code><a href="class-TYPO3.Flow.Validation.Validator.ValidatorInterface.html">TYPO3\Flow\Validation\Validator\ValidatorInterface</a></code> <var>$propertyValidator</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#227-250" title="Go to source code">buildSubObjectValidator</a>( <span>array <var>$objectPath</var></span>, <span><code><a href="class-TYPO3.Flow.Validation.Validator.ValidatorInterface.html">TYPO3\Flow\Validation\Validator\ValidatorInterface</a></code> <var>$propertyValidator</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a chain of nested object validators by specification of the given
@@ -1198,7 +1198,7 @@ object path.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildBaseValidatorConjunction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#249-331" title="Go to source code">buildBaseValidatorConjunction</a>( <span>string <var>$indexKey</var></span>, <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#252-334" title="Go to source code">buildBaseValidatorConjunction</a>( <span>string <var>$indexKey</var></span>, <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a base validator conjunction for the given data type.</p>
@@ -1217,8 +1217,8 @@ checked as well, regardless of a validate annotation</p>
 to the end of the conjunction. A custom validator is found if it follows the naming convention
 "Replace '\Model\' by '\Validator\' and append 'Validator'".</p>
 
-<p>Example: $targetClassName is TYPO3\Foo\Domain\Model\Quux, then the validator will be found if it has the
-name TYPO3\Foo\Domain\Validator\QuuxValidator</p>
+<p>Example: $targetClassName is Neos\Foo\Domain\Model\Quux, then the validator will be found if it has the
+name Neos\Foo\Domain\Validator\QuuxValidator</p>
 
 
 					<h4>Parameters</h4>
@@ -1254,7 +1254,7 @@ name TYPO3\Foo\Domain\Validator\QuuxValidator</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addCustomValidators">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#333-375" title="Go to source code">addCustomValidators</a>( <span>string <var>$targetClassName</var></span>, <span><code><a href="class-TYPO3.Flow.Validation.Validator.ConjunctionValidator.html">TYPO3\Flow\Validation\Validator\ConjunctionValidator</a></code> <var>&amp; $conjunctionValidator</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#336-378" title="Go to source code">addCustomValidators</a>( <span>string <var>$targetClassName</var></span>, <span><code><a href="class-TYPO3.Flow.Validation.Validator.ConjunctionValidator.html">TYPO3\Flow\Validation\Validator\ConjunctionValidator</a></code> <var>&amp; $conjunctionValidator</var></span> )</code>
 
 			<div class="description short">
 				<p>This adds custom validators to the passed $conjunctionValidator.</p>
@@ -1301,7 +1301,7 @@ If multiple validators have the same priority, which one will be added is not de
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPolyTypeObjectValidatorImplementationClassNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#377-389" title="Go to source code">getPolyTypeObjectValidatorImplementationClassNames</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#380-392" title="Go to source code">getPolyTypeObjectValidatorImplementationClassNames</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a map of object validator class names.</p>
@@ -1342,7 +1342,7 @@ If multiple validators have the same priority, which one will be added is not de
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveValidatorObjectName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#391-419" title="Go to source code">resolveValidatorObjectName</a>( <span>string <var>$validatorType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#394-422" title="Go to source code">resolveValidatorObjectName</a>( <span>string <var>$validatorType</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the class name of an appropriate validator for the given type. If no
@@ -1382,7 +1382,7 @@ validator is available FALSE is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValidatorImplementationClassNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#421-433" title="Go to source code">getValidatorImplementationClassNames</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#424-436" title="Go to source code">getValidatorImplementationClassNames</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns all class names implementing the ValidatorInterface.</p>
@@ -1423,7 +1423,7 @@ validator is available FALSE is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValidatorType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#435-463" title="Go to source code">getValidatorType</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#438-466" title="Go to source code">getValidatorType</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				<p>Used to map PHP types to validator types.</p>
@@ -1468,7 +1468,7 @@ validator is available FALSE is returned</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#30-45" title="Go to source code"><b>PATTERN_MATCH_VALIDATORS</b></a>
+						<a href="source-constant-PATTERN_MATCH_VALIDATORS.html#33-48" title="Go to source code"><b>PATTERN_MATCH_VALIDATORS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1503,7 +1503,7 @@ validator is available FALSE is returned</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#47-60" title="Go to source code"><b>PATTERN_MATCH_VALIDATOROPTIONS</b></a>
+						<a href="source-constant-PATTERN_MATCH_VALIDATOROPTIONS.html#50-63" title="Go to source code"><b>PATTERN_MATCH_VALIDATOROPTIONS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1547,7 +1547,7 @@ validator is available FALSE is returned</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#62-66" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#65-69" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1575,7 +1575,7 @@ validator is available FALSE is returned</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#68-72" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#71-75" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1603,7 +1603,7 @@ validator is available FALSE is returned</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#74-77" title="Go to source code"><var>$baseValidatorConjunctions</var></a>
+					<a href="source-class-TYPO3.Flow.Validation.ValidatorResolver.html#77-80" title="Go to source code"><var>$baseValidatorConjunctions</var></a>
 
 				<div class="description short">
 					
@@ -1617,7 +1617,7 @@ validator is available FALSE is returned</p>
 			<td class="value">
 				<div>
 					<a href="#$baseValidatorConjunctions" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1636,7 +1636,7 @@ validator is available FALSE is returned</p>
 		Flow Framework (3.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
 </body>
 </html>
