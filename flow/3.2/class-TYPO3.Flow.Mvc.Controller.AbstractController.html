@@ -989,7 +989,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#20-364" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/Controller/AbstractController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#31-375" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Mvc/Controller/AbstractController.php</a>
 		<br>
 	</div>
 
@@ -1009,7 +1009,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeController">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#87-119" title="Go to source code">initializeController</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-TYPO3.Flow.Mvc.ResponseInterface.html">TYPO3\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#98-130" title="Go to source code">initializeController</a>( <span><code><a href="class-TYPO3.Flow.Mvc.RequestInterface.html">TYPO3\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-TYPO3.Flow.Mvc.ResponseInterface.html">TYPO3\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
 
 			<div class="description short">
 				<p>Initializes the controller</p>
@@ -1051,7 +1051,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getControllerContext">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#121-131" title="Go to source code">getControllerContext</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#132-142" title="Go to source code">getControllerContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns this controller's context.
@@ -1089,7 +1089,7 @@ Note that the context is only available after processRequest() has been called.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addFlashMessage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#133-168" title="Go to source code">addFlashMessage</a>( <span>string <var>$messageBody</var></span>, <span>string <var>$messageTitle</var> = <span class="php-quote">''</span></span>, <span>string <var>$severity</var> = TYPO3\Flow\Mvc\Controller\Message::SEVERITY_OK</span>, <span>array <var>$messageArguments</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$messageCode</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#144-179" title="Go to source code">addFlashMessage</a>( <span>string <var>$messageBody</var></span>, <span>string <var>$messageTitle</var> = <span class="php-quote">''</span></span>, <span>string <var>$severity</var> = TYPO3\Flow\Mvc\Controller\Message::SEVERITY_OK</span>, <span>array <var>$messageArguments</var> = []</span>, <span>integer <var>$messageCode</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates a Message object and adds it to the FlashMessageContainer.</p>
@@ -1108,7 +1108,7 @@ Note that the context is only available after processRequest() has been called.<
 						<dt><var>$messageTitle</var></dt>
 						<dd>optional header of the FlashMessage</dd>
 						<dt><var>$severity</var></dt>
-						<dd>severity of the FlashMessage (one of the \TYPO3\Flow\Error\Message::SEVERITY_* constants)</dd>
+						<dd>severity of the FlashMessage (one of the Message::SEVERITY_* constants)</dd>
 						<dt><var>$messageArguments</var></dt>
 						<dd>arguments to be passed to the FlashMessage</dd>
 						<dt><var>$messageCode</var></dt>
@@ -1144,7 +1144,7 @@ Note that the context is only available after processRequest() has been called.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_forward">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#170-216" title="Go to source code">forward</a>( <span>string <var>$actionName</var></span>, <span>string <var>$controllerName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#181-227" title="Go to source code">forward</a>( <span>string <var>$actionName</var></span>, <span>string <var>$controllerName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Forwards the request to another action and / or controller.</p>
@@ -1197,7 +1197,7 @@ Note that the context is only available after processRequest() has been called.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_forwardToRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#218-237" title="Go to source code">forwardToRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#229-248" title="Go to source code">forwardToRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Forwards the request to another action and / or controller.</p>
@@ -1244,7 +1244,7 @@ Note that the context is only available after processRequest() has been called.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_redirect">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#239-275" title="Go to source code">redirect</a>( <span>string <var>$actionName</var></span>, <span>string <var>$controllerName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span>, <span>string <var>$format</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#250-286" title="Go to source code">redirect</a>( <span>string <var>$actionName</var></span>, <span>string <var>$controllerName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span>, <span>string <var>$format</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Redirects the request to another action and / or controller.</p>
@@ -1306,7 +1306,7 @@ if used with other request types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_redirectToRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#277-301" title="Go to source code">redirectToRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#288-312" title="Go to source code">redirectToRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span> )</code>
 
 			<div class="description short">
 				<p>Redirects the request to another action and / or controller.</p>
@@ -1360,7 +1360,7 @@ if used with other request types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_redirectToUri">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#303-322" title="Go to source code">redirectToUri</a>( <span>mixed <var>$uri</var></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#314-333" title="Go to source code">redirectToUri</a>( <span>mixed <var>$uri</var></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span> )</code>
 
 			<div class="description short">
 				<p>Redirects to another URI</p>
@@ -1406,7 +1406,7 @@ if used with other request types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_throwStatus">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#324-344" title="Go to source code">throwStatus</a>( <span>integer <var>$statusCode</var></span>, <span>string <var>$statusMessage</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#335-355" title="Go to source code">throwStatus</a>( <span>integer <var>$statusCode</var></span>, <span>string <var>$statusMessage</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sends the specified HTTP status immediately.</p>
@@ -1454,7 +1454,7 @@ if used with other request types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mapRequestArgumentsToControllerArguments">#</a>
-			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#346-363" title="Go to source code">mapRequestArgumentsToControllerArguments</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#357-374" title="Go to source code">mapRequestArgumentsToControllerArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Maps arguments delivered by the request object to the local controller arguments.</p>
@@ -1508,7 +1508,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#27-30" title="Go to source code"><var>$uriBuilder</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#38-41" title="Go to source code"><var>$uriBuilder</var></a>
 
 				<div class="description short">
 					
@@ -1533,7 +1533,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#32-36" title="Go to source code"><var>$validatorResolver</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#43-47" title="Go to source code"><var>$validatorResolver</var></a>
 
 				<div class="description short">
 					
@@ -1561,7 +1561,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#38-43" title="Go to source code"><var>$request</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#49-54" title="Go to source code"><var>$request</var></a>
 
 				<div class="description short">
 					<p>The current action request directed to this controller</p>
@@ -1589,7 +1589,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#45-50" title="Go to source code"><var>$response</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#56-61" title="Go to source code"><var>$response</var></a>
 
 				<div class="description short">
 					<p>The response which will be returned by this action controller</p>
@@ -1617,7 +1617,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#52-57" title="Go to source code"><var>$arguments</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#63-68" title="Go to source code"><var>$arguments</var></a>
 
 				<div class="description short">
 					<p>Arguments passed to the controller</p>
@@ -1645,7 +1645,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#59-62" title="Go to source code"><var>$controllerContext</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#70-73" title="Go to source code"><var>$controllerContext</var></a>
 
 				<div class="description short">
 					
@@ -1670,7 +1670,7 @@ if used with other request types.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#64-71" title="Go to source code"><var>$flashMessageContainer</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#75-82" title="Go to source code"><var>$flashMessageContainer</var></a>
 
 				<div class="description short">
 					<p>The flash messages. Use $this->flashMessageContainer->addMessage(...) to add a new Flash
@@ -1700,7 +1700,7 @@ Message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#73-77" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#84-88" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1728,7 +1728,7 @@ Message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#79-85" title="Go to source code"><var>$supportedMediaTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Mvc.Controller.AbstractController.html#90-96" title="Go to source code"><var>$supportedMediaTypes</var></a>
 
 				<div class="description short">
 					<p>A list of IANA media types which are supported by this controller</p>
@@ -1746,7 +1746,7 @@ Message.</p>
 			<td class="value">
 				<div>
 					<a href="#$supportedMediaTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'text/html'</span>)</code>
+					<code>[<span class="php-quote">'text/html'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1765,7 +1765,7 @@ Message.</p>
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

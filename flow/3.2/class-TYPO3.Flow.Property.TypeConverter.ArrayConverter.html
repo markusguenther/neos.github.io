@@ -951,8 +951,13 @@
 
 <ul>
 <li>If the source is an array, it is returned unchanged.</li>
-<li>If the source is a string, is is converted depending on CONFIGURATION_STRING_FORMAT, which can be STRING_FORMAT_CSV or STRING_FORMAT_JSON. For CSV the delimiter can be set via CONFIGURATION_STRING_DELIMITER.</li>
-<li>If the source is a Resource object, it is converted to an array. The actual resource content is either embedded as base64-encoded data or saved to a file, depending on CONFIGURATION_RESOURCE_EXPORT_TYPE. For RESOURCE_EXPORT_TYPE_FILE the setting CONFIGURATION_RESOURCE_SAVE_PATH must be set as well.</li>
+<li>If the source is a string, is is converted depending on CONFIGURATION_STRING_FORMAT,
+which can be STRING_FORMAT_CSV or STRING_FORMAT_JSON. For CSV the delimiter can be
+set via CONFIGURATION_STRING_DELIMITER.</li>
+<li>If the source is a Resource object, it is converted to an array. The actual resource
+content is either embedded as base64-encoded data or saved to a file, depending on
+CONFIGURATION_RESOURCE_EXPORT_TYPE. For RESOURCE_EXPORT_TYPE_FILE the setting
+CONFIGURATION_RESOURCE_SAVE_PATH must be set as well.</li>
 </ul>
 	</div>
 
@@ -988,9 +993,9 @@
 
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#19-232" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/ArrayConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#21-237" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/ArrayConverter.php</a>
 		<br>
 	</div>
 
@@ -1010,7 +1015,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#106-168" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#108-173" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert from $source to $targetType, a noop if the source is an array.</p>
@@ -1041,7 +1046,9 @@
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Property.Exception.TypeConverterException.html">TYPO3\Flow\Property\Exception\TypeConverterException</a></code><br>thrown in case a developer error occurred
+						<code><a href="class-TYPO3.Flow.Property.Exception.InvalidPropertyMappingConfigurationException.html">TYPO3\Flow\Property\Exception\InvalidPropertyMappingConfigurationException</a></code><br>
+						<code><a href="class-TYPO3.Flow.Property.Exception.InvalidSourceException.html">TYPO3\Flow\Property\Exception\InvalidSourceException</a></code><br>
+						<code><a href="class-TYPO3.Flow.Property.Exception.TypeConverterException.html">TYPO3\Flow\Property\Exception\TypeConverterException</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -1063,7 +1070,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStringDelimiter">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#170-189" title="Go to source code">getStringDelimiter</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#175-194" title="Go to source code">getStringDelimiter</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1105,7 +1112,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStringFormat">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#191-210" title="Go to source code">getStringFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#196-215" title="Go to source code">getStringFormat</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1147,7 +1154,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResourceExportType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#212-231" title="Go to source code">getResourceExportType</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#217-236" title="Go to source code">getResourceExportType</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1208,7 +1215,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#36-39" title="Go to source code"><b>CONFIGURATION_STRING_DELIMITER</b></a>
+						<a href="source-constant-CONFIGURATION_STRING_DELIMITER.html#38-41" title="Go to source code"><b>CONFIGURATION_STRING_DELIMITER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1232,7 +1239,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#41-44" title="Go to source code"><b>DEFAULT_STRING_DELIMITER</b></a>
+						<a href="source-constant-DEFAULT_STRING_DELIMITER.html#43-46" title="Go to source code"><b>DEFAULT_STRING_DELIMITER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1256,7 +1263,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#46-49" title="Go to source code"><b>CONFIGURATION_STRING_FORMAT</b></a>
+						<a href="source-constant-CONFIGURATION_STRING_FORMAT.html#48-51" title="Go to source code"><b>CONFIGURATION_STRING_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1280,7 +1287,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#51-54" title="Go to source code"><b>DEFAULT_STRING_FORMAT</b></a>
+						<a href="source-constant-DEFAULT_STRING_FORMAT.html#53-56" title="Go to source code"><b>DEFAULT_STRING_FORMAT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1304,7 +1311,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#56-59" title="Go to source code"><b>STRING_FORMAT_CSV</b></a>
+						<a href="source-constant-STRING_FORMAT_CSV.html#58-61" title="Go to source code"><b>STRING_FORMAT_CSV</b></a>
 					</code>
 
 					<div class="description short">
@@ -1328,7 +1335,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#61-64" title="Go to source code"><b>STRING_FORMAT_JSON</b></a>
+						<a href="source-constant-STRING_FORMAT_JSON.html#63-66" title="Go to source code"><b>STRING_FORMAT_JSON</b></a>
 					</code>
 
 					<div class="description short">
@@ -1352,7 +1359,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#66-69" title="Go to source code"><b>CONFIGURATION_RESOURCE_EXPORT_TYPE</b></a>
+						<a href="source-constant-CONFIGURATION_RESOURCE_EXPORT_TYPE.html#68-71" title="Go to source code"><b>CONFIGURATION_RESOURCE_EXPORT_TYPE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1376,7 +1383,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#71-74" title="Go to source code"><b>DEFAULT_RESOURCE_EXPORT_TYPE</b></a>
+						<a href="source-constant-DEFAULT_RESOURCE_EXPORT_TYPE.html#73-76" title="Go to source code"><b>DEFAULT_RESOURCE_EXPORT_TYPE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1400,7 +1407,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#76-79" title="Go to source code"><b>RESOURCE_EXPORT_TYPE_BASE64</b></a>
+						<a href="source-constant-RESOURCE_EXPORT_TYPE_BASE64.html#78-81" title="Go to source code"><b>RESOURCE_EXPORT_TYPE_BASE64</b></a>
 					</code>
 
 					<div class="description short">
@@ -1424,7 +1431,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#81-84" title="Go to source code"><b>RESOURCE_EXPORT_TYPE_FILE</b></a>
+						<a href="source-constant-RESOURCE_EXPORT_TYPE_FILE.html#83-86" title="Go to source code"><b>RESOURCE_EXPORT_TYPE_FILE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1448,7 +1455,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#86-89" title="Go to source code"><b>CONFIGURATION_RESOURCE_SAVE_PATH</b></a>
+						<a href="source-constant-CONFIGURATION_RESOURCE_SAVE_PATH.html#88-91" title="Go to source code"><b>CONFIGURATION_RESOURCE_SAVE_PATH</b></a>
 					</code>
 
 					<div class="description short">
@@ -1483,7 +1490,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#91-94" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#93-96" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1497,7 +1504,7 @@
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'array'</span>, <span class="php-quote">'string'</span>, \TYPO3\Flow\Resource\Resource::<span class="php-keyword1">class</span>)</code>
+					<code>[<span class="php-quote">'array'</span>, <span class="php-quote">'string'</span>, FlowResource::<span class="php-keyword1">class</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1508,7 +1515,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#96-99" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#98-101" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1533,7 +1540,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#101-104" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.ArrayConverter.html#103-106" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1566,7 +1573,7 @@
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

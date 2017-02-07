@@ -963,7 +963,7 @@
 
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Eel.Helper.StringHelper.html#20-558" title="Go to source code">TYPO3.Eel/Classes/TYPO3/Eel/Helper/StringHelper.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Eel.Helper.StringHelper.html#20-577" title="Go to source code">TYPO3.Eel/Classes/TYPO3/Eel/Helper/StringHelper.php</a>
 		<br>
 	</div>
 
@@ -994,8 +994,12 @@
 
 <p>This implementation follows the JavaScript specification for "substr".</p>
 
-<p>Examples::
- String.substr('Hello, World!', 7, 5) == 'World' String.substr('Hello, World!', 7) == 'World!' String.substr('Hello, World!', -6) == 'World!'</p>
+<p>Examples::</p>
+
+<pre><code>String.substr('Hello, World!', 7, 5) == 'World'
+String.substr('Hello, World!', 7) == 'World!'
+String.substr('Hello, World!', -6) == 'World!'
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1041,8 +1045,11 @@
 
 <p>This implementation follows the JavaScript specification for "substring".</p>
 
-<p>Examples::
- String.substring('Hello, World!', 7, 12) == 'World' String.substring('Hello, World!', 7) == 'World!'</p>
+<p>Examples::</p>
+
+<pre><code>String.substring('Hello, World!', 7, 12) == 'World'
+String.substring('Hello, World!', 7) == 'World!'
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1086,8 +1093,10 @@
 			<div class="description detailed hidden">
 				<p>Get the character at a specific position</p>
 
-<p>Example::
- String.charAt("abcdefg", 5) == "f"</p>
+<p>Example::</p>
+
+<pre><code>String.charAt("abcdefg", 5) == "f"
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1129,8 +1138,10 @@
 			<div class="description detailed hidden">
 				<p>Test if a string ends with the given search string</p>
 
-<p>Example::
- String.endsWith('Hello, World!', 'World!') == true</p>
+<p>Example::</p>
+
+<pre><code>String.endsWith('Hello, World!', 'World!') == true
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1174,8 +1185,10 @@
 			<div class="description detailed hidden">
 				<p>Find the first position of a substring in the given string</p>
 
-<p>Example::
- String.indexOf("Blue Whale", "Blue") == 0</p>
+<p>Example::</p>
+
+<pre><code>String.indexOf("Blue Whale", "Blue") == 0
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1219,8 +1232,10 @@
 			<div class="description detailed hidden">
 				<p>Find the last position of a substring in the given string</p>
 
-<p>Example::
- String.lastIndexOf("Developers Developers Developers!", "Developers") == 22</p>
+<p>Example::</p>
+
+<pre><code>String.lastIndexOf("Developers Developers Developers!", "Developers") == 22
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1299,7 +1314,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pregMatch">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#189-207" title="Go to source code">pregMatch</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#189-212" title="Go to source code">pregMatch</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span> )</code>
 
 			<div class="description short">
 				<p>Match a string with a regular expression (PREG style)</p>
@@ -1308,13 +1323,19 @@
 			<div class="description detailed hidden">
 				<p>Match a string with a regular expression (PREG style)</p>
 
+<p>Example::</p>
+
+<pre><code>String.pregMatch("For more information, see Chapter 3.4.5.1", "/(chapter \d+(\.\d)*)/i")
+  == ['Chapter 3.4.5.1', 'Chapter 3.4.5.1', '.1']
+</code></pre>
+
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$string</var></dt>
-						<dd></dd>
+						<dd>The input string</dd>
 						<dt><var>$pattern</var></dt>
-						<dd></dd>
+						<dd>A PREG pattern</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1343,7 +1364,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pregReplace">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#209-220" title="Go to source code">pregReplace</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$replace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#214-230" title="Go to source code">pregReplace</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$replace</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace occurrences of a search string inside the string using regular expression matching (PREG style)</p>
@@ -1352,15 +1373,21 @@
 			<div class="description detailed hidden">
 				<p>Replace occurrences of a search string inside the string using regular expression matching (PREG style)</p>
 
+<p>Examples::</p>
+
+<pre><code>String.pregReplace("Some.String with sp:cial characters", "/[[:^alnum:]]/", "-") == "Some-String-with-sp-cial-characters"
+String.pregReplace("2016-08-31", "/([0-9]+)-([0-9]+)-([0-9]+)/", "$3.$2.$1") == "31.08.2016"
+</code></pre>
+
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$string</var></dt>
-						<dd></dd>
+						<dd>The input string</dd>
 						<dt><var>$pattern</var></dt>
-						<dd></dd>
+						<dd>A PREG pattern</dd>
 						<dt><var>$replace</var></dt>
-						<dd></dd>
+						<dd>A replacement string, can contain references to capture groups with "&#92;n" or "$n"</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1385,7 +1412,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replace">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#222-235" title="Go to source code">replace</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#232-249" title="Go to source code">replace</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace occurrences of a search string inside the string</p>
@@ -1394,17 +1421,22 @@
 			<div class="description detailed hidden">
 				<p>Replace occurrences of a search string inside the string</p>
 
+<p>Example::</p>
+
+<pre><code>String.replace("canal", "ana", "oo") == "cool"
+</code></pre>
+
 <p>Note: this method does not perform regular expression matching, @see pregReplace().</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$string</var></dt>
-						<dd></dd>
+						<dd>The input string</dd>
 						<dt><var>$search</var></dt>
-						<dd></dd>
+						<dd>A search string</dd>
 						<dt><var>$replace</var></dt>
-						<dd></dd>
+						<dd>A replacement string</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1429,7 +1461,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_split">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#237-265" title="Go to source code">split</a>( <span>string <var>$string</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#251-284" title="Go to source code">split</a>( <span>string <var>$string</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Split a string by a separator</p>
@@ -1437,6 +1469,12 @@
 
 			<div class="description detailed hidden">
 				<p>Split a string by a separator</p>
+
+<p>Example::</p>
+
+<pre><code>String.split("My hovercraft is full of eels", " ") == ['My', 'hovercraft', 'is', 'full', 'of', 'eels']
+String.split("Foo", "", 2) == ['F', 'o']
+</code></pre>
 
 <p>Node: This implementation follows JavaScript semantics without support of regular expressions.</p>
 
@@ -1448,7 +1486,7 @@
 						<dt><var>$separator</var></dt>
 						<dd>The separator where the string should be splitted</dd>
 						<dt><var>$limit</var></dt>
-						<dd>The maximum amount of items to split</dd>
+						<dd>The maximum amount of items to split (exceeding items will be discarded)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1473,7 +1511,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_startsWith">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#267-285" title="Go to source code">startsWith</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#286-304" title="Go to source code">startsWith</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Test if a string starts with the given search string</p>
@@ -1482,8 +1520,12 @@
 			<div class="description detailed hidden">
 				<p>Test if a string starts with the given search string</p>
 
-<p>Examples::
- String.startsWith('Hello world!', 'Hello') == true String.startsWith('My hovercraft is full of...', 'Hello') == false String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true</p>
+<p>Examples::</p>
+
+<pre><code>String.startsWith('Hello world!', 'Hello') == true
+String.startsWith('My hovercraft is full of...', 'Hello') == false
+String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1518,7 +1560,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toLowerCase">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#287-296" title="Go to source code">toLowerCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#306-315" title="Go to source code">toLowerCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Lowercase a string</p>
@@ -1556,7 +1598,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toUpperCase">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#298-307" title="Go to source code">toUpperCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#317-326" title="Go to source code">toUpperCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Uppercase a string</p>
@@ -1594,7 +1636,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_firstLetterToUpperCase">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#309-322" title="Go to source code">firstLetterToUpperCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#328-341" title="Go to source code">firstLetterToUpperCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Uppercase the first letter of a string</p>
@@ -1603,8 +1645,10 @@
 			<div class="description detailed hidden">
 				<p>Uppercase the first letter of a string</p>
 
-<p>Example::
- String.firstLetterToUpperCase('hello world') == 'Hello world'</p>
+<p>Example::</p>
+
+<pre><code>String.firstLetterToUpperCase('hello world') == 'Hello world'
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1635,7 +1679,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_firstLetterToLowerCase">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#324-337" title="Go to source code">firstLetterToLowerCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#343-356" title="Go to source code">firstLetterToLowerCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Lowercase the first letter of a string</p>
@@ -1644,8 +1688,10 @@
 			<div class="description detailed hidden">
 				<p>Lowercase the first letter of a string</p>
 
-<p>Example::
- String.firstLetterToLowerCase('CamelCase') == 'camelCase'</p>
+<p>Example::</p>
+
+<pre><code>String.firstLetterToLowerCase('CamelCase') == 'camelCase'
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1676,7 +1722,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_stripTags">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#339-354" title="Go to source code">stripTags</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#358-373" title="Go to source code">stripTags</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Strip all HTML tags from the given string</p>
@@ -1685,8 +1731,10 @@
 			<div class="description detailed hidden">
 				<p>Strip all HTML tags from the given string</p>
 
-<p>Example::
- String.stripTags('<a href="#">Some link</a>') == 'Some link'</p>
+<p>Example::</p>
+
+<pre><code>String.stripTags('&lt;a href="#"&gt;Some link&lt;/a&gt;') == 'Some link'
+</code></pre>
 
 <p>This is a wrapper for the strip_tags() PHP function.</p>
 
@@ -1719,7 +1767,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isBlank">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#356-370" title="Go to source code">isBlank</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#375-389" title="Go to source code">isBlank</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Test if the given string is blank (empty or consists of whitespace only)</p>
@@ -1728,8 +1776,11 @@
 			<div class="description detailed hidden">
 				<p>Test if the given string is blank (empty or consists of whitespace only)</p>
 
-<p>Examples::
- String.isBlank('') == true String.isBlank('  ') == true</p>
+<p>Examples::</p>
+
+<pre><code>String.isBlank('') == true
+String.isBlank('  ') == true
+</code></pre>
 
 
 					<h4>Parameters</h4>
@@ -1760,7 +1811,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_trim">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#372-386" title="Go to source code">trim</a>( <span>string <var>$string</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#391-405" title="Go to source code">trim</a>( <span>string <var>$string</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Trim whitespace at the beginning and end of a string</p>
@@ -1800,7 +1851,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toString">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#388-397" title="Go to source code">toString</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#407-416" title="Go to source code">toString</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert the given value to a string</p>
@@ -1838,7 +1889,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toInteger">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#399-408" title="Go to source code">toInteger</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#418-427" title="Go to source code">toInteger</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a string to integer</p>
@@ -1876,7 +1927,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toFloat">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#410-419" title="Go to source code">toFloat</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#429-438" title="Go to source code">toFloat</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a string to float</p>
@@ -1914,7 +1965,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toBoolean">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#421-432" title="Go to source code">toBoolean</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#440-451" title="Go to source code">toBoolean</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a string to boolean</p>
@@ -1954,7 +2005,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rawUrlEncode">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#434-443" title="Go to source code">rawUrlEncode</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#453-462" title="Go to source code">rawUrlEncode</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Encode the string for URLs according to RFC 3986</p>
@@ -1992,7 +2043,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rawUrlDecode">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#445-454" title="Go to source code">rawUrlDecode</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#464-473" title="Go to source code">rawUrlDecode</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Decode the string from URLs according to RFC 3986</p>
@@ -2030,7 +2081,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_htmlSpecialChars">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#456-466" title="Go to source code">htmlSpecialChars</a>( <span>string <var>$string</var></span>, <span>boolean <var>$preserveEntities</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#475-485" title="Go to source code">htmlSpecialChars</a>( <span>string <var>$string</var></span>, <span>boolean <var>$preserveEntities</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert special characters to HTML entities</p>
@@ -2070,7 +2121,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_crop">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#468-484" title="Go to source code">crop</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#487-503" title="Go to source code">crop</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Crop a string to <code>maximumCharacters</code> length, optionally appending <code>suffix</code> if cropping was necessary.</p>
@@ -2112,7 +2163,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cropAtWord">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#486-504" title="Go to source code">cropAtWord</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#505-523" title="Go to source code">cropAtWord</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Crop a string to <code>maximumCharacters</code> length, taking words into account,
@@ -2156,7 +2207,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cropAtSentence">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#506-524" title="Go to source code">cropAtSentence</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#525-543" title="Go to source code">cropAtSentence</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Crop a string to <code>maximumCharacters</code> length, taking sentences into account,
@@ -2200,7 +2251,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_md5">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#526-535" title="Go to source code">md5</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#545-554" title="Go to source code">md5</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Calculate the MD5 checksum of the given string</p>
@@ -2238,7 +2289,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_length">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#537-546" title="Go to source code">length</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#556-565" title="Go to source code">length</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the length of a string</p>
@@ -2276,7 +2327,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsCallOfMethod">#</a>
-			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#548-557" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.Helper.StringHelper.html#567-576" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
 
 			<div class="description short">
 				<p>All methods are considered safe</p>
@@ -2325,7 +2376,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

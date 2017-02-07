@@ -972,9 +972,9 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Command.html">Command</a><br>
 		
 
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#28-349" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Command/SecurityCommandController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#29-350" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Command/SecurityCommandController.php</a>
 		<br>
 	</div>
 
@@ -994,7 +994,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectCacheManager">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#64-73" title="Go to source code">injectCacheManager</a>( <span><code><a href="class-TYPO3.Flow.Cache.CacheManager.html">TYPO3\Flow\Cache\CacheManager</a></code> <var>$cacheManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#65-74" title="Go to source code">injectCacheManager</a>( <span><code><a href="class-TYPO3.Flow.Cache.CacheManager.html">TYPO3\Flow\Cache\CacheManager</a></code> <var>$cacheManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the Cache Manager because we cannot inject an automatically factored cache during compile time.</p>
@@ -1028,7 +1028,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importPublicKeyCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#75-97" title="Go to source code">importPublicKeyCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#76-98" title="Go to source code">importPublicKeyCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Import a public key</p>
@@ -1064,7 +1064,7 @@ RSAWalletService.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateKeyPairCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#99-111" title="Go to source code">generateKeyPairCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#100-112" title="Go to source code">generateKeyPairCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Generate a public/private key pair and add it to the RSAWalletService</p>
@@ -1102,7 +1102,7 @@ RSAWalletService.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importPrivateKeyCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#113-152" title="Go to source code">importPrivateKeyCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#114-153" title="Go to source code">importPrivateKeyCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Import a private key</p>
@@ -1115,14 +1115,19 @@ RSAWalletService.</p>
 RSAWalletService. The public key will be automatically extracted and stored
 together with the private key as a key pair.</p>
 
-<p>You can generate the same fingerprint returned from this using these commands:
- ssh-keygen -yf my-key.pem > my-key.pub ssh-keygen -lf my-key.pub</p>
+<p>You can generate the same fingerprint returned from this using these commands:</p>
 
-<p>To create a private key to import using this method, you can use:
- ssh-keygen -t rsa -f my-key ./flow security:importprivatekey &lt; my-key</p>
-
-<p>Again, the fingerprint can also be generated using:
+<p>ssh-keygen -yf my-key.pem > my-key.pub
  ssh-keygen -lf my-key.pub</p>
+
+<p>To create a private key to import using this method, you can use:</p>
+
+<p>ssh-keygen -t rsa -f my-key
+ ./flow security:importprivatekey &lt; my-key</p>
+
+<p>Again, the fingerprint can also be generated using:</p>
+
+<p>ssh-keygen -lf my-key.pub</p>
 
 
 					<h4>Parameters</h4>
@@ -1154,7 +1159,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showEffectivePolicyCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#154-245" title="Go to source code">showEffectivePolicyCommand</a>( <span>string <var>$privilegeType</var></span>, <span>string <var>$roles</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#155-246" title="Go to source code">showEffectivePolicyCommand</a>( <span>string <var>$privilegeType</var></span>, <span>string <var>$roles</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Shows a list of all defined privilege targets and the effective permissions</p>
@@ -1190,7 +1195,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showUnprotectedActionsCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#247-291" title="Go to source code">showUnprotectedActionsCommand</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#248-292" title="Go to source code">showUnprotectedActionsCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Lists all public controller actions not covered by the active security policy</p>
@@ -1219,7 +1224,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showMethodsForPrivilegeTargetCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#293-348" title="Go to source code">showMethodsForPrivilegeTargetCommand</a>( <span>string <var>$privilegeTarget</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#294-349" title="Go to source code">showMethodsForPrivilegeTargetCommand</a>( <span>string <var>$privilegeTarget</var></span> )</code>
 
 			<div class="description short">
 				<p>Shows the methods represented by the given security privilege target</p>
@@ -1289,7 +1294,7 @@ But be aware that this only works for parameters that have been specified in the
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#35-39" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#36-40" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1317,7 +1322,7 @@ But be aware that this only works for parameters that have been specified in the
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#41-45" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#42-46" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1345,7 +1350,7 @@ But be aware that this only works for parameters that have been specified in the
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#47-51" title="Go to source code"><var>$rsaWalletService</var></a>
+					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#48-52" title="Go to source code"><var>$rsaWalletService</var></a>
 
 				<div class="description short">
 					
@@ -1373,7 +1378,7 @@ But be aware that this only works for parameters that have been specified in the
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#53-57" title="Go to source code"><var>$policyService</var></a>
+					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#54-58" title="Go to source code"><var>$policyService</var></a>
 
 				<div class="description short">
 					
@@ -1401,7 +1406,7 @@ But be aware that this only works for parameters that have been specified in the
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#59-62" title="Go to source code"><var>$methodPermissionCache</var></a>
+					<a href="source-class-TYPO3.Flow.Command.SecurityCommandController.html#60-63" title="Go to source code"><var>$methodPermissionCache</var></a>
 
 				<div class="description short">
 					
@@ -1445,7 +1450,7 @@ But be aware that this only works for parameters that have been specified in the
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

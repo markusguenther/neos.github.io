@@ -961,7 +961,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Utility.html">Utility</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Files.html#16-478" title="Go to source code">Neos.Utility.Files/Classes/TYPO3/Flow/Utility/Files.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Utility.Files.html#16-483" title="Go to source code">Neos.Utility.Files/Classes/TYPO3/Flow/Utility/Files.php</a>
 		<br>
 	</div>
 
@@ -1596,7 +1596,7 @@ constant.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unlink">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#383-411" title="Go to source code">unlink</a>( <span>string <var>$pathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#383-416" title="Go to source code">unlink</a>( <span>string <var>$pathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>A version of unlink() that works on Windows regardless on the symlink type (file/directory).</p>
@@ -1605,9 +1605,10 @@ constant.</p>
 			<div class="description detailed hidden">
 				<p>A version of unlink() that works on Windows regardless on the symlink type (file/directory).</p>
 
-<p>If this method could not unlink the specified file, it will clear the stat cache for its filename and check if
-the file still exist. If it does not exist, this method assumes that the file has been deleted by another process
-and will return TRUE. If the file still exists though, this method will return FALSE.</p>
+<p>If this method could not unlink the specified file or it doesn't exist anymore (e.g. because of a concurrent
+deletion), it will clear the stat cache for its filename and check if the file still exist. If it does not exist,
+this method assumes that the file has been deleted by another process and will return TRUE. If the file still
+exists though, this method will return FALSE.</p>
 
 
 					<h4>Parameters</h4>
@@ -1641,7 +1642,7 @@ and will return TRUE. If the file still exists though, this method will return F
 
 			<td class="name"><div>
 			<a class="anchor" href="#_bytesToSizeString">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#420-449" title="Go to source code">bytesToSizeString</a>( <span>float|integer <var>$bytes</var></span>, <span>integer <var>$decimals</var> = <span class="php-num">0</span></span>, <span>string <var>$decimalSeparator</var> = <span class="php-quote">'.'</span></span>, <span>string <var>$thousandsSeparator</var> = <span class="php-quote">','</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#425-454" title="Go to source code">bytesToSizeString</a>( <span>float|integer <var>$bytes</var></span>, <span>integer <var>$decimals</var> = <span class="php-num">0</span></span>, <span>string <var>$decimalSeparator</var> = <span class="php-quote">'.'</span></span>, <span>string <var>$thousandsSeparator</var> = <span class="php-quote">','</span></span> )</code>
 
 			<div class="description short">
 				<p>Converts an integer with a byte count into human-readable form</p>
@@ -1685,7 +1686,7 @@ and will return TRUE. If the file still exists though, this method will return F
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sizeStringToBytes">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#451-477" title="Go to source code">sizeStringToBytes</a>( <span>string <var>$sizeString</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#456-482" title="Go to source code">sizeStringToBytes</a>( <span>string <var>$sizeString</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts a size string (e.g. "1024.0 MB") to the number of bytes it represents</p>
@@ -1739,7 +1740,7 @@ and will return TRUE. If the file still exists though, this method will return F
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Utility.Files.html#413-418" title="Go to source code"><var>$sizeUnits</var></a>
+					<a href="source-class-TYPO3.Flow.Utility.Files.html#418-423" title="Go to source code"><var>$sizeUnits</var></a>
 
 				<div class="description short">
 					<p>Supported file size units for the byte conversion functions below</p>
@@ -1753,7 +1754,7 @@ and will return TRUE. If the file still exists though, this method will return F
 			<td class="value">
 				<div>
 					<a href="#$sizeUnits" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'B'</span>, <span class="php-quote">'KB'</span>, <span class="php-quote">'MB'</span>, <span class="php-quote">'GB'</span>, <span class="php-quote">'TB'</span>, <span class="php-quote">'PB'</span>, <span class="php-quote">'EB'</span>, <span class="php-quote">'ZB'</span>, <span class="php-quote">'YB'</span>)</code>
+					<code>[<span class="php-quote">'B'</span>, <span class="php-quote">'KB'</span>, <span class="php-quote">'MB'</span>, <span class="php-quote">'GB'</span>, <span class="php-quote">'TB'</span>, <span class="php-quote">'PB'</span>, <span class="php-quote">'EB'</span>, <span class="php-quote">'ZB'</span>, <span class="php-quote">'YB'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1772,7 +1773,7 @@ and will return TRUE. If the file still exists though, this method will return F
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

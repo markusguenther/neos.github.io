@@ -933,8 +933,8 @@
 
 
 	<div class="description">
-	<p>A generic stream wrapper sitting between PHP and stream wrappers implementing
-\TYPO3\Flow\Resource\Streams\StreamWrapperInterface.</p>
+	<p>A generic stream wrapper sitting between PHP and stream wrappers
+implementing StreamWrapperInterface.</p>
 
 <p>The resource manager will register configured stream wrappers with this class,
 enabling the use of Flow goodies like DI in those stream wrappers.</p>
@@ -1574,7 +1574,11 @@ underlying storage, you should do so now.</p>
 (when flags contains LOCK_EX), stream_set_blocking() and when closing the
 stream (LOCK_UN).</p>
 
-<p>$operation is one of the following: LOCK_SH to acquire a shared lock (reader). LOCK_EX to acquire an exclusive lock (writer). LOCK_UN to release a lock (shared or exclusive). LOCK_NB if you don't want flock() to block while locking.</p>
+<p>$operation is one of the following:
+ LOCK_SH to acquire a shared lock (reader).
+ LOCK_EX to acquire an exclusive lock (writer).
+ LOCK_UN to release a lock (shared or exclusive).
+ LOCK_NB if you don't want flock() to block while locking.</p>
 
 
 					<h4>Parameters</h4>
@@ -1617,7 +1621,13 @@ stream (LOCK_UN).</p>
 <p>This method is called immediately after the wrapper is initialized (f.e.
 by fopen() and file_get_contents()).</p>
 
-<p>$options can hold one of the following values OR'd together: STREAM_USE_PATH If path is relative, search for the resource using the include_path. STREAM_REPORT_ERRORS If this flag is set, you are responsible for raising errors using trigger_error() during opening of the stream. If this flag is not set, you should not raise any errors.</p>
+<p>$options can hold one of the following values OR'd together:
+ STREAM_USE_PATH
+   If path is relative, search for the resource using the include_path.
+ STREAM_REPORT_ERRORS
+   If this flag is set, you are responsible for raising errors using
+   trigger_error() during opening of the stream. If this flag is not set,
+   you should not raise any errors.</p>
 
 
 					<h4>Parameters</h4>
@@ -1711,7 +1721,10 @@ number of bytes that were successfully read).</p>
 <p>The read/write position of the stream should be updated according to the
 offset and whence .</p>
 
-<p>$whence can one of: SEEK_SET - Set position equal to offset bytes. SEEK_CUR - Set position to current location plus offset. SEEK_END - Set position to end-of-file plus offset.</p>
+<p>$whence can one of:
+ SEEK_SET - Set position equal to offset bytes.
+ SEEK_CUR - Set position to current location plus offset.
+ SEEK_END - Set position to end-of-file plus offset.</p>
 
 
 					<h4>Parameters</h4>
@@ -1755,11 +1768,20 @@ offset and whence .</p>
 
 <p>This method is called to set options on the stream.</p>
 
-<p>$option can be one of: STREAM_OPTION_BLOCKING (The method was called in response to stream_set_blocking()) STREAM_OPTION_READ_TIMEOUT (The method was called in response to stream_set_timeout()) STREAM_OPTION_WRITE_BUFFER (The method was called in response to stream_set_write_buffer())</p>
+<p>$option can be one of:
+ STREAM_OPTION_BLOCKING (The method was called in response to stream_set_blocking())
+ STREAM_OPTION_READ_TIMEOUT (The method was called in response to stream_set_timeout())
+ STREAM_OPTION_WRITE_BUFFER (The method was called in response to stream_set_write_buffer())</p>
 
-<p>If $option is ... then $arg1 is set to: STREAM_OPTION_BLOCKING: requested blocking mode (1 meaning block 0 not blocking). STREAM_OPTION_READ_TIMEOUT: the timeout in seconds. STREAM_OPTION_WRITE_BUFFER: buffer mode (STREAM_BUFFER_NONE or STREAM_BUFFER_FULL).</p>
+<p>If $option is ... then $arg1 is set to:
+ STREAM_OPTION_BLOCKING: requested blocking mode (1 meaning block 0 not blocking).
+ STREAM_OPTION_READ_TIMEOUT: the timeout in seconds.
+ STREAM_OPTION_WRITE_BUFFER: buffer mode (STREAM_BUFFER_NONE or STREAM_BUFFER_FULL).</p>
 
-<p>If $option is ... then $arg2 is set to: STREAM_OPTION_BLOCKING: This option is not set. STREAM_OPTION_READ_TIMEOUT: the timeout in microseconds. STREAM_OPTION_WRITE_BUFFER: the requested buffer size.</p>
+<p>If $option is ... then $arg2 is set to:
+ STREAM_OPTION_BLOCKING: This option is not set.
+ STREAM_OPTION_READ_TIMEOUT: the timeout in microseconds.
+ STREAM_OPTION_WRITE_BUFFER: the requested buffer size.</p>
 
 
 					<h4>Parameters</h4>
@@ -1965,7 +1987,17 @@ files.</p>
 
 <p>This method is called in response to all stat() related functions.</p>
 
-<p>$flags can hold one or more of the following values OR'd together: STREAM_URL_STAT_LINK For resources with the ability to link to other resource (such as an HTTP Location: forward, or a filesystem symlink). This flag specified that only information about the link itself should be returned, not the resource pointed to by the link. This flag is set in response to calls to lstat(), is_link(), or filetype(). STREAM_URL_STAT_QUIET If this flag is set, your wrapper should not raise any errors. If this flag is not set, you are responsible for reporting errors using the trigger_error() function during stating of the path.</p>
+<p>$flags can hold one or more of the following values OR'd together:
+ STREAM_URL_STAT_LINK
+    For resources with the ability to link to other resource (such as an
+    HTTP Location: forward, or a filesystem symlink). This flag specified
+    that only information about the link itself should be returned, not
+    the resource pointed to by the link. This flag is set in response to
+    calls to lstat(), is_link(), or filetype().
+ STREAM_URL_STAT_QUIET
+    If this flag is set, your wrapper should not raise any errors. If
+    this flag is not set, you are responsible for reporting errors using
+    the trigger_error() function during stating of the path.</p>
 
 
 					<h4>Parameters</h4>
@@ -2065,7 +2097,7 @@ files.</p>
 			<td class="value">
 				<div>
 					<a href="#$registeredStreamWrappers" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -2134,7 +2166,7 @@ files.</p>
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

@@ -963,9 +963,9 @@ to authenticate the tokens stored in the security context.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a>\<a href="namespace-TYPO3.Flow.Security.Authentication.html">Authentication</a><br>
 		
 
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#24-359" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Authentication/AuthenticationProviderManager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#25-356" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Authentication/AuthenticationProviderManager.php</a>
 		<br>
 	</div>
 
@@ -985,7 +985,7 @@ to authenticate the tokens stored in the security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#84-92" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.AuthenticationProviderResolver.html">TYPO3\Flow\Security\Authentication\AuthenticationProviderResolver</a></code> <var>$providerResolver</var></span>, <span><code><a href="class-TYPO3.Flow.Security.RequestPatternResolver.html">TYPO3\Flow\Security\RequestPatternResolver</a></code> <var>$requestPatternResolver</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#81-89" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.AuthenticationProviderResolver.html">TYPO3\Flow\Security\Authentication\AuthenticationProviderResolver</a></code> <var>$providerResolver</var></span>, <span><code><a href="class-TYPO3.Flow.Security.RequestPatternResolver.html">TYPO3\Flow\Security\RequestPatternResolver</a></code> <var>$requestPatternResolver</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1021,7 +1021,7 @@ to authenticate the tokens stored in the security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#94-107" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#91-104" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Inject the settings and does a fresh build of tokens based on the injected settings</p>
@@ -1055,7 +1055,7 @@ to authenticate the tokens stored in the security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setSecurityContext">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#109-118" title="Go to source code">setSecurityContext</a>( <span><code><a href="class-TYPO3.Flow.Security.Context.html">TYPO3\Flow\Security\Context</a></code> <var>$securityContext</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#106-115" title="Go to source code">setSecurityContext</a>( <span><code><a href="class-TYPO3.Flow.Security.Context.html">TYPO3\Flow\Security\Context</a></code> <var>$securityContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the security context</p>
@@ -1091,7 +1091,7 @@ to authenticate the tokens stored in the security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSecurityContext">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#120-128" title="Go to source code">getSecurityContext</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#117-125" title="Go to source code">getSecurityContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the security context</p>
@@ -1119,14 +1119,14 @@ to authenticate the tokens stored in the security context.</p>
 
 			<td class="attributes"><code>
 				 public 
-				array
+				array&lt;TokenInterface&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#130-139" title="Go to source code">getTokens</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#127-136" title="Go to source code">getTokens</a>( )</code>
 
 			<div class="description short">
 				<p>Returns clean tokens this manager is responsible for.
@@ -1141,7 +1141,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Array of \TYPO3\Flow\Security\Authentication\TokenInterface An array of tokens this manager is responsible for
+						array&lt;TokenInterface&gt;<br>An array of tokens this manager is responsible for
 					</div>
 
 
@@ -1163,7 +1163,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_authenticate">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#141-210" title="Go to source code">authenticate</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#138-207" title="Go to source code">authenticate</a>( )</code>
 
 			<div class="description short">
 				<p>Tries to authenticate the tokens in the security context (in the given order)
@@ -1209,7 +1209,7 @@ authentication will stop after the first authenticated token. The strategy
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAuthenticated">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#212-228" title="Go to source code">isAuthenticated</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#209-225" title="Go to source code">isAuthenticated</a>( )</code>
 
 			<div class="description short">
 				<p>Checks if one or all tokens are authenticated (depending on the authentication strategy).</p>
@@ -1246,7 +1246,7 @@ authentication will stop after the first authenticated token. The strategy
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logout">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#230-250" title="Go to source code">logout</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#227-247" title="Go to source code">logout</a>( )</code>
 
 			<div class="description short">
 				<p>Logout all active authentication tokens</p>
@@ -1277,7 +1277,7 @@ authentication will stop after the first authenticated token. The strategy
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAuthenticatedToken">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#252-261" title="Go to source code">emitAuthenticatedToken</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.TokenInterface.html">TYPO3\Flow\Security\Authentication\TokenInterface</a></code> <var>$token</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#249-258" title="Go to source code">emitAuthenticatedToken</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.TokenInterface.html">TYPO3\Flow\Security\Authentication\TokenInterface</a></code> <var>$token</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that the specified token has been successfully authenticated.</p>
@@ -1314,7 +1314,7 @@ authentication will stop after the first authenticated token. The strategy
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitLoggedOut">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#263-272" title="Go to source code">emitLoggedOut</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#260-269" title="Go to source code">emitLoggedOut</a>( )</code>
 
 			<div class="description short">
 				<p>Signals that all active authentication tokens have been invalidated.
@@ -1348,7 +1348,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildProvidersAndTokensFromConfiguration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#274-358" title="Go to source code">buildProvidersAndTokensFromConfiguration</a>( <span>array <var>$providerConfigurations</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#271-355" title="Go to source code">buildProvidersAndTokensFromConfiguration</a>( <span>array <var>$providerConfigurations</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds the provider and token objects based on the given configuration</p>
@@ -1399,7 +1399,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#32-36" title="Go to source code"><var>$securityLogger</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#33-37" title="Go to source code"><var>$securityLogger</var></a>
 
 				<div class="description short">
 					
@@ -1427,7 +1427,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#38-42" title="Go to source code"><var>$session</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#39-43" title="Go to source code"><var>$session</var></a>
 
 				<div class="description short">
 					
@@ -1455,7 +1455,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#44-49" title="Go to source code"><var>$providerResolver</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#45-50" title="Go to source code"><var>$providerResolver</var></a>
 
 				<div class="description short">
 					<p>The provider resolver</p>
@@ -1480,7 +1480,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#51-56" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#52-57" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
 					<p>The security context of the current request</p>
@@ -1505,7 +1505,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#58-63" title="Go to source code"><var>$requestPatternResolver</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#59-64" title="Go to source code"><var>$requestPatternResolver</var></a>
 
 				<div class="description short">
 					<p>The request pattern resolver</p>
@@ -1526,50 +1526,50 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 		<tr data-order="providers" id="$providers">
 			<td class="attributes"><code>
 				protected  
-				array
+				array&lt;AuthenticationProviderInterface&gt;
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#65-70" title="Go to source code"><var>$providers</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#66-69" title="Go to source code"><var>$providers</var></a>
 
 				<div class="description short">
-					<p>Array of \TYPO3\Flow\Security\Authentication\AuthenticationProviderInterface objects</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Array of \TYPO3\Flow\Security\Authentication\AuthenticationProviderInterface objects</p>
+					
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
 					<a href="#$providers" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
 		<tr data-order="tokens" id="$tokens">
 			<td class="attributes"><code>
 				protected  
-				array
+				array&lt;TokenInterface&gt;
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#72-77" title="Go to source code"><var>$tokens</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#71-74" title="Go to source code"><var>$tokens</var></a>
 
 				<div class="description short">
-					<p>Array of \TYPO3\Flow\Security\Authentication\TokenInterface objects</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Array of \TYPO3\Flow\Security\Authentication\TokenInterface objects</p>
+					
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
 					<a href="#$tokens" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1580,7 +1580,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#79-82" title="Go to source code"><var>$isAuthenticated</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationProviderManager.html#76-79" title="Go to source code"><var>$isAuthenticated</var></a>
 
 				<div class="description short">
 					
@@ -1613,7 +1613,7 @@ Note: the session will be destroyed after this signal has been emitted.</p>
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

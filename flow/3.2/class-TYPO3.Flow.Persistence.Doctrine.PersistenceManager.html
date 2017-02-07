@@ -969,11 +969,11 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Persistence.html">Persistence</a>\<a href="namespace-TYPO3.Flow.Persistence.Doctrine.html">Doctrine</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#20-409" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/PersistenceManager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#31-421" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/PersistenceManager.php</a>
 		<br>
 	</div>
 
@@ -993,7 +993,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#52-60" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#63-71" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the persistence manager, called by Flow.</p>
@@ -1022,7 +1022,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onFlush">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#62-95" title="Go to source code">onFlush</a>( <span>Doctrine\ORM\Event\OnFlushEventArgs <var>$eventArgs</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#73-106" title="Go to source code">onFlush</a>( <span>Doctrine\ORM\Event\OnFlushEventArgs <var>$eventArgs</var></span> )</code>
 
 			<div class="description short">
 				<p>An onFlush event listener used to validate entities upon persistence.</p>
@@ -1056,7 +1056,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validateObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#97-126" title="Go to source code">validateObject</a>( <span>object <var>$object</var></span>, <span>SplObjectStorage <var>$validatedInstancesContainer</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#108-137" title="Go to source code">validateObject</a>( <span>object <var>$object</var></span>, <span>SplObjectStorage <var>$validatedInstancesContainer</var></span> )</code>
 
 			<div class="description short">
 				<p>Validates the given object and throws an exception if validation fails.</p>
@@ -1096,7 +1096,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistAll">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#128-166" title="Go to source code">persistAll</a>( <span>boolean <var>$onlyWhitelistedObjects</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#139-177" title="Go to source code">persistAll</a>( <span>boolean <var>$onlyWhitelistedObjects</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Commits new objects and changes to objects in the current persistence
@@ -1135,7 +1135,7 @@ session into the backend</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clearState">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#168-180" title="Go to source code">clearState</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#179-191" title="Go to source code">clearState</a>( )</code>
 
 			<div class="description short">
 				<p>Clears the in-memory state of the persistence.</p>
@@ -1169,7 +1169,7 @@ return data directly from the persistence "backend".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNewObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#182-192" title="Go to source code">isNewObject</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#193-203" title="Go to source code">isNewObject</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given object has ever been persisted.</p>
@@ -1210,7 +1210,7 @@ return data directly from the persistence "backend".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getIdentifierByObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#194-222" title="Go to source code">getIdentifierByObject</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#205-233" title="Go to source code">getIdentifierByObject</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the (internal) identifier for the object, if it is known to the
@@ -1257,7 +1257,7 @@ to distinguish those cases.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectByIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#224-248" title="Go to source code">getObjectByIdentifier</a>( <span>mixed <var>$identifier</var></span>, <span>string <var>$objectType</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$useLazyLoading</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#235-259" title="Go to source code">getObjectByIdentifier</a>( <span>mixed <var>$identifier</var></span>, <span>string <var>$objectType</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$useLazyLoading</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the object with the (internal) identifier, if it is known to the
@@ -1308,7 +1308,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createQueryForType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#250-259" title="Go to source code">createQueryForType</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#261-270" title="Go to source code">createQueryForType</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				<p>Return a query object for the given type.</p>
@@ -1346,7 +1346,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#261-281" title="Go to source code">add</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#272-292" title="Go to source code">add</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds an object to the persistence.</p>
@@ -1388,7 +1388,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#283-293" title="Go to source code">remove</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#294-304" title="Go to source code">remove</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes an object to the persistence.</p>
@@ -1425,7 +1425,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_update">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#295-314" title="Go to source code">update</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#306-325" title="Go to source code">update</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Update an object in the persistence.</p>
@@ -1467,7 +1467,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isConnected">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#316-326" title="Go to source code">isConnected</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#327-337" title="Go to source code">isConnected</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE, if an active connection to the persistence
@@ -1505,7 +1505,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compile">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#328-354" title="Go to source code">compile</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#339-365" title="Go to source code">compile</a>( )</code>
 
 			<div class="description short">
 				<p>Called from functional tests, creates/updates database tables and compiles proxies.</p>
@@ -1538,7 +1538,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_tearDown">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#356-374" title="Go to source code">tearDown</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#367-385" title="Go to source code">tearDown</a>( )</code>
 
 			<div class="description short">
 				<p>Called after a functional test in Flow, dumps everything in the database.</p>
@@ -1567,7 +1567,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAllObjectsPersisted">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#376-384" title="Go to source code">emitAllObjectsPersisted</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#387-395" title="Go to source code">emitAllObjectsPersisted</a>( )</code>
 
 			<div class="description short">
 				<p>Signals that all persistAll() has been executed successfully.</p>
@@ -1599,7 +1599,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasUnpersistedChanges">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#386-408" title="Go to source code">hasUnpersistedChanges</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#397-420" title="Go to source code">hasUnpersistedChanges</a>( )</code>
 
 			<div class="description short">
 				<p>Gives feedback if the persistence Manager has unpersisted changes.</p>
@@ -1661,7 +1661,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#28-32" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#39-43" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -1689,7 +1689,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#34-38" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#45-49" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					
@@ -1717,7 +1717,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#40-44" title="Go to source code"><var>$validatorResolver</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#51-55" title="Go to source code"><var>$validatorResolver</var></a>
 
 				<div class="description short">
 					
@@ -1745,7 +1745,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#46-50" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.PersistenceManager.html#57-61" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1790,7 +1790,7 @@ data in an unsafe request.</p>
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>

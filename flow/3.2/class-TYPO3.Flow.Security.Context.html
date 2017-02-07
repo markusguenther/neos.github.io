@@ -965,7 +965,7 @@ security information like roles oder details of authenticated users.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a><br>
 		
 
-				<b>Flow\scope("session")</b>
+				<b>Flow\scope(&quot;session&quot;)</b>
 				<br>
 			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Context.html#24-844" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Context.php</a>
 		<br>
@@ -1031,7 +1031,9 @@ security information like roles oder details of authenticated users.</p>
 				<p>Lets you switch off authorization checks (CSRF token, policies, content security, ...) for the runtime of $callback</p>
 
 <p>Usage:
-$this->securityContext->withoutAuthorizationChecks(function () use ($accountRepository, $username, $providerName, &amp;$account) { // this will disable the PersistenceQueryRewritingAspect for this one call $account = $accountRepository->findActiveByAccountIdentifierAndAuthenticationProviderName($username, $providerName)
+$this->securityContext->withoutAuthorizationChecks(function () use ($accountRepository, $username, $providerName, &amp;$account) {
+  // this will disable the PersistenceQueryRewritingAspect for this one call
+  $account = $accountRepository->findActiveByAccountIdentifierAndAuthenticationProviderName($username, $providerName)
 });</p>
 
 
@@ -1282,13 +1284,13 @@ request.</p>
 			<code><a href="source-class-TYPO3.Flow.Security.Context.html#358-372" title="Go to source code">getAuthenticationTokens</a>( )</code>
 
 			<div class="description short">
-				<p>Returns all \TYPO3\Flow\Security\Authentication\Tokens of the security context which are
+				<p>Returns all Authentication\Tokens of the security context which are
 active for the current request. If a token has a request pattern that cannot match
 against the current request it is determined as not active.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns all \TYPO3\Flow\Security\Authentication\Tokens of the security context which are
+				<p>Returns all Authentication\Tokens of the security context which are
 active for the current request. If a token has a request pattern that cannot match
 against the current request it is determined as not active.</p>
 
@@ -1319,13 +1321,13 @@ against the current request it is determined as not active.</p>
 			<code><a href="source-class-TYPO3.Flow.Security.Context.html#374-396" title="Go to source code">getAuthenticationTokensOfType</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
-				<p>Returns all \TYPO3\Flow\Security\Authentication\Tokens of the security context which are
+				<p>Returns all Authentication\Tokens of the security context which are
 active for the current request and of the given type. If a token has a request pattern that cannot match
 against the current request it is determined as not active.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns all \TYPO3\Flow\Security\Authentication\Tokens of the security context which are
+				<p>Returns all Authentication\Tokens of the security context which are
 active for the current request and of the given type. If a token has a request pattern that cannot match
 against the current request it is determined as not active.</p>
 
@@ -1452,7 +1454,7 @@ if you need it you'll have to fetch it directly from the token.
 
 					<h4>Deprecated</h4>
 					<div class="list">
-							since 3.0 Use appropriate (Domain) Services directly (see https://jira.typo3.org/browse/FLOW-5)<br>
+							since 3.0 Use appropriate (Domain) Services directly (see https://jira.neos.io/browse/FLOW-5)<br>
 					</div>
 
 
@@ -1489,7 +1491,7 @@ if you need it you'll have to fetch it directly from the token.
 
 					<h4>Deprecated</h4>
 					<div class="list">
-							since 3.0 Use appropriate (Domain) Services directly (see https://jira.typo3.org/browse/FLOW-5)<br>
+							since 3.0 Use appropriate (Domain) Services directly (see https://jira.neos.io/browse/FLOW-5)<br>
 					</div>
 
 					<h4>Parameters</h4>
@@ -1870,7 +1872,7 @@ given by the manager.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Array of \TYPO3\Flow\Security\Authentication\TokenInterface objects
+						array<br>Array of Authentication\TokenInterface objects
 					</div>
 
 
@@ -2091,7 +2093,7 @@ provided by the MVC router.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#32-36" title="Go to source code"><b>AUTHENTICATE_ANY_TOKEN</b></a>
+						<a href="source-constant-AUTHENTICATE_ANY_TOKEN.html#32-36" title="Go to source code"><b>AUTHENTICATE_ANY_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -2117,7 +2119,7 @@ an authenticated token (e.g. for guest users with role TYPO3.Flow:Everybody).</p
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#38-42" title="Go to source code"><b>AUTHENTICATE_ONE_TOKEN</b></a>
+						<a href="source-constant-AUTHENTICATE_ONE_TOKEN.html#38-42" title="Go to source code"><b>AUTHENTICATE_ONE_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -2143,7 +2145,7 @@ authentication of a token.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#44-48" title="Go to source code"><b>AUTHENTICATE_ALL_TOKENS</b></a>
+						<a href="source-constant-AUTHENTICATE_ALL_TOKENS.html#44-48" title="Go to source code"><b>AUTHENTICATE_ALL_TOKENS</b></a>
 					</code>
 
 					<div class="description short">
@@ -2169,7 +2171,7 @@ an active token could not be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#50-55" title="Go to source code"><b>AUTHENTICATE_AT_LEAST_ONE_TOKEN</b></a>
+						<a href="source-constant-AUTHENTICATE_AT_LEAST_ONE_TOKEN.html#50-55" title="Go to source code"><b>AUTHENTICATE_AT_LEAST_ONE_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -2197,7 +2199,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#57-60" title="Go to source code"><b>CSRF_ONE_PER_SESSION</b></a>
+						<a href="source-constant-CSRF_ONE_PER_SESSION.html#57-60" title="Go to source code"><b>CSRF_ONE_PER_SESSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -2221,7 +2223,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#62-65" title="Go to source code"><b>CSRF_ONE_PER_URI</b></a>
+						<a href="source-constant-CSRF_ONE_PER_URI.html#62-65" title="Go to source code"><b>CSRF_ONE_PER_URI</b></a>
 					</code>
 
 					<div class="description short">
@@ -2245,7 +2247,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#67-70" title="Go to source code"><b>CSRF_ONE_PER_REQUEST</b></a>
+						<a href="source-constant-CSRF_ONE_PER_REQUEST.html#67-70" title="Go to source code"><b>CSRF_ONE_PER_REQUEST</b></a>
 					</code>
 
 					<div class="description short">
@@ -2269,7 +2271,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Security.Context.html#72-76" title="Go to source code"><b>CONTEXT_HASH_UNINITIALIZED</b></a>
+						<a href="source-constant-CONTEXT_HASH_UNINITIALIZED.html#72-76" title="Go to source code"><b>CONTEXT_HASH_UNINITIALIZED</b></a>
 					</code>
 
 					<div class="description short">
@@ -2348,7 +2350,7 @@ this constant will be returned by getContextHash()</p>
 			<td class="value">
 				<div>
 					<a href="#$tokens" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -2373,12 +2375,12 @@ this constant will be returned by getContextHash()</p>
 			<td class="value">
 				<div>
 					<a href="#$tokenStatusLabels" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-num">1</span> =&gt; <span class="php-quote">'no credentials given'</span>,
     <span class="php-num">2</span> =&gt; <span class="php-quote">'wrong credentials'</span>,
     <span class="php-num">3</span> =&gt; <span class="php-quote">'authentication successful'</span>,
     <span class="php-num">4</span> =&gt; <span class="php-quote">'authentication needed'</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>
@@ -2406,7 +2408,7 @@ this constant will be returned by getContextHash()</p>
 			<td class="value">
 				<div>
 					<a href="#$activeTokens" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -2434,7 +2436,7 @@ this constant will be returned by getContextHash()</p>
 			<td class="value">
 				<div>
 					<a href="#$inactiveTokens" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -2674,7 +2676,7 @@ this constant will be returned by getContextHash()</p>
 			<td class="value">
 				<div>
 					<a href="#$csrfProtectionTokens" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -2802,7 +2804,7 @@ this constant will be returned by getContextHash()</p>
 		Flow Framework (3.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?a328a2e9f7838ff0dcf91383b669dd373a72f4f2"></script>
 </body>
 </html>
