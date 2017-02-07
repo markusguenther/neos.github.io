@@ -858,7 +858,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Persistence.html">Persistence</a>\<a href="namespace-TYPO3.Flow.Persistence.Doctrine.html">Doctrine</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#18-83" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/ArrayTypeConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#21-86" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/ArrayTypeConverter.php</a>
 		<br>
 	</div>
 
@@ -878,7 +878,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#50-82" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#53-85" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Actually convert from $source to $targetType, taking into account the fully
@@ -890,9 +890,10 @@ built $convertedChildProperties and $configuration.</p>
 built $convertedChildProperties and $configuration.</p>
 
 <p>The return value can be one of three types:
-- an arbitrary object, or a simple type (which has been created while mapping). This is the normal case.
+- an arbitrary object, or a simple type (which has been created while mapping).
+  This is the normal case.
 - NULL, indicating that this object should <em>not</em> be mapped (i.e. a "File Upload" Converter could return NULL if no file has been uploaded, and a silent failure should occur.
-- An instance of \TYPO3\Flow\Error\Error -- This will be a user-visible error message later on.
+- An instance of Error -- This will be a user-visible error message later on.
 Furthermore, it should throw an Exception if an unexpected failure (like a security error) occurred or a configuration issue happened.</p>
 
 
@@ -956,7 +957,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#24-27" title="Go to source code"><b>CONFIGURATION_CONVERT_ELEMENTS</b></a>
+						<a href="source-constant-CONFIGURATION_CONVERT_ELEMENTS.html#27-30" title="Go to source code"><b>CONFIGURATION_CONVERT_ELEMENTS</b></a>
 					</code>
 
 					<div class="description short">
@@ -991,7 +992,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#29-32" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#32-35" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1005,7 +1006,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'Doctrine\Common\Collections\Collection'</span>)</code>
+					<code>[<span class="php-quote">'Doctrine\Common\Collections\Collection'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1016,7 +1017,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#34-37" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#37-40" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1041,7 +1042,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#39-42" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#42-45" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1066,7 +1067,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#44-48" title="Go to source code"><var>$propertyMapper</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.ArrayTypeConverter.html#47-51" title="Go to source code"><var>$propertyMapper</var></a>
 
 				<div class="description short">
 					
@@ -1102,7 +1103,7 @@ Furthermore, it should throw an Exception if an unexpected failure (like a secur
 		Flow Framework 3.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?966a7f3f0b43d29e3f05bdaea7ed0d6e8e421651"></script>
 </body>
 </html>

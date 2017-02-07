@@ -861,11 +861,11 @@ do depends on concrete formatter which is being used).</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.I18n.html">I18n</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#16-183" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/I18n/FormatResolver.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#20-187" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/I18n/FormatResolver.php</a>
 		<br>
 	</div>
 
@@ -885,7 +885,7 @@ do depends on concrete formatter which is being used).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectObjectManager">#</a>
-			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#61-68" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#65-72" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				
@@ -919,7 +919,7 @@ do depends on concrete formatter which is being used).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectLocalizationService">#</a>
-			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#70-77" title="Go to source code">injectLocalizationService</a>( <span><code><a href="class-TYPO3.Flow.I18n.Service.html">TYPO3\Flow\I18n\Service</a></code> <var>$localizationService</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#74-81" title="Go to source code">injectLocalizationService</a>( <span><code><a href="class-TYPO3.Flow.I18n.Service.html">TYPO3\Flow\I18n\Service</a></code> <var>$localizationService</var></span> )</code>
 
 			<div class="description short">
 				
@@ -953,7 +953,7 @@ do depends on concrete formatter which is being used).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolvePlaceholders">#</a>
-			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#79-135" title="Go to source code">resolvePlaceholders</a>( <span>string <var>$textWithPlaceholders</var></span>, <span>array <var>$arguments</var></span>, <span><code><a href="class-TYPO3.Flow.I18n.Locale.html">TYPO3\Flow\I18n\Locale</a></code> <var>$locale</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#83-139" title="Go to source code">resolvePlaceholders</a>( <span>string <var>$textWithPlaceholders</var></span>, <span>array <var>$arguments</var></span>, <span><code><a href="class-TYPO3.Flow.I18n.Locale.html">TYPO3\Flow\I18n\Locale</a></code> <var>$locale</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Replaces all placeholders in text with corresponding values.</p>
@@ -1010,7 +1010,7 @@ specific and they are directly passed to the formatter class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFormatter">#</a>
-			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#137-182" title="Go to source code">getFormatter</a>( <span>string <var>$formatterType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#141-186" title="Go to source code">getFormatter</a>( <span>string <var>$formatterType</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns instance of concrete formatter.</p>
@@ -1020,12 +1020,12 @@ specific and they are directly passed to the formatter class.</p>
 				<p>Returns instance of concrete formatter.</p>
 
 <p>The type provided has to be either a name of existing class placed in
-\TYPO3\Flow\I18n\Formatter namespace or a fully qualified class name;
+I18n\Formatter namespace or a fully qualified class name;
 in both cases implementing this' package's FormatterInterface.
 For example, when $formatterName is 'number',
-the \TYPO3\Flow\I18n\Formatter\NumberFormatter class has to exist; when
+the I18n\Formatter\NumberFormatter class has to exist; when
 $formatterName is 'Acme\Foobar\I18nFormatter\SampleFormatter', this class
-must exist and implement TYPO3\Flow\I18n\Formatter\FormatterInterface.</p>
+must exist and implement I18n\Formatter\FormatterInterface.</p>
 
 <p>Throws exception if there is no formatter for name given or one could be
 retrieved but does not satisfy the FormatterInterface.</p>
@@ -1076,7 +1076,7 @@ retrieved but does not satisfy the FormatterInterface.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#38-41" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#42-45" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1101,7 +1101,7 @@ retrieved but does not satisfy the FormatterInterface.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#43-46" title="Go to source code"><var>$localizationService</var></a>
+					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#47-50" title="Go to source code"><var>$localizationService</var></a>
 
 				<div class="description short">
 					
@@ -1126,7 +1126,7 @@ retrieved but does not satisfy the FormatterInterface.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#48-52" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#52-56" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1150,11 +1150,11 @@ retrieved but does not satisfy the FormatterInterface.</p>
 		<tr data-order="formatters" id="$formatters">
 			<td class="attributes"><code>
 				protected  
-				array&lt;\TYPO3\Flow\I18n\Formatter\FormatterInterface&gt;
+				array&lt;FormatterInterface&gt;
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#54-59" title="Go to source code"><var>$formatters</var></a>
+					<a href="source-class-TYPO3.Flow.I18n.FormatResolver.html#58-63" title="Go to source code"><var>$formatters</var></a>
 
 				<div class="description short">
 					<p>Array of concrete formatters used by this class.</p>
@@ -1187,7 +1187,7 @@ retrieved but does not satisfy the FormatterInterface.</p>
 		Flow Framework 3.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?966a7f3f0b43d29e3f05bdaea7ed0d6e8e421651"></script>
 </body>
 </html>

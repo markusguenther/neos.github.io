@@ -827,19 +827,30 @@ elements by checking each value against the filter.</p>
 It has the form <code>"[" [&lt;value&gt;] &lt;operator&gt; &lt;operand&gt; "]"</code> and supports the
 following operators:</p>
 
-<p>= Strict equality of value and operand
-!= Strict inequality of value and operand
-&lt; Value is less than operand
-&lt;= Value is less than or equal to operand</p>
+<p>=
+  Strict equality of value and operand
+!=
+  Strict inequality of value and operand
+&lt;
+  Value is less than operand
+&lt;=
+  Value is less than or equal to operand
+>
+  Value is greater than operand</p>
 
 <blockquote>
-  <p>Value is greater than operand
-  = Value is greater than or equal to operand
-  $= Value ends with operand (string-based)
-  ^= Value starts with operand (string-based)
-  *= Value contains operand (string-based)
-  instanceof Checks if the value is an instance of the operand
-  !instanceof Checks if the value is not an instance of the operand</p>
+  <p>=
+    Value is greater than or equal to operand
+  $=
+    Value ends with operand (string-based)
+  ^=
+    Value starts with operand (string-based)
+  *=
+    Value contains operand (string-based)
+  instanceof
+    Checks if the value is an instance of the operand
+  !instanceof
+    Checks if the value is not an instance of the operand</p>
 </blockquote>
 
 <p>For the latter the behavior is as follows: if the operand is one of the strings
@@ -878,7 +889,7 @@ classname with the PHP instanceof operation to check if the value matches.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Eel.html">Eel</a>\<a href="namespace-TYPO3.Eel.FlowQuery.html">FlowQuery</a>\<a href="namespace-TYPO3.Eel.FlowQuery.Operations.html">Operations</a>\<a href="namespace-TYPO3.Eel.FlowQuery.Operations.Object.html">Object</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#16-285" title="Go to source code">TYPO3.Eel/Classes/TYPO3/Eel/FlowQuery/Operations/Object/FilterOperation.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#23-292" title="Go to source code">TYPO3.Eel/Classes/TYPO3/Eel/FlowQuery/Operations/Object/FilterOperation.php</a>
 		<br>
 	</div>
 
@@ -898,7 +909,7 @@ classname with the PHP instanceof operation to check if the value matches.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#69-97" title="Go to source code">evaluate</a>( <span><code><a href="class-TYPO3.Eel.FlowQuery.FlowQuery.html">TYPO3\Eel\FlowQuery\FlowQuery</a></code> <var>$flowQuery</var></span>, <span>array <var>$arguments</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#76-104" title="Go to source code">evaluate</a>( <span><code><a href="class-TYPO3.Eel.FlowQuery.FlowQuery.html">TYPO3\Eel\FlowQuery\FlowQuery</a></code> <var>$flowQuery</var></span>, <span>array <var>$arguments</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate the operation on the objects inside $flowQuery->getContext(),
@@ -940,7 +951,7 @@ taking the $arguments into account.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesFilterGroup">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#99-118" title="Go to source code">matchesFilterGroup</a>( <span>object <var>$element</var></span>, <span>array <var>$parsedFilter</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#106-125" title="Go to source code">matchesFilterGroup</a>( <span>object <var>$element</var></span>, <span>array <var>$parsedFilter</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate Filter Group. An element matches the filter group if it
@@ -984,7 +995,7 @@ matches at least one part of the filter group.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesFilter">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#120-144" title="Go to source code">matchesFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$filter</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#127-151" title="Go to source code">matchesFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$filter</var></span> )</code>
 
 			<div class="description short">
 				<p>Match a single filter, i.e. [foo]. It matches only if all filter parts match.</p>
@@ -1024,7 +1035,7 @@ matches at least one part of the filter group.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesPropertyNameFilter">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#146-157" title="Go to source code">matchesPropertyNameFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyNameFilter</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#153-164" title="Go to source code">matchesPropertyNameFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyNameFilter</var></span> )</code>
 
 			<div class="description short">
 				<p>For generic objects, we do not support property name filters.</p>
@@ -1068,7 +1079,7 @@ matches at least one part of the filter group.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesAttributeFilter">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#159-179" title="Go to source code">matchesAttributeFilter</a>( <span>mixed <var>$element</var></span>, <span>array <var>$attributeFilter</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#166-186" title="Go to source code">matchesAttributeFilter</a>( <span>mixed <var>$element</var></span>, <span>array <var>$attributeFilter</var></span> )</code>
 
 			<div class="description short">
 				<p>Match a single attribute filter</p>
@@ -1108,7 +1119,7 @@ matches at least one part of the filter group.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesIdentifierFilter">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#181-191" title="Go to source code">matchesIdentifierFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#188-198" title="Go to source code">matchesIdentifierFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Filter the object by its identifier (UUID)</p>
@@ -1148,7 +1159,7 @@ matches at least one part of the filter group.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyPath">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#193-204" title="Go to source code">getPropertyPath</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#200-211" title="Go to source code">getPropertyPath</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate a property path. This is outsourced to a single method
@@ -1190,7 +1201,7 @@ to make overriding this functionality easy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateOperator">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#206-250" title="Go to source code">evaluateOperator</a>( <span>mixed <var>$value</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#213-257" title="Go to source code">evaluateOperator</a>( <span>mixed <var>$value</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an operator</p>
@@ -1232,7 +1243,7 @@ to make overriding this functionality easy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_operandIsSimpleType">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#252-259" title="Go to source code">operandIsSimpleType</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#259-266" title="Go to source code">operandIsSimpleType</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1270,7 +1281,7 @@ to make overriding this functionality easy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleSimpleTypeOperand">#</a>
-			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#261-284" title="Go to source code">handleSimpleTypeOperand</a>( <span>string <var>$operand</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#268-291" title="Go to source code">handleSimpleTypeOperand</a>( <span>string <var>$operand</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1331,7 +1342,7 @@ to make overriding this functionality easy.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#56-61" title="Go to source code"><var>$shortName</var></a>
+					<a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#63-68" title="Go to source code"><var>$shortName</var></a>
 
 				<div class="description short">
 					<p>The short name of the operation</p>
@@ -1356,7 +1367,7 @@ to make overriding this functionality easy.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#63-67" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Eel.FlowQuery.Operations.Object.FilterOperation.html#70-74" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1399,7 +1410,7 @@ to make overriding this functionality easy.</p>
 		Flow Framework 3.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?966a7f3f0b43d29e3f05bdaea7ed0d6e8e421651"></script>
 </body>
 </html>

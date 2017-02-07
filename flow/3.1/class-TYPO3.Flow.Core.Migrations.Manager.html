@@ -837,7 +837,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Core.html">Core</a>\<a href="namespace-TYPO3.Flow.Core.Migrations.html">Migrations</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#16-451" title="Go to source code">TYPO3.Flow/Scripts/Migrations/Manager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#16-456" title="Go to source code">TYPO3.Flow/Scripts/Migrations/Manager.php</a>
 		<br>
 	</div>
 
@@ -1151,7 +1151,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importMigrationLogFromGitHistory">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#243-285" title="Go to source code">importMigrationLogFromGitHistory</a>( <span>boolean <var>$commitChanges</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#243-290" title="Go to source code">importMigrationLogFromGitHistory</a>( <span>boolean <var>$commitChanges</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Imports the core migration log from the git history if it has not been imported previously (the "applied-flow-migrations" composer manifest property does not exist)</p>
@@ -1189,7 +1189,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_markMigrationApplied">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#287-301" title="Go to source code">markMigrationApplied</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#292-306" title="Go to source code">markMigrationApplied</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span> )</code>
 
 			<div class="description short">
 				<p>Whether or not the given migration has been applied in the given path</p>
@@ -1227,7 +1227,7 @@ the existing packages if
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commitMigration">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#303-337" title="Go to source code">commitMigration</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span>, <span>string <var>$commitMessageNotice</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#308-342" title="Go to source code">commitMigration</a>( <span><code><a href="class-TYPO3.Flow.Core.Migrations.AbstractMigration.html">TYPO3\Flow\Core\Migrations\AbstractMigration</a></code> <var>$migration</var></span>, <span>string <var>$commitMessageNotice</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Commit changes done to the package described by $packageData. The migration
@@ -1271,7 +1271,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_on">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#339-348" title="Go to source code">on</a>( <span>string <var>$eventIdentifier</var></span>, <span>Closure <var>$callback</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#344-353" title="Go to source code">on</a>( <span>string <var>$eventIdentifier</var></span>, <span>Closure <var>$callback</var></span> )</code>
 
 			<div class="description short">
 				<p>Attaches a new event handler</p>
@@ -1307,7 +1307,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_triggerEvent">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#350-365" title="Go to source code">triggerEvent</a>( <span>string <var>$eventIdentifier</var></span>, <span>array <var>$eventData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#355-370" title="Go to source code">triggerEvent</a>( <span>string <var>$eventIdentifier</var></span>, <span>array <var>$eventData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Trigger a custom event</p>
@@ -1343,7 +1343,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initialize">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#368-385" title="Go to source code">initialize</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#373-390" title="Go to source code">initialize</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize the manager: read package information and register migrations.</p>
@@ -1372,7 +1372,7 @@ and will be recorded in the commit message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerMigrationFiles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#387-412" title="Go to source code">registerMigrationFiles</a>( <span>string <var>$packagePath</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#392-417" title="Go to source code">registerMigrationFiles</a>( <span>string <var>$packagePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Look for code migration files in the given package path and register them
@@ -1408,7 +1408,7 @@ for further action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMigrations">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#415-431" title="Go to source code">getMigrations</a>( <span>string <var>$versionNumber</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#420-436" title="Go to source code">getMigrations</a>( <span>string <var>$versionNumber</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1450,7 +1450,7 @@ for further action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackagesData">#</a>
-			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#434-450" title="Go to source code">getPackagesData</a>( <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#439-455" title="Go to source code">getPackagesData</a>( <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1499,7 +1499,7 @@ for further action.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#21" title="Go to source code"><b>STATE_NOT_MIGRATED</b></a>
+						<a href="source-constant-STATE_NOT_MIGRATED.html#21" title="Go to source code"><b>STATE_NOT_MIGRATED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1523,7 +1523,7 @@ for further action.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#22" title="Go to source code"><b>STATE_MIGRATED</b></a>
+						<a href="source-constant-STATE_MIGRATED.html#22" title="Go to source code"><b>STATE_MIGRATED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1547,7 +1547,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#24" title="Go to source code"><b>EVENT_MIGRATION_START</b></a>
+						<a href="source-constant-EVENT_MIGRATION_START.html#24" title="Go to source code"><b>EVENT_MIGRATION_START</b></a>
 					</code>
 
 					<div class="description short">
@@ -1571,7 +1571,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#25" title="Go to source code"><b>EVENT_MIGRATION_EXECUTE</b></a>
+						<a href="source-constant-EVENT_MIGRATION_EXECUTE.html#25" title="Go to source code"><b>EVENT_MIGRATION_EXECUTE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1595,7 +1595,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#26" title="Go to source code"><b>EVENT_MIGRATION_SKIPPED</b></a>
+						<a href="source-constant-EVENT_MIGRATION_SKIPPED.html#26" title="Go to source code"><b>EVENT_MIGRATION_SKIPPED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1619,7 +1619,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#27" title="Go to source code"><b>EVENT_MIGRATION_ALREADY_APPLIED</b></a>
+						<a href="source-constant-EVENT_MIGRATION_ALREADY_APPLIED.html#27" title="Go to source code"><b>EVENT_MIGRATION_ALREADY_APPLIED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1643,7 +1643,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#28" title="Go to source code"><b>EVENT_MIGRATION_EXECUTED</b></a>
+						<a href="source-constant-EVENT_MIGRATION_EXECUTED.html#28" title="Go to source code"><b>EVENT_MIGRATION_EXECUTED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1667,7 +1667,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#29" title="Go to source code"><b>EVENT_MIGRATION_COMMITTED</b></a>
+						<a href="source-constant-EVENT_MIGRATION_COMMITTED.html#29" title="Go to source code"><b>EVENT_MIGRATION_COMMITTED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1691,7 +1691,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#30" title="Go to source code"><b>EVENT_MIGRATION_COMMIT_SKIPPED</b></a>
+						<a href="source-constant-EVENT_MIGRATION_COMMIT_SKIPPED.html#30" title="Go to source code"><b>EVENT_MIGRATION_COMMIT_SKIPPED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1715,7 +1715,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#31" title="Go to source code"><b>EVENT_MIGRATION_DONE</b></a>
+						<a href="source-constant-EVENT_MIGRATION_DONE.html#31" title="Go to source code"><b>EVENT_MIGRATION_DONE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1739,7 +1739,7 @@ for further action.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Core.Migrations.Manager.html#32" title="Go to source code"><b>EVENT_MIGRATION_LOG_IMPORTED</b></a>
+						<a href="source-constant-EVENT_MIGRATION_LOG_IMPORTED.html#32" title="Go to source code"><b>EVENT_MIGRATION_LOG_IMPORTED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1936,7 +1936,7 @@ for further action.</p>
 		Flow Framework 3.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?966a7f3f0b43d29e3f05bdaea7ed0d6e8e421651"></script>
 </body>
 </html>

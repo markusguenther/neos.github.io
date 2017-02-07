@@ -831,7 +831,7 @@
 	<p>A modular session implementation based on the caching framework.</p>
 
 <p>You may access the currently active session in userland code. In order to do this,
-inject TYPO3\Flow\Session\SessionInterface and NOT just TYPO3\Flow\Session\Session.
+inject SessionInterface and NOT just the Session object.
 The former will be a unique instance (singleton) representing the current session
 while the latter would be a completely new session instance!</p>
 
@@ -868,7 +868,7 @@ that phase already, calling start() at a later stage will be a no-operation.</p>
 
 				<b>See:</b>
 				<code><a href="class-TYPO3.Flow.Session.SessionManager.html">TYPO3\Flow\Session\SessionManager</a></code><br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Session.Session.html#26-792" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Session/Session.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Session.Session.html#30-796" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Session/Session.php</a>
 		<br>
 	</div>
 
@@ -888,7 +888,7 @@ that phase already, calling start() at a later stage will be a no-operation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#186-216" title="Go to source code">__construct</a>( <span>string <var>$sessionIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$storageIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$lastActivityTimestamp</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#190-220" title="Go to source code">__construct</a>( <span>string <var>$sessionIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$storageIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$lastActivityTimestamp</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$tags</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Constructs this session</p>
@@ -939,7 +939,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#218-235" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#222-239" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the Flow settings</p>
@@ -973,7 +973,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#237-249" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#241-253" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				
@@ -1006,7 +1006,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isStarted">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#251-260" title="Go to source code">isStarted</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#255-264" title="Go to source code">isStarted</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if the session has been started already.</p>
@@ -1044,7 +1044,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemote">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#262-272" title="Go to source code">isRemote</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#266-276" title="Go to source code">isRemote</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if the session is local (the current session bound to the current HTTP
@@ -1082,7 +1082,7 @@ request) or remote (retrieved through the Session Manager).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_start">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#274-300" title="Go to source code">start</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#278-304" title="Go to source code">start</a>( )</code>
 
 			<div class="description short">
 				<p>Starts the session, if it has not been already started</p>
@@ -1120,7 +1120,7 @@ request) or remote (retrieved through the Session Manager).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canBeResumed">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#302-331" title="Go to source code">canBeResumed</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#306-335" title="Go to source code">canBeResumed</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if there is a session that can be resumed.</p>
@@ -1165,7 +1165,7 @@ so it doesn't have to be loaded again once the session is being used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resume">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#333-367" title="Go to source code">resume</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#337-371" title="Go to source code">resume</a>( )</code>
 
 			<div class="description short">
 				<p>Resumes an existing session, if any.</p>
@@ -1203,7 +1203,7 @@ so it doesn't have to be loaded again once the session is being used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getId">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#369-382" title="Go to source code">getId</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#373-386" title="Go to source code">getId</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current session identifier</p>
@@ -1245,7 +1245,7 @@ so it doesn't have to be loaded again once the session is being used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renewId">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#384-408" title="Go to source code">renewId</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#388-412" title="Go to source code">renewId</a>( )</code>
 
 			<div class="description short">
 				<p>Generates and propagates a new session ID and transfers all existing data
@@ -1290,7 +1290,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#410-423" title="Go to source code">getData</a>( <span>string <var>$key</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#414-427" title="Go to source code">getData</a>( <span>string <var>$key</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the data associated with the given key.</p>
@@ -1334,7 +1334,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#425-438" title="Go to source code">hasKey</a>( <span>string <var>$key</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#429-442" title="Go to source code">hasKey</a>( <span>string <var>$key</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a session data entry $key is available.</p>
@@ -1378,7 +1378,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_putData">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#440-459" title="Go to source code">putData</a>( <span>string <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#444-463" title="Go to source code">putData</a>( <span>string <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Stores the given data under the given key in the session</p>
@@ -1424,7 +1424,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastActivityTimestamp">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#461-478" title="Go to source code">getLastActivityTimestamp</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#465-482" title="Go to source code">getLastActivityTimestamp</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the unix time stamp marking the last point in time this session has
@@ -1471,7 +1471,7 @@ time. For a remote session, the unix timestamp will be returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addTag">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#480-503" title="Go to source code">addTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#484-507" title="Go to source code">addTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Tags this session with the given tag.</p>
@@ -1518,7 +1518,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeTag">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#505-522" title="Go to source code">removeTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#509-526" title="Go to source code">removeTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified tag from this session.</p>
@@ -1561,7 +1561,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTags">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#525-538" title="Go to source code">getTags</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#529-542" title="Go to source code">getTags</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the tags this session has been tagged with.</p>
@@ -1603,7 +1603,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_touch">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#540-558" title="Go to source code">touch</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#544-562" title="Go to source code">touch</a>( )</code>
 
 			<div class="description short">
 				<p>Updates the last activity time to "now".</p>
@@ -1638,7 +1638,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#560-569" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#564-573" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Explicitly writes and closes the session</p>
@@ -1676,7 +1676,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_destroy">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#571-599" title="Go to source code">destroy</a>( <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#575-602" title="Go to source code">destroy</a>( <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Explicitly destroys all session data</p>
@@ -1695,7 +1695,6 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Session.Exception.html">TYPO3\Flow\Session\Exception</a></code><br>
 						<code><a href="class-TYPO3.Flow.Session.Exception.SessionNotStartedException.html">TYPO3\Flow\Session\Exception\SessionNotStartedException</a></code>
 					</div>
 
@@ -1720,7 +1719,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectGarbage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#601-641" title="Go to source code">collectGarbage</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#604-644" title="Go to source code">collectGarbage</a>( )</code>
 
 			<div class="description short">
 				<p>Iterates over all existing sessions and removes their data if the inactivity
@@ -1760,7 +1759,7 @@ timeout was reached.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#643-674" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#646-677" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				<p>Shuts down this session</p>
@@ -1792,7 +1791,7 @@ management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_autoExpire">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#676-692" title="Go to source code">autoExpire</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#679-695" title="Go to source code">autoExpire</a>( )</code>
 
 			<div class="description short">
 				<p>Automatically expires the session if the user has been inactive for too long.</p>
@@ -1825,7 +1824,7 @@ management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeHttpAndCookie">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#694-717" title="Go to source code">initializeHttpAndCookie</a>( <span><code><a href="class-TYPO3.Flow.Http.HttpRequestHandlerInterface.html">TYPO3\Flow\Http\HttpRequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#697-720" title="Go to source code">initializeHttpAndCookie</a>( <span><code><a href="class-TYPO3.Flow.Http.HttpRequestHandlerInterface.html">TYPO3\Flow\Http\HttpRequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
 
 			<div class="description short">
 				<p>Initialize request, response and session cookie</p>
@@ -1863,7 +1862,7 @@ management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_storeAuthenticatedAccountsInfo">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#719-748" title="Go to source code">storeAuthenticatedAccountsInfo</a>( <span>array <var>$tokens</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#722-752" title="Go to source code">storeAuthenticatedAccountsInfo</a>( <span>array <var>$tokens</var></span> )</code>
 
 			<div class="description short">
 				<p>Stores some information about the authenticated accounts in the session data.</p>
@@ -1908,7 +1907,7 @@ session will NOT be tagged with authenticated accounts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_writeSessionMetaDataCacheEntry">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#750-777" title="Go to source code">writeSessionMetaDataCacheEntry</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#754-781" title="Go to source code">writeSessionMetaDataCacheEntry</a>( )</code>
 
 			<div class="description short">
 				<p>Writes the cache entry containing information about the session, such as the
@@ -1945,7 +1944,7 @@ and any custom tags of this session, prefixed with TAG_PREFIX.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeSessionMetaDataCacheEntry">#</a>
-			<code><a href="source-class-TYPO3.Flow.Session.Session.html#779-791" title="Go to source code">removeSessionMetaDataCacheEntry</a>( <span>string <var>$sessionIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Session.Session.html#783-795" title="Go to source code">removeSessionMetaDataCacheEntry</a>( <span>string <var>$sessionIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the session info cache entry for the specified session.</p>
@@ -1989,7 +1988,7 @@ related data referred to by the storage identifier.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Session.Session.html#45" title="Go to source code"><b>TAG_PREFIX</b></a>
+						<a href="source-constant-TAG_PREFIX.html#49" title="Go to source code"><b>TAG_PREFIX</b></a>
 					</code>
 
 					<div class="description short">
@@ -2024,7 +2023,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#47-51" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#51-55" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -2052,7 +2051,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#53-57" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#57-61" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -2080,7 +2079,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#59-65" title="Go to source code"><var>$metaDataCache</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#63-69" title="Go to source code"><var>$metaDataCache</var></a>
 
 				<div class="description short">
 					<p>Meta data cache for this session</p>
@@ -2108,7 +2107,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#67-73" title="Go to source code"><var>$storageCache</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#71-77" title="Go to source code"><var>$storageCache</var></a>
 
 				<div class="description short">
 					<p>Storage cache for this session</p>
@@ -2136,7 +2135,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#75-81" title="Go to source code"><var>$bootstrap</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#79-85" title="Go to source code"><var>$bootstrap</var></a>
 
 				<div class="description short">
 					<p>Bootstrap for retrieving the current HTTP request</p>
@@ -2164,7 +2163,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#83-86" title="Go to source code"><var>$sessionCookieName</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#87-90" title="Go to source code"><var>$sessionCookieName</var></a>
 
 				<div class="description short">
 					
@@ -2189,7 +2188,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#88-91" title="Go to source code"><var>$sessionCookieLifetime</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#92-95" title="Go to source code"><var>$sessionCookieLifetime</var></a>
 
 				<div class="description short">
 					
@@ -2214,7 +2213,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#93-96" title="Go to source code"><var>$sessionCookieDomain</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#97-100" title="Go to source code"><var>$sessionCookieDomain</var></a>
 
 				<div class="description short">
 					
@@ -2239,7 +2238,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#98-101" title="Go to source code"><var>$sessionCookiePath</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#102-105" title="Go to source code"><var>$sessionCookiePath</var></a>
 
 				<div class="description short">
 					
@@ -2264,7 +2263,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#103-106" title="Go to source code"><var>$sessionCookieSecure</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#107-110" title="Go to source code"><var>$sessionCookieSecure</var></a>
 
 				<div class="description short">
 					
@@ -2289,7 +2288,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#108-111" title="Go to source code"><var>$sessionCookieHttpOnly</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#112-115" title="Go to source code"><var>$sessionCookieHttpOnly</var></a>
 
 				<div class="description short">
 					
@@ -2314,7 +2313,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#113-116" title="Go to source code"><var>$sessionCookie</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#117-120" title="Go to source code"><var>$sessionCookie</var></a>
 
 				<div class="description short">
 					
@@ -2339,7 +2338,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#118-121" title="Go to source code"><var>$inactivityTimeout</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#122-125" title="Go to source code"><var>$inactivityTimeout</var></a>
 
 				<div class="description short">
 					
@@ -2364,7 +2363,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#123-126" title="Go to source code"><var>$lastActivityTimestamp</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#127-130" title="Go to source code"><var>$lastActivityTimestamp</var></a>
 
 				<div class="description short">
 					
@@ -2389,7 +2388,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#128-131" title="Go to source code"><var>$tags</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#132-135" title="Go to source code"><var>$tags</var></a>
 
 				<div class="description short">
 					
@@ -2403,7 +2402,7 @@ related data referred to by the storage identifier.</p>
 			<td class="value">
 				<div>
 					<a href="#$tags" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -2414,7 +2413,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#133-136" title="Go to source code"><var>$now</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#137-140" title="Go to source code"><var>$now</var></a>
 
 				<div class="description short">
 					
@@ -2439,7 +2438,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#138-141" title="Go to source code"><var>$garbageCollectionProbability</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#142-145" title="Go to source code"><var>$garbageCollectionProbability</var></a>
 
 				<div class="description short">
 					
@@ -2464,7 +2463,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#143-146" title="Go to source code"><var>$garbageCollectionMaximumPerRun</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#147-150" title="Go to source code"><var>$garbageCollectionMaximumPerRun</var></a>
 
 				<div class="description short">
 					
@@ -2489,7 +2488,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#148-153" title="Go to source code"><var>$sessionIdentifier</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#152-157" title="Go to source code"><var>$sessionIdentifier</var></a>
 
 				<div class="description short">
 					<p>The session identifier</p>
@@ -2514,7 +2513,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#155-160" title="Go to source code"><var>$storageIdentifier</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#159-164" title="Go to source code"><var>$storageIdentifier</var></a>
 
 				<div class="description short">
 					<p>Internal identifier used for storing session data in the cache</p>
@@ -2539,7 +2538,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#162-167" title="Go to source code"><var>$started</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#166-171" title="Go to source code"><var>$started</var></a>
 
 				<div class="description short">
 					<p>If this session has been started</p>
@@ -2564,7 +2563,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#169-174" title="Go to source code"><var>$remote</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#173-178" title="Go to source code"><var>$remote</var></a>
 
 				<div class="description short">
 					<p>If this session is remote or the "current" session</p>
@@ -2589,7 +2588,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#176-179" title="Go to source code"><var>$request</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#180-183" title="Go to source code"><var>$request</var></a>
 
 				<div class="description short">
 					
@@ -2614,7 +2613,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Session.Session.html#181-184" title="Go to source code"><var>$response</var></a>
+					<a href="source-class-TYPO3.Flow.Session.Session.html#185-188" title="Go to source code"><var>$response</var></a>
 
 				<div class="description short">
 					
@@ -2647,7 +2646,7 @@ related data referred to by the storage identifier.</p>
 		Flow Framework 3.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?966a7f3f0b43d29e3f05bdaea7ed0d6e8e421651"></script>
 </body>
 </html>
