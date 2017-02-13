@@ -737,9 +737,9 @@ class is always an associative array.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TYPO3CR.html">TYPO3CR</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.html">Domain</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.Service.html">Service</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.Service.ImportExport.html">ImportExport</a><br>
 		
 
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#26-677" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/ImportExport/NodeImportService.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#30-681" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Service/ImportExport/NodeImportService.php</a>
 		<br>
 	</div>
 
@@ -759,7 +759,7 @@ class is always an associative array.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_import">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#136-195" title="Go to source code">import</a>( <span>XMLReader <var>$xmlReader</var></span>, <span>string <var>$targetPath</var></span>, <span>string <var>$resourceLoadPath</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#140-199" title="Go to source code">import</a>( <span>XMLReader <var>$xmlReader</var></span>, <span>string <var>$targetPath</var></span>, <span>string <var>$resourceLoadPath</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Imports the sub-tree from the xml reader into the given target path.</p>
@@ -772,12 +772,82 @@ class is always an associative array.</p>
 as the following example illustrates:</p>
 
 <ol>
-<li><p>Existing Nodes Before Import:
-path - to - - my - - - targetNode - - - - A - other - - nodes</p></li>
-<li><p>Sub-tree in xml to import to 'path/to/my/targetNode':
-<B> - <B1/> </B></p></li>
-<li><p>existing nodes after the import:
-path - to - - my - - - targetNode - - - - A - - - - B - - - - - B1 - another - - sub-tree</p></li>
+<li><p>Existing Nodes Before Import:</p>
+
+<p>path</p>
+
+<ul>
+<li>to</li>
+<li><ul>
+<li>my</li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li>targetNode</li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>A</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>other</li>
+<li><ul>
+<li>nodes</li>
+</ul></li>
+</ul></li>
+<li><p>Sub-tree in xml to import to 'path/to/my/targetNode':</p>
+
+<p><B></p>
+
+<ul>
+<li><B1/>
+</B></li>
+</ul></li>
+<li><p>existing nodes after the import:</p>
+
+<p>path</p>
+
+<ul>
+<li>to</li>
+<li><ul>
+<li>my</li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li>targetNode</li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>A</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>B</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>B1</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>another</li>
+<li><ul>
+<li>sub-tree</li>
+</ul></li>
+</ul></li>
 </ol>
 
 
@@ -813,7 +883,7 @@ path - to - - my - - - targetNode - - - - A - - - - B - - - - - B1 - another - -
 
 			<td class="name"><div>
 			<a class="anchor" href="#_determineFormatVersion">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#197-216" title="Go to source code">determineFormatVersion</a>( <span>XMLReader <var>$xmlReader</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#201-220" title="Go to source code">determineFormatVersion</a>( <span>XMLReader <var>$xmlReader</var></span> )</code>
 
 			<div class="description short">
 				<p>Determines the TYPO3CR format version of the given xml</p>
@@ -851,7 +921,7 @@ path - to - - my - - - targetNode - - - - A - - - - B - - - - - B1 - another - -
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importSubtree">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#218-248" title="Go to source code">importSubtree</a>( <span>XMLReader <var>$xmlReader</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#222-252" title="Go to source code">importSubtree</a>( <span>XMLReader <var>$xmlReader</var></span> )</code>
 
 			<div class="description short">
 				<p>Imports the sub-tree from the xml reader into the given target path.
@@ -889,7 +959,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseElement">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#250-317" title="Go to source code">parseElement</a>( <span>XMLReader <var>$xmlReader</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#254-321" title="Go to source code">parseElement</a>( <span>XMLReader <var>$xmlReader</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses the given XML element and adds its content to the internal content tree</p>
@@ -927,7 +997,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseDimensionsElement">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#319-349" title="Go to source code">parseDimensionsElement</a>( <span>XMLReader <var>$reader</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#323-353" title="Go to source code">parseDimensionsElement</a>( <span>XMLReader <var>$reader</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses the content of the dimensions-tag and returns the dimensions as an array
@@ -967,7 +1037,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseArrayElements">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#351-393" title="Go to source code">parseArrayElements</a>( <span>XMLReader <var>$reader</var></span>, <span>string <var>$elementName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#355-397" title="Go to source code">parseArrayElements</a>( <span>XMLReader <var>$reader</var></span>, <span>string <var>$elementName</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses the content of exported array and returns the values</p>
@@ -1007,7 +1077,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parsePropertiesElement">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#395-453" title="Go to source code">parsePropertiesElement</a>( <span>XMLReader <var>$reader</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#399-457" title="Go to source code">parsePropertiesElement</a>( <span>XMLReader <var>$reader</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses the content of the properties-tag and returns the properties as an array
@@ -1047,7 +1117,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertElementToValue">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#455-489" title="Go to source code">convertElementToValue</a>( <span>XMLReader <var>$reader</var></span>, <span>string <var>$currentType</var></span>, <span>string <var>$currentEncoding</var></span>, <span>string <var>$currentClassName</var></span>, <span>string <var>$currentIdentifier</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#459-493" title="Go to source code">convertElementToValue</a>( <span>XMLReader <var>$reader</var></span>, <span>string <var>$currentType</var></span>, <span>string <var>$currentEncoding</var></span>, <span>string <var>$currentClassName</var></span>, <span>string <var>$currentIdentifier</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert an element to the value it represents.</p>
@@ -1097,7 +1167,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistEntities">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#491-513" title="Go to source code">persistEntities</a>( <span>mixed <var>$propertyValue</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#495-517" title="Go to source code">persistEntities</a>( <span>mixed <var>$propertyValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if a propertyValue contains an entity and persists it.</p>
@@ -1131,7 +1201,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseEndElement">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#515-553" title="Go to source code">parseEndElement</a>( <span>XMLReader <var>$reader</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#519-557" title="Go to source code">parseEndElement</a>( <span>XMLReader <var>$reader</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses the closing tags writes data to the database then</p>
@@ -1169,7 +1239,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#555-564" title="Go to source code">getCurrentPath</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#559-568" title="Go to source code">getCurrentPath</a>( )</code>
 
 			<div class="description short">
 				<p>Provides the path for a NodeData according to the current stacks</p>
@@ -1202,7 +1272,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParentPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#566-585" title="Go to source code">getParentPath</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#570-589" title="Go to source code">getParentPath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Provides the parent of the given path</p>
@@ -1240,7 +1310,7 @@ The root node of the imported tree becomes a child of the node specified by targ
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#587-676" title="Go to source code">persistNodeData</a>( <span>array <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#591-680" title="Go to source code">persistNodeData</a>( <span>array <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Saves the given array as a node data entity without using the ORM.</p>
@@ -1288,7 +1358,7 @@ it is replaced.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#36" title="Go to source code"><b>SUPPORTED_FORMAT_VERSION</b></a>
+						<a href="source-constant-SUPPORTED_FORMAT_VERSION.html#40" title="Go to source code"><b>SUPPORTED_FORMAT_VERSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -1323,7 +1393,7 @@ it is replaced.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#38-42" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#42-46" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1351,7 +1421,7 @@ it is replaced.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#44-48" title="Go to source code"><var>$propertyMapper</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#48-52" title="Go to source code"><var>$propertyMapper</var></a>
 
 				<div class="description short">
 					
@@ -1379,7 +1449,7 @@ it is replaced.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#50-57" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#54-61" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					<p>Doctrine's Entity Manager. Note that "ObjectManager" is the name of the related
@@ -1409,7 +1479,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#59-63" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#63-67" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
 					
@@ -1437,7 +1507,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#65-68" title="Go to source code"><var>$propertyMappingConfiguration</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#69-72" title="Go to source code"><var>$propertyMappingConfiguration</var></a>
 
 				<div class="description short">
 					
@@ -1462,7 +1532,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#70-73" title="Go to source code"><var>$nodeDataStack</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#74-77" title="Go to source code"><var>$nodeDataStack</var></a>
 
 				<div class="description short">
 					
@@ -1487,7 +1557,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#75-78" title="Go to source code"><var>$nodeIdentifierStack</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#79-82" title="Go to source code"><var>$nodeIdentifierStack</var></a>
 
 				<div class="description short">
 					
@@ -1512,7 +1582,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#80-83" title="Go to source code"><var>$nodeNameStack</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#84-87" title="Go to source code"><var>$nodeNameStack</var></a>
 
 				<div class="description short">
 					
@@ -1537,7 +1607,7 @@ interface ...</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#85-134" title="Go to source code"><var>$nodeDataPropertyNames</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Service.ImportExport.NodeImportService.html#89-138" title="Go to source code"><var>$nodeDataPropertyNames</var></a>
 
 				<div class="description short">
 					<p>the list of property names of NodeData. These are the keys inside the nodeData array which is built as intermediate
@@ -1617,7 +1687,7 @@ representation while parsing the XML.</p>
 		Neos (2.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?9b453814201715b4face474b355f196e15e44b78"></script>
 </body>
 </html>

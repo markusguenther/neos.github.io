@@ -735,26 +735,40 @@
 	<p>"find" operation working on TYPO3CR nodes. This operation allows for retrieval
 of nodes specified by a path, identifier or node type (recursive).</p>
 
-<p>Example (node name):
- q(node).find('main')</p>
+<p>Example (node name):</p>
 
-<p>Example (relative path):
- q(node).find('main/text1')</p>
+<pre><code>q(node).find('main')
+</code></pre>
 
-<p>Example (absolute path):
- q(node).find('/sites/my-site/home')</p>
+<p>Example (relative path):</p>
 
-<p>Example (identifier):
- q(node).find('#30e893c1-caef-0ca5-b53d-e5699bb8e506')</p>
+<pre><code>q(node).find('main/text1')
+</code></pre>
 
-<p>Example (node type):
- q(node).find('[instanceof TYPO3.Neos.NodeTypes:Text]')</p>
+<p>Example (absolute path):</p>
 
-<p>Example (multiple node types):
- q(node).find('[instanceof TYPO3.Neos.NodeTypes:Text],[instanceof TYPO3.Neos.NodeTypes:Image]')</p>
+<pre><code>q(node).find('/sites/my-site/home')
+</code></pre>
 
-<p>Example (node type with filter):
- q(node).find('[instanceof TYPO3.Neos.NodeTypes:Text][text*="Neos"]')</p>
+<p>Example (identifier):</p>
+
+<pre><code>q(node).find('#30e893c1-caef-0ca5-b53d-e5699bb8e506')
+</code></pre>
+
+<p>Example (node type):</p>
+
+<pre><code>q(node).find('[instanceof Neos.Neos.NodeTypes:Text]')
+</code></pre>
+
+<p>Example (multiple node types):</p>
+
+<pre><code>q(node).find('[instanceof Neos.Neos.NodeTypes:Text],[instanceof Neos.Neos.NodeTypes:Image]')
+</code></pre>
+
+<p>Example (node type with filter):</p>
+
+<pre><code>q(node).find('[instanceof Neos.Neos.NodeTypes:Text][text*="Neos"]')
+</code></pre>
 	</div>
 
 	<dl class="tree well">
@@ -784,7 +798,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TYPO3CR.html">TYPO3CR</a>\<a href="namespace-TYPO3.TYPO3CR.Eel.html">Eel</a>\<a href="namespace-TYPO3.TYPO3CR.Eel.FlowQueryOperations.html">FlowQueryOperations</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#20-195" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Eel/FlowQueryOperations/FindOperation.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#23-189" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Eel/FlowQueryOperations/FindOperation.php</a>
 		<br>
 	</div>
 
@@ -804,7 +818,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canEvaluate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#75-93" title="Go to source code">canEvaluate</a>( <span>array <var>$context</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#78-96" title="Go to source code">canEvaluate</a>( <span>array <var>$context</var></span> )</code>
 
 			<div class="description short">
 				
@@ -842,7 +856,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#95-178" title="Go to source code">evaluate</a>( <span>TYPO3\Eel\FlowQuery\FlowQuery <var>$flowQuery</var></span>, <span>array <var>$arguments</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#98-172" title="Go to source code">evaluate</a>( <span>TYPO3\Eel\FlowQuery\FlowQuery <var>$flowQuery</var></span>, <span>array <var>$arguments</var></span> )</code>
 
 			<div class="description short">
 				
@@ -878,7 +892,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasOnlyInstanceOfFilters">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#180-194" title="Go to source code">hasOnlyInstanceOfFilters</a>( <span>array <var>$filters</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#174-188" title="Go to source code">hasOnlyInstanceOfFilters</a>( <span>array <var>$filters</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if the parsed filters only contain instanceof filters (e.g. "[instanceof Foo],[instanceof Bar]")</p>
@@ -928,7 +942,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#55-60" title="Go to source code"><var>$shortName</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#58-63" title="Go to source code"><var>$shortName</var></a>
 
 				<div class="description short">
 					
@@ -953,7 +967,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#62-67" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#65-70" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -978,7 +992,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#69-73" title="Go to source code"><var>$nodeDataRepository</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Eel.FlowQueryOperations.FindOperation.html#72-76" title="Go to source code"><var>$nodeDataRepository</var></a>
 
 				<div class="description short">
 					
@@ -1014,7 +1028,7 @@ TYPO3\Eel\FlowQuery\Operations\AbstractOperation
 		Neos (2.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?9b453814201715b4face474b355f196e15e44b78"></script>
 </body>
 </html>
