@@ -932,7 +932,7 @@
 </span><span id="82" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> move(<span class="php-var">$source</span>, <span class="php-var">$target</span>)
 </span><span id="83" class="l">    {
 </span><span id="84" class="l">        <span class="php-var">$result</span> = <span class="php-num">255</span>;
-</span><span id="85" class="l">        <span class="php-keyword2">system</span>(<span class="php-quote">'git mv '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$source</span>) . <span class="php-quote">' '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$target</span>), <span class="php-var">$result</span>);
+</span><span id="85" class="l">        <span class="php-keyword2">exec</span>(<span class="php-quote">'git mv '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$source</span>) . <span class="php-quote">' '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$target</span>), <span class="php-var">$output</span>, <span class="php-var">$result</span>);
 </span><span id="86" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$result</span>;
 </span><span id="87" class="l">    }
 </span><span id="88" class="l">
@@ -944,9 +944,9 @@
 </span><span id="94" class="l">    {
 </span><span id="95" class="l">        <span class="php-var">$result</span> = <span class="php-num">255</span>;
 </span><span id="96" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$fileOrDirectory</span>)) {
-</span><span id="97" class="l">            <span class="php-keyword2">system</span>(<span class="php-quote">'git rm -qr '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$fileOrDirectory</span>), <span class="php-var">$result</span>);
+</span><span id="97" class="l">            <span class="php-keyword2">exec</span>(<span class="php-quote">'git rm -qr '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$fileOrDirectory</span>), <span class="php-var">$output</span>, <span class="php-var">$result</span>);
 </span><span id="98" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="99" class="l">            <span class="php-keyword2">system</span>(<span class="php-quote">'git rm -q '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$fileOrDirectory</span>), <span class="php-var">$result</span>);
+</span><span id="99" class="l">            <span class="php-keyword2">exec</span>(<span class="php-quote">'git rm -q '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$fileOrDirectory</span>), <span class="php-var">$output</span>, <span class="php-var">$result</span>);
 </span><span id="100" class="l">        }
 </span><span id="101" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$result</span>;
 </span><span id="102" class="l">    }
