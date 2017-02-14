@@ -769,22 +769,22 @@ container that could be exchanged in the future.</p>
 
 				<b>Flow\entity</b>
 				<br>
-				<b>Orm\index(name="identifierindex",columns={"identifier"}),</b>
-				<br>
-				<b>Orm\index(name="nodetypeindex",columns={"nodetype"}):</b>
-				<p>}
-)</p><br>
-				<b>Orm\index(name="parentpath_sortingindex",columns={"parentpathhash",:</b>
-				"sortingindex"}),<br>
 				<b>Orm\table(:</b>
 				uniqueConstraints={<br>
-				<b>Orm\uniqueconstraint(name="identifier_workspace_dimensions_movedto",columns={"identifier",:</b>
+				<b>Orm\uniqueconstraint(name=&quot;path_workspace_dimensions&quot;,columns={&quot;pathhash&quot;,:</b>
+				"workspace", "dimensionshash"}),<br>
+				<b>Orm\uniqueconstraint(name=&quot;identifier_workspace_dimensions_movedto&quot;,columns={&quot;identifier&quot;,:</b>
 				<p>"workspace", "dimensionshash", "movedto"})
     },
     indexes={</p><br>
-				<b>Orm\uniqueconstraint(name="path_workspace_dimensions",columns={"pathhash",:</b>
-				"workspace", "dimensionshash"}),<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#27-1064" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/NodeData.php</a>
+				<b>Orm\index(name=&quot;parentpath_sortingindex&quot;,columns={&quot;parentpathhash&quot;,:</b>
+				"sortingindex"}),<br>
+				<b>Orm\index(name=&quot;identifierindex&quot;,columns={&quot;identifier&quot;}),</b>
+				<br>
+				<b>Orm\index(name=&quot;nodetypeindex&quot;,columns={&quot;nodetype&quot;}):</b>
+				<p>}
+)</p><br>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#27-1074" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/NodeData.php</a>
 		<br>
 	</div>
 
@@ -1917,7 +1917,11 @@ will be set to the same values as in the source node.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Make the node "similar" to the given source node. That means, - all properties - index - node type - content object
+				<p>Make the node "similar" to the given source node. That means,
+ - all properties
+ - index
+ - node type
+ - content object
 will be set to the same values as in the source node.</p>
 
 
@@ -2211,7 +2215,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createShadow">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#933-947" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#933-948" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a shadow NodeData at the given path with the same workspace and dimensions as this</p>
@@ -2220,7 +2224,8 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 			<div class="description detailed hidden">
 				<p>Create a shadow NodeData at the given path with the same workspace and dimensions as this</p>
 
-<p>Note: The constructor will already add the new object to the repository</p>
+<p>Note: The constructor will already add the new object to the repository
+Internal method, do not use outside of the content repository.</p>
 
 
 					<h4>Parameters</h4>
@@ -2251,7 +2256,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAsShadowOf">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#949-961" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#950-962" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>This becomes a shdow of the given NodeData object.
@@ -2287,7 +2292,7 @@ If NULL or no argument is given then movedTo is nulled and removed is set to FAL
 
 			<td class="name"><div>
 			<a class="anchor" href="#_materializeToWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#963-979" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#964-980" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Materializes the original node data (of a different workspace) into the current
@@ -2329,7 +2334,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addOrUpdate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#981-1004" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#982-1014" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds this node to the Node Repository or updates it if it has been added earlier</p>
@@ -2369,7 +2374,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1006-1015" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1016-1025" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the attached content object</p>
@@ -2405,7 +2410,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculatePathHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1017-1025" title="Go to source code">calculatePathHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1027-1035" title="Go to source code">calculatePathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the path of this instance.</p>
@@ -2434,7 +2439,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculateParentPathHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1027-1035" title="Go to source code">calculateParentPathHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1037-1045" title="Go to source code">calculateParentPathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the dimensions and their values for this instance.</p>
@@ -2463,7 +2468,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1037-1052" title="Go to source code">__clone</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1047-1062" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Create a fresh collection instance and clone dimensions</p>
@@ -2492,7 +2497,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePathChanged">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1054-1063" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1064-1073" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node has changed its path.</p>
@@ -2641,12 +2646,12 @@ The hash is generated in calculatePathHash().</p>
 				<div class="description detailed hidden">
 					<p>Absolute path of this node</p>
 
-						<h4>Flow\validate(type="stringlength",</h4>
-						<div class="list">
-								options={ "minimum"=1, "maximum"=4000 })<br>
-						</div>
 						<h4>Orm\column(length=4000)</h4>
 						<div class="list">
+						</div>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "minimum"=1, "maximum"=4000 })<br>
 						</div>
 				</div>
 			</td>
@@ -2705,12 +2710,12 @@ The hash is generated in calculateParentPathHash().</p>
 				<div class="description detailed hidden">
 					<p>Absolute path of the parent path</p>
 
-						<h4>Flow\validate(type="stringlength",</h4>
-						<div class="list">
-								options={ "maximum"=4000 })<br>
-						</div>
 						<h4>Orm\column(length=4000)</h4>
 						<div class="list">
+						</div>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "maximum"=4000 })<br>
 						</div>
 				</div>
 			</td>
@@ -2737,12 +2742,12 @@ The hash is generated in calculateParentPathHash().</p>
 				<div class="description detailed hidden">
 					<p>Workspace this node is contained in</p>
 
-						<h4>Orm\joincolumn(ondelete="set</h4>
-						<div class="list">
-								NULL")<br>
-						</div>
 						<h4>Orm\manytoone</h4>
 						<div class="list">
+						</div>
+						<h4>Orm\joincolumn(ondelete=&quot;set</h4>
+						<div class="list">
+								NULL")<br>
 						</div>
 				</div>
 			</td>
@@ -2794,7 +2799,7 @@ The hash is generated in calculateParentPathHash().</p>
 				<div class="description detailed hidden">
 					<p>Index within the nodes with the same parent</p>
 
-						<h4>Orm\column(name="sortingindex",</h4>
+						<h4>Orm\column(name=&quot;sortingindex&quot;,</h4>
 						<div class="list">
 								nullable=true)<br>
 						</div>
@@ -2936,7 +2941,7 @@ really removed, in other workspaces, removal is realized by this flag.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Orm\onetomany(mappedby="nodedata",</h4>
+						<h4>Orm\onetomany(mappedby=&quot;nodedata&quot;,</h4>
 						<div class="list">
 								orphanRemoval=true)<br>
 						</div>
@@ -2995,7 +3000,7 @@ The hash is generated in buildDimensionValues().</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Gedmo\timestampable(on="update",</h4>
+						<h4>Gedmo\timestampable(on=&quot;update&quot;,</h4>
 						<div class="list">
 								field={"pathHash", "parentPathHash", "identifier", "index", "contentObjectProxy", "removed", "dimensionHash", "hidden", "hiddenBeforeDateTime", "hiddenAfterDateTime", "hiddenInIndex", "nodeType", "properties"})<br>
 						</div>
@@ -3108,7 +3113,7 @@ The hash is generated in buildDimensionValues().</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Orm\column(type="flow_json_array")</h4>
+						<h4>Orm\column(type=&quot;flow_json_array&quot;)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -3136,12 +3141,12 @@ The hash is generated in buildDimensionValues().</p>
 				<div class="description detailed hidden">
 					<p>If a node data is moved a "shadow" node data is inserted that references the new node data</p>
 
-						<h4>Orm\joincolumn(ondelete="set</h4>
-						<div class="list">
-								NULL")<br>
-						</div>
 						<h4>Orm\manytoone</h4>
 						<div class="list">
+						</div>
+						<h4>Orm\joincolumn(ondelete=&quot;set</h4>
+						<div class="list">
+								NULL")<br>
 						</div>
 				</div>
 			</td>
@@ -3237,7 +3242,7 @@ The hash is generated in buildDimensionValues().</p>
 		Neos 2.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?f2dde7be82fcde8a19fa89674821e13a41a236d2"></script>
 </body>
 </html>

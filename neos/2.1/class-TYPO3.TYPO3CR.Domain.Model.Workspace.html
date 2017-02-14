@@ -750,11 +750,11 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TYPO3CR.html">TYPO3CR</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.html">Domain</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.Model.html">Model</a><br>
 		
 
-				<b>Api</b>
-				<br>
 				<b>Flow\entity</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#23-679" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/Workspace.php</a>
+				<b>Api</b>
+				<br>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#23-732" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/Workspace.php</a>
 		<br>
 	</div>
 
@@ -1468,7 +1468,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishNode">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#398-436" title="Go to source code">publishNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#398-438" title="Go to source code">publishNode</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given node to the target workspace.</p>
@@ -1509,7 +1509,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#438-473" title="Go to source code">replaceNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#440-475" title="Go to source code">replaceNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace the node data of a node instance with a given target node data</p>
@@ -1538,6 +1538,84 @@ removed, both node data are removed.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="moveWorkspaceVariants" id="_moveWorkspaceVariants">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_moveWorkspaceVariants">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#477-504" title="Go to source code">moveWorkspaceVariants</a>( <span>string <var>$nodeIdentifier</var></span>, <span>string <var>$targetPath</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$sourceWorkspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+
+			<div class="description short">
+				<p>Moves workspace variants of the node that were not moved to the target destination.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Moves workspace variants of the node that were not moved to the target destination.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeIdentifier</var></dt>
+						<dd></dd>
+						<dt><var>$targetPath</var></dt>
+						<dd></dd>
+						<dt><var>$sourceWorkspace</var></dt>
+						<dd></dd>
+						<dt><var>$targetWorkspace</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="moveTargetNodeToNewPosition" id="_moveTargetNodeToNewPosition">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_moveTargetNodeToNewPosition">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#506-521" title="Go to source code">moveTargetNodeToNewPosition</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span>, <span>string <var>$destinationPath</var></span> )</code>
+
+			<div class="description short">
+				<p>Moves an existing node in a target workspace to the place it should be in after publish,
+in order to move all children to the new position as well.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Moves an existing node in a target workspace to the place it should be in after publish,
+in order to move all children to the new position as well.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$targetNodeData</var></dt>
+						<dd></dd>
+						<dt><var>$destinationPath</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="moveNodeVariantToTargetWorkspace" id="_moveNodeVariantToTargetWorkspace">
 
 			<td class="attributes"><code>
@@ -1549,7 +1627,7 @@ removed, both node data are removed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveNodeVariantToTargetWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#475-501" title="Go to source code">moveNodeVariantToTargetWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#523-549" title="Go to source code">moveNodeVariantToTargetWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Move the given node instance to the target workspace</p>
@@ -1588,7 +1666,7 @@ is published will be used as a new node variant in the target workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleShadowNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#503-533" title="Go to source code">handleShadowNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$publishedNodeData</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#551-575" title="Go to source code">handleShadowNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$publishedNodeData</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Look for a shadow node of $publishedNodeData either adjust or remove it based on $targetWorkspace if the shadow
@@ -1632,7 +1710,7 @@ node is marked as removed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_adjustShadowNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#535-560" title="Go to source code">adjustShadowNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$shadowNodeData</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$publishedNodeData</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#577-613" title="Go to source code">adjustShadowNodeData</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$shadowNodeData</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$publishedNodeData</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$targetNodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Adjust the given $shadowNodeData by removing it or moving it to the $targetWorkspace, as needed.</p>
@@ -1672,7 +1750,7 @@ node is marked as removed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_adjustShadowNodePath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#562-583" title="Go to source code">adjustShadowNodePath</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$shadowNodeData</var></span>, <span> <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#615-636" title="Go to source code">adjustShadowNodePath</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$shadowNodeData</var></span>, <span> <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Adjusts the path of $shadowNodeData to $path, if needed/possible.</p>
@@ -1714,7 +1792,7 @@ node is marked as removed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeCount">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#585-601" title="Go to source code">getNodeCount</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#638-654" title="Go to source code">getNodeCount</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the number of nodes in this workspace.</p>
@@ -1757,7 +1835,7 @@ because a workspace always contains at least its Root Node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyPublishingTargetWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#603-620" title="Go to source code">verifyPublishingTargetWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#656-673" title="Go to source code">verifyPublishingTargetWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the specified workspace is a base workspace of this workspace
@@ -1797,7 +1875,7 @@ and if not, throws an exception</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findNodeDataInTargetWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#622-635" title="Go to source code">findNodeDataInTargetWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#675-688" title="Go to source code">findNodeDataInTargetWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the NodeData instance with the given identifier from the target workspace.
@@ -1839,7 +1917,7 @@ If no NodeData instance is found, null is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBaseWorkspaceChanged">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#637-648" title="Go to source code">emitBaseWorkspaceChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$oldBaseWorkspace</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$newBaseWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#690-701" title="Go to source code">emitBaseWorkspaceChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$oldBaseWorkspace</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$newBaseWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Emits a signal after the base workspace has been changed</p>
@@ -1880,7 +1958,7 @@ If no NodeData instance is found, null is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeNodePublishing">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#650-663" title="Go to source code">emitBeforeNodePublishing</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#703-716" title="Go to source code">emitBeforeNodePublishing</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Emits a signal just before a node is being published</p>
@@ -1922,7 +2000,7 @@ workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterNodePublishing">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#665-678" title="Go to source code">emitAfterNodePublishing</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#718-731" title="Go to source code">emitAfterNodePublishing</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Emits a signal when a node has been published.</p>
@@ -1971,7 +2049,7 @@ workspace.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TYPO3CR.Domain.Model.Workspace.html#31-34" title="Go to source code"><b>PERSONAL_WORKSPACE_PREFIX</b></a>
+						<a href="source-constant-PERSONAL_WORKSPACE_PREFIX.html#31-34" title="Go to source code"><b>PERSONAL_WORKSPACE_PREFIX</b></a>
 					</code>
 
 					<div class="description short">
@@ -2018,12 +2096,12 @@ workspace.</p>
 						<h4>Flow\identity</h4>
 						<div class="list">
 						</div>
-						<h4>Flow\validate(type="stringlength",</h4>
-						<div class="list">
-								options={ "minimum"=1, "maximum"=200 })<br>
-						</div>
 						<h4>Orm\id</h4>
 						<div class="list">
+						</div>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "minimum"=1, "maximum"=200 })<br>
 						</div>
 				</div>
 			</td>
@@ -2050,7 +2128,7 @@ workspace.</p>
 				<div class="description detailed hidden">
 					<p>A user-defined, human-friendly title for this workspace</p>
 
-						<h4>Flow\validate(type="stringlength",</h4>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
 						<div class="list">
 								options={ "minimum"=1, "maximum"=200 })<br>
 						</div>
@@ -2079,13 +2157,13 @@ workspace.</p>
 				<div class="description detailed hidden">
 					<p>An optional user-defined description</p>
 
-						<h4>Flow\validate(type="stringlength",</h4>
-						<div class="list">
-								options={ "minimum"=0, "maximum"=500 })<br>
-						</div>
-						<h4>Orm\column(type="text",</h4>
+						<h4>Orm\column(type=&quot;text&quot;,</h4>
 						<div class="list">
 								length=500, nullable=true)<br>
+						</div>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "minimum"=0, "maximum"=500 })<br>
 						</div>
 				</div>
 			</td>
@@ -2121,7 +2199,7 @@ for it in Flow core.</p>
 
 <p>See also: http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/cookbook/resolve-target-entity-listener.html</p>
 
-						<h4>Orm\column(type="string",</h4>
+						<h4>Orm\column(type=&quot;string&quot;,</h4>
 						<div class="list">
 								length=40, nullable=true)<br>
 						</div>
@@ -2153,12 +2231,12 @@ for it in Flow core.</p>
 <p>Content from the base workspace will shine through in this workspace
 as long as they are not modified in this workspace.</p>
 
-						<h4>Orm\joincolumn(ondelete="set</h4>
-						<div class="list">
-								NULL")<br>
-						</div>
 						<h4>Orm\manytoone</h4>
 						<div class="list">
+						</div>
+						<h4>Orm\joincolumn(ondelete=&quot;set</h4>
+						<div class="list">
+								NULL")<br>
 						</div>
 				</div>
 			</td>
@@ -2185,10 +2263,10 @@ as long as they are not modified in this workspace.</p>
 				<div class="description detailed hidden">
 					<p>Root node data of this workspace</p>
 
-						<h4>Orm\joincolumn(referencedcolumnname="id")</h4>
+						<h4>Orm\manytoone</h4>
 						<div class="list">
 						</div>
-						<h4>Orm\manytoone</h4>
+						<h4>Orm\joincolumn(referencedcolumnname=&quot;id&quot;)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -2383,7 +2461,7 @@ as long as they are not modified in this workspace.</p>
 		Neos 2.1 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?f2dde7be82fcde8a19fa89674821e13a41a236d2"></script>
 </body>
 </html>
