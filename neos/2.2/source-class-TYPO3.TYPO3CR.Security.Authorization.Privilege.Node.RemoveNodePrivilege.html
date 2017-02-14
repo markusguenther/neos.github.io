@@ -778,7 +778,7 @@
 </span></span><span id="50" class="l"><span class="php-comment">     */</span>
 </span><span id="51" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildMethodPrivilegeMatcher()
 </span><span id="52" class="l">    {
-</span><span id="53" class="l">        <span class="php-keyword1">return</span> <span class="php-quote">'within('</span> . NodeInterface::<span class="php-keyword1">class</span> . <span class="php-quote">') &amp;&amp; method(.*-&gt;(remove|setRemoved)())'</span>;
+</span><span id="53" class="l">        <span class="php-keyword1">return</span> <span class="php-quote">'within('</span> . NodeInterface::<span class="php-keyword1">class</span> . <span class="php-quote">') &amp;&amp; method(.*-&gt;setRemoved(removed == true))'</span>;
 </span><span id="54" class="l">    }
 </span><span id="55" class="l">}
 </span><span id="56" class="l"></span></code></pre>
