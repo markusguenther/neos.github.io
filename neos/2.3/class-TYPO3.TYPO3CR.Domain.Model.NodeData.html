@@ -796,22 +796,22 @@ container that could be exchanged in the future.</p>
 
 				<b>Flow\entity</b>
 				<br>
-				<b>Orm\index(name="identifierindex",columns={"identifier"}),</b>
-				<br>
-				<b>Orm\index(name="nodetypeindex",columns={"nodetype"}):</b>
-				<p>}
-)</p><br>
-				<b>Orm\index(name="parentpath_sortingindex",columns={"parentpathhash",:</b>
-				"sortingindex"}),<br>
 				<b>Orm\table(:</b>
 				uniqueConstraints={<br>
-				<b>Orm\uniqueconstraint(name="identifier_workspace_dimensions_movedto",columns={"identifier",:</b>
+				<b>Orm\uniqueconstraint(name=&quot;path_workspace_dimensions&quot;,columns={&quot;pathhash&quot;,:</b>
+				"workspace", "dimensionshash"}),<br>
+				<b>Orm\uniqueconstraint(name=&quot;identifier_workspace_dimensions_movedto&quot;,columns={&quot;identifier&quot;,:</b>
 				<p>"workspace", "dimensionshash", "movedto"})
    },
    indexes={</p><br>
-				<b>Orm\uniqueconstraint(name="path_workspace_dimensions",columns={"pathhash",:</b>
-				"workspace", "dimensionshash"}),<br>
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#27-1077" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/NodeData.php</a>
+				<b>Orm\index(name=&quot;parentpath_sortingindex&quot;,columns={&quot;parentpathhash&quot;,:</b>
+				"sortingindex"}),<br>
+				<b>Orm\index(name=&quot;identifierindex&quot;,columns={&quot;identifier&quot;}),</b>
+				<br>
+				<b>Orm\index(name=&quot;nodetypeindex&quot;,columns={&quot;nodetype&quot;}):</b>
+				<p>}
+)</p><br>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#33-1093" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/NodeData.php</a>
 		<br>
 	</div>
 
@@ -831,7 +831,7 @@ container that could be exchanged in the future.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#219-250" title="Go to source code">__construct</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#225-256" title="Go to source code">__construct</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Constructs this node data container</p>
@@ -878,7 +878,7 @@ in a Node object which will internally create a NodeData object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#252-260" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#258-266" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of this node</p>
@@ -911,7 +911,7 @@ in a Node object which will internally create a NodeData object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#262-301" title="Go to source code">setPath</a>( <span>string <var>$path</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#268-307" title="Go to source code">setPath</a>( <span>string <var>$path</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the absolute path of this node</p>
@@ -951,7 +951,7 @@ in a Node object which will internally create a NodeData object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#303-313" title="Go to source code">getPath</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#309-319" title="Go to source code">getPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the path of this node</p>
@@ -986,7 +986,7 @@ in a Node object which will internally create a NodeData object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContextPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#315-325" title="Go to source code">getContextPath</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#321-331" title="Go to source code">getContextPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the absolute path of this node with additional context information (such as the workspace name).</p>
@@ -1021,7 +1021,7 @@ in a Node object which will internally create a NodeData object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDepth">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#327-340" title="Go to source code">getDepth</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#333-346" title="Go to source code">getDepth</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the level at which this node is located.
@@ -1056,7 +1056,7 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#342-355" title="Go to source code">setWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#348-361" title="Go to source code">setWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the workspace of this node.</p>
@@ -1090,7 +1090,7 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#357-365" title="Go to source code">getWorkspace</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#363-371" title="Go to source code">getWorkspace</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the workspace this node is contained in</p>
@@ -1123,7 +1123,7 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getIdentifier">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#367-383" title="Go to source code">getIdentifier</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#373-389" title="Go to source code">getIdentifier</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the identifier of this node.</p>
@@ -1164,7 +1164,7 @@ as it does not change even if all of the nodes content or its path changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setIndex">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#385-397" title="Go to source code">setIndex</a>( <span>integer <var>$index</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#391-403" title="Go to source code">setIndex</a>( <span>integer <var>$index</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the index of this node</p>
@@ -1198,7 +1198,7 @@ as it does not change even if all of the nodes content or its path changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getIndex">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#399-408" title="Go to source code">getIndex</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#405-414" title="Go to source code">getIndex</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the index of this node which determines the order among siblings
@@ -1233,7 +1233,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParent">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#410-422" title="Go to source code">getParent</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#416-428" title="Go to source code">getParent</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the parent node of this node</p>
@@ -1266,7 +1266,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParentPath">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#424-432" title="Go to source code">getParentPath</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#430-438" title="Go to source code">getParentPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the parent node path</p>
@@ -1299,7 +1299,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#434-463" title="Go to source code">createNodeData</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#440-469" title="Go to source code">createNodeData</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates, adds and returns a child node of this node. Also sets default
@@ -1347,7 +1347,7 @@ properties and creates default subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createSingleNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#465-497" title="Go to source code">createSingleNodeData</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#471-503" title="Go to source code">createSingleNodeData</a>( <span>string <var>$name</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates, adds and returns a child node of this node, without setting default
@@ -1400,7 +1400,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNodeDataFromTemplate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#499-517" title="Go to source code">createNodeDataFromTemplate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeTemplate.html">TYPO3\TYPO3CR\Domain\Model\NodeTemplate</a></code> <var>$nodeTemplate</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#505-523" title="Go to source code">createNodeDataFromTemplate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeTemplate.html">TYPO3\TYPO3CR\Domain\Model\NodeTemplate</a></code> <var>$nodeTemplate</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates and persists a node from the given $nodeTemplate as child node</p>
@@ -1444,7 +1444,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setIdentifier">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#519-530" title="Go to source code">setIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#525-536" title="Go to source code">setIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Change the identifier of this node data</p>
@@ -1480,7 +1480,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getChildNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#532-540" title="Go to source code">getChildNodeData</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#538-546" title="Go to source code">getChildNodeData</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all direct child node data of this node data without reducing the result (multiple variants can be returned)</p>
@@ -1513,7 +1513,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNumberOfChildNodes">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#542-553" title="Go to source code">getNumberOfChildNodes</a>( <span>string <var>$nodeTypeFilter</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#548-559" title="Go to source code">getNumberOfChildNodes</a>( <span>string <var>$nodeTypeFilter</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the number of child nodes a similar getChildNodes() call would return.</p>
@@ -1555,7 +1555,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#555-563" title="Go to source code">remove</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#561-569" title="Go to source code">remove</a>( )</code>
 
 			<div class="description short">
 				<p>Removes this node and all its child nodes. This is an alias for setRemoved(TRUE)</p>
@@ -1584,7 +1584,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRemoved">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#565-576" title="Go to source code">setRemoved</a>( <span>boolean <var>$removed</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#571-582" title="Go to source code">setRemoved</a>( <span>boolean <var>$removed</var></span> )</code>
 
 			<div class="description short">
 				<p>Enables using the remove method when only setters are available</p>
@@ -1618,7 +1618,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemoved">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#578-586" title="Go to source code">isRemoved</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#584-592" title="Go to source code">isRemoved</a>( )</code>
 
 			<div class="description short">
 				<p>If this node is a removed node.</p>
@@ -1651,7 +1651,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isVisible">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#588-604" title="Go to source code">isVisible</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#594-610" title="Go to source code">isVisible</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this node is "visible".</p>
@@ -1688,7 +1688,7 @@ such as isAccessible() need to be evaluated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAccessible">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#606-628" title="Go to source code">isAccessible</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#612-634" title="Go to source code">isAccessible</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this node may be accessed according to the current security context.</p>
@@ -1721,7 +1721,7 @@ such as isAccessible() need to be evaluated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasAccessRestrictions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#630-646" title="Go to source code">hasAccessRestrictions</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#636-652" title="Go to source code">hasAccessRestrictions</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if a node, in general, has access restrictions, independent of the
@@ -1756,7 +1756,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#648-656" title="Go to source code">getDimensions</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#654-662" title="Go to source code">getDimensions</a>( )</code>
 
 			<div class="description short">
 				<p>Internal use, do not retrieve collection directly</p>
@@ -1789,7 +1789,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#658-693" title="Go to source code">setDimensions</a>( <span>array <var>$dimensionsToBeSet</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#664-699" title="Go to source code">setDimensions</a>( <span>array <var>$dimensionsToBeSet</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal use, do not manipulate collection directly</p>
@@ -1823,7 +1823,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findExistingDimensionMatching">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#695-711" title="Go to source code">findExistingDimensionMatching</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeDimension.html">TYPO3\TYPO3CR\Domain\Model\NodeDimension</a></code> <var>$dimensionToBeSet</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#701-717" title="Go to source code">findExistingDimensionMatching</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeDimension.html">TYPO3\TYPO3CR\Domain\Model\NodeDimension</a></code> <var>$dimensionToBeSet</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal method used in setDimensions to reuse dimension objects with the same name/value pair.</p>
@@ -1865,7 +1865,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMovedTo">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#713-719" title="Go to source code">getMovedTo</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#719-725" title="Go to source code">getMovedTo</a>( )</code>
 
 			<div class="description short">
 				
@@ -1898,7 +1898,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setMovedTo">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#721-728" title="Go to source code">setMovedTo</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#727-734" title="Go to source code">setMovedTo</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1932,7 +1932,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_similarize">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#730-772" title="Go to source code">similarize</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html">TYPO3\TYPO3CR\Domain\Model\AbstractNodeData</a></code> <var>$sourceNode</var></span>, <span>boolean <var>$isCopy</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#736-778" title="Go to source code">similarize</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html">TYPO3\TYPO3CR\Domain\Model\AbstractNodeData</a></code> <var>$sourceNode</var></span>, <span>boolean <var>$isCopy</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Make the node "similar" to the given source node. That means,
@@ -1944,7 +1944,11 @@ will be set to the same values as in the source node.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Make the node "similar" to the given source node. That means, - all properties - index - node type - content object
+				<p>Make the node "similar" to the given source node. That means,
+ - all properties
+ - index
+ - node type
+ - content object
 will be set to the same values as in the source node.</p>
 
 
@@ -1974,7 +1978,7 @@ will be set to the same values as in the source node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDimensionValues">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#774-782" title="Go to source code">getDimensionValues</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#780-788" title="Go to source code">getDimensionValues</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the dimensions and their values.</p>
@@ -2007,7 +2011,7 @@ will be set to the same values as in the source node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildDimensionValues">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#784-798" title="Go to source code">buildDimensionValues</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#790-804" title="Go to source code">buildDimensionValues</a>( )</code>
 
 			<div class="description short">
 				<p>Build a cached array of dimension values and a hash to search for it.</p>
@@ -2036,7 +2040,7 @@ will be set to the same values as in the source node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDimensionsHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#800-810" title="Go to source code">getDimensionsHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#806-816" title="Go to source code">getDimensionsHash</a>( )</code>
 
 			<div class="description short">
 				<p>Get a unique string for all dimension values</p>
@@ -2071,7 +2075,7 @@ will be set to the same values as in the source node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesWorkspaceAndDimensions">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#812-834" title="Go to source code">matchesWorkspaceAndDimensions</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#818-840" title="Go to source code">matchesWorkspaceAndDimensions</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Checks if this instance matches the given workspace and dimensions.</p>
@@ -2111,7 +2115,7 @@ will be set to the same values as in the source node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInternal">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#836-845" title="Go to source code">isInternal</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#842-851" title="Go to source code">isInternal</a>( )</code>
 
 			<div class="description short">
 				<p>Check if this NodeData object is a purely internal technical object (like a shadow node).
@@ -2146,7 +2150,7 @@ An internal NodeData should never produce a Node object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_move">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#847-929" title="Go to source code">move</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#853-935" title="Go to source code">move</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Move this NodeData to the given path and workspace.</p>
@@ -2196,7 +2200,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getExistingShadowNodeData">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#931-942" title="Go to source code">getExistingShadowNodeData</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#937-948" title="Go to source code">getExistingShadowNodeData</a>( <span>string <var>$path</var></span>, <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Find an existing shadow node data on the given path for the current node data of the node (used by setPath)</p>
@@ -2230,7 +2234,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 		<tr data-order="createShadow" id="_createShadow">
 
 			<td class="attributes"><code>
-				 protected 
+				 public 
 				<code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code>
 				
 				</code>
@@ -2238,7 +2242,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createShadow">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#944-959" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#950-966" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a shadow NodeData at the given path with the same workspace and dimensions as this</p>
@@ -2247,7 +2251,8 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 			<div class="description detailed hidden">
 				<p>Create a shadow NodeData at the given path with the same workspace and dimensions as this</p>
 
-<p>Note: The constructor will already add the new object to the repository</p>
+<p>Note: The constructor will already add the new object to the repository
+Internal method, do not use outside of the content repository.</p>
 
 
 					<h4>Parameters</h4>
@@ -2278,7 +2283,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAsShadowOf">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#961-973" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#968-980" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>This becomes a shdow of the given NodeData object.
@@ -2314,7 +2319,7 @@ If NULL or no argument is given then movedTo is nulled and removed is set to FAL
 
 			<td class="name"><div>
 			<a class="anchor" href="#_materializeToWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#975-992" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#982-999" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.Workspace.html">TYPO3\TYPO3CR\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Materializes the original node data (of a different workspace) into the current
@@ -2356,7 +2361,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addOrUpdate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#994-1017" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1001-1033" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds this node to the Node Repository or updates it if it has been added earlier</p>
@@ -2396,7 +2401,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1019-1028" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1035-1044" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the attached content object</p>
@@ -2432,7 +2437,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculatePathHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1030-1038" title="Go to source code">calculatePathHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1046-1054" title="Go to source code">calculatePathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the path of this instance.</p>
@@ -2461,7 +2466,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculateParentPathHash">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1040-1048" title="Go to source code">calculateParentPathHash</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1056-1064" title="Go to source code">calculateParentPathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the dimensions and their values for this instance.</p>
@@ -2490,7 +2495,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1050-1065" title="Go to source code">__clone</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1066-1081" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Create a fresh collection instance and clone dimensions</p>
@@ -2519,7 +2524,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePathChanged">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1067-1076" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#1083-1092" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeData.html">TYPO3\TYPO3CR\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node has changed its path.</p>
@@ -2599,7 +2604,7 @@ workspace, excluding content dimensions</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#48-54" title="Go to source code"><var>$version</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#54-60" title="Go to source code"><var>$version</var></a>
 
 				<div class="description short">
 					<p>Auto-incrementing version of this node data, used for optimistic locking</p>
@@ -2627,7 +2632,7 @@ workspace, excluding content dimensions</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#56-64" title="Go to source code"><var>$pathHash</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#62-70" title="Go to source code"><var>$pathHash</var></a>
 
 				<div class="description short">
 					<p>MD5 hash of the path
@@ -2659,7 +2664,7 @@ The hash is generated in calculatePathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#66-73" title="Go to source code"><var>$path</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#72-79" title="Go to source code"><var>$path</var></a>
 
 				<div class="description short">
 					<p>Absolute path of this node</p>
@@ -2668,12 +2673,12 @@ The hash is generated in calculatePathHash().</p>
 				<div class="description detailed hidden">
 					<p>Absolute path of this node</p>
 
-						<h4>Flow\validate(type="stringlength",</h4>
-						<div class="list">
-								options={ "minimum"=1, "maximum"=4000 })<br>
-						</div>
 						<h4>Orm\column(length=4000)</h4>
 						<div class="list">
+						</div>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "minimum"=1, "maximum"=4000 })<br>
 						</div>
 				</div>
 			</td>
@@ -2691,7 +2696,7 @@ The hash is generated in calculatePathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#75-83" title="Go to source code"><var>$parentPathHash</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#81-89" title="Go to source code"><var>$parentPathHash</var></a>
 
 				<div class="description short">
 					<p>MD5 hash of the parent path
@@ -2723,7 +2728,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#85-92" title="Go to source code"><var>$parentPath</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#91-98" title="Go to source code"><var>$parentPath</var></a>
 
 				<div class="description short">
 					<p>Absolute path of the parent path</p>
@@ -2732,12 +2737,12 @@ The hash is generated in calculateParentPathHash().</p>
 				<div class="description detailed hidden">
 					<p>Absolute path of the parent path</p>
 
-						<h4>Flow\validate(type="stringlength",</h4>
-						<div class="list">
-								options={ "maximum"=4000 })<br>
-						</div>
 						<h4>Orm\column(length=4000)</h4>
 						<div class="list">
+						</div>
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "maximum"=4000 })<br>
 						</div>
 				</div>
 			</td>
@@ -2755,7 +2760,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#94-103" title="Go to source code"><var>$workspace</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#100-109" title="Go to source code"><var>$workspace</var></a>
 
 				<div class="description short">
 					<p>Workspace this node is contained in</p>
@@ -2764,12 +2769,12 @@ The hash is generated in calculateParentPathHash().</p>
 				<div class="description detailed hidden">
 					<p>Workspace this node is contained in</p>
 
-						<h4>Orm\joincolumn(ondelete="set</h4>
-						<div class="list">
-								NULL")<br>
-						</div>
 						<h4>Orm\manytoone</h4>
 						<div class="list">
+						</div>
+						<h4>Orm\joincolumn(ondelete=&quot;set</h4>
+						<div class="list">
+								NULL")<br>
 						</div>
 				</div>
 			</td>
@@ -2787,7 +2792,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#105-110" title="Go to source code"><var>$identifier</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#111-116" title="Go to source code"><var>$identifier</var></a>
 
 				<div class="description short">
 					<p>Identifier of this node which is unique within its workspace</p>
@@ -2812,7 +2817,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#112-118" title="Go to source code"><var>$index</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#118-124" title="Go to source code"><var>$index</var></a>
 
 				<div class="description short">
 					<p>Index within the nodes with the same parent</p>
@@ -2821,7 +2826,7 @@ The hash is generated in calculateParentPathHash().</p>
 				<div class="description detailed hidden">
 					<p>Index within the nodes with the same parent</p>
 
-						<h4>Orm\column(name="sortingindex",</h4>
+						<h4>Orm\column(name=&quot;sortingindex&quot;,</h4>
 						<div class="list">
 								nullable=true)<br>
 						</div>
@@ -2841,7 +2846,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#120-126" title="Go to source code"><var>$depth</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#126-132" title="Go to source code"><var>$depth</var></a>
 
 				<div class="description short">
 					<p>Level number within the global node tree</p>
@@ -2869,7 +2874,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#128-134" title="Go to source code"><var>$name</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#134-140" title="Go to source code"><var>$name</var></a>
 
 				<div class="description short">
 					<p>Node name, derived from its node path</p>
@@ -2897,7 +2902,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#136-142" title="Go to source code"><var>$contentObjectProxy</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#142-148" title="Go to source code"><var>$contentObjectProxy</var></a>
 
 				<div class="description short">
 					<p>Optional proxy for a content object which acts as an alternative property container</p>
@@ -2925,7 +2930,7 @@ The hash is generated in calculateParentPathHash().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#144-151" title="Go to source code"><var>$removed</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#150-157" title="Go to source code"><var>$removed</var></a>
 
 				<div class="description short">
 					<p>If this is a removed node. This flag can and is only used in workspaces
@@ -2954,7 +2959,7 @@ really removed, in other workspaces, removal is realized by this flag.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#153-157" title="Go to source code"><var>$dimensions</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#159-163" title="Go to source code"><var>$dimensions</var></a>
 
 				<div class="description short">
 					
@@ -2963,7 +2968,7 @@ really removed, in other workspaces, removal is realized by this flag.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Orm\onetomany(mappedby="nodedata",</h4>
+						<h4>Orm\onetomany(mappedby=&quot;nodedata&quot;,</h4>
 						<div class="list">
 								orphanRemoval=true)<br>
 						</div>
@@ -2983,7 +2988,7 @@ really removed, in other workspaces, removal is realized by this flag.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#159-166" title="Go to source code"><var>$dimensionsHash</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#165-172" title="Go to source code"><var>$dimensionsHash</var></a>
 
 				<div class="description short">
 					<p>MD5 hash of the content dimensions
@@ -3013,7 +3018,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#168-172" title="Go to source code"><var>$lastModificationDateTime</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#174-178" title="Go to source code"><var>$lastModificationDateTime</var></a>
 
 				<div class="description short">
 					
@@ -3022,7 +3027,7 @@ The hash is generated in buildDimensionValues().</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Gedmo\timestampable(on="update",</h4>
+						<h4>Gedmo\timestampable(on=&quot;update&quot;,</h4>
 						<div class="list">
 								field={"pathHash", "parentPathHash", "identifier", "index", "contentObjectProxy", "removed", "dimensionHash", "hidden", "hiddenBeforeDateTime", "hiddenAfterDateTime", "hiddenInIndex", "nodeType", "properties"})<br>
 						</div>
@@ -3042,7 +3047,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#174-178" title="Go to source code"><var>$lastPublicationDateTime</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#180-184" title="Go to source code"><var>$lastPublicationDateTime</var></a>
 
 				<div class="description short">
 					
@@ -3070,7 +3075,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#180-184" title="Go to source code"><var>$hiddenBeforeDateTime</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#186-190" title="Go to source code"><var>$hiddenBeforeDateTime</var></a>
 
 				<div class="description short">
 					
@@ -3098,7 +3103,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#186-190" title="Go to source code"><var>$hiddenAfterDateTime</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#192-196" title="Go to source code"><var>$hiddenAfterDateTime</var></a>
 
 				<div class="description short">
 					
@@ -3126,7 +3131,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#192-196" title="Go to source code"><var>$dimensionValues</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#198-202" title="Go to source code"><var>$dimensionValues</var></a>
 
 				<div class="description short">
 					
@@ -3135,7 +3140,7 @@ The hash is generated in buildDimensionValues().</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Orm\column(type="flow_json_array")</h4>
+						<h4>Orm\column(type=&quot;flow_json_array&quot;)</h4>
 						<div class="list">
 						</div>
 				</div>
@@ -3154,7 +3159,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#198-205" title="Go to source code"><var>$movedTo</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#204-211" title="Go to source code"><var>$movedTo</var></a>
 
 				<div class="description short">
 					<p>If a node data is moved a "shadow" node data is inserted that references the new node data</p>
@@ -3163,12 +3168,12 @@ The hash is generated in buildDimensionValues().</p>
 				<div class="description detailed hidden">
 					<p>If a node data is moved a "shadow" node data is inserted that references the new node data</p>
 
-						<h4>Orm\joincolumn(ondelete="set</h4>
-						<div class="list">
-								NULL")<br>
-						</div>
 						<h4>Orm\manytoone</h4>
 						<div class="list">
+						</div>
+						<h4>Orm\joincolumn(ondelete=&quot;set</h4>
+						<div class="list">
+								NULL")<br>
 						</div>
 				</div>
 			</td>
@@ -3186,7 +3191,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#207-211" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#213-217" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
 					
@@ -3214,7 +3219,7 @@ The hash is generated in buildDimensionValues().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#213-217" title="Go to source code"><var>$nodeService</var></a>
+					<a href="source-class-TYPO3.TYPO3CR.Domain.Model.NodeData.html#219-223" title="Go to source code"><var>$nodeService</var></a>
 
 				<div class="description short">
 					
@@ -3264,7 +3269,7 @@ The hash is generated in buildDimensionValues().</p>
 		Neos (2.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?60649055ea718e7d0bdd6a6805e096660b3757e7"></script>
 </body>
 </html>

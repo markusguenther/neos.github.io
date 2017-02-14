@@ -784,7 +784,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Neos.html">Neos</a>\<a href="namespace-TYPO3.Neos.Controller.html">Controller</a>\<a href="namespace-TYPO3.Neos.Controller.Module.html">Module</a>\<a href="namespace-TYPO3.Neos.Controller.Module.Administration.html">Administration</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#31-425" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Module/Administration/SitesController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#34-428" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/Controller/Module/Administration/SitesController.php</a>
 		<br>
 	</div>
 
@@ -804,7 +804,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#96-121" title="Go to source code">indexAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#99-124" title="Go to source code">indexAction</a>( )</code>
 
 			<div class="description short">
 				
@@ -835,7 +835,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_editAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#123-144" title="Go to source code">editAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#126-147" title="Go to source code">editAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
 
 			<div class="description short">
 				<p>A edit view for a site and its settings.</p>
@@ -853,7 +853,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$site")</h4>
+					<h4>Flow\ignorevalidation(&quot;$site&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -872,7 +872,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateSiteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#146-175" title="Go to source code">updateSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span>, <span>string <var>$newSiteNodeName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#149-178" title="Go to source code">updateSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span>, <span>string <var>$newSiteNodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Update a site</p>
@@ -892,15 +892,15 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\validate(argumentname="$newsitenodename",</h4>
+					<h4>Flow\validate(argumentname=&quot;$site&quot;,</h4>
+					<div class="list">
+							type="UniqueEntity")<br>
+					</div>
+					<h4>Flow\validate(argumentname=&quot;$newsitenodename&quot;,</h4>
 					<div class="list">
 							type="NotEmpty")<br>
 							type="StringLength", options={ "minimum"=1, "maximum"=250 })<br>
 							type="TYPO3.Neos:NodeName")<br>
-					</div>
-					<h4>Flow\validate(argumentname="$site",</h4>
-					<div class="list">
-							type="UniqueEntity")<br>
 					</div>
 
 
@@ -918,7 +918,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_newSiteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#177-192" title="Go to source code">newSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#180-195" title="Go to source code">newSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new site form.</p>
@@ -936,7 +936,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$site")</h4>
+					<h4>Flow\ignorevalidation(&quot;$site&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -955,7 +955,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createSiteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#194-238" title="Go to source code">createSiteAction</a>( <span>string <var>$site</var></span>, <span>string <var>$packageKey</var> = <span class="php-quote">''</span></span>, <span>string <var>$siteName</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#197-241" title="Go to source code">createSiteAction</a>( <span>string <var>$site</var></span>, <span>string <var>$packageKey</var> = <span class="php-quote">''</span></span>, <span>string <var>$siteName</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new site.</p>
@@ -977,7 +977,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\validate(argumentname="$packagekey",</h4>
+					<h4>Flow\validate(argumentname=&quot;$packagekey&quot;,</h4>
 					<div class="list">
 							type="\TYPO3\Neos\Validation\Validator\PackageKeyValidator")<br>
 					</div>
@@ -997,7 +997,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteSiteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#240-252" title="Go to source code">deleteSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#243-255" title="Go to source code">deleteSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
 
 			<div class="description short">
 				<p>Delete a site.</p>
@@ -1015,7 +1015,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$site")</h4>
+					<h4>Flow\ignorevalidation(&quot;$site&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -1034,7 +1034,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateSiteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#254-266" title="Go to source code">activateSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#257-269" title="Go to source code">activateSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
 
 			<div class="description short">
 				<p>Activates a site</p>
@@ -1068,7 +1068,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateSiteAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#268-280" title="Go to source code">deactivateSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#271-283" title="Go to source code">deactivateSiteAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
 
 			<div class="description short">
 				<p>Deactivates a site</p>
@@ -1102,7 +1102,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_editDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#282-292" title="Go to source code">editDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#285-295" title="Go to source code">editDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
 
 			<div class="description short">
 				<p>Edit a domain</p>
@@ -1120,7 +1120,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$domain")</h4>
+					<h4>Flow\ignorevalidation(&quot;$domain&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -1139,7 +1139,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#294-306" title="Go to source code">updateDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#297-309" title="Go to source code">updateDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
 
 			<div class="description short">
 				<p>Update a domain</p>
@@ -1157,7 +1157,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\validate(argumentname="$domain",</h4>
+					<h4>Flow\validate(argumentname=&quot;$domain&quot;,</h4>
 					<div class="list">
 							type="UniqueEntity")<br>
 					</div>
@@ -1177,7 +1177,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_newDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#308-323" title="Go to source code">newDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#311-326" title="Go to source code">newDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TYPO3.Neos.Domain.Model.Site.html">TYPO3\Neos\Domain\Model\Site</a></code> <var>$site</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>The create a new domain action.</p>
@@ -1197,7 +1197,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$domain")</h4>
+					<h4>Flow\ignorevalidation(&quot;$domain&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -1216,7 +1216,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#325-337" title="Go to source code">createDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#328-340" title="Go to source code">createDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a domain</p>
@@ -1234,7 +1234,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\validate(argumentname="$domain",</h4>
+					<h4>Flow\validate(argumentname=&quot;$domain&quot;,</h4>
 					<div class="list">
 							type="UniqueEntity")<br>
 					</div>
@@ -1254,7 +1254,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#339-356" title="Go to source code">deleteDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#342-359" title="Go to source code">deleteDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
 
 			<div class="description short">
 				<p>Deletes a domain attached to a site</p>
@@ -1272,7 +1272,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$domain")</h4>
+					<h4>Flow\ignorevalidation(&quot;$domain&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -1291,7 +1291,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#358-371" title="Go to source code">activateDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#361-374" title="Go to source code">activateDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
 
 			<div class="description short">
 				<p>Activates a domain</p>
@@ -1309,7 +1309,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$domain")</h4>
+					<h4>Flow\ignorevalidation(&quot;$domain&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -1328,7 +1328,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateDomainAction">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#373-386" title="Go to source code">deactivateDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#376-389" title="Go to source code">deactivateDomainAction</a>( <span><code><a href="class-TYPO3.Neos.Domain.Model.Domain.html">TYPO3\Neos\Domain\Model\Domain</a></code> <var>$domain</var></span> )</code>
 
 			<div class="description short">
 				<p>Deactivates a domain</p>
@@ -1346,7 +1346,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 
 
-					<h4>Flow\ignorevalidation("$domain")</h4>
+					<h4>Flow\ignorevalidation(&quot;$domain&quot;)</h4>
 					<div class="list">
 					</div>
 
@@ -1365,7 +1365,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unsetLastVisitedNodeAndRedirect">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#388-402" title="Go to source code">unsetLastVisitedNodeAndRedirect</a>( <span>string <var>$actionName</var></span>, <span>string <var>$controllerName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span>, <span>string <var>$format</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#391-405" title="Go to source code">unsetLastVisitedNodeAndRedirect</a>( <span>string <var>$actionName</var></span>, <span>string <var>$controllerName</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$delay</var> = <span class="php-num">0</span></span>, <span>integer <var>$statusCode</var> = <span class="php-num">303</span></span>, <span>string <var>$format</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1411,7 +1411,7 @@ TYPO3\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateAllOtherSitePackages">#</a>
-			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#404-424" title="Go to source code">deactivateAllOtherSitePackages</a>( <span>string <var>$activePackageKey</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#407-427" title="Go to source code">deactivateAllOtherSitePackages</a>( <span>string <var>$activePackageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>If site packages already exist and are active, we will deactivate them in order to prevent
@@ -1478,7 +1478,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#36-40" title="Go to source code"><var>$domainRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#39-43" title="Go to source code"><var>$domainRepository</var></a>
 
 				<div class="description short">
 					
@@ -1506,7 +1506,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#42-46" title="Go to source code"><var>$siteRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#45-49" title="Go to source code"><var>$siteRepository</var></a>
 
 				<div class="description short">
 					
@@ -1534,7 +1534,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#48-52" title="Go to source code"><var>$nodeDataRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#51-55" title="Go to source code"><var>$nodeDataRepository</var></a>
 
 				<div class="description short">
 					
@@ -1562,7 +1562,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#54-58" title="Go to source code"><var>$workspaceRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#57-61" title="Go to source code"><var>$workspaceRepository</var></a>
 
 				<div class="description short">
 					
@@ -1590,7 +1590,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#60-64" title="Go to source code"><var>$assetCollectionRepository</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#63-67" title="Go to source code"><var>$assetCollectionRepository</var></a>
 
 				<div class="description short">
 					
@@ -1618,7 +1618,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#66-70" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#69-73" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1646,7 +1646,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#72-76" title="Go to source code"><var>$siteImportService</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#75-79" title="Go to source code"><var>$siteImportService</var></a>
 
 				<div class="description short">
 					
@@ -1674,7 +1674,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#78-82" title="Go to source code"><var>$siteService</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#81-85" title="Go to source code"><var>$siteService</var></a>
 
 				<div class="description short">
 					
@@ -1702,7 +1702,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#84-88" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#87-91" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -1730,7 +1730,7 @@ interactions with the newly created or imported package (like Content Dimensions
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#90-94" title="Go to source code"><var>$session</var></a>
+					<a href="source-class-TYPO3.Neos.Controller.Module.Administration.SitesController.html#93-97" title="Go to source code"><var>$session</var></a>
 
 				<div class="description short">
 					
@@ -1779,7 +1779,7 @@ interactions with the newly created or imported package (like Content Dimensions
 		Neos (2.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?60649055ea718e7d0bdd6a6805e096660b3757e7"></script>
 </body>
 </html>

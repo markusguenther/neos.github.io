@@ -794,9 +794,9 @@ TYPO3\Flow\Property\TypeConverter\PersistentObjectConverter
 
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#21-302" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/TypeConverter/AssetInterfaceConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#35-316" title="Go to source code">TYPO3.Media/Classes/TYPO3/Media/TypeConverter/AssetInterfaceConverter.php</a>
 		<br>
 	</div>
 
@@ -816,7 +816,7 @@ TYPO3\Flow\Property\TypeConverter\PersistentObjectConverter
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canConvertFrom">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#87-106" title="Go to source code">canConvertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#101-120" title="Go to source code">canConvertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				<p>If $source has an identity, we have a persisted Image, and therefore
@@ -858,7 +858,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSourceChildPropertiesToBeConverted">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#108-120" title="Go to source code">getSourceChildPropertiesToBeConverted</a>( <span>mixed <var>$source</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#122-134" title="Go to source code">getSourceChildPropertiesToBeConverted</a>( <span>mixed <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>All properties in the source array except __identity and adjustments are sub-properties.</p>
@@ -896,7 +896,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeOfChildProperty">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#122-141" title="Go to source code">getTypeOfChildProperty</a>( <span>string <var>$targetType</var></span>, <span>string <var>$propertyName</var></span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#136-155" title="Go to source code">getTypeOfChildProperty</a>( <span>string <var>$targetType</var></span>, <span>string <var>$propertyName</var></span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert the property "resource"</p>
@@ -938,7 +938,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTargetTypeForSource">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#144-175" title="Go to source code">getTargetTypeForSource</a>( <span>mixed <var>$source</var></span>, <span>string <var>$originalTargetType</var></span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#158-189" title="Go to source code">getTargetTypeForSource</a>( <span>mixed <var>$source</var></span>, <span>string <var>$originalTargetType</var></span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Determines the target type based on the source's (optional) __type key.</p>
@@ -986,7 +986,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#177-226" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#191-240" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert an object from $source to an \TYPO3\Media\Domain\Model\AssetInterface implementation</p>
@@ -1010,7 +1010,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 					<h4>Returns</h4>
 					<div class="list">
-						TYPO3\Flow\Validation\Error|<code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code><br>The converted asset, a Validation Error or NULL
+						TYPO3\Flow\Validation\Error|<code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code><br>The converted Asset, a Validation Error or NULL
 					</div>
 
 					<h4>Throws</h4>
@@ -1034,7 +1034,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildObject">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#228-248" title="Go to source code">buildObject</a>( <span>array <var>&amp; $possibleConstructorArgumentValues</var></span>, <span>string <var>$objectType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#242-262" title="Go to source code">buildObject</a>( <span>array <var>&amp; $possibleConstructorArgumentValues</var></span>, <span>string <var>$objectType</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a new instance of $objectType with the given $possibleConstructorArgumentValues.
@@ -1084,7 +1084,7 @@ default value in the constructor signature.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_fetchObjectFromPersistence">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#250-270" title="Go to source code">fetchObjectFromPersistence</a>( <span>mixed <var>$identity</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#264-284" title="Go to source code">fetchObjectFromPersistence</a>( <span>mixed <var>$identity</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetch an object from persistence layer.</p>
@@ -1129,7 +1129,7 @@ default value in the constructor signature.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_applyTypeSpecificHandling">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#272-282" title="Go to source code">applyTypeSpecificHandling</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>mixed <var>$source</var></span>, <span>array <var>$convertedChildProperties</var></span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#286-296" title="Go to source code">applyTypeSpecificHandling</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>mixed <var>$source</var></span>, <span>array <var>$convertedChildProperties</var></span>, <span>TYPO3\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1173,7 +1173,7 @@ default value in the constructor signature.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_applyModelMappingStrategy">#</a>
-			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#284-301" title="Go to source code">applyModelMappingStrategy</a>( <span>string <var>$originalTargetType</var></span>, <span>TYPO3\Flow\Resource\Resource <var>$resource</var></span>, <span>array <var>$source</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#298-315" title="Go to source code">applyModelMappingStrategy</a>( <span>string <var>$originalTargetType</var></span>, <span>TYPO3\Flow\Resource\Resource <var>$resource</var></span>, <span>array <var>$source</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Applies the model mapping strategy for a converted resource to determine the final target type.
@@ -1224,7 +1224,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#29-32" title="Go to source code"><b>CONFIGURATION_ONE_PER_RESOURCE</b></a>
+						<a href="source-constant-CONFIGURATION_ONE_PER_RESOURCE.html#43-46" title="Go to source code"><b>CONFIGURATION_ONE_PER_RESOURCE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1259,7 +1259,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#34-37" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#48-51" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1284,7 +1284,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#39-42" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#53-56" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1298,7 +1298,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			<td class="value">
 				<div>
 					<a href="#$targetType" class="anchor">#</a>
-					<code><span class="php-quote">'TYPO3\Media\Domain\Model\AssetInterface'</span></code>
+					<code>TYPO3\Media\TypeConverter\AssetInterface::class</code>
 				</div>
 			</td>
 		</tr>
@@ -1309,7 +1309,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#44-47" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#58-61" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1334,7 +1334,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#49-53" title="Go to source code"><var>$assetRepository</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#63-67" title="Go to source code"><var>$assetRepository</var></a>
 
 				<div class="description short">
 					
@@ -1362,7 +1362,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#55-59" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#69-73" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1390,7 +1390,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#61-65" title="Go to source code"><var>$assetModelMappingStrategy</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#75-79" title="Go to source code"><var>$assetModelMappingStrategy</var></a>
 
 				<div class="description short">
 					
@@ -1418,7 +1418,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#67-71" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#81-85" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1446,7 +1446,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#73-78" title="Go to source code"><var>$defaultNewAssetType</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#87-92" title="Go to source code"><var>$defaultNewAssetType</var></a>
 
 				<div class="description short">
 					<p>If creating a new asset from this converter this defines the default type as fallback.</p>
@@ -1460,7 +1460,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			<td class="value">
 				<div>
 					<a href="#$defaultNewAssetType" class="anchor">#</a>
-					<code><span class="php-quote">'TYPO3\Media\Domain\Model\Document'</span></code>
+					<code>TYPO3\Media\TypeConverter\Document::class</code>
 				</div>
 			</td>
 		</tr>
@@ -1471,7 +1471,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#80-85" title="Go to source code"><var>$resourcesAlreadyConvertedToAssets</var></a>
+					<a href="source-class-TYPO3.Media.TypeConverter.AssetInterfaceConverter.html#94-99" title="Go to source code"><var>$resourcesAlreadyConvertedToAssets</var></a>
 
 				<div class="description short">
 					<p>Maps resource identifiers to assets that already got created during the current request.</p>
@@ -1504,7 +1504,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 		Neos (2.3 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?60649055ea718e7d0bdd6a6805e096660b3757e7"></script>
 </body>
 </html>
