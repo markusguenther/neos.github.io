@@ -688,15 +688,24 @@
 	<p>A wrapper around a TYPO3 Flow cache which provides additional functionality for caching partial content (segments)
 rendered by the TypoScript Runtime.</p>
 
-<p>The cache build process generally follows these steps:
- - render the whole document as usual (for example a page) but insert special markers before and after the rendered segments - parse the rendered document and extract segments by the previously added markers</p>
+<p>The cache build process generally follows these steps:</p>
 
-<p>This results in two artifacts:
- - an array of content segments which are later stored as cache entries (if they may be cached) - a string called "output" which is the originally rendered output but without the markers</p>
+<ul>
+<li>render the whole document as usual (for example a page) but insert special markers before and after the rendered segments</li>
+<li>parse the rendered document and extract segments by the previously added markers</li>
+</ul>
+
+<p>This results in two artifacts:</p>
+
+<ul>
+<li>an array of content segments which are later stored as cache entries (if they may be cached)</li>
+<li>a string called "output" which is the originally rendered output but without the markers</li>
+</ul>
 
 <p>We use non-visible ASCII characters as markers / tokens in order to minimize potential conflicts with the actual content.</p>
 
-<p>Note: If you choose a different cache backend for this content cache, make sure that it is one implementing TaggableBackendInterface.</p>
+<p>Note: If you choose a different cache backend for this content cache, make sure that it is one implementing
+      TaggableBackendInterface.</p>
 	</div>
 
 
@@ -713,7 +722,7 @@ rendered by the TypoScript Runtime.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TypoScript.html">TypoScript</a>\<a href="namespace-TYPO3.TypoScript.Core.html">Core</a>\<a href="namespace-TYPO3.TypoScript.Core.Cache.html">Cache</a><br>
 		
 
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
 			<b>Located at</b> <a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#20-384" title="Go to source code">TYPO3.TypoScript/Classes/TYPO3/TypoScript/Core/Cache/ContentCache.php</a>
 		<br>
@@ -1313,7 +1322,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#43" title="Go to source code"><b>CACHE_SEGMENT_START_TOKEN</b></a>
+						<a href="source-constant-CACHE_SEGMENT_START_TOKEN.html#43" title="Go to source code"><b>CACHE_SEGMENT_START_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1337,7 +1346,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#44" title="Go to source code"><b>CACHE_SEGMENT_END_TOKEN</b></a>
+						<a href="source-constant-CACHE_SEGMENT_END_TOKEN.html#44" title="Go to source code"><b>CACHE_SEGMENT_END_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1361,7 +1370,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#45" title="Go to source code"><b>CACHE_SEGMENT_SEPARATOR_TOKEN</b></a>
+						<a href="source-constant-CACHE_SEGMENT_SEPARATOR_TOKEN.html#45" title="Go to source code"><b>CACHE_SEGMENT_SEPARATOR_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1385,7 +1394,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#47" title="Go to source code"><b>CACHE_SEGMENT_MARKER</b></a>
+						<a href="source-constant-CACHE_SEGMENT_MARKER.html#47" title="Go to source code"><b>CACHE_SEGMENT_MARKER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1409,7 +1418,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#49" title="Go to source code"><b>CACHE_PLACEHOLDER_REGEX</b></a>
+						<a href="source-constant-CACHE_PLACEHOLDER_REGEX.html#49" title="Go to source code"><b>CACHE_PLACEHOLDER_REGEX</b></a>
 					</code>
 
 					<div class="description short">
@@ -1433,7 +1442,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#50" title="Go to source code"><b>EVAL_PLACEHOLDER_REGEX</b></a>
+						<a href="source-constant-EVAL_PLACEHOLDER_REGEX.html#50" title="Go to source code"><b>EVAL_PLACEHOLDER_REGEX</b></a>
 					</code>
 
 					<div class="description short">
@@ -1457,7 +1466,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#52" title="Go to source code"><b>MAXIMUM_NESTING_LEVEL</b></a>
+						<a href="source-constant-MAXIMUM_NESTING_LEVEL.html#52" title="Go to source code"><b>MAXIMUM_NESTING_LEVEL</b></a>
 					</code>
 
 					<div class="description short">
@@ -1481,7 +1490,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#54-58" title="Go to source code"><b>TAG_EVERYTHING</b></a>
+						<a href="source-constant-TAG_EVERYTHING.html#54-58" title="Go to source code"><b>TAG_EVERYTHING</b></a>
 					</code>
 
 					<div class="description short">
@@ -1507,7 +1516,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#60" title="Go to source code"><b>SEGMENT_TYPE_CACHED</b></a>
+						<a href="source-constant-SEGMENT_TYPE_CACHED.html#60" title="Go to source code"><b>SEGMENT_TYPE_CACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1531,7 +1540,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.TypoScript.Core.Cache.ContentCache.html#61" title="Go to source code"><b>SEGMENT_TYPE_UNCACHED</b></a>
+						<a href="source-constant-SEGMENT_TYPE_UNCACHED.html#61" title="Go to source code"><b>SEGMENT_TYPE_UNCACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1711,7 +1720,7 @@ the application.</p>
 		Neos 2.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?4d9df0786fc35c8bf4e5bf878d7146407c54bb4d"></script>
 </body>
 </html>
