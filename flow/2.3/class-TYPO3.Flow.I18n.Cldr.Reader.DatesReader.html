@@ -800,12 +800,12 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.I18n.html">I18n</a>\<a href="namespace-TYPO3.Flow.I18n.Cldr.html">Cldr</a>\<a href="namespace-TYPO3.Flow.I18n.Cldr.Reader.html">Reader</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>See:</b>
 				http://www.unicode.org/reports/tr35/#Date_Elements<br>
 				<b>See:</b>
 				http://www.unicode.org/reports/tr35/#Date_Format_Patterns<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
 			<b>Located at</b> <a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#16-551" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/I18n/Cldr/Reader/DatesReader.php</a>
 		<br>
 	</div>
@@ -1346,7 +1346,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#29-34" title="Go to source code"><b>FORMAT_TYPE_DATE</b></a>
+						<a href="source-constant-FORMAT_TYPE_DATE.html#29-34" title="Go to source code"><b>FORMAT_TYPE_DATE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1370,7 +1370,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#36-41" title="Go to source code"><b>FORMAT_TYPE_TIME</b></a>
+						<a href="source-constant-FORMAT_TYPE_TIME.html#36-41" title="Go to source code"><b>FORMAT_TYPE_TIME</b></a>
 					</code>
 
 					<div class="description short">
@@ -1394,7 +1394,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#43-48" title="Go to source code"><b>FORMAT_TYPE_DATETIME</b></a>
+						<a href="source-constant-FORMAT_TYPE_DATETIME.html#43-48" title="Go to source code"><b>FORMAT_TYPE_DATETIME</b></a>
 					</code>
 
 					<div class="description short">
@@ -1418,7 +1418,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#50-55" title="Go to source code"><b>FORMAT_LENGTH_DEFAULT</b></a>
+						<a href="source-constant-FORMAT_LENGTH_DEFAULT.html#50-55" title="Go to source code"><b>FORMAT_LENGTH_DEFAULT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1442,7 +1442,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#57-62" title="Go to source code"><b>FORMAT_LENGTH_FULL</b></a>
+						<a href="source-constant-FORMAT_LENGTH_FULL.html#57-62" title="Go to source code"><b>FORMAT_LENGTH_FULL</b></a>
 					</code>
 
 					<div class="description short">
@@ -1466,7 +1466,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#64-69" title="Go to source code"><b>FORMAT_LENGTH_LONG</b></a>
+						<a href="source-constant-FORMAT_LENGTH_LONG.html#64-69" title="Go to source code"><b>FORMAT_LENGTH_LONG</b></a>
 					</code>
 
 					<div class="description short">
@@ -1490,7 +1490,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#71-76" title="Go to source code"><b>FORMAT_LENGTH_MEDIUM</b></a>
+						<a href="source-constant-FORMAT_LENGTH_MEDIUM.html#71-76" title="Go to source code"><b>FORMAT_LENGTH_MEDIUM</b></a>
 					</code>
 
 					<div class="description short">
@@ -1514,7 +1514,7 @@ and / or after them.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.DatesReader.html#78-83" title="Go to source code"><b>FORMAT_LENGTH_SHORT</b></a>
+						<a href="source-constant-FORMAT_LENGTH_SHORT.html#78-83" title="Go to source code"><b>FORMAT_LENGTH_SHORT</b></a>
 					</code>
 
 					<div class="description short">
@@ -1675,7 +1675,14 @@ maximal length.</p>
 					<p>An array of parsed formats, indexed by format strings.</p>
 
 <p>Example of data stored in this array:
-'HH:mm:ss zzz' => array( 'HH', array(':'), 'mm', array(':'), 'ss', array(' '), 'zzz',
+'HH:mm:ss zzz' => array(
+  'HH',
+  array(':'),
+  'mm',
+  array(':'),
+  'ss',
+  array(' '),
+  'zzz',
 );</p>
 
 <p>Please note that subformats are stored as array elements, and literals
@@ -1713,7 +1720,12 @@ format lengths - full, long, medium, short), references are organized in
 arrays.</p>
 
 <p>Example of data stored in this array:
-'pl' => array( 'date' => array( 'full' => 'EEEE, d MMMM y', ... ), ...
+'pl' => array(
+    'date' => array(
+        'full' => 'EEEE, d MMMM y',
+        ...
+    ),
+    ...
 );</p>
 
 				</div>
@@ -1768,7 +1780,7 @@ names defined in months, days, quarters etc tags.</p>
 		Flow Framework 2.3 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?8a9d4affc85d4efae5159d8537f0dae9d98fffb2"></script>
 </body>
 </html>

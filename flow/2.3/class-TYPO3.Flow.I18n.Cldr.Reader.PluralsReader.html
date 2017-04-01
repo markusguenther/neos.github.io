@@ -786,7 +786,8 @@ class. Following naming convention is used in the code (a name of
 corresponding tag from xml file is provided in brackets, if any):
 - ruleset: a set of plural rules for a locale [pluralRules]
 - rule: a rule for one of the forms: zero, one, two, few, many [pluralRule]
-- subrule: one of the conditions of rule. One rule can have many conditions joined with "and" or "or" logical operator.</p>
+- subrule: one of the conditions of rule. One rule can have many conditions
+  joined with "and" or "or" logical operator.</p>
 	</div>
 
 
@@ -803,10 +804,10 @@ corresponding tag from xml file is provided in brackets, if any):
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.I18n.html">I18n</a>\<a href="namespace-TYPO3.Flow.I18n.Cldr.html">Cldr</a>\<a href="namespace-TYPO3.Flow.I18n.Cldr.Reader.html">Reader</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>See:</b>
 				http://www.unicode.org/reports/tr35/#Language_Plural_Rules<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
 			<b>Located at</b> <a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#16-324" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/I18n/Cldr/Reader/PluralsReader.php</a>
 		<br>
 	</div>
@@ -1109,7 +1110,7 @@ $rulesets property for details).</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#32-38" title="Go to source code"><b>PATTERN_MATCH_SUBRULE</b></a>
+						<a href="source-constant-PATTERN_MATCH_SUBRULE.html#32-38" title="Go to source code"><b>PATTERN_MATCH_SUBRULE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1135,7 +1136,7 @@ more subrules.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#40-43" title="Go to source code"><b>RULE_ZERO</b></a>
+						<a href="source-constant-RULE_ZERO.html#40-43" title="Go to source code"><b>RULE_ZERO</b></a>
 					</code>
 
 					<div class="description short">
@@ -1159,7 +1160,7 @@ more subrules.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#44" title="Go to source code"><b>RULE_ONE</b></a>
+						<a href="source-constant-RULE_ONE.html#44" title="Go to source code"><b>RULE_ONE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1183,7 +1184,7 @@ more subrules.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#45" title="Go to source code"><b>RULE_TWO</b></a>
+						<a href="source-constant-RULE_TWO.html#45" title="Go to source code"><b>RULE_TWO</b></a>
 					</code>
 
 					<div class="description short">
@@ -1207,7 +1208,7 @@ more subrules.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#46" title="Go to source code"><b>RULE_FEW</b></a>
+						<a href="source-constant-RULE_FEW.html#46" title="Go to source code"><b>RULE_FEW</b></a>
 					</code>
 
 					<div class="description short">
@@ -1231,7 +1232,7 @@ more subrules.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#47" title="Go to source code"><b>RULE_MANY</b></a>
+						<a href="source-constant-RULE_MANY.html#47" title="Go to source code"><b>RULE_MANY</b></a>
 					</code>
 
 					<div class="description short">
@@ -1255,7 +1256,7 @@ more subrules.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.I18n.Cldr.Reader.PluralsReader.html#48" title="Go to source code"><b>RULE_OTHER</b></a>
+						<a href="source-constant-RULE_OTHER.html#48" title="Go to source code"><b>RULE_OTHER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1359,9 +1360,16 @@ also be NULL ruleset, used by languages which don't have plurals.</p>
 'logicalOperator' => 'and' | 'or' | FALSE</p>
 
 <p>Legend:
-- if 'modulo' key has an integer value, tested variable (call it $n) has to be replaced with the remainder of division of $n by $x. Otherwise unchanged $n is used for conditional test.
-- 'condition' is an indexed array where first element is a name of test condition (one of: is, isnot, in, notin, within, notwithin). Second element is a value to compare $n with. Third element is optional, and is used only for tests where range is needed (last 4 from the list above)
-- 'logicalOperator' represents a logical operation to be done with next subrule in chain. If current subrule is a last one (or only one), this element is set to FALSE.</p>
+- if 'modulo' key has an integer value, tested variable (call it $n) has
+  to be replaced with the remainder of division of $n by $x. Otherwise
+  unchanged $n is used for conditional test.
+- 'condition' is an indexed array where first element is a name of test
+  condition (one of: is, isnot, in, notin, within, notwithin). Second
+  element is a value to compare $n with. Third element is optional, and
+  is used only for tests where range is needed (last 4 from the list above)
+- 'logicalOperator' represents a logical operation to be done with next
+  subrule in chain. If current subrule is a last one (or only one), this
+  element is set to FALSE.</p>
 
 				</div>
 			</td>
@@ -1414,7 +1422,7 @@ locale. One or more locales can use the same ruleset.</p>
 		Flow Framework 2.3 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?8a9d4affc85d4efae5159d8537f0dae9d98fffb2"></script>
 </body>
 </html>
