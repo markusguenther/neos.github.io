@@ -836,9 +836,16 @@
 	<p>A caching backend which stores cache entries by using Memcache/Memcached.</p>
 
 <p>This backend uses the following types of cache keys:
-- tag_xxx xxx is tag name, value is array of associated identifiers identifier. This is "forward" tag index. It is mainly used for obtaining content by tag (get identifier by tag -> get content by identifier)
-- ident_xxx xxx is identifier, value is array of associated tags. This is "reverse" tag index. It provides quick access for all tags associated with this identifier and used when removing the identifier
-- tagIndex Value is a List of all tags (array)</p>
+- tag_xxx
+  xxx is tag name, value is array of associated identifiers identifier. This
+  is "forward" tag index. It is mainly used for obtaining content by tag
+  (get identifier by tag -> get content by identifier)
+- ident_xxx
+  xxx is identifier, value is array of associated tags. This is "reverse" tag
+  index. It provides quick access for all tags associated with this identifier
+  and used when removing the identifier
+- tagIndex
+  Value is a List of all tags (array)</p>
 
 <p>Each key is prepended with a prefix. By default prefix consists from two parts
 separated by underscore character and ends in yet another underscore character:
@@ -885,7 +892,7 @@ data will be split into chunks to make them fit into the caches limits.</p>
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#15-441" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cache/Backend/MemcachedBackend.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#19-445" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cache/Backend/MemcachedBackend.php</a>
 		<br>
 	</div>
 
@@ -905,7 +912,7 @@ data will be split into chunks to make them fit into the caches limits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#79-92" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Core.ApplicationContext.html">TYPO3\Flow\Core\ApplicationContext</a></code> <var>$context</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#83-96" title="Go to source code">__construct</a>( <span><code><a href="class-TYPO3.Flow.Core.ApplicationContext.html">TYPO3\Flow\Core\ApplicationContext</a></code> <var>$context</var></span>, <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Constructs this backend</p>
@@ -947,7 +954,7 @@ data will be split into chunks to make them fit into the caches limits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setServers">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#94-105" title="Go to source code">setServers</a>( <span>array <var>$servers</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#98-109" title="Go to source code">setServers</a>( <span>array <var>$servers</var></span> )</code>
 
 			<div class="description short">
 				<p>Setter for servers to be used. Expects an array,  the values are expected
@@ -986,7 +993,7 @@ to be formatted like "<host>[:<port>]" or "unix://<path>"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCompression">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#107-125" title="Go to source code">setCompression</a>( <span>boolean <var>$useCompression</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#111-129" title="Go to source code">setCompression</a>( <span>boolean <var>$useCompression</var></span> )</code>
 
 			<div class="description short">
 				<p>Setter for compression flags bit</p>
@@ -1023,7 +1030,7 @@ to be formatted like "<host>[:<port>]" or "unix://<path>"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#127-159" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#131-163" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the identifier prefix</p>
@@ -1056,7 +1063,7 @@ to be formatted like "<host>[:<port>]" or "unix://<path>"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCache">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#161-173" title="Go to source code">setCache</a>( <span><code><a href="class-TYPO3.Flow.Cache.Frontend.FrontendInterface.html">TYPO3\Flow\Cache\Frontend\FrontendInterface</a></code> <var>$cache</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#165-177" title="Go to source code">setCache</a>( <span><code><a href="class-TYPO3.Flow.Cache.Frontend.FrontendInterface.html">TYPO3\Flow\Cache\Frontend\FrontendInterface</a></code> <var>$cache</var></span> )</code>
 
 			<div class="description short">
 				<p>Initializes the identifier prefix when setting the cache.</p>
@@ -1094,7 +1101,7 @@ to be formatted like "<host>[:<port>]" or "unix://<path>"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPrefixedIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#175-191" title="Go to source code">getPrefixedIdentifier</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#179-195" title="Go to source code">getPrefixedIdentifier</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the internally used, prefixed entry identifier for the given public
@@ -1146,7 +1153,7 @@ for retrieving it.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#193-248" title="Go to source code">set</a>( <span>string <var>$entryIdentifier</var></span>, <span>string <var>$data</var></span>, <span>array <var>$tags</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#197-252" title="Go to source code">set</a>( <span>string <var>$entryIdentifier</var></span>, <span>string <var>$data</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Saves data in the cache.</p>
@@ -1197,7 +1204,7 @@ for retrieving it.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setItem">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#250-264" title="Go to source code">setItem</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expiration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#254-268" title="Go to source code">setItem</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expiration</var></span> )</code>
 
 			<div class="description short">
 				<p>Stores an item on the server</p>
@@ -1239,7 +1246,7 @@ for retrieving it.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#266-284" title="Go to source code">get</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#270-288" title="Go to source code">get</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads data from the cache.</p>
@@ -1282,7 +1289,7 @@ for retrieving it.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_has">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#286-296" title="Go to source code">has</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#290-300" title="Go to source code">has</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if a cache entry with the specified identifier exists.</p>
@@ -1325,7 +1332,7 @@ for retrieving it.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#298-311" title="Go to source code">remove</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#302-315" title="Go to source code">remove</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries matching the specified identifier.
@@ -1372,7 +1379,7 @@ old entries for the identifier still exist, they are removed as well.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findIdentifiersByTag">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#313-329" title="Go to source code">findIdentifiersByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#317-333" title="Go to source code">findIdentifiersByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds and returns all cache entry identifiers which are tagged by the
@@ -1417,7 +1424,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findTagsByIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#331-342" title="Go to source code">findTagsByIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#335-346" title="Go to source code">findTagsByIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds all tags for the given identifier. This function uses reverse tag
@@ -1457,7 +1464,7 @@ index to search for tags.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#344-358" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#348-362" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries of this cache.</p>
@@ -1495,7 +1502,7 @@ index to search for tags.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushByTag">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#360-374" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#364-378" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries of this cache which are tagged by the specified tag.</p>
@@ -1538,7 +1545,7 @@ index to search for tags.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addIdentifierToTags">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#376-399" title="Go to source code">addIdentifierToTags</a>( <span>string <var>$entryIdentifier</var></span>, <span>array <var>$tags</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#380-403" title="Go to source code">addIdentifierToTags</a>( <span>string <var>$entryIdentifier</var></span>, <span>array <var>$tags</var></span> )</code>
 
 			<div class="description short">
 				<p>Associates the identifier with the given tags</p>
@@ -1574,7 +1581,7 @@ index to search for tags.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeIdentifierFromAllTags">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#401-430" title="Go to source code">removeIdentifierFromAllTags</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#405-434" title="Go to source code">removeIdentifierFromAllTags</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes association of the identifier with the given tags</p>
@@ -1608,7 +1615,7 @@ index to search for tags.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectGarbage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#432-440" title="Go to source code">collectGarbage</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#436-444" title="Go to source code">collectGarbage</a>( )</code>
 
 			<div class="description short">
 				<p>Does nothing, as memcache/memcached does GC itself</p>
@@ -1657,7 +1664,7 @@ index to search for tags.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#44-48" title="Go to source code"><b>MAX_BUCKET_SIZE</b></a>
+						<a href="source-constant-MAX_BUCKET_SIZE.html#48-52" title="Go to source code"><b>MAX_BUCKET_SIZE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1699,7 +1706,7 @@ index to search for tags.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#50-55" title="Go to source code"><var>$memcache</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#54-59" title="Go to source code"><var>$memcache</var></a>
 
 				<div class="description short">
 					<p>Instance of the PHP Memcache/Memcached class</p>
@@ -1724,7 +1731,7 @@ index to search for tags.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#57-62" title="Go to source code"><var>$servers</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#61-66" title="Go to source code"><var>$servers</var></a>
 
 				<div class="description short">
 					<p>Array of Memcache server configurations</p>
@@ -1738,7 +1745,7 @@ index to search for tags.</p>
 			<td class="value">
 				<div>
 					<a href="#$servers" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1749,7 +1756,7 @@ index to search for tags.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#64-70" title="Go to source code"><var>$flags</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#68-74" title="Go to source code"><var>$flags</var></a>
 
 				<div class="description short">
 					<p>Indicates whether the memcache uses compression or not (requires zlib),
@@ -1776,7 +1783,7 @@ either 0 or MEMCACHE_COMPRESSED</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#72-77" title="Go to source code"><var>$identifierPrefix</var></a>
+					<a href="source-class-TYPO3.Flow.Cache.Backend.MemcachedBackend.html#76-81" title="Go to source code"><var>$identifierPrefix</var></a>
 
 				<div class="description short">
 					<p>A prefix to separate stored data from other data possible stored in the memcache</p>
@@ -1819,7 +1826,7 @@ either 0 or MEMCACHE_COMPRESSED</p>
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

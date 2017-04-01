@@ -853,7 +853,7 @@ getPropertyPath().</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Reflection.html">Reflection</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#16-432" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Reflection/ObjectAccess.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#17-433" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Reflection/ObjectAccess.php</a>
 		<br>
 	</div>
 
@@ -873,7 +873,7 @@ getPropertyPath().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperty">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#46-80" title="Go to source code">getProperty</a>( <span>mixed <var>$subject</var></span>, <span>string|integer <var>$propertyName</var></span>, <span>boolean <var>$forceDirectAccess</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#47-81" title="Go to source code">getProperty</a>( <span>mixed <var>$subject</var></span>, <span>string|integer <var>$propertyName</var></span>, <span>boolean <var>$forceDirectAccess</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Get a property of a given object or array.</p>
@@ -886,7 +886,8 @@ getPropertyPath().</p>
 - if the target is an array, and has this property, we return it.
 - if super cow powers should be used, fetch value through reflection
 - if public getter method exists, call it.
-- if the target object is an instance of ArrayAccess, it gets the property on it if it exists.
+- if the target object is an instance of ArrayAccess, it gets the property
+  on it if it exists.
 - if public property exists, return the value of it.
 - else, throw exception</p>
 
@@ -928,7 +929,7 @@ getPropertyPath().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyInternal">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#82-151" title="Go to source code">getPropertyInternal</a>( <span>mixed <var>$subject</var></span>, <span>string <var>$propertyName</var></span>, <span>boolean <var>$forceDirectAccess</var></span>, <span>boolean <var>&amp; $propertyExists</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#83-152" title="Go to source code">getPropertyInternal</a>( <span>mixed <var>$subject</var></span>, <span>string <var>$propertyName</var></span>, <span>boolean <var>$forceDirectAccess</var></span>, <span>boolean <var>&amp; $propertyExists</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets a property of a given object or array.
@@ -984,7 +985,7 @@ If you can't make sure that $subject is either of type array or object and $prop
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializePropertyGetterCache">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#153-179" title="Go to source code">initializePropertyGetterCache</a>( <span>string <var>$cacheIdentifier</var></span>, <span>mixed <var>$subject</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#154-180" title="Go to source code">initializePropertyGetterCache</a>( <span>string <var>$cacheIdentifier</var></span>, <span>mixed <var>$subject</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1022,7 +1023,7 @@ If you can't make sure that $subject is either of type array or object and $prop
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyPath">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#181-206" title="Go to source code">getPropertyPath</a>( <span>mixed <var>$subject</var></span>, <span>string <var>$propertyPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#182-207" title="Go to source code">getPropertyPath</a>( <span>mixed <var>$subject</var></span>, <span>string <var>$propertyPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets a property path from a given object or array.</p>
@@ -1067,7 +1068,7 @@ and on the resulting object we call getProperty(..., 'blubb').</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProperty">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#208-258" title="Go to source code">setProperty</a>( <span>mixed <var>&amp; $subject</var></span>, <span>string|integer <var>$propertyName</var></span>, <span>mixed <var>$propertyValue</var></span>, <span>boolean <var>$forceDirectAccess</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#209-259" title="Go to source code">setProperty</a>( <span>mixed <var>&amp; $subject</var></span>, <span>string|integer <var>$propertyName</var></span>, <span>mixed <var>$propertyValue</var></span>, <span>boolean <var>$forceDirectAccess</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Set a property for a given object.
@@ -1088,7 +1089,8 @@ Tries to set the property the following ways:
 - if super cow powers should be used, set value through reflection
 - if public setter method exists, call it.
 - if public property exists, set it directly.
-- if the target object is an instance of ArrayAccess, it sets the property on it without checking if it existed.
+- if the target object is an instance of ArrayAccess, it sets the property
+  on it without checking if it existed.
 - else, return FALSE</p>
 
 
@@ -1130,7 +1132,7 @@ Tries to set the property the following ways:
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getGettablePropertyNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#260-305" title="Go to source code">getGettablePropertyNames</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#261-306" title="Go to source code">getGettablePropertyNames</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of properties which can be get with the getProperty()
@@ -1180,7 +1182,7 @@ Includes the following properties:
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSettablePropertyNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#307-339" title="Go to source code">getSettablePropertyNames</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#308-340" title="Go to source code">getSettablePropertyNames</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of properties which can be set with the setProperty()
@@ -1230,7 +1232,7 @@ Includes the following properties:
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPropertySettable">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#341-362" title="Go to source code">isPropertySettable</a>( <span>object <var>$object</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#342-363" title="Go to source code">isPropertySettable</a>( <span>object <var>$object</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Tells if the value of the specified property can be set by this Object Accessor.</p>
@@ -1274,7 +1276,7 @@ Includes the following properties:
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPropertyGettable">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#364-394" title="Go to source code">isPropertyGettable</a>( <span>object <var>$object</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#365-395" title="Go to source code">isPropertyGettable</a>( <span>object <var>$object</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Tells if the value of the specified property can be retrieved by this Object Accessor.</p>
@@ -1318,7 +1320,7 @@ Includes the following properties:
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getGettableProperties">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#396-419" title="Go to source code">getGettableProperties</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#397-420" title="Go to source code">getGettableProperties</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Get all properties (names and their current values) of the current
@@ -1362,7 +1364,7 @@ $object that are accessible through this class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildSetterMethodName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#421-431" title="Go to source code">buildSetterMethodName</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#422-432" title="Go to source code">buildSetterMethodName</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Build the setter method name for a given property by capitalizing the
@@ -1409,7 +1411,7 @@ first letter of the property, and prepending it with "set".</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#42" title="Go to source code"><b>ACCESS_GET</b></a>
+						<a href="source-constant-ACCESS_GET.html#43" title="Go to source code"><b>ACCESS_GET</b></a>
 					</code>
 
 					<div class="description short">
@@ -1433,7 +1435,7 @@ first letter of the property, and prepending it with "set".</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#43" title="Go to source code"><b>ACCESS_SET</b></a>
+						<a href="source-constant-ACCESS_SET.html#44" title="Go to source code"><b>ACCESS_SET</b></a>
 					</code>
 
 					<div class="description short">
@@ -1457,7 +1459,7 @@ first letter of the property, and prepending it with "set".</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#44" title="Go to source code"><b>ACCESS_PUBLIC</b></a>
+						<a href="source-constant-ACCESS_PUBLIC.html#45" title="Go to source code"><b>ACCESS_PUBLIC</b></a>
 					</code>
 
 					<div class="description short">
@@ -1492,7 +1494,7 @@ first letter of the property, and prepending it with "set".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#30-34" title="Go to source code"><var>$gettablePropertyNamesCache</var></a>
+					<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#31-35" title="Go to source code"><var>$gettablePropertyNamesCache</var></a>
 
 				<div class="description short">
 					<p>Internal RuntimeCache for getGettablePropertyNames()</p>
@@ -1506,7 +1508,7 @@ first letter of the property, and prepending it with "set".</p>
 			<td class="value">
 				<div>
 					<a href="#$gettablePropertyNamesCache" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1517,7 +1519,7 @@ first letter of the property, and prepending it with "set".</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#36-40" title="Go to source code"><var>$propertyGetterCache</var></a>
+					<a href="source-class-TYPO3.Flow.Reflection.ObjectAccess.html#37-41" title="Go to source code"><var>$propertyGetterCache</var></a>
 
 				<div class="description short">
 					<p>Internal RuntimeCache for getPropertyInternal()</p>
@@ -1531,7 +1533,7 @@ first letter of the property, and prepending it with "set".</p>
 			<td class="value">
 				<div>
 					<a href="#$propertyGetterCache" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1550,7 +1552,7 @@ first letter of the property, and prepending it with "set".</p>
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

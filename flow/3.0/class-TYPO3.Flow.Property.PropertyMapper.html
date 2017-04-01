@@ -846,11 +846,11 @@ It is used most prominently to map incoming HTTP arguments to objects.</p>
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Property.html">Property</a><br>
 		
 
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
-				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#17-384" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/PropertyMapper.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#24-392" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/PropertyMapper.php</a>
 		<br>
 	</div>
 
@@ -870,7 +870,7 @@ It is used most prominently to map incoming HTTP arguments to objects.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#58-77" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#65-84" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Lifecycle method, called after all dependencies have been injected.
@@ -905,7 +905,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeConverterImplementationClassNames">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#79-90" title="Go to source code">getTypeConverterImplementationClassNames</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#86-97" title="Go to source code">getTypeConverterImplementationClassNames</a>( <span><code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns all class names implementing the TypeConverterInterface.</p>
@@ -946,7 +946,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convert">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#92-124" title="Go to source code">convert</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#99-132" title="Go to source code">convert</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Map $source to $targetType, and return the result.</p>
@@ -975,7 +975,8 @@ Here, the typeConverter array gets initialized.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Property.Exception.html">TYPO3\Flow\Property\Exception</a></code>
+						<code><a href="class-TYPO3.Flow.Property.Exception.html">TYPO3\Flow\Property\Exception</a></code><br>
+						<code><a href="class-TYPO3.Flow.Security.Exception.html">TYPO3\Flow\Security\Exception</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -997,7 +998,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMessages">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#126-135" title="Go to source code">getMessages</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#134-143" title="Go to source code">getMessages</a>( )</code>
 
 			<div class="description short">
 				<p>Get the messages of the last Property Mapping</p>
@@ -1033,7 +1034,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_doMapping">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#137-200" title="Go to source code">doMapping</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span>, <span>array <var>&amp; $currentPropertyPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#145-208" title="Go to source code">doMapping</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span>, <span>array <var>&amp; $currentPropertyPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal function which actually does the property mapping.</p>
@@ -1082,7 +1083,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findTypeConverter">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#202-241" title="Go to source code">findTypeConverter</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#210-249" title="Go to source code">findTypeConverter</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Determine the type converter to be used. If no converter has been found, an exception is raised.</p>
@@ -1129,7 +1130,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findFirstEligibleTypeConverterInObjectHierarchy">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#243-293" title="Go to source code">findFirstEligibleTypeConverterInObjectHierarchy</a>( <span>string <var>$source</var></span>, <span>string <var>$sourceType</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#251-301" title="Go to source code">findFirstEligibleTypeConverterInObjectHierarchy</a>( <span>string <var>$source</var></span>, <span>string <var>$sourceType</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to find a suitable type converter for the given source and target type.</p>
@@ -1175,7 +1176,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findEligibleConverterWithHighestPriority">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#295-315" title="Go to source code">findEligibleConverterWithHighestPriority</a>( <span>mixed <var>$converters</var></span>, <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#303-323" title="Go to source code">findEligibleConverterWithHighestPriority</a>( <span>mixed <var>$converters</var></span>, <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1217,7 +1218,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConvertersForInterfaces">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#317-337" title="Go to source code">getConvertersForInterfaces</a>( <span>array <var>$convertersForSource</var></span>, <span>array <var>$interfaceNames</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#325-345" title="Go to source code">getConvertersForInterfaces</a>( <span>array <var>$convertersForSource</var></span>, <span>array <var>$interfaceNames</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1261,7 +1262,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_determineSourceTypes">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#339-366" title="Go to source code">determineSourceTypes</a>( <span>mixed <var>$source</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#347-374" title="Go to source code">determineSourceTypes</a>( <span>mixed <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Determine the type of the source data, or throw an exception if source was an unsupported format.</p>
@@ -1303,7 +1304,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeConverters">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#368-383" title="Go to source code">getTypeConverters</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#376-391" title="Go to source code">getTypeConverters</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a multi-dimensional array with the Type Converters available in the system.</p>
@@ -1357,7 +1358,7 @@ Value: Type Converter instance</li>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#26-30" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#33-37" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1385,7 +1386,7 @@ Value: Type Converter instance</li>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#32-36" title="Go to source code"><var>$configurationBuilder</var></a>
+					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#39-43" title="Go to source code"><var>$configurationBuilder</var></a>
 
 				<div class="description short">
 					
@@ -1413,7 +1414,7 @@ Value: Type Converter instance</li>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#38-50" title="Go to source code"><var>$typeConverters</var></a>
+					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#45-57" title="Go to source code"><var>$typeConverters</var></a>
 
 				<div class="description short">
 					<p>A multi-dimensional array which stores the Type Converters available in the system.</p>
@@ -1436,7 +1437,7 @@ Value: Type Converter instance</li>
 			<td class="value">
 				<div>
 					<a href="#$typeConverters" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1447,7 +1448,7 @@ Value: Type Converter instance</li>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#52-56" title="Go to source code"><var>$messages</var></a>
+					<a href="source-class-TYPO3.Flow.Property.PropertyMapper.html#59-63" title="Go to source code"><var>$messages</var></a>
 
 				<div class="description short">
 					<p>A list of property mapping messages (errors, warnings) which have occured on last mapping.</p>
@@ -1480,7 +1481,7 @@ Value: Type Converter instance</li>
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

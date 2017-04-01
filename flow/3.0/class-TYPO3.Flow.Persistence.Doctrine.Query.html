@@ -853,7 +853,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#17-723" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/Query.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#23-729" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Persistence/Doctrine/Query.php</a>
 		<br>
 	</div>
 
@@ -873,7 +873,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#100-106" title="Go to source code">__construct</a>( <span>string <var>$entityClassName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#106-112" title="Go to source code">__construct</a>( <span>string <var>$entityClassName</var></span> )</code>
 
 			<div class="description short">
 				
@@ -907,7 +907,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectEntityManager">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#108-116" title="Go to source code">injectEntityManager</a>( <span>Doctrine\Common\Persistence\ObjectManager <var>$entityManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#114-122" title="Go to source code">injectEntityManager</a>( <span>Doctrine\Common\Persistence\ObjectManager <var>$entityManager</var></span> )</code>
 
 			<div class="description short">
 				
@@ -941,7 +941,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#118-128" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#124-134" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the Flow settings, the persistence part is kept
@@ -977,7 +977,7 @@ for further use.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#130-139" title="Go to source code">getType</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#136-145" title="Go to source code">getType</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the type this query cares for.</p>
@@ -1015,7 +1015,7 @@ for further use.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_execute">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#141-152" title="Go to source code">execute</a>( <span>boolean <var>$cacheResult</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#147-158" title="Go to source code">execute</a>( <span>boolean <var>$cacheResult</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Executes the query and returns the result.</p>
@@ -1058,7 +1058,7 @@ for further use.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResult">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#154-209" title="Go to source code">getResult</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#160-215" title="Go to source code">getResult</a>( )</code>
 
 			<div class="description short">
 				<p>Gets the results of this query as array.</p>
@@ -1100,7 +1100,7 @@ This should only ever be executed from the QueryResult class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_count">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#211-244" title="Go to source code">count</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#217-250" title="Go to source code">count</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the query result count</p>
@@ -1142,7 +1142,7 @@ This should only ever be executed from the QueryResult class.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOrderings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#246-265" title="Go to source code">setOrderings</a>( <span>array <var>$orderings</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#252-271" title="Go to source code">setOrderings</a>( <span>array <var>$orderings</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the property names to order the result by. Expected like this:
@@ -1154,7 +1154,9 @@ array(
 
 			<div class="description detailed hidden">
 				<p>Sets the property names to order the result by. Expected like this:
-array( 'foo' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_ASCENDING, 'bar' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_DESCENDING
+array(
+ 'foo' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_ASCENDING,
+ 'bar' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_DESCENDING
 )</p>
 
 
@@ -1191,7 +1193,7 @@ array( 'foo' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_ASCENDING, 'bar' =
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOrderings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#267-280" title="Go to source code">getOrderings</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#273-286" title="Go to source code">getOrderings</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the property names to order the result by, like this:
@@ -1203,7 +1205,9 @@ array(
 
 			<div class="description detailed hidden">
 				<p>Returns the property names to order the result by, like this:
-array( 'foo' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_ASCENDING, 'bar' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_DESCENDING
+array(
+ 'foo' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_ASCENDING,
+ 'bar' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_DESCENDING
 )</p>
 
 
@@ -1235,7 +1239,7 @@ array( 'foo' => \TYPO3\Flow\Persistence\QueryInterface::ORDER_ASCENDING, 'bar' =
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLimit">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#282-295" title="Go to source code">setLimit</a>( <span>integer <var>$limit</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#288-301" title="Go to source code">setLimit</a>( <span>integer <var>$limit</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the maximum size of the result set to limit. Returns $this to allow
@@ -1280,7 +1284,7 @@ for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLimit">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#297-306" title="Go to source code">getLimit</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#303-312" title="Go to source code">getLimit</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the maximum size of the result set to limit.</p>
@@ -1318,7 +1322,7 @@ for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDistinct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#308-320" title="Go to source code">setDistinct</a>( <span>boolean <var>$distinct</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#314-326" title="Go to source code">setDistinct</a>( <span>boolean <var>$distinct</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the DISTINCT flag for this query.</p>
@@ -1361,7 +1365,7 @@ for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isDistinct">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#322-331" title="Go to source code">isDistinct</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#328-337" title="Go to source code">isDistinct</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the DISTINCT flag for this query.</p>
@@ -1399,7 +1403,7 @@ for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOffset">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#333-346" title="Go to source code">setOffset</a>( <span>integer <var>$offset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#339-352" title="Go to source code">setOffset</a>( <span>integer <var>$offset</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the start offset of the result set to offset. Returns $this to
@@ -1444,7 +1448,7 @@ allow for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOffset">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#348-357" title="Go to source code">getOffset</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#354-363" title="Go to source code">getOffset</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the start offset of the result set.</p>
@@ -1482,7 +1486,7 @@ allow for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matching">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#359-372" title="Go to source code">matching</a>( <span>object <var>$constraint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#365-378" title="Go to source code">matching</a>( <span>object <var>$constraint</var></span> )</code>
 
 			<div class="description short">
 				<p>The constraint used to limit the result set. Returns $this to allow
@@ -1527,7 +1531,7 @@ for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConstraint">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#374-383" title="Go to source code">getConstraint</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#380-389" title="Go to source code">getConstraint</a>( )</code>
 
 			<div class="description short">
 				<p>Gets the constraint for this query.</p>
@@ -1565,7 +1569,7 @@ for chaining (fluid interface)</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logicalAnd">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#385-402" title="Go to source code">logicalAnd</a>( <span>mixed <var>$constraint1</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#391-408" title="Go to source code">logicalAnd</a>( <span>mixed <var>$constraint1</var></span> )</code>
 
 			<div class="description short">
 				<p>Performs a logical conjunction of the two given constraints. The method
@@ -1612,7 +1616,7 @@ It also accepts a single array of constraints to be concatenated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logicalOr">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#404-421" title="Go to source code">logicalOr</a>( <span>mixed <var>$constraint1</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#410-427" title="Go to source code">logicalOr</a>( <span>mixed <var>$constraint1</var></span> )</code>
 
 			<div class="description short">
 				<p>Performs a logical disjunction of the two given constraints. The method
@@ -1659,7 +1663,7 @@ It also accepts a single array of constraints to be concatenated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logicalNot">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#423-433" title="Go to source code">logicalNot</a>( <span>object <var>$constraint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#429-439" title="Go to source code">logicalNot</a>( <span>object <var>$constraint</var></span> )</code>
 
 			<div class="description short">
 				<p>Performs a logical negation of the given constraint</p>
@@ -1702,7 +1706,7 @@ It also accepts a single array of constraints to be concatenated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_equals">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#435-465" title="Go to source code">equals</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span>, <span>boolean <var>$caseSensitive</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#441-471" title="Go to source code">equals</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span>, <span>boolean <var>$caseSensitive</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns an equals criterion used for matching objects against a query.</p>
@@ -1758,7 +1762,7 @@ compare lowercased values).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_like">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#467-487" title="Go to source code">like</a>( <span>string <var>$propertyName</var></span>, <span>string <var>$operand</var></span>, <span>boolean <var>$caseSensitive</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#473-493" title="Go to source code">like</a>( <span>string <var>$propertyName</var></span>, <span>string <var>$operand</var></span>, <span>boolean <var>$caseSensitive</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns a like criterion used for matching objects against a query.
@@ -1813,7 +1817,7 @@ standard SQL wildcards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_contains">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#489-504" title="Go to source code">contains</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#495-510" title="Go to source code">contains</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a "contains" criterion used for matching objects against a query.
@@ -1866,7 +1870,7 @@ It matches if the multivalued property contains the given operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isEmpty">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#506-518" title="Go to source code">isEmpty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#512-524" title="Go to source code">isEmpty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an "isEmpty" criterion used for matching objects against a query.
@@ -1915,7 +1919,7 @@ It matches if the multivalued property contains no values or is NULL.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_in">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#520-535" title="Go to source code">in</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#526-541" title="Go to source code">in</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an "in" criterion used for matching objects against a query. It
@@ -1966,7 +1970,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_lessThan">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#537-549" title="Go to source code">lessThan</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#543-555" title="Go to source code">lessThan</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a less than criterion used for matching objects against a query</p>
@@ -2015,7 +2019,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_lessThanOrEqual">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#551-563" title="Go to source code">lessThanOrEqual</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#557-569" title="Go to source code">lessThanOrEqual</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a less or equal than criterion used for matching objects against a query</p>
@@ -2064,7 +2068,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_greaterThan">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#565-577" title="Go to source code">greaterThan</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#571-583" title="Go to source code">greaterThan</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a greater than criterion used for matching objects against a query</p>
@@ -2113,7 +2117,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_greaterThanOrEqual">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#579-591" title="Go to source code">greaterThanOrEqual</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#585-597" title="Go to source code">greaterThanOrEqual</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a greater than or equal criterion used for matching objects against a query</p>
@@ -2162,7 +2166,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addParameters">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#593-605" title="Go to source code">addParameters</a>( <span>array <var>$parameters</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#599-611" title="Go to source code">addParameters</a>( <span>array <var>$parameters</var></span> )</code>
 
 			<div class="description short">
 				<p>Add parameters to the query</p>
@@ -2196,7 +2200,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParameters">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#607-615" title="Go to source code">getParameters</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#613-621" title="Go to source code">getParameters</a>( )</code>
 
 			<div class="description short">
 				<p>Gets all defined query parameters for the query being constructed.</p>
@@ -2229,7 +2233,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParamNeedle">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#617-628" title="Go to source code">getParamNeedle</a>( <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#623-634" title="Go to source code">getParamNeedle</a>( <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a needle for parameter binding.</p>
@@ -2267,7 +2271,7 @@ matches if the property's value is contained in the multivalued operand.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyNameWithAlias">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#630-655" title="Go to source code">getPropertyNameWithAlias</a>( <span>string <var>$propertyPath</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#636-661" title="Go to source code">getPropertyNameWithAlias</a>( <span>string <var>$propertyPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds left join clauses along the given property path to the query, if needed.
@@ -2307,7 +2311,7 @@ This enables us to set conditions on related objects.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSql">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#657-665" title="Go to source code">getSql</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#663-671" title="Go to source code">getSql</a>( )</code>
 
 			<div class="description short">
 				<p>Return the SQL statements representing this Query.</p>
@@ -2340,7 +2344,7 @@ This enables us to set conditions on related objects.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___sleep">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#667-676" title="Go to source code">__sleep</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#673-682" title="Go to source code">__sleep</a>( )</code>
 
 			<div class="description short">
 				<p>We need to drop the query builder, as it contains a PDO instance deep inside.</p>
@@ -2373,7 +2377,7 @@ This enables us to set conditions on related objects.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___wakeup">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#678-705" title="Go to source code">__wakeup</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#684-711" title="Go to source code">__wakeup</a>( )</code>
 
 			<div class="description short">
 				<p>Recreate query builder and set state again.</p>
@@ -2402,7 +2406,7 @@ This enables us to set conditions on related objects.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#707-714" title="Go to source code">__clone</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#713-720" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Cloning the query clones also the internal QueryBuilder,
@@ -2433,7 +2437,7 @@ as they are tightly coupled.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getQueryBuilder">#</a>
-			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#716-722" title="Go to source code">getQueryBuilder</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#722-728" title="Go to source code">getQueryBuilder</a>( )</code>
 
 			<div class="description short">
 				
@@ -2500,7 +2504,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#24-27" title="Go to source code"><var>$entityClassName</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#30-33" title="Go to source code"><var>$entityClassName</var></a>
 
 				<div class="description short">
 					
@@ -2525,7 +2529,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#29-33" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#35-39" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -2553,7 +2557,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#35-38" title="Go to source code"><var>$queryBuilder</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#41-44" title="Go to source code"><var>$queryBuilder</var></a>
 
 				<div class="description short">
 					
@@ -2578,7 +2582,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#40-43" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#46-49" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					
@@ -2603,7 +2607,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#45-48" title="Go to source code"><var>$settings</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#51-54" title="Go to source code"><var>$settings</var></a>
 
 				<div class="description short">
 					
@@ -2628,7 +2632,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#50-53" title="Go to source code"><var>$constraint</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#56-59" title="Go to source code"><var>$constraint</var></a>
 
 				<div class="description short">
 					
@@ -2653,7 +2657,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#55-58" title="Go to source code"><var>$orderings</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#61-64" title="Go to source code"><var>$orderings</var></a>
 
 				<div class="description short">
 					
@@ -2678,7 +2682,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#60-63" title="Go to source code"><var>$limit</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#66-69" title="Go to source code"><var>$limit</var></a>
 
 				<div class="description short">
 					
@@ -2703,7 +2707,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#65-68" title="Go to source code"><var>$distinct</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#71-74" title="Go to source code"><var>$distinct</var></a>
 
 				<div class="description short">
 					
@@ -2728,7 +2732,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#70-73" title="Go to source code"><var>$offset</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#76-79" title="Go to source code"><var>$offset</var></a>
 
 				<div class="description short">
 					
@@ -2753,7 +2757,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#75-78" title="Go to source code"><var>$parameterIndex</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#81-84" title="Go to source code"><var>$parameterIndex</var></a>
 
 				<div class="description short">
 					
@@ -2778,7 +2782,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#80-83" title="Go to source code"><var>$parameters</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#86-89" title="Go to source code"><var>$parameters</var></a>
 
 				<div class="description short">
 					
@@ -2803,7 +2807,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#85-88" title="Go to source code"><var>$joins</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#91-94" title="Go to source code"><var>$joins</var></a>
 
 				<div class="description short">
 					
@@ -2828,7 +2832,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#90-93" title="Go to source code"><var>$joinAliasCounter</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#96-99" title="Go to source code"><var>$joinAliasCounter</var></a>
 
 				<div class="description short">
 					
@@ -2853,7 +2857,7 @@ as they are tightly coupled.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#95-98" title="Go to source code"><var>$cacheResult</var></a>
+					<a href="source-class-TYPO3.Flow.Persistence.Doctrine.Query.html#101-104" title="Go to source code"><var>$cacheResult</var></a>
 
 				<div class="description short">
 					
@@ -2886,7 +2890,7 @@ as they are tightly coupled.</p>
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

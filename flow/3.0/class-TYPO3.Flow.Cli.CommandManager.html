@@ -847,9 +847,9 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Cli.html">Cli</a><br>
 		
 
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cli.CommandManager.html#16-229" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandManager.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Cli.CommandManager.html#23-236" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandManager.php</a>
 		<br>
 	</div>
 
@@ -869,7 +869,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectReflectionService">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#43-50" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#50-57" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-TYPO3.Flow.Reflection.ReflectionService.html">TYPO3\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
 
 			<div class="description short">
 				
@@ -903,7 +903,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectBootstrap">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#52-59" title="Go to source code">injectBootstrap</a>( <span><code><a href="class-TYPO3.Flow.Core.Bootstrap.html">TYPO3\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#59-66" title="Go to source code">injectBootstrap</a>( <span><code><a href="class-TYPO3.Flow.Core.Bootstrap.html">TYPO3\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
 
 			<div class="description short">
 				
@@ -937,7 +937,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAvailableCommands">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#61-85" title="Go to source code">getAvailableCommands</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#68-92" title="Go to source code">getAvailableCommands</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array of all commands</p>
@@ -973,7 +973,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCommandByIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#87-116" title="Go to source code">getCommandByIdentifier</a>( <span>string <var>$commandIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#94-123" title="Go to source code">getCommandByIdentifier</a>( <span>string <var>$commandIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a Command that matches the given identifier.
@@ -1016,14 +1016,14 @@ If more than one Command matches an AmbiguousCommandIdentifierException is throw
 
 			<td class="attributes"><code>
 				 public 
-				array&lt;\TYPO3\Flow\Mvc\Cli\Command&gt;
+				array&lt;Command&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCommandsByIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#118-136" title="Go to source code">getCommandsByIdentifier</a>( <span>string <var>$commandIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#125-143" title="Go to source code">getCommandsByIdentifier</a>( <span>string <var>$commandIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of Commands that matches the given identifier.
@@ -1043,7 +1043,7 @@ If no Command could be found, an empty array is returned</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;\TYPO3\Flow\Mvc\Cli\Command&gt;
+						array&lt;Command&gt;
 					</div>
 
 
@@ -1066,7 +1066,7 @@ If no Command could be found, an empty array is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getShortestIdentifierForCommand">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#138-155" title="Go to source code">getShortestIdentifierForCommand</a>( <span><code><a href="class-TYPO3.Flow.Cli.Command.html">TYPO3\Flow\Cli\Command</a></code> <var>$command</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#145-162" title="Go to source code">getShortestIdentifierForCommand</a>( <span><code><a href="class-TYPO3.Flow.Cli.Command.html">TYPO3\Flow\Cli\Command</a></code> <var>$command</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the shortest, non-ambiguous command identifier for the given command</p>
@@ -1107,7 +1107,7 @@ If no Command could be found, an empty array is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getShortCommandIdentifiers">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#157-195" title="Go to source code">getShortCommandIdentifiers</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#164-202" title="Go to source code">getShortCommandIdentifiers</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array that contains all available command identifiers and their shortest non-ambiguous alias</p>
@@ -1140,7 +1140,7 @@ If no Command could be found, an empty array is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commandMatchesIdentifier">#</a>
-			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#197-228" title="Go to source code">commandMatchesIdentifier</a>( <span><code><a href="class-TYPO3.Flow.Cli.Command.html">TYPO3\Flow\Cli\Command</a></code> <var>$command</var></span>, <span>string <var>$commandIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Cli.CommandManager.html#204-235" title="Go to source code">commandMatchesIdentifier</a>( <span><code><a href="class-TYPO3.Flow.Cli.Command.html">TYPO3\Flow\Cli\Command</a></code> <var>$command</var></span>, <span>string <var>$commandIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if the specified command identifier matches the identifier of the specified command.
@@ -1153,7 +1153,10 @@ The first part (package key) can be reduced to the last subpackage, as long as t
 
 			<div class="description detailed hidden">
 				<p>Returns TRUE if the specified command identifier matches the identifier of the specified command.
-This is the case, if - the identifiers are the same - if at least the last two command parts match (case sensitive) or - if only the package key is specified and matches the commands package key
+This is the case, if
+ - the identifiers are the same
+ - if at least the last two command parts match (case sensitive) or
+ - if only the package key is specified and matches the commands package key
 The first part (package key) can be reduced to the last subpackage, as long as the result is unambiguous.</p>
 
 
@@ -1199,7 +1202,7 @@ The first part (package key) can be reduced to the last subpackage, as long as t
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#23-26" title="Go to source code"><var>$availableCommands</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#30-33" title="Go to source code"><var>$availableCommands</var></a>
 
 				<div class="description short">
 					
@@ -1224,7 +1227,7 @@ The first part (package key) can be reduced to the last subpackage, as long as t
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#28-31" title="Go to source code"><var>$shortCommandIdentifiers</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#35-38" title="Go to source code"><var>$shortCommandIdentifiers</var></a>
 
 				<div class="description short">
 					
@@ -1249,7 +1252,7 @@ The first part (package key) can be reduced to the last subpackage, as long as t
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#33-36" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#40-43" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1274,7 +1277,7 @@ The first part (package key) can be reduced to the last subpackage, as long as t
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#38-41" title="Go to source code"><var>$bootstrap</var></a>
+					<a href="source-class-TYPO3.Flow.Cli.CommandManager.html#45-48" title="Go to source code"><var>$bootstrap</var></a>
 
 				<div class="description short">
 					
@@ -1307,7 +1310,7 @@ The first part (package key) can be reduced to the last subpackage, as long as t
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

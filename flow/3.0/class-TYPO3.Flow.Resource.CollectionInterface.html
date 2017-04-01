@@ -854,7 +854,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Resource.html">Resource</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#18-95" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/CollectionInterface.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#21-98" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/CollectionInterface.php</a>
 		<br>
 	</div>
 
@@ -874,7 +874,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#23-28" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#26-31" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of this collection</p>
@@ -907,7 +907,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStorage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#30-35" title="Go to source code">getStorage</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#33-38" title="Go to source code">getStorage</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the storage used for this collection</p>
@@ -940,7 +940,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTarget">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#37-42" title="Go to source code">getTarget</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#40-45" title="Go to source code">getTarget</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the publication target defined for this collection</p>
@@ -973,7 +973,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importResource">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#44-56" title="Go to source code">importResource</a>( <span>string <var>$source</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#47-59" title="Go to source code">importResource</a>( <span>string <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Imports a resource (file) from the given URI or PHP resource stream into this collection.</p>
@@ -1020,7 +1020,7 @@ imported persistent resource.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importResourceFromContent">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#58-70" title="Go to source code">importResourceFromContent</a>( <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#61-73" title="Go to source code">importResourceFromContent</a>( <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Imports a resource from the given string content into this collection.</p>
@@ -1067,7 +1067,7 @@ imported persistent resource.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publish">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#72-77" title="Go to source code">publish</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#75-80" title="Go to source code">publish</a>( )</code>
 
 			<div class="description short">
 				<p>Publishes the whole collection to the corresponding publishing target</p>
@@ -1089,14 +1089,14 @@ imported persistent resource.</p>
 
 			<td class="attributes"><code>
 				 public 
-				array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+				array&lt;StorageObject&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjects">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#79-84" title="Go to source code">getObjects</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#82-87" title="Go to source code">getObjects</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all internal data objects of the storage attached to this collection.</p>
@@ -1109,7 +1109,7 @@ imported persistent resource.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;\TYPO3\Flow\Resource\Storage\Object&gt;
+						array&lt;StorageObject&gt;
 					</div>
 
 
@@ -1129,7 +1129,7 @@ imported persistent resource.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStreamByResource">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#87-94" title="Go to source code">getStreamByResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.CollectionInterface.html#90-97" title="Go to source code">getStreamByResource</a>( <span><code><a href="class-TYPO3.Flow.Resource.Resource.html">TYPO3\Flow\Resource\Resource</a></code> <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a stream handle of the given persistent resource which allows for opening / copying the resource's
@@ -1178,7 +1178,7 @@ data. Note that this stream handle may only be used read-only.</p>
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

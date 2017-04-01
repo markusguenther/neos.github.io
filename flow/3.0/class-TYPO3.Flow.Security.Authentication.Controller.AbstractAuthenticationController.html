@@ -857,9 +857,9 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a>\<a href="namespace-TYPO3.Flow.Security.Authentication.html">Authentication</a>\<a href="namespace-TYPO3.Flow.Security.Authentication.Controller.html">Controller</a><br>
 		
 
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#16-151" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Authentication/Controller/AbstractAuthenticationController.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#22-157" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Authentication/Controller/AbstractAuthenticationController.php</a>
 		<br>
 	</div>
 
@@ -879,7 +879,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loginAction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#35-53" title="Go to source code">loginAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#41-59" title="Go to source code">loginAction</a>( )</code>
 
 			<div class="description short">
 				<p>This action is used to show the login form. To make this
@@ -893,7 +893,10 @@ work in your package simply create a template for this
 action, which could look like this in the simplest case:</p>
 
 <p><f:flashMessages />
-<f:form action="authenticate"> &lt;f:form.textfield name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" /> &lt;f:form.password name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" /> &lt;f:form.submit value="login" />
+<f:form action="authenticate">
+  &lt;f:form.textfield name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" />
+  &lt;f:form.password name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" />
+  &lt;f:form.submit value="login" />
 </f:form></p>
 
 <p>Note: This example is designed to serve the "UsernamePassword" token.</p>
@@ -918,7 +921,7 @@ action, which could look like this in the simplest case:</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_authenticateAction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#55-90" title="Go to source code">authenticateAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#61-96" title="Go to source code">authenticateAction</a>( )</code>
 
 			<div class="description short">
 				<p>Calls the authentication manager to authenticate all active tokens
@@ -967,7 +970,7 @@ onAuthenticationFailure()).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logoutAction">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#92-102" title="Go to source code">logoutAction</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#98-108" title="Go to source code">logoutAction</a>( )</code>
 
 			<div class="description short">
 				<p>Logs all active tokens out. Override this, if you want to
@@ -1000,7 +1003,7 @@ method to do the actual logout.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onAuthenticationFailure">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#104-117" title="Go to source code">onAuthenticationFailure</a>( <span><code><a href="class-TYPO3.Flow.Security.Exception.AuthenticationRequiredException.html">TYPO3\Flow\Security\Exception\AuthenticationRequiredException</a></code> <var>$exception</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#110-123" title="Go to source code">onAuthenticationFailure</a>( <span><code><a href="class-TYPO3.Flow.Security.Exception.AuthenticationRequiredException.html">TYPO3\Flow\Security\Exception\AuthenticationRequiredException</a></code> <var>$exception</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Is called if authentication failed.</p>
@@ -1038,7 +1041,7 @@ to redirect to some action showing the login form again.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onAuthenticationSuccess">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#119-133" title="Go to source code">onAuthenticationSuccess</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$originalRequest</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#125-139" title="Go to source code">onAuthenticationSuccess</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$originalRequest</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Is called if authentication was successful. If there has been an
@@ -1053,7 +1056,8 @@ intercepted request due to security restrictions, you might want to use
 something like the following code to restart the originally intercepted
 request:</p>
 
-<p>if ($originalRequest !== NULL) { $this->redirectToRequest($originalRequest);
+<p>if ($originalRequest !== NULL) {
+    $this->redirectToRequest($originalRequest);
 }
 $this->redirect('someDefaultActionAfterLogin');</p>
 
@@ -1086,7 +1090,7 @@ $this->redirect('someDefaultActionAfterLogin');</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getErrorFlashMessage">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#136-150" title="Go to source code">getErrorFlashMessage</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#142-156" title="Go to source code">getErrorFlashMessage</a>( )</code>
 
 			<div class="description short">
 				<p>A template method for displaying custom error flash messages, or to
@@ -1184,7 +1188,7 @@ method of you login controller, this message should never be displayed.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#23-27" title="Go to source code"><var>$authenticationManager</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#29-33" title="Go to source code"><var>$authenticationManager</var></a>
 
 				<div class="description short">
 					
@@ -1212,7 +1216,7 @@ method of you login controller, this message should never be displayed.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#29-33" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html#35-39" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
 					
@@ -1279,7 +1283,7 @@ method of you login controller, this message should never be displayed.</p>
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

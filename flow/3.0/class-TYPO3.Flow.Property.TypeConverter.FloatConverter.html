@@ -846,15 +846,25 @@ decimal separators.</p>
 
 <p><strong>Advanced usage in action controller context</strong></p>
 
-<p><em>Using default locale</em>::
- protected function initializeCreateAction() { $this->arguments['newBid']->getPropertyMappingConfiguration()->forProperty('price')->setTypeConverterOption( 'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'locale', TRUE ); }</p>
+<p><em>Using default locale</em>::</p>
+
+<p>protected function initializeCreateAction() {
+    $this->arguments['newBid']->getPropertyMappingConfiguration()->forProperty('price')->setTypeConverterOption(
+        'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'locale', TRUE
+    );
+ }</p>
 
 <p>Just providing TRUE as option value will use the current default locale. In case that default locale is "DE"
 for Germany for example, where a comma is used as decimal separator, the mentioned code will return
 (float)15.5 when the input was (string)"15,50".</p>
 
-<p><em>Using arbitrary locale</em>::
- protected function initializeCreateAction() { $this->arguments['newBid']->getPropertyMappingConfiguration()->forProperty('price')->setTypeConverterOption( 'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'locale', 'fr' ); }</p>
+<p><em>Using arbitrary locale</em>::</p>
+
+<p>protected function initializeCreateAction() {
+    $this->arguments['newBid']->getPropertyMappingConfiguration()->forProperty('price')->setTypeConverterOption(
+        'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'locale', 'fr'
+    );
+ }</p>
 
 <p><strong>Parsing mode</strong></p>
 
@@ -863,8 +873,11 @@ format, and if any of them are not fulfilled, the conversion will not take place
 In Lenient mode the parser will try to extract the intended number from the string, even if it's not well formed.
 Default for strict mode is TRUE.</p>
 
-<p><em>Example setting lenient mode (abridged)</em>::
- ->setTypeConverterOption( 'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'strictMode', FALSE );</p>
+<p><em>Example setting lenient mode (abridged)</em>::</p>
+
+<p>->setTypeConverterOption(
+    'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'strictMode', FALSE
+ );</p>
 
 <p><strong>Format type</strong></p>
 
@@ -872,8 +885,11 @@ Default for strict mode is TRUE.</p>
 FORMAT_TYPE_PERCENT or FORMAT_TYPE_CURRENCY of class TYPO3\Flow\I18n\Cldr\Reader\NumbersReader.
 Default, if none given, is FORMAT_TYPE_DECIMAL.</p>
 
-<p><em>Example setting format type <code>currency</code> (abridged)</em>::
- ->setTypeConverterOption( 'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'formatType', \TYPO3\Flow\I18n\Cldr\Reader\NumbersReader::FORMAT_TYPE_CURRENCY );</p>
+<p><em>Example setting format type <code>currency</code> (abridged)</em>::</p>
+
+<p>->setTypeConverterOption(
+    'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'formatType', \TYPO3\Flow\I18n\Cldr\Reader\NumbersReader::FORMAT_TYPE_CURRENCY
+ );</p>
 
 <p><strong>Format length</strong></p>
 
@@ -882,8 +898,11 @@ FORMAT_LENGTH_FULL, FORMAT_LENGTH_LONG etc., of class  TYPO3\Flow\I18n\Cldr\Read
 The format length has a technical background in the CLDR repository, and specifies whether a different number
 pattern should be used. In most cases leaving this DEFAULT would be the correct choice.</p>
 
-<p><em>Example setting format length (abridged)</em>::
- ->setTypeConverterOption( 'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'formatLength', \TYPO3\Flow\I18n\Cldr\Reader\NumbersReader::FORMAT_LENGTH_FULL );</p>
+<p><em>Example setting format length (abridged)</em>::</p>
+
+<p>->setTypeConverterOption(
+    'TYPO3\Flow\Property\TypeConverter\FloatConverter', 'formatLength', \TYPO3\Flow\I18n\Cldr\Reader\NumbersReader::FORMAT_LENGTH_FULL
+ );</p>
 	</div>
 
 	<dl class="tree well">
@@ -918,9 +937,9 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 
 				<b>Api</b>
 				<br>
-				<b>Flow\scope("singleton")</b>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#19-224" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/FloatConverter.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#21-226" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Property/TypeConverter/FloatConverter.php</a>
 		<br>
 	</div>
 
@@ -940,7 +959,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#120-145" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#122-147" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Actually convert from $source to $targetType, by doing a typecast.</p>
@@ -969,7 +988,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-TYPO3.Flow.Property.Exception.TypeConverterException.html">TYPO3\Flow\Property\Exception\TypeConverterException</a></code><br>thrown in case a developer error occurred
+						Exception\TypeConverterException<br>thrown in case a developer error occurred
 					</div>
 
 					<h4>Api</h4>
@@ -991,7 +1010,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseUsingLocaleIfConfigured">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#147-207" title="Go to source code">parseUsingLocaleIfConfigured</a>( <span>string <var>$source</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#149-209" title="Go to source code">parseUsingLocaleIfConfigured</a>( <span>string <var>$source</var></span>, <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to parse the input using the NumberParser.</p>
@@ -1035,7 +1054,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigurationKeysAndValues">#</a>
-			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#209-223" title="Go to source code">getConfigurationKeysAndValues</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span>, <span>array <var>$configurationKeys</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#211-225" title="Go to source code">getConfigurationKeysAndValues</a>( <span><code><a href="class-TYPO3.Flow.Property.PropertyMappingConfigurationInterface.html">TYPO3\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span>, <span>array <var>$configurationKeys</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper method to collect configuration for this class.</p>
@@ -1099,7 +1118,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#93-97" title="Go to source code"><var>$localizationService</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#95-99" title="Go to source code"><var>$localizationService</var></a>
 
 				<div class="description short">
 					
@@ -1127,7 +1146,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#99-103" title="Go to source code"><var>$numberParser</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#101-105" title="Go to source code"><var>$numberParser</var></a>
 
 				<div class="description short">
 					
@@ -1155,7 +1174,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#105-108" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#107-110" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1169,7 +1188,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'float'</span>, <span class="php-quote">'integer'</span>, <span class="php-quote">'string'</span>)</code>
+					<code>[<span class="php-quote">'float'</span>, <span class="php-quote">'integer'</span>, <span class="php-quote">'string'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1180,7 +1199,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#110-113" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#112-115" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1205,7 +1224,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#115-118" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-TYPO3.Flow.Property.TypeConverter.FloatConverter.html#117-120" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1238,7 +1257,7 @@ pattern should be used. In most cases leaving this DEFAULT would be the correct 
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

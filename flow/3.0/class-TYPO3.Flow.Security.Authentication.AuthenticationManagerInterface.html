@@ -827,7 +827,7 @@
 	<div class="description">
 	<p>Contract for an authentication manager.</p>
 
-<p>Has to add a \TYPO3\Flow\Security\Authentication\TokenInterface to the security context
+<p>Has to add a TokenInterface to the security context
 Might set a UserDetailsService, RequestPattern and AuthenticationEntryPoint (from configuration).</p>
 	</div>
 
@@ -851,7 +851,7 @@ Might set a UserDetailsService, RequestPattern and AuthenticationEntryPoint (fro
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a>\<a href="namespace-TYPO3.Flow.Security.Authentication.html">Authentication</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#14-66" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Authentication/AuthenticationManagerInterface.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#16-68" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Authentication/AuthenticationManagerInterface.php</a>
 		<br>
 	</div>
 
@@ -864,14 +864,14 @@ Might set a UserDetailsService, RequestPattern and AuthenticationEntryPoint (fro
 
 			<td class="attributes"><code>
 				 public 
-				array
+				array&lt;TokenInterface&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#22-28" title="Go to source code">getTokens</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#24-30" title="Go to source code">getTokens</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the tokens this manager is responsible for.
@@ -886,7 +886,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Array of \TYPO3\Flow\Security\Authentication\TokenInterface An array of tokens this manager is responsible for
+						array&lt;TokenInterface&gt;<br>An array of tokens this manager is responsible for
 					</div>
 
 
@@ -906,7 +906,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setSecurityContext">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#30-36" title="Go to source code">setSecurityContext</a>( <span><code><a href="class-TYPO3.Flow.Security.Context.html">TYPO3\Flow\Security\Context</a></code> <var>$securityContext</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#32-38" title="Go to source code">setSecurityContext</a>( <span><code><a href="class-TYPO3.Flow.Security.Context.html">TYPO3\Flow\Security\Context</a></code> <var>$securityContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the security context</p>
@@ -940,7 +940,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSecurityContext">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#38-43" title="Go to source code">getSecurityContext</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#40-45" title="Go to source code">getSecurityContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the security context</p>
@@ -973,16 +973,16 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_authenticate">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#45-51" title="Go to source code">authenticate</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#47-53" title="Go to source code">authenticate</a>( )</code>
 
 			<div class="description short">
 				<p>Tries to authenticate the tokens in the security context, if needed.
-(Have a look at the \TYPO3\Flow\Security\Authentication\TokenManager for an implementation example)</p>
+(Have a look at the Authentication\TokenManager for an implementation example)</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Tries to authenticate the tokens in the security context, if needed.
-(Have a look at the \TYPO3\Flow\Security\Authentication\TokenManager for an implementation example)</p>
+(Have a look at the Authentication\TokenManager for an implementation example)</p>
 
 
 
@@ -1004,7 +1004,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAuthenticated">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#53-58" title="Go to source code">isAuthenticated</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#55-60" title="Go to source code">isAuthenticated</a>( )</code>
 
 			<div class="description short">
 				<p>Checks if at least one token is authenticated</p>
@@ -1037,7 +1037,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logout">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#60-65" title="Go to source code">logout</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html#62-67" title="Go to source code">logout</a>( )</code>
 
 			<div class="description short">
 				<p>Logs all active authentication tokens out</p>
@@ -1075,7 +1075,7 @@ Note: The order of the tokens in the array is important, as the tokens will be a
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>

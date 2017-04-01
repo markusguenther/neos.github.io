@@ -852,7 +852,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Security.html">Security</a>\<a href="namespace-TYPO3.Flow.Security.Cryptography.html">Cryptography</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#14-119" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Cryptography/RsaWalletServiceInterface.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#17-122" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Cryptography/RsaWalletServiceInterface.php</a>
 		<br>
 	</div>
 
@@ -872,7 +872,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateNewKeypair">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#20-26" title="Go to source code">generateNewKeypair</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#23-29" title="Go to source code">generateNewKeypair</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Generates a new keypair and returns a fingerprint to refer to it</p>
@@ -910,7 +910,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerKeyPairFromPrivateKeyString">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#28-35" title="Go to source code">registerKeyPairFromPrivateKeyString</a>( <span>string <var>$privateKeyString</var></span>, <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#31-38" title="Go to source code">registerKeyPairFromPrivateKeyString</a>( <span>string <var>$privateKeyString</var></span>, <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds the specified keypair to the local store and returns a fingerprint to refer to it.</p>
@@ -950,7 +950,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerPublicKeyFromString">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#37-45" title="Go to source code">registerPublicKeyFromString</a>( <span>string <var>$publicKeyString</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#40-48" title="Go to source code">registerPublicKeyFromString</a>( <span>string <var>$publicKeyString</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds the specified public key to the wallet and returns a fingerprint to refer to it.
@@ -992,7 +992,7 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#47-54" title="Go to source code">getPublicKey</a>( <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#50-57" title="Go to source code">getPublicKey</a>( <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the public key for the given fingerprint</p>
@@ -1034,7 +1034,7 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_decrypt">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#56-67" title="Go to source code">decrypt</a>( <span>string <var>$cypher</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#59-70" title="Go to source code">decrypt</a>( <span>string <var>$cypher</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Decrypts the given cypher with the private key identified by the given fingerprint
@@ -1083,7 +1083,7 @@ to check passwords!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sign">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#69-77" title="Go to source code">sign</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#72-80" title="Go to source code">sign</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Signs the given plaintext with the private key identified by the given fingerprint</p>
@@ -1127,7 +1127,7 @@ to check passwords!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifySignature">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#79-88" title="Go to source code">verifySignature</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$signature</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#82-91" title="Go to source code">verifySignature</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$signature</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether the given signature is valid for the given plaintext
@@ -1171,7 +1171,7 @@ with the public key identified by the given fingerprint</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_encryptWithPublicKey">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#90-97" title="Go to source code">encryptWithPublicKey</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#93-100" title="Go to source code">encryptWithPublicKey</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Encrypts the given plaintext with the public key identified by the given fingerprint</p>
@@ -1211,7 +1211,7 @@ with the public key identified by the given fingerprint</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_checkRSAEncryptedPassword">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#99-109" title="Go to source code">checkRSAEncryptedPassword</a>( <span>string <var>$encryptedPassword</var></span>, <span>string <var>$passwordHash</var></span>, <span>string <var>$salt</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#102-112" title="Go to source code">checkRSAEncryptedPassword</a>( <span>string <var>$encryptedPassword</var></span>, <span>string <var>$passwordHash</var></span>, <span>string <var>$salt</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given encrypted password is correct by
@@ -1257,7 +1257,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_destroyKeypair">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#111-118" title="Go to source code">destroyKeypair</a>( <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Cryptography.RsaWalletServiceInterface.html#114-121" title="Go to source code">destroyKeypair</a>( <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Destroys the keypair identified by the given fingerprint</p>
@@ -1304,7 +1304,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 		Flow Framework 3.0 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?9e18fb85381e429e2c88f653dfd8656cd214f1de"></script>
+<script src="elementlist.js?2da247f1bb3c7b74db23169f8cfa46b3ebcdd1e8"></script>
 </body>
 </html>
