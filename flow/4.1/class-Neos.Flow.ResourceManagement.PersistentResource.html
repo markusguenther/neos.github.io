@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Neos\Flow\ResourceManagement\PersistentResource | Flow Framework (4.1 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Flow Framework (4.1 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.html" title="Summary of Neos\Flow\ResourceManagement"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Frontend.html">
+							Frontend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.html">
+							FlowQuery<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.html">
+							Operations<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.Object.html">
+							Object						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.Helper.html">
+							Helper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Eel.Validation.html">
+							Validation						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Error.html">
+							Error<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.html">
+							Messages						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.html">
+							Flow<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Annotations.html">
+							Annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.html">
+							Aop<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Advice.html">
+							Advice						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Builder.html">
+							Builder						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Pointcut.html">
+							Pointcut						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.Backend.html">
+							Backend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cli.html">
+							Cli						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.html">
+							Composer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Source.html">
+							Source						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.html">
+							Booting<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Migrations.html">
+							Migrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Error.html">
+							Error						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.html">
+							Http<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Client.html">
+							Client						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Component.html">
+							Component						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.html">
+							I18n<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.html">
+							Cldr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.html">
+							Reader<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.EelHelper.html">
+							EelHelper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Formatter.html">
+							Formatter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.html">
+							TranslationProvider<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.html">
+							Xliff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.html">
+							Log<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.html">
+							Monitor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.ChangeDetectionStrategy.html">
+							ChangeDetectionStrategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.html">
+							Mvc<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.html">
+							ObjectManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.DependencyInjection.html">
+							DependencyInjection						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Proxy.html">
+							Proxy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.html">
+							Package<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Package.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.html">
+							Doctrine<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.DataTypes.html">
+							DataTypes						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Logging.html">
+							Logging						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.html">
+							Mapping<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html">
+							Driver						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.html">
+							Generic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Qom.html">
+							Qom						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.html">
+							Property<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.html">
+							TypeConverter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.Error.html">
+							Error						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.html">
+							Reflection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.ResourceManagement.html">
+							ResourceManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
+							Filter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Publishing.html">
+							Publishing						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Storage.html">
+							Storage						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Streams.html">
+							Streams						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Target.html">
+							Target						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.html">
+							Authentication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.EntryPoint.html">
+							EntryPoint						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Provider.html">
+							Provider						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Token.html">
+							Token						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.html">
+							Entity<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Method.html">
+							Method						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Parameter.html">
+							Parameter						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Channel.html">
+							Channel						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Cryptography.html">
+							Cryptography						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Policy.html">
+							Policy						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.RequestPattern.html">
+							RequestPattern						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.html">
+							Session<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.html">
+							SignalSlot<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.html">
+							FluidAdaptor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.html">
+							SyntaxTree<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.Expression.html">
+							Expression						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.TemplateProcessor.html">
+							TemplateProcessor						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.html">
+							ViewHelper<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Facets.html">
+							Facets						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Security.html">
+							Security						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Validation.html">
+							Validation						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.html">
+							Kickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Inflect.html">
+							Inflect						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Lock.html">
+							Lock						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.html">
+							Unicode						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.ResourceManagement.Collection.html">Collection</a></li>
+				<li class="active"><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">PersistentResource</a></li>
+				<li><a href="class-Neos.Flow.ResourceManagement.ResourceManager.html">ResourceManager</a></li>
+				<li><a href="class-Neos.Flow.ResourceManagement.ResourceRepository.html">ResourceRepository</a></li>
+				<li><a href="class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html">ResourceTypeConverter</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">CollectionInterface</a></li>
+				<li><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html">ResourceMetaDataInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.ResourceManagement.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class PersistentResource</h1>
+
+
+	<div class="description">
+	<p>Model representing a persistable resource</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Neos\Flow\ResourceManagement\PersistentResource</span></b>			
+			 implements 
+				<a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html"><span>Neos\Flow\ResourceManagement\ResourceMetaDataInterface</span></a>, 
+			
+				<a href="class-Neos.Cache.CacheAwareInterface.html"><span>Neos\Cache\CacheAwareInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.ResourceManagement.html">ResourceManagement</a><br>
+		
+
+				<b>Flow\entity</b>
+				<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#24-499" title="Go to source code">Neos.Flow/Classes/ResourceManagement/PersistentResource.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="initializeObject" id="_initializeObject">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_initializeObject">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#134-145" title="Go to source code">initializeObject</a>( <span>integer <var>$initializationCause</var></span> )</code>
+
+			<div class="description short">
+				<p>Protects this PersistentResource if it has been persisted already.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Protects this PersistentResource if it has been persisted already.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$initializationCause</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStream" id="_getStream">
+
+			<td class="attributes"><code>
+				 public 
+				resource
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStream">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#147-158" title="Go to source code">getStream</a>( )</code>
+
+			<div class="description short">
+				<p>Returns a stream for use with read-only file operations such as reading or copying.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a stream for use with read-only file operations such as reading or copying.</p>
+
+<p>Note: The caller is responsible to close the returned resource by calling fclose($stream)</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						resource<br>| boolean A stream which points to the data of this resource for read-access or FALSE if the stream could not be obtained
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setCollectionName" id="_setCollectionName">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setCollectionName">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#160-171" title="Go to source code">setCollectionName</a>( <span>string <var>$collectionName</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the name of the collection this resource should be part of</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the name of the collection this resource should be part of</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$collectionName</var></dt>
+						<dd>Name of the collection</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCollectionName" id="_getCollectionName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCollectionName">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#173-182" title="Go to source code">getCollectionName</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the name of the collection this resource is part of</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the name of the collection this resource is part of</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Name of the collection, for example "persistentResources"
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setFilename" id="_setFilename">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setFilename">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#184-199" title="Go to source code">setFilename</a>( <span>string <var>$filename</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the filename which is used when this resource is downloaded or saved as a file</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the filename which is used when this resource is downloaded or saved as a file</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$filename</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_setFilename">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::setFilename()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFilename" id="_getFilename">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFilename">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#201-210" title="Go to source code">getFilename</a>( )</code>
+
+			<div class="description short">
+				<p>Gets the filename</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Gets the filename</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The filename
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_getFilename">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::getFilename()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFileExtension" id="_getFileExtension">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFileExtension">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#212-222" title="Go to source code">getFileExtension</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the file extension used for this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the file extension used for this resource</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The file extension used for this file
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setRelativePublicationPath" id="_setRelativePublicationPath">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setRelativePublicationPath">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#224-235" title="Go to source code">setRelativePublicationPath</a>( <span>string <var>$path</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets a relative path which can be used by a publishing target for structuring resources into directories</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets a relative path which can be used by a publishing target for structuring resources into directories</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_setRelativePublicationPath">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::setRelativePublicationPath()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRelativePublicationPath" id="_getRelativePublicationPath">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRelativePublicationPath">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#237-246" title="Go to source code">getRelativePublicationPath</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the relative publication path</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the relative publication path</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_getRelativePublicationPath">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::getRelativePublicationPath()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setMediaType" id="_setMediaType">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setMediaType">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#248-258" title="Go to source code">setMediaType</a>( <span>string <var>$mediaType</var></span> )</code>
+
+			<div class="description short">
+				<p>Explicitly sets the Media Type for this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Explicitly sets the Media Type for this resource</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mediaType</var></dt>
+						<dd>The IANA Media Type</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMediaType" id="_getMediaType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMediaType">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#260-273" title="Go to source code">getMediaType</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the Media Type for this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the Media Type for this resource</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The IANA Media Type
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_getMediaType">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::getMediaType()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setFileSize" id="_setFileSize">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setFileSize">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#275-285" title="Go to source code">setFileSize</a>( <span>integer <var>$fileSize</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the size of the content of this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the size of the content of this resource</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fileSize</var></dt>
+						<dd>The content size</dd>
+					</dl></div>
+
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_setFileSize">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::setFileSize()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFileSize" id="_getFileSize">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFileSize">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#287-295" title="Go to source code">getFileSize</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the size of the content of this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the size of the content of this resource</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The content size
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_getFileSize">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::getFileSize()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSha1" id="_getSha1">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSha1">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#297-306" title="Go to source code">getSha1</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the SHA1 hash of the content of this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the SHA1 hash of the content of this resource</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The sha1 hash
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_getSha1">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::getSha1()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setSha1" id="_setSha1">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setSha1">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#308-322" title="Go to source code">setSha1</a>( <span>string <var>$sha1</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the SHA1 hash of the content of this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the SHA1 hash of the content of this resource</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$sha1</var></dt>
+						<dd>The sha1 hash</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_setSha1">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::setSha1()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMd5" id="_getMd5">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMd5">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#324-333" title="Go to source code">getMd5</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the MD5 hash of the content of this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the MD5 hash of the content of this resource</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The MD5 hash
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_getMd5">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::getMd5()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setMd5" id="_setMd5">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setMd5">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#335-346" title="Go to source code">setMd5</a>( <span>string <var>$md5</var></span> )</code>
+
+			<div class="description short">
+				<p>Sets the MD5 hash of the content of this resource</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sets the MD5 hash of the content of this resource</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$md5</var></dt>
+						<dd>The MD5 hash</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html#_setMd5">Neos\Flow\ResourceManagement\ResourceMetaDataInterface::setMd5()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="createTemporaryLocalCopy" id="_createTemporaryLocalCopy">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createTemporaryLocalCopy">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#348-392" title="Go to source code">createTemporaryLocalCopy</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the path to a local file representing this resource for use with read-only file operations such as reading or copying.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the path to a local file representing this resource for use with read-only file operations such as reading or copying.</p>
+
+<p>Note that you must not store or publish file paths returned from this method as they will change with every request.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Absolute path and filename pointing to the temporary local copy of this resource
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.ResourceManagement.Exception.html">Neos\Flow\ResourceManagement\Exception</a></code>
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="postPersist" id="_postPersist">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_postPersist">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#394-407" title="Go to source code">postPersist</a>( )</code>
+
+			<div class="description short">
+				<p>Doctrine lifecycle event callback which is triggered on "postPersist" events.
+This method triggers the publication of this resource.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Doctrine lifecycle event callback which is triggered on "postPersist" events.
+This method triggers the publication of this resource.</p>
+
+
+
+
+
+					<h4>Orm\postpersist</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="preRemove" id="_preRemove">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_preRemove">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#409-421" title="Go to source code">preRemove</a>( )</code>
+
+			<div class="description short">
+				<p>Doctrine lifecycle event callback which is triggered on "preRemove" events.
+This method triggers the deletion of data related to this resource.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Doctrine lifecycle event callback which is triggered on "preRemove" events.
+This method triggers the deletion of data related to this resource.</p>
+
+
+
+
+
+					<h4>Orm\preremove</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="disableLifecycleEvents" id="_disableLifecycleEvents">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_disableLifecycleEvents">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#423-434" title="Go to source code">disableLifecycleEvents</a>( )</code>
+
+			<div class="description short">
+				<p>A very internal function which disables the Doctrine lifecycle events for this PersistentResource.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>A very internal function which disables the Doctrine lifecycle events for this PersistentResource.</p>
+
+<p>This is needed when some low-level operations need to be done, for example deleting a PersistentResource from the
+ResourceRepository without unpublishing the (probably not existing) data from the storage.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setDeleted" id="_setDeleted">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setDeleted">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#436-448" title="Go to source code">setDeleted</a>( <span>boolean <var>$flag</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				<p>An internal method which marks the PersistentResource object as deleted.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>An internal method which marks the PersistentResource object as deleted.</p>
+
+<p>This method is called by the ResourceManager in order to prevent other code parts, for example the Doctrine
+lifecycle events, to delete this resource again.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$flag</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isDeleted" id="_isDeleted">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isDeleted">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#450-458" title="Go to source code">isDeleted</a>( )</code>
+
+			<div class="description short">
+				<p>An internal method which tells if this PersistentResource object has been already deleted by the ResourceManager.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>An internal method which tells if this PersistentResource object has been already deleted by the ResourceManager.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCacheEntryIdentifier" id="_getCacheEntryIdentifier">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCacheEntryIdentifier">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#460-469" title="Go to source code">getCacheEntryIdentifier</a>( )</code>
+
+			<div class="description short">
+				<p>Returns a string which distinctly identifies this object and thus can be used as an identifier for cache entries
+related to this object. Introduced through the CacheAwareInterface.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a string which distinctly identifies this object and thus can be used as an identifier for cache entries
+related to this object. Introduced through the CacheAwareInterface.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Cache.CacheAwareInterface.html#_getCacheEntryIdentifier">Neos\Cache\CacheAwareInterface::getCacheEntryIdentifier()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="throwExceptionIfProtected" id="_throwExceptionIfProtected">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_throwExceptionIfProtected">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#471-482" title="Go to source code">throwExceptionIfProtected</a>( )</code>
+
+			<div class="description short">
+				<p>Throws an exception if this PersistentResource object is protected against modifications.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Throws an exception if this PersistentResource object is protected against modifications.</p>
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.ResourceManagement.Exception.html">Neos\Flow\ResourceManagement\Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="shutdownObject" id="_shutdownObject">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_shutdownObject">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#484-498" title="Go to source code">shutdownObject</a>( )</code>
+
+			<div class="description short">
+				<p>Takes care of removing a possibly existing temporary local copy on destruction of this object.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Takes care of removing a possibly existing temporary local copy on destruction of this object.</p>
+
+<p>Note: we can't use __destruct() here because this would lead Doctrine to create a proxy method __destruct() which
+      will run __load(), which in turn will trigger the SQL protection in Flow Security, which will then discover
+      that a possibly previously existing session has been half-destroyed already (see FLOW-121).</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="collectionName" id="$collectionName">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#31-37" title="Go to source code"><var>$collectionName</var></a>
+
+				<div class="description short">
+					<p>Name of a collection whose storage is used for storing this resource and whose
+target is used for publishing.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Name of a collection whose storage is used for storing this resource and whose
+target is used for publishing.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$collectionName" class="anchor">#</a>
+					<code>ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="filename" id="$filename">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#39-46" title="Go to source code"><var>$filename</var></a>
+
+				<div class="description short">
+					<p>Filename which is used when the data of this resource is downloaded as a file or acting as a label</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Filename which is used when the data of this resource is downloaded as a file or acting as a label</p>
+
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "maximum"=255 })<br>
+						</div>
+						<h4>Orm\column(length=255)</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$filename" class="anchor">#</a>
+					<code><span class="php-quote">''</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="fileSize" id="$fileSize">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#48-54" title="Go to source code"><var>$fileSize</var></a>
+
+				<div class="description short">
+					<p>The size of this object's data</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The size of this object's data</p>
+
+						<h4>Orm\column(type=&quot;decimal&quot;,</h4>
+						<div class="list">
+								scale=0, precision=20, nullable=false)<br>
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$fileSize" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="relativePublicationPath" id="$relativePublicationPath">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#56-61" title="Go to source code"><var>$relativePublicationPath</var></a>
+
+				<div class="description short">
+					<p>An optional relative path which can be used by a publishing target for structuring resources into directories</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>An optional relative path which can be used by a publishing target for structuring resources into directories</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$relativePublicationPath" class="anchor">#</a>
+					<code><span class="php-quote">''</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="mediaType" id="$mediaType">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#63-70" title="Go to source code"><var>$mediaType</var></a>
+
+				<div class="description short">
+					<p>The IANA media type of this resource</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The IANA media type of this resource</p>
+
+						<h4>Flow\validate(type=&quot;stringlength&quot;,</h4>
+						<div class="list">
+								options={ "maximum"=100 })<br>
+						</div>
+						<h4>Orm\column(length=100)</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$mediaType" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="sha1" id="$sha1">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#72-78" title="Go to source code"><var>$sha1</var></a>
+
+				<div class="description short">
+					<p>SHA1 hash identifying the content attached to this resource</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>SHA1 hash identifying the content attached to this resource</p>
+
+						<h4>Orm\column(length=40)</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$sha1" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="md5" id="$md5">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#80-86" title="Go to source code"><var>$md5</var></a>
+
+				<div class="description short">
+					<p>MD5 hash identifying the content attached to this resource</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>MD5 hash identifying the content attached to this resource</p>
+
+						<h4>Orm\column(length=32)</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$md5" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="protected" id="$protected">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#88-94" title="Go to source code"><var>$protected</var></a>
+
+				<div class="description short">
+					<p>As soon as the PersistentResource has been published, modifying this object is not allowed</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>As soon as the PersistentResource has been published, modifying this object is not allowed</p>
+
+						<h4>Flow\transient</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$protected" class="anchor">#</a>
+					<code><span class="php-keyword1">false</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="lifecycleEventsActive" id="$lifecycleEventsActive">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#96-100" title="Go to source code"><var>$lifecycleEventsActive</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\transient</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$lifecycleEventsActive" class="anchor">#</a>
+					<code><span class="php-keyword1">true</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="deleted" id="$deleted">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#102-108" title="Go to source code"><var>$deleted</var></a>
+
+				<div class="description short">
+					<p>An internal flag which tells if this PersistentResource object has been deleted during the current request</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>An internal flag which tells if this PersistentResource object has been deleted during the current request</p>
+
+						<h4>Flow\transient</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$deleted" class="anchor">#</a>
+					<code><span class="php-keyword1">false</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="resourceManager" id="$resourceManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.ResourceManagement.ResourceManager.html">Neos\Flow\ResourceManagement\ResourceManager</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#110-114" title="Go to source code"><var>$resourceManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$resourceManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="systemLogger" id="$systemLogger">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#116-120" title="Go to source code"><var>$systemLogger</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$systemLogger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="environment" id="$environment">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Utility.Environment.html">Neos\Flow\Utility\Environment</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#122-126" title="Go to source code"><var>$environment</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$environment" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="temporaryLocalCopyPathAndFilename" id="$temporaryLocalCopyPathAndFilename">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.ResourceManagement.PersistentResource.html#128-132" title="Go to source code"><var>$temporaryLocalCopyPathAndFilename</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\transient</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$temporaryLocalCopyPathAndFilename" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Flow Framework (4.1 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?e5c700bfd23d07b0ac58e27bff40d1157aab1bd7"></script>
+</body>
+</html>

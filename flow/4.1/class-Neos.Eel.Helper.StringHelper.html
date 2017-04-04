@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Neos\Eel\Helper\StringHelper | Flow Framework (4.1 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Flow Framework (4.1 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Neos.Eel.Helper.html" title="Summary of Neos\Eel\Helper"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Frontend.html">
+							Frontend						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.html">
+							FlowQuery<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.html">
+							Operations<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.Object.html">
+							Object						</a>
+							</li>
+								</ul></li></ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Eel.Helper.html">
+							Helper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Eel.Validation.html">
+							Validation						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Error.html">
+							Error<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.html">
+							Messages						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.html">
+							Flow<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Annotations.html">
+							Annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.html">
+							Aop<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Advice.html">
+							Advice						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Builder.html">
+							Builder						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Pointcut.html">
+							Pointcut						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Cache.Backend.html">
+							Backend						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cli.html">
+							Cli						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.html">
+							Composer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Source.html">
+							Source						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.html">
+							Booting<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Migrations.html">
+							Migrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Error.html">
+							Error						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.html">
+							Http<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Client.html">
+							Client						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Component.html">
+							Component						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.html">
+							I18n<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.html">
+							Cldr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.html">
+							Reader<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.EelHelper.html">
+							EelHelper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Formatter.html">
+							Formatter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.html">
+							TranslationProvider<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.html">
+							Xliff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.html">
+							Log<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.html">
+							Monitor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.ChangeDetectionStrategy.html">
+							ChangeDetectionStrategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.html">
+							Mvc<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.html">
+							ObjectManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.DependencyInjection.html">
+							DependencyInjection						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Proxy.html">
+							Proxy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.html">
+							Package<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Package.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.html">
+							Doctrine<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.DataTypes.html">
+							DataTypes						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Logging.html">
+							Logging						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.html">
+							Mapping<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html">
+							Driver						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.html">
+							Generic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Qom.html">
+							Qom						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.html">
+							Property<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.html">
+							TypeConverter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.Error.html">
+							Error						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.html">
+							Reflection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.html">
+							ResourceManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
+							Filter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Publishing.html">
+							Publishing						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Storage.html">
+							Storage						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Streams.html">
+							Streams						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Target.html">
+							Target						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.html">
+							Authentication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.EntryPoint.html">
+							EntryPoint						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Provider.html">
+							Provider						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Token.html">
+							Token						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.html">
+							Entity<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Method.html">
+							Method						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Parameter.html">
+							Parameter						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Channel.html">
+							Channel						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Cryptography.html">
+							Cryptography						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Policy.html">
+							Policy						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.RequestPattern.html">
+							RequestPattern						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.html">
+							Session<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.html">
+							SignalSlot<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.html">
+							FluidAdaptor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.html">
+							SyntaxTree<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.Expression.html">
+							Expression						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.TemplateProcessor.html">
+							TemplateProcessor						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.html">
+							ViewHelper<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Facets.html">
+							Facets						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Security.html">
+							Security						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Validation.html">
+							Validation						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.html">
+							Kickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Inflect.html">
+							Inflect						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Lock.html">
+							Lock						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.html">
+							Unicode						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Neos.Eel.Helper.ArrayHelper.html">ArrayHelper</a></li>
+				<li><a href="class-Neos.Eel.Helper.ConfigurationHelper.html">ConfigurationHelper</a></li>
+				<li><a href="class-Neos.Eel.Helper.DateHelper.html">DateHelper</a></li>
+				<li><a href="class-Neos.Eel.Helper.JsonHelper.html">JsonHelper</a></li>
+				<li><a href="class-Neos.Eel.Helper.MathHelper.html">MathHelper</a></li>
+				<li><a href="class-Neos.Eel.Helper.SecurityHelper.html">SecurityHelper</a></li>
+				<li class="active"><a href="class-Neos.Eel.Helper.StringHelper.html">StringHelper</a></li>
+				<li><a href="class-Neos.Eel.Helper.TypeHelper.html">TypeHelper</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class StringHelper</h1>
+
+
+	<div class="description">
+	<p>String helpers for Eel contexts</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Neos\Eel\Helper\StringHelper</span></b>			
+			 implements 
+				<a href="class-Neos.Eel.ProtectedContextAwareInterface.html"><span>Neos\Eel\ProtectedContextAwareInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Eel.html">Eel</a>\<a href="namespace-Neos.Eel.Helper.html">Helper</a><br>
+		
+
+				<b>Flow\proxy(false)</b>
+				<br>
+			<b>Located at</b> <a href="source-class-Neos.Eel.Helper.StringHelper.html#20-598" title="Go to source code">Neos.Eel/Classes/Helper/StringHelper.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="substr" id="_substr">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_substr">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#27-50" title="Go to source code">substr</a>( <span>string <var>$string</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$length</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Return the characters in a string from start up to the given length</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the characters in a string from start up to the given length</p>
+
+<p>This implementation follows the JavaScript specification for "substr".</p>
+
+<p>Examples::</p>
+
+<pre><code>String.substr('Hello, World!', 7, 5) == 'World'
+String.substr('Hello, World!', 7) == 'World!'
+String.substr('Hello, World!', -6) == 'World!'
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>A string</dd>
+						<dt><var>$start</var></dt>
+						<dd>Start offset</dd>
+						<dt><var>$length</var></dt>
+						<dd>Maximum length of the substring that is returned</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The substring
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="substring" id="_substring">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_substring">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#52-81" title="Go to source code">substring</a>( <span>string <var>$string</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$end</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Return the characters in a string from a start index to an end index</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the characters in a string from a start index to an end index</p>
+
+<p>This implementation follows the JavaScript specification for "substring".</p>
+
+<p>Examples::</p>
+
+<pre><code>String.substring('Hello, World!', 7, 12) == 'World'
+String.substring('Hello, World!', 7) == 'World!'
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd></dd>
+						<dt><var>$start</var></dt>
+						<dd>Start index</dd>
+						<dt><var>$end</var></dt>
+						<dd>End index</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The substring
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="charAt" id="_charAt">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_charAt">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#83-100" title="Go to source code">charAt</a>( <span>string <var>$string</var></span>, <span>integer <var>$index</var></span> )</code>
+
+			<div class="description short">
+				<p>Get the character at a specific position</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the character at a specific position</p>
+
+<p>Example::</p>
+
+<pre><code>String.charAt("abcdefg", 5) == "f"
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$index</var></dt>
+						<dd>The index to get</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The character at the given index
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="endsWith" id="_endsWith">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_endsWith">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#102-119" title="Go to source code">endsWith</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Test if a string ends with the given search string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Test if a string ends with the given search string</p>
+
+<p>Example::</p>
+
+<pre><code>String.endsWith('Hello, World!', 'World!') == true
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string</dd>
+						<dt><var>$search</var></dt>
+						<dd>A string to search</dd>
+						<dt><var>$position</var></dt>
+						<dd>Optional position for limiting the string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>TRUE if the string ends with the given search
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="indexOf" id="_indexOf">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_indexOf">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#121-144" title="Go to source code">indexOf</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$fromIndex</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Find the first position of a substring in the given string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find the first position of a substring in the given string</p>
+
+<p>Example::</p>
+
+<pre><code>String.indexOf("Blue Whale", "Blue") == 0
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$search</var></dt>
+						<dd>The substring to search for</dd>
+						<dt><var>$fromIndex</var></dt>
+						<dd>The index where the search should start, defaults to the beginning</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The index of the substring (>= 0) or -1 if the substring was not found
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lastIndexOf" id="_lastIndexOf">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lastIndexOf">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#146-174" title="Go to source code">lastIndexOf</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$toIndex</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Find the last position of a substring in the given string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find the last position of a substring in the given string</p>
+
+<p>Example::</p>
+
+<pre><code>String.lastIndexOf("Developers Developers Developers!", "Developers") == 22
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$search</var></dt>
+						<dd>The substring to search for</dd>
+						<dt><var>$toIndex</var></dt>
+						<dd>The position where the backwards search should start, defaults to the end</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The last index of the substring (>=0) or -1 if the substring was not found
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pregMatch" id="_pregMatch">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pregMatch">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#176-199" title="Go to source code">pregMatch</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span> )</code>
+
+			<div class="description short">
+				<p>Match a string with a regular expression (PREG style)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Match a string with a regular expression (PREG style)</p>
+
+<p>Example::</p>
+
+<pre><code>String.pregMatch("For more information, see Chapter 3.4.5.1", "/(chapter \d+(\.\d)*)/i")
+  == ['Chapter 3.4.5.1', 'Chapter 3.4.5.1', '.1']
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$pattern</var></dt>
+						<dd>A PREG pattern</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>The matches as array or NULL if not matched
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Eel.EvaluationException.html">Neos\Eel\EvaluationException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pregReplace" id="_pregReplace">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pregReplace">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#201-217" title="Go to source code">pregReplace</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$replace</var></span> )</code>
+
+			<div class="description short">
+				<p>Replace occurrences of a search string inside the string using regular expression matching (PREG style)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Replace occurrences of a search string inside the string using regular expression matching (PREG style)</p>
+
+<p>Examples::</p>
+
+<pre><code>String.pregReplace("Some.String with sp:cial characters", "/[[:^alnum:]]/", "-") == "Some-String-with-sp-cial-characters"
+String.pregReplace("2016-08-31", "/([0-9]+)-([0-9]+)-([0-9]+)/", "$3.$2.$1") == "31.08.2016"
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$pattern</var></dt>
+						<dd>A PREG pattern</dd>
+						<dt><var>$replace</var></dt>
+						<dd>A replacement string, can contain references to capture groups with "&#92;n" or "$n"</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string with all occurrences replaced
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pregSplit" id="_pregSplit">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pregSplit">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#219-235" title="Go to source code">pregSplit</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Split a string by a separator using regular expression matching (PREG style)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Split a string by a separator using regular expression matching (PREG style)</p>
+
+<p>Examples::</p>
+
+<pre><code>String.pregSplit("foo bar   baz", "/\s+/") == ['foo', 'bar', 'baz']
+String.pregSplit("first second third", "/\s+/", 2) == ['first', 'second third']
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$pattern</var></dt>
+						<dd>A PREG pattern</dd>
+						<dt><var>$limit</var></dt>
+						<dd>The maximum amount of items to return, in contrast to split() this will return all remaining characters in the last item (see example)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>An array of the splitted parts, excluding the matched pattern
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="replace" id="_replace">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_replace">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#237-254" title="Go to source code">replace</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
+
+			<div class="description short">
+				<p>Replace occurrences of a search string inside the string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Replace occurrences of a search string inside the string</p>
+
+<p>Example::</p>
+
+<pre><code>String.replace("canal", "ana", "oo") == "cool"
+</code></pre>
+
+<p>Note: this method does not perform regular expression matching, @see pregReplace().</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$search</var></dt>
+						<dd>A search string</dd>
+						<dt><var>$replace</var></dt>
+						<dd>A replacement string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string with all occurrences replaced
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="split" id="_split">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_split">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#256-289" title="Go to source code">split</a>( <span>string <var>$string</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Split a string by a separator</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Split a string by a separator</p>
+
+<p>Example::</p>
+
+<pre><code>String.split("My hovercraft is full of eels", " ") == ['My', 'hovercraft', 'is', 'full', 'of', 'eels']
+String.split("Foo", "", 2) == ['F', 'o']
+</code></pre>
+
+<p>Node: This implementation follows JavaScript semantics without support of regular expressions.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to split</dd>
+						<dt><var>$separator</var></dt>
+						<dd>The separator where the string should be splitted</dd>
+						<dt><var>$limit</var></dt>
+						<dd>The maximum amount of items to split (exceeding items will be discarded)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>An array of the splitted parts, excluding the separators
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="startsWith" id="_startsWith">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_startsWith">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#291-309" title="Go to source code">startsWith</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Test if a string starts with the given search string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Test if a string starts with the given search string</p>
+
+<p>Examples::</p>
+
+<pre><code>String.startsWith('Hello world!', 'Hello') == true
+String.startsWith('My hovercraft is full of...', 'Hello') == false
+String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$search</var></dt>
+						<dd>The string to search for</dd>
+						<dt><var>$position</var></dt>
+						<dd>The position to test (defaults to the beginning of the string)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toLowerCase" id="_toLowerCase">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toLowerCase">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#311-320" title="Go to source code">toLowerCase</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Lowercase a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Lowercase a string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string in lowercase
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toUpperCase" id="_toUpperCase">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toUpperCase">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#322-331" title="Go to source code">toUpperCase</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Uppercase a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Uppercase a string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string in uppercase
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="firstLetterToUpperCase" id="_firstLetterToUpperCase">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_firstLetterToUpperCase">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#333-346" title="Go to source code">firstLetterToUpperCase</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Uppercase the first letter of a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Uppercase the first letter of a string</p>
+
+<p>Example::</p>
+
+<pre><code>String.firstLetterToUpperCase('hello world') == 'Hello world'
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string with the first letter in uppercase
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="firstLetterToLowerCase" id="_firstLetterToLowerCase">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_firstLetterToLowerCase">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#348-361" title="Go to source code">firstLetterToLowerCase</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Lowercase the first letter of a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Lowercase the first letter of a string</p>
+
+<p>Example::</p>
+
+<pre><code>String.firstLetterToLowerCase('CamelCase') == 'camelCase'
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string with the first letter in lowercase
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stripTags" id="_stripTags">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stripTags">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#363-379" title="Go to source code">stripTags</a>( <span>string <var>$string</var></span>, <span>string <var>$allowableTags</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Strip all HTML tags from the given string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Strip all HTML tags from the given string</p>
+
+<p>Example::</p>
+
+<pre><code>String.stripTags('&lt;a href="#"&gt;Some link&lt;/a&gt;') == 'Some link'
+</code></pre>
+
+<p>This is a wrapper for the strip_tags() PHP function.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to strip</dd>
+						<dt><var>$allowableTags</var></dt>
+						<dd>Specify tags which should not be stripped</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string with tags stripped
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isBlank" id="_isBlank">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isBlank">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#381-395" title="Go to source code">isBlank</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Test if the given string is blank (empty or consists of whitespace only)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Test if the given string is blank (empty or consists of whitespace only)</p>
+
+<p>Examples::</p>
+
+<pre><code>String.isBlank('') == true
+String.isBlank('  ') == true
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to test</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br><code>true</code> if the given string is blank
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="trim" id="_trim">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_trim">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#397-411" title="Go to source code">trim</a>( <span>string <var>$string</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Trim whitespace at the beginning and end of a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Trim whitespace at the beginning and end of a string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to trim</dd>
+						<dt><var>$charlist</var></dt>
+						<dd>List of characters that should be trimmed, defaults to whitespace</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The trimmed string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#413-422" title="Go to source code">toString</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				<p>Convert the given value to a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Convert the given value to a string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd>The value to convert (must be convertible to string)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The string value
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toInteger" id="_toInteger">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toInteger">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#424-433" title="Go to source code">toInteger</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Convert a string to integer</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Convert a string to integer</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to convert</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The converted string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toFloat" id="_toFloat">
+
+			<td class="attributes"><code>
+				 public 
+				float
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toFloat">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#435-444" title="Go to source code">toFloat</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Convert a string to float</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Convert a string to float</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to convert</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						float<br>The float value of the string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toBoolean" id="_toBoolean">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toBoolean">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#446-457" title="Go to source code">toBoolean</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Convert a string to boolean</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Convert a string to boolean</p>
+
+<p>A value is <code>true</code>, if it is either the string <code>"TRUE"</code> or <code>"true"</code> or the number <code>1</code>.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to convert</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>The boolean value of the string (<code>true</code> or <code>false</code>)
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="rawUrlEncode" id="_rawUrlEncode">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_rawUrlEncode">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#459-468" title="Go to source code">rawUrlEncode</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Encode the string for URLs according to RFC 3986</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Encode the string for URLs according to RFC 3986</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to encode</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The encoded string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="rawUrlDecode" id="_rawUrlDecode">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_rawUrlDecode">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#470-479" title="Go to source code">rawUrlDecode</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Decode the string from URLs according to RFC 3986</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Decode the string from URLs according to RFC 3986</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to decode</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The decoded string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="htmlSpecialChars" id="_htmlSpecialChars">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_htmlSpecialChars">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#481-491" title="Go to source code">htmlSpecialChars</a>( <span>string <var>$string</var></span>, <span>boolean <var>$preserveEntities</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Convert special characters to HTML entities</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Convert special characters to HTML entities</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to convert</dd>
+						<dt><var>$preserveEntities</var></dt>
+						<dd><code>true</code> if entities should not be double encoded</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The converted string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="crop" id="_crop">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_crop">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#493-509" title="Go to source code">crop</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Crop a string to <code>maximumCharacters</code> length, optionally appending <code>suffix</code> if cropping was necessary.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Crop a string to <code>maximumCharacters</code> length, optionally appending <code>suffix</code> if cropping was necessary.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$maximumCharacters</var></dt>
+						<dd>Number of characters where cropping should happen</dd>
+						<dt><var>$suffix</var></dt>
+						<dd>Suffix to be appended if cropping was necessary</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The cropped string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="cropAtWord" id="_cropAtWord">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_cropAtWord">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#511-529" title="Go to source code">cropAtWord</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Crop a string to <code>maximumCharacters</code> length, taking words into account,
+optionally appending <code>suffix</code> if cropping was necessary.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Crop a string to <code>maximumCharacters</code> length, taking words into account,
+optionally appending <code>suffix</code> if cropping was necessary.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$maximumCharacters</var></dt>
+						<dd>Number of characters where cropping should happen</dd>
+						<dt><var>$suffix</var></dt>
+						<dd>Suffix to be appended if cropping was necessary</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The cropped string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="cropAtSentence" id="_cropAtSentence">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_cropAtSentence">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#531-549" title="Go to source code">cropAtSentence</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Crop a string to <code>maximumCharacters</code> length, taking sentences into account,
+optionally appending <code>suffix</code> if cropping was necessary.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Crop a string to <code>maximumCharacters</code> length, taking sentences into account,
+optionally appending <code>suffix</code> if cropping was necessary.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$maximumCharacters</var></dt>
+						<dd>Number of characters where cropping should happen</dd>
+						<dt><var>$suffix</var></dt>
+						<dd>Suffix to be appended if cropping was necessary</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The cropped string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="md5" id="_md5">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_md5">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#551-560" title="Go to source code">md5</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Calculate the MD5 checksum of the given string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Calculate the MD5 checksum of the given string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The string to hash</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>The MD5 hash of <code>string</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="length" id="_length">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_length">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#562-571" title="Go to source code">length</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Get the length of a string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the length of a string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>Length of the string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="wordCount" id="_wordCount">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_wordCount">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#573-586" title="Go to source code">wordCount</a>( <span>string <var>$unicodeString</var></span> )</code>
+
+			<div class="description short">
+				<p>Return the count of words for a given string. Remove marks &amp; digits and
+flatten all kind of whitespaces (tabs, new lines and multiple spaces)
+For example this helper can be utilized to calculate the reading time of an article.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the count of words for a given string. Remove marks &amp; digits and
+flatten all kind of whitespaces (tabs, new lines and multiple spaces)
+For example this helper can be utilized to calculate the reading time of an article.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$unicodeString</var></dt>
+						<dd>The input string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>Number of words
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="allowsCallOfMethod" id="_allowsCallOfMethod">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_allowsCallOfMethod">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#588-597" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
+
+			<div class="description short">
+				<p>All methods are considered safe</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>All methods are considered safe</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$methodName</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Eel.ProtectedContextAwareInterface.html#_allowsCallOfMethod">Neos\Eel\ProtectedContextAwareInterface::allowsCallOfMethod()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Flow Framework (4.1 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?e5c700bfd23d07b0ac58e27bff40d1157aab1bd7"></script>
+</body>
+</html>
