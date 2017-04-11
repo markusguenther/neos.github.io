@@ -967,7 +967,7 @@ security information like roles oder details of authenticated users.</p>
 
 				<b>Flow\scope(&quot;session&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Context.html#25-859" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Context.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Security.Context.html#27-886" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Security/Context.php</a>
 		<br>
 	</div>
 
@@ -987,7 +987,7 @@ security information like roles oder details of authenticated users.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectAuthenticationManager">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#196-206" title="Go to source code">injectAuthenticationManager</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html">TYPO3\Flow\Security\Authentication\AuthenticationManagerInterface</a></code> <var>$authenticationManager</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#212-222" title="Go to source code">injectAuthenticationManager</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.AuthenticationManagerInterface.html">TYPO3\Flow\Security\Authentication\AuthenticationManagerInterface</a></code> <var>$authenticationManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Inject the authentication manager</p>
@@ -1021,7 +1021,7 @@ security information like roles oder details of authenticated users.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withoutAuthorizationChecks">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#208-235" title="Go to source code">withoutAuthorizationChecks</a>( <span>Closure <var>$callback</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#224-251" title="Go to source code">withoutAuthorizationChecks</a>( <span>Closure <var>$callback</var></span> )</code>
 
 			<div class="description short">
 				<p>Lets you switch off authorization checks (CSRF token, policies, content security, ...) for the runtime of $callback</p>
@@ -1065,7 +1065,7 @@ $this->securityContext->withoutAuthorizationChecks(function () use ($accountRepo
 
 			<td class="name"><div>
 			<a class="anchor" href="#_areAuthorizationChecksDisabled">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#237-247" title="Go to source code">areAuthorizationChecksDisabled</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#253-263" title="Go to source code">areAuthorizationChecksDisabled</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if authorization should be ignored, otherwise FALSE
@@ -1104,7 +1104,7 @@ This is mainly useful to fetch records without Content Security to kick in (e.g.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#249-262" title="Go to source code">setRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#265-278" title="Go to source code">setRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the current action request</p>
@@ -1144,7 +1144,7 @@ request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#264-309" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#280-325" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the configuration settings</p>
@@ -1182,7 +1182,7 @@ request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initialize">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#311-335" title="Go to source code">initialize</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#327-351" title="Go to source code">initialize</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the security context for the given request.</p>
@@ -1215,7 +1215,7 @@ request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInitialized">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#337-343" title="Go to source code">isInitialized</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#353-359" title="Go to source code">isInitialized</a>( )</code>
 
 			<div class="description short">
 				
@@ -1248,7 +1248,7 @@ request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAuthenticationStrategy">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#345-357" title="Go to source code">getAuthenticationStrategy</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#361-373" title="Go to source code">getAuthenticationStrategy</a>( )</code>
 
 			<div class="description short">
 				<p>Get the token authentication strategy</p>
@@ -1281,7 +1281,7 @@ request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAuthenticationTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#359-373" title="Go to source code">getAuthenticationTokens</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#375-389" title="Go to source code">getAuthenticationTokens</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all Authentication\Tokens of the security context which are
@@ -1318,7 +1318,7 @@ against the current request it is determined as not active.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAuthenticationTokensOfType">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#375-397" title="Go to source code">getAuthenticationTokensOfType</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#391-413" title="Go to source code">getAuthenticationTokensOfType</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns all Authentication\Tokens of the security context which are
@@ -1360,7 +1360,7 @@ against the current request it is determined as not active.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRoles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#399-450" title="Go to source code">getRoles</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#415-466" title="Go to source code">getRoles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the roles of all authenticated accounts, including inherited roles.</p>
@@ -1397,7 +1397,7 @@ against the current request it is determined as not active.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasRole">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#452-473" title="Go to source code">hasRole</a>( <span>string <var>$roleIdentifier</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#468-489" title="Go to source code">hasRole</a>( <span>string <var>$roleIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE, if at least one of the currently authenticated accounts holds
@@ -1437,7 +1437,7 @@ a role with the given identifier, also recursively.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParty">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Security.Context.html#475-498" title="Go to source code">getParty</a>( )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Security.Context.html#491-514" title="Go to source code">getParty</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the party of the first authenticated authentication token.
@@ -1480,7 +1480,7 @@ if you need it you'll have to fetch it directly from the token.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPartyByType">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Flow.Security.Context.html#500-522" title="Go to source code">getPartyByType</a>( <span>string <var>$className</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Flow.Security.Context.html#516-538" title="Go to source code">getPartyByType</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the first authenticated party of the given type.</p>
@@ -1522,7 +1522,7 @@ if you need it you'll have to fetch it directly from the token.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAccount">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#524-546" title="Go to source code">getAccount</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#540-562" title="Go to source code">getAccount</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the account of the first authenticated authentication token.
@@ -1563,7 +1563,7 @@ from the tokens.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAccountByAuthenticationProviderName">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#548-566" title="Go to source code">getAccountByAuthenticationProviderName</a>( <span>string <var>$authenticationProviderName</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#564-582" title="Go to source code">getAccountByAuthenticationProviderName</a>( <span>string <var>$authenticationProviderName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an authenticated account for the given provider or NULL if no
@@ -1605,7 +1605,7 @@ authentication provider name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCsrfProtectionToken">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#568-589" title="Go to source code">getCsrfProtectionToken</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#584-605" title="Go to source code">getCsrfProtectionToken</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current CSRF protection token. A new one is created when needed, depending on the  configured CSRF
@@ -1643,7 +1643,7 @@ protection strategy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasCsrfProtectionTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#591-599" title="Go to source code">hasCsrfProtectionTokens</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#607-615" title="Go to source code">hasCsrfProtectionTokens</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if the context has CSRF protection tokens.</p>
@@ -1676,7 +1676,7 @@ protection strategy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isCsrfProtectionTokenValid">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#601-621" title="Go to source code">isCsrfProtectionTokenValid</a>( <span>string <var>$csrfToken</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#617-637" title="Go to source code">isCsrfProtectionTokenValid</a>( <span>string <var>$csrfToken</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if the given string is a valid CSRF protection token. The token will be removed if the configured
@@ -1716,7 +1716,7 @@ csrf strategy is 'onePerUri'.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setInterceptedRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#623-634" title="Go to source code">setInterceptedRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$interceptedRequest</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#639-650" title="Go to source code">setInterceptedRequest</a>( <span><code><a href="class-TYPO3.Flow.Mvc.ActionRequest.html">TYPO3\Flow\Mvc\ActionRequest</a></code> <var>$interceptedRequest</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets an action request, to be stored for later resuming after it
@@ -1755,7 +1755,7 @@ has been intercepted by a security exception.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInterceptedRequest">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#636-645" title="Go to source code">getInterceptedRequest</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#652-661" title="Go to source code">getInterceptedRequest</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the request, that has been stored for later resuming after it
@@ -1790,7 +1790,7 @@ has been intercepted by a security exception, NULL if there is none.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clearContext">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#647-664" title="Go to source code">clearContext</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#663-680" title="Go to source code">clearContext</a>( )</code>
 
 			<div class="description short">
 				<p>Clears the security context.</p>
@@ -1819,7 +1819,7 @@ has been intercepted by a security exception, NULL if there is none.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_separateActiveAndInactiveTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#666-685" title="Go to source code">separateActiveAndInactiveTokens</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#682-701" title="Go to source code">separateActiveAndInactiveTokens</a>( )</code>
 
 			<div class="description short">
 				<p>Stores all active tokens in $this->activeTokens, all others in $this->inactiveTokens</p>
@@ -1848,7 +1848,7 @@ has been intercepted by a security exception, NULL if there is none.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isTokenActive">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#687-710" title="Go to source code">isTokenActive</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.TokenInterface.html">TYPO3\Flow\Security\Authentication\TokenInterface</a></code> <var>$token</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#703-726" title="Go to source code">isTokenActive</a>( <span><code><a href="class-TYPO3.Flow.Security.Authentication.TokenInterface.html">TYPO3\Flow\Security\Authentication\TokenInterface</a></code> <var>$token</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluates any RequestPatterns of the given token to determine whether it is active for the current request
@@ -1890,7 +1890,7 @@ has been intercepted by a security exception, NULL if there is none.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mergeTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#712-762" title="Go to source code">mergeTokens</a>( <span>array <var>$managerTokens</var></span>, <span>array <var>$sessionTokens</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#728-778" title="Go to source code">mergeTokens</a>( <span>array <var>$managerTokens</var></span>, <span>array <var>$sessionTokens</var></span> )</code>
 
 			<div class="description short">
 				<p>Merges the session and manager tokens. All manager tokens types will be in the result array
@@ -1934,7 +1934,7 @@ given by the manager.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#764-781" title="Go to source code">updateTokens</a>( <span>array <var>$tokens</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#780-797" title="Go to source code">updateTokens</a>( <span>array <var>$tokens</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the token credentials for all tokens in the given array.</p>
@@ -1968,7 +1968,7 @@ given by the manager.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refreshTokens">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#783-796" title="Go to source code">refreshTokens</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#799-812" title="Go to source code">refreshTokens</a>( )</code>
 
 			<div class="description short">
 				<p>Refreshes all active tokens by updating the credentials.
@@ -1999,7 +1999,7 @@ This is useful when doing an explicit authentication inside a request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refreshRoles">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#798-809" title="Go to source code">refreshRoles</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#814-825" title="Go to source code">refreshRoles</a>( )</code>
 
 			<div class="description short">
 				<p>Refreshes the currently effective roles. In fact the roles first level cache
@@ -2030,7 +2030,7 @@ is reset and the effective roles get recalculated by calling getRoles().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#811-820" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#827-836" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				<p>Shut the object down</p>
@@ -2059,7 +2059,7 @@ is reset and the effective roles get recalculated by calling getRoles().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canBeInitialized">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#822-836" title="Go to source code">canBeInitialized</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#838-852" title="Go to source code">canBeInitialized</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the securityContext is ready to be initialized. Only after that security will be active.</p>
@@ -2095,7 +2095,7 @@ provided by the MVC router.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContextHash">#</a>
-			<code><a href="source-class-TYPO3.Flow.Security.Context.html#838-858" title="Go to source code">getContextHash</a>( )</code>
+			<code><a href="source-class-TYPO3.Flow.Security.Context.html#854-885" title="Go to source code">getContextHash</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a hash that is unique for the current context, depending on hash components, @see setContextHashComponent()</p>
@@ -2135,7 +2135,7 @@ provided by the MVC router.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-AUTHENTICATE_ANY_TOKEN.html#33-37" title="Go to source code"><b>AUTHENTICATE_ANY_TOKEN</b></a>
+						<a href="source-constant-AUTHENTICATE_ANY_TOKEN.html#35-39" title="Go to source code"><b>AUTHENTICATE_ANY_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -2161,7 +2161,7 @@ an authenticated token (e.g. for guest users with role TYPO3.Flow:Everybody).</p
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-AUTHENTICATE_ONE_TOKEN.html#39-43" title="Go to source code"><b>AUTHENTICATE_ONE_TOKEN</b></a>
+						<a href="source-constant-AUTHENTICATE_ONE_TOKEN.html#41-45" title="Go to source code"><b>AUTHENTICATE_ONE_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -2187,7 +2187,7 @@ authentication of a token.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-AUTHENTICATE_ALL_TOKENS.html#45-49" title="Go to source code"><b>AUTHENTICATE_ALL_TOKENS</b></a>
+						<a href="source-constant-AUTHENTICATE_ALL_TOKENS.html#47-51" title="Go to source code"><b>AUTHENTICATE_ALL_TOKENS</b></a>
 					</code>
 
 					<div class="description short">
@@ -2213,7 +2213,7 @@ an active token could not be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-AUTHENTICATE_AT_LEAST_ONE_TOKEN.html#51-56" title="Go to source code"><b>AUTHENTICATE_AT_LEAST_ONE_TOKEN</b></a>
+						<a href="source-constant-AUTHENTICATE_AT_LEAST_ONE_TOKEN.html#53-58" title="Go to source code"><b>AUTHENTICATE_AT_LEAST_ONE_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -2241,7 +2241,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CSRF_ONE_PER_SESSION.html#58-61" title="Go to source code"><b>CSRF_ONE_PER_SESSION</b></a>
+						<a href="source-constant-CSRF_ONE_PER_SESSION.html#60-63" title="Go to source code"><b>CSRF_ONE_PER_SESSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -2265,7 +2265,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CSRF_ONE_PER_URI.html#63-66" title="Go to source code"><b>CSRF_ONE_PER_URI</b></a>
+						<a href="source-constant-CSRF_ONE_PER_URI.html#65-68" title="Go to source code"><b>CSRF_ONE_PER_URI</b></a>
 					</code>
 
 					<div class="description short">
@@ -2289,7 +2289,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CSRF_ONE_PER_REQUEST.html#68-71" title="Go to source code"><b>CSRF_ONE_PER_REQUEST</b></a>
+						<a href="source-constant-CSRF_ONE_PER_REQUEST.html#70-73" title="Go to source code"><b>CSRF_ONE_PER_REQUEST</b></a>
 					</code>
 
 					<div class="description short">
@@ -2313,7 +2313,7 @@ could be authenticated.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CONTEXT_HASH_UNINITIALIZED.html#73-77" title="Go to source code"><b>CONTEXT_HASH_UNINITIALIZED</b></a>
+						<a href="source-constant-CONTEXT_HASH_UNINITIALIZED.html#75-79" title="Go to source code"><b>CONTEXT_HASH_UNINITIALIZED</b></a>
 					</code>
 
 					<div class="description short">
@@ -2350,7 +2350,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#79-85" title="Go to source code"><var>$initialized</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#81-87" title="Go to source code"><var>$initialized</var></a>
 
 				<div class="description short">
 					<p>TRUE if the context is initialized in the current request, FALSE or NULL otherwise.</p>
@@ -2378,7 +2378,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#87-91" title="Go to source code"><var>$tokens</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#89-93" title="Go to source code"><var>$tokens</var></a>
 
 				<div class="description short">
 					<p>Array of configured tokens (might have request patterns)</p>
@@ -2403,7 +2403,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#93-101" title="Go to source code"><var>$tokenStatusLabels</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#95-103" title="Go to source code"><var>$tokenStatusLabels</var></a>
 
 				<div class="description short">
 					
@@ -2433,7 +2433,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#103-108" title="Go to source code"><var>$activeTokens</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#105-110" title="Go to source code"><var>$activeTokens</var></a>
 
 				<div class="description short">
 					<p>Array of tokens currently active</p>
@@ -2461,7 +2461,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#110-115" title="Go to source code"><var>$inactiveTokens</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#112-117" title="Go to source code"><var>$inactiveTokens</var></a>
 
 				<div class="description short">
 					<p>Array of tokens currently inactive</p>
@@ -2489,7 +2489,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#117-121" title="Go to source code"><var>$authenticationStrategy</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#119-123" title="Go to source code"><var>$authenticationStrategy</var></a>
 
 				<div class="description short">
 					<p>One of the AUTHENTICATE_* constants to set the authentication strategy.</p>
@@ -2514,7 +2514,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#123-127" title="Go to source code"><var>$request</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#125-129" title="Go to source code"><var>$request</var></a>
 
 				<div class="description short">
 					
@@ -2542,7 +2542,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#129-132" title="Go to source code"><var>$authenticationManager</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#131-134" title="Go to source code"><var>$authenticationManager</var></a>
 
 				<div class="description short">
 					
@@ -2567,7 +2567,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#134-138" title="Go to source code"><var>$sessionManager</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#136-140" title="Go to source code"><var>$sessionManager</var></a>
 
 				<div class="description short">
 					
@@ -2595,7 +2595,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#140-144" title="Go to source code"><var>$securityLogger</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#142-146" title="Go to source code"><var>$securityLogger</var></a>
 
 				<div class="description short">
 					
@@ -2623,7 +2623,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#146-150" title="Go to source code"><var>$policyService</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#148-152" title="Go to source code"><var>$policyService</var></a>
 
 				<div class="description short">
 					
@@ -2651,7 +2651,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#152-156" title="Go to source code"><var>$hashService</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#154-158" title="Go to source code"><var>$hashService</var></a>
 
 				<div class="description short">
 					
@@ -2679,7 +2679,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#158-162" title="Go to source code"><var>$csrfProtectionStrategy</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#160-164" title="Go to source code"><var>$csrfProtectionStrategy</var></a>
 
 				<div class="description short">
 					<p>One of the CSRF_* constants to set the csrf protection strategy</p>
@@ -2704,7 +2704,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#164-167" title="Go to source code"><var>$csrfProtectionTokens</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#166-169" title="Go to source code"><var>$csrfProtectionTokens</var></a>
 
 				<div class="description short">
 					
@@ -2729,7 +2729,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#169-172" title="Go to source code"><var>$interceptedRequest</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#171-174" title="Go to source code"><var>$interceptedRequest</var></a>
 
 				<div class="description short">
 					
@@ -2754,7 +2754,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#174-178" title="Go to source code"><var>$roles</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#176-180" title="Go to source code"><var>$roles</var></a>
 
 				<div class="description short">
 					
@@ -2782,7 +2782,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#180-186" title="Go to source code"><var>$authorizationChecksDisabled</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#182-188" title="Go to source code"><var>$authorizationChecksDisabled</var></a>
 
 				<div class="description short">
 					<p>Whether authorization is disabled @see areAuthorizationChecksDisabled()</p>
@@ -2810,7 +2810,7 @@ this constant will be returned by getContextHash()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Security.Context.html#188-194" title="Go to source code"><var>$contextHash</var></a>
+					<a href="source-class-TYPO3.Flow.Security.Context.html#190-196" title="Go to source code"><var>$contextHash</var></a>
 
 				<div class="description short">
 					<p>A hash for this security context that is unique to the currently authenticated roles. @see getContextHash()</p>
@@ -2831,6 +2831,62 @@ this constant will be returned by getContextHash()</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="objectManager" id="$objectManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.Flow.Object.ObjectManagerInterface.html">TYPO3\Flow\Object\ObjectManagerInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Security.Context.html#198-202" title="Go to source code"><var>$objectManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$objectManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="globalObjects" id="$globalObjects">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Flow.Security.Context.html#204-210" title="Go to source code"><var>$globalObjects</var></a>
+
+				<div class="description short">
+					<p>Array of registered global objects that can be accessed as operands</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Array of registered global objects that can be accessed as operands</p>
+
+						<h4>Flow\injectconfiguration(&quot;aop.globalobjects&quot;)</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$globalObjects" class="anchor">#</a>
+					<code>[]</code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -2847,6 +2903,6 @@ this constant will be returned by getContextHash()</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?343da66be7eb15c531f40b907b28fec367bd4dbe"></script>
+<script src="elementlist.js?f4adc98f2d4cedae68a5ad72e15656e4af2b67f1"></script>
 </body>
 </html>
