@@ -1247,12 +1247,12 @@
 </span></span><span id="302" class="l"><span class="php-comment">     * @param string $pathAndFilename Path and name of the file to load
 </span></span><span id="303" class="l"><span class="php-comment">     * @param integer $flags (optional) ORed flags using PHP's FILE_* constants (see manual of file_get_contents).
 </span></span><span id="304" class="l"><span class="php-comment">     * @param resource $context (optional) A context resource created by stream_context_create()
-</span></span><span id="305" class="l"><span class="php-comment">     * @param integer $offset (optional) Offset where reading of the file starts.
+</span></span><span id="305" class="l"><span class="php-comment">     * @param integer $offset (optional) Offset where reading of the file starts, as of PHP 7.1 supports negative offsets.
 </span></span><span id="306" class="l"><span class="php-comment">     * @param integer $maximumLength (optional) Maximum length to read. Default is -1 (no limit)
 </span></span><span id="307" class="l"><span class="php-comment">     * @return mixed The file content as a string or FALSE if the file could not be opened.
 </span></span><span id="308" class="l"><span class="php-comment">     * @api
 </span></span><span id="309" class="l"><span class="php-comment">     */</span>
-</span><span id="310" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getFileContents(<span class="php-var">$pathAndFilename</span>, <span class="php-var">$flags</span> = <span class="php-num">0</span>, <span class="php-var">$context</span> = <span class="php-keyword1">null</span>, <span class="php-var">$offset</span> = -<span class="php-num">1</span>, <span class="php-var">$maximumLength</span> = -<span class="php-num">1</span>)
+</span><span id="310" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getFileContents(<span class="php-var">$pathAndFilename</span>, <span class="php-var">$flags</span> = <span class="php-num">0</span>, <span class="php-var">$context</span> = <span class="php-keyword1">null</span>, <span class="php-var">$offset</span> = <span class="php-keyword1">null</span>, <span class="php-var">$maximumLength</span> = -<span class="php-num">1</span>)
 </span><span id="311" class="l">    {
 </span><span id="312" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$flags</span> === <span class="php-keyword1">true</span>) {
 </span><span id="313" class="l">            <span class="php-var">$flags</span> = FILE_USE_INCLUDE_PATH;

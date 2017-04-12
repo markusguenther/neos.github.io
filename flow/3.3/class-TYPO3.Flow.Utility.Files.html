@@ -1459,7 +1459,7 @@ a dot. It defaults to FALSE.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFileContents">#</a>
-			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#298-325" title="Go to source code">getFileContents</a>( <span>string <var>$pathAndFilename</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>resource <var>$context</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$offset</var> = -<span class="php-num">1</span></span>, <span>integer <var>$maximumLength</var> = -<span class="php-num">1</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Utility.Files.html#298-325" title="Go to source code">getFileContents</a>( <span>string <var>$pathAndFilename</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>resource <var>$context</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maximumLength</var> = -<span class="php-num">1</span></span> )</code>
 
 			<div class="description short">
 				<p>An enhanced version of file_get_contents which intercepts the warning
@@ -1480,7 +1480,7 @@ issued by the original function if a file could not be loaded.</p>
 						<dt><var>$context</var></dt>
 						<dd>(optional) A context resource created by stream_context_create()</dd>
 						<dt><var>$offset</var></dt>
-						<dd>(optional) Offset where reading of the file starts.</dd>
+						<dd>(optional) Offset where reading of the file starts, as of PHP 7.1 supports negative offsets.</dd>
 						<dt><var>$maximumLength</var></dt>
 						<dd>(optional) Maximum length to read. Default is -1 (no limit)</dd>
 					</dl></div>
