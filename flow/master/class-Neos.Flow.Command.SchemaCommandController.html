@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\Package\MetaData\AbstractConstraint | Flow Framework (master branch)</title>
+	<title>Class Neos\Flow\Command\SchemaCommandController | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.Flow.Package.MetaData.html" title="Summary of Neos\Flow\Package\MetaData"><span>Namespace</span></a>
+						<a href="namespace-Neos.Flow.Command.html" title="Summary of Neos\Flow\Command"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -170,7 +170,7 @@
 						<a href="namespace-Neos.Flow.Cli.html">
 							Cli						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.Command.html">
 							Command						</a>
 							</li>
@@ -382,7 +382,7 @@
 							Proxy						</a>
 							</li>
 								</ul></li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Flow.Package.html">
 							Package<span></span>
 						</a>
@@ -390,10 +390,6 @@
 					<li>
 						<a href="namespace-Neos.Flow.Package.Exception.html">
 							Exception						</a>
-							</li>
-					<li class="active">
-						<a href="namespace-Neos.Flow.Package.MetaData.html">
-							MetaData						</a>
 							</li>
 								</ul></li>
 					<li>
@@ -496,6 +492,10 @@
 							ResourceManagement<span></span>
 						</a>
 							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
 					<li>
 						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
 							Filter						</a>
@@ -827,12 +827,19 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Neos.Flow.Package.MetaData.AbstractConstraint.html">AbstractConstraint</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.AbstractParty.html">AbstractParty</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.Company.html">Company</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.PackageConstraint.html">PackageConstraint</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.Person.html">Person</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.SystemConstraint.html">SystemConstraint</a></li>
+				<li><a href="class-Neos.Flow.Command.CacheCommandController.html">CacheCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.ConfigurationCommandController.html">ConfigurationCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.CoreCommandController.html">CoreCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.DatabaseCommandController.html">DatabaseCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.DoctrineCommandController.html">DoctrineCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.HelpCommandController.html">HelpCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
+				<li class="active"><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.TypeConverterCommandController.html">TypeConverterCommandController</a></li>
 			</ul>
 
 
@@ -848,22 +855,31 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class AbstractConstraint</h1>
+	<h1>Class SchemaCommandController</h1>
 
 
 	<div class="description">
-	<p>Constraint meta data model</p>
+	<p>Configuration command controller for the TYPO3.Flow package</p>
 	</div>
 
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Neos.Flow.Cli.CommandController.html"><span>Neos\Flow\Cli\CommandController</span></a>
+			
+			 implements 
+				<a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html"><span>Neos\Flow\Mvc\Controller\ControllerInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Neos\Flow\Command\SchemaCommandController</span></b>			
+			
+			
+		</dd>
+	</dl>
 
 
-	<div>
-		<h3>Direct known subclasses</h3>
-		<p class="elementList">
-			<code><a href="class-Neos.Flow.Package.MetaData.PackageConstraint.html">Neos\Flow\Package\MetaData\PackageConstraint</a></code>, 
-			<code><a href="class-Neos.Flow.Package.MetaData.SystemConstraint.html">Neos\Flow\Package\MetaData\SystemConstraint</a></code>
-		</p>
-	</div>
 
 
 
@@ -871,12 +887,14 @@
 
 
 	<div class="alert alert-info">
-		<b>Abstract</b><br>
 		
-		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Package.html">Package</a>\<a href="namespace-Neos.Flow.Package.MetaData.html">MetaData</a><br>
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Command.html">Command</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#14-68" title="Go to source code">Neos.Flow/Classes/Package/MetaData/AbstractConstraint.php</a>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Command.SchemaCommandController.html#24-156" title="Go to source code">Neos.Flow/Classes/Command/SchemaCommandController.php</a>
 		<br>
 	</div>
 
@@ -885,7 +903,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="__construct" id="___construct">
+		<tr data-order="validateCommand" id="_validateCommand">
 
 			<td class="attributes"><code>
 				 public 
@@ -895,27 +913,25 @@
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#32-46" title="Go to source code">__construct</a>( <span>string <var>$constraintType</var></span>, <span>string <var>$value</var></span>, <span>string <var>$minVersion</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$maxVersion</var> = <span class="php-keyword1">null</span></span> )</code>
+			<a class="anchor" href="#_validateCommand">#</a>
+			<code><a href="source-class-Neos.Flow.Command.SchemaCommandController.html#44-107" title="Go to source code">validateCommand</a>( <span>string <var>$configurationFile</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$schemaFile</var> = <span class="php-quote">'resource://Neos.Utility.Schema/Private/Schema/Schema.schema.yaml'</span></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Meta data constraint constructor</p>
+				<p>Validate the given configurationfile againt a schema file</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Meta data constraint constructor</p>
+				<p>Validate the given configurationfile againt a schema file</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$constraintType</var></dt>
-						<dd></dd>
-						<dt><var>$value</var></dt>
-						<dd></dd>
-						<dt><var>$minVersion</var></dt>
-						<dd></dd>
-						<dt><var>$maxVersion</var></dt>
-						<dd></dd>
+						<dt><var>$configurationFile</var></dt>
+						<dd>path to the validated configuration file</dd>
+						<dt><var>$schemaFile</var></dt>
+						<dd>path to the schema file</dd>
+						<dt><var>$verbose</var></dt>
+						<dd>if TRUE, output more verbose information on the schema files which were used</dd>
 					</dl></div>
 
 
@@ -925,98 +941,37 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getValue" id="_getValue">
+		<tr data-order="validateSchemaCommand" id="_validateSchemaCommand">
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getValue">#</a>
-			<code><a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#48-54" title="Go to source code">getValue</a>( )</code>
+			<a class="anchor" href="#_validateSchemaCommand">#</a>
+			<code><a href="source-class-Neos.Flow.Command.SchemaCommandController.html#109-155" title="Go to source code">validateSchemaCommand</a>( <span>string <var>$configurationFile</var></span>, <span>string <var>$schemaFile</var> = <span class="php-quote">'resource://Neos.Utility.Schema/Private/Schema/Schema.schema.yaml'</span></span>, <span>boolean <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
+				<p>Validate the given configurationfile againt a schema file</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Validate the given configurationfile againt a schema file</p>
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$configurationFile</var></dt>
+						<dd>path to the validated configuration file</dd>
+						<dt><var>$schemaFile</var></dt>
+						<dd>path to the schema file</dd>
+						<dt><var>$verbose</var></dt>
+						<dd>if TRUE, output more verbose information on the schema files which were used</dd>
+					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The constraint name or value
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getConstraintType" id="_getConstraintType">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getConstraintType">#</a>
-			<code><a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#56-62" title="Go to source code">getConstraintType</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The constraint type (depends, conflicts, suggests)
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getConstraintScope" id="_getConstraintScope">
-
-			<td class="attributes"><code>
-				abstract public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getConstraintScope">#</a>
-			<code><a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#64-67" title="Go to source code">getConstraintScope</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The constraint scope (package, system)
-					</div>
 
 
 
@@ -1027,6 +982,26 @@
 			</table>
 		</div>
 
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Cli.CommandController.html#methods">Neos\Flow\Cli\CommandController</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#___construct">__construct()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_callCommandMethod">callCommandMethod()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_forward">forward()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_getFlowInvocationString">getFlowInvocationString()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_initializeCommandMethodArguments">initializeCommandMethodArguments()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_injectCommandManager">injectCommandManager()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_injectObjectManager">injectObjectManager()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_mapRequestArgumentsToControllerArguments">mapRequestArgumentsToControllerArguments()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_output">output()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_outputFormatted">outputFormatted()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_outputLine">outputLine()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_processRequest">processRequest()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_quit">quit()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_resolveCommandMethodName">resolveCommandMethodName()</a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#_sendAndExit">sendAndExit()</a></code>
+			</p>
+		</div>
 
 
 
@@ -1040,52 +1015,59 @@
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="constraintType" id="$constraintType">
+		<tr data-order="schemaValidator" id="$schemaValidator">
 			<td class="attributes"><code>
 				protected  
-				string
+				<code><a href="class-Neos.Utility.SchemaValidator.html">Neos\Utility\SchemaValidator</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#20-24" title="Go to source code"><var>$constraintType</var></a>
+					<a href="source-class-Neos.Flow.Command.SchemaCommandController.html#32-36" title="Go to source code"><var>$schemaValidator</var></a>
 
 				<div class="description short">
-					<p>One of depends, conflicts or suggests</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>One of depends, conflicts or suggests</p>
+					
 
+						<h4>Flow\inject(lazy</h4>
+						<div class="list">
+								= FALSE)<br>
+						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$constraintType" class="anchor">#</a>
+					<a href="#$schemaValidator" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="value" id="$value">
+		<tr data-order="packageManager" id="$packageManager">
 			<td class="attributes"><code>
 				protected  
-				string
+				<code><a href="class-Neos.Flow.Package.PackageManagerInterface.html">Neos\Flow\Package\PackageManagerInterface</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Package.MetaData.AbstractConstraint.html#26-30" title="Go to source code"><var>$value</var></a>
+					<a href="source-class-Neos.Flow.Command.SchemaCommandController.html#38-42" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
-					<p>The constraint name or value</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The constraint name or value</p>
+					
 
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$value" class="anchor">#</a>
+					<a href="#$packageManager" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1093,6 +1075,18 @@
 			</table>
 		</div>
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Cli.CommandController.html#properties">Neos\Flow\Cli\CommandController</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$arguments"><var>$arguments</var></a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$commandManager"><var>$commandManager</var></a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$commandMethodName"><var>$commandMethodName</var></a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$objectManager"><var>$objectManager</var></a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$output"><var>$output</var></a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$request"><var>$request</var></a></code>, 
+				<code><a href="class-Neos.Flow.Cli.CommandController.html#$response"><var>$response</var></a></code>
+			</p>
+		</div>
 
 
 
@@ -1105,7 +1099,7 @@
 		Flow Framework (master branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?c597b58e6f3d60ac16062ced2aa2d8fd03d7cb10"></script>
-<script src="elementlist.js?15cef7313bc3bce841fa713591a4a30b8713ecee"></script>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?0eaca48f89a19a3b087f03ef29d1be8e56872977"></script>
 </body>
 </html>

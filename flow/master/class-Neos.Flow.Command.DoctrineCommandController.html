@@ -391,10 +391,6 @@
 						<a href="namespace-Neos.Flow.Package.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Package.MetaData.html">
-							MetaData						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Persistence.html">
@@ -496,6 +492,10 @@
 							ResourceManagement<span></span>
 						</a>
 							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
 					<li>
 						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
 							Filter						</a>
@@ -836,6 +836,7 @@
 				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.TypeConverterCommandController.html">TypeConverterCommandController</a></li>
@@ -893,7 +894,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#26-499" title="Go to source code">Neos.Flow/Classes/Command/DoctrineCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#26-507" title="Go to source code">Neos.Flow/Classes/Command/DoctrineCommandController.php</a>
 		<br>
 	</div>
 
@@ -1201,7 +1202,7 @@ mapping information contains errors or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationStatusCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#252-277" title="Go to source code">migrationStatusCommand</a>( <span>boolean <var>$showMigrations</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$showDescriptions</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#252-278" title="Go to source code">migrationStatusCommand</a>( <span>boolean <var>$showMigrations</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$showDescriptions</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Show the current migration status</p>
@@ -1247,7 +1248,7 @@ available, executed and pending migrations.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrateCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#279-320" title="Go to source code">migrateCommand</a>( <span>string <var>$version</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#280-321" title="Go to source code">migrateCommand</a>( <span>string <var>$version</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Migrate the database schema</p>
@@ -1297,7 +1298,7 @@ migrations provided by currently active packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterDatabaseMigration">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#322-328" title="Go to source code">emitAfterDatabaseMigration</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#323-329" title="Go to source code">emitAfterDatabaseMigration</a>( )</code>
 
 			<div class="description short">
 				
@@ -1329,7 +1330,7 @@ migrations provided by currently active packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationExecuteCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#330-357" title="Go to source code">migrationExecuteCommand</a>( <span>string <var>$version</var></span>, <span>string <var>$direction</var> = <span class="php-quote">'up'</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#331-358" title="Go to source code">migrationExecuteCommand</a>( <span>string <var>$version</var></span>, <span>string <var>$direction</var> = <span class="php-quote">'up'</span></span>, <span>string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Execute a single migration</p>
@@ -1378,7 +1379,7 @@ migrations provided by currently active packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationVersionCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#359-391" title="Go to source code">migrationVersionCommand</a>( <span>string <var>$version</var></span>, <span>boolean <var>$add</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$delete</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#360-392" title="Go to source code">migrationVersionCommand</a>( <span>string <var>$version</var></span>, <span>boolean <var>$add</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$delete</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Mark/unmark migrations as migrated</p>
@@ -1430,7 +1431,7 @@ as requested.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_migrationGenerateCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#393-473" title="Go to source code">migrationGenerateCommand</a>( <span>boolean <var>$diffAgainstCurrent</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filterExpression</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#394-481" title="Go to source code">migrationGenerateCommand</a>( <span>boolean <var>$diffAgainstCurrent</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filterExpression</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Generate a new migration</p>
@@ -1462,6 +1463,8 @@ Neos.Flow.persistence.doctrine.migrations.ignoredTables setting</p>
 						<dd>Whether to base the migration on the current schema structure</dd>
 						<dt><var>$filterExpression</var></dt>
 						<dd>Only include tables/sequences matching the filter expression regexp</dd>
+						<dt><var>$force</var></dt>
+						<dd>Generate migrations even if there are migrations left to execute</dd>
 					</dl></div>
 
 
@@ -1489,7 +1492,7 @@ Neos.Flow.persistence.doctrine.migrations.ignoredTables setting</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleException">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#475-488" title="Go to source code">handleException</a>( <span>Exception <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#483-496" title="Go to source code">handleException</a>( <span>Exception <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Output an error message and log the exception.</p>
@@ -1523,7 +1526,7 @@ Neos.Flow.persistence.doctrine.migrations.ignoredTables setting</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isDatabaseConfigured">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#490-498" title="Go to source code">isDatabaseConfigured</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Command.DoctrineCommandController.html#498-506" title="Go to source code">isDatabaseConfigured</a>( )</code>
 
 			<div class="description short">
 				
@@ -1713,7 +1716,7 @@ Neos.Flow.persistence.doctrine.migrations.ignoredTables setting</p>
 		Flow Framework (master branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?c597b58e6f3d60ac16062ced2aa2d8fd03d7cb10"></script>
-<script src="elementlist.js?15cef7313bc3bce841fa713591a4a30b8713ecee"></script>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?0eaca48f89a19a3b087f03ef29d1be8e56872977"></script>
 </body>
 </html>

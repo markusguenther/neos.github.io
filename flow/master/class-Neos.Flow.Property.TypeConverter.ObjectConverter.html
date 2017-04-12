@@ -391,10 +391,6 @@
 						<a href="namespace-Neos.Flow.Package.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Package.MetaData.html">
-							MetaData						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Persistence.html">
@@ -496,6 +492,10 @@
 							ResourceManagement<span></span>
 						</a>
 							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
 					<li>
 						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
 							Filter						</a>
@@ -918,7 +918,7 @@ the respective values. For the mechanics used to set the values see ObjectAccess
 				<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#26-288" title="Go to source code">Neos.Flow/Classes/Property/TypeConverter/ObjectConverter.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#26-293" title="Go to source code">Neos.Flow/Classes/Property/TypeConverter/ObjectConverter.php</a>
 		<br>
 	</div>
 
@@ -1020,7 +1020,7 @@ the respective values. For the mechanics used to set the values see ObjectAccess
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeOfChildProperty">#</a>
-			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#116-164" title="Go to source code">getTypeOfChildProperty</a>( <span>string <var>$targetType</var></span>, <span>string <var>$propertyName</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#116-169" title="Go to source code">getTypeOfChildProperty</a>( <span>string <var>$targetType</var></span>, <span>string <var>$propertyName</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>The type of a property is determined by the reflection service.</p>
@@ -1068,7 +1068,7 @@ the respective values. For the mechanics used to set the values see ObjectAccess
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#166-195" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#171-200" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert an object from $source to an object.</p>
@@ -1118,7 +1118,7 @@ the respective values. For the mechanics used to set the values see ObjectAccess
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTargetTypeForSource">#</a>
-			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#197-228" title="Go to source code">getTargetTypeForSource</a>( <span>mixed <var>$source</var></span>, <span>string <var>$originalTargetType</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#202-233" title="Go to source code">getTargetTypeForSource</a>( <span>mixed <var>$source</var></span>, <span>string <var>$originalTargetType</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Determines the target type based on the source's (optional) __type key.</p>
@@ -1168,7 +1168,7 @@ the respective values. For the mechanics used to set the values see ObjectAccess
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildObject">#</a>
-			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#230-265" title="Go to source code">buildObject</a>( <span>array <var>&amp; $possibleConstructorArgumentValues</var></span>, <span>string <var>$objectType</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#235-270" title="Go to source code">buildObject</a>( <span>array <var>&amp; $possibleConstructorArgumentValues</var></span>, <span>string <var>$objectType</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a new instance of $objectType with the given $possibleConstructorArgumentValues.
@@ -1218,7 +1218,7 @@ default value in the constructor signature.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConstructorArgumentsForClass">#</a>
-			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#267-287" title="Go to source code">getConstructorArgumentsForClass</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.TypeConverter.ObjectConverter.html#272-292" title="Go to source code">getConstructorArgumentsForClass</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the constructor argument reflection for the given object type.</p>
@@ -1494,7 +1494,7 @@ default value in the constructor signature.</p>
 		Flow Framework (master branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?c597b58e6f3d60ac16062ced2aa2d8fd03d7cb10"></script>
-<script src="elementlist.js?15cef7313bc3bce841fa713591a4a30b8713ecee"></script>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?0eaca48f89a19a3b087f03ef29d1be8e56872977"></script>
 </body>
 </html>

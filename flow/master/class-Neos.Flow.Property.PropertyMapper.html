@@ -391,10 +391,6 @@
 						<a href="namespace-Neos.Flow.Package.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Package.MetaData.html">
-							MetaData						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Persistence.html">
@@ -496,6 +492,10 @@
 							ResourceManagement<span></span>
 						</a>
 							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
 					<li>
 						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
 							Filter						</a>
@@ -879,7 +879,7 @@ It is used most prominently to map incoming HTTP arguments to objects.</p>
 				<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Property.PropertyMapper.html#25-446" title="Go to source code">Neos.Flow/Classes/Property/PropertyMapper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Property.PropertyMapper.html#25-449" title="Go to source code">Neos.Flow/Classes/Property/PropertyMapper.php</a>
 		<br>
 	</div>
 
@@ -1059,7 +1059,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_doMapping">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#144-207" title="Go to source code">doMapping</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span>, <span>array <var>&amp; $currentPropertyPath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#144-210" title="Go to source code">doMapping</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span>, <span>array <var>&amp; $currentPropertyPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal function which actually does the property mapping.</p>
@@ -1108,7 +1108,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findTypeConverter">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#209-248" title="Go to source code">findTypeConverter</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#212-251" title="Go to source code">findTypeConverter</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Determine the type converter to be used. If no converter has been found, an exception is raised.</p>
@@ -1155,7 +1155,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findFirstEligibleTypeConverterInObjectHierarchy">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#250-300" title="Go to source code">findFirstEligibleTypeConverterInObjectHierarchy</a>( <span>string <var>$source</var></span>, <span>string <var>$sourceType</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#253-303" title="Go to source code">findFirstEligibleTypeConverterInObjectHierarchy</a>( <span>string <var>$source</var></span>, <span>string <var>$sourceType</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to find a suitable type converter for the given source and target type.</p>
@@ -1201,7 +1201,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findEligibleConverterWithHighestPriority">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#302-331" title="Go to source code">findEligibleConverterWithHighestPriority</a>( <span>mixed <var>$converters</var></span>, <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#305-334" title="Go to source code">findEligibleConverterWithHighestPriority</a>( <span>mixed <var>$converters</var></span>, <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1243,7 +1243,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConvertersForInterfaces">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#333-354" title="Go to source code">getConvertersForInterfaces</a>( <span>array <var>$convertersForSource</var></span>, <span>array <var>$interfaceNames</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#336-357" title="Go to source code">getConvertersForInterfaces</a>( <span>array <var>$convertersForSource</var></span>, <span>array <var>$interfaceNames</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1287,7 +1287,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_determineSourceTypes">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#356-384" title="Go to source code">determineSourceTypes</a>( <span>mixed <var>$source</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#359-387" title="Go to source code">determineSourceTypes</a>( <span>mixed <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Determine the type of the source data, or throw an exception if source was an unsupported format.</p>
@@ -1329,7 +1329,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareTypeConverterMap">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#386-408" title="Go to source code">prepareTypeConverterMap</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#389-411" title="Go to source code">prepareTypeConverterMap</a>( )</code>
 
 			<div class="description short">
 				<p>Collects all TypeConverter implementations in a multi-dimensional array with source and target types.</p>
@@ -1370,7 +1370,7 @@ Here, the typeConverter array gets initialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeConverters">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#410-425" title="Go to source code">getTypeConverters</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#413-428" title="Go to source code">getTypeConverters</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a multi-dimensional array with the Type Converters available in the system.</p>
@@ -1412,7 +1412,7 @@ Value: Type Converter instance</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildPropertyMappingConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#427-445" title="Go to source code">buildPropertyMappingConfiguration</a>( <span>string <var>$type</var> = PropertyMappingConfiguration::<span class="php-keyword1">class</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Property.PropertyMapper.html#430-448" title="Go to source code">buildPropertyMappingConfiguration</a>( <span>string <var>$type</var> = PropertyMappingConfiguration::<span class="php-keyword1">class</span></span> )</code>
 
 			<div class="description short">
 				<p>Builds the default property mapping configuration.</p>
@@ -1585,7 +1585,7 @@ Value: Type Converter instance</li>
 		Flow Framework (master branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?c597b58e6f3d60ac16062ced2aa2d8fd03d7cb10"></script>
-<script src="elementlist.js?15cef7313bc3bce841fa713591a4a30b8713ecee"></script>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?0eaca48f89a19a3b087f03ef29d1be8e56872977"></script>
 </body>
 </html>

@@ -388,10 +388,6 @@
 						<a href="namespace-Neos.Flow.Package.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Package.MetaData.html">
-							MetaData						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Persistence.html">
@@ -493,6 +489,10 @@
 							ResourceManagement<span></span>
 						</a>
 							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
 					<li>
 						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
 							Filter						</a>
@@ -964,6 +964,7 @@
 				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">Neos\Flow\Command\PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">Neos\Flow\Command\ResourceCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">Neos\Flow\Command\RoutingCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">Neos\Flow\Command\SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">Neos\Flow\Command\SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">Neos\Flow\Command\ServerCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.TypeConverterCommandController.html">Neos\Flow\Command\TypeConverterCommandController</a></li>
@@ -1034,7 +1035,6 @@
 				<li><a href="class-Neos.Flow.Log.Backend.ConsoleBackend.html">Neos\Flow\Log\Backend\ConsoleBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.FileBackend.html">Neos\Flow\Log\Backend\FileBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.NullBackend.html">Neos\Flow\Log\Backend\NullBackend</a></li>
-				<li><a href="class-Neos.Flow.Log.EarlyLogger.html" class="deprecated">Neos\Flow\Log\EarlyLogger</a></li>
 				<li><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></li>
 				<li><a href="class-Neos.Flow.Log.LoggerFactory.html">Neos\Flow\Log\LoggerFactory</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.ModificationTimeStrategy.html">Neos\Flow\Monitor\ChangeDetectionStrategy\ModificationTimeStrategy</a></li>
@@ -1083,12 +1083,6 @@
 				<li><a href="class-Neos.Flow.ObjectManagement.Proxy.ProxyConstructor.html">Neos\Flow\ObjectManagement\Proxy\ProxyConstructor</a></li>
 				<li><a href="class-Neos.Flow.ObjectManagement.Proxy.ProxyMethod.html">Neos\Flow\ObjectManagement\Proxy\ProxyMethod</a></li>
 				<li><a href="class-Neos.Flow.Package.html">Neos\Flow\Package</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.AbstractConstraint.html">Neos\Flow\Package\MetaData\AbstractConstraint</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.AbstractParty.html">Neos\Flow\Package\MetaData\AbstractParty</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.Company.html">Neos\Flow\Package\MetaData\Company</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.PackageConstraint.html">Neos\Flow\Package\MetaData\PackageConstraint</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.Person.html">Neos\Flow\Package\MetaData\Person</a></li>
-				<li><a href="class-Neos.Flow.Package.MetaData.SystemConstraint.html">Neos\Flow\Package\MetaData\SystemConstraint</a></li>
 				<li><a href="class-Neos.Flow.Package.Package.html">Neos\Flow\Package\Package</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageFactory.html">Neos\Flow\Package\PackageFactory</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageManager.html">Neos\Flow\Package\PackageManager</a></li>
@@ -1200,6 +1194,7 @@
 				<li><a href="class-Neos.Flow.Security.Authorization.Interceptor.AccessDeny.html">Neos\Flow\Security\Authorization\Interceptor\AccessDeny</a></li>
 				<li><a href="class-Neos.Flow.Security.Authorization.Interceptor.AccessGrant.html">Neos\Flow\Security\Authorization\Interceptor\AccessGrant</a></li>
 				<li><a href="class-Neos.Flow.Security.Authorization.Interceptor.AfterInvocation.html">Neos\Flow\Security\Authorization\Interceptor\AfterInvocation</a></li>
+				<li><a href="class-Neos.Flow.Security.Authorization.Interceptor.CsrfTokenMissing.html">Neos\Flow\Security\Authorization\Interceptor\CsrfTokenMissing</a></li>
 				<li><a href="class-Neos.Flow.Security.Authorization.Interceptor.PolicyEnforcement.html">Neos\Flow\Security\Authorization\Interceptor\PolicyEnforcement</a></li>
 				<li><a href="class-Neos.Flow.Security.Authorization.Interceptor.RequireAuthentication.html">Neos\Flow\Security\Authorization\Interceptor\RequireAuthentication</a></li>
 				<li><a href="class-Neos.Flow.Security.Authorization.InterceptorResolver.html">Neos\Flow\Security\Authorization\InterceptorResolver</a></li>
@@ -1625,13 +1620,10 @@
 				<li><a href="class-Neos.Flow.ObjectManagement.Proxy.Exception.html">Neos\Flow\ObjectManagement\Proxy\Exception</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.html">Neos\Flow\Package\Exception</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.CorruptPackageException.html">Neos\Flow\Package\Exception\CorruptPackageException</a></li>
-				<li><a href="class-Neos.Flow.Package.Exception.DuplicatePackageException.html">Neos\Flow\Package\Exception\DuplicatePackageException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.InvalidPackageKeyException.html">Neos\Flow\Package\Exception\InvalidPackageKeyException</a></li>
-				<li><a href="class-Neos.Flow.Package.Exception.InvalidPackageManifestException.html">Neos\Flow\Package\Exception\InvalidPackageManifestException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.InvalidPackagePathException.html">Neos\Flow\Package\Exception\InvalidPackagePathException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.InvalidPackageStateException.html">Neos\Flow\Package\Exception\InvalidPackageStateException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.PackageKeyAlreadyExistsException.html">Neos\Flow\Package\Exception\PackageKeyAlreadyExistsException</a></li>
-				<li><a href="class-Neos.Flow.Package.Exception.PackageRepositoryException.html">Neos\Flow\Package\Exception\PackageRepositoryException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.PackageStatesFileNotWritableException.html">Neos\Flow\Package\Exception\PackageStatesFileNotWritableException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.ProtectedPackageKeyException.html">Neos\Flow\Package\Exception\ProtectedPackageKeyException</a></li>
 				<li><a href="class-Neos.Flow.Package.Exception.UnknownPackageException.html">Neos\Flow\Package\Exception\UnknownPackageException</a></li>
@@ -1670,6 +1662,7 @@
 				<li><a href="class-Neos.Flow.Reflection.Exception.InvalidValueObjectException.html">Neos\Flow\Reflection\Exception\InvalidValueObjectException</a></li>
 				<li><a href="class-Neos.Flow.Reflection.Exception.UnknownClassException.html">Neos\Flow\Reflection\Exception\UnknownClassException</a></li>
 				<li><a href="class-Neos.Flow.ResourceManagement.Exception.html">Neos\Flow\ResourceManagement\Exception</a></li>
+				<li><a href="class-Neos.Flow.ResourceManagement.Exception.InvalidResourceDataException.html">Neos\Flow\ResourceManagement\Exception\InvalidResourceDataException</a></li>
 				<li><a href="class-Neos.Flow.ResourceManagement.Storage.Exception.html">Neos\Flow\ResourceManagement\Storage\Exception</a></li>
 				<li><a href="class-Neos.Flow.ResourceManagement.Target.Exception.html">Neos\Flow\ResourceManagement\Target\Exception</a></li>
 				<li><a href="class-Neos.Flow.Security.Exception.html">Neos\Flow\Security\Exception</a></li>
@@ -1822,12 +1815,6 @@
 		</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.EarlyLogger.html">Neos\Flow\Log\EarlyLogger</a></td>
-		<td>
-					Will be removed in Flow 4.0<br>
-		</td>
-	</tr>
-	<tr>
 		<td class="name"><a href="class-Neos.FluidAdaptor.Core.ViewHelper.ArgumentDefinition.html">Neos\FluidAdaptor\Core\ViewHelper\ArgumentDefinition</a></td>
 		<td>
 					use \TYPO3Fluid\Fluid\Core\ViewHelper\ArgumentDefinition<br>
@@ -1945,7 +1932,7 @@
 		Flow Framework (master branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?c597b58e6f3d60ac16062ced2aa2d8fd03d7cb10"></script>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
 <script src="elementlist.js"></script>
 </body>
 </html>
