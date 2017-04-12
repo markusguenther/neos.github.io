@@ -755,7 +755,7 @@
 
 
 	<div class="description">
-	<p>A wrapper around a TYPO3 Flow cache which provides additional functionality for caching partial content (segments)
+	<p>A wrapper around a Neos Flow cache which provides additional functionality for caching partial content (segments)
 rendered by the Fusion Runtime.</p>
 
 <p>The cache build process generally follows these steps:</p>
@@ -794,7 +794,7 @@ rendered by the Fusion Runtime.</p>
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#23-416" title="Go to source code">Neos.Fusion/Classes/Core/Cache/ContentCache.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#24-417" title="Go to source code">Neos.Fusion/Classes/Core/Cache/ContentCache.php</a>
 		<br>
 	</div>
 
@@ -814,7 +814,7 @@ rendered by the Fusion Runtime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#96-102" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#97-103" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>ContentCache constructor</p>
@@ -843,7 +843,7 @@ rendered by the Fusion Runtime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCacheSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#104-131" title="Go to source code">createCacheSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#105-132" title="Go to source code">createCacheSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Takes the given content and adds markers for later use as a cached content segment.</p>
@@ -898,7 +898,7 @@ as a string.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createUncachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#133-148" title="Go to source code">createUncachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#134-149" title="Go to source code">createUncachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span> )</code>
 
 			<div class="description short">
 				<p>Similar to createCacheSegment() creates a content segment with markers added, but in contrast to that function
@@ -944,7 +944,7 @@ this method is used for rendering a segment which is not supposed to be cached.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createDynamicCachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#150-180" title="Go to source code">createDynamicCachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var></span>, <span>integer <var>$lifetime</var></span>, <span>string <var>$cacheDiscriminator</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#151-181" title="Go to source code">createDynamicCachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var></span>, <span>integer <var>$lifetime</var></span>, <span>string <var>$cacheDiscriminator</var></span> )</code>
 
 			<div class="description short">
 				<p>Similar to createUncachedSegment() creates a content segment with markers added, but in contrast to that function
@@ -998,7 +998,7 @@ this method is used for rendering a segment which will be evaluated at runtime b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderContentCacheEntryIdentifier">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#182-207" title="Go to source code">renderContentCacheEntryIdentifier</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#183-208" title="Go to source code">renderContentCacheEntryIdentifier</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders an identifier for a content cache entry</p>
@@ -1042,7 +1042,7 @@ this method is used for rendering a segment which will be evaluated at runtime b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_processCacheSegments">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#209-238" title="Go to source code">processCacheSegments</a>( <span>string <var>$content</var></span>, <span>boolean <var>$storeCacheEntries</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#210-239" title="Go to source code">processCacheSegments</a>( <span>string <var>$content</var></span>, <span>boolean <var>$storeCacheEntries</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Takes a string of content which includes cache segment markers, extracts the marked segments, writes those
@@ -1086,7 +1086,7 @@ segments which can be cached to the actual cache and returns the cleaned up orig
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#240-279" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#241-280" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Tries to retrieve the specified content segment from the cache – further nested inline segments are retrieved
@@ -1136,7 +1136,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceCachePlaceholders">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#281-310" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#282-311" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
 
 			<div class="description short">
 				<p>Find cache placeholders in a cached segment and return the identifiers</p>
@@ -1176,7 +1176,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceUncachedPlaceholders">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#312-328" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#313-329" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace segments which are marked as not-cacheable by their actual content by invoking the Fusion Runtime.</p>
@@ -1216,7 +1216,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_serializeContext">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#330-349" title="Go to source code">serializeContext</a>( <span>array <var>$contextVariables</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#331-350" title="Go to source code">serializeContext</a>( <span>array <var>$contextVariables</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates an array of strings from the given array of context variables</p>
@@ -1258,7 +1258,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeForContextValue">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#351-369" title="Go to source code">getTypeForContextValue</a>( <span>mixed <var>$contextValue</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#352-370" title="Go to source code">getTypeForContextValue</a>( <span>mixed <var>$contextValue</var></span> )</code>
 
 			<div class="description short">
 				<p>TODO: Adapt to Flow change https://review.typo3.org/#/c/33138/</p>
@@ -1296,7 +1296,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushByTag">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#371-380" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#372-381" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Flush content cache entries by tag</p>
@@ -1334,7 +1334,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#382-390" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#383-391" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Flush all content cache entries</p>
@@ -1363,7 +1363,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sanitizeTag">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#392-401" title="Go to source code">sanitizeTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#393-402" title="Go to source code">sanitizeTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Sanitizes the given tag for use with the cache framework</p>
@@ -1381,7 +1381,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>A cleaned up tag, for example "NodeType_TYPO3_Neos-Page"
+						string<br>A cleaned up tag, for example "NodeType_Neos_Neos-Page"
 					</div>
 
 
@@ -1401,7 +1401,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sanitizeTags">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#403-415" title="Go to source code">sanitizeTags</a>( <span>array <var>$tags</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#404-416" title="Go to source code">sanitizeTags</a>( <span>array <var>$tags</var></span> )</code>
 
 			<div class="description short">
 				<p>Sanitizes multiple tags with sanitizeTag()</p>
@@ -1446,7 +1446,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CACHE_SEGMENT_START_TOKEN.html#46" title="Go to source code"><b>CACHE_SEGMENT_START_TOKEN</b></a>
+						<a href="source-constant-CACHE_SEGMENT_START_TOKEN.html#47" title="Go to source code"><b>CACHE_SEGMENT_START_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1470,7 +1470,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CACHE_SEGMENT_END_TOKEN.html#47" title="Go to source code"><b>CACHE_SEGMENT_END_TOKEN</b></a>
+						<a href="source-constant-CACHE_SEGMENT_END_TOKEN.html#48" title="Go to source code"><b>CACHE_SEGMENT_END_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1494,7 +1494,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CACHE_SEGMENT_SEPARATOR_TOKEN.html#48" title="Go to source code"><b>CACHE_SEGMENT_SEPARATOR_TOKEN</b></a>
+						<a href="source-constant-CACHE_SEGMENT_SEPARATOR_TOKEN.html#49" title="Go to source code"><b>CACHE_SEGMENT_SEPARATOR_TOKEN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1518,7 +1518,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CACHE_SEGMENT_MARKER.html#50" title="Go to source code"><b>CACHE_SEGMENT_MARKER</b></a>
+						<a href="source-constant-CACHE_SEGMENT_MARKER.html#51" title="Go to source code"><b>CACHE_SEGMENT_MARKER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1542,7 +1542,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CACHE_PLACEHOLDER_REGEX.html#52" title="Go to source code"><b>CACHE_PLACEHOLDER_REGEX</b></a>
+						<a href="source-constant-CACHE_PLACEHOLDER_REGEX.html#53" title="Go to source code"><b>CACHE_PLACEHOLDER_REGEX</b></a>
 					</code>
 
 					<div class="description short">
@@ -1566,7 +1566,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-EVAL_PLACEHOLDER_REGEX.html#53" title="Go to source code"><b>EVAL_PLACEHOLDER_REGEX</b></a>
+						<a href="source-constant-EVAL_PLACEHOLDER_REGEX.html#54" title="Go to source code"><b>EVAL_PLACEHOLDER_REGEX</b></a>
 					</code>
 
 					<div class="description short">
@@ -1590,7 +1590,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MAXIMUM_NESTING_LEVEL.html#55" title="Go to source code"><b>MAXIMUM_NESTING_LEVEL</b></a>
+						<a href="source-constant-MAXIMUM_NESTING_LEVEL.html#56" title="Go to source code"><b>MAXIMUM_NESTING_LEVEL</b></a>
 					</code>
 
 					<div class="description short">
@@ -1614,7 +1614,7 @@ as well and segments which were not cacheable are rendered.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-TAG_EVERYTHING.html#57-61" title="Go to source code"><b>TAG_EVERYTHING</b></a>
+						<a href="source-constant-TAG_EVERYTHING.html#58-62" title="Go to source code"><b>TAG_EVERYTHING</b></a>
 					</code>
 
 					<div class="description short">
@@ -1640,7 +1640,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-SEGMENT_TYPE_CACHED.html#63" title="Go to source code"><b>SEGMENT_TYPE_CACHED</b></a>
+						<a href="source-constant-SEGMENT_TYPE_CACHED.html#64" title="Go to source code"><b>SEGMENT_TYPE_CACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1664,7 +1664,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-SEGMENT_TYPE_UNCACHED.html#64" title="Go to source code"><b>SEGMENT_TYPE_UNCACHED</b></a>
+						<a href="source-constant-SEGMENT_TYPE_UNCACHED.html#65" title="Go to source code"><b>SEGMENT_TYPE_UNCACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1688,7 +1688,7 @@ the application.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-SEGMENT_TYPE_DYNAMICCACHED.html#65" title="Go to source code"><b>SEGMENT_TYPE_DYNAMICCACHED</b></a>
+						<a href="source-constant-SEGMENT_TYPE_DYNAMICCACHED.html#66" title="Go to source code"><b>SEGMENT_TYPE_DYNAMICCACHED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1723,7 +1723,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#67-71" title="Go to source code"><var>$parser</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#68-72" title="Go to source code"><var>$parser</var></a>
 
 				<div class="description short">
 					
@@ -1751,7 +1751,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#73-77" title="Go to source code"><var>$cache</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#74-78" title="Go to source code"><var>$cache</var></a>
 
 				<div class="description short">
 					
@@ -1779,7 +1779,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#79-83" title="Go to source code"><var>$propertyMapper</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#80-84" title="Go to source code"><var>$propertyMapper</var></a>
 
 				<div class="description short">
 					
@@ -1807,7 +1807,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#85-89" title="Go to source code"><var>$securityContext</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#86-90" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
 					
@@ -1835,7 +1835,7 @@ the application.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#91-94" title="Go to source code"><var>$randomCacheMarker</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#92-95" title="Go to source code"><var>$randomCacheMarker</var></a>
 
 				<div class="description short">
 					
