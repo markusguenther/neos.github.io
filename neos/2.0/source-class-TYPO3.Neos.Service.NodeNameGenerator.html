@@ -750,7 +750,7 @@
 </span><span id="56" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$idealNodeName</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="57" class="l">            <span class="php-var">$possibleNodeName</span> = \TYPO3\TYPO3CR\Utility::renderValidNodeName(<span class="php-var">$idealNodeName</span>);
 </span><span id="58" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="59" class="l">            <span class="php-var">$possibleNodeName</span> = <span class="php-quote">'node-'</span> . Algorithms::generateRandomString(<span class="php-num">13</span>);
+</span><span id="59" class="l">            <span class="php-var">$possibleNodeName</span> = <span class="php-quote">'node-'</span> . Algorithms::generateRandomString(<span class="php-num">13</span>, <span class="php-quote">'abcdefghijklmnopqrstuvwxyz0123456789'</span>);
 </span><span id="60" class="l">        }
 </span><span id="61" class="l">
 </span><span id="62" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$possibleNodeName</span>;
