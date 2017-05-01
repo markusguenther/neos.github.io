@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Utility\PositionalArraySorter | Flow Framework (master branch)</title>
+	<title>Class Neos\Flow\Persistence\Doctrine\EntityManagerConfiguration | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.Utility.html" title="Summary of Neos\Utility"><span>Namespace</span></a>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.html" title="Summary of Neos\Flow\Persistence\Doctrine"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -125,7 +125,7 @@
 							Messages						</a>
 							</li>
 								</ul></li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.html">
 							Flow<span></span>
 						</a>
@@ -392,7 +392,7 @@
 							Exception						</a>
 							</li>
 								</ul></li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.Persistence.html">
 							Persistence<span></span>
 						</a>
@@ -401,7 +401,7 @@
 						<a href="namespace-Neos.Flow.Persistence.Aspect.html">
 							Aspect						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.Persistence.Doctrine.html">
 							Doctrine<span></span>
 						</a>
@@ -798,7 +798,7 @@
 							Inflect						</a>
 							</li>
 								</ul></li></ul></li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Utility.html">
 							Utility<span></span>
 						</a>
@@ -827,16 +827,16 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Utility.Arrays.html">Arrays</a></li>
-				<li><a href="class-Neos.Utility.Files.html">Files</a></li>
-				<li><a href="class-Neos.Utility.MediaTypes.html">MediaTypes</a></li>
-				<li><a href="class-Neos.Utility.ObjectAccess.html">ObjectAccess</a></li>
-				<li><a href="class-Neos.Utility.OpcodeCacheHelper.html">OpcodeCacheHelper</a></li>
-				<li><a href="class-Neos.Utility.PdoHelper.html">PdoHelper</a></li>
-				<li class="active"><a href="class-Neos.Utility.PositionalArraySorter.html">PositionalArraySorter</a></li>
-				<li><a href="class-Neos.Utility.SchemaGenerator.html">SchemaGenerator</a></li>
-				<li><a href="class-Neos.Utility.SchemaValidator.html">SchemaValidator</a></li>
-				<li><a href="class-Neos.Utility.TypeHandling.html">TypeHandling</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.ArrayTypeConverter.html">ArrayTypeConverter</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.CacheAdapter.html">CacheAdapter</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.CountWalker.html">CountWalker</a></li>
+				<li class="active"><a href="class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html">EntityManagerConfiguration</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.EntityManagerFactory.html">EntityManagerFactory</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html">PersistenceManager</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.Query.html">Query</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.QueryResult.html">QueryResult</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.Repository.html">Repository</a></li>
+				<li><a href="class-Neos.Flow.Persistence.Doctrine.Service.html">Service</a></li>
 			</ul>
 
 
@@ -852,36 +852,11 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class PositionalArraySorter</h1>
+	<h1>Class EntityManagerConfiguration</h1>
 
 
 	<div class="description">
-	<p>Flexible array sorter that sorts an array according to a "position" meta data.
-The expected format for the $subject is:</p>
-
-<p>array(
-  array(
-    'foo' => 'bar'
-    'position' => '<position-string>',
-  ),
-  array(
-    'foo' => 'baz'
-    'position' => '<position-string>',
-  ),
-)</p>
-
-<p>The <position-string> supports one of the following syntax:
- start (<weight>)
- end (<weight>)
- before <key> (<weight>)
- after <key> (<weight>)
- <numerical-order></p>
-
-<p>where "weight" is the priority that defines which of two conflicting positions overrules the other,
-"key" is a string that references another key in the $subject
-and "numerical-order" is an integer that defines the order independently from the other keys.</p>
-
-<p>With the $positionPropertyPath parameter the property path to the position string can be changed.</p>
+	<p>EntityManager configuration handler</p>
 	</div>
 
 
@@ -895,10 +870,12 @@ and "numerical-order" is an integer that defines the order independently from th
 	<div class="alert alert-info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Utility.html">Utility</a><br>
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Persistence.html">Persistence</a>\<a href="namespace-Neos.Flow.Persistence.Doctrine.html">Doctrine</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Utility.PositionalArraySorter.html#16-330" title="Go to source code">Neos.Utility.Arrays/Classes/PositionalArraySorter.php</a>
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#27-237" title="Go to source code">Neos.Flow/Classes/Persistence/Doctrine/EntityManagerConfiguration.php</a>
 		<br>
 	</div>
 
@@ -907,7 +884,7 @@ and "numerical-order" is an integer that defines the order independently from th
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="__construct" id="___construct">
+		<tr data-order="injectSettings" id="_injectSettings">
 
 			<td class="attributes"><code>
 				 public 
@@ -917,97 +894,29 @@ and "numerical-order" is an integer that defines the order independently from th
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#81-89" title="Go to source code">__construct</a>( <span>array <var>$subject</var></span>, <span>string <var>$positionPropertyPath</var> = <span class="php-quote">'position'</span></span> )</code>
+			<a class="anchor" href="#_injectSettings">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#45-59" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
-				
+				<p>Injects the Flow settings, the persistence part is kept
+for further use.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Injects the Flow settings, the persistence part is kept
+for further use.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$subject</var></dt>
-						<dd>The source array to sort</dd>
-						<dt><var>$positionPropertyPath</var></dt>
-						<dd>optional property path to the string that contains the position</dd>
+						<dt><var>$settings</var></dt>
+						<dd></dd>
 					</dl></div>
 
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="toArray" id="_toArray">
-
-			<td class="attributes"><code>
-				 public 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_toArray">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#91-105" title="Go to source code">toArray</a>( )</code>
-
-			<div class="description short">
-				<p>Returns a sorted copy of the subject array</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns a sorted copy of the subject array</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						array
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getSortedKeys" id="_getSortedKeys">
-
-			<td class="attributes"><code>
-				 public 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getSortedKeys">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#107-137" title="Go to source code">getSortedKeys</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the keys of $this->subject sorted according to the position meta data</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the keys of $this->subject sorted according to the position meta data</p>
-
-<p>TODO Detect circles in after / before dependencies (#52185)</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						array<br>an ordered list of keys
-					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-Neos.Utility.Exception.InvalidPositionException.html">Neos\Utility\Exception\InvalidPositionException</a></code><br>if the positional string has an unsupported format
+						<code><a href="class-Neos.Flow.Configuration.Exception.InvalidConfigurationException.html">Neos\Flow\Configuration\Exception\InvalidConfigurationException</a></code>
 					</div>
 
 
@@ -1015,224 +924,158 @@ and "numerical-order" is an integer that defines the order independently from th
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="extractMiddleKeys" id="_extractMiddleKeys">
+		<tr data-order="configureEntityManager" id="_configureEntityManager">
 
 			<td class="attributes"><code>
-				 protected 
+				 public 
 				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_extractMiddleKeys">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#139-158" title="Go to source code">extractMiddleKeys</a>( <span>array <var>&amp; $arrayKeysWithPosition</var></span> )</code>
+			<a class="anchor" href="#_configureEntityManager">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#61-93" title="Go to source code">configureEntityManager</a>( <span>Doctrine\DBAL\Connection <var>$connection</var></span>, <span>Doctrine\ORM\Configuration <var>$config</var></span>, <span>Doctrine\Common\EventManager <var>$eventManager</var></span> )</code>
 
 			<div class="description short">
-				<p>Extracts all "middle" keys from $arrayKeysWithPosition. Those are all keys with a numeric position.
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
+				<p>Configure the Doctrine EntityManager according to configuration settings before it's creation.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Extracts all "middle" keys from $arrayKeysWithPosition. Those are all keys with a numeric position.
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
+				<p>Configure the Doctrine EntityManager according to configuration settings before it's creation.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$arrayKeysWithPosition</var></dt>
+						<dt><var>$connection</var></dt>
+						<dd></dd>
+						<dt><var>$config</var></dt>
+						<dd></dd>
+						<dt><var>$eventManager</var></dt>
 						<dd></dd>
 					</dl></div>
 
 
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="extractStartKeys" id="_extractStartKeys">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_extractStartKeys">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#160-183" title="Go to source code">extractStartKeys</a>( <span>array <var>&amp; $arrayKeysWithPosition</var></span> )</code>
-
-			<div class="description short">
-				<p>Extracts all "start" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "start"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Extracts all "start" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "start"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$arrayKeysWithPosition</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="extractEndKeys" id="_extractEndKeys">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_extractEndKeys">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#185-208" title="Go to source code">extractEndKeys</a>( <span>array <var>&amp; $arrayKeysWithPosition</var></span> )</code>
-
-			<div class="description short">
-				<p>Extracts all "end" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "end"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Extracts all "end" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "end"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$arrayKeysWithPosition</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="extractBeforeKeys" id="_extractBeforeKeys">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_extractBeforeKeys">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#210-235" title="Go to source code">extractBeforeKeys</a>( <span>array <var>&amp; $arrayKeysWithPosition</var></span> )</code>
-
-			<div class="description short">
-				<p>Extracts all "before" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "before"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Extracts all "before" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "before"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$arrayKeysWithPosition</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="extractAfterKeys" id="_extractAfterKeys">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_extractAfterKeys">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#237-262" title="Go to source code">extractAfterKeys</a>( <span>array <var>&amp; $arrayKeysWithPosition</var></span> )</code>
-
-			<div class="description short">
-				<p>Extracts all "after" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "after"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Extracts all "after" keys from $arrayKeysWithPosition. Those are all keys with a position starting with "after"
-The result is a multi-dimensional arrays where the KEY of each array is a PRIORITY and the VALUE is an array of matching KEYS
-This also removes matching keys from the given $arrayKeysWithPosition</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$arrayKeysWithPosition</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="collectArrayKeysAndPositions" id="_collectArrayKeysAndPositions">
-
-			<td class="attributes"><code>
-				 protected 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_collectArrayKeysAndPositions">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#264-290" title="Go to source code">collectArrayKeysAndPositions</a>( )</code>
-
-			<div class="description short">
-				<p>Collect the array keys inside $this->subject with each position meta-argument.
-If there is no position but the array is numerically ordered, we use the array index as position.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Collect the array keys inside $this->subject with each position meta-argument.
-If there is no position but the array is numerically ordered, we use the array index as position.</p>
-
-
-
-					<h4>Returns</h4>
+					<h4>Throws</h4>
 					<div class="list">
-						array<br>an associative array where each key of $subject has a position string assigned
+						<code><a href="class-Neos.Flow.Configuration.Exception.InvalidConfigurationException.html">Neos\Flow\Configuration\Exception\InvalidConfigurationException</a></code><br>
+						<code><a href="class-Neos.Flow.Persistence.Exception.IllegalObjectTypeException.html">Neos\Flow\Persistence\Exception\IllegalObjectTypeException</a></code>
 					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="enableSqlLogger" id="_enableSqlLogger">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_enableSqlLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#95-108" title="Go to source code">enableSqlLogger</a>( <span>Neos\Flow\Persistence\Doctrine\string <var>$configuredSqlLogger</var></span>, <span>Doctrine\ORM\Configuration <var>$doctrineConfiguration</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$configuredSqlLogger</var></dt>
+						<dd></dd>
+						<dt><var>$doctrineConfiguration</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Configuration.Exception.InvalidConfigurationException.html">Neos\Flow\Configuration\Exception\InvalidConfigurationException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="registerEventSubscribers" id="_registerEventSubscribers">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registerEventSubscribers">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#110-124" title="Go to source code">registerEventSubscribers</a>( <span>array <var>$configuredSubscribers</var></span>, <span>Doctrine\Common\EventManager <var>$eventManager</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$configuredSubscribers</var></dt>
+						<dd></dd>
+						<dt><var>$eventManager</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Persistence.Exception.IllegalObjectTypeException.html">Neos\Flow\Persistence\Exception\IllegalObjectTypeException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="registerEventListeners" id="_registerEventListeners">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registerEventListeners">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#126-136" title="Go to source code">registerEventListeners</a>( <span>array <var>$configuredListeners</var></span>, <span>Doctrine\Common\EventManager <var>$eventManager</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$configuredListeners</var></dt>
+						<dd></dd>
+						<dt><var>$eventManager</var></dt>
+						<dd></dd>
+					</dl></div>
+
 
 
 
@@ -1240,33 +1083,148 @@ If there is no position but the array is numerically ordered, we use the array i
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="generateSortedKeysMap" id="_generateSortedKeysMap">
+		<tr data-order="applyDqlSettingsToConfiguration" id="_applyDqlSettingsToConfiguration">
 
 			<td class="attributes"><code>
 				 protected 
-				array
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_generateSortedKeysMap">#</a>
-			<code><a href="source-class-Neos.Utility.PositionalArraySorter.html#292-329" title="Go to source code">generateSortedKeysMap</a>( )</code>
+			<a class="anchor" href="#_applyDqlSettingsToConfiguration">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#138-157" title="Go to source code">applyDqlSettingsToConfiguration</a>( <span>array <var>$configuredSettings</var></span>, <span>Doctrine\ORM\Configuration <var>$doctrineConfiguration</var></span> )</code>
 
 			<div class="description short">
-				<p>Flattens start-, middle-, end-, before- and afterKeys to a single dimension and merges them together to a single array</p>
+				<p>Apply configured settings regarding DQL to the Doctrine Configuration.
+At the moment, these are custom DQL functions.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Flattens start-, middle-, end-, before- and afterKeys to a single dimension and merges them together to a single array</p>
+				<p>Apply configured settings regarding DQL to the Doctrine Configuration.
+At the moment, these are custom DQL functions.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$configuredSettings</var></dt>
+						<dd></dd>
+						<dt><var>$doctrineConfiguration</var></dt>
+						<dd></dd>
+					</dl></div>
 
 
 
-					<h4>Returns</h4>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="applyCacheConfiguration" id="_applyCacheConfiguration">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_applyCacheConfiguration">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#159-176" title="Go to source code">applyCacheConfiguration</a>( <span>Doctrine\ORM\Configuration <var>$config</var></span> )</code>
+
+			<div class="description short">
+				<p>Apply basic cache configuration for the metadata, query and result caches.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Apply basic cache configuration for the metadata, query and result caches.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="applySecondLevelCacheSettingsToConfiguration" id="_applySecondLevelCacheSettingsToConfiguration">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_applySecondLevelCacheSettingsToConfiguration">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#178-212" title="Go to source code">applySecondLevelCacheSettingsToConfiguration</a>( <span>array <var>$configuredSettings</var></span>, <span>Doctrine\ORM\Configuration <var>$doctrineConfiguration</var></span> )</code>
+
+			<div class="description short">
+				<p>Apply configured settings regarding Doctrine's second level cache.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Apply configured settings regarding Doctrine's second level cache.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$configuredSettings</var></dt>
+						<dd></dd>
+						<dt><var>$doctrineConfiguration</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="enhanceEntityManager" id="_enhanceEntityManager">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_enhanceEntityManager">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#214-236" title="Go to source code">enhanceEntityManager</a>( <span>Doctrine\ORM\Configuration <var>$config</var></span>, <span>Doctrine\ORM\EntityManager <var>$entityManager</var></span> )</code>
+
+			<div class="description short">
+				<p>Enhance the Doctrine EntityManager by applying post creation settings, like custom filters.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Enhance the Doctrine EntityManager by applying post creation settings, like custom filters.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd></dd>
+						<dt><var>$entityManager</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
 					<div class="list">
-						array
+						Doctrine\DBAL\DBALException
 					</div>
-
 
 
 
@@ -1289,14 +1247,42 @@ If there is no position but the array is numerically ordered, we use the array i
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="subject" id="$subject">
+		<tr data-order="objectManager" id="$objectManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#34-38" title="Go to source code"><var>$objectManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$objectManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="settings" id="$settings">
 			<td class="attributes"><code>
 				protected  
 				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#46-49" title="Go to source code"><var>$subject</var></a>
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.EntityManagerConfiguration.html#40-43" title="Go to source code"><var>$settings</var></a>
 
 				<div class="description short">
 					
@@ -1309,158 +1295,8 @@ If there is no position but the array is numerically ordered, we use the array i
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$subject" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="positionPropertyPath" id="$positionPropertyPath">
-			<td class="attributes"><code>
-				protected  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#51-54" title="Go to source code"><var>$positionPropertyPath</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$positionPropertyPath" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="startKeys" id="$startKeys">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#56-59" title="Go to source code"><var>$startKeys</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$startKeys" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="middleKeys" id="$middleKeys">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#61-64" title="Go to source code"><var>$middleKeys</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$middleKeys" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="endKeys" id="$endKeys">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#66-69" title="Go to source code"><var>$endKeys</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$endKeys" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="beforeKeys" id="$beforeKeys">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#71-74" title="Go to source code"><var>$beforeKeys</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$beforeKeys" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="afterKeys" id="$afterKeys">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Utility.PositionalArraySorter.html#76-79" title="Go to source code"><var>$afterKeys</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$afterKeys" class="anchor">#</a>
-					<code></code>
+					<a href="#$settings" class="anchor">#</a>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>
@@ -1480,6 +1316,6 @@ If there is no position but the array is numerically ordered, we use the array i
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0eaca48f89a19a3b087f03ef29d1be8e56872977"></script>
+<script src="elementlist.js?6e1965e5dd544926e47d165eaa9430fda173e72c"></script>
 </body>
 </html>
