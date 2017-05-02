@@ -806,7 +806,7 @@
 </span></span><span id="53" class="l"><span class="php-comment">     * In live workspace this just renders a the content.
 </span></span><span id="54" class="l"><span class="php-comment">     * For logged in users with access to the Backend this also adds the attributes for the RTE to work.
 </span></span><span id="55" class="l"><span class="php-comment">     *
-</span></span><span id="56" class="l"><span class="php-comment">     * @param NodeInterface $node The node of the content element. Optional, will be resolved from the TypoScript context by default.
+</span></span><span id="56" class="l"><span class="php-comment">     * @param NodeInterface $node The node of the content element. Optional, will be resolved from the Fusion context by default.
 </span></span><span id="57" class="l"><span class="php-comment">     * @return string The rendered property with a wrapping tag. In the user workspace this adds some required attributes for the RTE to work
 </span></span><span id="58" class="l"><span class="php-comment">     * @throws ViewHelperException
 </span></span><span id="59" class="l"><span class="php-comment">     */</span>
@@ -814,7 +814,7 @@
 </span><span id="61" class="l">    {
 </span><span id="62" class="l">        <span class="php-var">$view</span> = <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;getView();
 </span><span id="63" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$view</span> <span class="php-keyword1">instanceof</span> FusionAwareViewInterface) {
-</span><span id="64" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelperException(<span class="php-quote">'This ViewHelper can only be used in a TypoScript content element. You have to specify the &quot;node&quot; argument if it cannot be resolved from the TypoScript context.'</span>, <span class="php-num">1385737102</span>);
+</span><span id="64" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelperException(<span class="php-quote">'This ViewHelper can only be used in a Fusion content element. You have to specify the &quot;node&quot; argument if it cannot be resolved from the Fusion context.'</span>, <span class="php-num">1385737102</span>);
 </span><span id="65" class="l">        }
 </span><span id="66" class="l">        <span class="php-var">$fusionObject</span> = <span class="php-var">$view</span>-&gt;getFusionObject();
 </span><span id="67" class="l">        <span class="php-var">$currentContext</span> = <span class="php-var">$fusionObject</span>-&gt;getRuntime()-&gt;getCurrentContext();
