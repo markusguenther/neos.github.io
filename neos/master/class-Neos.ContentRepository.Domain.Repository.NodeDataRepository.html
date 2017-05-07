@@ -791,7 +791,7 @@ Neos\Flow\Persistence\Repository
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#33-1641" title="Go to source code">Neos.ContentRepository/Classes/Domain/Repository/NodeDataRepository.php</a>
+			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#33-1642" title="Go to source code">Neos.ContentRepository/Classes/Domain/Repository/NodeDataRepository.php</a>
 		<br>
 	</div>
 
@@ -2122,7 +2122,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeTypeFilterConstraintsForDql">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1051-1089" title="Go to source code">getNodeTypeFilterConstraintsForDql</a>( <span>string <var>$nodeTypeFilter</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1051-1090" title="Go to source code">getNodeTypeFilterConstraintsForDql</a>( <span>string|null <var>$nodeTypeFilter</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Generates a two dimensional array with the filters. First level is:
@@ -2166,7 +2166,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeTypeFilterConstraints">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1091-1126" title="Go to source code">getNodeTypeFilterConstraints</a>( <span>Neos\Flow\Persistence\QueryInterface <var>$query</var></span>, <span> <var>$nodeTypeFilter</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1092-1127" title="Go to source code">getNodeTypeFilterConstraints</a>( <span>Neos\Flow\Persistence\QueryInterface <var>$query</var></span>, <span> <var>$nodeTypeFilter</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2206,7 +2206,7 @@ signal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterOutRemovedObjects">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1128-1144" title="Go to source code">filterOutRemovedObjects</a>( <span>array <var>&amp; $objects</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1129-1145" title="Go to source code">filterOutRemovedObjects</a>( <span>array <var>&amp; $objects</var></span> )</code>
 
 			<div class="description short">
 				<p>Iterates of the array of objects and removes all those which have recently been removed from the repository,
@@ -2244,7 +2244,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterRemovedNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1146-1166" title="Go to source code">filterRemovedNodes</a>( <span>array <var>$nodes</var></span>, <span>boolean|null <var>$removedNodes</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1147-1167" title="Go to source code">filterRemovedNodes</a>( <span>array <var>$nodes</var></span>, <span>boolean|null <var>$removedNodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes NodeData with the removed property set from the given array.</p>
@@ -2284,7 +2284,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistEntities">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1168-1184" title="Go to source code">persistEntities</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1169-1185" title="Go to source code">persistEntities</a>( )</code>
 
 			<div class="description short">
 				<p>Persists all entities managed by the repository and all cascading dependencies</p>
@@ -2313,7 +2313,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitRepositoryObjectsPersisted">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1186-1194" title="Go to source code">emitRepositoryObjectsPersisted</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1187-1195" title="Go to source code">emitRepositoryObjectsPersisted</a>( )</code>
 
 			<div class="description short">
 				<p>Signals that persistEntities() in this repository finished correctly.</p>
@@ -2345,7 +2345,7 @@ but whose removal has not yet been persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addDimensionJoinConstraintsToQueryBuilder">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1196-1216" title="Go to source code">addDimensionJoinConstraintsToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>array <var>$dimensions</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1197-1217" title="Go to source code">addDimensionJoinConstraintsToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>array <var>$dimensions</var></span> )</code>
 
 			<div class="description short">
 				<p>If $dimensions is not empty, adds join constraints to the given $queryBuilder
@@ -2383,7 +2383,7 @@ limiting the query result to matching hits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reduceNodeVariantsByWorkspacesAndDimensions">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1218-1280" title="Go to source code">reduceNodeVariantsByWorkspacesAndDimensions</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span>, <span>array <var>$dimensions</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1219-1281" title="Go to source code">reduceNodeVariantsByWorkspacesAndDimensions</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span>, <span>array <var>$dimensions</var></span> )</code>
 
 			<div class="description short">
 				<p>Given an array with duplicate nodes (from different workspaces and dimensions) those are reduced to uniqueness (by node identifier)</p>
@@ -2429,7 +2429,7 @@ limiting the query result to matching hits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reduceNodeVariantsByWorkspaces">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1282-1314" title="Go to source code">reduceNodeVariantsByWorkspaces</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1283-1315" title="Go to source code">reduceNodeVariantsByWorkspaces</a>( <span>array <var>$nodes</var></span>, <span>array <var>$workspaces</var></span> )</code>
 
 			<div class="description short">
 				<p>Given an array with duplicate nodes (from different workspaces) those are reduced to uniqueness (by node identifier and dimensions hash)</p>
@@ -2469,7 +2469,7 @@ limiting the query result to matching hits.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByWorkspace">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1316-1339" title="Go to source code">findByWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1317-1340" title="Go to source code">findByWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Find all NodeData objects inside a given workspace sorted by path to be used
@@ -2511,7 +2511,7 @@ in publishing. The order makes sure that parent nodes are published first.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pathExists">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1341-1365" title="Go to source code">pathExists</a>( <span>string <var>$nodePath</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1342-1366" title="Go to source code">pathExists</a>( <span>string <var>$nodePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Find out if the given path exists anywhere in the CR. (internal)
@@ -2551,7 +2551,7 @@ If you need this functionality use \Neos\ContentRepository\Domain\Service\NodeSe
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByPathWithoutReduce">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1367-1401" title="Go to source code">findByPathWithoutReduce</a>( <span>string <var>$path</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>boolean <var>$includeRemovedNodes</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1368-1402" title="Go to source code">findByPathWithoutReduce</a>( <span>string <var>$path</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>boolean <var>$includeRemovedNodes</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Find all node data in a path matching the given workspace hierarchy</p>
@@ -2597,7 +2597,7 @@ If you need this functionality use \Neos\ContentRepository\Domain\Service\NodeSe
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findNodesByRelatedEntities">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1403-1416" title="Go to source code">findNodesByRelatedEntities</a>( <span>array <var>$relationMap</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1404-1417" title="Go to source code">findNodesByRelatedEntities</a>( <span>array <var>$relationMap</var></span> )</code>
 
 			<div class="description short">
 				<p>Searches for possible relations to the given entity identifiers in NodeData.
@@ -2641,7 +2641,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findNodesByPathPrefixAndRelatedEntities">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1418-1439" title="Go to source code">findNodesByPathPrefixAndRelatedEntities</a>( <span>string <var>$pathPrefix</var></span>, <span>array <var>$relationMap</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1419-1440" title="Go to source code">findNodesByPathPrefixAndRelatedEntities</a>( <span>string <var>$pathPrefix</var></span>, <span>array <var>$relationMap</var></span> )</code>
 
 			<div class="description short">
 				<p>Searches for possible relations to the given entity identifiers in NodeData using a path prefix.
@@ -2687,7 +2687,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeAllInPath">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1441-1453" title="Go to source code">removeAllInPath</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1442-1454" title="Go to source code">removeAllInPath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove all nodes below a given path. Does not care about workspaces and dimensions.</p>
@@ -2721,7 +2721,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInRemovedNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1455-1464" title="Go to source code">isInRemovedNodes</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1456-1465" title="Go to source code">isInRemovedNodes</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Test if a given NodeData is in the set of removed node data objects</p>
@@ -2759,7 +2759,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createQueryBuilder">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1466-1482" title="Go to source code">createQueryBuilder</a>( <span>array <var>$workspaces</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1467-1483" title="Go to source code">createQueryBuilder</a>( <span>array <var>$workspaces</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2797,7 +2797,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addParentPathConstraintToQueryBuilder">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1484-1503" title="Go to source code">addParentPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$parentPath</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1485-1504" title="Go to source code">addParentPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$parentPath</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -2835,7 +2835,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addPathConstraintToQueryBuilder">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1505-1524" title="Go to source code">addPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1506-1525" title="Go to source code">addPathConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -2873,7 +2873,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addIdentifierConstraintToQueryBuilder">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1526-1535" title="Go to source code">addIdentifierConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1527-1536" title="Go to source code">addIdentifierConstraintToQueryBuilder</a>( <span>Doctrine\ORM\QueryBuilder <var>$queryBuilder</var></span>, <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2909,7 +2909,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterNodeDataByBestMatchInContext">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1537-1588" title="Go to source code">filterNodeDataByBestMatchInContext</a>( <span>array <var>$nodeDataObjects</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var></span>, <span>boolean <var>$includeRemovedNodes</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1538-1589" title="Go to source code">filterNodeDataByBestMatchInContext</a>( <span>array <var>$nodeDataObjects</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensions</var></span>, <span>boolean <var>$includeRemovedNodes</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -2953,7 +2953,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectWorkspaceAndAllBaseWorkspaces">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1590-1605" title="Go to source code">collectWorkspaceAndAllBaseWorkspaces</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1591-1606" title="Go to source code">collectWorkspaceAndAllBaseWorkspaces</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array that contains the given workspace and all base (parent) workspaces of it.</p>
@@ -2991,7 +2991,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildQueryBuilderForRelationMap">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1607-1640" title="Go to source code">buildQueryBuilderForRelationMap</a>( <span>array <var>$relationMap</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Repository.NodeDataRepository.html#1608-1641" title="Go to source code">buildQueryBuilderForRelationMap</a>( <span>array <var>$relationMap</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a query builder for a query on node data using the given
@@ -3403,6 +3403,6 @@ interface ...</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?2feb46e2a1b1dca196ba5cd7d70d6ed02017db14"></script>
 </body>
 </html>

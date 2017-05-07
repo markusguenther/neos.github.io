@@ -779,7 +779,7 @@
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Fusion\Exception;
 </span><span id="18" class="l">
 </span><span id="19" class="l"><span class="php-comment">/**
-</span></span><span id="20" class="l"><span class="php-comment"> * A TypoScript Menu object
+</span></span><span id="20" class="l"><span class="php-comment"> * A Fusion Menu object
 </span></span><span id="21" class="l"><span class="php-comment"> */</span>
 </span><span id="22" class="l"><span class="php-keyword1">class</span> MenuImplementation <span class="php-keyword1">extends</span> AbstractMenuImplementation
 </span><span id="23" class="l">{
@@ -972,7 +972,7 @@
 </span><span id="210" class="l">    <span class="php-comment">/**
 </span></span><span id="211" class="l"><span class="php-comment">     * Find the starting point for this menu. depending on given startingPoint
 </span></span><span id="212" class="l"><span class="php-comment">     * If startingPoint is given, this is taken as starting point for this menu level,
-</span></span><span id="213" class="l"><span class="php-comment">     * as a fallback the TypoScript context variable node is used.
+</span></span><span id="213" class="l"><span class="php-comment">     * as a fallback the Fusion context variable node is used.
 </span></span><span id="214" class="l"><span class="php-comment">     *
 </span></span><span id="215" class="l"><span class="php-comment">     * If entryLevel is configured this will be taken into account as well.
 </span></span><span id="216" class="l"><span class="php-comment">     *
@@ -985,7 +985,7 @@
 </span><span id="223" class="l">        <span class="php-var">$startingPoint</span> = <span class="php-var">$this</span>-&gt;getStartingPoint();
 </span><span id="224" class="l">
 </span><span id="225" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$typoScriptContext</span>[<span class="php-quote">'node'</span>]) &amp;&amp; !<span class="php-var">$startingPoint</span>) {
-</span><span id="226" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> TypoScriptException(<span class="php-quote">'You must either set a &quot;startingPoint&quot; for the menu or &quot;node&quot; must be set in the TypoScript context.'</span>, <span class="php-num">1369596980</span>);
+</span><span id="226" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> TypoScriptException(<span class="php-quote">'You must either set a &quot;startingPoint&quot; for the menu or &quot;node&quot; must be set in the Fusion context.'</span>, <span class="php-num">1369596980</span>);
 </span><span id="227" class="l">        }
 </span><span id="228" class="l">        <span class="php-var">$startingPoint</span> = <span class="php-var">$startingPoint</span> ? : <span class="php-var">$typoScriptContext</span>[<span class="php-quote">'node'</span>];
 </span><span id="229" class="l">        <span class="php-var">$entryParentNode</span> = <span class="php-var">$this</span>-&gt;findParentNodeInBreadcrumbPathByLevel(<span class="php-var">$this</span>-&gt;getEntryLevel(), <span class="php-var">$startingPoint</span>);
@@ -1076,6 +1076,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?2feb46e2a1b1dca196ba5cd7d70d6ed02017db14"></script>
 </body>
 </html>

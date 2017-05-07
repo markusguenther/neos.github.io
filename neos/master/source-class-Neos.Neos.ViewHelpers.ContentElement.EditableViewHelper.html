@@ -823,7 +823,7 @@
 </span></span><span id="70" class="l"><span class="php-comment">     *
 </span></span><span id="71" class="l"><span class="php-comment">     * @param string $property Name of the property to render. Note: If this tag has child nodes, they overrule this argument!
 </span></span><span id="72" class="l"><span class="php-comment">     * @param string $tag The name of the tag that should be wrapped around the property. By default this is a &lt;div&gt;
-</span></span><span id="73" class="l"><span class="php-comment">     * @param NodeInterface $node The node of the content element. Optional, will be resolved from the TypoScript context by default.
+</span></span><span id="73" class="l"><span class="php-comment">     * @param NodeInterface $node The node of the content element. Optional, will be resolved from the Fusion context by default.
 </span></span><span id="74" class="l"><span class="php-comment">     * @return string The rendered property with a wrapping tag. In the user workspace this adds some required attributes for the RTE to work
 </span></span><span id="75" class="l"><span class="php-comment">     * @throws ViewHelperException
 </span></span><span id="76" class="l"><span class="php-comment">     */</span>
@@ -838,7 +838,7 @@
 </span><span id="85" class="l">        }
 </span><span id="86" class="l">
 </span><span id="87" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span> === <span class="php-keyword1">null</span>) {
-</span><span id="88" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelperException(<span class="php-quote">'A node is required, but one was not supplied and could not be found in the TypoScript context.'</span>, <span class="php-num">1408521638</span>);
+</span><span id="88" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelperException(<span class="php-quote">'A node is required, but one was not supplied and could not be found in the Fusion context.'</span>, <span class="php-num">1408521638</span>);
 </span><span id="89" class="l">        }
 </span><span id="90" class="l">
 </span><span id="91" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$content</span> === <span class="php-keyword1">null</span>) {
@@ -860,7 +860,7 @@
 </span><span id="107" class="l">    {
 </span><span id="108" class="l">        <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;getContextVariable(<span class="php-quote">'node'</span>);
 </span><span id="109" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span> === <span class="php-keyword1">null</span>) {
-</span><span id="110" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelperException(<span class="php-quote">'This ViewHelper can only be used in a TypoScript content element. You have to specify the &quot;node&quot; argument if it cannot be resolved from the TypoScript context.'</span>, <span class="php-num">1385737102</span>);
+</span><span id="110" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelperException(<span class="php-quote">'This ViewHelper can only be used in a Fusion content element. You have to specify the &quot;node&quot; argument if it cannot be resolved from the Fusion context.'</span>, <span class="php-num">1385737102</span>);
 </span><span id="111" class="l">        }
 </span><span id="112" class="l">
 </span><span id="113" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$node</span>;
@@ -875,6 +875,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?2feb46e2a1b1dca196ba5cd7d70d6ed02017db14"></script>
 </body>
 </html>
