@@ -1278,7 +1278,7 @@
 </span><span id="424" class="l">            }
 </span><span id="425" class="l">        }
 </span><span id="426" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$suitableRequestHandlers</span>)) {
-</span><span id="427" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> FlowException(<span class="php-quote">'No suitable request handler could be found for the current request. This is most likely a setup-problem, so please check your package.json and/or try removing Configuration/PackageStates.php'</span>, <span class="php-num">1464882543</span>);
+</span><span id="427" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> FlowException(<span class="php-quote">'No suitable request handler could be found for the current request. This is most likely a setup-problem, so please check your composer.json and/or try removing Configuration/PackageStates.php'</span>, <span class="php-num">1464882543</span>);
 </span><span id="428" class="l">        }
 </span><span id="429" class="l">        <span class="php-keyword2">ksort</span>(<span class="php-var">$suitableRequestHandlers</span>);
 </span><span id="430" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">array_pop</span>(<span class="php-var">$suitableRequestHandlers</span>);
