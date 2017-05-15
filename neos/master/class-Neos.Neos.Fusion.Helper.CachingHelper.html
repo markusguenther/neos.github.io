@@ -782,7 +782,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Neos.html">Neos</a>\<a href="namespace-Neos.Neos.Fusion.html">Fusion</a>\<a href="namespace-Neos.Neos.Fusion.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#20-108" title="Go to source code">Neos.Neos/Classes/Fusion/Helper/CachingHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#20-138" title="Go to source code">Neos.Neos/Classes/Fusion/Helper/CachingHelper.php</a>
 		<br>
 	</div>
 
@@ -881,27 +881,65 @@ given nodes (for any variant) is updated.</p>
 
 			<td class="attributes"><code>
 				 public 
-				string
+				string|string[]
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_nodeTypeTag">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#70-82" title="Go to source code">nodeTypeTag</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#70-91" title="Go to source code">nodeTypeTag</a>( <span>string|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code>|string[]|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a>[]</code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate an <code>@cache</code> entry tag for a node type
 A cache entry with this tag will be flushed whenever a node
-(for any variant) that is of the given node type (including inheritance)
-is updated.</p>
+(for any variant) that is of the given node type(s)
+(including inheritance) is updated.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Generate an <code>@cache</code> entry tag for a node type
 A cache entry with this tag will be flushed whenever a node
-(for any variant) that is of the given node type (including inheritance)
-is updated.</p>
+(for any variant) that is of the given node type(s)
+(including inheritance) is updated.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeType</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string|string[]
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNodeTypeTagFor" id="_getNodeTypeTagFor">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNodeTypeTagFor">#</a>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#93-112" title="Go to source code">getNodeTypeTagFor</a>( <span>string|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
 
 
 					<h4>Parameters</h4>
@@ -932,7 +970,7 @@ is updated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_descendantOfTag">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#84-96" title="Go to source code">descendantOfTag</a>( <span>mixed <var>$nodes</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#114-126" title="Go to source code">descendantOfTag</a>( <span>mixed <var>$nodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate a <code>@cache</code> entry tag for descendants of a node, an array of nodes or a FlowQuery result
@@ -976,7 +1014,7 @@ the given nodes is updated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsCallOfMethod">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#98-107" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#128-137" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
 
 			<div class="description short">
 				<p>All methods are considered safe</p>
@@ -1024,6 +1062,6 @@ the given nodes is updated.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?2feb46e2a1b1dca196ba5cd7d70d6ed02017db14"></script>
+<script src="elementlist.js?43b8f69fd222ffdfc23a21f007368c2d0bba1d0e"></script>
 </body>
 </html>
