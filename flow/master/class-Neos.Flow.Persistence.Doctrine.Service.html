@@ -875,7 +875,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#32-781" title="Go to source code">Neos.Flow/Classes/Persistence/Doctrine/Service.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#32-786" title="Go to source code">Neos.Flow/Classes/Persistence/Doctrine/Service.php</a>
 		<br>
 	</div>
 
@@ -1186,7 +1186,7 @@ mapping information contains errors or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFormattedMigrationStatus">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#262-319" title="Go to source code">getFormattedMigrationStatus</a>( <span>boolean <var>$showMigrations</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$showDescriptions</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#262-324" title="Go to source code">getFormattedMigrationStatus</a>( <span>boolean <var>$showMigrations</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$showDescriptions</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns a formatted string of current database migration status.</p>
@@ -1226,7 +1226,7 @@ mapping information contains errors or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageKeyFromMigrationVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#321-347" title="Go to source code">getPackageKeyFromMigrationVersion</a>( <span>Doctrine\DBAL\Migrations\Version <var>$version</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#326-352" title="Go to source code">getPackageKeyFromMigrationVersion</a>( <span>Doctrine\DBAL\Migrations\Version <var>$version</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to find out a package key which the Version belongs to. If no
@@ -1266,7 +1266,7 @@ package could be found, an empty string is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFormattedVersionAlias">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#349-373" title="Go to source code">getFormattedVersionAlias</a>( <span>string <var>$alias</var></span>, <span>Doctrine\DBAL\Migrations\Configuration\Configuration <var>$configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#354-378" title="Go to source code">getFormattedVersionAlias</a>( <span>string <var>$alias</var></span>, <span>Doctrine\DBAL\Migrations\Configuration\Configuration <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a formatted version string for the alias.</p>
@@ -1306,7 +1306,7 @@ package could be found, an empty string is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMigrationDescription">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#375-394" title="Go to source code">getMigrationDescription</a>( <span>Doctrine\DBAL\Migrations\Version <var>$version</var></span>, <span><code><a href="class-Neos.Flow.Reflection.DocCommentParser.html">Neos\Flow\Reflection\DocCommentParser</a></code> <var>$parser</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#380-399" title="Go to source code">getMigrationDescription</a>( <span>Doctrine\DBAL\Migrations\Version <var>$version</var></span>, <span><code><a href="class-Neos.Flow.Reflection.DocCommentParser.html">Neos\Flow\Reflection\DocCommentParser</a></code> <var>$parser</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the description of a migration.</p>
@@ -1349,7 +1349,7 @@ the class docblock is used instead.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_executeMigrations">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#396-430" title="Go to source code">executeMigrations</a>( <span>string <var>$version</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$outputPathAndFilename</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#401-435" title="Go to source code">executeMigrations</a>( <span>string <var>$version</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$outputPathAndFilename</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Execute all new migrations, up to $version if given.</p>
@@ -1395,7 +1395,7 @@ the class docblock is used instead.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_executeMigration">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#432-452" title="Go to source code">executeMigration</a>( <span>string <var>$version</var></span>, <span>string <var>$direction</var> = <span class="php-quote">'up'</span></span>, <span>string <var>$outputPathAndFilename</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#437-457" title="Go to source code">executeMigration</a>( <span>string <var>$version</var></span>, <span>string <var>$direction</var> = <span class="php-quote">'up'</span></span>, <span>string <var>$outputPathAndFilename</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Execute a single migration in up or down direction. If $path is given, the
@@ -1441,7 +1441,7 @@ SQL statements will be written to the file in $path instead of executed.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_markAsMigrated">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#454-497" title="Go to source code">markAsMigrated</a>( <span>string <var>$version</var></span>, <span>boolean <var>$markAsMigrated</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#459-502" title="Go to source code">markAsMigrated</a>( <span>string <var>$version</var></span>, <span>boolean <var>$markAsMigrated</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a migration version to the migrations table or remove it.</p>
@@ -1485,7 +1485,7 @@ as migrated or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateMigration">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#499-565" title="Go to source code">generateMigration</a>( <span>boolean <var>$diffAgainstCurrent</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filterExpression</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#504-570" title="Go to source code">generateMigration</a>( <span>boolean <var>$diffAgainstCurrent</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filterExpression</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Generates a new migration file and returns the path to it.</p>
@@ -1533,7 +1533,7 @@ diffing models and existing schema.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveTableName">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#567-581" title="Go to source code">resolveTableName</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#572-586" title="Go to source code">resolveTableName</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Resolve a table name from its fully qualified name. The <code>$name</code> argument
@@ -1577,7 +1577,7 @@ the table name from that.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_writeMigrationClassToFile">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#583-647" title="Go to source code">writeMigrationClassToFile</a>( <span>Doctrine\DBAL\Migrations\Configuration\Configuration <var>$configuration</var></span>, <span>string <var>$up</var></span>, <span>string <var>$down</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#588-652" title="Go to source code">writeMigrationClassToFile</a>( <span>Doctrine\DBAL\Migrations\Configuration\Configuration <var>$configuration</var></span>, <span>string <var>$up</var></span>, <span>string <var>$down</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1623,7 +1623,7 @@ the table name from that.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildCodeFromSql">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#649-681" title="Go to source code">buildCodeFromSql</a>( <span>Doctrine\DBAL\Migrations\Configuration\Configuration <var>$configuration</var></span>, <span>array <var>$sql</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#654-686" title="Go to source code">buildCodeFromSql</a>( <span>Doctrine\DBAL\Migrations\Configuration\Configuration <var>$configuration</var></span>, <span>array <var>$sql</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns PHP code for a migration file that "executes" the given
@@ -1665,7 +1665,7 @@ array of SQL statements.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDatabasePlatformName">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#683-691" title="Go to source code">getDatabasePlatformName</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#688-696" title="Go to source code">getDatabasePlatformName</a>( )</code>
 
 			<div class="description short">
 				<p>Get name of current database platform</p>
@@ -1698,7 +1698,7 @@ array of SQL statements.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getForeignKeyHandlingSql">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#693-780" title="Go to source code">getForeignKeyHandlingSql</a>( <span>Doctrine\DBAL\Schema\Schema <var>$schema</var></span>, <span>Doctrine\DBAL\Platforms\AbstractPlatform <var>$platform</var></span>, <span>array <var>$tableNames</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Service.html#698-785" title="Go to source code">getForeignKeyHandlingSql</a>( <span>Doctrine\DBAL\Schema\Schema <var>$schema</var></span>, <span>Doctrine\DBAL\Platforms\AbstractPlatform <var>$platform</var></span>, <span>array <var>$tableNames</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
 
 			<div class="description short">
 				<p>This serves a rather strange use case: renaming columns used in FK constraints.</p>
