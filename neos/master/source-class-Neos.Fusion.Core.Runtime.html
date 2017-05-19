@@ -1601,7 +1601,7 @@
 </span><span id="843" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$configurationWithEventualIf</span>[<span class="php-quote">'__meta'</span>][<span class="php-quote">'if'</span>])) {
 </span><span id="844" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$configurationWithEventualIf</span>[<span class="php-quote">'__meta'</span>][<span class="php-quote">'if'</span>] <span class="php-keyword1">as</span> <span class="php-var">$conditionKey</span> =&gt; <span class="php-var">$conditionValue</span>) {
 </span><span id="845" class="l">                <span class="php-var">$conditionValue</span> = <span class="php-var">$this</span>-&gt;evaluateInternal(<span class="php-var">$configurationPath</span> . <span class="php-quote">'/__meta/if/'</span> . <span class="php-var">$conditionKey</span>, self::BEHAVIOR_EXCEPTION, <span class="php-var">$contextObject</span>);
-</span><span id="846" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$conditionValue</span> === <span class="php-keyword1">false</span>) {
+</span><span id="846" class="l">                <span class="php-keyword1">if</span> ((bool)<span class="php-var">$conditionValue</span> === <span class="php-keyword1">false</span>) {
 </span><span id="847" class="l">                    <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="848" class="l">                }
 </span><span id="849" class="l">            }
