@@ -901,7 +901,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_enter">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#113-148" title="Go to source code">enter</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#113-148" title="Go to source code">enter</a>( <span>array <var>$configuration</var></span>, <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Enter an evaluation</p>
@@ -918,7 +918,7 @@ like the cache entry point.</p>
 					<div class="list"><dl>
 						<dt><var>$configuration</var></dt>
 						<dd></dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -948,7 +948,7 @@ like the cache entry point.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_preEvaluate">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#150-217" title="Go to source code">preEvaluate</a>( <span>array <var>&amp; $evaluateContext</var></span>, <span>object <var>$tsObject</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#150-217" title="Go to source code">preEvaluate</a>( <span>array <var>&amp; $evaluateContext</var></span>, <span>object <var>$fusionObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Check for cached evaluation and or collect metadata for evaluation</p>
@@ -966,7 +966,7 @@ minimum maximumLifetime).</p>
 					<div class="list"><dl>
 						<dt><var>$evaluateContext</var></dt>
 						<dd>The current evaluation context</dd>
-						<dt><var>$tsObject</var></dt>
+						<dt><var>$fusionObject</var></dt>
 						<dd>The current Fusion object (for "this" in evaluations)</dd>
 					</dl></div>
 
@@ -992,7 +992,7 @@ minimum maximumLifetime).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_postProcess">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#219-274" title="Go to source code">postProcess</a>( <span>array <var>$evaluateContext</var></span>, <span>object <var>$tsObject</var></span>, <span>mixed <var>$output</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#219-274" title="Go to source code">postProcess</a>( <span>array <var>$evaluateContext</var></span>, <span>object <var>$fusionObject</var></span>, <span>mixed <var>$output</var></span> )</code>
 
 			<div class="description short">
 				<p>Post process output for caching information</p>
@@ -1010,7 +1010,7 @@ store cache entries.</p>
 					<div class="list"><dl>
 						<dt><var>$evaluateContext</var></dt>
 						<dd>The current evaluation context</dd>
-						<dt><var>$tsObject</var></dt>
+						<dt><var>$fusionObject</var></dt>
 						<dd>The current Fusion object (for "this" in evaluations)</dd>
 						<dt><var>$output</var></dt>
 						<dd>The generated output after caching information was removed</dd>
@@ -1116,7 +1116,7 @@ store cache entries.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildCacheIdentifierValues">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#313-329" title="Go to source code">buildCacheIdentifierValues</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>object <var>$tsObject</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#313-329" title="Go to source code">buildCacheIdentifierValues</a>( <span>array <var>$configuration</var></span>, <span>string <var>$fusionPath</var></span>, <span>object <var>$fusionObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds an array of additional key / values which must go into the calculation of the cache entry identifier for
@@ -1132,9 +1132,9 @@ a cached content segment.</p>
 					<div class="list"><dl>
 						<dt><var>$configuration</var></dt>
 						<dd></dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd></dd>
-						<dt><var>$tsObject</var></dt>
+						<dt><var>$fusionObject</var></dt>
 						<dd>The actual Fusion object</dd>
 					</dl></div>
 
@@ -1160,7 +1160,7 @@ a cached content segment.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildCacheTags">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#331-358" title="Go to source code">buildCacheTags</a>( <span>array <var>$configuration</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>object <var>$tsObject</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.RuntimeContentCache.html#331-358" title="Go to source code">buildCacheTags</a>( <span>array <var>$configuration</var></span>, <span>string <var>$fusionPath</var></span>, <span>object <var>$fusionObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds an array of string which must be used as tags for the cache entry identifier of a specific cached content segment.</p>
@@ -1174,9 +1174,9 @@ a cached content segment.</p>
 					<div class="list"><dl>
 						<dt><var>$configuration</var></dt>
 						<dd></dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd></dd>
-						<dt><var>$tsObject</var></dt>
+						<dt><var>$fusionObject</var></dt>
 						<dd>The actual Fusion object</dd>
 					</dl></div>
 
@@ -1534,6 +1534,6 @@ a cached content segment.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?881684a2521e09fb5b2d418286e7418ce21bc75b"></script>
+<script src="elementlist.js?39ef6a7c7e85942e948d986fe1c166107e3c98ec"></script>
 </body>
 </html>

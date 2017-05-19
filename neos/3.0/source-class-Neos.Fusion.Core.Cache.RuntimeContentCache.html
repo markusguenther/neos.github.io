@@ -872,17 +872,17 @@
 </span></span><span id="117" class="l"><span class="php-comment">     * like the cache entry point.
 </span></span><span id="118" class="l"><span class="php-comment">     *
 </span></span><span id="119" class="l"><span class="php-comment">     * @param array $configuration
-</span></span><span id="120" class="l"><span class="php-comment">     * @param string $typoScriptPath
+</span></span><span id="120" class="l"><span class="php-comment">     * @param string $fusionPath
 </span></span><span id="121" class="l"><span class="php-comment">     * @return array An evaluate context array that needs to be passed to subsequent calls to pass the current state
 </span></span><span id="122" class="l"><span class="php-comment">     * @throws Exception
 </span></span><span id="123" class="l"><span class="php-comment">     */</span>
-</span><span id="124" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> enter(<span class="php-keyword1">array</span> <span class="php-var">$configuration</span>, <span class="php-var">$typoScriptPath</span>)
+</span><span id="124" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> enter(<span class="php-keyword1">array</span> <span class="php-var">$configuration</span>, <span class="php-var">$fusionPath</span>)
 </span><span id="125" class="l">    {
 </span><span id="126" class="l">        <span class="php-var">$cacheForPathEnabled</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'mode'</span>]) &amp;&amp; (<span class="php-var">$configuration</span>[<span class="php-quote">'mode'</span>] === <span class="php-quote">'cached'</span> || <span class="php-var">$configuration</span>[<span class="php-quote">'mode'</span>] === <span class="php-quote">'dynamic'</span>);
 </span><span id="127" class="l">        <span class="php-var">$cacheForPathDisabled</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'mode'</span>]) &amp;&amp; (<span class="php-var">$configuration</span>[<span class="php-quote">'mode'</span>] === <span class="php-quote">'uncached'</span> || <span class="php-var">$configuration</span>[<span class="php-quote">'mode'</span>] === <span class="php-quote">'dynamic'</span>);
 </span><span id="128" class="l">
 </span><span id="129" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$cacheForPathDisabled</span> &amp;&amp; (!<span class="php-keyword1">isset</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'context'</span>]) || <span class="php-var">$configuration</span>[<span class="php-quote">'context'</span>] === [])) {
-</span><span id="130" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Missing @cache.context configuration for path &quot;%s&quot;. An uncached segment must have one or more context variable names configured.'</span>, <span class="php-var">$typoScriptPath</span>), <span class="php-num">1395922119</span>);
+</span><span id="130" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Missing @cache.context configuration for path &quot;%s&quot;. An uncached segment must have one or more context variable names configured.'</span>, <span class="php-var">$fusionPath</span>), <span class="php-num">1395922119</span>);
 </span><span id="131" class="l">        }
 </span><span id="132" class="l">
 </span><span id="133" class="l">        <span class="php-var">$currentPathIsEntryPoint</span> = <span class="php-keyword1">false</span>;
@@ -895,7 +895,7 @@
 </span><span id="140" class="l">
 </span><span id="141" class="l">        <span class="php-keyword1">return</span> [
 </span><span id="142" class="l">            <span class="php-quote">'configuration'</span> =&gt; <span class="php-var">$configuration</span>,
-</span><span id="143" class="l">            <span class="php-quote">'typoScriptPath'</span> =&gt; <span class="php-var">$typoScriptPath</span>,
+</span><span id="143" class="l">            <span class="php-quote">'fusionPath'</span> =&gt; <span class="php-var">$fusionPath</span>,
 </span><span id="144" class="l">            <span class="php-quote">'cacheForPathEnabled'</span> =&gt; <span class="php-var">$cacheForPathEnabled</span>,
 </span><span id="145" class="l">            <span class="php-quote">'cacheForPathDisabled'</span> =&gt; <span class="php-var">$cacheForPathDisabled</span>,
 </span><span id="146" class="l">            <span class="php-quote">'currentPathIsEntryPoint'</span> =&gt; <span class="php-var">$currentPathIsEntryPoint</span>
@@ -910,16 +910,16 @@
 </span></span><span id="155" class="l"><span class="php-comment">     * minimum maximumLifetime).
 </span></span><span id="156" class="l"><span class="php-comment">     *
 </span></span><span id="157" class="l"><span class="php-comment">     * @param array $evaluateContext The current evaluation context
-</span></span><span id="158" class="l"><span class="php-comment">     * @param object $tsObject The current Fusion object (for &quot;this&quot; in evaluations)
+</span></span><span id="158" class="l"><span class="php-comment">     * @param object $fusionObject The current Fusion object (for &quot;this&quot; in evaluations)
 </span></span><span id="159" class="l"><span class="php-comment">     * @return array Cache hit state as boolean and value as mixed
 </span></span><span id="160" class="l"><span class="php-comment">     */</span>
-</span><span id="161" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> preEvaluate(<span class="php-keyword1">array</span> &amp;<span class="php-var">$evaluateContext</span>, <span class="php-var">$tsObject</span>)
+</span><span id="161" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> preEvaluate(<span class="php-keyword1">array</span> &amp;<span class="php-var">$evaluateContext</span>, <span class="php-var">$fusionObject</span>)
 </span><span id="162" class="l">    {
 </span><span id="163" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;enableContentCache) {
 </span><span id="164" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathEnabled'</span>]) {
-</span><span id="165" class="l">                <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>] = <span class="php-var">$this</span>-&gt;buildCacheIdentifierValues(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$tsObject</span>);
+</span><span id="165" class="l">                <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>] = <span class="php-var">$this</span>-&gt;buildCacheIdentifierValues(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$fusionObject</span>);
 </span><span id="166" class="l">                <span class="php-var">$self</span> = <span class="php-var">$this</span>;
-</span><span id="167" class="l">                <span class="php-var">$segment</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;getCachedSegment(<span class="php-keyword1">function</span> (<span class="php-var">$command</span>, <span class="php-var">$additionalData</span>, <span class="php-var">$cache</span>) <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$evaluateContext</span>, <span class="php-var">$tsObject</span>) {
+</span><span id="167" class="l">                <span class="php-var">$segment</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;getCachedSegment(<span class="php-keyword1">function</span> (<span class="php-var">$command</span>, <span class="php-var">$additionalData</span>, <span class="php-var">$cache</span>) <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$evaluateContext</span>, <span class="php-var">$fusionObject</span>) {
 </span><span id="168" class="l">                    <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$command</span>, <span class="php-quote">'eval='</span>) === <span class="php-num">0</span>) {
 </span><span id="169" class="l">                        <span class="php-var">$unserializedContext</span> = <span class="php-var">$self</span>-&gt;unserializeContext(<span class="php-var">$additionalData</span>[<span class="php-quote">'context'</span>]);
 </span><span id="170" class="l">                        <span class="php-var">$path</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$command</span>, <span class="php-num">5</span>);
@@ -934,9 +934,9 @@
 </span><span id="179" class="l">                            <span class="php-var">$unserializedContext</span> = <span class="php-var">$self</span>-&gt;unserializeContext(<span class="php-var">$additionalData</span>[<span class="php-quote">'context'</span>]);
 </span><span id="180" class="l">                            <span class="php-var">$maximumLifetime</span> = <span class="php-keyword1">null</span>;
 </span><span id="181" class="l">                            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>][<span class="php-quote">'maximumLifetime'</span>])) {
-</span><span id="182" class="l">                                <span class="php-var">$maximumLifetime</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>] . <span class="php-quote">'/__meta/cache/maximumLifetime'</span>, <span class="php-var">$tsObject</span>);
+</span><span id="182" class="l">                                <span class="php-var">$maximumLifetime</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>] . <span class="php-quote">'/__meta/cache/maximumLifetime'</span>, <span class="php-var">$fusionObject</span>);
 </span><span id="183" class="l">                            }
-</span><span id="184" class="l">                            <span class="php-var">$cacheTags</span> = <span class="php-var">$this</span>-&gt;buildCacheTags(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$tsObject</span>);
+</span><span id="184" class="l">                            <span class="php-var">$cacheTags</span> = <span class="php-var">$this</span>-&gt;buildCacheTags(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$fusionObject</span>);
 </span><span id="185" class="l">                            <span class="php-var">$result</span> = <span class="php-var">$self</span>-&gt;evaluateUncached(<span class="php-var">$additionalData</span>[<span class="php-quote">'path'</span>], <span class="php-var">$unserializedContext</span>);
 </span><span id="186" class="l">                            <span class="php-var">$cache</span>-&gt;set(<span class="php-var">$cacheIdentifier</span>, <span class="php-var">$result</span>, <span class="php-var">$cacheTags</span>, <span class="php-var">$maximumLifetime</span>);
 </span><span id="187" class="l">                        }
@@ -945,7 +945,7 @@
 </span><span id="190" class="l">                    } <span class="php-keyword1">else</span> {
 </span><span id="191" class="l">                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Unknown uncached command &quot;%s&quot;'</span>, <span class="php-var">$command</span>), <span class="php-num">1392837596</span>);
 </span><span id="192" class="l">                    }
-</span><span id="193" class="l">                }, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>], <span class="php-var">$this</span>-&gt;addCacheSegmentMarkersToPlaceholders);
+</span><span id="193" class="l">                }, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>], <span class="php-var">$this</span>-&gt;addCacheSegmentMarkersToPlaceholders);
 </span><span id="194" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$segment</span> !== <span class="php-keyword1">false</span>) {
 </span><span id="195" class="l">                    <span class="php-keyword1">return</span> [<span class="php-keyword1">true</span>, <span class="php-var">$segment</span>];
 </span><span id="196" class="l">                } <span class="php-keyword1">else</span> {
@@ -956,11 +956,11 @@
 </span><span id="201" class="l">            }
 </span><span id="202" class="l">
 </span><span id="203" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathEnabled'</span>] &amp;&amp; <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathDisabled'</span>]) {
-</span><span id="204" class="l">                <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheDiscriminator'</span>] = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>] . <span class="php-quote">'/__meta/cache/entryDiscriminator'</span>);
+</span><span id="204" class="l">                <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheDiscriminator'</span>] = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>] . <span class="php-quote">'/__meta/cache/entryDiscriminator'</span>);
 </span><span id="205" class="l">            }
 </span><span id="206" class="l">
 </span><span id="207" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>][<span class="php-quote">'maximumLifetime'</span>])) {
-</span><span id="208" class="l">                <span class="php-var">$maximumLifetime</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>] . <span class="php-quote">'/__meta/cache/maximumLifetime'</span>, <span class="php-var">$tsObject</span>);
+</span><span id="208" class="l">                <span class="php-var">$maximumLifetime</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>] . <span class="php-quote">'/__meta/cache/maximumLifetime'</span>, <span class="php-var">$fusionObject</span>);
 </span><span id="209" class="l">
 </span><span id="210" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$maximumLifetime</span> !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-var">$this</span>-&gt;cacheMetadata !== []) {
 </span><span id="211" class="l">                    <span class="php-var">$cacheMetadata</span> = &amp;<span class="php-var">$this</span>-&gt;cacheMetadata[<span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;cacheMetadata) - <span class="php-num">1</span>];
@@ -979,11 +979,11 @@
 </span></span><span id="224" class="l"><span class="php-comment">     * store cache entries.
 </span></span><span id="225" class="l"><span class="php-comment">     *
 </span></span><span id="226" class="l"><span class="php-comment">     * @param array $evaluateContext The current evaluation context
-</span></span><span id="227" class="l"><span class="php-comment">     * @param object $tsObject The current Fusion object (for &quot;this&quot; in evaluations)
+</span></span><span id="227" class="l"><span class="php-comment">     * @param object $fusionObject The current Fusion object (for &quot;this&quot; in evaluations)
 </span></span><span id="228" class="l"><span class="php-comment">     * @param mixed $output The generated output after caching information was removed
 </span></span><span id="229" class="l"><span class="php-comment">     * @return mixed The post-processed output with cache segment markers or cleaned for the entry point
 </span></span><span id="230" class="l"><span class="php-comment">     */</span>
-</span><span id="231" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> postProcess(<span class="php-keyword1">array</span> <span class="php-var">$evaluateContext</span>, <span class="php-var">$tsObject</span>, <span class="php-var">$output</span>)
+</span><span id="231" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> postProcess(<span class="php-keyword1">array</span> <span class="php-var">$evaluateContext</span>, <span class="php-var">$fusionObject</span>, <span class="php-var">$output</span>)
 </span><span id="232" class="l">    {
 </span><span id="233" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;enableContentCache &amp;&amp; <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathEnabled'</span>] &amp;&amp; <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathDisabled'</span>]) {
 </span><span id="234" class="l">            <span class="php-var">$contextArray</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;getCurrentContext();
@@ -995,13 +995,13 @@
 </span><span id="240" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="241" class="l">                <span class="php-var">$contextVariables</span> = <span class="php-var">$contextArray</span>;
 </span><span id="242" class="l">            }
-</span><span id="243" class="l">            <span class="php-var">$cacheTags</span> = <span class="php-var">$this</span>-&gt;buildCacheTags(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$tsObject</span>);
+</span><span id="243" class="l">            <span class="php-var">$cacheTags</span> = <span class="php-var">$this</span>-&gt;buildCacheTags(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$fusionObject</span>);
 </span><span id="244" class="l">            <span class="php-var">$cacheMetadata</span> = <span class="php-keyword2">array_pop</span>(<span class="php-var">$this</span>-&gt;cacheMetadata);
-</span><span id="245" class="l">            <span class="php-var">$output</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;createDynamicCachedSegment(<span class="php-var">$output</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$contextVariables</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>], <span class="php-var">$cacheTags</span>, <span class="php-var">$cacheMetadata</span>[<span class="php-quote">'lifetime'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheDiscriminator'</span>]);
+</span><span id="245" class="l">            <span class="php-var">$output</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;createDynamicCachedSegment(<span class="php-var">$output</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$contextVariables</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>], <span class="php-var">$cacheTags</span>, <span class="php-var">$cacheMetadata</span>[<span class="php-quote">'lifetime'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheDiscriminator'</span>]);
 </span><span id="246" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;enableContentCache &amp;&amp; <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathEnabled'</span>]) {
-</span><span id="247" class="l">            <span class="php-var">$cacheTags</span> = <span class="php-var">$this</span>-&gt;buildCacheTags(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$tsObject</span>);
+</span><span id="247" class="l">            <span class="php-var">$cacheTags</span> = <span class="php-var">$this</span>-&gt;buildCacheTags(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$fusionObject</span>);
 </span><span id="248" class="l">            <span class="php-var">$cacheMetadata</span> = <span class="php-keyword2">array_pop</span>(<span class="php-var">$this</span>-&gt;cacheMetadata);
-</span><span id="249" class="l">            <span class="php-var">$output</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;createCacheSegment(<span class="php-var">$output</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>], <span class="php-var">$cacheTags</span>, <span class="php-var">$cacheMetadata</span>[<span class="php-quote">'lifetime'</span>]);
+</span><span id="249" class="l">            <span class="php-var">$output</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;createCacheSegment(<span class="php-var">$output</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>], <span class="php-var">$cacheTags</span>, <span class="php-var">$cacheMetadata</span>[<span class="php-quote">'lifetime'</span>]);
 </span><span id="250" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;enableContentCache &amp;&amp; <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathDisabled'</span>] &amp;&amp; <span class="php-var">$this</span>-&gt;inCacheEntryPoint) {
 </span><span id="251" class="l">            <span class="php-var">$contextArray</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;getCurrentContext();
 </span><span id="252" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>][<span class="php-quote">'context'</span>])) {
@@ -1016,7 +1016,7 @@
 </span><span id="261" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="262" class="l">                <span class="php-var">$contextVariables</span> = <span class="php-var">$contextArray</span>;
 </span><span id="263" class="l">            }
-</span><span id="264" class="l">            <span class="php-var">$output</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;createUncachedSegment(<span class="php-var">$output</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'typoScriptPath'</span>], <span class="php-var">$contextVariables</span>);
+</span><span id="264" class="l">            <span class="php-var">$output</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;createUncachedSegment(<span class="php-var">$output</span>, <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$contextVariables</span>);
 </span><span id="265" class="l">        }
 </span><span id="266" class="l">
 </span><span id="267" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheForPathEnabled'</span>] &amp;&amp; <span class="php-var">$evaluateContext</span>[<span class="php-quote">'currentPathIsEntryPoint'</span>]) {
@@ -1070,33 +1070,33 @@
 </span></span><span id="315" class="l"><span class="php-comment">     * a cached content segment.
 </span></span><span id="316" class="l"><span class="php-comment">     *
 </span></span><span id="317" class="l"><span class="php-comment">     * @param array $configuration
-</span></span><span id="318" class="l"><span class="php-comment">     * @param string $typoScriptPath
-</span></span><span id="319" class="l"><span class="php-comment">     * @param object $tsObject The actual Fusion object
+</span></span><span id="318" class="l"><span class="php-comment">     * @param string $fusionPath
+</span></span><span id="319" class="l"><span class="php-comment">     * @param object $fusionObject The actual Fusion object
 </span></span><span id="320" class="l"><span class="php-comment">     * @return array
 </span></span><span id="321" class="l"><span class="php-comment">     */</span>
-</span><span id="322" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildCacheIdentifierValues(<span class="php-keyword1">array</span> <span class="php-var">$configuration</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-var">$tsObject</span>)
+</span><span id="322" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildCacheIdentifierValues(<span class="php-keyword1">array</span> <span class="php-var">$configuration</span>, <span class="php-var">$fusionPath</span>, <span class="php-var">$fusionObject</span>)
 </span><span id="323" class="l">    {
 </span><span id="324" class="l">        <span class="php-var">$objectType</span> = <span class="php-quote">'&lt;Neos.Fusion:GlobalCacheIdentifiers&gt;'</span>;
 </span><span id="325" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'entryIdentifier'</span>][<span class="php-quote">'__objectType'</span>])) {
 </span><span id="326" class="l">            <span class="php-var">$objectType</span> = <span class="php-quote">'&lt;'</span> . <span class="php-var">$configuration</span>[<span class="php-quote">'entryIdentifier'</span>][<span class="php-quote">'__objectType'</span>] . <span class="php-quote">'&gt;'</span>;
 </span><span id="327" class="l">        }
-</span><span id="328" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$typoScriptPath</span> . <span class="php-quote">'/__meta/cache/entryIdentifier'</span> . <span class="php-var">$objectType</span>, <span class="php-var">$tsObject</span>);
+</span><span id="328" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$fusionPath</span> . <span class="php-quote">'/__meta/cache/entryIdentifier'</span> . <span class="php-var">$objectType</span>, <span class="php-var">$fusionObject</span>);
 </span><span id="329" class="l">    }
 </span><span id="330" class="l">
 </span><span id="331" class="l">    <span class="php-comment">/**
 </span></span><span id="332" class="l"><span class="php-comment">     * Builds an array of string which must be used as tags for the cache entry identifier of a specific cached content segment.
 </span></span><span id="333" class="l"><span class="php-comment">     *
 </span></span><span id="334" class="l"><span class="php-comment">     * @param array $configuration
-</span></span><span id="335" class="l"><span class="php-comment">     * @param string $typoScriptPath
-</span></span><span id="336" class="l"><span class="php-comment">     * @param object $tsObject The actual Fusion object
+</span></span><span id="335" class="l"><span class="php-comment">     * @param string $fusionPath
+</span></span><span id="336" class="l"><span class="php-comment">     * @param object $fusionObject The actual Fusion object
 </span></span><span id="337" class="l"><span class="php-comment">     * @return array
 </span></span><span id="338" class="l"><span class="php-comment">     */</span>
-</span><span id="339" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildCacheTags(<span class="php-keyword1">array</span> <span class="php-var">$configuration</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-var">$tsObject</span>)
+</span><span id="339" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildCacheTags(<span class="php-keyword1">array</span> <span class="php-var">$configuration</span>, <span class="php-var">$fusionPath</span>, <span class="php-var">$fusionObject</span>)
 </span><span id="340" class="l">    {
 </span><span id="341" class="l">        <span class="php-var">$cacheTags</span> = [];
 </span><span id="342" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$configuration</span>[<span class="php-quote">'entryTags'</span>])) {
 </span><span id="343" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$configuration</span>[<span class="php-quote">'entryTags'</span>] <span class="php-keyword1">as</span> <span class="php-var">$tagKey</span> =&gt; <span class="php-var">$tagValue</span>) {
-</span><span id="344" class="l">                <span class="php-var">$tagValue</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$typoScriptPath</span> . <span class="php-quote">'/__meta/cache/entryTags/'</span> . <span class="php-var">$tagKey</span>, <span class="php-var">$tsObject</span>);
+</span><span id="344" class="l">                <span class="php-var">$tagValue</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;evaluate(<span class="php-var">$fusionPath</span> . <span class="php-quote">'/__meta/cache/entryTags/'</span> . <span class="php-var">$tagKey</span>, <span class="php-var">$fusionObject</span>);
 </span><span id="345" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$tagValue</span>)) {
 </span><span id="346" class="l">                    <span class="php-var">$cacheTags</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$cacheTags</span>, <span class="php-var">$tagValue</span>);
 </span><span id="347" class="l">                } <span class="php-keyword1">elseif</span> ((string)<span class="php-var">$tagValue</span> !== <span class="php-quote">''</span>) {
@@ -1153,6 +1153,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?881684a2521e09fb5b2d418286e7418ce21bc75b"></script>
+<script src="elementlist.js?39ef6a7c7e85942e948d986fe1c166107e3c98ec"></script>
 </body>
 </html>
