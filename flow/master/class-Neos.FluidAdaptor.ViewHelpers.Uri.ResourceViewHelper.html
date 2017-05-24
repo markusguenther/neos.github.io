@@ -923,7 +923,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#22-120" title="Go to source code">Neos.FluidAdaptor/Classes/ViewHelpers/Uri/ResourceViewHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#23-157" title="Go to source code">Neos.FluidAdaptor/Classes/ViewHelpers/Uri/ResourceViewHelper.php</a>
 		<br>
 	</div>
 
@@ -932,6 +932,35 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="initializeArguments" id="_initializeArguments">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_initializeArguments">#</a>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#76-87" title="Go to source code">initializeArguments</a>( )</code>
+
+			<div class="description short">
+				<p>Initialize and register all arguments.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Initialize and register all arguments.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="render" id="_render">
 
 			<td class="attributes"><code>
@@ -943,7 +972,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 
 			<td class="name"><div>
 			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#75-119" title="Go to source code">render</a>( <span>string <var>$path</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$package</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code> <var>$resource</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$localize</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#89-99" title="Go to source code">render</a>( )</code>
 
 			<div class="description short">
 				<p>Render the URI to the resource. The filename is used from child content.</p>
@@ -953,17 +982,6 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 				<p>Render the URI to the resource. The filename is used from child content.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$path</var></dt>
-						<dd>The location of the resource, can be either a path relative to the Public resource directory of the package or a resource://... URI</dd>
-						<dt><var>$package</var></dt>
-						<dd>Target package key. If not set, the current package key will be used</dd>
-						<dt><var>$resource</var></dt>
-						<dd>If specified, this resource object is used instead of the path and package information</dd>
-						<dt><var>$localize</var></dt>
-						<dd>Whether resource localization should be attempted or not</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
@@ -978,6 +996,52 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 					<h4>Api</h4>
 					<div class="list">
 					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="renderStatic" id="_renderStatic">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_renderStatic">#</a>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#101-156" title="Go to source code">renderStatic</a>( <span>array <var>$arguments</var></span>, <span>Closure <var>$renderChildrenClosure</var></span>, <span>TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface <var>$renderingContext</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$arguments</var></dt>
+						<dd></dd>
+						<dt><var>$renderChildrenClosure</var></dt>
+						<dd></dd>
+						<dt><var>$renderingContext</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.FluidAdaptor.Core.ViewHelper.Exception.InvalidVariableException.html">Neos\FluidAdaptor\Core\ViewHelper\Exception\InvalidVariableException</a></code>
+					</div>
+
 
 
 			</div>
@@ -1021,7 +1085,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#63-67" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#64-68" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1049,7 +1113,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#69-73" title="Go to source code"><var>$i18nService</var></a>
+					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.Uri.ResourceViewHelper.html#70-74" title="Go to source code"><var>$i18nService</var></a>
 
 				<div class="description short">
 					
@@ -1094,6 +1158,6 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?02218719191f1942a04308c17c023d912caab381"></script>
+<script src="elementlist.js?059c18bb7115a3451dbb1f752f69a769eb2d0378"></script>
 </body>
 </html>
