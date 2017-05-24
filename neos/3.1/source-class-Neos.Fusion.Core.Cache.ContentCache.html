@@ -870,15 +870,15 @@
 </span></span><span id="115" class="l"><span class="php-comment">     * This method is called by the Fusion Runtime while rendering a Fusion object.
 </span></span><span id="116" class="l"><span class="php-comment">     *
 </span></span><span id="117" class="l"><span class="php-comment">     * @param string $content The (partial) content which should potentially be cached later on
-</span></span><span id="118" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path that rendered the content, for example &quot;page&lt;Neos.NodeTypes:Page&gt;/body&lt;Acme.Demo:DefaultPageTemplate&gt;/parts/breadcrumbMenu&quot;
+</span></span><span id="118" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path that rendered the content, for example &quot;page&lt;Neos.NodeTypes:Page&gt;/body&lt;Acme.Demo:DefaultPageTemplate&gt;/parts/breadcrumbMenu&quot;
 </span></span><span id="119" class="l"><span class="php-comment">     * @param array $cacheIdentifierValues The values (simple type or implementing CacheAwareInterface) that should be used to create a cache identifier, will be sorted by keys for consistent ordering
 </span></span><span id="120" class="l"><span class="php-comment">     * @param array $tags Tags to add to the cache entry
 </span></span><span id="121" class="l"><span class="php-comment">     * @param integer $lifetime Lifetime of the cache segment in seconds. NULL for the default lifetime and 0 for unlimited lifetime.
 </span></span><span id="122" class="l"><span class="php-comment">     * @return string The original content, but with additional markers and a cache identifier added
 </span></span><span id="123" class="l"><span class="php-comment">     */</span>
-</span><span id="124" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createCacheSegment(<span class="php-var">$content</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$cacheIdentifierValues</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = [], <span class="php-var">$lifetime</span> = <span class="php-keyword1">null</span>)
+</span><span id="124" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createCacheSegment(<span class="php-var">$content</span>, <span class="php-var">$fusionPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$cacheIdentifierValues</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = [], <span class="php-var">$lifetime</span> = <span class="php-keyword1">null</span>)
 </span><span id="125" class="l">    {
-</span><span id="126" class="l">        <span class="php-var">$cacheIdentifier</span> = <span class="php-var">$this</span>-&gt;renderContentCacheEntryIdentifier(<span class="php-var">$typoScriptPath</span>, <span class="php-var">$cacheIdentifierValues</span>);
+</span><span id="126" class="l">        <span class="php-var">$cacheIdentifier</span> = <span class="php-var">$this</span>-&gt;renderContentCacheEntryIdentifier(<span class="php-var">$fusionPath</span>, <span class="php-var">$cacheIdentifierValues</span>);
 </span><span id="127" class="l">        <span class="php-var">$metadata</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">','</span>, <span class="php-var">$tags</span>);
 </span><span id="128" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$lifetime</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="129" class="l">            <span class="php-var">$metadata</span> .= <span class="php-quote">';'</span> . <span class="php-var">$lifetime</span>;
@@ -893,14 +893,14 @@
 </span></span><span id="138" class="l"><span class="php-comment">     * This method is called by the Fusion Runtime while rendering a Fusion object.
 </span></span><span id="139" class="l"><span class="php-comment">     *
 </span></span><span id="140" class="l"><span class="php-comment">     * @param string $content The content rendered by the Fusion Runtime
-</span></span><span id="141" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path that rendered the content, for example &quot;page&lt;Neos.NodeTypes:Page&gt;/body&lt;Acme.Demo:DefaultPageTemplate&gt;/parts/breadcrumbMenu&quot;
+</span></span><span id="141" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path that rendered the content, for example &quot;page&lt;Neos.NodeTypes:Page&gt;/body&lt;Acme.Demo:DefaultPageTemplate&gt;/parts/breadcrumbMenu&quot;
 </span></span><span id="142" class="l"><span class="php-comment">     * @param array $contextVariables Fusion context variables which are needed to correctly render the specified Fusion object
 </span></span><span id="143" class="l"><span class="php-comment">     * @return string The original content, but with additional markers added
 </span></span><span id="144" class="l"><span class="php-comment">     */</span>
-</span><span id="145" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createUncachedSegment(<span class="php-var">$content</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$contextVariables</span>)
+</span><span id="145" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createUncachedSegment(<span class="php-var">$content</span>, <span class="php-var">$fusionPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$contextVariables</span>)
 </span><span id="146" class="l">    {
 </span><span id="147" class="l">        <span class="php-var">$serializedContext</span> = <span class="php-var">$this</span>-&gt;serializeContext(<span class="php-var">$contextVariables</span>);
-</span><span id="148" class="l">        <span class="php-keyword1">return</span> self::CACHE_SEGMENT_START_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker . <span class="php-quote">'eval='</span> . <span class="php-var">$typoScriptPath</span> . self::CACHE_SEGMENT_SEPARATOR_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker . <span class="php-keyword2">json_encode</span>([<span class="php-quote">'context'</span> =&gt; <span class="php-var">$serializedContext</span>]) . self::CACHE_SEGMENT_SEPARATOR_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker . <span class="php-var">$content</span> . self::CACHE_SEGMENT_END_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker;
+</span><span id="148" class="l">        <span class="php-keyword1">return</span> self::CACHE_SEGMENT_START_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker . <span class="php-quote">'eval='</span> . <span class="php-var">$fusionPath</span> . self::CACHE_SEGMENT_SEPARATOR_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker . <span class="php-keyword2">json_encode</span>([<span class="php-quote">'context'</span> =&gt; <span class="php-var">$serializedContext</span>]) . self::CACHE_SEGMENT_SEPARATOR_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker . <span class="php-var">$content</span> . self::CACHE_SEGMENT_END_TOKEN . <span class="php-var">$this</span>-&gt;randomCacheMarker;
 </span><span id="149" class="l">    }
 </span><span id="150" class="l">
 </span><span id="151" class="l">    <span class="php-comment">/**
@@ -910,7 +910,7 @@
 </span></span><span id="155" class="l"><span class="php-comment">     * This method is called by the Fusion Runtime while rendering a Fusion object.
 </span></span><span id="156" class="l"><span class="php-comment">     *
 </span></span><span id="157" class="l"><span class="php-comment">     * @param string $content The content rendered by the Fusion Runtime
-</span></span><span id="158" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path that rendered the content, for example &quot;page&lt;Neos.NodeTypes:Page&gt;/body&lt;Acme.Demo:DefaultPageTemplate&gt;/parts/breadcrumbMenu&quot;
+</span></span><span id="158" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path that rendered the content, for example &quot;page&lt;Neos.NodeTypes:Page&gt;/body&lt;Acme.Demo:DefaultPageTemplate&gt;/parts/breadcrumbMenu&quot;
 </span></span><span id="159" class="l"><span class="php-comment">     * @param array $contextVariables Fusion context variables which are needed to correctly render the specified Fusion object
 </span></span><span id="160" class="l"><span class="php-comment">     * @param array $cacheIdentifierValues
 </span></span><span id="161" class="l"><span class="php-comment">     * @param array $tags Tags to add to the cache entry
@@ -918,16 +918,16 @@
 </span></span><span id="163" class="l"><span class="php-comment">     * @param string $cacheDiscriminator The evaluated cache discriminator value
 </span></span><span id="164" class="l"><span class="php-comment">     * @return string The original content, but with additional markers added
 </span></span><span id="165" class="l"><span class="php-comment">     */</span>
-</span><span id="166" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createDynamicCachedSegment(<span class="php-var">$content</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$contextVariables</span>, <span class="php-keyword1">array</span> <span class="php-var">$cacheIdentifierValues</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = [], <span class="php-var">$lifetime</span> = <span class="php-keyword1">null</span>, <span class="php-var">$cacheDiscriminator</span>)
+</span><span id="166" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createDynamicCachedSegment(<span class="php-var">$content</span>, <span class="php-var">$fusionPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$contextVariables</span>, <span class="php-keyword1">array</span> <span class="php-var">$cacheIdentifierValues</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = [], <span class="php-var">$lifetime</span> = <span class="php-keyword1">null</span>, <span class="php-var">$cacheDiscriminator</span>)
 </span><span id="167" class="l">    {
 </span><span id="168" class="l">        <span class="php-var">$metadata</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">','</span>, <span class="php-var">$tags</span>);
 </span><span id="169" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$lifetime</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="170" class="l">            <span class="php-var">$metadata</span> .= <span class="php-quote">';'</span> . <span class="php-var">$lifetime</span>;
 </span><span id="171" class="l">        }
 </span><span id="172" class="l">        <span class="php-var">$cacheDiscriminator</span> = <span class="php-keyword2">md5</span>(<span class="php-var">$cacheDiscriminator</span>);
-</span><span id="173" class="l">        <span class="php-var">$identifier</span> = <span class="php-var">$this</span>-&gt;renderContentCacheEntryIdentifier(<span class="php-var">$typoScriptPath</span>, <span class="php-var">$cacheIdentifierValues</span>) . <span class="php-quote">'_'</span> . <span class="php-var">$cacheDiscriminator</span>;
+</span><span id="173" class="l">        <span class="php-var">$identifier</span> = <span class="php-var">$this</span>-&gt;renderContentCacheEntryIdentifier(<span class="php-var">$fusionPath</span>, <span class="php-var">$cacheIdentifierValues</span>) . <span class="php-quote">'_'</span> . <span class="php-var">$cacheDiscriminator</span>;
 </span><span id="174" class="l">        <span class="php-var">$segmentData</span> = [
-</span><span id="175" class="l">            <span class="php-quote">'path'</span> =&gt; <span class="php-var">$typoScriptPath</span>,
+</span><span id="175" class="l">            <span class="php-quote">'path'</span> =&gt; <span class="php-var">$fusionPath</span>,
 </span><span id="176" class="l">            <span class="php-quote">'metadata'</span> =&gt; <span class="php-var">$metadata</span>,
 </span><span id="177" class="l">            <span class="php-quote">'context'</span> =&gt; <span class="php-var">$this</span>-&gt;serializeContext(<span class="php-var">$contextVariables</span>),
 </span><span id="178" class="l">        ];
@@ -938,12 +938,12 @@
 </span><span id="183" class="l">    <span class="php-comment">/**
 </span></span><span id="184" class="l"><span class="php-comment">     * Renders an identifier for a content cache entry
 </span></span><span id="185" class="l"><span class="php-comment">     *
-</span></span><span id="186" class="l"><span class="php-comment">     * @param string $typoScriptPath
+</span></span><span id="186" class="l"><span class="php-comment">     * @param string $fusionPath
 </span></span><span id="187" class="l"><span class="php-comment">     * @param array $cacheIdentifierValues
-</span></span><span id="188" class="l"><span class="php-comment">     * @return string An MD5 hash built from the typoScriptPath and certain elements of the given identifier values
+</span></span><span id="188" class="l"><span class="php-comment">     * @return string An MD5 hash built from the fusionPath and certain elements of the given identifier values
 </span></span><span id="189" class="l"><span class="php-comment">     * @throws CacheException If an invalid entry identifier value is given
 </span></span><span id="190" class="l"><span class="php-comment">     */</span>
-</span><span id="191" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> renderContentCacheEntryIdentifier(<span class="php-var">$typoScriptPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$cacheIdentifierValues</span>)
+</span><span id="191" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> renderContentCacheEntryIdentifier(<span class="php-var">$fusionPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$cacheIdentifierValues</span>)
 </span><span id="192" class="l">    {
 </span><span id="193" class="l">        <span class="php-keyword2">ksort</span>(<span class="php-var">$cacheIdentifierValues</span>);
 </span><span id="194" class="l">
@@ -954,12 +954,12 @@
 </span><span id="199" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$value</span>) || <span class="php-keyword2">is_bool</span>(<span class="php-var">$value</span>) || <span class="php-keyword2">is_integer</span>(<span class="php-var">$value</span>)) {
 </span><span id="200" class="l">                <span class="php-var">$identifierSource</span> .= <span class="php-var">$key</span> . <span class="php-quote">'='</span> . <span class="php-var">$value</span> . <span class="php-quote">'&amp;'</span>;
 </span><span id="201" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$value</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="202" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> CacheException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Invalid cache entry identifier @cache.entryIdentifier.%s for path &quot;%s&quot;. A entry identifier value must be a string or implement CacheAwareInterface.'</span>, <span class="php-var">$key</span>, <span class="php-var">$typoScriptPath</span>), <span class="php-num">1395846615</span>);
+</span><span id="202" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> CacheException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Invalid cache entry identifier @cache.entryIdentifier.%s for path &quot;%s&quot;. A entry identifier value must be a string or implement CacheAwareInterface.'</span>, <span class="php-var">$key</span>, <span class="php-var">$fusionPath</span>), <span class="php-num">1395846615</span>);
 </span><span id="203" class="l">            }
 </span><span id="204" class="l">        }
 </span><span id="205" class="l">        <span class="php-var">$identifierSource</span> .= <span class="php-quote">'securityContextHash='</span> . <span class="php-var">$this</span>-&gt;securityContext-&gt;getContextHash();
 </span><span id="206" class="l">
-</span><span id="207" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">md5</span>(<span class="php-var">$typoScriptPath</span> . <span class="php-quote">'@'</span> . <span class="php-var">$identifierSource</span>);
+</span><span id="207" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">md5</span>(<span class="php-var">$fusionPath</span> . <span class="php-quote">'@'</span> . <span class="php-var">$identifierSource</span>);
 </span><span id="208" class="l">    }
 </span><span id="209" class="l">
 </span><span id="210" class="l">    <span class="php-comment">/**
@@ -998,15 +998,15 @@
 </span></span><span id="243" class="l"><span class="php-comment">     * as well and segments which were not cacheable are rendered.
 </span></span><span id="244" class="l"><span class="php-comment">     *
 </span></span><span id="245" class="l"><span class="php-comment">     * @param \Closure $uncachedCommandCallback A callback to process commands in uncached segments
-</span></span><span id="246" class="l"><span class="php-comment">     * @param string $typoScriptPath Fusion path identifying the Fusion object to retrieve from the content cache
+</span></span><span id="246" class="l"><span class="php-comment">     * @param string $fusionPath Fusion path identifying the Fusion object to retrieve from the content cache
 </span></span><span id="247" class="l"><span class="php-comment">     * @param array $cacheIdentifierValues Further values which play into the cache identifier hash, must be the same as the ones specified while the cache entry was written
 </span></span><span id="248" class="l"><span class="php-comment">     * @param boolean $addCacheSegmentMarkersToPlaceholders If cache segment markers should be added – this makes sense if the cached segment is about to be included in a not-yet-cached segment
 </span></span><span id="249" class="l"><span class="php-comment">     * @return string|boolean The segment with replaced cache placeholders, or FALSE if a segment was missing in the cache
 </span></span><span id="250" class="l"><span class="php-comment">     * @throws Exception
 </span></span><span id="251" class="l"><span class="php-comment">     */</span>
-</span><span id="252" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getCachedSegment(<span class="php-var">$uncachedCommandCallback</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-var">$cacheIdentifierValues</span>, <span class="php-var">$addCacheSegmentMarkersToPlaceholders</span> = <span class="php-keyword1">false</span>)
+</span><span id="252" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getCachedSegment(<span class="php-var">$uncachedCommandCallback</span>, <span class="php-var">$fusionPath</span>, <span class="php-var">$cacheIdentifierValues</span>, <span class="php-var">$addCacheSegmentMarkersToPlaceholders</span> = <span class="php-keyword1">false</span>)
 </span><span id="253" class="l">    {
-</span><span id="254" class="l">        <span class="php-var">$cacheIdentifier</span> = <span class="php-var">$this</span>-&gt;renderContentCacheEntryIdentifier(<span class="php-var">$typoScriptPath</span>, <span class="php-var">$cacheIdentifierValues</span>);
+</span><span id="254" class="l">        <span class="php-var">$cacheIdentifier</span> = <span class="php-var">$this</span>-&gt;renderContentCacheEntryIdentifier(<span class="php-var">$fusionPath</span>, <span class="php-var">$cacheIdentifierValues</span>);
 </span><span id="255" class="l">        <span class="php-var">$content</span> = <span class="php-var">$this</span>-&gt;cache-&gt;get(<span class="php-var">$cacheIdentifier</span>);
 </span><span id="256" class="l">
 </span><span id="257" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$content</span> === <span class="php-keyword1">false</span>) {
@@ -1179,6 +1179,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?876713f2c49e07348605877d687232e8c5fad3cd"></script>
 </body>
 </html>

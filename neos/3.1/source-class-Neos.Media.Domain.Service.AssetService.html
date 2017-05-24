@@ -1007,9 +1007,9 @@
 </span><span id="251" class="l">        <span class="php-var">$uriMapping</span> = [];
 </span><span id="252" class="l">        <span class="php-var">$redirectHandlerEnabled</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$options</span>[<span class="php-quote">'generateRedirects'</span>]) &amp;&amp; (boolean)<span class="php-var">$options</span>[<span class="php-quote">'generateRedirects'</span>] === <span class="php-keyword1">true</span> &amp;&amp; <span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-quote">'Neos.RedirectHandler'</span>);
 </span><span id="253" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$redirectHandlerEnabled</span>) {
-</span><span id="254" class="l">            <span class="php-var">$uriMapping</span>[
-</span><span id="255" class="l">                <span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$originalAssetResource</span>)
-</span><span id="256" class="l">            ] = <span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$asset</span>-&gt;getResource());
+</span><span id="254" class="l">            <span class="php-var">$originalAssetResourceUri</span> = <span class="php-keyword1">new</span> Uri(<span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$originalAssetResource</span>));
+</span><span id="255" class="l">            <span class="php-var">$newAssetResourceUri</span> = <span class="php-keyword1">new</span> Uri(<span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$asset</span>-&gt;getResource()));
+</span><span id="256" class="l">            <span class="php-var">$uriMapping</span>[<span class="php-var">$originalAssetResourceUri</span>-&gt;getPath()] = <span class="php-var">$newAssetResourceUri</span>-&gt;getPath();
 </span><span id="257" class="l">        }
 </span><span id="258" class="l">
 </span><span id="259" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">method_exists</span>(<span class="php-var">$asset</span>, <span class="php-quote">'getVariants'</span>)) {
@@ -1028,9 +1028,9 @@
 </span><span id="272" class="l">                }
 </span><span id="273" class="l">
 </span><span id="274" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$redirectHandlerEnabled</span>) {
-</span><span id="275" class="l">                    <span class="php-var">$uriMapping</span>[
-</span><span id="276" class="l">                        <span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$originalVariantResource</span>)
-</span><span id="277" class="l">                    ] = <span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$variant</span>-&gt;getResource());
+</span><span id="275" class="l">                    <span class="php-var">$originalVariantResourceUri</span> = <span class="php-keyword1">new</span> Uri(<span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$originalVariantResource</span>));
+</span><span id="276" class="l">                    <span class="php-var">$newVariantResourceUri</span> = <span class="php-keyword1">new</span> Uri(<span class="php-var">$this</span>-&gt;resourceManager-&gt;getPublicPersistentResourceUri(<span class="php-var">$variant</span>-&gt;getResource()));
+</span><span id="277" class="l">                    <span class="php-var">$uriMapping</span>[<span class="php-var">$originalVariantResourceUri</span>-&gt;getPath()] = <span class="php-var">$newVariantResourceUri</span>-&gt;getPath();
 </span><span id="278" class="l">                }
 </span><span id="279" class="l">
 </span><span id="280" class="l">                <span class="php-var">$this</span>-&gt;getRepository(<span class="php-var">$variant</span>)-&gt;update(<span class="php-var">$variant</span>);
@@ -1105,6 +1105,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?876713f2c49e07348605877d687232e8c5fad3cd"></script>
 </body>
 </html>

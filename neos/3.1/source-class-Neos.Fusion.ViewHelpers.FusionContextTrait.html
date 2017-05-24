@@ -794,8 +794,8 @@
 </span><span id="38" class="l">
 </span><span id="39" class="l">        <span class="php-var">$view</span> = <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;getView();
 </span><span id="40" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$view</span> <span class="php-keyword1">instanceof</span> FusionAwareViewInterface) {
-</span><span id="41" class="l">            <span class="php-var">$typoScriptObject</span> = <span class="php-var">$view</span>-&gt;getFusionObject();
-</span><span id="42" class="l">            <span class="php-var">$currentContext</span> = <span class="php-var">$typoScriptObject</span>-&gt;getRuntime()-&gt;getCurrentContext();
+</span><span id="41" class="l">            <span class="php-var">$fusionObject</span> = <span class="php-var">$view</span>-&gt;getFusionObject();
+</span><span id="42" class="l">            <span class="php-var">$currentContext</span> = <span class="php-var">$fusionObject</span>-&gt;getRuntime()-&gt;getCurrentContext();
 </span><span id="43" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$currentContext</span>[<span class="php-var">$variableName</span>])) {
 </span><span id="44" class="l">                <span class="php-var">$value</span> = <span class="php-var">$currentContext</span>[<span class="php-var">$variableName</span>];
 </span><span id="45" class="l">            }
@@ -815,8 +815,8 @@
 </span><span id="59" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="60" class="l">        }
 </span><span id="61" class="l">
-</span><span id="62" class="l">        <span class="php-var">$typoScriptObject</span> = <span class="php-var">$view</span>-&gt;getFusionObject();
-</span><span id="63" class="l">        <span class="php-var">$currentContext</span> = <span class="php-var">$typoScriptObject</span>-&gt;getRuntime()-&gt;getCurrentContext();
+</span><span id="62" class="l">        <span class="php-var">$fusionObject</span> = <span class="php-var">$view</span>-&gt;getFusionObject();
+</span><span id="63" class="l">        <span class="php-var">$currentContext</span> = <span class="php-var">$fusionObject</span>-&gt;getRuntime()-&gt;getCurrentContext();
 </span><span id="64" class="l">
 </span><span id="65" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">array_key_exists</span>(<span class="php-var">$variableName</span>, <span class="php-var">$currentContext</span>);
 </span><span id="66" class="l">    }
@@ -830,6 +830,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?876713f2c49e07348605877d687232e8c5fad3cd"></script>
 </body>
 </html>

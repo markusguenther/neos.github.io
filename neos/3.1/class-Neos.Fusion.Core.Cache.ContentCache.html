@@ -843,7 +843,7 @@ rendered by the Fusion Runtime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCacheSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#105-132" title="Go to source code">createCacheSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#105-132" title="Go to source code">createCacheSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Takes the given content and adds markers for later use as a cached content segment.</p>
@@ -866,7 +866,7 @@ as a string.</p>
 					<div class="list"><dl>
 						<dt><var>$content</var></dt>
 						<dd>The (partial) content which should potentially be cached later on</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>The Fusion path that rendered the content, for example "page&lt;Neos.NodeTypes:Page>/body&lt;Acme.Demo:DefaultPageTemplate>/parts/breadcrumbMenu"</dd>
 						<dt><var>$cacheIdentifierValues</var></dt>
 						<dd>The values (simple type or implementing CacheAwareInterface) that should be used to create a cache identifier, will be sorted by keys for consistent ordering</dd>
@@ -898,7 +898,7 @@ as a string.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createUncachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#134-149" title="Go to source code">createUncachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#134-149" title="Go to source code">createUncachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$contextVariables</var></span> )</code>
 
 			<div class="description short">
 				<p>Similar to createCacheSegment() creates a content segment with markers added, but in contrast to that function
@@ -916,7 +916,7 @@ this method is used for rendering a segment which is not supposed to be cached.<
 					<div class="list"><dl>
 						<dt><var>$content</var></dt>
 						<dd>The content rendered by the Fusion Runtime</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>The Fusion path that rendered the content, for example "page&lt;Neos.NodeTypes:Page>/body&lt;Acme.Demo:DefaultPageTemplate>/parts/breadcrumbMenu"</dd>
 						<dt><var>$contextVariables</var></dt>
 						<dd>Fusion context variables which are needed to correctly render the specified Fusion object</dd>
@@ -944,7 +944,7 @@ this method is used for rendering a segment which is not supposed to be cached.<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createDynamicCachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#151-181" title="Go to source code">createDynamicCachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$contextVariables</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var></span>, <span>integer <var>$lifetime</var></span>, <span>string <var>$cacheDiscriminator</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#151-181" title="Go to source code">createDynamicCachedSegment</a>( <span>string <var>$content</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$contextVariables</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>array <var>$tags</var></span>, <span>integer <var>$lifetime</var></span>, <span>string <var>$cacheDiscriminator</var></span> )</code>
 
 			<div class="description short">
 				<p>Similar to createUncachedSegment() creates a content segment with markers added, but in contrast to that function
@@ -962,7 +962,7 @@ this method is used for rendering a segment which will be evaluated at runtime b
 					<div class="list"><dl>
 						<dt><var>$content</var></dt>
 						<dd>The content rendered by the Fusion Runtime</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>The Fusion path that rendered the content, for example "page&lt;Neos.NodeTypes:Page>/body&lt;Acme.Demo:DefaultPageTemplate>/parts/breadcrumbMenu"</dd>
 						<dt><var>$contextVariables</var></dt>
 						<dd>Fusion context variables which are needed to correctly render the specified Fusion object</dd>
@@ -998,7 +998,7 @@ this method is used for rendering a segment which will be evaluated at runtime b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderContentCacheEntryIdentifier">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#183-208" title="Go to source code">renderContentCacheEntryIdentifier</a>( <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#183-208" title="Go to source code">renderContentCacheEntryIdentifier</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders an identifier for a content cache entry</p>
@@ -1010,7 +1010,7 @@ this method is used for rendering a segment which will be evaluated at runtime b
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd></dd>
 						<dt><var>$cacheIdentifierValues</var></dt>
 						<dd></dd>
@@ -1018,7 +1018,7 @@ this method is used for rendering a segment which will be evaluated at runtime b
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>An MD5 hash built from the typoScriptPath and certain elements of the given identifier values
+						string<br>An MD5 hash built from the fusionPath and certain elements of the given identifier values
 					</div>
 
 					<h4>Throws</h4>
@@ -1086,7 +1086,7 @@ segments which can be cached to the actual cache and returns the cleaned up orig
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#241-280" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#241-280" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Tries to retrieve the specified content segment from the cache – further nested inline segments are retrieved
@@ -1102,7 +1102,7 @@ as well and segments which were not cacheable are rendered.</p>
 					<div class="list"><dl>
 						<dt><var>$uncachedCommandCallback</var></dt>
 						<dd>A callback to process commands in uncached segments</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>Fusion path identifying the Fusion object to retrieve from the content cache</dd>
 						<dt><var>$cacheIdentifierValues</var></dt>
 						<dd>Further values which play into the cache identifier hash, must be the same as the ones specified while the cache entry was written</dd>
@@ -1869,6 +1869,6 @@ the application.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?876713f2c49e07348605877d687232e8c5fad3cd"></script>
 </body>
 </html>

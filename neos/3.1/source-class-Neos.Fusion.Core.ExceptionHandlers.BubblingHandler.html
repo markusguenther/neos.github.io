@@ -776,7 +776,7 @@
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Fusion\Exception\RuntimeException;
 </span><span id="18" class="l">
 </span><span id="19" class="l"><span class="php-comment">/**
-</span></span><span id="20" class="l"><span class="php-comment"> * Wrap the exception to retain the typoScript path at which it was originally thrown
+</span></span><span id="20" class="l"><span class="php-comment"> * Wrap the exception to retain the fusion path at which it was originally thrown
 </span></span><span id="21" class="l"><span class="php-comment"> */</span>
 </span><span id="22" class="l"><span class="php-keyword1">class</span> BubblingHandler <span class="php-keyword1">extends</span> AbstractRenderingExceptionHandler
 </span><span id="23" class="l">{
@@ -795,7 +795,7 @@
 </span><span id="36" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$exception</span> <span class="php-keyword1">instanceof</span> RuntimeException) {
 </span><span id="37" class="l">            <span class="php-keyword1">throw</span> <span class="php-var">$exception</span>;
 </span><span id="38" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="39" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> RuntimeException(<span class="php-quote">'Fusion Rendering Exception, see typoScriptPath and nested Exception for details.'</span>, <span class="php-num">1401803055</span>, <span class="php-var">$exception</span>, <span class="php-var">$fusionPath</span>);
+</span><span id="39" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> RuntimeException(<span class="php-quote">'Fusion Rendering Exception, see fusionPath and nested Exception for details.'</span>, <span class="php-num">1401803055</span>, <span class="php-var">$exception</span>, <span class="php-var">$fusionPath</span>);
 </span><span id="40" class="l">        }
 </span><span id="41" class="l">    }
 </span><span id="42" class="l">
@@ -821,6 +821,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?6b78107b254da0c0491c8f78210e36c50d241f3e"></script>
+<script src="elementlist.js?876713f2c49e07348605877d687232e8c5fad3cd"></script>
 </body>
 </html>
