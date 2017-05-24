@@ -786,16 +786,16 @@
 </span><span id="28" class="l">    <span class="php-comment">/**
 </span></span><span id="29" class="l"><span class="php-comment">     * @var AbstractFusionObject
 </span></span><span id="30" class="l"><span class="php-comment">     */</span>
-</span><span id="31" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$typoScriptObject</span>;
+</span><span id="31" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$fusionObject</span>;
 </span><span id="32" class="l">
 </span><span id="33" class="l">    <span class="php-comment">/**
-</span></span><span id="34" class="l"><span class="php-comment">     * @param AbstractFusionObject $typoScriptObject
+</span></span><span id="34" class="l"><span class="php-comment">     * @param AbstractFusionObject $fusionObject
 </span></span><span id="35" class="l"><span class="php-comment">     * @param ActionRequest $request The current action request. If none is specified it will be created from the environment.
 </span></span><span id="36" class="l"><span class="php-comment">     */</span>
-</span><span id="37" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(AbstractFusionObject <span class="php-var">$typoScriptObject</span>, ActionRequest <span class="php-var">$request</span> = <span class="php-keyword1">null</span>)
+</span><span id="37" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(AbstractFusionObject <span class="php-var">$fusionObject</span>, ActionRequest <span class="php-var">$request</span> = <span class="php-keyword1">null</span>)
 </span><span id="38" class="l">    {
 </span><span id="39" class="l">        parent::__construct(<span class="php-var">$request</span>);
-</span><span id="40" class="l">        <span class="php-var">$this</span>-&gt;typoScriptObject = <span class="php-var">$typoScriptObject</span>;
+</span><span id="40" class="l">        <span class="php-var">$this</span>-&gt;fusionObject = <span class="php-var">$fusionObject</span>;
 </span><span id="41" class="l">    }
 </span><span id="42" class="l">
 </span><span id="43" class="l">    <span class="php-comment">/**
@@ -828,7 +828,7 @@
 </span></span><span id="70" class="l"><span class="php-comment">     */</span>
 </span><span id="71" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getFusionObject()
 </span><span id="72" class="l">    {
-</span><span id="73" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;typoScriptObject;
+</span><span id="73" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;fusionObject;
 </span><span id="74" class="l">    }
 </span><span id="75" class="l">}
 </span><span id="76" class="l"></span></code></pre>
@@ -840,6 +840,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?43b8f69fd222ffdfc23a21f007368c2d0bba1d0e"></script>
+<script src="elementlist.js?eb5908ec2356f7ad50a37fbf49ffca9a35fdeb8c"></script>
 </body>
 </html>

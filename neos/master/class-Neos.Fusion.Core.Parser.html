@@ -786,7 +786,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Parser.html#20-917" title="Go to source code">Neos.Fusion/Classes/Core/Parser.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Parser.html#20-941" title="Go to source code">Neos.Fusion/Classes/Core/Parser.php</a>
 		<br>
 	</div>
 
@@ -946,7 +946,44 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNextTypoScriptLine">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#335-346" title="Go to source code">getNextTypoScriptLine</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Fusion.Core.Parser.html#335-344" title="Go to source code">getNextTypoScriptLine</a>( )</code>
+
+			<div class="description short">
+				<p>Get the next, unparsed line of Fusion from this->currentSourceCodeLines and increase the pointer</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the next, unparsed line of Fusion from this->currentSourceCodeLines and increase the pointer</p>
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							with 3.0 will be removed with 4.0<br>
+					</div>
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>next line of Fusion to parse
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNextFusionLine" id="_getNextFusionLine">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNextFusionLine">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#346-357" title="Go to source code">getNextFusionLine</a>( )</code>
 
 			<div class="description short">
 				<p>Get the next, unparsed line of Fusion from this->currentSourceCodeLines and increase the pointer</p>
@@ -959,7 +996,7 @@ Fusion object types.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>next line of typoscript to parse
+						string<br>next line of Fusion to parse
 					</div>
 
 
@@ -979,7 +1016,49 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseTypoScriptLine">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#348-378" title="Go to source code">parseTypoScriptLine</a>( <span>string <var>$typoScriptLine</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Fusion.Core.Parser.html#359-370" title="Go to source code">parseTypoScriptLine</a>( <span>string <var>$fusionLine</var></span> )</code>
+
+			<div class="description short">
+				<p>Parses one line of Fusion</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parses one line of Fusion</p>
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							with 3.0 will be removed with 4.0<br>
+					</div>
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fusionLine</var></dt>
+						<dd>One line of Fusion code</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseFusionLine" id="_parseFusionLine">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseFusionLine">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#372-402" title="Go to source code">parseFusionLine</a>( <span>string <var>$fusionLine</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses one line of Fusion</p>
@@ -991,7 +1070,7 @@ Fusion object types.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$typoScriptLine</var></dt>
+						<dt><var>$fusionLine</var></dt>
 						<dd>One line of Fusion code</dd>
 					</dl></div>
 
@@ -1017,7 +1096,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseComment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#380-409" title="Go to source code">parseComment</a>( <span>string <var>$typoScriptLine</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#404-433" title="Go to source code">parseComment</a>( <span>string <var>$fusionLine</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a line with comments or a line while parsing is in block comment mode.</p>
@@ -1029,7 +1108,7 @@ Fusion object types.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$typoScriptLine</var></dt>
+						<dt><var>$fusionLine</var></dt>
 						<dd>One line of Fusion code</dd>
 					</dl></div>
 
@@ -1055,7 +1134,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseConfinementBlock">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#411-430" title="Go to source code">parseConfinementBlock</a>( <span>string <var>$typoScriptLine</var></span>, <span>boolean <var>$isOpeningConfinement</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#435-454" title="Go to source code">parseConfinementBlock</a>( <span>string <var>$fusionLine</var></span>, <span>boolean <var>$isOpeningConfinement</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a line which opens or closes a confinement</p>
@@ -1067,7 +1146,7 @@ Fusion object types.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$typoScriptLine</var></dt>
+						<dt><var>$fusionLine</var></dt>
 						<dd>One line of Fusion code</dd>
 						<dt><var>$isOpeningConfinement</var></dt>
 						<dd>Set to TRUE, if an opening confinement is to be parsed and FALSE if it's a closing confinement.</dd>
@@ -1095,7 +1174,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseDeclaration">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#432-454" title="Go to source code">parseDeclaration</a>( <span>string <var>$typoScriptLine</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#456-478" title="Go to source code">parseDeclaration</a>( <span>string <var>$fusionLine</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a parser declaration of the form "declarationtype: declaration".</p>
@@ -1107,7 +1186,7 @@ Fusion object types.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$typoScriptLine</var></dt>
+						<dt><var>$fusionLine</var></dt>
 						<dd>One line of Fusion code</dd>
 					</dl></div>
 
@@ -1133,7 +1212,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseObjectDefinition">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#456-486" title="Go to source code">parseObjectDefinition</a>( <span>string <var>$typoScriptLine</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#480-510" title="Go to source code">parseObjectDefinition</a>( <span>string <var>$fusionLine</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses an object definition.</p>
@@ -1145,7 +1224,7 @@ Fusion object types.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$typoScriptLine</var></dt>
+						<dt><var>$fusionLine</var></dt>
 						<dd>One line of Fusion code</dd>
 					</dl></div>
 
@@ -1171,7 +1250,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseValueAssignment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#488-499" title="Go to source code">parseValueAssignment</a>( <span>string <var>$objectPath</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#512-523" title="Go to source code">parseValueAssignment</a>( <span>string <var>$objectPath</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a value operation of the type "assignment".</p>
@@ -1207,7 +1286,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseValueUnAssignment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#501-511" title="Go to source code">parseValueUnAssignment</a>( <span>string <var>$objectPath</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#525-535" title="Go to source code">parseValueUnAssignment</a>( <span>string <var>$objectPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Unsets the object, property or variable specified by the object path.</p>
@@ -1241,7 +1320,7 @@ Fusion object types.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseValueCopy">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#513-555" title="Go to source code">parseValueCopy</a>( <span>string <var>$sourceObjectPath</var></span>, <span>string <var>$targetObjectPath</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#537-579" title="Go to source code">parseValueCopy</a>( <span>string <var>$sourceObjectPath</var></span>, <span>string <var>$targetObjectPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies the object or value specified by sourcObjectPath and assigns
@@ -1283,7 +1362,7 @@ it to targetObjectPath.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseNamespaceDeclaration">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#557-574" title="Go to source code">parseNamespaceDeclaration</a>( <span>string <var>$namespaceDeclaration</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#581-598" title="Go to source code">parseNamespaceDeclaration</a>( <span>string <var>$namespaceDeclaration</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a namespace declaration and stores the result in the namespace registry.</p>
@@ -1321,7 +1400,7 @@ it to targetObjectPath.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseInclude">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#576-639" title="Go to source code">parseInclude</a>( <span>string <var>$include</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#600-663" title="Go to source code">parseInclude</a>( <span>string <var>$include</var></span> )</code>
 
 			<div class="description short">
 				<p>Parse an include file. Currently, we start a new parser object; but we could as well re-use
@@ -1361,7 +1440,7 @@ the given one.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParsedObjectPath">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#641-690" title="Go to source code">getParsedObjectPath</a>( <span>string <var>$objectPath</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#665-714" title="Go to source code">getParsedObjectPath</a>( <span>string <var>$objectPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Parse an object path specified as a string and returns an array.</p>
@@ -1403,7 +1482,7 @@ the given one.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProcessedValue">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#692-769" title="Go to source code">getProcessedValue</a>( <span>string <var>$unparsedValue</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#716-793" title="Go to source code">getProcessedValue</a>( <span>string <var>$unparsedValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses the given value (which may be a literal, variable or object type) and
@@ -1447,7 +1526,7 @@ returns the evaluated result, including variables replaced by their actual value
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setValueInObjectTree">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#771-822" title="Go to source code">setValueInObjectTree</a>( <span>array <var>$objectPathArray</var></span>, <span>mixed <var>$value</var></span>, <span>array <var>&amp; $objectTree</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#795-846" title="Go to source code">setValueInObjectTree</a>( <span>array <var>$objectPathArray</var></span>, <span>mixed <var>$value</var></span>, <span>array <var>&amp; $objectTree</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Assigns a value to a node or a property in the object tree, specified by the object path array.</p>
@@ -1489,7 +1568,7 @@ returns the evaluated result, including variables replaced by their actual value
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValueFromObjectTree">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#824-850" title="Go to source code">getValueFromObjectTree</a>( <span>array <var>$objectPathArray</var></span>, <span>array <var>&amp; $objectTree</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#848-874" title="Go to source code">getValueFromObjectTree</a>( <span>array <var>$objectPathArray</var></span>, <span>array <var>&amp; $objectTree</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Retrieves a value from a node in the object tree, specified by the object path array.</p>
@@ -1529,7 +1608,7 @@ returns the evaluated result, including variables replaced by their actual value
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentObjectPathPrefix">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#852-862" title="Go to source code">getCurrentObjectPathPrefix</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#876-886" title="Go to source code">getCurrentObjectPathPrefix</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the first part of an object path from the current object path stack
@@ -1564,7 +1643,7 @@ which can be used to prefix a relative object path.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildPrototypeHierarchy">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#864-892" title="Go to source code">buildPrototypeHierarchy</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#888-916" title="Go to source code">buildPrototypeHierarchy</a>( )</code>
 
 			<div class="description short">
 				<p>Precalculate merged configuration for inherited prototypes.</p>
@@ -1597,7 +1676,7 @@ which can be used to prefix a relative object path.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unquoteString">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Parser.html#894-916" title="Go to source code">unquoteString</a>( <span>string <var>$quotedValue</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Parser.html#918-940" title="Go to source code">unquoteString</a>( <span>string <var>$quotedValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes escapings from a given argument string and trims the outermost
@@ -2502,6 +2581,6 @@ with that namespace and name must be defined elsewhere.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?43b8f69fd222ffdfc23a21f007368c2d0bba1d0e"></script>
+<script src="elementlist.js?eb5908ec2356f7ad50a37fbf49ffca9a35fdeb8c"></script>
 </body>
 </html>
