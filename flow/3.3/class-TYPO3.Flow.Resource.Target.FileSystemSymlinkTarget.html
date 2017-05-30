@@ -970,7 +970,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.Flow.html">Flow</a>\<a href="namespace-TYPO3.Flow.Resource.html">Resource</a>\<a href="namespace-TYPO3.Flow.Resource.Target.html">Target</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#23-163" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Target/FileSystemSymlinkTarget.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#22-186" title="Go to source code">TYPO3.Flow/Classes/TYPO3/Flow/Resource/Target/FileSystemSymlinkTarget.php</a>
 		<br>
 	</div>
 
@@ -990,7 +990,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishCollection">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#33-50" title="Go to source code">publishCollection</a>( <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#32-49" title="Go to source code">publishCollection</a>( <span><code><a href="class-TYPO3.Flow.Resource.CollectionInterface.html">TYPO3\Flow\Resource\CollectionInterface</a></code> <var>$collection</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the whole collection to this target</p>
@@ -1028,7 +1028,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishFile">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#52-104" title="Go to source code">publishFile</a>( <span>resource <var>$sourceStream</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#51-103" title="Go to source code">publishFile</a>( <span>resource <var>$sourceStream</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given source stream to this target, with the given relative path.</p>
@@ -1060,6 +1060,44 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="unpublishFile" id="_unpublishFile">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unpublishFile">#</a>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#105-127" title="Go to source code">unpublishFile</a>( <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+
+			<div class="description short">
+				<p>Removes the specified target file from the public directory</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Removes the specified target file from the public directory</p>
+
+<p>This method fails silently if the given file could not be unpublished or already didn't exist anymore.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$relativeTargetPathAndFilename</var></dt>
+						<dd>relative path and filename in the target directory</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#_unpublishFile">TYPO3\Flow\Resource\Target\FileSystemTarget::unpublishFile</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="publishDirectory" id="_publishDirectory">
 
 			<td class="attributes"><code>
@@ -1071,7 +1109,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishDirectory">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#106-145" title="Go to source code">publishDirectory</a>( <span>string <var>$sourcePath</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#129-168" title="Go to source code">publishDirectory</a>( <span>string <var>$sourcePath</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the specified directory to this target, with the given relative path.</p>
@@ -1111,7 +1149,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOption">#</a>
-			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#147-162" title="Go to source code">setOption</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#170-185" title="Go to source code">setOption</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Set an option value and return if it was set.</p>
@@ -1159,7 +1197,6 @@
 				<code><a href="class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#_handleMissingData">handleMissingData()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#_initializeObject">initializeObject()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#_publishResource">publishResource()</a></code>, 
-				<code><a href="class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#_unpublishFile">unpublishFile()</a></code>, 
 				<code><a href="class-TYPO3.Flow.Resource.Target.FileSystemTarget.html#_unpublishResource">unpublishResource()</a></code>
 			</p>
 		</div>
@@ -1183,7 +1220,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#28-31" title="Go to source code"><var>$relativeSymlinks</var></a>
+					<a href="source-class-TYPO3.Flow.Resource.Target.FileSystemSymlinkTarget.html#27-30" title="Go to source code"><var>$relativeSymlinks</var></a>
 
 				<div class="description short">
 					
@@ -1234,6 +1271,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ea41f272286d16c367e2dcfa1060394628212510"></script>
+<script src="elementlist.js?01d3b9f01e26b170003c357e171b002593a3e942"></script>
 </body>
 </html>
