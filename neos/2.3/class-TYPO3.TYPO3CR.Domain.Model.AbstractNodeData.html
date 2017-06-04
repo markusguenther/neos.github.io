@@ -789,7 +789,7 @@
 		<b>Namespace:</b> <a href="namespace-TYPO3.html">TYPO3</a>\<a href="namespace-TYPO3.TYPO3CR.html">TYPO3CR</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.html">Domain</a>\<a href="namespace-TYPO3.TYPO3CR.Domain.Model.html">Model</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#25-560" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/AbstractNodeData.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#25-577" title="Go to source code">TYPO3.TYPO3CR/Classes/TYPO3/TYPO3CR/Domain/Model/AbstractNodeData.php</a>
 		<br>
 	</div>
 
@@ -827,6 +827,42 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="ensurePropertiesIsNeverNull" id="_ensurePropertiesIsNeverNull">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ensurePropertiesIsNeverNull">#</a>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#137-152" title="Go to source code">ensurePropertiesIsNeverNull</a>( )</code>
+
+			<div class="description short">
+				<p>Make sure the properties are always an array.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Make sure the properties are always an array.</p>
+
+<p>If the JSON in the DB is corrupted, decoding it can fail, leading to
+a null value. This may lead to errors later, when the value is used with
+functions that expect an array.</p>
+
+
+
+
+
+					<h4>Orm\postload</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setProperty" id="_setProperty">
 
 			<td class="attributes"><code>
@@ -838,7 +874,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#137-188" title="Go to source code">setProperty</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#154-205" title="Go to source code">setProperty</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the specified property.
@@ -878,7 +914,7 @@ if it is settable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistRelatedEntities">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#190-205" title="Go to source code">persistRelatedEntities</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#207-222" title="Go to source code">persistRelatedEntities</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if a property value contains an entity and persists it.</p>
@@ -912,7 +948,7 @@ if it is settable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#207-222" title="Go to source code">hasProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#224-239" title="Go to source code">hasProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>If this node has a property with the given name.</p>
@@ -953,7 +989,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#224-250" title="Go to source code">getProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#241-267" title="Go to source code">getProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the specified property.</p>
@@ -998,7 +1034,7 @@ there if it is gettable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeProperty">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#252-272" title="Go to source code">removeProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#269-289" title="Go to source code">removeProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified property.</p>
@@ -1039,7 +1075,7 @@ that object if it exists.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperties">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#274-293" title="Go to source code">getProperties</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#291-310" title="Go to source code">getProperties</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all properties of this node.</p>
@@ -1075,7 +1111,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyNames">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#295-306" title="Go to source code">getPropertyNames</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#312-323" title="Go to source code">getPropertyNames</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of all properties of this node.</p>
@@ -1108,7 +1144,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#308-324" title="Go to source code">setContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#325-341" title="Go to source code">setContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets a content object for this node.</p>
@@ -1146,7 +1182,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#326-334" title="Go to source code">getContentObject</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#343-351" title="Go to source code">getContentObject</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the content object of this node (if any).</p>
@@ -1179,7 +1215,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unsetContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#336-347" title="Go to source code">unsetContentObject</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#353-364" title="Go to source code">unsetContentObject</a>( )</code>
 
 			<div class="description short">
 				<p>Unsets the content object of this node.</p>
@@ -1208,7 +1244,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNodeType">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#349-361" title="Go to source code">setNodeType</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#366-378" title="Go to source code">setNodeType</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the node type of this node.</p>
@@ -1242,7 +1278,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeType">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#363-371" title="Go to source code">getNodeType</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#380-388" title="Go to source code">getNodeType</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the node type of this node.</p>
@@ -1275,7 +1311,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCreationDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#373-379" title="Go to source code">getCreationDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#390-396" title="Go to source code">getCreationDateTime</a>( )</code>
 
 			<div class="description short">
 				
@@ -1308,7 +1344,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastModificationDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#381-387" title="Go to source code">getLastModificationDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#398-404" title="Go to source code">getLastModificationDateTime</a>( )</code>
 
 			<div class="description short">
 				
@@ -1341,7 +1377,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastPublicationDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#389-395" title="Go to source code">getLastPublicationDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#406-412" title="Go to source code">getLastPublicationDateTime</a>( )</code>
 
 			<div class="description short">
 				
@@ -1374,7 +1410,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLastPublicationDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#397-404" title="Go to source code">setLastPublicationDateTime</a>( <span>DateTimeInterface <var>$lastPublicationDateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#414-421" title="Go to source code">setLastPublicationDateTime</a>( <span>DateTimeInterface <var>$lastPublicationDateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1408,7 +1444,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHidden">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#406-418" title="Go to source code">setHidden</a>( <span>boolean <var>$hidden</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#423-435" title="Go to source code">setHidden</a>( <span>boolean <var>$hidden</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the "hidden" flag for this node.</p>
@@ -1442,7 +1478,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isHidden">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#420-428" title="Go to source code">isHidden</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#437-445" title="Go to source code">isHidden</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current state of the hidden flag</p>
@@ -1475,7 +1511,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenBeforeDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#430-442" title="Go to source code">setHiddenBeforeDateTime</a>( <span>DateTimeInterface <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#447-459" title="Go to source code">setHiddenBeforeDateTime</a>( <span>DateTimeInterface <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the date and time when this node becomes potentially visible.</p>
@@ -1509,7 +1545,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHiddenBeforeDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#444-452" title="Go to source code">getHiddenBeforeDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#461-469" title="Go to source code">getHiddenBeforeDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date and time before which this node will be automatically hidden.</p>
@@ -1542,7 +1578,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenAfterDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#454-466" title="Go to source code">setHiddenAfterDateTime</a>( <span>DateTimeInterface <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#471-483" title="Go to source code">setHiddenAfterDateTime</a>( <span>DateTimeInterface <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the date and time when this node should be automatically hidden</p>
@@ -1576,7 +1612,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHiddenAfterDateTime">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#468-476" title="Go to source code">getHiddenAfterDateTime</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#485-493" title="Go to source code">getHiddenAfterDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date and time after which this node will be automatically hidden.</p>
@@ -1609,7 +1645,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenInIndex">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#478-490" title="Go to source code">setHiddenInIndex</a>( <span>boolean <var>$hidden</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#495-507" title="Go to source code">setHiddenInIndex</a>( <span>boolean <var>$hidden</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets if this node should be hidden in indexes, such as a site navigation.</p>
@@ -1643,7 +1679,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isHiddenInIndex">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#492-500" title="Go to source code">isHiddenInIndex</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#509-517" title="Go to source code">isHiddenInIndex</a>( )</code>
 
 			<div class="description short">
 				<p>If this node should be hidden in indexes</p>
@@ -1676,7 +1712,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAccessRoles">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#502-520" title="Go to source code">setAccessRoles</a>( <span>array <var>$accessRoles</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#519-537" title="Go to source code">setAccessRoles</a>( <span>array <var>$accessRoles</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the roles which are required to access this node</p>
@@ -1714,7 +1750,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAccessRoles">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#522-530" title="Go to source code">getAccessRoles</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#539-547" title="Go to source code">getAccessRoles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of defined access roles</p>
@@ -1747,7 +1783,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addOrUpdate">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#532-541" title="Go to source code">addOrUpdate</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#549-558" title="Go to source code">addOrUpdate</a>( )</code>
 
 			<div class="description short">
 				<p>By default this method does not do anything.
@@ -1780,7 +1816,7 @@ method will add the respective node to the repository.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateContentObject">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#543-552" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#560-569" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>By default this method does not do anything.
@@ -1816,7 +1852,7 @@ For persisted nodes (PersistedNodeInterface) this updates the content object via
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWorkspace">#</a>
-			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#554-559" title="Go to source code">getWorkspace</a>( )</code>
+			<code><a href="source-class-TYPO3.TYPO3CR.Domain.Model.AbstractNodeData.html#571-576" title="Go to source code">getWorkspace</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the workspace this node is contained in</p>
@@ -2235,6 +2271,6 @@ For persisted nodes (PersistedNodeInterface) this updates the content object via
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?b824bc5362711c1383961e738264505acc4ce67e"></script>
+<script src="elementlist.js?9d042795630c2908cb17470f78eaa984d8386279"></script>
 </body>
 </html>
