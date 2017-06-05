@@ -967,7 +967,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#195-208" title="Go to source code">createAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$referenceNode</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#195-208" title="Go to source code">createAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$referenceNode</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a new node and renders the node inside the containing content collection.</p>
@@ -981,7 +981,7 @@ because they might be connected to images / resources which need to be updated a
 					<div class="list"><dl>
 						<dt><var>$referenceNode</var></dt>
 						<dd></dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>The Fusion path of the collection</dd>
 						<dt><var>$nodeData</var></dt>
 						<dd></dd>
@@ -1092,7 +1092,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#251-264" title="Go to source code">moveAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#251-264" title="Go to source code">moveAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Move the given node before, into or after the target node depending on the given position and renders it's content collection.</p>
@@ -1110,7 +1110,7 @@ because they might be connected to images / resources which need to be updated a
 						<dd>The target node to be moved "to", see $position</dd>
 						<dt><var>$position</var></dt>
 						<dd>Where the node should be added in relation to $targetNode (allowed: before, into, after)</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>The Fusion path of the collection</dd>
 					</dl></div>
 
@@ -1179,7 +1179,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#302-316" title="Go to source code">copyAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$typoScriptPath</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#302-316" title="Go to source code">copyAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$fusionPath</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Copies the given node before, into or after the target node depending on the given position and renders it's content collection.</p>
@@ -1197,10 +1197,10 @@ because they might be connected to images / resources which need to be updated a
 						<dd>The target node to be copied "to", see $position</dd>
 						<dt><var>$position</var></dt>
 						<dd>Where the node should be added in relation to $targetNode (allowed: before, into, after)</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>$nodeName Optional node name (if empty random node name will be generated)</dd>
 						<dt><var>$nodeName</var></dt>
-						<dd>$typoScriptPath The Fusion path of the collection</dd>
+						<dd>$fusionPath The Fusion path of the collection</dd>
 					</dl></div>
 
 
@@ -1267,7 +1267,7 @@ This is important to handle renames of nodes correctly.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#353-363" title="Go to source code">updateAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#353-363" title="Go to source code">updateAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the specified node and renders it's content collection.</p>
@@ -1281,7 +1281,7 @@ This is important to handle renames of nodes correctly.</li>
 					<div class="list"><dl>
 						<dt><var>$node</var></dt>
 						<dd>The node to be updated</dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd>The Fusion path of the collection</dd>
 					</dl></div>
 
@@ -1340,7 +1340,7 @@ because they might be connected to images / resources which need to be removed a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_redirectToRenderNode">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#388-407" title="Go to source code">redirectToRenderNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$typoScriptPath</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#388-407" title="Go to source code">redirectToRenderNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Takes care of creating a redirect to properly render the collection the given node is in.</p>
@@ -1354,7 +1354,7 @@ because they might be connected to images / resources which need to be removed a
 					<div class="list"><dl>
 						<dt><var>$node</var></dt>
 						<dd></dd>
-						<dt><var>$typoScriptPath</var></dt>
+						<dt><var>$fusionPath</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -1777,6 +1777,6 @@ link plugins to represent the passed Node instance.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?39ef6a7c7e85942e948d986fe1c166107e3c98ec"></script>
+<script src="elementlist.js?41c39d56ea5138db7201c9becd9172920337db87"></script>
 </body>
 </html>
