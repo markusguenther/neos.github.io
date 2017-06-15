@@ -834,7 +834,7 @@
 </span><span id="81" class="l">        <span class="php-var">$content</span> = <span class="php-var">$this</span>-&gt;renderChildren();
 </span><span id="82" class="l">
 </span><span id="83" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span> === <span class="php-keyword1">null</span>) {
-</span><span id="84" class="l">            <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;getNodeFromTypoScriptContext();
+</span><span id="84" class="l">            <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;getNodeFromFusionContext();
 </span><span id="85" class="l">        }
 </span><span id="86" class="l">
 </span><span id="87" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span> === <span class="php-keyword1">null</span>) {
@@ -856,7 +856,7 @@
 </span></span><span id="103" class="l"><span class="php-comment">     * @return NodeInterface
 </span></span><span id="104" class="l"><span class="php-comment">     * @throws ViewHelperException
 </span></span><span id="105" class="l"><span class="php-comment">     */</span>
-</span><span id="106" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getNodeFromTypoScriptContext()
+</span><span id="106" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getNodeFromFusionContext()
 </span><span id="107" class="l">    {
 </span><span id="108" class="l">        <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;getContextVariable(<span class="php-quote">'node'</span>);
 </span><span id="109" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span> === <span class="php-keyword1">null</span>) {
@@ -875,6 +875,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eb5908ec2356f7ad50a37fbf49ffca9a35fdeb8c"></script>
+<script src="elementlist.js?46f790dfd9df12d6b01554717421919527cba537"></script>
 </body>
 </html>
