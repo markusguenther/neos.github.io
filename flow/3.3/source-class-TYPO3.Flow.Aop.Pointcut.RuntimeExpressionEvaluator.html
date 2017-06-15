@@ -1042,8 +1042,8 @@
 </span><span id="100" class="l">    {
 </span><span id="101" class="l">        <span class="php-var">$functionName</span> = <span class="php-var">$this</span>-&gt;generateExpressionFunctionName(<span class="php-var">$privilegeIdentifier</span>);
 </span><span id="102" class="l">
-</span><span id="103" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>] <span class="php-keyword1">instanceof</span> \Closure) {
-</span><span id="104" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'Runtime expression &quot;'</span> . <span class="php-var">$functionName</span> . <span class="php-quote">'&quot; does not exist.'</span>, <span class="php-num">1428694144</span>);
+</span><span id="103" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>]) || !<span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>] <span class="php-keyword1">instanceof</span> \Closure) {
+</span><span id="104" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'Runtime expression &quot;'</span> . <span class="php-var">$functionName</span> . <span class="php-quote">'&quot; does not exist. Flushing the code caches may help to solve this.'</span>, <span class="php-num">1428694144</span>);
 </span><span id="105" class="l">        }
 </span><span id="106" class="l">
 </span><span id="107" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>]-&gt;__invoke(<span class="php-var">$joinPoint</span>, <span class="php-var">$this</span>-&gt;objectManager);
