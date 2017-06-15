@@ -961,8 +961,8 @@
 </span><span id="100" class="l">    {
 </span><span id="101" class="l">        <span class="php-var">$functionName</span> = <span class="php-var">$this</span>-&gt;generateExpressionFunctionName(<span class="php-var">$privilegeIdentifier</span>);
 </span><span id="102" class="l">
-</span><span id="103" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>] <span class="php-keyword1">instanceof</span> \Closure) {
-</span><span id="104" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'Runtime expression &quot;'</span> . <span class="php-var">$functionName</span> . <span class="php-quote">'&quot; does not exist.'</span>, <span class="php-num">1428694144</span>);
+</span><span id="103" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>]) || !<span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>] <span class="php-keyword1">instanceof</span> \Closure) {
+</span><span id="104" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'Runtime expression &quot;'</span> . <span class="php-var">$functionName</span> . <span class="php-quote">'&quot; does not exist. Flushing the code caches may help to solve this.'</span>, <span class="php-num">1428694144</span>);
 </span><span id="105" class="l">        }
 </span><span id="106" class="l">
 </span><span id="107" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;runtimeExpressions[<span class="php-var">$functionName</span>]-&gt;__invoke(<span class="php-var">$joinPoint</span>, <span class="php-var">$this</span>-&gt;objectManager);
@@ -1008,6 +1008,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?85ce15cdbd8a35cd5cdaf919e2640a9dfe7e0d9b"></script>
+<script src="elementlist.js?855967887fca47fe2463bda850f52225e4828c6e"></script>
 </body>
 </html>
