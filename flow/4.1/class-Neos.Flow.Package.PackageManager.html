@@ -889,7 +889,7 @@
 				<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageManager.html#25-1120" title="Go to source code">Neos.Flow/Classes/Package/PackageManager.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageManager.html#25-1132" title="Go to source code">Neos.Flow/Classes/Package/PackageManager.php</a>
 		<br>
 	</div>
 
@@ -2101,7 +2101,7 @@ was not current.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_scanAvailablePackages">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#706-757" title="Go to source code">scanAvailablePackages</a>( <span>array <var>$previousPackageStatesConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#706-769" title="Go to source code">scanAvailablePackages</a>( <span>array <var>$previousPackageStatesConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Scans all directories in the packages directories for available packages.
@@ -2126,6 +2126,7 @@ For each package a Package object is created and stored in $this->packages.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
+						<code><a href="class-Neos.Flow.Package.Exception.html">Neos\Flow\Package\Exception</a></code><br>
 						<code><a href="class-Neos.Flow.Composer.Exception.InvalidConfigurationException.html">Neos\Flow\Composer\Exception\InvalidConfigurationException</a></code>
 					</div>
 
@@ -2145,7 +2146,7 @@ For each package a Package object is created and stored in $this->packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findComposerPackagesInPath">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#759-796" title="Go to source code">findComposerPackagesInPath</a>( <span>string <var>$startingDirectory</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#771-808" title="Go to source code">findComposerPackagesInPath</a>( <span>string <var>$startingDirectory</var></span> )</code>
 
 			<div class="description short">
 				<p>Recursively traverses directories from the given starting points and returns all folder paths that contain a composer.json and
@@ -2187,7 +2188,7 @@ In case a "is-merged-repository" is found the traversal continues inside.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_preparePackageStateConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#798-817" title="Go to source code">preparePackageStateConfiguration</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$packagePath</var></span>, <span>array <var>$composerManifest</var></span>, <span>string <var>$state</var> = self::PACKAGE_STATE_ACTIVE</span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#810-829" title="Go to source code">preparePackageStateConfiguration</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$packagePath</var></span>, <span>array <var>$composerManifest</var></span>, <span>string <var>$state</var> = self::PACKAGE_STATE_ACTIVE</span> )</code>
 
 			<div class="description short">
 				
@@ -2231,7 +2232,7 @@ In case a "is-merged-repository" is found the traversal continues inside.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#819-839" title="Go to source code">getPackageVersion</a>( <span>string <var>$composerName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#831-851" title="Go to source code">getPackageVersion</a>( <span>string <var>$composerName</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the package version of the given package
@@ -2275,7 +2276,7 @@ Return normalized package version.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerPackagesFromConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#841-852" title="Go to source code">registerPackagesFromConfiguration</a>( <span>array <var>$packageStatesConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#853-864" title="Go to source code">registerPackagesFromConfiguration</a>( <span>array <var>$packageStatesConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Requires and registers all packages which were defined in packageStatesConfiguration</p>
@@ -2313,7 +2314,7 @@ Return normalized package version.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerPackageFromStateConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#854-876" title="Go to source code">registerPackageFromStateConfiguration</a>( <span>string <var>$composerName</var></span>, <span>array <var>$packageStateConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#866-888" title="Go to source code">registerPackageFromStateConfiguration</a>( <span>string <var>$composerName</var></span>, <span>array <var>$packageStateConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Registers a package under the given composer name with the configuration.
@@ -2353,7 +2354,7 @@ to all relevant data arrays.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sortAndSavePackageStates">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#878-891" title="Go to source code">sortAndSavePackageStates</a>( <span>array <var>$packageStates</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#890-903" title="Go to source code">sortAndSavePackageStates</a>( <span>array <var>$packageStates</var></span> )</code>
 
 			<div class="description short">
 				<p>Takes the given packageStatesConfiguration, sorts it by dependencies, saves it and returns
@@ -2393,7 +2394,7 @@ the ordered list</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_savePackageStates">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#893-920" title="Go to source code">savePackageStates</a>( <span>array <var>$orderedPackageStates</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#905-932" title="Go to source code">savePackageStates</a>( <span>array <var>$orderedPackageStates</var></span> )</code>
 
 			<div class="description short">
 				<p>Save the given (ordered) array of package states data</p>
@@ -2431,7 +2432,7 @@ the ordered list</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sortAvailablePackagesByDependencies">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#922-936" title="Go to source code">sortAvailablePackagesByDependencies</a>( <span>array <var>$packageStates</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#934-948" title="Go to source code">sortAvailablePackagesByDependencies</a>( <span>array <var>$packageStates</var></span> )</code>
 
 			<div class="description short">
 				<p>Orders all packages by comparing their dependencies. By this, the packages
@@ -2473,7 +2474,7 @@ initialization order.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectPackageManifestData">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#938-949" title="Go to source code">collectPackageManifestData</a>( <span>array <var>$packageStates</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#950-961" title="Go to source code">collectPackageManifestData</a>( <span>array <var>$packageStates</var></span> )</code>
 
 			<div class="description short">
 				<p>Collects the manifest data for all packages in the given package states array</p>
@@ -2511,7 +2512,7 @@ initialization order.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_recoverStateFromConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#951-974" title="Go to source code">recoverStateFromConfiguration</a>( <span>array <var>$packageStatesConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#963-986" title="Go to source code">recoverStateFromConfiguration</a>( <span>array <var>$packageStatesConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Recover previous package state from given packageStatesConfiguration to be used
@@ -2551,7 +2552,7 @@ after rescanning packages.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCaseSensitivePackageKey">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#976-989" title="Go to source code">getCaseSensitivePackageKey</a>( <span>string <var>$unknownCasedPackageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#988-1001" title="Go to source code">getCaseSensitivePackageKey</a>( <span>string <var>$unknownCasedPackageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the correctly cased version of the given package key or FALSE
@@ -2596,7 +2597,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageKeyFromComposerName">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#991-1012" title="Go to source code">getPackageKeyFromComposerName</a>( <span>string <var>$composerName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1003-1024" title="Go to source code">getPackageKeyFromComposerName</a>( <span>string <var>$composerName</var></span> )</code>
 
 			<div class="description short">
 				<p>Resolves a Flow package key from a composer package name.</p>
@@ -2638,7 +2639,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageKeyValid">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1014-1024" title="Go to source code">isPackageKeyValid</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1026-1036" title="Go to source code">isPackageKeyValid</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Check the conformance of the given package key</p>
@@ -2681,7 +2682,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageKeyFromManifest">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1026-1059" title="Go to source code">getPackageKeyFromManifest</a>( <span>array <var>$manifest</var></span>, <span>string <var>$packagePath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1038-1071" title="Go to source code">getPackageKeyFromManifest</a>( <span>array <var>$manifest</var></span>, <span>string <var>$packagePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Resolves package key from Composer manifest</p>
@@ -2728,7 +2729,7 @@ case version of the composer name / namespace will be used, with backslashes rep
 
 			<td class="name"><div>
 			<a class="anchor" href="#_derivePackageKey">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1061-1098" title="Go to source code">derivePackageKey</a>( <span>string <var>$composerName</var></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packagePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$autoloadNamespace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1073-1110" title="Go to source code">derivePackageKey</a>( <span>string <var>$composerName</var></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packagePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$autoloadNamespace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Derive a flow package key from the given information.
@@ -2780,7 +2781,7 @@ The order of importance is:</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitPackageStatesUpdated">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1100-1119" title="Go to source code">emitPackageStatesUpdated</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManager.html#1112-1131" title="Go to source code">emitPackageStatesUpdated</a>( )</code>
 
 			<div class="description short">
 				<p>Emits a signal when package states have been changed (e.g. when a package was created or activated)</p>
@@ -3171,6 +3172,6 @@ The order of importance is:</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?8adc8d12dfd68afc006e0d1bfb347a41553bebab"></script>
+<script src="elementlist.js?0e9ba7e11973c9ae67738d781870e08b86ca4eb5"></script>
 </body>
 </html>
