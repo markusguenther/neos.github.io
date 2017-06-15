@@ -952,15 +952,15 @@
 </span></span><span id="196" class="l"><span class="php-comment">     * Creates a new node and renders the node inside the containing content collection.
 </span></span><span id="197" class="l"><span class="php-comment">     *
 </span></span><span id="198" class="l"><span class="php-comment">     * @param Node $referenceNode
-</span></span><span id="199" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path of the collection
+</span></span><span id="199" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path of the collection
 </span></span><span id="200" class="l"><span class="php-comment">     * @param array $nodeData
 </span></span><span id="201" class="l"><span class="php-comment">     * @param string $position where the node should be added (allowed: before, into, after)
 </span></span><span id="202" class="l"><span class="php-comment">     * @return string
 </span></span><span id="203" class="l"><span class="php-comment">     */</span>
-</span><span id="204" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createAndRenderAction(Node <span class="php-var">$referenceNode</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$nodeData</span>, <span class="php-var">$position</span>)
+</span><span id="204" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createAndRenderAction(Node <span class="php-var">$referenceNode</span>, <span class="php-var">$fusionPath</span>, <span class="php-keyword1">array</span> <span class="php-var">$nodeData</span>, <span class="php-var">$position</span>)
 </span><span id="205" class="l">    {
 </span><span id="206" class="l">        <span class="php-var">$newNode</span> = <span class="php-var">$this</span>-&gt;nodeOperations-&gt;create(<span class="php-var">$referenceNode</span>, <span class="php-var">$nodeData</span>, <span class="php-var">$position</span>);
-</span><span id="207" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$newNode</span>, <span class="php-var">$typoScriptPath</span>);
+</span><span id="207" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$newNode</span>, <span class="php-var">$fusionPath</span>);
 </span><span id="208" class="l">    }
 </span><span id="209" class="l">
 </span><span id="210" class="l">    <span class="php-comment">/**
@@ -1010,13 +1010,13 @@
 </span></span><span id="254" class="l"><span class="php-comment">     * @param Node $node The node to be moved
 </span></span><span id="255" class="l"><span class="php-comment">     * @param Node $targetNode The target node to be moved &quot;to&quot;, see $position
 </span></span><span id="256" class="l"><span class="php-comment">     * @param string $position Where the node should be added in relation to $targetNode (allowed: before, into, after)
-</span></span><span id="257" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path of the collection
+</span></span><span id="257" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path of the collection
 </span></span><span id="258" class="l"><span class="php-comment">     * @return void
 </span></span><span id="259" class="l"><span class="php-comment">     */</span>
-</span><span id="260" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> moveAndRenderAction(Node <span class="php-var">$node</span>, Node <span class="php-var">$targetNode</span>, <span class="php-var">$position</span>, <span class="php-var">$typoScriptPath</span>)
+</span><span id="260" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> moveAndRenderAction(Node <span class="php-var">$node</span>, Node <span class="php-var">$targetNode</span>, <span class="php-var">$position</span>, <span class="php-var">$fusionPath</span>)
 </span><span id="261" class="l">    {
 </span><span id="262" class="l">        <span class="php-var">$this</span>-&gt;nodeOperations-&gt;move(<span class="php-var">$node</span>, <span class="php-var">$targetNode</span>, <span class="php-var">$position</span>);
-</span><span id="263" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$node</span>, <span class="php-var">$typoScriptPath</span>);
+</span><span id="263" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$node</span>, <span class="php-var">$fusionPath</span>);
 </span><span id="264" class="l">    }
 </span><span id="265" class="l">
 </span><span id="266" class="l">    <span class="php-comment">/**
@@ -1062,13 +1062,13 @@
 </span></span><span id="306" class="l"><span class="php-comment">     * @param Node $targetNode The target node to be copied &quot;to&quot;, see $position
 </span></span><span id="307" class="l"><span class="php-comment">     * @param string $position Where the node should be added in relation to $targetNode (allowed: before, into, after)
 </span></span><span id="308" class="l"><span class="php-comment">     * @param string $nodeName Optional node name (if empty random node name will be generated)
-</span></span><span id="309" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path of the collection
+</span></span><span id="309" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path of the collection
 </span></span><span id="310" class="l"><span class="php-comment">     * @return void
 </span></span><span id="311" class="l"><span class="php-comment">     */</span>
-</span><span id="312" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> copyAndRenderAction(Node <span class="php-var">$node</span>, Node <span class="php-var">$targetNode</span>, <span class="php-var">$position</span>, <span class="php-var">$typoScriptPath</span>, <span class="php-var">$nodeName</span> = <span class="php-keyword1">null</span>)
+</span><span id="312" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> copyAndRenderAction(Node <span class="php-var">$node</span>, Node <span class="php-var">$targetNode</span>, <span class="php-var">$position</span>, <span class="php-var">$fusionPath</span>, <span class="php-var">$nodeName</span> = <span class="php-keyword1">null</span>)
 </span><span id="313" class="l">    {
 </span><span id="314" class="l">        <span class="php-var">$copiedNode</span> = <span class="php-var">$this</span>-&gt;nodeOperations-&gt;<span class="php-keyword2">copy</span>(<span class="php-var">$node</span>, <span class="php-var">$targetNode</span>, <span class="php-var">$position</span>, <span class="php-var">$nodeName</span>);
-</span><span id="315" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$copiedNode</span>, <span class="php-var">$typoScriptPath</span>);
+</span><span id="315" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$copiedNode</span>, <span class="php-var">$fusionPath</span>);
 </span><span id="316" class="l">    }
 </span><span id="317" class="l">
 </span><span id="318" class="l">    <span class="php-comment">/**
@@ -1110,12 +1110,12 @@
 </span></span><span id="354" class="l"><span class="php-comment">     * Updates the specified node and renders it's content collection.
 </span></span><span id="355" class="l"><span class="php-comment">     *
 </span></span><span id="356" class="l"><span class="php-comment">     * @param Node $node The node to be updated
-</span></span><span id="357" class="l"><span class="php-comment">     * @param string $typoScriptPath The Fusion path of the collection
+</span></span><span id="357" class="l"><span class="php-comment">     * @param string $fusionPath The Fusion path of the collection
 </span></span><span id="358" class="l"><span class="php-comment">     * @return void
 </span></span><span id="359" class="l"><span class="php-comment">     */</span>
-</span><span id="360" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateAndRenderAction(Node <span class="php-var">$node</span>, <span class="php-var">$typoScriptPath</span>)
+</span><span id="360" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateAndRenderAction(Node <span class="php-var">$node</span>, <span class="php-var">$fusionPath</span>)
 </span><span id="361" class="l">    {
-</span><span id="362" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$node</span>, <span class="php-var">$typoScriptPath</span>);
+</span><span id="362" class="l">        <span class="php-var">$this</span>-&gt;redirectToRenderNode(<span class="php-var">$node</span>, <span class="php-var">$fusionPath</span>);
 </span><span id="363" class="l">    }
 </span><span id="364" class="l">
 </span><span id="365" class="l">    <span class="php-comment">/**
@@ -1145,10 +1145,10 @@
 </span></span><span id="389" class="l"><span class="php-comment">     * Takes care of creating a redirect to properly render the collection the given node is in.
 </span></span><span id="390" class="l"><span class="php-comment">     *
 </span></span><span id="391" class="l"><span class="php-comment">     * @param NodeInterface $node
-</span></span><span id="392" class="l"><span class="php-comment">     * @param string $typoScriptPath
+</span></span><span id="392" class="l"><span class="php-comment">     * @param string $fusionPath
 </span></span><span id="393" class="l"><span class="php-comment">     * @return string
 </span></span><span id="394" class="l"><span class="php-comment">     */</span>
-</span><span id="395" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> redirectToRenderNode(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$typoScriptPath</span>)
+</span><span id="395" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> redirectToRenderNode(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$fusionPath</span>)
 </span><span id="396" class="l">    {
 </span><span id="397" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$node</span>));
 </span><span id="398" class="l">        <span class="php-var">$closestContentCollection</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:ContentCollection]'</span>)-&gt;get(<span class="php-num">0</span>);
@@ -1158,7 +1158,7 @@
 </span><span id="402" class="l">            <span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>,
 </span><span id="403" class="l">            <span class="php-quote">'__nodeContextPath'</span> =&gt; <span class="php-var">$closestContentCollection</span>-&gt;getContextPath(),
 </span><span id="404" class="l">            <span class="php-quote">'__affectedNodeContextPath'</span> =&gt; <span class="php-var">$node</span>-&gt;getContextPath(),
-</span><span id="405" class="l">            <span class="php-quote">'__typoScriptPath'</span> =&gt; <span class="php-var">$typoScriptPath</span>
+</span><span id="405" class="l">            <span class="php-quote">'__fusionPath'</span> =&gt; <span class="php-var">$fusionPath</span>
 </span><span id="406" class="l">        ], <span class="php-num">0</span>, <span class="php-num">303</span>, <span class="php-quote">'html'</span>);
 </span><span id="407" class="l">    }
 </span><span id="408" class="l">
@@ -1209,6 +1209,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?876713f2c49e07348605877d687232e8c5fad3cd"></script>
+<script src="elementlist.js?0e8701da79420df67970381c3344d8abe0ce5ac5"></script>
 </body>
 </html>
