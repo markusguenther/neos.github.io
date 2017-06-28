@@ -880,7 +880,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Kickstarter.html">Kickstarter</a>\<a href="namespace-Neos.Kickstarter.Command.html">Command</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#19-334" title="Go to source code">Neos.Kickstarter/Classes/Command/KickstartCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#21-343" title="Go to source code">Neos.Kickstarter/Classes/Command/KickstartCommandController.php</a>
 		<br>
 	</div>
 
@@ -900,7 +900,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_packageCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#37-60" title="Go to source code">packageCommand</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#39-69" title="Go to source code">packageCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$packageType</var> = Neos\Kickstarter\Command\PackageInterface::DEFAULT_COMPOSER_TYPE</span> )</code>
 
 			<div class="description short">
 				<p>Kickstart a new package</p>
@@ -919,6 +919,8 @@ template for its Index Action.</p>
 					<div class="list"><dl>
 						<dt><var>$packageKey</var></dt>
 						<dd>The package key, for example "MyCompany.MyPackageName"</dd>
+						<dt><var>$packageType</var></dt>
+						<dd>Optional package type, e.g. "neos-plugin"</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -929,7 +931,7 @@ template for its Index Action.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							typo3.flow:package:create<br>
+							neos.flow:package:create<br>
 					</div>
 
 
@@ -947,7 +949,7 @@ template for its Index Action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_actionControllerCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#62-164" title="Go to source code">actionControllerCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$controllerName</var></span>, <span>boolean <var>$generateActions</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$generateTemplates</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$generateRelated</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#71-173" title="Go to source code">actionControllerCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$controllerName</var></span>, <span>boolean <var>$generateActions</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$generateTemplates</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$generateRelated</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Kickstart a new action controller</p>
@@ -1019,7 +1021,7 @@ overridden by specifying the --force flag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commandControllerCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#166-191" title="Go to source code">commandControllerCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$controllerName</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#175-200" title="Go to source code">commandControllerCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$controllerName</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Kickstart a new command controller</p>
@@ -1068,7 +1070,7 @@ package. The generated controller class already contains an example command.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_modelCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#193-236" title="Go to source code">modelCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$modelName</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#202-245" title="Go to source code">modelCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$modelName</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Kickstart a new domain model</p>
@@ -1118,7 +1120,7 @@ a variable list of arguments with field name and type separated by a colon
 
 			<td class="name"><div>
 			<a class="anchor" href="#_repositoryCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#238-259" title="Go to source code">repositoryCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$modelName</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#247-268" title="Go to source code">repositoryCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$modelName</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Kickstart a new domain repository</p>
@@ -1166,7 +1168,7 @@ a variable list of arguments with field name and type separated by a colon
 
 			<td class="name"><div>
 			<a class="anchor" href="#_documentationCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#261-280" title="Go to source code">documentationCommand</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#270-289" title="Go to source code">documentationCommand</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Kickstart documentation</p>
@@ -1206,7 +1208,7 @@ a variable list of arguments with field name and type separated by a colon
 
 			<td class="name"><div>
 			<a class="anchor" href="#_translationCommand">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#282-303" title="Go to source code">translationCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$sourceLanguageKey</var></span>, <span>array <var>$targetLanguageKeys</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#291-312" title="Go to source code">translationCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$sourceLanguageKey</var></span>, <span>array <var>$targetLanguageKeys</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Kickstart translation</p>
@@ -1246,7 +1248,7 @@ a variable list of arguments with field name and type separated by a colon
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validatePackageKey">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#305-317" title="Go to source code">validatePackageKey</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#314-326" title="Go to source code">validatePackageKey</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks the syntax of the given $packageKey and quits with an error message if it's not valid</p>
@@ -1280,7 +1282,7 @@ a variable list of arguments with field name and type separated by a colon
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validateModelName">#</a>
-			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#319-333" title="Go to source code">validateModelName</a>( <span>string <var>$modelName</var></span> )</code>
+			<code><a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#328-342" title="Go to source code">validateModelName</a>( <span>string <var>$modelName</var></span> )</code>
 
 			<div class="description short">
 				<p>Check the given model name to be not one of the reserved words of PHP.</p>
@@ -1354,7 +1356,7 @@ a variable list of arguments with field name and type separated by a colon
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#25-29" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#27-31" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1382,7 +1384,7 @@ a variable list of arguments with field name and type separated by a colon
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#31-35" title="Go to source code"><var>$generatorService</var></a>
+					<a href="source-class-Neos.Kickstarter.Command.KickstartCommandController.html#33-37" title="Go to source code"><var>$generatorService</var></a>
 
 				<div class="description short">
 					
