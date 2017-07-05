@@ -1982,7 +1982,7 @@
 </span></span><span id="1238" class="l"><span class="php-comment">     */</span>
 </span><span id="1239" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> reduceNodeVariantsByWorkspacesAndDimensions(<span class="php-keyword1">array</span> <span class="php-var">$nodes</span>, <span class="php-keyword1">array</span> <span class="php-var">$workspaces</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span>)
 </span><span id="1240" class="l">    {
-</span><span id="1241" class="l">        <span class="php-var">$foundNodes</span> = [];
+</span><span id="1241" class="l">        <span class="php-var">$reducedNodes</span> = [];
 </span><span id="1242" class="l">
 </span><span id="1243" class="l">        <span class="php-var">$minimalDimensionPositionsByIdentifier</span> = [];
 </span><span id="1244" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
@@ -2027,12 +2027,12 @@
 </span><span id="1283" class="l">            <span class="php-var">$identifier</span> = <span class="php-var">$node</span>-&gt;getIdentifier();
 </span><span id="1284" class="l">            <span class="php-comment">// Yes, it seems to work comparing arrays that way!</span>
 </span><span id="1285" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$minimalDimensionPositionsByIdentifier</span>[<span class="php-var">$identifier</span>]) || <span class="php-var">$dimensionPositions</span> &lt; <span class="php-var">$minimalDimensionPositionsByIdentifier</span>[<span class="php-var">$identifier</span>]) {
-</span><span id="1286" class="l">                <span class="php-var">$foundNodes</span>[<span class="php-var">$identifier</span>] = <span class="php-var">$node</span>;
+</span><span id="1286" class="l">                <span class="php-var">$reducedNodes</span>[<span class="php-var">$identifier</span>] = <span class="php-var">$node</span>;
 </span><span id="1287" class="l">                <span class="php-var">$minimalDimensionPositionsByIdentifier</span>[<span class="php-var">$identifier</span>] = <span class="php-var">$dimensionPositions</span>;
 </span><span id="1288" class="l">            }
 </span><span id="1289" class="l">        }
 </span><span id="1290" class="l">
-</span><span id="1291" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$foundNodes</span>;
+</span><span id="1291" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$reducedNodes</span>;
 </span><span id="1292" class="l">    }
 </span><span id="1293" class="l">
 </span><span id="1294" class="l">    <span class="php-comment">/**
@@ -2418,6 +2418,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?1c00e87acd0aeac3bad89324d5a651c35d699ff1"></script>
+<script src="elementlist.js?9ae0cc59e2a0186b9fb7741647b53f7138a5c762"></script>
 </body>
 </html>
