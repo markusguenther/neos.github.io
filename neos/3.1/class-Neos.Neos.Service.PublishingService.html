@@ -803,7 +803,7 @@ unpublished nodes and methods for publishing nodes or whole workspaces.</p>
 				<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Service.PublishingService.html#18-58" title="Go to source code">Neos.Neos/Classes/Service/PublishingService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Service.PublishingService.html#18-90" title="Go to source code">Neos.Neos/Classes/Service/PublishingService.php</a>
 		<br>
 	</div>
 
@@ -823,7 +823,7 @@ unpublished nodes and methods for publishing nodes or whole workspaces.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishNode">#</a>
-			<code><a href="source-class-Neos.Neos.Service.PublishingService.html#27-57" title="Go to source code">publishNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.PublishingService.html#27-56" title="Go to source code">publishNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given node to the specified target workspace. If no workspace is specified, the base workspace
@@ -857,6 +857,88 @@ is assumed.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="discardNode" id="_discardNode">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_discardNode">#</a>
+			<code><a href="source-class-Neos.Neos.Service.PublishingService.html#58-75" title="Go to source code">discardNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+
+			<div class="description short">
+				<p>Discards the given node from its workspace.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Discards the given node from its workspace.</p>
+
+<p>If the given node is a Document or has ContentCollection child nodes, these nodes are discarded as well.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$node</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						WorkspaceException
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_discardNode">Neos\ContentRepository\Domain\Service\PublishingService::discardNode</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="collectAllContentChildNodes" id="_collectAllContentChildNodes">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_collectAllContentChildNodes">#</a>
+			<code><a href="source-class-Neos.Neos.Service.PublishingService.html#77-89" title="Go to source code">collectAllContentChildNodes</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$parentNode</var></span>, <span>array <var>$collectedNodes</var> = []</span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$parentNode</var></dt>
+						<dd></dd>
+						<dt><var>$collectedNodes</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 			</table>
 		</div>
 
@@ -865,7 +947,6 @@ is assumed.</p>
 			<p class="elementList">
 				<code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_createContext">createContext()</a></code>, 
 				<code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_discardAllNodes">discardAllNodes()</a></code>, 
-				<code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_discardNode">discardNode()</a></code>, 
 				<code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_discardNodes">discardNodes()</a></code>, 
 				<code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_doDiscardNode">doDiscardNode()</a></code>, 
 				<code><a href="class-Neos.ContentRepository.Domain.Service.PublishingService.html#_emitNodeDiscarded">emitNodeDiscarded()</a></code>, 
@@ -913,6 +994,6 @@ is assumed.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0e8701da79420df67970381c3344d8abe0ce5ac5"></script>
+<script src="elementlist.js?83291a9e9bc7139f6906945239859fb9429adbe5"></script>
 </body>
 </html>
