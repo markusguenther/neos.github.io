@@ -1439,7 +1439,7 @@
 </span><span id="577" class="l">                }
 </span><span id="578" class="l">            }
 </span><span id="579" class="l">        }
-</span><span id="580" class="l">        <span class="php-keyword1">return</span> (<span class="php-var">$trim</span> ? MediaTypes::trimMediaType(<span class="php-var">$negotiatedMediaType</span>) : <span class="php-var">$negotiatedMediaType</span>);
+</span><span id="580" class="l">        <span class="php-keyword1">return</span> (<span class="php-var">$trim</span> &amp;&amp; <span class="php-var">$negotiatedMediaType</span> !== <span class="php-keyword1">null</span> ? MediaTypes::trimMediaType(<span class="php-var">$negotiatedMediaType</span>) : <span class="php-var">$negotiatedMediaType</span>);
 </span><span id="581" class="l">    }
 </span><span id="582" class="l">
 </span><span id="583" class="l">    <span class="php-comment">/**
@@ -1696,6 +1696,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ce260f6096b5961389ad74f7aeea1b880580c947"></script>
+<script src="elementlist.js?29e86be9ec9f33bb1275213f8e1910b167b57517"></script>
 </body>
 </html>
