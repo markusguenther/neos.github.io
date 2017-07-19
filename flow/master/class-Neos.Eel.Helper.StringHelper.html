@@ -882,7 +882,7 @@
 
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Eel.Helper.StringHelper.html#20-598" title="Go to source code">Neos.Eel/Classes/Helper/StringHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Eel.Helper.StringHelper.html#20-623" title="Go to source code">Neos.Eel/Classes/Helper/StringHelper.php</a>
 		<br>
 	</div>
 
@@ -1228,6 +1228,56 @@ String.substring('Hello, World!', 7) == 'World!'
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="pregMatchAll" id="_pregMatchAll">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pregMatchAll">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#201-224" title="Go to source code">pregMatchAll</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span> )</code>
+
+			<div class="description short">
+				<p>Perform a global regular expression match (PREG style)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Perform a global regular expression match (PREG style)</p>
+
+<p>Example::</p>
+
+<pre><code>String.pregMatchAll("&lt;hr id="icon-one" /&gt;&lt;hr id="icon-two" /&gt;", '/id="icon-(.+?)"/')
+  == [['id="icon-one"', 'id="icon-two"'],['one','two']]
+</code></pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>The input string</dd>
+						<dt><var>$pattern</var></dt>
+						<dd>A PREG pattern</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>The matches as array or NULL if not matched
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Eel.EvaluationException.html">Neos\Eel\EvaluationException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="pregReplace" id="_pregReplace">
 
 			<td class="attributes"><code>
@@ -1239,7 +1289,7 @@ String.substring('Hello, World!', 7) == 'World!'
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pregReplace">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#201-217" title="Go to source code">pregReplace</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$replace</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#226-242" title="Go to source code">pregReplace</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$replace</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace occurrences of a search string inside the string using regular expression matching (PREG style)</p>
@@ -1287,7 +1337,7 @@ String.pregReplace("2016-08-31", "/([0-9]+)-([0-9]+)-([0-9]+)/", "$3.$2.$1") == 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pregSplit">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#219-235" title="Go to source code">pregSplit</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#244-260" title="Go to source code">pregSplit</a>( <span>string <var>$string</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Split a string by a separator using regular expression matching (PREG style)</p>
@@ -1335,7 +1385,7 @@ String.pregSplit("first second third", "/\s+/", 2) == ['first', 'second third']
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replace">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#237-254" title="Go to source code">replace</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#262-279" title="Go to source code">replace</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace occurrences of a search string inside the string</p>
@@ -1384,7 +1434,7 @@ String.pregSplit("first second third", "/\s+/", 2) == ['first', 'second third']
 
 			<td class="name"><div>
 			<a class="anchor" href="#_split">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#256-289" title="Go to source code">split</a>( <span>string <var>$string</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#281-314" title="Go to source code">split</a>( <span>string <var>$string</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Split a string by a separator</p>
@@ -1434,7 +1484,7 @@ String.split("Foo", "", 2) == ['F', 'o']
 
 			<td class="name"><div>
 			<a class="anchor" href="#_startsWith">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#291-309" title="Go to source code">startsWith</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#316-334" title="Go to source code">startsWith</a>( <span>string <var>$string</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Test if a string starts with the given search string</p>
@@ -1483,7 +1533,7 @@ String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toLowerCase">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#311-320" title="Go to source code">toLowerCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#336-345" title="Go to source code">toLowerCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Lowercase a string</p>
@@ -1521,7 +1571,7 @@ String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toUpperCase">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#322-331" title="Go to source code">toUpperCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#347-356" title="Go to source code">toUpperCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Uppercase a string</p>
@@ -1559,7 +1609,7 @@ String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_firstLetterToUpperCase">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#333-346" title="Go to source code">firstLetterToUpperCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#358-371" title="Go to source code">firstLetterToUpperCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Uppercase the first letter of a string</p>
@@ -1602,7 +1652,7 @@ String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_firstLetterToLowerCase">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#348-361" title="Go to source code">firstLetterToLowerCase</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#373-386" title="Go to source code">firstLetterToLowerCase</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Lowercase the first letter of a string</p>
@@ -1645,7 +1695,7 @@ String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_stripTags">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#363-379" title="Go to source code">stripTags</a>( <span>string <var>$string</var></span>, <span>string <var>$allowableTags</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#388-404" title="Go to source code">stripTags</a>( <span>string <var>$string</var></span>, <span>string <var>$allowableTags</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Strip all HTML tags from the given string</p>
@@ -1692,7 +1742,7 @@ String.startsWith('My hovercraft is full of...', 'hovercraft', 3) == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isBlank">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#381-395" title="Go to source code">isBlank</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#406-420" title="Go to source code">isBlank</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Test if the given string is blank (empty or consists of whitespace only)</p>
@@ -1736,7 +1786,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_trim">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#397-411" title="Go to source code">trim</a>( <span>string <var>$string</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#422-436" title="Go to source code">trim</a>( <span>string <var>$string</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Trim whitespace at the beginning and end of a string</p>
@@ -1776,7 +1826,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toString">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#413-422" title="Go to source code">toString</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#438-447" title="Go to source code">toString</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert the given value to a string</p>
@@ -1814,7 +1864,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toInteger">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#424-433" title="Go to source code">toInteger</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#449-458" title="Go to source code">toInteger</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a string to integer</p>
@@ -1852,7 +1902,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toFloat">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#435-444" title="Go to source code">toFloat</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#460-469" title="Go to source code">toFloat</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a string to float</p>
@@ -1890,7 +1940,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toBoolean">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#446-457" title="Go to source code">toBoolean</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#471-482" title="Go to source code">toBoolean</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a string to boolean</p>
@@ -1930,7 +1980,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rawUrlEncode">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#459-468" title="Go to source code">rawUrlEncode</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#484-493" title="Go to source code">rawUrlEncode</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Encode the string for URLs according to RFC 3986</p>
@@ -1968,7 +2018,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rawUrlDecode">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#470-479" title="Go to source code">rawUrlDecode</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#495-504" title="Go to source code">rawUrlDecode</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Decode the string from URLs according to RFC 3986</p>
@@ -2006,7 +2056,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_htmlSpecialChars">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#481-491" title="Go to source code">htmlSpecialChars</a>( <span>string <var>$string</var></span>, <span>boolean <var>$preserveEntities</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#506-516" title="Go to source code">htmlSpecialChars</a>( <span>string <var>$string</var></span>, <span>boolean <var>$preserveEntities</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert special characters to HTML entities</p>
@@ -2046,7 +2096,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_crop">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#493-509" title="Go to source code">crop</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#518-534" title="Go to source code">crop</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Crop a string to <code>maximumCharacters</code> length, optionally appending <code>suffix</code> if cropping was necessary.</p>
@@ -2088,7 +2138,7 @@ String.isBlank('  ') == true
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cropAtWord">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#511-529" title="Go to source code">cropAtWord</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#536-554" title="Go to source code">cropAtWord</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Crop a string to <code>maximumCharacters</code> length, taking words into account,
@@ -2132,7 +2182,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cropAtSentence">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#531-549" title="Go to source code">cropAtSentence</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#556-574" title="Go to source code">cropAtSentence</a>( <span>string <var>$string</var></span>, <span>integer <var>$maximumCharacters</var></span>, <span>string <var>$suffix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Crop a string to <code>maximumCharacters</code> length, taking sentences into account,
@@ -2176,7 +2226,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_md5">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#551-560" title="Go to source code">md5</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#576-585" title="Go to source code">md5</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Calculate the MD5 checksum of the given string</p>
@@ -2214,7 +2264,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_length">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#562-571" title="Go to source code">length</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#587-596" title="Go to source code">length</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the length of a string</p>
@@ -2252,7 +2302,7 @@ optionally appending <code>suffix</code> if cropping was necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_wordCount">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#573-586" title="Go to source code">wordCount</a>( <span>string <var>$unicodeString</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#598-611" title="Go to source code">wordCount</a>( <span>string <var>$unicodeString</var></span> )</code>
 
 			<div class="description short">
 				<p>Return the count of words for a given string. Remove marks &amp; digits and
@@ -2294,7 +2344,7 @@ For example this helper can be utilized to calculate the reading time of an arti
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsCallOfMethod">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#588-597" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.StringHelper.html#613-622" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
 
 			<div class="description short">
 				<p>All methods are considered safe</p>
@@ -2344,6 +2394,6 @@ For example this helper can be utilized to calculate the reading time of an arti
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?cd395b75e3589993b2bda1da533b9a1bc69a8e82"></script>
+<script src="elementlist.js?3c975d9c94c24a097adea45e5b076eacd478df66"></script>
 </body>
 </html>
