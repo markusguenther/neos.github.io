@@ -920,7 +920,7 @@
 </span><span id="143" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$asset</span> <span class="php-keyword1">instanceof</span> AssetInterface) {
 </span><span id="144" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \Exception(<span class="php-quote">'No asset given for rendering.'</span>, <span class="php-num">1415184217</span>);
 </span><span id="145" class="l">        }
-</span><span id="146" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$preset</span> !== <span class="php-keyword1">null</span>) {
+</span><span id="146" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$preset</span>)) {
 </span><span id="147" class="l">            <span class="php-var">$thumbnailConfiguration</span> = <span class="php-var">$this</span>-&gt;thumbnailService-&gt;getThumbnailConfigurationForPreset(<span class="php-var">$preset</span>);
 </span><span id="148" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="149" class="l">            <span class="php-var">$thumbnailConfiguration</span> = <span class="php-keyword1">new</span> ThumbnailConfiguration(<span class="php-var">$this</span>-&gt;getWidth(), <span class="php-var">$this</span>-&gt;getMaximumWidth(), <span class="php-var">$this</span>-&gt;getHeight(), <span class="php-var">$this</span>-&gt;getMaximumHeight(), <span class="php-var">$this</span>-&gt;getAllowCropping(), <span class="php-var">$this</span>-&gt;getAllowUpScaling(), <span class="php-var">$this</span>-&gt;getAsync());
