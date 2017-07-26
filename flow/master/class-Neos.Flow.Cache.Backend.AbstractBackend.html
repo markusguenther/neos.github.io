@@ -868,10 +868,7 @@
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Cache.Backend.AbstractBackend.html"><span>Neos\Cache\Backend\AbstractBackend</span></a>
-			
-			 implements 
-				<a href="class-Neos.Cache.Backend.BackendInterface.html"><span>Neos\Cache\Backend\BackendInterface</span></a>
+Neos\Cache\Backend\AbstractBackend
 			
 			
 		</dd>
@@ -905,7 +902,7 @@
 				<b>Deprecated:</b>
 				This is replaced by \Neos\Cache\Backend\AbstractBackend which has a different constructor, you need to adapt any custom cache backend to that.<br>
 				<b>See:</b>
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html">Neos\Cache\Backend\AbstractBackend</a></code><br>
+				\Neos\Cache\Backend\AbstractBackend<br>
 			<b>Located at</b> <a href="source-class-Neos.Flow.Cache.Backend.AbstractBackend.html#19-66" title="Go to source code">Neos.Flow/Classes/Cache/Backend/AbstractBackend.php</a>
 		<br>
 	</div>
@@ -926,7 +923,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Cache.Backend.AbstractBackend.html#41-54" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Core.ApplicationContext.html">Neos\Flow\Core\ApplicationContext</a></code> <var>$context</var></span>, <span>array <var>$options</var> = []</span>, <span><code><a href="class-Neos.Cache.EnvironmentConfiguration.html">Neos\Cache\EnvironmentConfiguration</a></code> <var>$environmentConfiguration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Cache.Backend.AbstractBackend.html#41-54" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Core.ApplicationContext.html">Neos\Flow\Core\ApplicationContext</a></code> <var>$context</var></span>, <span>array <var>$options</var> = []</span>, <span>Neos\Cache\EnvironmentConfiguration <var>$environmentConfiguration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Constructs this backend</p>
@@ -952,8 +949,6 @@
 					<div class="list">
 					</div>
 
-					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Neos.Cache.Backend.AbstractBackend.html#___construct">Neos\Cache\Backend\AbstractBackend::__construct</a></code></div>
 
 			</div>
 			</div></td>
@@ -996,25 +991,16 @@
 		</div>
 
 		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Cache.Backend.AbstractBackend.html#methods">Neos\Cache\Backend\AbstractBackend</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#_calculateExpiryTime">calculateExpiryTime()</a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#_getPrefixedIdentifier">getPrefixedIdentifier()</a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#_setCache">setCache()</a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#_setDefaultLifetime">setDefaultLifetime()</a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#_setProperties">setProperties()</a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#_setProperty">setProperty()</a></code>
-			</p>
-		</div>
-		<div class="panel panel-default">
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Cache.Backend.BackendInterface.html#methods">Neos\Cache\Backend\BackendInterface</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_collectGarbage">collectGarbage()</a></code>, 
 				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_flush">flush()</a></code>, 
 				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_get">get()</a></code>, 
+				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_getPrefixedIdentifier">getPrefixedIdentifier()</a></code>, 
 				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_has">has()</a></code>, 
 				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_remove">remove()</a></code>, 
-				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_set">set()</a></code>
+				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_set">set()</a></code>, 
+				<code><a href="class-Neos.Cache.Backend.BackendInterface.html#_setCache">setCache()</a></code>
 			</p>
 		</div>
 
@@ -1024,17 +1010,6 @@
 
 
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Constants summary</h2></div>
-		</div>
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Constants inherited from <a href="class-Neos.Cache.Backend.AbstractBackend.html#constants">Neos\Cache\Backend\AbstractBackend</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#DATETIME_EXPIRYTIME_UNLIMITED"><b>DATETIME_EXPIRYTIME_UNLIMITED</b></a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#UNLIMITED_LIFETIME"><b>UNLIMITED_LIFETIME</b></a></code>
-			</p>
-		</div>
 
 
 
@@ -1094,15 +1069,6 @@
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Cache.Backend.AbstractBackend.html#properties">Neos\Cache\Backend\AbstractBackend</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#$cache"><var>$cache</var></a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#$cacheIdentifier"><var>$cacheIdentifier</var></a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#$defaultLifetime"><var>$defaultLifetime</var></a></code>, 
-				<code><a href="class-Neos.Cache.Backend.AbstractBackend.html#$environmentConfiguration"><var>$environmentConfiguration</var></a></code>
-			</p>
-		</div>
 
 
 
@@ -1116,6 +1082,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?3c975d9c94c24a097adea45e5b076eacd478df66"></script>
+<script src="elementlist.js?ce5c3d2b2f512037f80581e561e15d5705f66d55"></script>
 </body>
 </html>
