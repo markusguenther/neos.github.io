@@ -823,7 +823,7 @@ container that could be exchanged in the future.</p>
 
 <p>The parentpath index above is actually limited to a size of 255 characters in the corresponding MySQL migration,
 something that cannot be expressed through the annotation.</p><br>
-			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#33-1097" title="Go to source code">Neos.ContentRepository/Classes/Domain/Model/NodeData.php</a>
+			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#33-1125" title="Go to source code">Neos.ContentRepository/Classes/Domain/Model/NodeData.php</a>
 		<br>
 	</div>
 
@@ -2162,7 +2162,7 @@ An internal NodeData should never produce a Node object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_move">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#857-939" title="Go to source code">move</a>( <span>string <var>$path</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#857-962" title="Go to source code">move</a>( <span>string <var>$targetPath</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$targetWorkspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Move this NodeData to the given path and workspace.</p>
@@ -2184,9 +2184,9 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$path</var></dt>
+						<dt><var>$targetPath</var></dt>
 						<dd></dd>
-						<dt><var>$workspace</var></dt>
+						<dt><var>$targetWorkspace</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -2201,7 +2201,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getExistingShadowNodeData" id="_getExistingShadowNodeData">
+		<tr data-order="getExistingShadowNodeDataInExactWorkspace" id="_getExistingShadowNodeDataInExactWorkspace">
 
 			<td class="attributes"><code>
 				 protected 
@@ -2211,8 +2211,8 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getExistingShadowNodeData">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#941-952" title="Go to source code">getExistingShadowNodeData</a>( <span>string <var>$path</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
+			<a class="anchor" href="#_getExistingShadowNodeDataInExactWorkspace">#</a>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#964-979" title="Go to source code">getExistingShadowNodeDataInExactWorkspace</a>( <span>string <var>$path</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>array <var>$dimensionValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Find an existing shadow node data on the given path for the current node data of the node (used by setPath)</p>
@@ -2227,9 +2227,9 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 						<dt><var>$path</var></dt>
 						<dd>The (new) path of the node data</dd>
 						<dt><var>$workspace</var></dt>
-						<dd></dd>
+						<dd>The workspace. Only shadow node data object with exactly this workspace will be considered</dd>
 						<dt><var>$dimensionValues</var></dt>
-						<dd></dd>
+						<dd>Dimension values which must match with an existing node data object</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -2254,7 +2254,7 @@ existing NodeData instances are re-used and the metadata and content is swapped 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createShadow">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#954-970" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#981-997" title="Go to source code">createShadow</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a shadow NodeData at the given path with the same workspace and dimensions as this</p>
@@ -2295,7 +2295,7 @@ Internal method, do not use outside of the content repository.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAsShadowOf">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#972-984" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#999-1011" title="Go to source code">setAsShadowOf</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>This becomes a shdow of the given NodeData object.
@@ -2331,7 +2331,7 @@ If NULL or no argument is given then movedTo is nulled and removed is set to FAL
 
 			<td class="name"><div>
 			<a class="anchor" href="#_materializeToWorkspace">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#986-1003" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1013-1030" title="Go to source code">materializeToWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Materializes the original node data (of a different workspace) into the current
@@ -2373,7 +2373,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addOrUpdate">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1005-1037" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1032-1065" title="Go to source code">addOrUpdate</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds this node to the Node Repository or updates it if it has been added earlier</p>
@@ -2413,7 +2413,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateContentObject">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1039-1048" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1067-1076" title="Go to source code">updateContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the attached content object</p>
@@ -2449,7 +2449,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculatePathHash">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1050-1058" title="Go to source code">calculatePathHash</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1078-1086" title="Go to source code">calculatePathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the path of this instance.</p>
@@ -2478,7 +2478,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculateParentPathHash">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1060-1068" title="Go to source code">calculateParentPathHash</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1088-1096" title="Go to source code">calculateParentPathHash</a>( )</code>
 
 			<div class="description short">
 				<p>Calculates the hash corresponding to the dimensions and their values for this instance.</p>
@@ -2507,7 +2507,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1070-1085" title="Go to source code">__clone</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1098-1113" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Create a fresh collection instance and clone dimensions</p>
@@ -2536,7 +2536,7 @@ workspace, excluding content dimensions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitNodePathChanged">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1087-1096" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeData.html#1115-1124" title="Go to source code">emitNodePathChanged</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeData.html">Neos\ContentRepository\Domain\Model\NodeData</a></code> <var>$nodeData</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a node has changed its path.</p>
@@ -3283,6 +3283,6 @@ The hash is generated in buildDimensionValues().</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?facd8ac73dddea0bc950c046443c821bc1af7d0c"></script>
+<script src="elementlist.js?dd2dcd7e47cad6f2a3572d36c0ba9bde29288ee2"></script>
 </body>
 </html>
