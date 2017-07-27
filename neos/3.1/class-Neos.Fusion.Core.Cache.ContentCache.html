@@ -794,7 +794,7 @@ rendered by the Fusion Runtime.</p>
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#24-417" title="Go to source code">Neos.Fusion/Classes/Core/Cache/ContentCache.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#24-421" title="Go to source code">Neos.Fusion/Classes/Core/Cache/ContentCache.php</a>
 		<br>
 	</div>
 
@@ -1086,7 +1086,7 @@ segments which can be cached to the actual cache and returns the cleaned up orig
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#241-280" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#241-284" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$cacheDiscriminator</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Tries to retrieve the specified content segment from the cache – further nested inline segments are retrieved
@@ -1108,6 +1108,8 @@ as well and segments which were not cacheable are rendered.</p>
 						<dd>Further values which play into the cache identifier hash, must be the same as the ones specified while the cache entry was written</dd>
 						<dt><var>$addCacheSegmentMarkersToPlaceholders</var></dt>
 						<dd>If cache segment markers should be added – this makes sense if the cached segment is about to be included in a not-yet-cached segment</dd>
+						<dt><var>$cacheDiscriminator</var></dt>
+						<dd>The evaluated cache discriminator value, if any</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1136,7 +1138,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceCachePlaceholders">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#282-311" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#286-315" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
 
 			<div class="description short">
 				<p>Find cache placeholders in a cached segment and return the identifiers</p>
@@ -1176,7 +1178,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceUncachedPlaceholders">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#313-329" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#317-333" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace segments which are marked as not-cacheable by their actual content by invoking the Fusion Runtime.</p>
@@ -1216,7 +1218,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_serializeContext">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#331-350" title="Go to source code">serializeContext</a>( <span>array <var>$contextVariables</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#335-354" title="Go to source code">serializeContext</a>( <span>array <var>$contextVariables</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates an array of strings from the given array of context variables</p>
@@ -1258,7 +1260,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTypeForContextValue">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#352-370" title="Go to source code">getTypeForContextValue</a>( <span>mixed <var>$contextValue</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#356-374" title="Go to source code">getTypeForContextValue</a>( <span>mixed <var>$contextValue</var></span> )</code>
 
 			<div class="description short">
 				<p>TODO: Adapt to Flow change https://review.typo3.org/#/c/33138/</p>
@@ -1296,7 +1298,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushByTag">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#372-381" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#376-385" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Flush content cache entries by tag</p>
@@ -1334,7 +1336,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#383-391" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#387-395" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Flush all content cache entries</p>
@@ -1363,7 +1365,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sanitizeTag">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#393-402" title="Go to source code">sanitizeTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#397-406" title="Go to source code">sanitizeTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Sanitizes the given tag for use with the cache framework</p>
@@ -1401,7 +1403,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sanitizeTags">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#404-416" title="Go to source code">sanitizeTags</a>( <span>array <var>$tags</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#408-420" title="Go to source code">sanitizeTags</a>( <span>array <var>$tags</var></span> )</code>
 
 			<div class="description short">
 				<p>Sanitizes multiple tags with sanitizeTag()</p>
@@ -1869,6 +1871,6 @@ the application.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?83291a9e9bc7139f6906945239859fb9429adbe5"></script>
+<script src="elementlist.js?39272562a67f1f6aa6da92ad89a8fd80adba2ac0"></script>
 </body>
 </html>
