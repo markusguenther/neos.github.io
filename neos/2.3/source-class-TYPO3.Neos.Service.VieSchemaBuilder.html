@@ -845,8 +845,8 @@
 </span><span id="90" class="l">            }
 </span><span id="91" class="l">        }
 </span><span id="92" class="l">
-</span><span id="93" class="l">            <span class="php-comment">// Convert the TYPO3.Neos:ContentCollection element to support content-collection</span>
-</span><span id="94" class="l">            <span class="php-comment">// TODO Move to node type definition</span>
+</span><span id="93" class="l">        <span class="php-comment">// Convert the TYPO3.Neos:ContentCollection element to support content-collection</span>
+</span><span id="94" class="l">        <span class="php-comment">// TODO Move to node type definition</span>
 </span><span id="95" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;types[<span class="php-quote">'typo3:TYPO3.Neos:ContentCollection'</span>])) {
 </span><span id="96" class="l">            <span class="php-var">$this</span>-&gt;addProperty(<span class="php-quote">'typo3:TYPO3.Neos:ContentCollection'</span>, <span class="php-quote">'typo3:content-collection'</span>, <span class="php-keyword1">array</span>());
 </span><span id="97" class="l">            <span class="php-var">$this</span>-&gt;types[<span class="php-quote">'typo3:TYPO3.Neos:ContentCollection'</span>]-&gt;specific_properties[] = <span class="php-quote">'typo3:content-collection'</span>;
