@@ -302,6 +302,10 @@
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
 								</ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Log.html">
@@ -967,7 +971,7 @@
 </span><span id="115" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$flashMessages</span> <span class="php-keyword1">as</span> <span class="php-var">$singleFlashMessage</span>) {
 </span><span id="116" class="l">            <span class="php-var">$severityClass</span> = <span class="php-keyword2">sprintf</span>(<span class="php-quote">'%s-%s'</span>, <span class="php-var">$flashMessagesClass</span>, <span class="php-keyword2">strtolower</span>(<span class="php-var">$singleFlashMessage</span>-&gt;getSeverity()));
 </span><span id="117" class="l">            <span class="php-var">$messageContent</span> = <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$singleFlashMessage</span>-&gt;render());
-</span><span id="118" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$singleFlashMessage</span>-&gt;getTitle() !== <span class="php-quote">''</span>) {
+</span><span id="118" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$singleFlashMessage</span>-&gt;hasTitle()) {
 </span><span id="119" class="l">                <span class="php-var">$messageContent</span> = <span class="php-keyword2">sprintf</span>(<span class="php-quote">'&lt;h3&gt;%s&lt;/h3&gt;'</span>, <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$singleFlashMessage</span>-&gt;getTitle())) . <span class="php-var">$messageContent</span>;
 </span><span id="120" class="l">            }
 </span><span id="121" class="l">            <span class="php-var">$tagContent</span> .= <span class="php-keyword2">sprintf</span>(<span class="php-quote">'&lt;li class=&quot;%s&quot;&gt;%s&lt;/li&gt;'</span>, <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$severityClass</span>), <span class="php-var">$messageContent</span>);
@@ -1006,6 +1010,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

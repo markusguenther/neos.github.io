@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\I18n\Xliff\XliffModel | Flow Framework (master branch)</title>
+	<title>Class Neos\Flow\Http\UploadedFile | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.Flow.I18n.Xliff.html" title="Summary of Neos\Flow\I18n\Xliff"><span>Namespace</span></a>
+						<a href="namespace-Neos.Flow.Http.html" title="Summary of Neos\Flow\Http"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -222,7 +222,7 @@
 						<a href="namespace-Neos.Flow.Error.html">
 							Error						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.Http.html">
 							Http<span></span>
 						</a>
@@ -236,7 +236,7 @@
 							Component						</a>
 							</li>
 								</ul></li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Flow.I18n.html">
 							I18n<span></span>
 						</a>
@@ -292,7 +292,7 @@
 							Exception						</a>
 							</li>
 								</ul></li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Flow.I18n.Xliff.html">
 							Xliff<span></span>
 						</a>
@@ -300,6 +300,10 @@
 					<li>
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -827,12 +831,30 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Neos.Flow.I18n.Xliff.XliffModel.html">XliffModel</a></li>
-				<li><a href="class-Neos.Flow.I18n.Xliff.XliffParser.html">XliffParser</a></li>
+				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
+				<li><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
+				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
+				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
+				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
+				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
+				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
+				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li class="active"><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
+				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
+				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">HttpRequestHandlerInterface</a></li>
 			</ul>
 
 
-
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Http.Exception.html">Exception</a></li>
+			</ul>
 
 
 		</div>
@@ -844,26 +866,30 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class XliffModel</h1>
+	<h1>Class UploadedFile</h1>
 
 
 	<div class="description">
-	<p>A model representing data from one XLIFF file.</p>
-
-<p>Please note that plural forms for particular translation unit are accessed
-with integer index (and not string like 'zero', 'one', 'many' etc). This is
-because they are indexed such way in XLIFF files in order to not break tools'
-support.</p>
-
-<p>There are very few XLIFF editors, but they are nice Gettext's .po editors
-available. Gettext supports plural forms, but it indexes them using integer
-numbers. Leaving it this way in .xlf files, makes it possible to easily convert
-them to .po (e.g. using xliff2po from Translation Toolkit), edit with Poedit,
-and convert back to .xlf without any information loss (using po2xliff).</p>
+	<p>Generic implementation of the PSR-7 UploadedFileInterface.</p>
 	</div>
 
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Neos\Flow\Http\UploadedFile</span></b>			
+			 implements 
+<span>Psr\Http\Message\UploadedFileInterface</span>
+			
+			
+		</dd>
+	</dl>
 
 
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-Neos.Flow.Http.FlowUploadedFile.html">Neos\Flow\Http\FlowUploadedFile</a></code>
+		</p>
+	</div>
 
 
 
@@ -873,12 +899,12 @@ and convert back to .xlf without any information loss (using po2xliff).</p>
 	<div class="alert alert-info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.I18n.html">I18n</a>\<a href="namespace-Neos.Flow.I18n.Xliff.html">Xliff</a><br>
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Http.html">Http</a><br>
 		
 
-				<b>See:</b>
-				http://docs.oasis-open.org/xliff/v1.2/xliff-profile-po/xliff-profile-po-1.2-cd02.html#s.detailed_mapping.tu<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#19-182" title="Go to source code">Neos.Flow/Classes/I18n/Xliff/XliffModel.php</a>
+				<b>Api:</b>
+				PSR-7<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.UploadedFile.html#10-298" title="Go to source code">Neos.Flow/Classes/Http/UploadedFile.php</a>
 		<br>
 	</div>
 
@@ -898,7 +924,7 @@ and convert back to .xlf without any information loss (using po2xliff).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#75-83" title="Go to source code">__construct</a>( <span>string <var>$sourcePath</var></span>, <span><code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code> <var>$locale</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#52-69" title="Go to source code">__construct</a>( <span>Psr\Http\Message\StreamInterface|string|resource <var>$streamOrFile</var></span>, <span>integer <var>$size</var></span>, <span>integer <var>$errorStatus</var></span>, <span>string|null <var>$clientFilename</var> = <span class="php-keyword1">null</span></span>, <span>string|null <var>$clientMediaType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -910,43 +936,15 @@ and convert back to .xlf without any information loss (using po2xliff).</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$sourcePath</var></dt>
+						<dt><var>$streamOrFile</var></dt>
 						<dd></dd>
-						<dt><var>$locale</var></dt>
-						<dd>The locale represented by the file</dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="injectCache" id="_injectCache">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_injectCache">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#85-94" title="Go to source code">injectCache</a>( <span>Neos\Cache\Frontend\VariableFrontend <var>$cache</var></span> )</code>
-
-			<div class="description short">
-				<p>Injects the Flow_I18n_XmlModelCache cache</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Injects the Flow_I18n_XmlModelCache cache</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$cache</var></dt>
+						<dt><var>$size</var></dt>
+						<dd></dd>
+						<dt><var>$errorStatus</var></dt>
+						<dd></dd>
+						<dt><var>$clientFilename</var></dt>
+						<dd></dd>
+						<dt><var>$clientMediaType</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -957,105 +955,69 @@ and convert back to .xlf without any information loss (using po2xliff).</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="injectParser" id="_injectParser">
+		<tr data-order="setStreamOrFile" id="_setStreamOrFile">
 
 			<td class="attributes"><code>
-				 public 
+				 protected 
 				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_injectParser">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#96-103" title="Go to source code">injectParser</a>( <span><code><a href="class-Neos.Flow.I18n.Xliff.XliffParser.html">Neos\Flow\I18n\Xliff\XliffParser</a></code> <var>$parser</var></span> )</code>
+			<a class="anchor" href="#_setStreamOrFile">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#71-90" title="Go to source code">setStreamOrFile</a>( <span>string|Psr\Http\Message\StreamInterface|resource <var>$streamOrFile</var></span> )</code>
 
 			<div class="description short">
-				
+				<p>Depending on the value set file or stream variable</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Depending on the value set file or stream variable</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$parser</var></dt>
+						<dt><var>$streamOrFile</var></dt>
 						<dd></dd>
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException
+					</div>
 
 
 
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="initializeObject" id="_initializeObject">
+		<tr data-order="isOk" id="_isOk">
 
 			<td class="attributes"><code>
-				 public 
-				
+				 protected 
+				boolean
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#105-119" title="Go to source code">initializeObject</a>( )</code>
+			<a class="anchor" href="#_isOk">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#92-100" title="Go to source code">isOk</a>( )</code>
 
 			<div class="description short">
-				<p>When it's called, XML file is parsed (using parser set in $xmlParser)
-or cache is loaded, if available.</p>
+				<p>Return true if there is no upload error</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>When it's called, XML file is parsed (using parser set in $xmlParser)
-or cache is loaded, if available.</p>
+				<p>Return true if there is no upload error</p>
 
 
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getTargetBySource" id="_getTargetBySource">
-
-			<td class="attributes"><code>
-				 public 
-				mixed
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getTargetBySource">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#121-150" title="Go to source code">getTargetBySource</a>( <span>string <var>$source</var></span>, <span>integer <var>$pluralFormIndex</var> = <span class="php-num">0</span></span> )</code>
-
-			<div class="description short">
-				<p>Returns translated label ("target" tag in XLIFF) from source-target
-pair where "source" tag equals to $source parameter.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns translated label ("target" tag in XLIFF) from source-target
-pair where "source" tag equals to $source parameter.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$source</var></dt>
-						<dd>Label in original language ("source" tag in XLIFF)</dd>
-						<dt><var>$pluralFormIndex</var></dt>
-						<dd>Index of plural form to use (starts with 0)</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed<br>Translated label or FALSE on failure
+						boolean
 					</div>
 
 
@@ -1064,42 +1026,395 @@ pair where "source" tag equals to $source parameter.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getTargetByTransUnitId" id="_getTargetByTransUnitId">
+		<tr data-order="isMoved" id="_isMoved">
 
 			<td class="attributes"><code>
 				 public 
-				mixed
+				boolean
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getTargetByTransUnitId">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#152-181" title="Go to source code">getTargetByTransUnitId</a>( <span>string <var>$transUnitId</var></span>, <span>integer <var>$pluralFormIndex</var> = <span class="php-num">0</span></span> )</code>
+			<a class="anchor" href="#_isMoved">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#102-108" title="Go to source code">isMoved</a>( )</code>
 
 			<div class="description short">
-				<p>Returns translated label ("target" tag in XLIFF) for the id given.
-Id is compared with "id" attribute of "trans-unit" tag (see XLIFF
-specification for details).</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns translated label ("target" tag in XLIFF) for the id given.
-Id is compared with "id" attribute of "trans-unit" tag (see XLIFF
-specification for details).</p>
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStream" id="_getStream">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStream">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#110-134" title="Go to source code">getStream</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve a stream representing the uploaded file.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve a stream representing the uploaded file.</p>
+
+<p>This method MUST return a StreamInterface instance, representing the
+uploaded file. The purpose of this method is to allow utilizing native PHP
+stream functionality to manipulate the file upload, such as
+stream_copy_to_stream() (though the result will need to be decorated in a
+native PHP stream wrapper to work with such functions).</p>
+
+<p>If the moveTo() method has been called previously, this method MUST raise
+an exception.</p>
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						RuntimeException<br>if the upload was not successful.
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="moveTo" id="_moveTo">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_moveTo">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#136-189" title="Go to source code">moveTo</a>( <span>string <var>$targetPath</var></span> )</code>
+
+			<div class="description short">
+				<p>Move the uploaded file to a new location.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Move the uploaded file to a new location.</p>
+
+<p>Use this method as an alternative to move_uploaded_file(). This method is
+guaranteed to work in both SAPI and non-SAPI environments.
+Implementations must determine which environment they are in, and use the
+appropriate method (move_uploaded_file(), rename(), or a stream
+operation) to perform the operation.</p>
+
+<p>$targetPath may be an absolute path, or a relative path. If it is a
+relative path, resolution should be the same as used by PHP's rename()
+function.</p>
+
+<p>The original file or stream MUST be removed on completion.</p>
+
+<p>If this method is called more than once, any subsequent calls MUST raise
+an exception.</p>
+
+<p>When used in an SAPI environment where $_FILES is populated, when writing
+files via moveTo(), is_uploaded_file() and move_uploaded_file() SHOULD be
+used to ensure permissions and upload status are verified correctly.</p>
+
+<p>If you wish to move to a stream, use getStream(), as SAPI operations
+cannot guarantee writing to stream destinations.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$transUnitId</var></dt>
-						<dd>The "id" attribute of "trans-unit" tag in XLIFF</dd>
-						<dt><var>$pluralFormIndex</var></dt>
-						<dd>Index of plural form to use (starts with 0)</dd>
+						<dt><var>$targetPath</var></dt>
+						<dd>Path to which to move the uploaded file.</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						RuntimeException<br>if the upload was not successful.<br>
+						InvalidArgumentException<br>if the $path specified is invalid.<br>
+						RuntimeException<br><p>on any error during the move operation, or on
+    the second or subsequent call to the method.</p>
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							http://php.net/is_uploaded_file<br>
+							http://php.net/move_uploaded_file<br>
+					</div>
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSize" id="_getSize">
+
+			<td class="attributes"><code>
+				 public 
+				integer|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSize">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#191-204" title="Go to source code">getSize</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve the file size.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve the file size.</p>
+
+<p>Implementations SHOULD return the value stored in the "size" key of
+the file in the $_FILES array if available, as PHP calculates this based
+on the actual size transmitted.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer|null<br>The file size in bytes or null if unknown.
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getError" id="_getError">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getError">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#206-224" title="Go to source code">getError</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve the error associated with the uploaded file.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve the error associated with the uploaded file.</p>
+
+<p>The return value MUST be one of PHP's UPLOAD_ERR_XXX constants.</p>
+
+<p>If the file was uploaded successfully, this method MUST return
+UPLOAD_ERR_OK.</p>
+
+<p>Implementations SHOULD return the value stored in the "error" key of
+the file in the $_FILES array.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>One of PHP's UPLOAD_ERR_XXX constants.
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							http://php.net/manual/en/features.file-upload.errors.php<br>
+					</div>
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getClientFilename" id="_getClientFilename">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getClientFilename">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#226-243" title="Go to source code">getClientFilename</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve the filename sent by the client.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve the filename sent by the client.</p>
+
+<p>Do not trust the value returned by this method. A client could send
+a malicious filename with the intention to corrupt or hack your
+application.</p>
+
+<p>Implementations SHOULD return the value stored in the "name" key of
+the file in the $_FILES array.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string|null<br><p>The filename sent by the client or null if none
+    was provided.</p>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getClientMediaType" id="_getClientMediaType">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getClientMediaType">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#245-260" title="Go to source code">getClientMediaType</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve the media type sent by the client.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve the media type sent by the client.</p>
+
+<p>Do not trust the value returned by this method. A client could send
+a malicious media type with the intention to corrupt or hack your
+application.</p>
+
+<p>Implementations SHOULD return the value stored in the "type" key of
+the file in the $_FILES array.</p>
+
+
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="throwExceptionIfNotAccessible" id="_throwExceptionIfNotAccessible">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_throwExceptionIfNotAccessible">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#262-274" title="Go to source code">throwExceptionIfNotAccessible</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						RuntimeException<br>if is moved or not ok
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="writeFile" id="_writeFile">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_writeFile">#</a>
+			<code><a href="source-class-Neos.Flow.Http.UploadedFile.html#276-297" title="Go to source code">writeFile</a>( <span>string <var>$path</var></span> )</code>
+
+			<div class="description short">
+				<p>Write the uploaded file to the given path.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Write the uploaded file to the given path.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed<br>Translated label or FALSE on failure
+						boolean
 					</div>
 
 
@@ -1124,91 +1439,39 @@ specification for details).</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="cache" id="$cache">
-			<td class="attributes"><code>
-				protected  
-				Neos\Cache\Frontend\VariableFrontend
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#37-40" title="Go to source code"><var>$cache</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$cache" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="xmlParser" id="$xmlParser">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Flow.I18n.Xliff.XliffParser.html">Neos\Flow\I18n\Xliff\XliffParser</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#42-48" title="Go to source code"><var>$xmlParser</var></a>
-
-				<div class="description short">
-					<p>Concrete XML parser which is set by more specific model extending this
-class.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Concrete XML parser which is set by more specific model extending this
-class.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$xmlParser" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="sourcePath" id="$sourcePath">
+		<tr data-order="clientFilename" id="$clientFilename">
 			<td class="attributes"><code>
 				protected  
 				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#50-55" title="Go to source code"><var>$sourcePath</var></a>
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#17-20" title="Go to source code"><var>$clientFilename</var></a>
 
 				<div class="description short">
-					<p>Absolute path to the file which is represented by this class instance.</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Absolute path to the file which is represented by this class instance.</p>
+					
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$sourcePath" class="anchor">#</a>
+					<a href="#$clientFilename" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="locale" id="$locale">
+		<tr data-order="clientMediaType" id="$clientMediaType">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code>
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#57-60" title="Go to source code"><var>$locale</var></a>
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#22-25" title="Go to source code"><var>$clientMediaType</var></a>
 
 				<div class="description short">
 					
@@ -1221,19 +1484,19 @@ class.</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$locale" class="anchor">#</a>
+					<a href="#$clientMediaType" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="i18nLogger" id="$i18nLogger">
+		<tr data-order="error" id="$error">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.LoggerInterface.html">Neos\Flow\Log\LoggerInterface</a></code>
+				integer
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#62-66" title="Go to source code"><var>$i18nLogger</var></a>
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#27-30" title="Go to source code"><var>$error</var></a>
 
 				<div class="description short">
 					
@@ -1242,39 +1505,111 @@ class.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$i18nLogger" class="anchor">#</a>
+					<a href="#$error" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="xmlParsedData" id="$xmlParsedData">
+		<tr data-order="file" id="$file">
 			<td class="attributes"><code>
 				protected  
-				array
+				null|string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.Xliff.XliffModel.html#68-73" title="Go to source code"><var>$xmlParsedData</var></a>
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#32-35" title="Go to source code"><var>$file</var></a>
 
 				<div class="description short">
-					<p>Parsed data (structure depends on concrete model).</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Parsed data (structure depends on concrete model).</p>
+					
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$xmlParsedData" class="anchor">#</a>
+					<a href="#$file" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="moved" id="$moved">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#37-40" title="Go to source code"><var>$moved</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$moved" class="anchor">#</a>
+					<code><span class="php-keyword1">false</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="size" id="$size">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#42-45" title="Go to source code"><var>$size</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$size" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="stream" id="$stream">
+			<td class="attributes"><code>
+				protected  
+				Psr\Http\Message\StreamInterface|null
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.UploadedFile.html#47-50" title="Go to source code"><var>$stream</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$stream" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1295,6 +1630,6 @@ class.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

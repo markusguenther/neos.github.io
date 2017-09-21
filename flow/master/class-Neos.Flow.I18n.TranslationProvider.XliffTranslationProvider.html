@@ -301,6 +301,10 @@
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
 								</ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Log.html">
@@ -880,7 +884,7 @@ file format to store labels.</p>
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#21-164" title="Go to source code">Neos.Flow/Classes/I18n/TranslationProvider/XliffTranslationProvider.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#17-116" title="Go to source code">Neos.Flow/Classes/I18n/TranslationProvider/XliffTranslationProvider.php</a>
 		<br>
 	</div>
 
@@ -889,7 +893,7 @@ file format to store labels.</p>
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="injectLocalizationService" id="_injectLocalizationService">
+		<tr data-order="injectFileProvider" id="_injectFileProvider">
 
 			<td class="attributes"><code>
 				 public 
@@ -899,8 +903,8 @@ file format to store labels.</p>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_injectLocalizationService">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#56-63" title="Go to source code">injectLocalizationService</a>( <span><code><a href="class-Neos.Flow.I18n.Service.html">Neos\Flow\I18n\Service</a></code> <var>$localizationService</var></span> )</code>
+			<a class="anchor" href="#_injectFileProvider">#</a>
+			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#35-42" title="Go to source code">injectFileProvider</a>( <span>Neos\Flow\I18n\Xliff\Service\XliffFileProvider <var>$fileProvider</var></span> )</code>
 
 			<div class="description short">
 				
@@ -912,7 +916,7 @@ file format to store labels.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$localizationService</var></dt>
+						<dt><var>$fileProvider</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -934,7 +938,7 @@ file format to store labels.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectPluralsReader">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#65-72" title="Go to source code">injectPluralsReader</a>( <span><code><a href="class-Neos.Flow.I18n.Cldr.Reader.PluralsReader.html">Neos\Flow\I18n\Cldr\Reader\PluralsReader</a></code> <var>$pluralsReader</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#44-51" title="Go to source code">injectPluralsReader</a>( <span><code><a href="class-Neos.Flow.I18n.Cldr.Reader.PluralsReader.html">Neos\Flow\I18n\Cldr\Reader\PluralsReader</a></code> <var>$pluralsReader</var></span> )</code>
 
 			<div class="description short">
 				
@@ -968,7 +972,7 @@ file format to store labels.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTranslationByOriginalLabel">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#74-104" title="Go to source code">getTranslationByOriginalLabel</a>( <span>string <var>$originalLabel</var></span>, <span><code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code> <var>$locale</var></span>, <span>string <var>$pluralForm</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$sourceName</var> = <span class="php-quote">'Main'</span></span>, <span>string <var>$packageKey</var> = <span class="php-quote">'Neos.Flow'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#53-83" title="Go to source code">getTranslationByOriginalLabel</a>( <span>string <var>$originalLabel</var></span>, <span><code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code> <var>$locale</var></span>, <span>string <var>$pluralForm</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$sourceName</var> = <span class="php-quote">'Main'</span></span>, <span>string <var>$packageKey</var> = <span class="php-quote">'Neos.Flow'</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns translated label of $originalLabel from a file defined by $sourceName.</p>
@@ -1022,7 +1026,7 @@ file format to store labels.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTranslationById">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#106-136" title="Go to source code">getTranslationById</a>( <span>string <var>$labelId</var></span>, <span><code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code> <var>$locale</var></span>, <span>string <var>$pluralForm</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$sourceName</var> = <span class="php-quote">'Main'</span></span>, <span>string <var>$packageKey</var> = <span class="php-quote">'Neos.Flow'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#85-115" title="Go to source code">getTranslationById</a>( <span>string <var>$labelId</var></span>, <span><code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code> <var>$locale</var></span>, <span>string <var>$pluralForm</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$sourceName</var> = <span class="php-quote">'Main'</span></span>, <span>string <var>$packageKey</var> = <span class="php-quote">'Neos.Flow'</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns label for a key ($labelId) from a file defined by $sourceName.</p>
@@ -1065,56 +1069,6 @@ file format to store labels.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getModel" id="_getModel">
-
-			<td class="attributes"><code>
-				 protected 
-				<code><a href="class-Neos.Flow.I18n.Xliff.XliffModel.html">Neos\Flow\I18n\Xliff\XliffModel</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getModel">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#138-163" title="Go to source code">getModel</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$sourceName</var></span>, <span><code><a href="class-Neos.Flow.I18n.Locale.html">Neos\Flow\I18n\Locale</a></code> <var>$locale</var></span> )</code>
-
-			<div class="description short">
-				<p>Returns a XliffModel instance representing desired XLIFF file.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns a XliffModel instance representing desired XLIFF file.</p>
-
-<p>Will return existing instance if a model for given $sourceName was already
-requested before. Returns FALSE when $sourceName doesn't point to existing
-file.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageKey</var></dt>
-						<dd>Key of the package containing the source file</dd>
-						<dt><var>$sourceName</var></dt>
-						<dd>Relative path to existing CLDR file</dd>
-						<dt><var>$locale</var></dt>
-						<dd>Locale object</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.I18n.Xliff.XliffModel.html">Neos\Flow\I18n\Xliff\XliffModel</a></code><br>New or existing instance
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.I18n.Exception.html">Neos\Flow\I18n\Exception</a></code>
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
 			</table>
 		</div>
 
@@ -1131,39 +1085,14 @@ file.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="xliffBasePath" id="$xliffBasePath">
+		<tr data-order="fileProvider" id="$fileProvider">
 			<td class="attributes"><code>
 				protected  
-				string
+				Neos\Flow\I18n\Xliff\Service\XliffFileProvider
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#29-34" title="Go to source code"><var>$xliffBasePath</var></a>
-
-				<div class="description short">
-					<p>An absolute path to the directory where translation files reside.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>An absolute path to the directory where translation files reside.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$xliffBasePath" class="anchor">#</a>
-					<code><span class="php-quote">'Private/Translations/'</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="localizationService" id="$localizationService">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Flow.I18n.Service.html">Neos\Flow\I18n\Service</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#36-39" title="Go to source code"><var>$localizationService</var></a>
+					<a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#25-28" title="Go to source code"><var>$fileProvider</var></a>
 
 				<div class="description short">
 					
@@ -1176,7 +1105,7 @@ file.</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$localizationService" class="anchor">#</a>
+					<a href="#$fileProvider" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1188,7 +1117,7 @@ file.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#41-44" title="Go to source code"><var>$pluralsReader</var></a>
+					<a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#30-33" title="Go to source code"><var>$pluralsReader</var></a>
 
 				<div class="description short">
 					
@@ -1202,34 +1131,6 @@ file.</p>
 			<td class="value">
 				<div>
 					<a href="#$pluralsReader" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="models" id="$models">
-			<td class="attributes"><code>
-				protected  
-				array&lt;XliffModel&gt;
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html#46-54" title="Go to source code"><var>$models</var></a>
-
-				<div class="description short">
-					<p>A collection of models requested at least once in current request.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>A collection of models requested at least once in current request.</p>
-
-<p>This is an associative array with pairs as follow:
-['filename'] => $model,</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$models" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1250,6 +1151,6 @@ file.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

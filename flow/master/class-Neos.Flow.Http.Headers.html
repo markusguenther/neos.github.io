@@ -301,6 +301,10 @@
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
 								</ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Log.html">
@@ -828,11 +832,15 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
+				<li><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
+				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
 				<li class="active"><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
 				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
 				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
 			</ul>
@@ -883,7 +891,7 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Headers.html#16-460" title="Go to source code">Neos.Flow/Classes/Http/Headers.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Headers.html#16-524" title="Go to source code">Neos.Flow/Classes/Http/Headers.php</a>
 		<br>
 	</div>
 
@@ -975,7 +983,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#86-137" title="Go to source code">set</a>( <span>string <var>$name</var></span>, <span>array|string|DateTime <var>$values</var></span>, <span>boolean <var>$replaceExistingHeader</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#86-145" title="Go to source code">set</a>( <span>string <var>$name</var></span>, <span>array|string|DateTime <var>$values</var></span>, <span>boolean <var>$replaceExistingHeader</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the specified HTTP header</p>
@@ -1027,7 +1035,7 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#139-166" title="Go to source code">get</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#147-174" title="Go to source code">get</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the specified HTTP header</p>
@@ -1070,7 +1078,7 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAll">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#168-185" title="Go to source code">getAll</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#176-193" title="Go to source code">getAll</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all header fields</p>
@@ -1109,7 +1117,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_has">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#187-200" title="Go to source code">has</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#195-208" title="Go to source code">has</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the specified HTTP header exists</p>
@@ -1150,7 +1158,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#202-212" title="Go to source code">remove</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#210-220" title="Go to source code">remove</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified header field</p>
@@ -1187,7 +1195,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCookie">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#214-224" title="Go to source code">setCookie</a>( <span><code><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></code> <var>$cookie</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#222-232" title="Go to source code">setCookie</a>( <span><code><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></code> <var>$cookie</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets a cookie</p>
@@ -1224,7 +1232,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCookie">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#226-236" title="Go to source code">getCookie</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#234-244" title="Go to source code">getCookie</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a cookie specified by the given name</p>
@@ -1258,14 +1266,14 @@ returned as an array (with a single item).</p>
 
 			<td class="attributes"><code>
 				 public 
-				array
+				<code><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a>[]</code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCookies">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#238-247" title="Go to source code">getCookies</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#246-255" title="Go to source code">getCookies</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all cookies</p>
@@ -1278,7 +1286,7 @@ returned as an array (with a single item).</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array
+						<code><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a>[]</code>
 					</div>
 
 
@@ -1301,7 +1309,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasCookie">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#249-259" title="Go to source code">hasCookie</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#257-267" title="Go to source code">hasCookie</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the specified cookie exists</p>
@@ -1342,7 +1350,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeCookie">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#261-276" title="Go to source code">removeCookie</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#269-284" title="Go to source code">removeCookie</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified cookie if it exists</p>
@@ -1384,7 +1392,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_eatCookie">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#278-288" title="Go to source code">eatCookie</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#286-296" title="Go to source code">eatCookie</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Although not 100% semantically correct, an alias for removeCookie()</p>
@@ -1421,7 +1429,7 @@ returned as an array (with a single item).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCacheControlDirective">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#290-320" title="Go to source code">setCacheControlDirective</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#298-328" title="Go to source code">setCacheControlDirective</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets a special directive for use in the Cache-Control header, according to
@@ -1462,7 +1470,7 @@ RFC 2616 / 14.9</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeCacheControlDirective">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#322-345" title="Go to source code">removeCacheControlDirective</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#330-353" title="Go to source code">removeCacheControlDirective</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes a special directive previously set for the Cache-Control header.</p>
@@ -1496,7 +1504,7 @@ RFC 2616 / 14.9</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheControlDirective">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#347-393" title="Go to source code">getCacheControlDirective</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#355-401" title="Go to source code">getCacheControlDirective</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the value of the specified Cache-Control directive.</p>
@@ -1541,7 +1549,7 @@ if the directive is present and does contain a value, the value is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCacheControlDirectivesFromRawHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#395-419" title="Go to source code">setCacheControlDirectivesFromRawHeader</a>( <span>string <var>$rawFieldValue</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#403-427" title="Go to source code">setCacheControlDirectivesFromRawHeader</a>( <span>string <var>$rawFieldValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Internally sets the cache directives correctly by parsing the given
@@ -1581,7 +1589,7 @@ Cache-Control field value.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheControlHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#421-436" title="Go to source code">getCacheControlHeader</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#429-444" title="Go to source code">getCacheControlHeader</a>( )</code>
 
 			<div class="description short">
 				<p>Renders and returns a Cache-Control header, based on the previously set
@@ -1620,7 +1628,7 @@ cache control directives.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCookiesFromRawHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Headers.html#438-459" title="Go to source code">setCookiesFromRawHeader</a>( <span>string <var>$rawFieldValue</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#446-467" title="Go to source code">setCookiesFromRawHeader</a>( <span>string <var>$rawFieldValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Internally sets cookie objects based on the Cookie header field value.</p>
@@ -1641,6 +1649,155 @@ cache control directives.</p>
 					<h4>See</h4>
 					<div class="list">
 							<code><a href="class-Neos.Flow.Http.Headers.html#_set">Neos\Flow\Http\Headers::set()</a></code><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPreparedValues" id="_getPreparedValues">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPreparedValues">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#469-482" title="Go to source code">getPreparedValues</a>( )</code>
+
+			<div class="description short">
+				<p>Get all header lines prepared as "name: value" strings.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all header lines prepared as "name: value" strings.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="prepareValues" id="_prepareValues">
+
+			<td class="attributes"><code>
+				 private 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_prepareValues">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#484-497" title="Go to source code">prepareValues</a>( <span>string <var>$headerName</var></span>, <span>array <var>$values</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$headerName</var></dt>
+						<dd></dd>
+						<dt><var>$values</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="renderValuesFor" id="_renderValuesFor">
+
+			<td class="attributes"><code>
+				 private 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_renderValuesFor">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#499-507" title="Go to source code">renderValuesFor</a>( <span>string <var>$headerName</var></span>, <span>array <var>$values</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$headerName</var></dt>
+						<dd></dd>
+						<dt><var>$values</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Headers.html#509-523" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				<p>Renders this headers object as string, with lines separated by "\r\n" as required by RFC 2616 sec 5.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Renders this headers object as string, with lines separated by "\r\n" as required by RFC 2616 sec 5.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
 					</div>
 
 
@@ -1762,6 +1919,6 @@ cache control directives.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

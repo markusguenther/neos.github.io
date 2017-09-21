@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\I18n\AbstractXmlParser | Flow Framework (master branch)</title>
+	<title>Class Neos\Flow\Http\FlowUploadedFile | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.Flow.I18n.html" title="Summary of Neos\Flow\I18n"><span>Namespace</span></a>
+						<a href="namespace-Neos.Flow.Http.html" title="Summary of Neos\Flow\Http"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -222,7 +222,7 @@
 						<a href="namespace-Neos.Flow.Error.html">
 							Error						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.Http.html">
 							Http<span></span>
 						</a>
@@ -236,7 +236,7 @@
 							Component						</a>
 							</li>
 								</ul></li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Flow.I18n.html">
 							I18n<span></span>
 						</a>
@@ -300,6 +300,10 @@
 					<li>
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -827,23 +831,29 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Neos.Flow.I18n.AbstractXmlParser.html">AbstractXmlParser</a></li>
-				<li><a href="class-Neos.Flow.I18n.Configuration.html">Configuration</a></li>
-				<li><a href="class-Neos.Flow.I18n.Detector.html">Detector</a></li>
-				<li><a href="class-Neos.Flow.I18n.FormatResolver.html">FormatResolver</a></li>
-				<li><a href="class-Neos.Flow.I18n.Locale.html">Locale</a></li>
-				<li><a href="class-Neos.Flow.I18n.LocaleCollection.html">LocaleCollection</a></li>
-				<li><a href="class-Neos.Flow.I18n.LocaleTypeConverter.html">LocaleTypeConverter</a></li>
-				<li><a href="class-Neos.Flow.I18n.Service.html">Service</a></li>
-				<li><a href="class-Neos.Flow.I18n.Translator.html">Translator</a></li>
-				<li><a href="class-Neos.Flow.I18n.Utility.html">Utility</a></li>
+				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
+				<li><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
+				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
+				<li class="active"><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
+				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
+				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
+				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
+				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
+				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
+				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
 			</ul>
 
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">HttpRequestHandlerInterface</a></li>
+			</ul>
 
 
 			<h3>Exceptions</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.I18n.Exception.html">Exception</a></li>
+				<li><a href="class-Neos.Flow.Http.Exception.html">Exception</a></li>
 			</ul>
 
 
@@ -856,22 +866,31 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class AbstractXmlParser</h1>
+	<h1>Class FlowUploadedFile</h1>
 
 
 	<div class="description">
-	<p>An abstract class for all concrete classes that parses any kind of XML data.</p>
+	<p>A Flow specific uploaded file.</p>
 	</div>
 
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Neos.Flow.Http.UploadedFile.html"><span>Neos\Flow\Http\UploadedFile</span></a>
+			
+			 implements 
+<span>Psr\Http\Message\UploadedFileInterface</span>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Neos\Flow\Http\FlowUploadedFile</span></b>			
+			
+			
+		</dd>
+	</dl>
 
 
-	<div>
-		<h3>Direct known subclasses</h3>
-		<p class="elementList">
-			<code><a href="class-Neos.Flow.I18n.Cldr.CldrParser.html">Neos\Flow\I18n\Cldr\CldrParser</a></code>, 
-			<code><a href="class-Neos.Flow.I18n.Xliff.XliffParser.html">Neos\Flow\I18n\Xliff\XliffParser</a></code>
-		</p>
-	</div>
 
 
 
@@ -879,14 +898,12 @@
 
 
 	<div class="alert alert-info">
-		<b>Abstract</b><br>
 		
-		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.I18n.html">I18n</a><br>
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Http.html">Http</a><br>
 		
 
-				<b>Flow\scope(&quot;singleton&quot;)</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.I18n.AbstractXmlParser.html#16-82" title="Go to source code">Neos.Flow/Classes/I18n/AbstractXmlParser.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#4-61" title="Go to source code">Neos.Flow/Classes/Http/FlowUploadedFile.php</a>
 		<br>
 	</div>
 
@@ -895,38 +912,33 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="getParsedData" id="_getParsedData">
+		<tr data-order="getOriginallySubmittedResource" id="_getOriginallySubmittedResource">
 
 			<td class="attributes"><code>
 				 public 
-				array
+				array|string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getParsedData">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.AbstractXmlParser.html#30-44" title="Go to source code">getParsedData</a>( <span>string <var>$sourcePath</var></span> )</code>
+			<a class="anchor" href="#_getOriginallySubmittedResource">#</a>
+			<code><a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#22-31" title="Go to source code">getOriginallySubmittedResource</a>( )</code>
 
 			<div class="description short">
-				<p>Returns parsed representation of XML file.</p>
+				<p>This is either the persistent identifier of a previously submitted resource file
+or an array with the "__identity" key set to the persistent identifier.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns parsed representation of XML file.</p>
+				<p>This is either the persistent identifier of a previously submitted resource file
+or an array with the "__identity" key set to the persistent identifier.</p>
 
-<p>Parses XML if it wasn't done before. Caches parsed data.</p>
 
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$sourcePath</var></dt>
-						<dd>An absolute path to XML file</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Parsed XML file
+						array|string
 					</div>
 
 
@@ -935,79 +947,103 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="parseXmlFile" id="_parseXmlFile">
+		<tr data-order="setOriginallySubmittedResource" id="_setOriginallySubmittedResource">
 
 			<td class="attributes"><code>
-				 protected 
-				array
+				 public 
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_parseXmlFile">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.AbstractXmlParser.html#46-73" title="Go to source code">parseXmlFile</a>( <span>string <var>$sourcePath</var></span> )</code>
+			<a class="anchor" href="#_setOriginallySubmittedResource">#</a>
+			<code><a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#33-44" title="Go to source code">setOriginallySubmittedResource</a>( <span>array|string <var>$originallySubmittedResource</var></span> )</code>
 
 			<div class="description short">
-				<p>Reads and parses XML file and returns internal representation of data.</p>
+				<p>Sets a previously submitted resource reference.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Reads and parses XML file and returns internal representation of data.</p>
+				<p>Sets a previously submitted resource reference.</p>
+
+<p>This is either the persistent identifier of a previously submitted resource file
+or an array with the "__identity" key set to the persistent identifier.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$sourcePath</var></dt>
-						<dd>An absolute path to XML file</dd>
+						<dt><var>$originallySubmittedResource</var></dt>
+						<dd></dd>
 					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						array<br>Parsed XML file
-					</div>
 
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.I18n.Exception.InvalidXmlFileException.html">Neos\Flow\I18n\Exception\InvalidXmlFileException</a></code><br>When SimpleXML couldn't load XML file
-					</div>
 
 
 
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="doParsingFromRoot" id="_doParsingFromRoot">
+		<tr data-order="getCollectionName" id="_getCollectionName">
 
 			<td class="attributes"><code>
-				abstract protected 
-				array
+				 public 
+				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_doParsingFromRoot">#</a>
-			<code><a href="source-class-Neos.Flow.I18n.AbstractXmlParser.html#75-81" title="Go to source code">doParsingFromRoot</a>( <span>SimpleXMLElement <var>$root</var></span> )</code>
+			<a class="anchor" href="#_getCollectionName">#</a>
+			<code><a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#46-52" title="Go to source code">getCollectionName</a>( )</code>
 
 			<div class="description short">
-				<p>Returns array representation of XML data, starting from a root node.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns array representation of XML data, starting from a root node.</p>
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setCollectionName" id="_setCollectionName">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setCollectionName">#</a>
+			<code><a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#54-60" title="Go to source code">setCollectionName</a>( <span>string <var>$collectionName</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$root</var></dt>
-						<dd>A root node</dd>
+						<dt><var>$collectionName</var></dt>
+						<dd></dd>
 					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						array<br>An array representing parsed XML file (structure depends on concrete parser)
-					</div>
 
 
 
@@ -1018,6 +1054,23 @@
 			</table>
 		</div>
 
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Http.UploadedFile.html#methods">Neos\Flow\Http\UploadedFile</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#___construct">__construct()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_getClientFilename">getClientFilename()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_getClientMediaType">getClientMediaType()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_getError">getError()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_getSize">getSize()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_getStream">getStream()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_isMoved">isMoved()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_isOk">isOk()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_moveTo">moveTo()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_setStreamOrFile">setStreamOrFile()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_throwExceptionIfNotAccessible">throwExceptionIfNotAccessible()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#_writeFile">writeFile()</a></code>
+			</p>
+		</div>
 
 
 
@@ -1031,27 +1084,54 @@
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="parsedFiles" id="$parsedFiles">
+		<tr data-order="originallySubmittedResource" id="$originallySubmittedResource">
 			<td class="attributes"><code>
 				protected  
-				array
+				array|string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.I18n.AbstractXmlParser.html#23-28" title="Go to source code"><var>$parsedFiles</var></a>
+					<a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#9-15" title="Go to source code"><var>$originallySubmittedResource</var></a>
 
 				<div class="description short">
-					<p>Associative array of "filename => parsed data" pairs.</p>
+					<p>This is either the persistent identifier of a previously submitted resource file
+or an array with the "__identity" key set to the persistent identifier.</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Associative array of "filename => parsed data" pairs.</p>
+					<p>This is either the persistent identifier of a previously submitted resource file
+or an array with the "__identity" key set to the persistent identifier.</p>
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$parsedFiles" class="anchor">#</a>
+					<a href="#$originallySubmittedResource" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="collectionName" id="$collectionName">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.FlowUploadedFile.html#17-20" title="Go to source code"><var>$collectionName</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$collectionName" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1059,6 +1139,18 @@
 			</table>
 		</div>
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Http.UploadedFile.html#properties">Neos\Flow\Http\UploadedFile</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$clientFilename"><var>$clientFilename</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$clientMediaType"><var>$clientMediaType</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$error"><var>$error</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$file"><var>$file</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$moved"><var>$moved</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$size"><var>$size</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.UploadedFile.html#$stream"><var>$stream</var></a></code>
+			</p>
+		</div>
 
 
 
@@ -1072,6 +1164,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

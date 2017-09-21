@@ -301,6 +301,10 @@
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
 								</ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Log.html">
@@ -880,9 +884,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Eel.html">Eel</a>\<a href="namespace-Neos.Eel.Helper.html">Helper</a><br>
 		
 
-				<b>Flow\proxy(false)</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Neos.Eel.Helper.DateHelper.html#17-203" title="Go to source code">Neos.Eel/Classes/Helper/DateHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Eel.Helper.DateHelper.html#20-246" title="Go to source code">Neos.Eel/Classes/Helper/DateHelper.php</a>
 		<br>
 	</div>
 
@@ -902,7 +904,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parse">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#24-34" title="Go to source code">parse</a>( <span>string <var>$string</var></span>, <span>string <var>$format</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#37-47" title="Go to source code">parse</a>( <span>string <var>$string</var></span>, <span>string <var>$format</var></span> )</code>
 
 			<div class="description short">
 				<p>Parse a date from string with a format to a DateTime object</p>
@@ -942,7 +944,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_format">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#36-57" title="Go to source code">format</a>( <span>integer|string|DateTime|DateInterval <var>$date</var></span>, <span>string <var>$format</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#49-70" title="Go to source code">format</a>( <span>integer|string|DateTime|DateInterval <var>$date</var></span>, <span>string <var>$format</var></span> )</code>
 
 			<div class="description short">
 				<p>Format a date (or interval) to a string with a given format</p>
@@ -973,6 +975,48 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="formatCldr" id="_formatCldr">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_formatCldr">#</a>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#72-100" title="Go to source code">formatCldr</a>( <span>integer|string|DateTime <var>$date</var></span>, <span>string <var>$cldrFormat</var></span>, <span>null|string <var>$locale</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Format a date to a string with a given cldr format</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Format a date to a string with a given cldr format</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd></dd>
+						<dt><var>$cldrFormat</var></dt>
+						<dd>Format string in CLDR format (see http://cldr.unicode.org/translation/date-time)</dd>
+						<dt><var>$locale</var></dt>
+						<dd>String locale - example (de|en|ru_RU)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="now" id="_now">
 
 			<td class="attributes"><code>
@@ -984,7 +1028,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_now">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#59-71" title="Go to source code">now</a>( )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#102-114" title="Go to source code">now</a>( )</code>
 
 			<div class="description short">
 				<p>Get the current date and time</p>
@@ -1022,7 +1066,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_today">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#73-81" title="Go to source code">today</a>( )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#116-124" title="Go to source code">today</a>( )</code>
 
 			<div class="description short">
 				<p>Get the current date</p>
@@ -1055,7 +1099,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#83-97" title="Go to source code">add</a>( <span>DateTime <var>$date</var></span>, <span>string|DateInterval <var>$interval</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#126-140" title="Go to source code">add</a>( <span>DateTime <var>$date</var></span>, <span>string|DateInterval <var>$interval</var></span> )</code>
 
 			<div class="description short">
 				<p>Add an interval to a date and return a new DateTime object</p>
@@ -1095,7 +1139,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_subtract">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#99-113" title="Go to source code">subtract</a>( <span>DateTime <var>$date</var></span>, <span>string|DateInterval <var>$interval</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#142-156" title="Go to source code">subtract</a>( <span>DateTime <var>$date</var></span>, <span>string|DateInterval <var>$interval</var></span> )</code>
 
 			<div class="description short">
 				<p>Subtract an interval from a date and return a new DateTime object</p>
@@ -1135,7 +1179,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_diff">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#115-125" title="Go to source code">diff</a>( <span>DateTime <var>$dateA</var></span>, <span>DateTime <var>$dateB</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#158-168" title="Go to source code">diff</a>( <span>DateTime <var>$dateA</var></span>, <span>DateTime <var>$dateB</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the difference between two dates as a \DateInterval object</p>
@@ -1175,7 +1219,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dayOfMonth">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#127-136" title="Go to source code">dayOfMonth</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#170-179" title="Go to source code">dayOfMonth</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the day of month of a date</p>
@@ -1213,7 +1257,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_month">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#138-147" title="Go to source code">month</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#181-190" title="Go to source code">month</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the month of a date</p>
@@ -1251,7 +1295,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_year">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#149-158" title="Go to source code">year</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#192-201" title="Go to source code">year</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the year of a date</p>
@@ -1289,7 +1333,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hour">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#160-169" title="Go to source code">hour</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#203-212" title="Go to source code">hour</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the hour of a date (24 hour format)</p>
@@ -1327,7 +1371,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_minute">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#171-180" title="Go to source code">minute</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#214-223" title="Go to source code">minute</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the minute of a date</p>
@@ -1365,7 +1409,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_second">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#182-191" title="Go to source code">second</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#225-234" title="Go to source code">second</a>( <span>DateTimeInterface <var>$dateTime</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the second of a date</p>
@@ -1403,7 +1447,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsCallOfMethod">#</a>
-			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#193-202" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.Helper.DateHelper.html#236-245" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
 
 			<div class="description short">
 				<p>All methods are considered safe</p>
@@ -1445,6 +1489,73 @@
 
 
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="datetimeFormatter" id="$datetimeFormatter">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.I18n.Formatter.DatetimeFormatter.html">Neos\Flow\I18n\Formatter\DatetimeFormatter</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Eel.Helper.DateHelper.html#25-29" title="Go to source code"><var>$datetimeFormatter</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$datetimeFormatter" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="localizationService" id="$localizationService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.I18n.Service.html">Neos\Flow\I18n\Service</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Eel.Helper.DateHelper.html#31-35" title="Go to source code"><var>$localizationService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$localizationService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
 </div>
 	</div>
 
@@ -1453,6 +1564,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

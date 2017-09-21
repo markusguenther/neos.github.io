@@ -301,6 +301,10 @@
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
 								</ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Log.html">
@@ -828,11 +832,15 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
+				<li><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
+				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
 				<li class="active"><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
 				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
 				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
 			</ul>
@@ -862,19 +870,35 @@
 
 
 	<div class="description">
-	<p>Represents an HTTP request</p>
+	<p>Represents an HTTP request in the PHP world, inlcuding server variables.
+This is the object used for incoming requests from a browser.</p>
+
+<p>TODO: Maybe separate BaseRequest and Request implementations (trait?)</p>
 	</div>
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
 			<a href="class-Neos.Flow.Http.AbstractMessage.html"><span>Neos\Flow\Http\AbstractMessage</span></a>
 			
+			 implements 
+<span>Psr\Http\Message\MessageInterface</span>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-Neos.Flow.Http.BaseRequest.html"><span>Neos\Flow\Http\BaseRequest</span></a>
+			
+			 implements 
+<span>Psr\Http\Message\RequestInterface</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
 <b><span>Neos\Flow\Http\Request</span></b>			
+			 implements 
+<span>Psr\Http\Message\ServerRequestInterface</span>
 			
 			
 		</dd>
@@ -897,7 +921,7 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Request.html#19-827" title="Go to source code">Neos.Flow/Classes/Http/Request.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Request.html#20-927" title="Go to source code">Neos.Flow/Classes/Http/Request.php</a>
 		<br>
 	</div>
 
@@ -917,7 +941,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#78-119" title="Go to source code">__construct</a>( <span>array <var>$get</var></span>, <span>array <var>$post</var></span>, <span>array <var>$files</var></span>, <span>array <var>$server</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#89-132" title="Go to source code">__construct</a>( <span>array <var>$get</var></span>, <span>array <var>$post</var></span>, <span>array <var>$files</var></span>, <span>array <var>$server</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs a new Request object based on the given environment data.</p>
@@ -951,7 +975,7 @@
 					</div>
 
 					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#___construct">Neos\Flow\Http\AbstractMessage::__construct</a></code></div>
+					<div class="list"><code><a href="class-Neos.Flow.Http.BaseRequest.html#___construct">Neos\Flow\Http\BaseRequest::__construct</a></code></div>
 
 			</div>
 			</div></td>
@@ -967,7 +991,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#121-171" title="Go to source code">create</a>( <span><code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code> <var>$uri</var></span>, <span>string <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>array <var>$arguments</var> = []</span>, <span>array <var>$files</var> = []</span>, <span>array <var>$server</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#134-184" title="Go to source code">create</a>( <span><code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code> <var>$uri</var></span>, <span>string <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>array <var>$arguments</var> = []</span>, <span>array <var>$files</var> = []</span>, <span>array <var>$server</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Creates a new Request object from the given data.</p>
@@ -1016,7 +1040,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createFromEnvironment">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#173-186" title="Go to source code">createFromEnvironment</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#186-199" title="Go to source code">createFromEnvironment</a>( )</code>
 
 			<div class="description short">
 				<p>Considers the environment information found in PHP's superglobals and Flow's
@@ -1056,7 +1080,7 @@ matching that data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#188-198" title="Go to source code">__clone</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#201-211" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Creates a deep clone</p>
@@ -1070,112 +1094,8 @@ matching that data.</p>
 
 
 
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getUri" id="_getUri">
-
-			<td class="attributes"><code>
-				 public 
-				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getUri">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#200-209" title="Go to source code">getUri</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the request URI</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the request URI</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getBaseUri" id="_getBaseUri">
-
-			<td class="attributes"><code>
-				 public 
-				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getBaseUri">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#211-223" title="Go to source code">getBaseUri</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the detected base URI</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the detected base URI</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="setBaseUri" id="_setBaseUri">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_setBaseUri">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#225-231" title="Go to source code">setBaseUri</a>( <span><code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code> <var>$baseUri</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$baseUri</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Http.BaseRequest.html#___clone">Neos\Flow\Http\BaseRequest::__clone</a></code></div>
 
 			</div>
 			</div></td>
@@ -1191,7 +1111,7 @@ matching that data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isSecure">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#233-242" title="Go to source code">isSecure</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#213-222" title="Go to source code">isSecure</a>( )</code>
 
 			<div class="description short">
 				<p>Indicates if this request has been received through a secure channel.</p>
@@ -1216,79 +1136,6 @@ matching that data.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="setMethod" id="_setMethod">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_setMethod">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#244-254" title="Go to source code">setMethod</a>( <span>string <var>$method</var></span> )</code>
-
-			<div class="description short">
-				<p>Sets the request method</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Sets the request method</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$method</var></dt>
-						<dd>The request method, for example "GET".</dd>
-					</dl></div>
-
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getMethod" id="_getMethod">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getMethod">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#256-265" title="Go to source code">getMethod</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the request method</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the request method</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The request method
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getPort" id="_getPort">
 
 			<td class="attributes"><code>
@@ -1300,7 +1147,7 @@ matching that data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPort">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#267-276" title="Go to source code">getPort</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#224-233" title="Go to source code">getPort</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the port used for this request</p>
@@ -1336,7 +1183,7 @@ matching that data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isMethodSafe">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#278-288" title="Go to source code">isMethodSafe</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#235-245" title="Go to source code">isMethodSafe</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if the request method is "safe", that is, it is expected to not take any
@@ -1374,7 +1221,7 @@ other action than retrieval. This should the case with "GET" and "HEAD" requests
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#290-302" title="Go to source code">getArguments</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#247-259" title="Go to source code">getArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the unified arguments of this request.</p>
@@ -1413,7 +1260,7 @@ array of arguments.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasArgument">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#304-315" title="Go to source code">hasArgument</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#261-272" title="Go to source code">hasArgument</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if an argument of the given name exists in this request.
@@ -1456,7 +1303,7 @@ Applies to GET, POST and PUT arguments similarly.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArgument">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#317-327" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#274-284" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the value of the specified GET / POST / PUT argument.</p>
@@ -1486,104 +1333,6 @@ Applies to GET, POST and PUT arguments similarly.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="setContent" id="_setContent">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_setContent">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#329-350" title="Go to source code">setContent</a>( <span>string|resource <var>$content</var></span> )</code>
-
-			<div class="description short">
-				<p>Explicitly sets the content of the request body</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Explicitly sets the content of the request body</p>
-
-<p>In most cases, content is just a string representation of the request body.
-In order to reduce memory consumption for uploads and other big data, it is
-also possible to pass a stream resource. The easies way to convert a local file
-into a stream resource is probably: $resource = fopen('file://path/to/file', 'rb');</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$content</var></dt>
-						<dd>The body content, for example arguments of a PUT request, or a stream resource</dd>
-					</dl></div>
-
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setContent">Neos\Flow\Http\AbstractMessage::setContent</a></code></div>
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getContent" id="_getContent">
-
-			<td class="attributes"><code>
-				 public 
-				string|resource
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getContent">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#352-382" title="Go to source code">getContent</a>( <span>boolean <var>$asResource</var> = <span class="php-keyword1">false</span></span> )</code>
-
-			<div class="description short">
-				<p>Returns the content of the request body</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the content of the request body</p>
-
-<p>If the request body has not been set with setContent() previously, this method
-will try to retrieve it from the input stream. If $asResource was set to TRUE,
-the stream resource will be returned instead of a string.</p>
-
-<p>If the content which has been set by setContent() originally was a stream
-resource, that resource will be returned, no matter if $asResource is set.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$asResource</var></dt>
-						<dd>If set, the content is returned as a resource pointing to PHP's input stream</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string|resource
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Exception.html">Neos\Flow\Http\Exception</a></code>
-					</div>
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getContent">Neos\Flow\Http\AbstractMessage::getContent</a></code></div>
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getServerParams" id="_getServerParams">
 
 			<td class="attributes"><code>
@@ -1595,7 +1344,7 @@ resource, that resource will be returned, no matter if $asResource is set.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getServerParams">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#384-398" title="Go to source code">getServerParams</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#286-300" title="Go to source code">getServerParams</a>( )</code>
 
 			<div class="description short">
 				<p>PSR-7</p>
@@ -1634,7 +1383,7 @@ REQUIRED to originate from $_SERVER.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAttributes">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#400-416" title="Go to source code">getAttributes</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#302-318" title="Go to source code">getAttributes</a>( )</code>
 
 			<div class="description short">
 				<p>PSR-7</p>
@@ -1675,7 +1424,7 @@ will be application and request specific, and CAN be mutable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAttribute">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#418-441" title="Go to source code">getAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#320-343" title="Go to source code">getAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>PSR-7</p>
@@ -1728,7 +1477,7 @@ specifying a default value to return if the attribute is not found.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withAttribute">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#443-465" title="Go to source code">withAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#345-367" title="Go to source code">withAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>PSR-7</p>
@@ -1781,7 +1530,7 @@ updated attribute.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAttribute">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#467-474" title="Go to source code">setAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#369-376" title="Go to source code">setAttribute</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1817,7 +1566,7 @@ updated attribute.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withoutAttribute">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#476-497" title="Go to source code">withoutAttribute</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#378-399" title="Go to source code">withoutAttribute</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>PSR-7</p>
@@ -1868,7 +1617,7 @@ the attribute.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unsetAttribute">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#499-505" title="Go to source code">unsetAttribute</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#401-407" title="Go to source code">unsetAttribute</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1902,7 +1651,7 @@ the attribute.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClientIpAddress">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#507-534" title="Go to source code">getClientIpAddress</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#409-436" title="Go to source code">getClientIpAddress</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the best guess of the client's IP address.</p>
@@ -1945,7 +1694,7 @@ results.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAcceptedMediaTypes">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#536-557" title="Go to source code">getAcceptedMediaTypes</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#438-459" title="Go to source code">getAcceptedMediaTypes</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an list of IANA media types defined in the Accept header.</p>
@@ -1988,7 +1737,7 @@ is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNegotiatedMediaType">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#559-581" title="Go to source code">getNegotiatedMediaType</a>( <span>array <var>$supportedMediaTypes</var></span>, <span>boolean <var>$trim</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#461-483" title="Go to source code">getNegotiatedMediaType</a>( <span>array <var>$supportedMediaTypes</var></span>, <span>boolean <var>$trim</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the best fitting IANA media type after applying the content negotiation
@@ -2033,7 +1782,7 @@ rules on a possible Accept header.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getScriptRequestPathAndFilename">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#583-599" title="Go to source code">getScriptRequestPathAndFilename</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#485-501" title="Go to source code">getScriptRequestPathAndFilename</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the relative path (ie. relative to the web root) and name of the
@@ -2071,7 +1820,7 @@ script as it was accessed through the web server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getScriptRequestPath">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#601-613" title="Go to source code">getScriptRequestPath</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#503-515" title="Go to source code">getScriptRequestPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the relative path (ie. relative to the web root) to the script as
@@ -2094,6 +1843,8 @@ it was accessed through the web server.</p>
 					<div class="list">
 					</div>
 
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getScriptRequestPath">Neos\Flow\Http\BaseRequest::getScriptRequestPath</a></code></div>
 
 			</div>
 			</div></td>
@@ -2109,7 +1860,7 @@ it was accessed through the web server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRelativePath">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#615-627" title="Go to source code">getRelativePath</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#517-529" title="Go to source code">getRelativePath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the request's path relative to the $baseUri</p>
@@ -2124,121 +1875,6 @@ it was accessed through the web server.</p>
 					<div class="list">
 						string
 					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getRequestLine" id="_getRequestLine">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getRequestLine">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#629-645" title="Go to source code">getRequestLine</a>( )</code>
-
-			<div class="description short">
-				<p>Return the Request-Line of this Request Message, consisting of the method, the uri and the HTTP version
-Would be, for example, "GET /foo?bar=baz HTTP/1.1"
-Note that the URI part is, at the moment, only possible in the form "abs_path" since the
-actual requestUri of the Request cannot be determined during the creation of the Request.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Return the Request-Line of this Request Message, consisting of the method, the uri and the HTTP version
-Would be, for example, "GET /foo?bar=baz HTTP/1.1"
-Note that the URI part is, at the moment, only possible in the form "abs_path" since the
-actual requestUri of the Request cannot be determined during the creation of the Request.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-					<h4>See</h4>
-					<div class="list">
-							http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1<br>
-					</div>
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getStartLine" id="_getStartLine">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getStartLine">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#647-657" title="Go to source code">getStartLine</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the first line of this Request Message, which is the Request-Line in this case</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the first line of this Request Message, which is the Request-Line in this case</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The Request-Line of this Request
-					</div>
-
-
-					<h4>See</h4>
-					<div class="list">
-							http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html chapter 4.1 "Message Types"<br>
-					</div>
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="detectBaseUri" id="_detectBaseUri">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_detectBaseUri">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#659-672" title="Go to source code">detectBaseUri</a>( )</code>
-
-			<div class="description short">
-				<p>Tries to detect the base URI of request.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Tries to detect the base URI of request.</p>
-
-
-
 
 
 
@@ -2257,7 +1893,7 @@ actual requestUri of the Request cannot be determined during the creation of the
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildUnifiedArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#674-690" title="Go to source code">buildUnifiedArguments</a>( <span>array <var>$getArguments</var></span>, <span>array <var>$postArguments</var></span>, <span>array <var>$uploadArguments</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#531-549" title="Go to source code">buildUnifiedArguments</a>( <span>array <var>$getArguments</var></span>, <span>array <var>$postArguments</var></span>, <span>array <var>$uploadArguments</var></span> )</code>
 
 			<div class="description short">
 				<p>Takes the raw GET &amp; POST arguments and maps them into the request object.
@@ -2303,7 +1939,7 @@ have been GET, POST or PUT arguments before.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_untangleFilesArray">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#692-731" title="Go to source code">untangleFilesArray</a>( <span>array <var>$convolutedFiles</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#551-590" title="Go to source code">untangleFilesArray</a>( <span>array <var>$convolutedFiles</var></span> )</code>
 
 			<div class="description short">
 				<p>Transforms the convoluted _FILES superglobal into a manageable form.</p>
@@ -2341,7 +1977,7 @@ have been GET, POST or PUT arguments before.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_calculateFieldPaths">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#733-756" title="Go to source code">calculateFieldPaths</a>( <span>array <var>$structure</var></span>, <span>string <var>$firstLevelFieldName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#592-615" title="Go to source code">calculateFieldPaths</a>( <span>array <var>$structure</var></span>, <span>string <var>$firstLevelFieldName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns and array of all possibles "field paths" for the given array.</p>
@@ -2370,6 +2006,89 @@ have been GET, POST or PUT arguments before.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="createUploadedFilesFromUntangledUploads" id="_createUploadedFilesFromUntangledUploads">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createUploadedFilesFromUntangledUploads">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#617-634" title="Go to source code">createUploadedFilesFromUntangledUploads</a>( <span>array <var>$untangledFilesStructure</var></span>, <span>array <var>$arguments</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$untangledFilesStructure</var></dt>
+						<dd></dd>
+						<dt><var>$arguments</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="createUploadedFileFromSpec" id="_createUploadedFileFromSpec">
+
+			<td class="attributes"><code>
+				 protected 
+				Psr\Http\Message\UploadedFileInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createUploadedFileFromSpec">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#636-665" title="Go to source code">createUploadedFileFromSpec</a>( <span>array <var>$value</var></span>, <span>array <var>$argumentsForValue</var></span> )</code>
+
+			<div class="description short">
+				<p>Create and return an UploadedFile instance from a $_FILES specification.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create and return an UploadedFile instance from a $_FILES specification.</p>
+
+<p>If the specification represents an array of values, this method will
+delegate to normalizeNestedFileSpec() and return that return value.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd>$_FILES struct</dd>
+						<dt><var>$argumentsForValue</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\UploadedFileInterface
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="parseContentNegotiationQualityValues" id="_parseContentNegotiationQualityValues">
 
 			<td class="attributes"><code>
@@ -2381,7 +2100,7 @@ have been GET, POST or PUT arguments before.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseContentNegotiationQualityValues">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#758-796" title="Go to source code">parseContentNegotiationQualityValues</a>( <span>string <var>$rawValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#667-705" title="Go to source code">parseContentNegotiationQualityValues</a>( <span>string <var>$rawValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Parses a RFC 2616 content negotiation header field by evaluating the Quality
@@ -2410,72 +2129,523 @@ Values and splitting the options into an array list, ordered by user preference.
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="renderHeaders" id="_renderHeaders">
+		<tr data-order="parseMediaType" id="_parseMediaType">
 
 			<td class="attributes"><code>
-				 public 
-				string
+				 public static
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_renderHeaders">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#798-815" title="Go to source code">renderHeaders</a>( )</code>
+			<a class="anchor" href="#_parseMediaType">#</a>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Request.html#707-718" title="Go to source code">parseMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
 
 			<div class="description short">
-				<p>Renders the HTTP headers - including the status header - of this request</p>
+				<p>Parses a RFC 2616 Media Type and returns its parts in an associative array.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Renders the HTTP headers - including the status header - of this request</p>
+				<p>Parses a RFC 2616 Media Type and returns its parts in an associative array.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							since Flow 2.1. Use \Neos\Utility\MediaTypes::parseMediaType() instead<br>
+					</div>
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$rawMediaType</var></dt>
+						<dd>The raw media type, for example "application/json; charset=UTF-8"</dd>
+					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The HTTP headers, one per line, separated by \r\n as required by RFC 2616 sec 5
+						array<br>An associative array with parsed information
 					</div>
 
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							MediaTypes::parseMediaType()<br>
 					</div>
 
 
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="__toString" id="___toString">
+		<tr data-order="mediaRangeMatches" id="_mediaRangeMatches">
 
 			<td class="attributes"><code>
-				 public 
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_mediaRangeMatches">#</a>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Request.html#720-732" title="Go to source code">mediaRangeMatches</a>( <span>string <var>$mediaRange</var></span>, <span>string <var>$mediaType</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if the given media range and the media type match.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the given media range and the media type match.</p>
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							since Flow 2.1. Use \Neos\Utility\MediaTypes::mediaRangeMatches() instead<br>
+					</div>
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mediaRange</var></dt>
+						<dd>The media range, for example "text/*"</dd>
+						<dt><var>$mediaType</var></dt>
+						<dd>The media type to match against, for example "text/html"</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>TRUE if both match, FALSE if they don't match or either of them is invalid
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							MediaTypes::mediaRangeMatches()<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="trimMediaType" id="_trimMediaType">
+
+			<td class="attributes"><code>
+				 public static
 				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#817-826" title="Go to source code">__toString</a>( )</code>
+			<a class="anchor" href="#_trimMediaType">#</a>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Request.html#734-746" title="Go to source code">trimMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
 
 			<div class="description short">
-				<p>Cast the request to a string: return the content part of this response</p>
+				<p>Strips off any parameters from the given media type and returns just the type
+and subtype in the format "type/subtype".</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Cast the request to a string: return the content part of this response</p>
+				<p>Strips off any parameters from the given media type and returns just the type
+and subtype in the format "type/subtype".</p>
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							since Flow 2.1. Use \Neos\Utility\MediaTypes::trimMediaType() instead<br>
+					</div>
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$rawMediaType</var></dt>
+						<dd>The full media type, for example "application/json; charset=UTF-8"</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Just the type and subtype, for example "application/json"
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							\Neos\Utility\MediaTypes::trimMediaType()<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCookieParams" id="_getCookieParams">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCookieParams">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#748-765" title="Go to source code">getCookieParams</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve cookies.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve cookies.</p>
+
+<p>Retrieves cookies sent by the client to the server.</p>
+
+<p>The data MUST be compatible with the structure of the $_COOKIE
+superglobal.</p>
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The same as getContent()
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="withCookieParams" id="_withCookieParams">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_withCookieParams">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#767-791" title="Go to source code">withCookieParams</a>( <span>array <var>$cookies</var></span> )</code>
+
+			<div class="description short">
+				<p>Return an instance with the specified cookies.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return an instance with the specified cookies.</p>
+
+<p>The data IS NOT REQUIRED to come from the $_COOKIE superglobal, but MUST
+be compatible with the structure of $_COOKIE. Typically, this data will
+be injected at instantiation.</p>
+
+<p>This method MUST NOT update the related Cookie header of the request
+instance, nor related values in the server params.</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that has the
+updated cookie values.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$cookies</var></dt>
+						<dd>Array of key/value pairs representing cookies.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getQueryParams" id="_getQueryParams">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getQueryParams">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#793-808" title="Go to source code">getQueryParams</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve query string arguments.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve query string arguments.</p>
+
+<p>Retrieves the deserialized query string arguments, if any.</p>
+
+<p>Note: the query params might not be in sync with the URI or server
+params. If you need to ensure you are only getting the original
+values, you may need to parse the query string from <code>getUri()-&gt;getQuery()</code>
+or from the <code>QUERY_STRING</code> server param.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="withQueryParams" id="_withQueryParams">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_withQueryParams">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#810-837" title="Go to source code">withQueryParams</a>( <span>array <var>$query</var></span> )</code>
+
+			<div class="description short">
+				<p>Return an instance with the specified query string arguments.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return an instance with the specified query string arguments.</p>
+
+<p>These values SHOULD remain immutable over the course of the incoming
+request. They MAY be injected during instantiation, such as from PHP's
+$_GET superglobal, or MAY be derived from some other value such as the
+URI. In cases where the arguments are parsed from the URI, the data
+MUST be compatible with what PHP's parse_str() would return for
+purposes of how duplicate query parameters are handled, and how nested
+sets are handled.</p>
+
+<p>Setting query string arguments MUST NOT change the URI stored by the
+request, nor the values in the server params.</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that has the
+updated query string arguments.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$query</var></dt>
+						<dd>Array of query string arguments, typically from $_GET.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
 					</div>
 
 
 					<h4>Api</h4>
 					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUploadedFiles" id="_getUploadedFiles">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUploadedFiles">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#839-855" title="Go to source code">getUploadedFiles</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve normalized file upload data.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve normalized file upload data.</p>
+
+<p>This method returns upload metadata in a normalized tree, with each leaf
+an instance of Psr\Http\Message\UploadedFileInterface.</p>
+
+<p>These values MAY be prepared from $_FILES or the message body during
+instantiation, or MAY be injected via withUploadedFiles().</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br><p>An array tree of UploadedFileInterface instances; an empty
+    array MUST be returned if no data is present.</p>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="withUploadedFiles" id="_withUploadedFiles">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ServerRequestInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_withUploadedFiles">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#857-873" title="Go to source code">withUploadedFiles</a>( <span>array <var>$uploadedFiles</var></span> )</code>
+
+			<div class="description short">
+				<p>Create a new instance with the specified uploaded files.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create a new instance with the specified uploaded files.</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that has the
+updated body parameters.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$uploadedFiles</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ServerRequestInterface
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getParsedBody" id="_getParsedBody">
+
+			<td class="attributes"><code>
+				 public 
+				array|null|object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getParsedBody">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#875-893" title="Go to source code">getParsedBody</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve any parameters provided in the request body.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve any parameters provided in the request body.</p>
+
+<p>If the request Content-Type is either application/x-www-form-urlencoded
+or multipart/form-data, and the request method is POST, this method MUST
+return the contents of $_POST.</p>
+
+<p>Otherwise, this method may return any results of deserializing
+the request body content; as parsing returns structured content, the
+potential types MUST be arrays or objects only. A null value indicates
+the absence of body content.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|null|object
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="withParsedBody" id="_withParsedBody">
+
+			<td class="attributes"><code>
+				 public 
+				Psr\Http\Message\ServerRequestInterface
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_withParsedBody">#</a>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#895-926" title="Go to source code">withParsedBody</a>( <span>array|null|object <var>$data</var></span> )</code>
+
+			<div class="description short">
+				<p>Return an instance with the specified body parameters.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return an instance with the specified body parameters.</p>
+
+<p>These MAY be injected during instantiation.</p>
+
+<p>If the request Content-Type is either application/x-www-form-urlencoded
+or multipart/form-data, and the request method is POST, use this method
+ONLY to inject the contents of $_POST.</p>
+
+<p>The data IS NOT REQUIRED to come from $_POST, but MUST be the results of
+deserializing the request body content. Deserialization/parsing returns
+structured data, and, as such, this method ONLY accepts arrays or objects,
+or a null value if nothing was available to parse.</p>
+
+<p>As an example, if content negotiation determines that the request data
+is a JSON payload, this method could be used to create a request
+instance with the deserialized parameters.</p>
+
+<p>This method MUST be implemented in such a way as to retain the
+immutability of the message, and MUST return an instance that has the
+updated body parameters.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Psr\Http\Message\ServerRequestInterface
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							PSR-7<br>
 					</div>
 
 
@@ -2486,13 +2656,37 @@ Values and splitting the options into an array list, ordered by user preference.
 		</div>
 
 		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Http.BaseRequest.html#methods">Neos\Flow\Http\BaseRequest</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#___toString">__toString()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_detectBaseUri">detectBaseUri()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getBaseUri">getBaseUri()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getContent">getContent()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getMethod">getMethod()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getRequestLine">getRequestLine()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getRequestTarget">getRequestTarget()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getStartLine">getStartLine()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_getUri">getUri()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_renderHeaders">renderHeaders()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_setBaseUri">setBaseUri()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_setContent">setContent()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_setMethod">setMethod()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_withMethod">withMethod()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_withRequestTarget">withRequestTarget()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#_withUri">withUri()</a></code>
+			</p>
+		</div>
+		<div class="panel panel-default">
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Http.AbstractMessage.html#methods">Neos\Flow\Http\AbstractMessage</a></h3></div>
 			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody">getBody()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCharset">getCharset()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookie">getCookie()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookies">getCookies()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">getHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaderLine">getHeaderLine()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaders">getHeaders()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getProtocolVersion">getProtocolVersion()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getVersion">getVersion()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasCookie">hasCookie()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasHeader">hasHeader()</a></code>, 
@@ -2500,7 +2694,12 @@ Values and splitting the options into an array list, ordered by user preference.
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCharset">setCharset()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCookie">setCookie()</a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setHeader">setHeader()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setVersion">setVersion()</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setVersion">setVersion()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withAddedHeader">withAddedHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withBody">withBody()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">withHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withProtocolVersion">withProtocolVersion()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withoutHeader">withoutHeader()</a></code>
 			</p>
 		</div>
 
@@ -2518,7 +2717,7 @@ Values and splitting the options into an array list, ordered by user preference.
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-ATTRIBUTE_CLIENT_IP.html#68-71" title="Go to source code"><b>ATTRIBUTE_CLIENT_IP</b></a>
+						<a href="source-constant-ATTRIBUTE_CLIENT_IP.html#79-82" title="Go to source code"><b>ATTRIBUTE_CLIENT_IP</b></a>
 					</code>
 
 					<div class="description short">
@@ -2542,7 +2741,7 @@ Values and splitting the options into an array list, ordered by user preference.
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-ATTRIBUTE_TRUSTED_PROXY.html#73-76" title="Go to source code"><b>ATTRIBUTE_TRUSTED_PROXY</b></a>
+						<a href="source-constant-ATTRIBUTE_TRUSTED_PROXY.html#84-87" title="Go to source code"><b>ATTRIBUTE_TRUSTED_PROXY</b></a>
 					</code>
 
 					<div class="description short">
@@ -2570,81 +2769,6 @@ Values and splitting the options into an array list, ordered by user preference.
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="method" id="$method">
-			<td class="attributes"><code>
-				protected  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#27-30" title="Go to source code"><var>$method</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$method" class="anchor">#</a>
-					<code><span class="php-quote">'GET'</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="uri" id="$uri">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#32-35" title="Go to source code"><var>$uri</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$uri" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="baseUri" id="$baseUri">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#37-40" title="Go to source code"><var>$baseUri</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$baseUri" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="arguments" id="$arguments">
 			<td class="attributes"><code>
 				protected  
@@ -2652,7 +2776,7 @@ Values and splitting the options into an array list, ordered by user preference.
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#42-45" title="Go to source code"><var>$arguments</var></a>
+					<a href="source-class-Neos.Flow.Http.Request.html#31-34" title="Go to source code"><var>$arguments</var></a>
 
 				<div class="description short">
 					
@@ -2677,7 +2801,7 @@ Values and splitting the options into an array list, ordered by user preference.
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#47-52" title="Go to source code"><var>$server</var></a>
+					<a href="source-class-Neos.Flow.Http.Request.html#36-41" title="Go to source code"><var>$server</var></a>
 
 				<div class="description short">
 					<p>Data similar to that which is typically provided by $_SERVER</p>
@@ -2702,7 +2826,7 @@ Values and splitting the options into an array list, ordered by user preference.
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#54-59" title="Go to source code"><var>$inputStreamUri</var></a>
+					<a href="source-class-Neos.Flow.Http.Request.html#43-48" title="Go to source code"><var>$inputStreamUri</var></a>
 
 				<div class="description short">
 					<p>URI for the "input" stream wrapper which can be modified for testing purposes</p>
@@ -2727,7 +2851,7 @@ Values and splitting the options into an array list, ordered by user preference.
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Request.html#61-66" title="Go to source code"><var>$attributes</var></a>
+					<a href="source-class-Neos.Flow.Http.Request.html#50-55" title="Go to source code"><var>$attributes</var></a>
 
 				<div class="description short">
 					<p>PSR-7</p>
@@ -2745,9 +2869,93 @@ Values and splitting the options into an array list, ordered by user preference.
 				</div>
 			</td>
 		</tr>
+		<tr data-order="queryParams" id="$queryParams">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#57-62" title="Go to source code"><var>$queryParams</var></a>
+
+				<div class="description short">
+					<p>PSR-7</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>PSR-7</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$queryParams" class="anchor">#</a>
+					<code>[]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="parsedBody" id="$parsedBody">
+			<td class="attributes"><code>
+				protected  
+				array|object|null
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#64-69" title="Go to source code"><var>$parsedBody</var></a>
+
+				<div class="description short">
+					<p>PSR-7</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>PSR-7</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$parsedBody" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="uploadedFiles" id="$uploadedFiles">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Http.Request.html#71-76" title="Go to source code"><var>$uploadedFiles</var></a>
+
+				<div class="description short">
+					<p>PSR-7</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>PSR-7</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$uploadedFiles" class="anchor">#</a>
+					<code>[]</code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Http.BaseRequest.html#properties">Neos\Flow\Http\BaseRequest</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#$baseUri"><var>$baseUri</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#$method"><var>$method</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#$requestTarget"><var>$requestTarget</var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.BaseRequest.html#$uri"><var>$uri</var></a></code>
+			</p>
+		</div>
 		<div class="panel panel-default">
             <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Http.AbstractMessage.html#properties">Neos\Flow\Http\AbstractMessage</a></h3></div>
 			<p class="elementList">
@@ -2770,6 +2978,6 @@ Values and splitting the options into an array list, ordered by user preference.
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5ab81c8c59485fb2af7bc4c314ac0e2828143cbc"></script>
+<script src="elementlist.js?58bfab21fa1972cc08d3f2466a256685cd291bac"></script>
 </body>
 </html>

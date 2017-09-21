@@ -298,6 +298,10 @@
 						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
 								</ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Log.html">
@@ -971,6 +975,7 @@
 				<li><a href="class-Neos.Flow.Error.ErrorHandler.html">Neos\Flow\Error\ErrorHandler</a></li>
 				<li><a href="class-Neos.Flow.Error.ProductionExceptionHandler.html">Neos\Flow\Error\ProductionExceptionHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></li>
 				<li><a href="class-Neos.Flow.Http.Client.Browser.html">Neos\Flow\Http\Client\Browser</a></li>
 				<li><a href="class-Neos.Flow.Http.Client.CurlEngine.html">Neos\Flow\Http\Client\CurlEngine</a></li>
 				<li><a href="class-Neos.Flow.Http.Client.InternalRequestEngine.html">Neos\Flow\Http\Client\InternalRequestEngine</a></li>
@@ -979,14 +984,16 @@
 				<li><a href="class-Neos.Flow.Http.Component.ComponentContext.html">Neos\Flow\Http\Component\ComponentContext</a></li>
 				<li><a href="class-Neos.Flow.Http.Component.StandardsComplianceComponent.html">Neos\Flow\Http\Component\StandardsComplianceComponent</a></li>
 				<li><a href="class-Neos.Flow.Http.Component.TrustedProxiesComponent.html">Neos\Flow\Http\Component\TrustedProxiesComponent</a></li>
+				<li><a href="class-Neos.Flow.Http.ContentStream.html">Neos\Flow\Http\ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></li>
+				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">Neos\Flow\Http\FlowUploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></li>
 				<li><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></li>
+				<li><a href="class-Neos.Flow.Http.UploadedFile.html">Neos\Flow\Http\UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></li>
 				<li><a href="class-Neos.Flow.Http.UriTemplate.html">Neos\Flow\Http\UriTemplate</a></li>
-				<li><a href="class-Neos.Flow.I18n.AbstractXmlParser.html">Neos\Flow\I18n\AbstractXmlParser</a></li>
 				<li><a href="class-Neos.Flow.I18n.Cldr.CldrModel.html">Neos\Flow\I18n\Cldr\CldrModel</a></li>
 				<li><a href="class-Neos.Flow.I18n.Cldr.CldrParser.html">Neos\Flow\I18n\Cldr\CldrParser</a></li>
 				<li><a href="class-Neos.Flow.I18n.Cldr.CldrRepository.html">Neos\Flow\I18n\Cldr\CldrRepository</a></li>
@@ -1009,8 +1016,7 @@
 				<li><a href="class-Neos.Flow.I18n.TranslationProvider.XliffTranslationProvider.html">Neos\Flow\I18n\TranslationProvider\XliffTranslationProvider</a></li>
 				<li><a href="class-Neos.Flow.I18n.Translator.html">Neos\Flow\I18n\Translator</a></li>
 				<li><a href="class-Neos.Flow.I18n.Utility.html">Neos\Flow\I18n\Utility</a></li>
-				<li><a href="class-Neos.Flow.I18n.Xliff.XliffModel.html">Neos\Flow\I18n\Xliff\XliffModel</a></li>
-				<li><a href="class-Neos.Flow.I18n.Xliff.XliffParser.html">Neos\Flow\I18n\Xliff\XliffParser</a></li>
+				<li><a href="class-Neos.Flow.I18n.Xliff.Service.XliffReader.html">Neos\Flow\I18n\Xliff\Service\XliffReader</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html">Neos\Flow\Log\Backend\AbstractBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.AnsiConsoleBackend.html">Neos\Flow\Log\Backend\AnsiConsoleBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.ConsoleBackend.html">Neos\Flow\Log\Backend\ConsoleBackend</a></li>
@@ -1835,6 +1841,27 @@
 						<td class="name"><code><a href="class-Neos.Flow.Cache.Backend.AbstractBackend.html#___construct">__construct()</a></code></td>
 						<td>
 										Use AbstractBackend instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_parseMediaType">parseMediaType()</a></code></td>
+						<td>
+										since Flow 2.1. Use \Neos\Utility\MediaTypes::parseMediaType() instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_mediaRangeMatches">mediaRangeMatches()</a></code></td>
+						<td>
+										since Flow 2.1. Use \Neos\Utility\MediaTypes::mediaRangeMatches() instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_trimMediaType">trimMediaType()</a></code></td>
+						<td>
+										since Flow 2.1. Use \Neos\Utility\MediaTypes::trimMediaType() instead<br>
 						</td>
 					</tr>
 					<tr>
