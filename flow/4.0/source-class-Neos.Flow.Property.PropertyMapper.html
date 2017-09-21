@@ -1082,8 +1082,8 @@
 </span><span id="229" class="l">        <span class="php-var">$truncatedTargetType</span> = TypeHandling::truncateElementType(<span class="php-var">$normalizedTargetType</span>);
 </span><span id="230" class="l">        <span class="php-var">$converter</span> = <span class="php-keyword1">null</span>;
 </span><span id="231" class="l">
-</span><span id="232" class="l">        <span class="php-var">$sourceTypes</span> = <span class="php-var">$this</span>-&gt;determineSourceTypes(<span class="php-var">$source</span>);
-</span><span id="233" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$sourceTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$sourceType</span>) {
+</span><span id="232" class="l">        <span class="php-var">$normalizedSourceTypes</span> = <span class="php-var">$this</span>-&gt;determineSourceTypes(<span class="php-var">$source</span>);
+</span><span id="233" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$normalizedSourceTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$sourceType</span>) {
 </span><span id="234" class="l">            <span class="php-keyword1">if</span> (TypeHandling::isSimpleType(<span class="php-var">$truncatedTargetType</span>)) {
 </span><span id="235" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;typeConverters[<span class="php-var">$sourceType</span>][<span class="php-var">$truncatedTargetType</span>])) {
 </span><span id="236" class="l">                    <span class="php-var">$converter</span> = <span class="php-var">$this</span>-&gt;findEligibleConverterWithHighestPriority(<span class="php-var">$this</span>-&gt;typeConverters[<span class="php-var">$sourceType</span>][<span class="php-var">$truncatedTargetType</span>], <span class="php-var">$source</span>, <span class="php-var">$normalizedTargetType</span>);
@@ -1097,7 +1097,7 @@
 </span><span id="244" class="l">            }
 </span><span id="245" class="l">        }
 </span><span id="246" class="l">
-</span><span id="247" class="l">        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\TypeConverterException(<span class="php-quote">'No converter found which can be used to convert from &quot;'</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">'&quot; or &quot;'</span>, <span class="php-var">$sourceTypes</span>) . <span class="php-quote">'&quot; to &quot;'</span> . <span class="php-var">$normalizedTargetType</span> . <span class="php-quote">'&quot;.'</span>);
+</span><span id="247" class="l">        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\TypeConverterException(<span class="php-quote">'No converter found which can be used to convert from &quot;'</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">'&quot; or &quot;'</span>, <span class="php-var">$normalizedSourceTypes</span>) . <span class="php-quote">'&quot; to &quot;'</span> . <span class="php-var">$normalizedTargetType</span> . <span class="php-quote">'&quot;.'</span>);
 </span><span id="248" class="l">    }
 </span><span id="249" class="l">
 </span><span id="250" class="l">    <span class="php-comment">/**
@@ -1113,7 +1113,7 @@
 </span><span id="260" class="l">    {
 </span><span id="261" class="l">        <span class="php-var">$targetClass</span> = TypeHandling::truncateElementType(<span class="php-var">$targetType</span>);
 </span><span id="262" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-var">$targetClass</span>) &amp;&amp; !<span class="php-keyword2">interface_exists</span>(<span class="php-var">$targetClass</span>)) {
-</span><span id="263" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidTargetException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Could not find a suitable type converter for &quot;%s&quot; because no such the class/interface &quot;%s&quot; does not exist.'</span>, <span class="php-var">$targetType</span>, <span class="php-var">$targetClass</span>), <span class="php-num">1297948764</span>);
+</span><span id="263" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidTargetException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Could not find a suitable type converter for &quot;%s&quot; because the class / interface &quot;%s&quot; does not exist.'</span>, <span class="php-var">$targetType</span>, <span class="php-var">$targetClass</span>), <span class="php-num">1297948764</span>);
 </span><span id="264" class="l">        }
 </span><span id="265" class="l">
 </span><span id="266" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;typeConverters[<span class="php-var">$sourceType</span>])) {
@@ -1306,6 +1306,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?132467e9486b7d652828da2f48ef6f68ef7407d8"></script>
+<script src="elementlist.js?262702ca8de3ed7afa8aa80355704db64540040b"></script>
 </body>
 </html>

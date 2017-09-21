@@ -1075,7 +1075,7 @@
 </span><span id="232" class="l">                        <span class="php-var">$index</span>[<span class="php-quote">'flags'</span>] = <span class="php-var">$indexAnnotation</span>-&gt;flags;
 </span><span id="233" class="l">                    }
 </span><span id="234" class="l">                    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$indexAnnotation</span>-&gt;options)) {
-</span><span id="235" class="l">                        <span class="php-var">$index</span>[<span class="php-quote">'options'</span>] = <span class="php-var">$indexAnnotation</span>-&gt;flags;
+</span><span id="235" class="l">                        <span class="php-var">$index</span>[<span class="php-quote">'options'</span>] = <span class="php-var">$indexAnnotation</span>-&gt;options;
 </span><span id="236" class="l">                    }
 </span><span id="237" class="l">                    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$indexAnnotation</span>-&gt;name)) {
 </span><span id="238" class="l">                        <span class="php-var">$primaryTable</span>[<span class="php-quote">'indexes'</span>][<span class="php-var">$indexAnnotation</span>-&gt;name] = <span class="php-var">$index</span>;
@@ -1435,7 +1435,7 @@
 </span><span id="592" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;reader-&gt;getPropertyAnnotation(<span class="php-var">$property</span>, ORM\Id::<span class="php-keyword1">class</span>) !== <span class="php-keyword1">null</span>) {
 </span><span id="593" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'id'</span>] = <span class="php-keyword1">true</span>;
 </span><span id="594" class="l">                }
-</span><span id="595" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;targetEntity) {
+</span><span id="595" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;targetEntity !== <span class="php-keyword1">null</span>) {
 </span><span id="596" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>] = <span class="php-var">$oneToOneAnnotation</span>-&gt;targetEntity;
 </span><span id="597" class="l">                }
 </span><span id="598" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;inversedBy !== <span class="php-keyword1">null</span> || <span class="php-var">$oneToOneAnnotation</span>-&gt;mappedBy === <span class="php-keyword1">null</span>) {
@@ -1443,14 +1443,14 @@
 </span><span id="600" class="l">                }
 </span><span id="601" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'mappedBy'</span>] = <span class="php-var">$oneToOneAnnotation</span>-&gt;mappedBy;
 </span><span id="602" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'inversedBy'</span>] = <span class="php-var">$oneToOneAnnotation</span>-&gt;inversedBy;
-</span><span id="603" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;cascade) {
+</span><span id="603" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;cascade !== <span class="php-keyword1">null</span>) {
 </span><span id="604" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = <span class="php-var">$oneToOneAnnotation</span>-&gt;cascade;
 </span><span id="605" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isValueObject(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>)) {
 </span><span id="606" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = [<span class="php-quote">'persist'</span>];
 </span><span id="607" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isAggregateRoot(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>) === <span class="php-keyword1">false</span>) {
 </span><span id="608" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = [<span class="php-quote">'all'</span>];
 </span><span id="609" class="l">                }
-</span><span id="610" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;orphanRemoval) {
+</span><span id="610" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToOneAnnotation</span>-&gt;orphanRemoval !== <span class="php-keyword1">null</span>) {
 </span><span id="611" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'orphanRemoval'</span>] = <span class="php-var">$oneToOneAnnotation</span>-&gt;orphanRemoval;
 </span><span id="612" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isAggregateRoot(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>) === <span class="php-keyword1">false</span> &amp;&amp;
 </span><span id="613" class="l">                          <span class="php-var">$this</span>-&gt;isValueObject(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>) === <span class="php-keyword1">false</span>) {
@@ -1460,12 +1460,12 @@
 </span><span id="617" class="l">                <span class="php-var">$metadata</span>-&gt;mapOneToOne(<span class="php-var">$mapping</span>);
 </span><span id="618" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$oneToManyAnnotation</span> = <span class="php-var">$this</span>-&gt;reader-&gt;getPropertyAnnotation(<span class="php-var">$property</span>, ORM\OneToMany::<span class="php-keyword1">class</span>)) {
 </span><span id="619" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'mappedBy'</span>] = <span class="php-var">$oneToManyAnnotation</span>-&gt;mappedBy;
-</span><span id="620" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToManyAnnotation</span>-&gt;targetEntity) {
+</span><span id="620" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToManyAnnotation</span>-&gt;targetEntity !== <span class="php-keyword1">null</span>) {
 </span><span id="621" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>] = <span class="php-var">$oneToManyAnnotation</span>-&gt;targetEntity;
 </span><span id="622" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$propertyMetaData</span>[<span class="php-quote">'elementType'</span>])) {
 </span><span id="623" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>] = <span class="php-var">$propertyMetaData</span>[<span class="php-quote">'elementType'</span>];
 </span><span id="624" class="l">                }
-</span><span id="625" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToManyAnnotation</span>-&gt;cascade) {
+</span><span id="625" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToManyAnnotation</span>-&gt;cascade !== <span class="php-keyword1">null</span>) {
 </span><span id="626" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = <span class="php-var">$oneToManyAnnotation</span>-&gt;cascade;
 </span><span id="627" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isValueObject(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>)) {
 </span><span id="628" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = [<span class="php-quote">'persist'</span>];
@@ -1473,7 +1473,7 @@
 </span><span id="630" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = [<span class="php-quote">'all'</span>];
 </span><span id="631" class="l">                }
 </span><span id="632" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'indexBy'</span>] = <span class="php-var">$oneToManyAnnotation</span>-&gt;indexBy;
-</span><span id="633" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToManyAnnotation</span>-&gt;orphanRemoval) {
+</span><span id="633" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$oneToManyAnnotation</span>-&gt;orphanRemoval !== <span class="php-keyword1">null</span>) {
 </span><span id="634" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'orphanRemoval'</span>] = <span class="php-var">$oneToManyAnnotation</span>-&gt;orphanRemoval;
 </span><span id="635" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isAggregateRoot(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>) === <span class="php-keyword1">false</span> &amp;&amp;
 </span><span id="636" class="l">                    <span class="php-var">$this</span>-&gt;isValueObject(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>) === <span class="php-keyword1">false</span>) {
@@ -1490,12 +1490,12 @@
 </span><span id="647" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;reader-&gt;getPropertyAnnotation(<span class="php-var">$property</span>, ORM\Id::<span class="php-keyword1">class</span>) !== <span class="php-keyword1">null</span>) {
 </span><span id="648" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'id'</span>] = <span class="php-keyword1">true</span>;
 </span><span id="649" class="l">                }
-</span><span id="650" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToOneAnnotation</span>-&gt;targetEntity) {
+</span><span id="650" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToOneAnnotation</span>-&gt;targetEntity !== <span class="php-keyword1">null</span>) {
 </span><span id="651" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>] = <span class="php-var">$manyToOneAnnotation</span>-&gt;targetEntity;
 </span><span id="652" class="l">                }
 </span><span id="653" class="l">
 </span><span id="654" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'joinColumns'</span>] = <span class="php-var">$this</span>-&gt;buildJoinColumnsIfNeeded(<span class="php-var">$joinColumns</span>, <span class="php-var">$mapping</span>, <span class="php-var">$property</span>);
-</span><span id="655" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToOneAnnotation</span>-&gt;cascade) {
+</span><span id="655" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToOneAnnotation</span>-&gt;cascade !== <span class="php-keyword1">null</span>) {
 </span><span id="656" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = <span class="php-var">$manyToOneAnnotation</span>-&gt;cascade;
 </span><span id="657" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isValueObject(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>)) {
 </span><span id="658" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = [<span class="php-quote">'persist'</span>];
@@ -1506,7 +1506,7 @@
 </span><span id="663" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'fetch'</span>] = <span class="php-var">$this</span>-&gt;getFetchMode(<span class="php-var">$className</span>, <span class="php-var">$manyToOneAnnotation</span>-&gt;fetch);
 </span><span id="664" class="l">                <span class="php-var">$metadata</span>-&gt;mapManyToOne(<span class="php-var">$mapping</span>);
 </span><span id="665" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$manyToManyAnnotation</span> = <span class="php-var">$this</span>-&gt;reader-&gt;getPropertyAnnotation(<span class="php-var">$property</span>, ORM\ManyToMany::<span class="php-keyword1">class</span>)) {
-</span><span id="666" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToManyAnnotation</span>-&gt;targetEntity) {
+</span><span id="666" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToManyAnnotation</span>-&gt;targetEntity !== <span class="php-keyword1">null</span>) {
 </span><span id="667" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>] = <span class="php-var">$manyToManyAnnotation</span>-&gt;targetEntity;
 </span><span id="668" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$propertyMetaData</span>[<span class="php-quote">'elementType'</span>])) {
 </span><span id="669" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>] = <span class="php-var">$propertyMetaData</span>[<span class="php-quote">'elementType'</span>];
@@ -1532,7 +1532,7 @@
 </span><span id="689" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'joinTable'</span>] = <span class="php-var">$joinTable</span>;
 </span><span id="690" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'mappedBy'</span>] = <span class="php-var">$manyToManyAnnotation</span>-&gt;mappedBy;
 </span><span id="691" class="l">                <span class="php-var">$mapping</span>[<span class="php-quote">'inversedBy'</span>] = <span class="php-var">$manyToManyAnnotation</span>-&gt;inversedBy;
-</span><span id="692" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToManyAnnotation</span>-&gt;cascade) {
+</span><span id="692" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$manyToManyAnnotation</span>-&gt;cascade !== <span class="php-keyword1">null</span>) {
 </span><span id="693" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = <span class="php-var">$manyToManyAnnotation</span>-&gt;cascade;
 </span><span id="694" class="l">                } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;isValueObject(<span class="php-var">$mapping</span>[<span class="php-quote">'targetEntity'</span>], <span class="php-var">$className</span>)) {
 </span><span id="695" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'cascade'</span>] = [<span class="php-quote">'persist'</span>];
@@ -1549,7 +1549,7 @@
 </span><span id="706" class="l">
 </span><span id="707" class="l">                <span class="php-var">$metadata</span>-&gt;mapManyToMany(<span class="php-var">$mapping</span>);
 </span><span id="708" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$embeddedAnnotation</span> = <span class="php-var">$this</span>-&gt;reader-&gt;getPropertyAnnotation(<span class="php-var">$property</span>, ORM\Embedded::<span class="php-keyword1">class</span>)) {
-</span><span id="709" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$embeddedAnnotation</span>-&gt;<span class="php-keyword1">class</span>) {
+</span><span id="709" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$embeddedAnnotation</span>-&gt;<span class="php-keyword1">class</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="710" class="l">                    <span class="php-var">$mapping</span>[<span class="php-quote">'class'</span>] = <span class="php-var">$embeddedAnnotation</span>-&gt;<span class="php-keyword1">class</span>;
 </span><span id="711" class="l">                } <span class="php-keyword1">else</span> {
 </span><span id="712" class="l">                    <span class="php-comment">// This will not happen currently, because &quot;class&quot; argument is required. It would be nice if that could be changed though.</span>
@@ -2094,6 +2094,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?132467e9486b7d652828da2f48ef6f68ef7407d8"></script>
+<script src="elementlist.js?262702ca8de3ed7afa8aa80355704db64540040b"></script>
 </body>
 </html>
