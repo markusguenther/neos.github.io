@@ -1015,7 +1015,7 @@
 </span><span id="261" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;addedNodes <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="262" class="l">                <span class="php-keyword1">if</span> ((<span class="php-var">$node</span>-&gt;getPath() === <span class="php-var">$path</span> &amp;&amp; <span class="php-var">$node</span>-&gt;matchesWorkspaceAndDimensions(<span class="php-var">$workspace</span>, <span class="php-var">$dimensions</span>)) &amp;&amp; (<span class="php-var">$onlyShadowNodes</span> === <span class="php-keyword1">false</span> || <span class="php-var">$node</span>-&gt;isInternal())) {
 </span><span id="263" class="l">                    <span class="php-var">$addedNodes</span>[] = <span class="php-var">$node</span>;
-</span><span id="264" class="l">            <span class="php-comment">// removed nodes don't matter here because due to the identity map the right object will be returned from the query and will have &quot;removed&quot; set.</span>
+</span><span id="264" class="l">                    <span class="php-comment">// removed nodes don't matter here because due to the identity map the right object will be returned from the query and will have &quot;removed&quot; set.</span>
 </span><span id="265" class="l">                }
 </span><span id="266" class="l">            }
 </span><span id="267" class="l">

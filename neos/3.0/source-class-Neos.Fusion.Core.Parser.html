@@ -1313,19 +1313,19 @@
 </span><span id="555" class="l">            <span class="php-comment">// either source or target are a prototype definition</span>
 </span><span id="556" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$sourceIsPrototypeDefinition</span> &amp;&amp; <span class="php-var">$targetIsPrototypeDefinition</span> &amp;&amp; <span class="php-keyword2">count</span>(<span class="php-var">$sourceObjectPathArray</span>) === <span class="php-num">2</span> &amp;&amp; <span class="php-keyword2">count</span>(<span class="php-var">$targetObjectPathArray</span>) === <span class="php-num">2</span>) {
 </span><span id="557" class="l">                <span class="php-comment">// both are a prototype definition and the path has length 2: this means</span>
-</span><span id="558" class="l">                    <span class="php-comment">// it must be of the form &quot;prototype(Foo) &lt; prototype(Bar)&quot;</span>
+</span><span id="558" class="l">                <span class="php-comment">// it must be of the form &quot;prototype(Foo) &lt; prototype(Bar)&quot;</span>
 </span><span id="559" class="l">                <span class="php-var">$targetObjectPathArray</span>[] = <span class="php-quote">'__prototypeObjectName'</span>;
 </span><span id="560" class="l">                <span class="php-var">$this</span>-&gt;setValueInObjectTree(<span class="php-var">$targetObjectPathArray</span>, <span class="php-keyword2">end</span>(<span class="php-var">$sourceObjectPathArray</span>));
 </span><span id="561" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$sourceIsPrototypeDefinition</span> &amp;&amp; <span class="php-var">$targetIsPrototypeDefinition</span>) {
 </span><span id="562" class="l">                <span class="php-comment">// Both are prototype definitions, but at least one is nested (f.e. foo.prototype(Bar))</span>
-</span><span id="563" class="l">                    <span class="php-comment">// Currently, it is not supported to override the prototypical inheritance in</span>
-</span><span id="564" class="l">                    <span class="php-comment">// parts of the TS rendering tree.</span>
-</span><span id="565" class="l">                    <span class="php-comment">// Although this might work conceptually, it makes reasoning about the prototypical</span>
-</span><span id="566" class="l">                    <span class="php-comment">// inheritance tree a lot more complex; that's why we forbid it right away.</span>
+</span><span id="563" class="l">                <span class="php-comment">// Currently, it is not supported to override the prototypical inheritance in</span>
+</span><span id="564" class="l">                <span class="php-comment">// parts of the TS rendering tree.</span>
+</span><span id="565" class="l">                <span class="php-comment">// Although this might work conceptually, it makes reasoning about the prototypical</span>
+</span><span id="566" class="l">                <span class="php-comment">// inheritance tree a lot more complex; that's why we forbid it right away.</span>
 </span><span id="567" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Fusion\Exception(<span class="php-quote">'Tried to parse &quot;'</span> . <span class="php-var">$targetObjectPath</span> . <span class="php-quote">'&quot; &lt; &quot;'</span> . <span class="php-var">$sourceObjectPath</span> . <span class="php-quote">'&quot;, however one of the sides is nested (e.g. foo.prototype(Bar)). Setting up prototype inheritance is only supported at the top level: prototype(Foo) &lt; prototype(Bar)'</span>, <span class="php-num">1358418019</span>);
 </span><span id="568" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="569" class="l">                <span class="php-comment">// Either &quot;source&quot; or &quot;target&quot; are no prototypes. We do not support copying a</span>
-</span><span id="570" class="l">                    <span class="php-comment">// non-prototype value to a prototype value or vice-versa.</span>
+</span><span id="570" class="l">                <span class="php-comment">// non-prototype value to a prototype value or vice-versa.</span>
 </span><span id="571" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Fusion\Exception(<span class="php-quote">'Tried to parse &quot;'</span> . <span class="php-var">$targetObjectPath</span> . <span class="php-quote">'&quot; &lt; &quot;'</span> . <span class="php-var">$sourceObjectPath</span> . <span class="php-quote">'&quot;, however one of the sides is no prototype definition of the form prototype(Foo). It is only allowed to build inheritance chains with prototype objects.'</span>, <span class="php-num">1358418015</span>);
 </span><span id="572" class="l">            }
 </span><span id="573" class="l">        } <span class="php-keyword1">else</span> {
@@ -1389,7 +1389,7 @@
 </span><span id="631" class="l">            }
 </span><span id="632" class="l">            <span class="php-var">$recursiveDirectoryIterator</span> = <span class="php-keyword1">new</span> \RecursiveDirectoryIterator(<span class="php-var">$basePath</span>);
 </span><span id="633" class="l">            <span class="php-var">$iterator</span> = <span class="php-keyword1">new</span> \RecursiveIteratorIterator(<span class="php-var">$recursiveDirectoryIterator</span>);
-</span><span id="634" class="l">        <span class="php-comment">// Match simple wildcard globbing &quot;*&quot;</span>
+</span><span id="634" class="l">            <span class="php-comment">// Match simple wildcard globbing &quot;*&quot;</span>
 </span><span id="635" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#([^\*]*)\*#'</span>, <span class="php-var">$include</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
 </span><span id="636" class="l">            <span class="php-var">$basePath</span> = <span class="php-var">$matches</span>[<span class="php-quote">'1'</span>];
 </span><span id="637" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$basePath</span>)) {
@@ -1565,8 +1565,8 @@
 </span><span id="807" class="l">        }
 </span><span id="808" class="l">
 </span><span id="809" class="l">        <span class="php-var">$currentKey</span> = <span class="php-keyword2">array_shift</span>(<span class="php-var">$objectPathArray</span>);
-</span><span id="810" class="l">        <span class="php-keyword1">if</span> ((integer)<span class="php-var">$currentKey</span> &gt; <span class="php-num">0</span>) {
-</span><span id="811" class="l">            <span class="php-var">$currentKey</span> = (integer)<span class="php-var">$currentKey</span>;
+</span><span id="810" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_numeric</span>(<span class="php-var">$currentKey</span>)) {
+</span><span id="811" class="l">            <span class="php-var">$currentKey</span> = (int)<span class="php-var">$currentKey</span>;
 </span><span id="812" class="l">        }
 </span><span id="813" class="l">
 </span><span id="814" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$objectPathArray</span>)) {
@@ -1618,8 +1618,8 @@
 </span><span id="860" class="l">
 </span><span id="861" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$objectPathArray</span>) &gt; <span class="php-num">0</span>) {
 </span><span id="862" class="l">            <span class="php-var">$currentKey</span> = <span class="php-keyword2">array_shift</span>(<span class="php-var">$objectPathArray</span>);
-</span><span id="863" class="l">            <span class="php-keyword1">if</span> ((integer)<span class="php-var">$currentKey</span> &gt; <span class="php-num">0</span>) {
-</span><span id="864" class="l">                <span class="php-var">$currentKey</span> = <span class="php-keyword2">intval</span>(<span class="php-var">$currentKey</span>);
+</span><span id="863" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_numeric</span>(<span class="php-var">$currentKey</span>)) {
+</span><span id="864" class="l">                <span class="php-var">$currentKey</span> = (int)<span class="php-var">$currentKey</span>;
 </span><span id="865" class="l">            }
 </span><span id="866" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>])) {
 </span><span id="867" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = <span class="php-keyword1">array</span>();
