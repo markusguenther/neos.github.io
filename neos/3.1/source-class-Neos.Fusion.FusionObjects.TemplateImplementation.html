@@ -879,7 +879,7 @@
 </span><span id="109" class="l">            <span class="php-var">$fluidTemplate</span>-&gt;setLayoutRootPath(<span class="php-var">$layoutRootPath</span>);
 </span><span id="110" class="l">        }
 </span><span id="111" class="l">
-</span><span id="112" class="l">            <span class="php-comment">// Template resources need to be evaluated from the templates package not the requests package.</span>
+</span><span id="112" class="l">        <span class="php-comment">// Template resources need to be evaluated from the templates package not the requests package.</span>
 </span><span id="113" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$templatePath</span>, <span class="php-quote">'resource://'</span>) === <span class="php-num">0</span>) {
 </span><span id="114" class="l">            <span class="php-var">$templateResourcePathParts</span> = <span class="php-keyword2">parse_url</span>(<span class="php-var">$templatePath</span>);
 </span><span id="115" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$fluidTemplate</span>-&gt;getRenderingContext()-&gt;buildParserConfiguration()-&gt;getInterceptors(InterceptorInterface::INTERCEPT_TEXT) <span class="php-keyword1">as</span> <span class="php-var">$interceptor</span>) {
@@ -895,12 +895,12 @@
 </span><span id="125" class="l">            }
 </span><span id="126" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$value</span>)) {
 </span><span id="127" class="l">                <span class="php-comment">// if a value is a SIMPLE TYPE, e.g. neither an Eel expression nor a Fusion object,</span>
-</span><span id="128" class="l">                    <span class="php-comment">// we can just evaluate it (to handle processors) and then assign it to the template.</span>
+</span><span id="128" class="l">                <span class="php-comment">// we can just evaluate it (to handle processors) and then assign it to the template.</span>
 </span><span id="129" class="l">                <span class="php-var">$evaluatedValue</span> = <span class="php-var">$this</span>-&gt;fusionValue(<span class="php-var">$key</span>);
 </span><span id="130" class="l">                <span class="php-var">$fluidTemplate</span>-&gt;assign(<span class="php-var">$key</span>, <span class="php-var">$evaluatedValue</span>);
 </span><span id="131" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="132" class="l">                <span class="php-comment">// It is an array; so we need to create a &quot;proxy&quot; for lazy evaluation, as it could be a</span>
-</span><span id="133" class="l">                    <span class="php-comment">// nested Fusion object, Eel expression or simple value.</span>
+</span><span id="133" class="l">                <span class="php-comment">// nested Fusion object, Eel expression or simple value.</span>
 </span><span id="134" class="l">                <span class="php-var">$fluidTemplate</span>-&gt;assign(<span class="php-var">$key</span>, <span class="php-keyword1">new</span> Helpers\FusionPathProxy(<span class="php-var">$this</span>, <span class="php-var">$this</span>-&gt;path . <span class="php-quote">'/'</span> . <span class="php-var">$key</span>, <span class="php-var">$value</span>));
 </span><span id="135" class="l">            }
 </span><span id="136" class="l">        }

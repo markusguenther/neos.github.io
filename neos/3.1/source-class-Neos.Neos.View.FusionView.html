@@ -876,7 +876,7 @@
 </span><span id="123" class="l">                    <span class="php-var">$response</span> = <span class="php-var">$fusionRuntime</span>-&gt;getControllerContext()-&gt;getResponse();
 </span><span id="124" class="l">                    <span class="php-var">$response</span>-&gt;setStatus(<span class="php-var">$renderedResponse</span>-&gt;getStatusCode());
 </span><span id="125" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$renderedResponse</span>-&gt;getHeaders()-&gt;getAll() <span class="php-keyword1">as</span> <span class="php-var">$headerName</span> =&gt; <span class="php-var">$headerValues</span>) {
-</span><span id="126" class="l">                        <span class="php-var">$response</span>-&gt;setHeader(<span class="php-var">$headerName</span>, <span class="php-var">$headerValues</span>[<span class="php-num">0</span>]);
+</span><span id="126" class="l">                        <span class="php-var">$response</span>-&gt;setHeader(<span class="php-var">$headerName</span>, <span class="php-var">$headerValues</span>);
 </span><span id="127" class="l">                    }
 </span><span id="128" class="l">
 </span><span id="129" class="l">                    <span class="php-var">$output</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$output</span>, <span class="php-keyword2">strlen</span>(<span class="php-var">$header</span>));
