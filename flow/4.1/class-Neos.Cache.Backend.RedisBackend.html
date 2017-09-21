@@ -927,7 +927,8 @@ in proportion to the amount of entries and data size.</p>
  - defaultLifetime: The default lifetime of a cache entry
  - hostname:        The hostname (or socket filepath) of the redis server
  - port:            The TCP port of the redis server (will be ignored if connecting to a socket)
- - database:        The database index that will be used. By default</p>, <p>Redis has 16 databases with index number 0 - 15</p>
+ - database:        The database index that will be used. By default</p>, <p>Redis has 16 databases with index number 0 - 15
+ - password:        The password needed for redis clients to connect to the server (hostname)</p>
 
 <p>Requirements:
  - Redis 2.6.0+ (tested with 2.6.14 and 2.8.5)
@@ -941,7 +942,7 @@ in proportion to the amount of entries and data size.</p>
 Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>, a separate list with all entries is populated<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Cache.Backend.RedisBackend.html#18-509" title="Go to source code">Neos.Cache/Classes/Backend/RedisBackend.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Cache.Backend.RedisBackend.html#18-528" title="Go to source code">Neos.Cache/Classes/Backend/RedisBackend.php</a>
 		<br>
 	</div>
 
@@ -961,7 +962,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#89-101" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Cache.EnvironmentConfiguration.html">Neos\Cache\EnvironmentConfiguration</a></code> <var>$environmentConfiguration</var></span>, <span>array <var>$options</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#95-107" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Cache.EnvironmentConfiguration.html">Neos\Cache\EnvironmentConfiguration</a></code> <var>$environmentConfiguration</var></span>, <span>array <var>$options</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs this backend</p>
@@ -999,7 +1000,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#103-141" title="Go to source code">set</a>( <span>string <var>$entryIdentifier</var></span>, <span>string <var>$data</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#109-147" title="Go to source code">set</a>( <span>string <var>$entryIdentifier</var></span>, <span>string <var>$data</var></span>, <span>array <var>$tags</var> = []</span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Saves data in the cache.</p>
@@ -1048,7 +1049,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#143-153" title="Go to source code">get</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#149-159" title="Go to source code">get</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads data from the cache.</p>
@@ -1091,7 +1092,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_has">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#155-165" title="Go to source code">has</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#161-171" title="Go to source code">has</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if a cache entry with the specified identifier exists.</p>
@@ -1134,7 +1135,7 @@ Since Redis &lt; 2.8.0 does not provide a mechanism for iterating over keys</p>,
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#167-197" title="Go to source code">remove</a>( <span>string <var>$entryIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#173-203" title="Go to source code">remove</a>( <span>string <var>$entryIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries matching the specified identifier.
@@ -1185,7 +1186,7 @@ old entries for the identifier still exist, they are removed as well.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#199-227" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#205-233" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries of this cache</p>
@@ -1226,7 +1227,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectGarbage">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#229-237" title="Go to source code">collectGarbage</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#235-243" title="Go to source code">collectGarbage</a>( )</code>
 
 			<div class="description short">
 				<p>This backend does not need an externally triggered garbage collection</p>
@@ -1260,7 +1261,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildKey">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#239-246" title="Go to source code">buildKey</a>( <span> <var>$identifier</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#245-252" title="Go to source code">buildKey</a>( <span> <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1298,7 +1299,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushByTag">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#248-277" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#254-283" title="Go to source code">flushByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all cache entries of this cache which are tagged by the specified tag.</p>
@@ -1345,7 +1346,7 @@ in an atomic way.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findIdentifiersByTag">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#279-290" title="Go to source code">findIdentifiersByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#285-296" title="Go to source code">findIdentifiersByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds and returns all cache entry identifiers which are tagged by the
@@ -1390,7 +1391,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_current">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#292-298" title="Go to source code">current</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#298-304" title="Go to source code">current</a>( )</code>
 
 			<div class="description short">
 				
@@ -1421,7 +1422,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_next">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#300-306" title="Go to source code">next</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#306-312" title="Go to source code">next</a>( )</code>
 
 			<div class="description short">
 				
@@ -1452,7 +1453,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_key">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#308-320" title="Go to source code">key</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#314-326" title="Go to source code">key</a>( )</code>
 
 			<div class="description short">
 				
@@ -1483,7 +1484,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_valid">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#322-328" title="Go to source code">valid</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#328-334" title="Go to source code">valid</a>( )</code>
 
 			<div class="description short">
 				
@@ -1514,7 +1515,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rewind">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#330-336" title="Go to source code">rewind</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#336-342" title="Go to source code">rewind</a>( )</code>
 
 			<div class="description short">
 				
@@ -1545,7 +1546,7 @@ specified tag.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_freeze">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#338-367" title="Go to source code">freeze</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#344-373" title="Go to source code">freeze</a>( )</code>
 
 			<div class="description short">
 				<p>Freezes this cache backend.</p>
@@ -1586,7 +1587,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isFrozen">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#369-381" title="Go to source code">isFrozen</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#375-387" title="Go to source code">isFrozen</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this backend is frozen.</p>
@@ -1621,7 +1622,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDefaultLifetime">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#383-393" title="Go to source code">setDefaultLifetime</a>( <span>integer <var>$lifetime</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#389-399" title="Go to source code">setDefaultLifetime</a>( <span>integer <var>$lifetime</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the default lifetime for this cache backend</p>
@@ -1664,7 +1665,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHostname">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#395-404" title="Go to source code">setHostname</a>( <span>string <var>$hostname</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#401-410" title="Go to source code">setHostname</a>( <span>string <var>$hostname</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the hostname or the socket of the Redis server</p>
@@ -1701,7 +1702,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPort">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#406-417" title="Go to source code">setPort</a>( <span>integer <var>$port</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#412-423" title="Go to source code">setPort</a>( <span>integer <var>$port</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the port of the Redis server.</p>
@@ -1740,7 +1741,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDatabase">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#419-428" title="Go to source code">setDatabase</a>( <span>integer <var>$database</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#425-434" title="Go to source code">setDatabase</a>( <span>integer <var>$database</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the database that will be used for this backend</p>
@@ -1766,6 +1767,40 @@ individual cache entries are ignored.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="setPassword" id="_setPassword">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPassword">#</a>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#436-442" title="Go to source code">setPassword</a>( <span>string <var>$password</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$password</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setCompressionLevel" id="_setCompressionLevel">
 
 			<td class="attributes"><code>
@@ -1777,7 +1812,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCompressionLevel">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#430-436" title="Go to source code">setCompressionLevel</a>( <span>integer <var>$compressionLevel</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#444-450" title="Go to source code">setCompressionLevel</a>( <span>integer <var>$compressionLevel</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1811,7 +1846,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRedis">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#438-444" title="Go to source code">setRedis</a>( <span>Redis <var>$redis</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#452-458" title="Go to source code">setRedis</a>( <span>Redis <var>$redis</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1845,7 +1880,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_uncompress">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#446-456" title="Go to source code">uncompress</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#460-470" title="Go to source code">uncompress</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1883,7 +1918,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compress">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#458-465" title="Go to source code">compress</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#472-479" title="Go to source code">compress</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1921,7 +1956,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_useCompression">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#467-473" title="Go to source code">useCompression</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#481-487" title="Go to source code">useCompression</a>( )</code>
 
 			<div class="description short">
 				
@@ -1954,7 +1989,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRedisClient">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#475-490" title="Go to source code">getRedisClient</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#489-509" title="Go to source code">getRedisClient</a>( )</code>
 
 			<div class="description short">
 				
@@ -1991,7 +2026,7 @@ individual cache entries are ignored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyRedisVersionIsSupported">#</a>
-			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#492-508" title="Go to source code">verifyRedisVersionIsSupported</a>( )</code>
+			<code><a href="source-class-Neos.Cache.Backend.RedisBackend.html#511-527" title="Go to source code">verifyRedisVersionIsSupported</a>( )</code>
 
 			<div class="description short">
 				
@@ -2053,7 +2088,7 @@ individual cache entries are ignored.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MIN_REDIS_VERSION.html#52" title="Go to source code"><b>MIN_REDIS_VERSION</b></a>
+						<a href="source-constant-MIN_REDIS_VERSION.html#53" title="Go to source code"><b>MIN_REDIS_VERSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -2095,7 +2130,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#54-57" title="Go to source code"><var>$redis</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#55-58" title="Go to source code"><var>$redis</var></a>
 
 				<div class="description short">
 					
@@ -2120,7 +2155,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#59-62" title="Go to source code"><var>$entryCursor</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#60-63" title="Go to source code"><var>$entryCursor</var></a>
 
 				<div class="description short">
 					<p>Cursor used for iterating over cache entries</p>
@@ -2145,7 +2180,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#64-67" title="Go to source code"><var>$frozen</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#65-68" title="Go to source code"><var>$frozen</var></a>
 
 				<div class="description short">
 					
@@ -2170,7 +2205,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#69-72" title="Go to source code"><var>$hostname</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#70-73" title="Go to source code"><var>$hostname</var></a>
 
 				<div class="description short">
 					
@@ -2195,7 +2230,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#74-77" title="Go to source code"><var>$port</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#75-78" title="Go to source code"><var>$port</var></a>
 
 				<div class="description short">
 					
@@ -2220,7 +2255,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#79-82" title="Go to source code"><var>$database</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#80-83" title="Go to source code"><var>$database</var></a>
 
 				<div class="description short">
 					
@@ -2238,6 +2273,31 @@ individual cache entries are ignored.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="password" id="$password">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#85-88" title="Go to source code"><var>$password</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$password" class="anchor">#</a>
+					<code><span class="php-quote">''</span></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="compressionLevel" id="$compressionLevel">
 			<td class="attributes"><code>
 				protected  
@@ -2245,7 +2305,7 @@ individual cache entries are ignored.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#84-87" title="Go to source code"><var>$compressionLevel</var></a>
+					<a href="source-class-Neos.Cache.Backend.RedisBackend.html#90-93" title="Go to source code"><var>$compressionLevel</var></a>
 
 				<div class="description short">
 					
@@ -2294,6 +2354,6 @@ individual cache entries are ignored.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0e9ba7e11973c9ae67738d781870e08b86ca4eb5"></script>
+<script src="elementlist.js?3e6b94e9183d97be2aa07d310d411a0eb94cfc37"></script>
 </body>
 </html>
