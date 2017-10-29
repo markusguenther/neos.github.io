@@ -1111,7 +1111,7 @@ segments which can be cached to the actual cache and returns the cleaned up orig
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#235-281" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span>, <span>string|boolean <var>$cacheDiscriminator</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#235-280" title="Go to source code">getCachedSegment</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$cacheIdentifierValues</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var> = <span class="php-keyword1">false</span></span>, <span>string|boolean <var>$cacheDiscriminator</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Tries to retrieve the specified content segment from the cache – further nested inline segments are retrieved
@@ -1163,7 +1163,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceCachePlaceholders">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#283-312" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#282-311" title="Go to source code">replaceCachePlaceholders</a>( <span>string <var>&amp; $content</var></span>, <span>boolean <var>$addCacheSegmentMarkersToPlaceholders</var></span> )</code>
 
 			<div class="description short">
 				<p>Find cache placeholders in a cached segment and return the identifiers</p>
@@ -1196,14 +1196,14 @@ as well and segments which were not cacheable are rendered.</p>
 
 			<td class="attributes"><code>
 				 protected 
-				string
+				integer
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceUncachedPlaceholders">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#314-330" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.ContentCache.html#313-330" title="Go to source code">replaceUncachedPlaceholders</a>( <span>Closure <var>$uncachedCommandCallback</var></span>, <span>string <var>&amp; $content</var></span> )</code>
 
 			<div class="description short">
 				<p>Replace segments which are marked as not-cacheable by their actual content by invoking the Fusion Runtime.</p>
@@ -1223,7 +1223,7 @@ as well and segments which were not cacheable are rendered.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The original content, but with uncached segments replaced by the actual content
+						integer<br>Number of replaced placeholders
 					</div>
 
 
