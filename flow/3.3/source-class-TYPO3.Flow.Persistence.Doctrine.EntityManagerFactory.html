@@ -1062,7 +1062,7 @@
 </span><span id="126" class="l">        <span class="php-var">$config</span>-&gt;setAutoGenerateProxyClasses(<span class="php-keyword1">false</span>);
 </span><span id="127" class="l">
 </span><span id="128" class="l">        <span class="php-comment">// Set default host to 127.0.0.1 if there is no host configured but a dbname</span>
-</span><span id="129" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'host'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'dbname'</span>])) {
+</span><span id="129" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'host'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'dbname'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'unix_socket'</span>])) {
 </span><span id="130" class="l">            <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'host'</span>] = <span class="php-quote">'127.0.0.1'</span>;
 </span><span id="131" class="l">        }
 </span><span id="132" class="l">
