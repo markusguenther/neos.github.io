@@ -905,7 +905,7 @@
 </span></span><span id="157" class="l"><span class="php-quote">    /x'</span>;
 </span><span id="158" class="l">    <span class="php-keyword1">const</span> SPLIT_PATTERN_VALUENUMBER = <span class="php-quote">'/^\s*-?\d+\s*$/'</span>;
 </span><span id="159" class="l">    <span class="php-keyword1">const</span> SPLIT_PATTERN_VALUEFLOATNUMBER = <span class="php-quote">'/^\s*-?\d+(\.\d+)?\s*$/'</span>;
-</span><span id="160" class="l">    <span class="php-keyword1">const</span> SPLIT_PATTERN_VALUELITERAL = <span class="php-quote">'/^&quot;((?:\\\\.|[^\\\\&quot;])*)&quot;|\'((?:\\\\.|[^\\\\\'])*)\'$/'</span>;
+</span><span id="160" class="l">    <span class="php-keyword1">const</span> SPLIT_PATTERN_VALUELITERAL = <span class="php-quote">'/^&quot;([^&quot;\\\\]*(?&gt;\\\\.[^&quot;\\\\]*)*)&quot;|\'([^\'\\\\]*(?&gt;\\\\.[^\'\\\\]*)*)\'$/'</span>;
 </span><span id="161" class="l">    <span class="php-keyword1">const</span> SPLIT_PATTERN_VALUEMULTILINELITERAL = <span class="php-quote">'/
 </span></span><span id="162" class="l"><span class="php-quote">        ^(
 </span></span><span id="163" class="l"><span class="php-quote">            (?P&lt;DoubleQuoteChar&gt;&quot;)
