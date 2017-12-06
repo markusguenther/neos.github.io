@@ -979,7 +979,7 @@
 </span><span id="126" class="l">        } <span class="php-keyword1">catch</span> (SecurityException <span class="php-var">$exception</span>) {
 </span><span id="127" class="l">            <span class="php-keyword1">throw</span> <span class="php-var">$exception</span>;
 </span><span id="128" class="l">        } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$exception</span>) {
-</span><span id="129" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> PropertyException(<span class="php-quote">'Exception while property mapping for target type &quot;'</span> . <span class="php-var">$targetType</span> . <span class="php-quote">'&quot;, at property path &quot;'</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">'.'</span>, <span class="php-var">$currentPropertyPath</span>) . <span class="php-quote">'&quot;: '</span> . <span class="php-var">$exception</span>-&gt;getMessage(), <span class="php-num">1297759968</span>, <span class="php-var">$exception</span>);
+</span><span id="129" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> PropertyException(<span class="php-quote">'Could not convert target type &quot;'</span> . <span class="php-var">$targetType</span> . <span class="php-quote">'&quot;'</span> . (<span class="php-keyword2">count</span>(<span class="php-var">$currentPropertyPath</span>) &gt; <span class="php-num">0</span> ? <span class="php-quote">', at property path &quot;'</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">'.'</span>, <span class="php-var">$currentPropertyPath</span>) . <span class="php-quote">'&quot;'</span> : <span class="php-quote">''</span>) . <span class="php-quote">': '</span> . <span class="php-var">$exception</span>-&gt;getMessage(), <span class="php-num">1297759968</span>, <span class="php-var">$exception</span>);
 </span><span id="130" class="l">        }
 </span><span id="131" class="l">    }
 </span><span id="132" class="l">
@@ -1309,6 +1309,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?262702ca8de3ed7afa8aa80355704db64540040b"></script>
+<script src="elementlist.js?5d53d7053bfb3b924a0ce3989bbf95c18403c940"></script>
 </body>
 </html>
