@@ -1129,7 +1129,7 @@
 </span><span id="270" class="l">                        <span class="php-var">$this</span>-&gt;resourceRepository-&gt;remove(<span class="php-var">$resource</span>);
 </span><span id="271" class="l">                        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$relatedAssets</span>[<span class="php-var">$resource</span>])) {
 </span><span id="272" class="l">                            <span class="php-keyword1">foreach</span> (<span class="php-var">$relatedAssets</span>[<span class="php-var">$resource</span>] <span class="php-keyword1">as</span> <span class="php-var">$asset</span>) {
-</span><span id="273" class="l">                                <span class="php-var">$assetRepository</span>-&gt;remove(<span class="php-var">$asset</span>);
+</span><span id="273" class="l">                                <span class="php-var">$assetRepository</span>-&gt;removeWithoutUsageChecks(<span class="php-var">$asset</span>);
 </span><span id="274" class="l">                                <span class="php-var">$brokenAssetCounter</span>++;
 </span><span id="275" class="l">                            }
 </span><span id="276" class="l">                        }
@@ -1185,6 +1185,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?3e6b94e9183d97be2aa07d310d411a0eb94cfc37"></script>
+<script src="elementlist.js?e96a79d41c69553c483641bf8b8edcf1127c8058"></script>
 </body>
 </html>
