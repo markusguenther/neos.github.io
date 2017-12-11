@@ -316,6 +316,10 @@
 						<a href="namespace-Neos.Flow.Log.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.ThrowableStorage.html">
+							ThrowableStorage						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Monitor.html">
@@ -1022,8 +1026,11 @@
 				<li><a href="class-Neos.Flow.Log.Backend.ConsoleBackend.html">Neos\Flow\Log\Backend\ConsoleBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.FileBackend.html">Neos\Flow\Log\Backend\FileBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.NullBackend.html">Neos\Flow\Log\Backend\NullBackend</a></li>
+				<li><a href="class-Neos.Flow.Log.DefaultLogger.html">Neos\Flow\Log\DefaultLogger</a></li>
 				<li><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></li>
 				<li><a href="class-Neos.Flow.Log.LoggerFactory.html">Neos\Flow\Log\LoggerFactory</a></li>
+				<li><a href="class-Neos.Flow.Log.PlainTextFormatter.html">Neos\Flow\Log\PlainTextFormatter</a></li>
+				<li><a href="class-Neos.Flow.Log.ThrowableStorage.FileStorage.html">Neos\Flow\Log\ThrowableStorage\FileStorage</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.ModificationTimeStrategy.html">Neos\Flow\Monitor\ChangeDetectionStrategy\ModificationTimeStrategy</a></li>
 				<li><a href="class-Neos.Flow.Monitor.FileMonitor.html">Neos\Flow\Monitor\FileMonitor</a></li>
 				<li><a href="class-Neos.Flow.Mvc.ActionRequest.html">Neos\Flow\Mvc\ActionRequest</a></li>
@@ -1396,6 +1403,7 @@
 				<li><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html">Neos\Flow\Log\SecurityLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">Neos\Flow\Log\ThrowableLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.ChangeDetectionStrategyInterface.html">Neos\Flow\Monitor\ChangeDetectionStrategy\ChangeDetectionStrategyInterface</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.StrategyWithMarkDeletedInterface.html">Neos\Flow\Monitor\ChangeDetectionStrategy\StrategyWithMarkDeletedInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></li>
@@ -1948,7 +1956,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
+		<td class="name"><a href="class-Neos.Flow.Log.DefaultLogger.html">Neos\Flow\Log\DefaultLogger</a></td>
 		<td>
 		</td>
 	</tr>
@@ -2771,7 +2779,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">Neos\Flow\Log\ThrowableLoggerInterface</a></td>
+		<td class="name"><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></td>
 		<td>
 		</td>
 	</tr>
@@ -5620,32 +5628,26 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.Logger.html#_setBackend">setBackend()</a></code></td>
+						<td class="name"><a href="class-Neos.Flow.Log.DefaultLogger.html">Neos\Flow\Log\DefaultLogger</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Log.DefaultLogger.html#_setBackend">setBackend()</a></code></td>
 						<td>
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.Logger.html#_addBackend">addBackend()</a></code></td>
+						<td class="name"><a href="class-Neos.Flow.Log.DefaultLogger.html">Neos\Flow\Log\DefaultLogger</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Log.DefaultLogger.html#_addBackend">addBackend()</a></code></td>
 						<td>
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.Logger.html#_removeBackend">removeBackend()</a></code></td>
+						<td class="name"><a href="class-Neos.Flow.Log.DefaultLogger.html">Neos\Flow\Log\DefaultLogger</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Log.DefaultLogger.html#_removeBackend">removeBackend()</a></code></td>
 						<td>
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.Logger.html#_log">log()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.Logger.html#_logException">logException()</a></code></td>
+						<td class="name"><a href="class-Neos.Flow.Log.DefaultLogger.html">Neos\Flow\Log\DefaultLogger</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Log.DefaultLogger.html#_log">log()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -9155,14 +9157,14 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.LoggerInterface.html">Neos\Flow\Log\LoggerInterface</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.LoggerInterface.html#_logException">logException()</a></code></td>
+						<td class="name"><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">Neos\Flow\Log\ThrowableLoggerInterface</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html#_logThrowable">logThrowable()</a></code></td>
 						<td>
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">Neos\Flow\Log\ThrowableLoggerInterface</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html#_logThrowable">logThrowable()</a></code></td>
+						<td class="name"><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html#_logThrowable">logThrowable()</a></code></td>
 						<td>
 						</td>
 					</tr>

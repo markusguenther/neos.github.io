@@ -319,6 +319,10 @@
 						<a href="namespace-Neos.Flow.Log.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.ThrowableStorage.html">
+							ThrowableStorage						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Monitor.html">
@@ -900,7 +904,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#16-109" title="Go to source code">Neos.Flow/Classes/Log/Backend/ConsoleBackend.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#17-110" title="Go to source code">Neos.Flow.Log/Classes/Backend/ConsoleBackend.php</a>
 		<br>
 	</div>
 
@@ -920,7 +924,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_open">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#40-65" title="Go to source code">open</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#41-66" title="Go to source code">open</a>( )</code>
 
 			<div class="description short">
 				<p>Carries out all actions necessary to prepare the logging backend, such as opening
@@ -958,7 +962,7 @@ the log file or opening a database connection.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_append">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#67-93" title="Go to source code">append</a>( <span>string <var>$message</var></span>, <span>integer <var>$severity</var> = LOG_INFO</span>, <span>mixed <var>$additionalData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$methodName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#68-94" title="Go to source code">append</a>( <span>string <var>$message</var></span>, <span>integer <var>$severity</var> = LOG_INFO</span>, <span>mixed <var>$additionalData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$methodName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Appends the given message along with the additional information into the log.</p>
@@ -1005,7 +1009,7 @@ the log file or opening a database connection.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#95-108" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#96-109" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Carries out all actions necessary to cleanly close the logging backend, such as
@@ -1038,7 +1042,7 @@ when the request ends. This is to allow full logging until request end.</p>
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#methods">Neos\Flow\Log\Backend\AbstractBackend</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_getFormattedVarDump">getFormattedVarDump()</a></code>, 
+				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_getFormattedVarDump"><span class="deprecated">getFormattedVarDump()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_setLogIpAddress">setLogIpAddress()</a></code>, 
 				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_setSeverityThreshold">setSeverityThreshold()</a></code>
 			</p>
@@ -1063,7 +1067,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#23-27" title="Go to source code"><var>$severityLabels</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#24-28" title="Go to source code"><var>$severityLabels</var></a>
 
 				<div class="description short">
 					<p>An array of severity labels, indexed by their integer constant</p>
@@ -1088,7 +1092,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#29-33" title="Go to source code"><var>$streamName</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#30-34" title="Go to source code"><var>$streamName</var></a>
 
 				<div class="description short">
 					<p>Stream name to use (stdout, stderr)</p>
@@ -1113,7 +1117,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#35-38" title="Go to source code"><var>$streamHandle</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.ConsoleBackend.html#36-39" title="Go to source code"><var>$streamHandle</var></a>
 
 				<div class="description short">
 					
@@ -1154,6 +1158,6 @@ when the request ends. This is to allow full logging until request end.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?f09e692e1314b3e3b4641c9a49ab4f6d103f2766"></script>
+<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
 </body>
 </html>

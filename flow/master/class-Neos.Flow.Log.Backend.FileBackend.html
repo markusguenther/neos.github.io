@@ -319,6 +319,10 @@
 						<a href="namespace-Neos.Flow.Log.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.ThrowableStorage.html">
+							ThrowableStorage						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Monitor.html">
@@ -894,7 +898,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#17-266" title="Go to source code">Neos.Flow/Classes/Log/Backend/FileBackend.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#18-266" title="Go to source code">Neos.Flow.Log/Classes/Backend/FileBackend.php</a>
 		<br>
 	</div>
 
@@ -914,7 +918,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLogFileURL">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#60-71" title="Go to source code">setLogFileURL</a>( <span>string <var>$logFileUrl</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#61-72" title="Go to source code">setLogFileURL</a>( <span>string <var>$logFileUrl</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets URL pointing to the log file. Usually the full directory and
@@ -953,7 +957,7 @@ the filename, however any valid stream URL is possible.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCreateParentDirectories">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#73-86" title="Go to source code">setCreateParentDirectories</a>( <span>boolean <var>$flag</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#74-87" title="Go to source code">setCreateParentDirectories</a>( <span>boolean <var>$flag</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the flag telling if parent directories in the path leading to
@@ -994,7 +998,7 @@ the log file URL should be created if they don't exist.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setMaximumLogFileSize">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#88-100" title="Go to source code">setMaximumLogFileSize</a>( <span>integer <var>$maximumLogFileSize</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#89-101" title="Go to source code">setMaximumLogFileSize</a>( <span>integer <var>$maximumLogFileSize</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the maximum log file size, if the logfile is bigger, a new one
@@ -1037,7 +1041,7 @@ is started.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLogFilesToKeep">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#102-113" title="Go to source code">setLogFilesToKeep</a>( <span>integer <var>$logFilesToKeep</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#103-114" title="Go to source code">setLogFilesToKeep</a>( <span>integer <var>$logFilesToKeep</var></span> )</code>
 
 			<div class="description short">
 				<p>If a new log file is started, keep this number of old log files.</p>
@@ -1078,7 +1082,7 @@ is started.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLogMessageOrigin">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#115-126" title="Go to source code">setLogMessageOrigin</a>( <span>boolean <var>$flag</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#116-127" title="Go to source code">setLogMessageOrigin</a>( <span>boolean <var>$flag</var></span> )</code>
 
 			<div class="description short">
 				<p>If enabled, a hint about where the log message was created is added to the
@@ -1117,7 +1121,7 @@ log file.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_open">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#128-179" title="Go to source code">open</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#129-180" title="Go to source code">open</a>( )</code>
 
 			<div class="description short">
 				<p>Carries out all actions necessary to prepare the logging backend, such as opening
@@ -1155,7 +1159,7 @@ the log file or opening a database connection.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rotateLogFile">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#181-212" title="Go to source code">rotateLogFile</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#182-213" title="Go to source code">rotateLogFile</a>( )</code>
 
 			<div class="description short">
 				<p>Rotate the log file and make sure the configured number of files
@@ -1186,7 +1190,7 @@ is kept.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_append">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#214-250" title="Go to source code">append</a>( <span>string <var>$message</var></span>, <span>integer <var>$severity</var> = LOG_INFO</span>, <span>mixed <var>$additionalData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$methodName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#215-251" title="Go to source code">append</a>( <span>string <var>$message</var></span>, <span>integer <var>$severity</var> = LOG_INFO</span>, <span>mixed <var>$additionalData</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$methodName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Appends the given message along with the additional information into the log.</p>
@@ -1233,7 +1237,7 @@ is kept.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#252-265" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#253-265" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Carries out all actions necessary to cleanly close the logging backend, such as
@@ -1266,7 +1270,7 @@ when the request ends. This is to allow full logging until request end.</p>
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#methods">Neos\Flow\Log\Backend\AbstractBackend</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_getFormattedVarDump">getFormattedVarDump()</a></code>, 
+				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_getFormattedVarDump"><span class="deprecated">getFormattedVarDump()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_setLogIpAddress">setLogIpAddress()</a></code>, 
 				<code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_setSeverityThreshold">setSeverityThreshold()</a></code>
 			</p>
@@ -1291,7 +1295,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#24-28" title="Go to source code"><var>$severityLabels</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#25-29" title="Go to source code"><var>$severityLabels</var></a>
 
 				<div class="description short">
 					<p>An array of severity labels, indexed by their integer constant</p>
@@ -1316,7 +1320,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#30-33" title="Go to source code"><var>$logFileUrl</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#31-34" title="Go to source code"><var>$logFileUrl</var></a>
 
 				<div class="description short">
 					
@@ -1341,7 +1345,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#35-38" title="Go to source code"><var>$maximumLogFileSize</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#36-39" title="Go to source code"><var>$maximumLogFileSize</var></a>
 
 				<div class="description short">
 					
@@ -1366,7 +1370,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#40-43" title="Go to source code"><var>$logFilesToKeep</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#41-44" title="Go to source code"><var>$logFilesToKeep</var></a>
 
 				<div class="description short">
 					
@@ -1391,7 +1395,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#45-48" title="Go to source code"><var>$createParentDirectories</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#46-49" title="Go to source code"><var>$createParentDirectories</var></a>
 
 				<div class="description short">
 					
@@ -1416,7 +1420,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#50-53" title="Go to source code"><var>$logMessageOrigin</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#51-54" title="Go to source code"><var>$logMessageOrigin</var></a>
 
 				<div class="description short">
 					
@@ -1441,7 +1445,7 @@ when the request ends. This is to allow full logging until request end.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#55-58" title="Go to source code"><var>$fileHandle</var></a>
+					<a href="source-class-Neos.Flow.Log.Backend.FileBackend.html#56-59" title="Go to source code"><var>$fileHandle</var></a>
 
 				<div class="description short">
 					
@@ -1482,6 +1486,6 @@ when the request ends. This is to allow full logging until request end.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?f09e692e1314b3e3b4641c9a49ab4f6d103f2766"></script>
+<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
 </body>
 </html>

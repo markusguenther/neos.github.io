@@ -319,6 +319,10 @@
 						<a href="namespace-Neos.Flow.Log.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.ThrowableStorage.html">
+							ThrowableStorage						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Monitor.html">
@@ -831,8 +835,10 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-Neos.Flow.Log.DefaultLogger.html">DefaultLogger</a></li>
 				<li><a href="class-Neos.Flow.Log.Logger.html">Logger</a></li>
 				<li><a href="class-Neos.Flow.Log.LoggerFactory.html">LoggerFactory</a></li>
+				<li><a href="class-Neos.Flow.Log.PlainTextFormatter.html">PlainTextFormatter</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -841,6 +847,7 @@
 				<li><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html">SecurityLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">SystemLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">ThrowableLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">ThrowableStorageInterface</a></li>
 			</ul>
 
 
@@ -876,13 +883,6 @@ Exception
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-			<a href="class-Neos.Flow.Exception.html"><span>Neos\Flow\Exception</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:60px">
-			<img src="resources/inherit.png" alt="Extended by">
 <b><span>Neos\Flow\Log\Exception</span></b>			
 			
 			
@@ -893,7 +893,9 @@ Exception
 	<div>
 		<h3>Direct known subclasses</h3>
 		<p class="elementList">
-			<code><a href="class-Neos.Flow.Log.Exception.CouldNotOpenResourceException.html">Neos\Flow\Log\Exception\CouldNotOpenResourceException</a></code>
+			<code><a href="class-Neos.Flow.Log.Exception.CouldNotOpenResourceException.html">Neos\Flow\Log\Exception\CouldNotOpenResourceException</a></code>, 
+			<code><a href="class-Neos.Flow.Log.Exception.InvalidBackendException.html">Neos\Flow\Log\Exception\InvalidBackendException</a></code>, 
+			<code><a href="class-Neos.Flow.Log.Exception.NoSuchBackendException.html">Neos\Flow\Log\Exception\NoSuchBackendException</a></code>
 		</p>
 	</div>
 
@@ -910,7 +912,7 @@ Exception
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Exception.html#14-21" title="Go to source code">Neos.Flow/Classes/Log/Exception.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Exception.html#14-21" title="Go to source code">Neos.Flow.Log/Classes/Exception.php</a>
 		<br>
 	</div>
 
@@ -920,13 +922,6 @@ Exception
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 		</div>
 
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Exception.html#methods">Neos\Flow\Exception</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Exception.html#_getReferenceCode">getReferenceCode()</a></code>, 
-				<code><a href="class-Neos.Flow.Exception.html#_getStatusCode">getStatusCode()</a></code>
-			</p>
-		</div>
 		<div class="panel panel-default">
 	        <div class="panel-heading"><h3>Methods inherited from Exception</h3></div>
 			<p class="elementList">
@@ -957,13 +952,6 @@ Exception
 		</div>
 
 		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Exception.html#properties">Neos\Flow\Exception</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Exception.html#$referenceCode"><var>$referenceCode</var></a></code>, 
-				<code><a href="class-Neos.Flow.Exception.html#$statusCode"><var>$statusCode</var></a></code>
-			</p>
-		</div>
-		<div class="panel panel-default">
             <div class="panel-heading"><h3>Properties inherited from Exception</h3></div>
 			<p class="elementList">
 				<code><var>$code</var></code>, 
@@ -985,6 +973,6 @@ Exception
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?f09e692e1314b3e3b4641c9a49ab4f6d103f2766"></script>
+<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
 </body>
 </html>

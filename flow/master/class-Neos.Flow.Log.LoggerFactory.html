@@ -319,6 +319,10 @@
 						<a href="namespace-Neos.Flow.Log.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.ThrowableStorage.html">
+							ThrowableStorage						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Monitor.html">
@@ -831,8 +835,10 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-Neos.Flow.Log.DefaultLogger.html">DefaultLogger</a></li>
 				<li><a href="class-Neos.Flow.Log.Logger.html">Logger</a></li>
 				<li class="active"><a href="class-Neos.Flow.Log.LoggerFactory.html">LoggerFactory</a></li>
+				<li><a href="class-Neos.Flow.Log.PlainTextFormatter.html">PlainTextFormatter</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -841,6 +847,7 @@
 				<li><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html">SecurityLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">SystemLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">ThrowableLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">ThrowableStorageInterface</a></li>
 			</ul>
 
 
@@ -884,7 +891,7 @@
 				<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Log.LoggerFactory.html#16-51" title="Go to source code">Neos.Flow/Classes/Log/LoggerFactory.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Log.LoggerFactory.html#21-133" title="Go to source code">Neos.Flow/Classes/Log/LoggerFactory.php</a>
 		<br>
 	</div>
 
@@ -893,6 +900,35 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Neos.Flow.Log.LoggerFactory.html#39-65" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				<p>LoggerFactory constructor.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>LoggerFactory constructor.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="create" id="_create">
 
 			<td class="attributes"><code>
@@ -904,7 +940,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-Neos.Flow.Log.LoggerFactory.html#24-50" title="Go to source code">create</a>( <span>string <var>$identifier</var></span>, <span>string <var>$loggerObjectName</var></span>, <span>mixed <var>$backendObjectNames</var></span>, <span>array <var>$backendOptions</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Log.LoggerFactory.html#67-84" title="Go to source code">create</a>( <span>string <var>$identifier</var></span>, <span>string <var>$loggerObjectName</var></span>, <span>mixed <var>$backendObjectNames</var></span>, <span>array <var>$backendOptions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Factory method which creates the specified logger along with the specified backend(s).</p>
@@ -940,6 +976,81 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="instantiateLogger" id="_instantiateLogger">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Neos.Flow.Log.LoggerInterface.html">Neos\Flow\Log\LoggerInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_instantiateLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Log.LoggerFactory.html#86-114" title="Go to source code">instantiateLogger</a>( <span>string <var>$loggerObjectName</var></span>, <span>array|string <var>$backendObjectNames</var></span>, <span>array <var>$backendOptions</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create a new logger instance.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create a new logger instance.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$loggerObjectName</var></dt>
+						<dd></dd>
+						<dt><var>$backendObjectNames</var></dt>
+						<dd></dd>
+						<dt><var>$backendOptions</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Log.LoggerInterface.html">Neos\Flow\Log\LoggerInterface</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="instantiateThrowableStorage" id="_instantiateThrowableStorage">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Neos.Flow.Log.ThrowableStorage.FileStorage.html">Neos\Flow\Log\ThrowableStorage\FileStorage</a></code>|<code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code>|object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_instantiateThrowableStorage">#</a>
+			<code><a href="source-class-Neos.Flow.Log.LoggerFactory.html#116-132" title="Go to source code">instantiateThrowableStorage</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Log.ThrowableStorage.FileStorage.html">Neos\Flow\Log\ThrowableStorage\FileStorage</a></code>|<code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code>|object
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 			</table>
 		</div>
 
@@ -947,6 +1058,67 @@
 
 
 
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="logInstanceCache" id="$logInstanceCache">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Log.LoggerFactory.html#29-32" title="Go to source code"><var>$logInstanceCache</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$logInstanceCache" class="anchor">#</a>
+					<code>[]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="requestInfoCallback" id="$requestInfoCallback">
+			<td class="attributes"><code>
+				protected  
+				Closure
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Log.LoggerFactory.html#34-37" title="Go to source code"><var>$requestInfoCallback</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$requestInfoCallback" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
 
 
 
@@ -961,6 +1133,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?f09e692e1314b3e3b4641c9a49ab4f6d103f2766"></script>
+<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
 </body>
 </html>
