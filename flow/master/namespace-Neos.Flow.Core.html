@@ -838,6 +838,7 @@
 				<li><a href="class-Neos.Flow.Core.Bootstrap.html">Bootstrap</a></li>
 				<li><a href="class-Neos.Flow.Core.ClassLoader.html">ClassLoader</a></li>
 				<li><a href="class-Neos.Flow.Core.LockManager.html">LockManager</a></li>
+				<li><a href="class-Neos.Flow.Core.ProxyClassLoader.html">ProxyClassLoader</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -885,13 +886,17 @@
 </tr>
 <tr>
 	<td class="name"><a href="class-Neos.Flow.Core.ClassLoader.html">ClassLoader</a></td>
-	<td><p>Class Loader implementation which loads .php files found in the classes
-directory of an object.</p></td>
+	<td>Class Loader implementation as fallback to the compoer loader and for test classes.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Neos.Flow.Core.LockManager.html">LockManager</a></td>
 	<td><p>The Lock Manager controls the master lock of the whole site which is mainly
 used to regenerate code caches in peace.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="class-Neos.Flow.Core.ProxyClassLoader.html">ProxyClassLoader</a></td>
+	<td><p>Class loader for Flow proxy classes.
+This will be asked before the composer loader.</p></td>
 </tr>
 	</table>
 </div>
@@ -917,6 +922,6 @@ used to regenerate code caches in peace.</p></td>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
+<script src="elementlist.js?fc2ea415ff5ca31cd725bb16a98987aa5baacb47"></script>
 </body>
 </html>

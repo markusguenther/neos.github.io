@@ -839,6 +839,7 @@
 				<li class="active"><a href="class-Neos.Flow.Core.Bootstrap.html">Bootstrap</a></li>
 				<li><a href="class-Neos.Flow.Core.ClassLoader.html">ClassLoader</a></li>
 				<li><a href="class-Neos.Flow.Core.LockManager.html">LockManager</a></li>
+				<li><a href="class-Neos.Flow.Core.ProxyClassLoader.html">ProxyClassLoader</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -885,7 +886,7 @@
 				<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Core.Bootstrap.html#27-635" title="Go to source code">Neos.Flow/Classes/Core/Bootstrap.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Core.Bootstrap.html#24-645" title="Go to source code">Neos.Flow/Classes/Core/Bootstrap.php</a>
 		<br>
 	</div>
 
@@ -905,7 +906,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#81-93" title="Go to source code">__construct</a>( <span>string <var>$context</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#78-94" title="Go to source code">__construct</a>( <span>string <var>$context</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -939,7 +940,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_run">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#95-110" title="Go to source code">run</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#96-111" title="Go to source code">run</a>( )</code>
 
 			<div class="description short">
 				<p>Bootstraps the minimal infrastructure, resolves a fitting request handler and
@@ -973,7 +974,7 @@ then passes control over to that request handler.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdown">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#112-135" title="Go to source code">shutdown</a>( <span>string <var>$runlevel</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#113-136" title="Go to source code">shutdown</a>( <span>string <var>$runlevel</var></span> )</code>
 
 			<div class="description short">
 				<p>Initiates the shutdown procedure to safely close all connections, save
@@ -1016,7 +1017,7 @@ as it sees fit.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContext">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#137-146" title="Go to source code">getContext</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#138-147" title="Go to source code">getContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the context this bootstrap was started in.</p>
@@ -1052,7 +1053,7 @@ as it sees fit.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerRequestHandler">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#148-160" title="Go to source code">registerRequestHandler</a>( <span><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html">Neos\Flow\Core\RequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#149-161" title="Go to source code">registerRequestHandler</a>( <span><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html">Neos\Flow\Core\RequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
 
 			<div class="description short">
 				<p>Registers a request handler which can possibly handle a request.
@@ -1093,7 +1094,7 @@ when the bootstrap's run() method is called.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPreselectedRequestHandlerClassName">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#162-172" title="Go to source code">setPreselectedRequestHandlerClassName</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#163-173" title="Go to source code">setPreselectedRequestHandlerClassName</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Preselects a specific request handler. If such a request handler exists,
@@ -1131,7 +1132,7 @@ of this or other request handlers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getActiveRequestHandler">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#174-182" title="Go to source code">getActiveRequestHandler</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#175-183" title="Go to source code">getActiveRequestHandler</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the request handler (if any) which is currently handling the request.</p>
@@ -1164,7 +1165,7 @@ of this or other request handlers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setActiveRequestHandler">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#184-199" title="Go to source code">setActiveRequestHandler</a>( <span><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html">Neos\Flow\Core\RequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#185-200" title="Go to source code">setActiveRequestHandler</a>( <span><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html">Neos\Flow\Core\RequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
 
 			<div class="description short">
 				<p>Explicitly sets the active request handler.</p>
@@ -1204,7 +1205,7 @@ example, an HTTP request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerCompiletimeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#201-213" title="Go to source code">registerCompiletimeCommand</a>( <span>string <var>$commandIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#202-214" title="Go to source code">registerCompiletimeCommand</a>( <span>string <var>$commandIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Registers a command specified by the given identifier to be called during
@@ -1245,7 +1246,7 @@ aware of the limited functionality Flow provides at compiletime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isCompiletimeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#215-255" title="Go to source code">isCompiletimeCommand</a>( <span>string <var>$commandIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#216-256" title="Go to source code">isCompiletimeCommand</a>( <span>string <var>$commandIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Tells if the given command controller is registered for compiletime or not.</p>
@@ -1286,7 +1287,7 @@ aware of the limited functionality Flow provides at compiletime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildEssentialsSequence">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#257-287" title="Go to source code">buildEssentialsSequence</a>( <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#258-288" title="Go to source code">buildEssentialsSequence</a>( <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a boot sequence with the minimum modules necessary for both, compiletime
@@ -1329,7 +1330,7 @@ and runtime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildCompiletimeSequence">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#289-306" title="Go to source code">buildCompiletimeSequence</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#290-307" title="Go to source code">buildCompiletimeSequence</a>( )</code>
 
 			<div class="description short">
 				<p>Builds a boot sequence starting all modules necessary for the compiletime state.
@@ -1367,7 +1368,7 @@ This includes all of the "essentials" sequence.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildRuntimeSequence">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#308-331" title="Go to source code">buildRuntimeSequence</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#309-332" title="Go to source code">buildRuntimeSequence</a>( )</code>
 
 			<div class="description short">
 				<p>Builds a boot sequence starting all modules necessary for the runtime state.
@@ -1405,7 +1406,7 @@ This includes all of the "essentials" sequence.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setEarlyInstance">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#333-346" title="Go to source code">setEarlyInstance</a>( <span>string <var>$objectName</var></span>, <span>object <var>$instance</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#334-347" title="Go to source code">setEarlyInstance</a>( <span>string <var>$objectName</var></span>, <span>object <var>$instance</var></span> )</code>
 
 			<div class="description short">
 				<p>Registers the instance of the specified object for an early boot stage.
@@ -1448,7 +1449,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSignalSlotDispatcher">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#348-357" title="Go to source code">getSignalSlotDispatcher</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#349-358" title="Go to source code">getSignalSlotDispatcher</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the signal slot dispatcher instance</p>
@@ -1484,7 +1485,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getEarlyInstance">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#359-373" title="Go to source code">getEarlyInstance</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#360-374" title="Go to source code">getEarlyInstance</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an instance which was registered earlier through setEarlyInstance()</p>
@@ -1529,7 +1530,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getEarlyInstances">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#375-383" title="Go to source code">getEarlyInstances</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#376-384" title="Go to source code">getEarlyInstances</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all registered early instances indexed by object name</p>
@@ -1562,7 +1563,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectManager">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#385-398" title="Go to source code">getObjectManager</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#386-399" title="Go to source code">getObjectManager</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the object manager instance</p>
@@ -1599,7 +1600,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveRequestHandler">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#400-431" title="Go to source code">resolveRequestHandler</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#401-432" title="Go to source code">resolveRequestHandler</a>( )</code>
 
 			<div class="description short">
 				<p>Iterates over the registered request handlers and determines which one fits best.</p>
@@ -1636,7 +1637,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitFinishedCompiletimeRun">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#433-442" title="Go to source code">emitFinishedCompiletimeRun</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#434-443" title="Go to source code">emitFinishedCompiletimeRun</a>( )</code>
 
 			<div class="description short">
 				<p>Emits a signal that the compile run was finished.</p>
@@ -1668,7 +1669,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitFinishedRuntimeRun">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#444-453" title="Go to source code">emitFinishedRuntimeRun</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#445-454" title="Go to source code">emitFinishedRuntimeRun</a>( )</code>
 
 			<div class="description short">
 				<p>Emits a signal that the runtime run was finished.</p>
@@ -1700,7 +1701,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBootstrapShuttingDown">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#455-465" title="Go to source code">emitBootstrapShuttingDown</a>( <span>string <var>$runLevel</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#456-466" title="Go to source code">emitBootstrapShuttingDown</a>( <span>string <var>$runLevel</var></span> )</code>
 
 			<div class="description short">
 				<p>Emits a signal that the bootstrap finished and is shutting down.</p>
@@ -1737,7 +1738,7 @@ be transferred to the Object Manager's registry.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_defineConstants">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#467-541" title="Go to source code">defineConstants</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#468-551" title="Go to source code">defineConstants</a>( )</code>
 
 			<div class="description short">
 				<p>Defines various path constants used by Flow and if no root path or web root was
@@ -1768,7 +1769,7 @@ specified by an environment variable, exits with a respective error message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ensureRequiredEnvironment">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#543-600" title="Go to source code">ensureRequiredEnvironment</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#553-610" title="Go to source code">ensureRequiredEnvironment</a>( )</code>
 
 			<div class="description short">
 				<p>Checks PHP version and other parameters of the environment</p>
@@ -1797,7 +1798,7 @@ specified by an environment variable, exits with a respective error message.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getEnvironmentConfigurationSetting">#</a>
-			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#602-634" title="Go to source code">getEnvironmentConfigurationSetting</a>( <span>string <var>$variableName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.Bootstrap.html#612-644" title="Go to source code">getEnvironmentConfigurationSetting</a>( <span>string <var>$variableName</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to find an environment setting with the following fallback chain:</p>
@@ -1849,7 +1850,7 @@ specified by an environment variable, exits with a respective error message.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MINIMUM_PHP_VERSION.html#36-39" title="Go to source code"><b>MINIMUM_PHP_VERSION</b></a>
+						<a href="source-constant-MINIMUM_PHP_VERSION.html#33-36" title="Go to source code"><b>MINIMUM_PHP_VERSION</b></a>
 					</code>
 
 					<div class="description short">
@@ -1873,7 +1874,7 @@ specified by an environment variable, exits with a respective error message.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-RUNLEVEL_COMPILETIME.html#41" title="Go to source code"><b>RUNLEVEL_COMPILETIME</b></a>
+						<a href="source-constant-RUNLEVEL_COMPILETIME.html#38" title="Go to source code"><b>RUNLEVEL_COMPILETIME</b></a>
 					</code>
 
 					<div class="description short">
@@ -1897,7 +1898,7 @@ specified by an environment variable, exits with a respective error message.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-RUNLEVEL_RUNTIME.html#42" title="Go to source code"><b>RUNLEVEL_RUNTIME</b></a>
+						<a href="source-constant-RUNLEVEL_RUNTIME.html#39" title="Go to source code"><b>RUNLEVEL_RUNTIME</b></a>
 					</code>
 
 					<div class="description short">
@@ -1932,7 +1933,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#44-47" title="Go to source code"><var>$context</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#41-44" title="Go to source code"><var>$context</var></a>
 
 				<div class="description short">
 					
@@ -1957,7 +1958,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#49-52" title="Go to source code"><var>$requestHandlers</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#46-49" title="Go to source code"><var>$requestHandlers</var></a>
 
 				<div class="description short">
 					
@@ -1982,7 +1983,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#54-57" title="Go to source code"><var>$preselectedRequestHandlerClassName</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#51-54" title="Go to source code"><var>$preselectedRequestHandlerClassName</var></a>
 
 				<div class="description short">
 					
@@ -2007,7 +2008,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#59-62" title="Go to source code"><var>$activeRequestHandler</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#56-59" title="Go to source code"><var>$activeRequestHandler</var></a>
 
 				<div class="description short">
 					
@@ -2032,7 +2033,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#64-69" title="Go to source code"><var>$staticObjectManager</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#61-66" title="Go to source code"><var>$staticObjectManager</var></a>
 
 				<div class="description short">
 					<p>The same instance like $objectManager, but static, for use in the proxy classes.</p>
@@ -2057,7 +2058,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#71-74" title="Go to source code"><var>$compiletimeCommands</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#68-71" title="Go to source code"><var>$compiletimeCommands</var></a>
 
 				<div class="description short">
 					
@@ -2082,7 +2083,7 @@ specified by an environment variable, exits with a respective error message.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.Bootstrap.html#76-79" title="Go to source code"><var>$earlyInstances</var></a>
+					<a href="source-class-Neos.Flow.Core.Bootstrap.html#73-76" title="Go to source code"><var>$earlyInstances</var></a>
 
 				<div class="description short">
 					
@@ -2116,6 +2117,6 @@ specified by an environment variable, exits with a respective error message.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
+<script src="elementlist.js?fc2ea415ff5ca31cd725bb16a98987aa5baacb47"></script>
 </body>
 </html>

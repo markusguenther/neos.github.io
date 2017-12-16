@@ -839,6 +839,7 @@
 				<li><a href="class-Neos.Flow.Core.Bootstrap.html">Bootstrap</a></li>
 				<li class="active"><a href="class-Neos.Flow.Core.ClassLoader.html">ClassLoader</a></li>
 				<li><a href="class-Neos.Flow.Core.LockManager.html">LockManager</a></li>
+				<li><a href="class-Neos.Flow.Core.ProxyClassLoader.html">ProxyClassLoader</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -862,8 +863,7 @@
 
 
 	<div class="description">
-	<p>Class Loader implementation which loads .php files found in the classes
-directory of an object.</p>
+	<p>Class Loader implementation as fallback to the compoer loader and for test classes.</p>
 	</div>
 
 
@@ -884,7 +884,7 @@ directory of an object.</p>
 				<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Core.ClassLoader.html#19-395" title="Go to source code">Neos.Flow/Classes/Core/ClassLoader.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Core.ClassLoader.html#18-343" title="Go to source code">Neos.Flow/Classes/Core/ClassLoader.php</a>
 		<br>
 	</div>
 
@@ -904,7 +904,7 @@ directory of an object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#107-118" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Core.ApplicationContext.html">Neos\Flow\Core\ApplicationContext</a></code> <var>$context</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$defaultPackageEntries</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#95-103" title="Go to source code">__construct</a>( <span>array <var>$defaultPackageEntries</var> = []</span> )</code>
 
 			<div class="description short">
 				
@@ -916,44 +916,8 @@ directory of an object.</p>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$context</var></dt>
-						<dd></dd>
 						<dt><var>$defaultPackageEntries</var></dt>
 						<dd>Adds default entries for packages that should be available for very early loading</dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="injectClassesCache" id="_injectClassesCache">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_injectClassesCache">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#120-129" title="Go to source code">injectClassesCache</a>( <span>Neos\Cache\Frontend\PhpFrontend <var>$classesCache</var></span> )</code>
-
-			<div class="description short">
-				<p>Injects the cache for storing the renamed original classes</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Injects the cache for storing the renamed original classes</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$classesCache</var></dt>
-						<dd></dd>
 					</dl></div>
 
 
@@ -974,7 +938,7 @@ directory of an object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadClass">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#131-191" title="Go to source code">loadClass</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#105-157" title="Go to source code">loadClass</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads php files containing classes or interfaces found in the classes directory of
@@ -1014,7 +978,7 @@ a package and specifically registered classes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadClassFromPossiblePaths">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#193-223" title="Go to source code">loadClassFromPossiblePaths</a>( <span>array <var>$possiblePaths</var></span>, <span>array <var>$namespaceParts</var></span>, <span>integer <var>$packageNamespacePartCount</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#159-189" title="Go to source code">loadClassFromPossiblePaths</a>( <span>array <var>$possiblePaths</var></span>, <span>array <var>$namespaceParts</var></span>, <span>integer <var>$packageNamespacePartCount</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to load a class from a list of possible paths. This is needed because packages are not prefix-free; i.e.
@@ -1060,7 +1024,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPackages">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#225-245" title="Go to source code">setPackages</a>( <span>array <var>$activePackages</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#191-211" title="Go to source code">setPackages</a>( <span>array <var>$activePackages</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the available packages</p>
@@ -1094,7 +1058,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNamespaceMapEntry">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#247-275" title="Go to source code">createNamespaceMapEntry</a>( <span>string <var>$namespace</var></span>, <span>string <var>$classPath</var></span>, <span>string <var>$mappingType</var> = self::MAPPING_TYPE_PSR0</span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#213-241" title="Go to source code">createNamespaceMapEntry</a>( <span>string <var>$namespace</var></span>, <span>string <var>$classPath</var></span>, <span>string <var>$mappingType</var> = self::MAPPING_TYPE_PSR0</span> )</code>
 
 			<div class="description short">
 				<p>Add a namespace to class path mapping to the class loader for resolving classes.</p>
@@ -1132,7 +1096,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createFallbackPathEntry">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#277-292" title="Go to source code">createFallbackPathEntry</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#243-258" title="Go to source code">createFallbackPathEntry</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds an entry to the fallback path map. MappingType for this kind of paths is always PSR4 as no package namespace is used then.</p>
@@ -1166,7 +1130,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeNamespaceMapEntry">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#294-324" title="Go to source code">removeNamespaceMapEntry</a>( <span>string <var>$namespace</var></span>, <span>string <var>$classPath</var></span>, <span>string <var>$mappingType</var> = self::MAPPING_TYPE_PSR0</span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#260-290" title="Go to source code">removeNamespaceMapEntry</a>( <span>string <var>$namespace</var></span>, <span>string <var>$classPath</var></span>, <span>string <var>$mappingType</var> = self::MAPPING_TYPE_PSR0</span> )</code>
 
 			<div class="description short">
 				<p>Tries to remove a possibly existing namespace to class path map entry.</p>
@@ -1204,7 +1168,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildClassPathWithPsr0">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#326-338" title="Go to source code">buildClassPathWithPsr0</a>( <span>array <var>$classNameParts</var></span>, <span>string <var>$classPath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#292-304" title="Go to source code">buildClassPathWithPsr0</a>( <span>array <var>$classNameParts</var></span>, <span>string <var>$classPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Try to build a path to a class according to PSR-0 rules.</p>
@@ -1244,7 +1208,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildClassPathWithPsr4">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#340-353" title="Go to source code">buildClassPathWithPsr4</a>( <span>array <var>$classNameParts</var></span>, <span>string <var>$classPath</var></span>, <span>integer <var>$packageNamespacePartCount</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#306-319" title="Go to source code">buildClassPathWithPsr4</a>( <span>array <var>$classNameParts</var></span>, <span>string <var>$classPath</var></span>, <span>integer <var>$packageNamespacePartCount</var></span> )</code>
 
 			<div class="description short">
 				<p>Try to build a path to a class according to PSR-4 rules.</p>
@@ -1275,40 +1239,6 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="initializeAvailableProxyClasses" id="_initializeAvailableProxyClasses">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_initializeAvailableProxyClasses">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#355-371" title="Go to source code">initializeAvailableProxyClasses</a>( <span><code><a href="class-Neos.Flow.Core.ApplicationContext.html">Neos\Flow\Core\ApplicationContext</a></code> <var>$context</var> = <span class="php-keyword1">null</span></span> )</code>
-
-			<div class="description short">
-				<p>Initialize available proxy classes from the cached list.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Initialize available proxy classes from the cached list.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$context</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="setConsiderTestsNamespace" id="_setConsiderTestsNamespace">
 
 			<td class="attributes"><code>
@@ -1320,7 +1250,7 @@ loaded (if it exists) from Neos.NodeTypes, falling back to Neos afterwards.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setConsiderTestsNamespace">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#373-383" title="Go to source code">setConsiderTestsNamespace</a>( <span>boolean <var>$flag</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#321-331" title="Go to source code">setConsiderTestsNamespace</a>( <span>boolean <var>$flag</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the flag which enables or disables autoloading support for functional
@@ -1356,7 +1286,7 @@ test files.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAutoloadTypeWithPredictableClassPath">#</a>
-			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#385-394" title="Go to source code">isAutoloadTypeWithPredictableClassPath</a>( <span>string <var>$mappingType</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Core.ClassLoader.html#333-342" title="Go to source code">isAutoloadTypeWithPredictableClassPath</a>( <span>string <var>$mappingType</var></span> )</code>
 
 			<div class="description short">
 				<p>Is the given mapping type predictable in terms of path to class name</p>
@@ -1401,7 +1331,7 @@ test files.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MAPPING_TYPE_PSR0.html#28-31" title="Go to source code"><b>MAPPING_TYPE_PSR0</b></a>
+						<a href="source-constant-MAPPING_TYPE_PSR0.html#26-29" title="Go to source code"><b>MAPPING_TYPE_PSR0</b></a>
 					</code>
 
 					<div class="description short">
@@ -1425,7 +1355,7 @@ test files.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MAPPING_TYPE_PSR4.html#33-36" title="Go to source code"><b>MAPPING_TYPE_PSR4</b></a>
+						<a href="source-constant-MAPPING_TYPE_PSR4.html#31-34" title="Go to source code"><b>MAPPING_TYPE_PSR4</b></a>
 					</code>
 
 					<div class="description short">
@@ -1449,7 +1379,7 @@ test files.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MAPPING_TYPE_CLASSMAP.html#38-41" title="Go to source code"><b>MAPPING_TYPE_CLASSMAP</b></a>
+						<a href="source-constant-MAPPING_TYPE_CLASSMAP.html#36-39" title="Go to source code"><b>MAPPING_TYPE_CLASSMAP</b></a>
 					</code>
 
 					<div class="description short">
@@ -1473,7 +1403,7 @@ test files.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MAPPING_TYPE_FILES.html#43-46" title="Go to source code"><b>MAPPING_TYPE_FILES</b></a>
+						<a href="source-constant-MAPPING_TYPE_FILES.html#41-44" title="Go to source code"><b>MAPPING_TYPE_FILES</b></a>
 					</code>
 
 					<div class="description short">
@@ -1501,31 +1431,6 @@ test files.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="classesCache" id="$classesCache">
-			<td class="attributes"><code>
-				protected  
-				Neos\Cache\Frontend\PhpFrontend
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#48-51" title="Go to source code"><var>$classesCache</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$classesCache" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="packageNamespaces" id="$packageNamespaces">
 			<td class="attributes"><code>
 				protected  
@@ -1533,7 +1438,7 @@ test files.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#53-58" title="Go to source code"><var>$packageNamespaces</var></a>
+					<a href="source-class-Neos.Flow.Core.ClassLoader.html#46-51" title="Go to source code"><var>$packageNamespaces</var></a>
 
 				<div class="description short">
 					<p>A list of namespaces this class loader is definitely responsible for.</p>
@@ -1558,7 +1463,7 @@ test files.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#60-63" title="Go to source code"><var>$considerTestsNamespace</var></a>
+					<a href="source-class-Neos.Flow.Core.ClassLoader.html#53-56" title="Go to source code"><var>$considerTestsNamespace</var></a>
 
 				<div class="description short">
 					
@@ -1583,7 +1488,7 @@ test files.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#65-85" title="Go to source code"><var>$ignoredClassNames</var></a>
+					<a href="source-class-Neos.Flow.Core.ClassLoader.html#58-78" title="Go to source code"><var>$ignoredClassNames</var></a>
 
 				<div class="description short">
 					
@@ -1625,7 +1530,7 @@ test files.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#87-90" title="Go to source code"><var>$fallbackClassPaths</var></a>
+					<a href="source-class-Neos.Flow.Core.ClassLoader.html#80-83" title="Go to source code"><var>$fallbackClassPaths</var></a>
 
 				<div class="description short">
 					
@@ -1650,7 +1555,7 @@ test files.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#92-100" title="Go to source code"><var>$nonExistentClasses</var></a>
+					<a href="source-class-Neos.Flow.Core.ClassLoader.html#85-93" title="Go to source code"><var>$nonExistentClasses</var></a>
 
 				<div class="description short">
 					<p>Cache classNames that were not found in this class loader in order
@@ -1672,31 +1577,6 @@ Usually these will be annotations that have no class.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="availableProxyClasses" id="$availableProxyClasses">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Core.ClassLoader.html#102-105" title="Go to source code"><var>$availableProxyClasses</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$availableProxyClasses" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 			</table>
 		</div>
 
@@ -1713,6 +1593,6 @@ Usually these will be annotations that have no class.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?92451dff231440d172ca3cbe9db57a0e334eb9fc"></script>
+<script src="elementlist.js?fc2ea415ff5ca31cd725bb16a98987aa5baacb47"></script>
 </body>
 </html>
