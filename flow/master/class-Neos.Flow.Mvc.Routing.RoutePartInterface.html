@@ -841,7 +841,6 @@
 				<li><a href="class-Neos.Flow.Mvc.Routing.ObjectPathMapping.html">ObjectPathMapping</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.ObjectPathMappingRepository.html">ObjectPathMappingRepository</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.Route.html">Route</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Routing.Router.html">Router</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RouterCachingService.html">RouterCachingService</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutingComponent.html">RoutingComponent</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.StaticRoutePart.html">StaticRoutePart</a></li>
@@ -851,8 +850,8 @@
 			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">DynamicRoutePartInterface</a></li>
+				<li><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html">ParameterAwareRoutePartInterface</a></li>
 				<li class="active"><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html">RoutePartInterface</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Routing.RouterInterface.html">RouterInterface</a></li>
 			</ul>
 
 
@@ -886,7 +885,8 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 		<h3>Direct known implementers</h3>
 		<p class="elementList">
 			<code><a href="class-Neos.Flow.Mvc.Routing.AbstractRoutePart.html">Neos\Flow\Mvc\Routing\AbstractRoutePart</a></code>, 
-			<code><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">Neos\Flow\Mvc\Routing\DynamicRoutePartInterface</a></code>
+			<code><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">Neos\Flow\Mvc\Routing\DynamicRoutePartInterface</a></code>, 
+			<code><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html">Neos\Flow\Mvc\Routing\ParameterAwareRoutePartInterface</a></code>
 		</p>
 	</div>
 
@@ -907,7 +907,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Mvc.html">Mvc</a>\<a href="namespace-Neos.Flow.Mvc.Routing.html">Routing</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#14-139" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/RoutePartInterface.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#17-142" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/RoutePartInterface.php</a>
 		<br>
 	</div>
 
@@ -927,7 +927,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setName">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#23-29" title="Go to source code">setName</a>( <span>string <var>$partName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#26-32" title="Go to source code">setName</a>( <span>string <var>$partName</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets name of the Route Part.</p>
@@ -961,7 +961,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#31-36" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#34-39" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns name of the Route Part.</p>
@@ -994,7 +994,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#38-43" title="Go to source code">hasValue</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#41-46" title="Go to source code">hasValue</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a value is set for this Route Part, otherwise FALSE.</p>
@@ -1027,7 +1027,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#45-50" title="Go to source code">getValue</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#48-53" title="Go to source code">getValue</a>( )</code>
 
 			<div class="description short">
 				<p>Returns value of the Route Part. Before match() is called this returns NULL.</p>
@@ -1060,7 +1060,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasDefaultValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#52-57" title="Go to source code">hasDefaultValue</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#55-60" title="Go to source code">hasDefaultValue</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a default value is set for this Route Part, otherwise FALSE.</p>
@@ -1093,7 +1093,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDefaultValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#59-65" title="Go to source code">setDefaultValue</a>( <span>mixed <var>$defaultValue</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#62-68" title="Go to source code">setDefaultValue</a>( <span>mixed <var>$defaultValue</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets default value of the Route Part.</p>
@@ -1127,7 +1127,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#67-72" title="Go to source code">getDefaultValue</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#70-75" title="Go to source code">getDefaultValue</a>( )</code>
 
 			<div class="description short">
 				<p>Gets default value of the Route Part.</p>
@@ -1160,7 +1160,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOptional">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#74-80" title="Go to source code">setOptional</a>( <span>boolean <var>$isOptional</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#77-83" title="Go to source code">setOptional</a>( <span>boolean <var>$isOptional</var></span> )</code>
 
 			<div class="description short">
 				<p>Specifies whether this Route part is optional.</p>
@@ -1194,7 +1194,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isOptional">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#82-86" title="Go to source code">isOptional</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#85-89" title="Go to source code">isOptional</a>( )</code>
 
 			<div class="description short">
 				
@@ -1231,7 +1231,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLowerCase">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#88-94" title="Go to source code">setLowerCase</a>( <span>boolean <var>$lowerCase</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#91-97" title="Go to source code">setLowerCase</a>( <span>boolean <var>$lowerCase</var></span> )</code>
 
 			<div class="description short">
 				<p>Specifies whether this Route part should be converted to lower case when resolved.</p>
@@ -1265,7 +1265,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isLowerCase">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#96-102" title="Go to source code">isLowerCase</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#99-105" title="Go to source code">isLowerCase</a>( )</code>
 
 			<div class="description short">
 				<p>Getter for $this->lowerCase.</p>
@@ -1302,7 +1302,7 @@ get back <em>all</em> objects, not just the objects visible to the current role.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOptions">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#104-111" title="Go to source code">setOptions</a>( <span>array <var>$options</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#107-114" title="Go to source code">setOptions</a>( <span>array <var>$options</var></span> )</code>
 
 			<div class="description short">
 				<p>Defines options for this Route Part.
@@ -1338,7 +1338,7 @@ Options can be used to enrich a route part with parameters or settings like case
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOptions">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#113-116" title="Go to source code">getOptions</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#116-119" title="Go to source code">getOptions</a>( )</code>
 
 			<div class="description short">
 				
@@ -1364,14 +1364,14 @@ Options can be used to enrich a route part with parameters or settings like case
 
 			<td class="attributes"><code>
 				 public 
-				boolean
+				boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_match">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#118-127" title="Go to source code">match</a>( <span>string <var>&amp; $routePath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#121-130" title="Go to source code">match</a>( <span>string <var>&amp; $routePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether this Route Part corresponds to the given $routePath.
@@ -1395,7 +1395,7 @@ This is why $routePath has to be passed by reference.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if Route Part matched $routePath, otherwise FALSE.
+						boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult<br>TRUE or an instance of MatchResult if Route Part matched $routePath, otherwise FALSE.
 					</div>
 
 
@@ -1408,14 +1408,14 @@ This is why $routePath has to be passed by reference.</p>
 
 			<td class="attributes"><code>
 				 public 
-				boolean
+				boolean|Neos\Flow\Mvc\Routing\Dto\ResolveResult
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolve">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#129-138" title="Go to source code">resolve</a>( <span>array <var>&amp; $routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#132-141" title="Go to source code">resolve</a>( <span>array <var>&amp; $routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether this Route Part corresponds to the given $routeValues.
@@ -1439,7 +1439,7 @@ This is why $routeValues has to be passed by reference.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if Route Part can resolve one or more $routeValues elements, otherwise FALSE.
+						boolean|Neos\Flow\Mvc\Routing\Dto\ResolveResult<br>TRUE or an instance of ResolveResult if Route Part can resolve one or more $routeValues elements, otherwise FALSE.
 					</div>
 
 
@@ -1469,6 +1469,6 @@ This is why $routeValues has to be passed by reference.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?fc2ea415ff5ca31cd725bb16a98987aa5baacb47"></script>
+<script src="elementlist.js?387992cead264daaed38026fdb3f0721cabdc61f"></script>
 </body>
 </html>

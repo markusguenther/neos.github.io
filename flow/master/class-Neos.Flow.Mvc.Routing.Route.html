@@ -841,7 +841,6 @@
 				<li><a href="class-Neos.Flow.Mvc.Routing.ObjectPathMapping.html">ObjectPathMapping</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.ObjectPathMappingRepository.html">ObjectPathMappingRepository</a></li>
 				<li class="active"><a href="class-Neos.Flow.Mvc.Routing.Route.html">Route</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Routing.Router.html">Router</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RouterCachingService.html">RouterCachingService</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutingComponent.html">RoutingComponent</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.StaticRoutePart.html">StaticRoutePart</a></li>
@@ -851,8 +850,8 @@
 			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">DynamicRoutePartInterface</a></li>
+				<li><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html">ParameterAwareRoutePartInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html">RoutePartInterface</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Routing.RouterInterface.html">RouterInterface</a></li>
 			</ul>
 
 
@@ -888,7 +887,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Mvc.html">Mvc</a>\<a href="namespace-Neos.Flow.Mvc.Routing.html">Routing</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.Route.html#25-668" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/Route.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.Route.html#30-731" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/Route.php</a>
 		<br>
 	</div>
 
@@ -908,7 +907,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setName">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#127-136" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#145-154" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets Route name.</p>
@@ -942,7 +941,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#138-146" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#156-164" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of this Route.</p>
@@ -975,7 +974,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDefaults">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#148-158" title="Go to source code">setDefaults</a>( <span>array <var>$defaults</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#166-176" title="Go to source code">setDefaults</a>( <span>array <var>$defaults</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets default values for this Route.
@@ -1011,7 +1010,7 @@ This array is merged with the actual matchResults when match() is called.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaults">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#160-168" title="Go to source code">getDefaults</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#178-186" title="Go to source code">getDefaults</a>( )</code>
 
 			<div class="description short">
 				<p>Returns default values for this Route.</p>
@@ -1044,7 +1043,7 @@ This array is merged with the actual matchResults when match() is called.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setUriPattern">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#170-184" title="Go to source code">setUriPattern</a>( <span>string <var>$uriPattern</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#188-202" title="Go to source code">setUriPattern</a>( <span>string <var>$uriPattern</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the URI pattern this route should match with</p>
@@ -1082,7 +1081,7 @@ This array is merged with the actual matchResults when match() is called.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUriPattern">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#186-194" title="Go to source code">getUriPattern</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#204-212" title="Go to source code">getUriPattern</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the URI pattern this route should match with</p>
@@ -1115,7 +1114,7 @@ This array is merged with the actual matchResults when match() is called.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLowerCase">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#196-206" title="Go to source code">setLowerCase</a>( <span>boolean <var>$lowerCase</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#214-224" title="Go to source code">setLowerCase</a>( <span>boolean <var>$lowerCase</var></span> )</code>
 
 			<div class="description short">
 				<p>Specifies whether Route parts of this route should be converted to lower case when resolved.
@@ -1151,7 +1150,7 @@ This setting can be overwritten for all dynamic Route parts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isLowerCase">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#208-217" title="Go to source code">isLowerCase</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#226-235" title="Go to source code">isLowerCase</a>( )</code>
 
 			<div class="description short">
 				<p>Getter for $this->lowerCase.</p>
@@ -1188,7 +1187,7 @@ This setting can be overwritten for all dynamic Route parts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAppendExceedingArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#219-231" title="Go to source code">setAppendExceedingArguments</a>( <span>boolean <var>$appendExceedingArguments</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#237-249" title="Go to source code">setAppendExceedingArguments</a>( <span>boolean <var>$appendExceedingArguments</var></span> )</code>
 
 			<div class="description short">
 				<p>Specifies whether Route values, that are not part of the Route configuration, should be appended to the
@@ -1228,7 +1227,7 @@ handlers and removing the matching default values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAppendExceedingArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#233-241" title="Go to source code">getAppendExceedingArguments</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#251-259" title="Go to source code">getAppendExceedingArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if exceeding arguments should be appended to the URI as query string, otherwise FALSE</p>
@@ -1261,7 +1260,7 @@ handlers and removing the matching default values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRoutePartsConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#243-260" title="Go to source code">setRoutePartsConfiguration</a>( <span>array <var>$routePartsConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#261-278" title="Go to source code">setRoutePartsConfiguration</a>( <span>array <var>$routePartsConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>By default all Dynamic Route Parts are resolved by
@@ -1305,7 +1304,7 @@ But you can specify different classes to handle particular Route Parts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRoutePartsConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#262-270" title="Go to source code">getRoutePartsConfiguration</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#280-288" title="Go to source code">getRoutePartsConfiguration</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the route parts configuration of this route</p>
@@ -1338,7 +1337,7 @@ But you can specify different classes to handle particular Route Parts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHttpMethods">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#272-282" title="Go to source code">setHttpMethods</a>( <span>array <var>$httpMethods</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#290-300" title="Go to source code">setHttpMethods</a>( <span>array <var>$httpMethods</var></span> )</code>
 
 			<div class="description short">
 				<p>Limits the HTTP verbs that are accepted by this route.
@@ -1374,7 +1373,7 @@ If empty all HTTP verbs are accepted</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHttpMethods">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#284-290" title="Go to source code">getHttpMethods</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#302-308" title="Go to source code">getHttpMethods</a>( )</code>
 
 			<div class="description short">
 				
@@ -1407,7 +1406,7 @@ If empty all HTTP verbs are accepted</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasHttpMethodConstraints">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#292-300" title="Go to source code">hasHttpMethodConstraints</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#310-318" title="Go to source code">hasHttpMethodConstraints</a>( )</code>
 
 			<div class="description short">
 				<p>Whether or not this route is limited to one or more HTTP verbs</p>
@@ -1440,7 +1439,7 @@ If empty all HTTP verbs are accepted</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMatchResults">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#302-311" title="Go to source code">getMatchResults</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#320-329" title="Go to source code">getMatchResults</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array with the Route match results.</p>
@@ -1459,38 +1458,104 @@ If empty all HTTP verbs are accepted</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Mvc.Routing.Router.html">Neos\Flow\Mvc\Routing\Router</a></code><br>
+							\Neos\Flow\Mvc\Routing\Router<br>
 					</div>
 
 
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getResolvedUriPath" id="_getResolvedUriPath">
+		<tr data-order="getMatchedTags" id="_getMatchedTags">
 
 			<td class="attributes"><code>
 				 public 
-				string
+				Neos\Flow\Mvc\Routing\Dto\RouteTags|null
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getResolvedUriPath">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#313-321" title="Go to source code">getResolvedUriPath</a>( )</code>
+			<a class="anchor" href="#_getMatchedTags">#</a>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#331-339" title="Go to source code">getMatchedTags</a>( )</code>
 
 			<div class="description short">
-				<p>Returns the URI path which corresponds to this Route.</p>
+				<p>Returns the tags that have been associated with this route during request matching, or NULL if no tags were set</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the URI path which corresponds to this Route.</p>
+				<p>Returns the tags that have been associated with this route during request matching, or NULL if no tags were set</p>
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>A string containing the corresponding uri (excluding protocol and host)
+						Neos\Flow\Mvc\Routing\Dto\RouteTags|null
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getResolvedUriConstraints" id="_getResolvedUriConstraints">
+
+			<td class="attributes"><code>
+				 public 
+				Neos\Flow\Mvc\Routing\Dto\UriConstraints|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getResolvedUriConstraints">#</a>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#341-349" title="Go to source code">getResolvedUriConstraints</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the merged UriConstraints of all Route Parts after resolving, or NULL if no constraints were set yet</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the merged UriConstraints of all Route Parts after resolving, or NULL if no constraints were set yet</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						Neos\Flow\Mvc\Routing\Dto\UriConstraints|null
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getResolvedTags" id="_getResolvedTags">
+
+			<td class="attributes"><code>
+				 public 
+				Neos\Flow\Mvc\Routing\Dto\RouteTags|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getResolvedTags">#</a>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#351-359" title="Go to source code">getResolvedTags</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the tags that have been associated with this route during resolving, or NULL if no tags were set</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the tags that have been associated with this route during resolving, or NULL if no tags were set</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						Neos\Flow\Mvc\Routing\Dto\RouteTags|null
 					</div>
 
 
@@ -1510,31 +1575,29 @@ If empty all HTTP verbs are accepted</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matches">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#323-390" title="Go to source code">matches</a>( <span><code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#361-443" title="Go to source code">matches</a>( <span>Neos\Flow\Mvc\Routing\Dto\RouteContext <var>$routeContext</var></span> )</code>
 
 			<div class="description short">
-				<p>Checks whether $routePath corresponds to this Route.
-If all Route Parts match successfully TRUE is returned and
-$this->matchResults contains an array combining Route default values and
-calculated matchResults from the individual Route Parts.</p>
+				<p>Checks whether $routeContext corresponds to this Route.
+If all Route Parts match successfully TRUE is returned an $this->matchResults contains an array
+combining Route default values and calculated matchResults from the individual Route Parts.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Checks whether $routePath corresponds to this Route.
-If all Route Parts match successfully TRUE is returned and
-$this->matchResults contains an array combining Route default values and
-calculated matchResults from the individual Route Parts.</p>
+				<p>Checks whether $routeContext corresponds to this Route.
+If all Route Parts match successfully TRUE is returned an $this->matchResults contains an array
+combining Route default values and calculated matchResults from the individual Route Parts.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$httpRequest</var></dt>
-						<dd>the HTTP request to match</dd>
+						<dt><var>$routeContext</var></dt>
+						<dd>The Route Context containing the current HTTP request object and, optional, Routing RouteParameters</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if this Route corresponds to the given $routePath, otherwise FALSE
+						boolean<br>TRUE if this Route corresponds to the given $routeContext, otherwise FALSE
 					</div>
 
 					<h4>Throws</h4>
@@ -1562,20 +1625,20 @@ calculated matchResults from the individual Route Parts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolves">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#392-479" title="Go to source code">resolves</a>( <span>array <var>$routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#445-543" title="Go to source code">resolves</a>( <span>array <var>$routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether $routeValues can be resolved to a corresponding uri.
 If all Route Parts can resolve one or more of the $routeValues, TRUE is
-returned and $this->matchingURI contains the generated URI (excluding
-protocol and host).</p>
+returned and $this->resolvedUriConstraints contains an instance of UriConstraints that can be applied
+to a template URI transforming it accordingly (@see Router::resolve())</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Checks whether $routeValues can be resolved to a corresponding uri.
 If all Route Parts can resolve one or more of the $routeValues, TRUE is
-returned and $this->matchingURI contains the generated URI (excluding
-protocol and host).</p>
+returned and $this->resolvedUriConstraints contains an instance of UriConstraints that can be applied
+to a template URI transforming it accordingly (@see Router::resolve())</p>
 
 
 					<h4>Parameters</h4>
@@ -1610,7 +1673,7 @@ protocol and host).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compareAndRemoveMatchingDefaultValues">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#481-518" title="Go to source code">compareAndRemoveMatchingDefaultValues</a>( <span>array <var>$defaults</var></span>, <span>array <var>&amp; $routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#545-582" title="Go to source code">compareAndRemoveMatchingDefaultValues</a>( <span>array <var>$defaults</var></span>, <span>array <var>&amp; $routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Recursively iterates through the defaults of this route.
@@ -1658,7 +1721,7 @@ iteration is interrupted and FALSE is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_extractInternalArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#520-547" title="Go to source code">extractInternalArguments</a>( <span>array <var>&amp; $arguments</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#584-611" title="Go to source code">extractInternalArguments</a>( <span>array <var>&amp; $arguments</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes all internal arguments (prefixed with two underscores) from the given $arguments
@@ -1698,7 +1761,7 @@ and returns them as array</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_containsObject">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#549-569" title="Go to source code">containsObject</a>( <span>mixed <var>$subject</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#613-633" title="Go to source code">containsObject</a>( <span>mixed <var>$subject</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given subject contains an object</p>
@@ -1736,7 +1799,7 @@ and returns them as array</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parse">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#571-667" title="Go to source code">parse</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#635-730" title="Go to source code">parse</a>( )</code>
 
 			<div class="description short">
 				<p>Iterates through all segments in $this->uriPattern and creates
@@ -1752,8 +1815,7 @@ appropriate RoutePart instances.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Mvc.Exception.InvalidRoutePartHandlerException.html">Neos\Flow\Mvc\Exception\InvalidRoutePartHandlerException</a></code><br>
-						<code><a href="class-Neos.Flow.Mvc.Exception.InvalidUriPatternException.html">Neos\Flow\Mvc\Exception\InvalidUriPatternException</a></code>
+						<code><a href="class-Neos.Flow.Mvc.Exception.InvalidRoutePartHandlerException.html">Neos\Flow\Mvc\Exception\InvalidRoutePartHandlerException</a></code>|<code><a href="class-Neos.Flow.Mvc.Exception.InvalidRouteSetupException.html">Neos\Flow\Mvc\Exception\InvalidRouteSetupException</a></code>|<code><a href="class-Neos.Flow.Mvc.Exception.InvalidUriPatternException.html">Neos\Flow\Mvc\Exception\InvalidUriPatternException</a></code>
 					</div>
 
 
@@ -1779,7 +1841,7 @@ appropriate RoutePart instances.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-ROUTEPART_TYPE_STATIC.html#30" title="Go to source code"><b>ROUTEPART_TYPE_STATIC</b></a>
+						<a href="source-constant-ROUTEPART_TYPE_STATIC.html#35" title="Go to source code"><b>ROUTEPART_TYPE_STATIC</b></a>
 					</code>
 
 					<div class="description short">
@@ -1803,7 +1865,7 @@ appropriate RoutePart instances.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-ROUTEPART_TYPE_DYNAMIC.html#31" title="Go to source code"><b>ROUTEPART_TYPE_DYNAMIC</b></a>
+						<a href="source-constant-ROUTEPART_TYPE_DYNAMIC.html#36" title="Go to source code"><b>ROUTEPART_TYPE_DYNAMIC</b></a>
 					</code>
 
 					<div class="description short">
@@ -1827,7 +1889,7 @@ appropriate RoutePart instances.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_EXTRACTROUTEPARTS.html#32" title="Go to source code"><b>PATTERN_EXTRACTROUTEPARTS</b></a>
+						<a href="source-constant-PATTERN_EXTRACTROUTEPARTS.html#37" title="Go to source code"><b>PATTERN_EXTRACTROUTEPARTS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1862,7 +1924,7 @@ appropriate RoutePart instances.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#34-39" title="Go to source code"><var>$name</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#39-44" title="Go to source code"><var>$name</var></a>
 
 				<div class="description short">
 					<p>Route name</p>
@@ -1887,7 +1949,7 @@ appropriate RoutePart instances.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#41-46" title="Go to source code"><var>$defaults</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#46-51" title="Go to source code"><var>$defaults</var></a>
 
 				<div class="description short">
 					<p>Default values</p>
@@ -1912,7 +1974,7 @@ appropriate RoutePart instances.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#48-53" title="Go to source code"><var>$uriPattern</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#53-58" title="Go to source code"><var>$uriPattern</var></a>
 
 				<div class="description short">
 					<p>URI Pattern of this route</p>
@@ -1937,7 +1999,7 @@ appropriate RoutePart instances.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#55-60" title="Go to source code"><var>$lowerCase</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#60-65" title="Go to source code"><var>$lowerCase</var></a>
 
 				<div class="description short">
 					<p>Specifies whether Route Parts of this Route should be converted to lower case when resolved.</p>
@@ -1962,7 +2024,7 @@ appropriate RoutePart instances.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#62-67" title="Go to source code"><var>$appendExceedingArguments</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#67-72" title="Go to source code"><var>$appendExceedingArguments</var></a>
 
 				<div class="description short">
 					<p>Specifies whether Route Values, that are not part of the Routes configuration, should be appended as query string</p>
@@ -1987,7 +2049,7 @@ appropriate RoutePart instances.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#69-75" title="Go to source code"><var>$matchResults</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#74-80" title="Go to source code"><var>$matchResults</var></a>
 
 				<div class="description short">
 					<p>Contains the routing results (indexed by "package", "controller" and
@@ -2007,29 +2069,77 @@ appropriate RoutePart instances.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="resolvedUriPath" id="$resolvedUriPath">
+		<tr data-order="matchedTags" id="$matchedTags">
 			<td class="attributes"><code>
 				protected  
-				string
+				Neos\Flow\Mvc\Routing\Dto\RouteTags|null
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#77-83" title="Go to source code"><var>$resolvedUriPath</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#82-87" title="Go to source code"><var>$matchedTags</var></a>
 
 				<div class="description short">
-					<p>Contains the matching uri (excluding protocol and host) after a
-successful call of resolves()</p>
+					<p>The tags that have been associated with this route during request matching, or NULL if no tags were set</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Contains the matching uri (excluding protocol and host) after a
-successful call of resolves()</p>
+					<p>The tags that have been associated with this route during request matching, or NULL if no tags were set</p>
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$resolvedUriPath" class="anchor">#</a>
+					<a href="#$matchedTags" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="resolvedUriConstraints" id="$resolvedUriConstraints">
+			<td class="attributes"><code>
+				protected  
+				Neos\Flow\Mvc\Routing\Dto\UriConstraints|null
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#89-94" title="Go to source code"><var>$resolvedUriConstraints</var></a>
+
+				<div class="description short">
+					<p>The merged UriConstraints of all Route Parts after resolving</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The merged UriConstraints of all Route Parts after resolving</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$resolvedUriConstraints" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="resolvedTags" id="$resolvedTags">
+			<td class="attributes"><code>
+				protected  
+				Neos\Flow\Mvc\Routing\Dto\RouteTags|null
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#96-101" title="Go to source code"><var>$resolvedTags</var></a>
+
+				<div class="description short">
+					<p>The tags that have been associated with this route during resolving, or NULL if no tags were set</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The tags that have been associated with this route during resolving, or NULL if no tags were set</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$resolvedTags" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -2041,7 +2151,7 @@ successful call of resolves()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#85-91" title="Go to source code"><var>$routePartsConfiguration</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#103-109" title="Go to source code"><var>$routePartsConfiguration</var></a>
 
 				<div class="description short">
 					<p>Contains associative array of Route Part options
@@ -2068,7 +2178,7 @@ successful call of resolves()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#93-98" title="Go to source code"><var>$routeParts</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#111-116" title="Go to source code"><var>$routeParts</var></a>
 
 				<div class="description short">
 					<p>Container for Route Parts.</p>
@@ -2093,7 +2203,7 @@ successful call of resolves()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#100-105" title="Go to source code"><var>$httpMethods</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#118-123" title="Go to source code"><var>$httpMethods</var></a>
 
 				<div class="description short">
 					<p>If not empty only the specified HTTP verbs are accepted by this route</p>
@@ -2118,7 +2228,7 @@ successful call of resolves()</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#107-113" title="Go to source code"><var>$isParsed</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#125-131" title="Go to source code"><var>$isParsed</var></a>
 
 				<div class="description short">
 					<p>Indicates whether this route is parsed.
@@ -2145,7 +2255,7 @@ For better performance, routes are only parsed if needed.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#115-119" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#133-137" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -2173,7 +2283,7 @@ For better performance, routes are only parsed if needed.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#121-125" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.Route.html#139-143" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -2210,6 +2320,6 @@ For better performance, routes are only parsed if needed.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?fc2ea415ff5ca31cd725bb16a98987aa5baacb47"></script>
+<script src="elementlist.js?387992cead264daaed38026fdb3f0721cabdc61f"></script>
 </body>
 </html>

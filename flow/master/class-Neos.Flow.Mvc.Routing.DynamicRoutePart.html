@@ -841,7 +841,6 @@
 				<li><a href="class-Neos.Flow.Mvc.Routing.ObjectPathMapping.html">ObjectPathMapping</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.ObjectPathMappingRepository.html">ObjectPathMappingRepository</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.Route.html">Route</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Routing.Router.html">Router</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RouterCachingService.html">RouterCachingService</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutingComponent.html">RoutingComponent</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.StaticRoutePart.html">StaticRoutePart</a></li>
@@ -851,8 +850,8 @@
 			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">DynamicRoutePartInterface</a></li>
+				<li><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html">ParameterAwareRoutePartInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html">RoutePartInterface</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Routing.RouterInterface.html">RouterInterface</a></li>
 			</ul>
 
 
@@ -887,7 +886,9 @@
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>Neos\Flow\Mvc\Routing\DynamicRoutePart</span></b>			
 			 implements 
-				<a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html"><span>Neos\Flow\Mvc\Routing\DynamicRoutePartInterface</span></a>
+				<a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html"><span>Neos\Flow\Mvc\Routing\DynamicRoutePartInterface</span></a>, 
+			
+				<a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html"><span>Neos\Flow\Mvc\Routing\ParameterAwareRoutePartInterface</span></a>
 			
 			
 		</dd>
@@ -914,7 +915,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#19-201" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/DynamicRoutePart.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#22-226" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/DynamicRoutePart.php</a>
 		<br>
 	</div>
 
@@ -934,7 +935,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setSplitString">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#40-50" title="Go to source code">setSplitString</a>( <span>string <var>$splitString</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#51-61" title="Go to source code">setSplitString</a>( <span>string <var>$splitString</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets split string of the Route Part.</p>
@@ -966,14 +967,58 @@
 
 			<td class="attributes"><code>
 				final public 
-				boolean
+				boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_match">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#52-75" title="Go to source code">match</a>( <span>string <var>&amp; $routePath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#63-74" title="Go to source code">match</a>( <span>string <var>&amp; $routePath</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks whether this Dynamic Route Part corresponds to the given $routePath.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks whether this Dynamic Route Part corresponds to the given $routePath.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$routePath</var></dt>
+						<dd>The request path to be matched - without query parameters, host and fragment.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult<br>TRUE or an instance of MatchResult if Route Part matched $routePath, otherwise FALSE.
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#_matchWithParameters">Neos\Flow\Mvc\Routing\DynamicRoutePart::matchWithParameters()</a></code><br>
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#_match">Neos\Flow\Mvc\Routing\RoutePartInterface::match()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="matchWithParameters" id="_matchWithParameters">
+
+			<td class="attributes"><code>
+				final public 
+				boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_matchWithParameters">#</a>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#76-100" title="Go to source code">matchWithParameters</a>( <span>string <var>&amp; $routePath</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\RouteParameters <var>$parameters</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether this Dynamic Route Part corresponds to the given $routePath.</p>
@@ -990,18 +1035,20 @@ and shortens $routePath respectively.</p>
 					<div class="list"><dl>
 						<dt><var>$routePath</var></dt>
 						<dd>The request path to be matched - without query parameters, host and fragment.</dd>
+						<dt><var>$parameters</var></dt>
+						<dd>Routing parameters that will be stored in $this->parameters and can be evaluated in sub classes</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if Route Part matched $routePath, otherwise FALSE.
+						boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult<br>TRUE or an instance of MatchResult if Route Part matched $routePath, otherwise FALSE.
 					</div>
 
 
 
 
 					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html#_match">Neos\Flow\Mvc\Routing\RoutePartInterface::match()</a></code></div>
+					<div class="list"><code><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html#_matchWithParameters">Neos\Flow\Mvc\Routing\ParameterAwareRoutePartInterface::matchWithParameters()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
@@ -1016,7 +1063,7 @@ and shortens $routePath respectively.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findValueToMatch">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#77-102" title="Go to source code">findValueToMatch</a>( <span>string <var>$routePath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#102-127" title="Go to source code">findValueToMatch</a>( <span>string <var>$routePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the first part of $routePath.
@@ -1054,14 +1101,14 @@ This method can be overridden by custom RoutePartHandlers to implement custom ma
 
 			<td class="attributes"><code>
 				 protected 
-				boolean
+				boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#104-120" title="Go to source code">matchValue</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#129-144" title="Go to source code">matchValue</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks, whether given value can be matched.
@@ -1083,7 +1130,7 @@ This method can be overridden by custom RoutePartHandlers to implement custom ma
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if value could be matched successfully, otherwise FALSE.
+						boolean|Neos\Flow\Mvc\Routing\Dto\MatchResult<br>An instance of MatchResult if value could be matched successfully, otherwise FALSE.
 					</div>
 
 
@@ -1106,7 +1153,7 @@ This method can be overridden by custom RoutePartHandlers to implement custom ma
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeMatchingPortionFromRequestPath">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#122-136" title="Go to source code">removeMatchingPortionFromRequestPath</a>( <span>string <var>&amp; $routePath</var></span>, <span>string <var>$valueToMatch</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#146-160" title="Go to source code">removeMatchingPortionFromRequestPath</a>( <span>string <var>&amp; $routePath</var></span>, <span>string <var>$valueToMatch</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes matching part from $routePath.
@@ -1140,14 +1187,14 @@ This method can be overridden by custom RoutePartHandlers to implement custom ma
 
 			<td class="attributes"><code>
 				final public 
-				boolean
+				boolean|Neos\Flow\Mvc\Routing\Dto\ResolveResult
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolve">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#138-157" title="Go to source code">resolve</a>( <span>array <var>&amp; $routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#162-182" title="Go to source code">resolve</a>( <span>array <var>&amp; $routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether $routeValues contains elements which correspond to this Dynamic Route Part.
@@ -1167,7 +1214,7 @@ If a corresponding element is found in $routeValues, this element is removed fro
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if current Route Part could be resolved, otherwise FALSE
+						boolean|Neos\Flow\Mvc\Routing\Dto\ResolveResult<br>TRUE or an instance of ResolveResult if current Route Part could be resolved, otherwise FALSE
 					</div>
 
 
@@ -1189,7 +1236,7 @@ If a corresponding element is found in $routeValues, this element is removed fro
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findValueToResolve">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#159-173" title="Go to source code">findValueToResolve</a>( <span>array <var>$routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#184-198" title="Go to source code">findValueToResolve</a>( <span>array <var>$routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the route value of the current route part.
@@ -1225,14 +1272,14 @@ This method can be overridden by custom RoutePartHandlers to implement custom re
 
 			<td class="attributes"><code>
 				 protected 
-				boolean
+				boolean|Neos\Flow\Mvc\Routing\Dto\ResolveResult
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveValue">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#175-200" title="Go to source code">resolveValue</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#200-225" title="Go to source code">resolveValue</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks, whether given value can be resolved and if so, sets $this->value to the resolved value.
@@ -1254,7 +1301,7 @@ This method can be overridden by custom RoutePartHandlers to implement custom re
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if value could be resolved successfully, otherwise FALSE.
+						boolean|Neos\Flow\Mvc\Routing\Dto\ResolveResult<br>An instance of ResolveResult if value could be resolved successfully, otherwise FALSE.
 					</div>
 
 
@@ -1307,7 +1354,7 @@ This method can be overridden by custom RoutePartHandlers to implement custom re
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#26-30" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#29-33" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1335,7 +1382,7 @@ This method can be overridden by custom RoutePartHandlers to implement custom re
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#32-38" title="Go to source code"><var>$splitString</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#35-41" title="Go to source code"><var>$splitString</var></a>
 
 				<div class="description short">
 					<p>The split string represents the end of a Dynamic Route Part.
@@ -1352,6 +1399,33 @@ If it is empty, Route Part will be equal to the remaining request path.</p>
 				<div>
 					<a href="#$splitString" class="anchor">#</a>
 					<code><span class="php-quote">''</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="parameters" id="$parameters">
+			<td class="attributes"><code>
+				protected  
+				Neos\Flow\Mvc\Routing\Dto\RouteParameters
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html#43-49" title="Go to source code"><var>$parameters</var></a>
+
+				<div class="description short">
+					<p>The Routing RouteParameters passed to matchWithParameters()
+These allow sub classes to adjust the matching behavior accordingly</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The Routing RouteParameters passed to matchWithParameters()
+These allow sub classes to adjust the matching behavior accordingly</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$parameters" class="anchor">#</a>
+					<code></code>
 				</div>
 			</td>
 		</tr>
@@ -1382,6 +1456,6 @@ If it is empty, Route Part will be equal to the remaining request path.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?fc2ea415ff5ca31cd725bb16a98987aa5baacb47"></script>
+<script src="elementlist.js?387992cead264daaed38026fdb3f0721cabdc61f"></script>
 </body>
 </html>
