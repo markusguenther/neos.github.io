@@ -1066,19 +1066,19 @@
 </span><span id="285" class="l">        <span class="php-var">$nodeName</span> = <span class="php-var">$this</span>-&gt;nodeService-&gt;generateUniqueNodeName(SiteService::SITES_ROOT_PATH, <span class="php-var">$siteName</span>);
 </span><span id="286" class="l">
 </span><span id="287" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;siteRepository-&gt;findOneByNodeName(<span class="php-var">$nodeName</span>)) {
-</span><span id="288" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error:A site with siteNodeName &quot;%s&quot; already exists'</span>, Message::SEVERITY_ERROR, [<span class="php-var">$nodeName</span>], <span class="php-num">1412372375</span>);
+</span><span id="288" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: A site with siteNodeName &quot;%s&quot; already exists'</span>, <span class="php-quote">'Site creation error'</span>, Message::SEVERITY_ERROR, [<span class="php-var">$nodeName</span>], <span class="php-num">1412372375</span>);
 </span><span id="289" class="l">            <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'createSiteNode'</span>);
 </span><span id="290" class="l">        }
 </span><span id="291" class="l">
 </span><span id="292" class="l">        <span class="php-var">$siteNodeType</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType(<span class="php-var">$nodeType</span>);
 </span><span id="293" class="l">
 </span><span id="294" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$siteNodeType</span> === <span class="php-keyword1">null</span> || <span class="php-var">$siteNodeType</span>-&gt;getName() === <span class="php-quote">'Neos.Neos:FallbackNode'</span>) {
-</span><span id="295" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: The given node type &quot;%s&quot; was not found'</span>, <span class="php-quote">'Import error'</span>, Message::SEVERITY_ERROR, [<span class="php-var">$nodeType</span>], <span class="php-num">1412372375</span>);
+</span><span id="295" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: The given node type &quot;%s&quot; was not found'</span>, <span class="php-quote">'Site creation error'</span>, Message::SEVERITY_ERROR, [<span class="php-var">$nodeType</span>], <span class="php-num">1412372375</span>);
 </span><span id="296" class="l">            <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'createSiteNode'</span>);
 </span><span id="297" class="l">        }
 </span><span id="298" class="l">
 </span><span id="299" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$siteNodeType</span>-&gt;isOfType(<span class="php-quote">'Neos.Neos:Document'</span>) === <span class="php-keyword1">false</span>) {
-</span><span id="300" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: The given node type &quot;%s&quot; is not based on the superType &quot;%s&quot;'</span>, Message::SEVERITY_ERROR, [<span class="php-var">$nodeType</span>, <span class="php-quote">'Neos.Neos:Document'</span>], <span class="php-num">1412372375</span>);
+</span><span id="300" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: The given node type &quot;%s&quot; is not based on the superType &quot;%s&quot;'</span>, <span class="php-quote">'Site creation error'</span>, Message::SEVERITY_ERROR, [<span class="php-var">$nodeType</span>, <span class="php-quote">'Neos.Neos:Document'</span>], <span class="php-num">1412372375</span>);
 </span><span id="301" class="l">            <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'createSiteNode'</span>);
 </span><span id="302" class="l">        }
 </span><span id="303" class="l">
