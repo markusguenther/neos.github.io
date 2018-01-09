@@ -925,7 +925,7 @@
 </span></span><span id="70" class="l"><span class="php-comment">     *
 </span></span><span id="71" class="l"><span class="php-comment">     * @param \Throwable $error \Exception or \Throwable
 </span></span><span id="72" class="l"><span class="php-comment">     * @param array $additionalData Additional data to log
-</span></span><span id="73" class="l"><span class="php-comment">     * @return void
+</span></span><span id="73" class="l"><span class="php-comment">     * @return string The exception message
 </span></span><span id="74" class="l"><span class="php-comment">     */</span>
 </span><span id="75" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> logError(\Throwable <span class="php-var">$error</span>, <span class="php-keyword1">array</span> <span class="php-var">$additionalData</span> = [])
 </span><span id="76" class="l">    {
@@ -939,7 +939,7 @@
 </span><span id="84" class="l">            <span class="php-keyword2">mkdir</span>(<span class="php-var">$this</span>-&gt;storagePath);
 </span><span id="85" class="l">        }
 </span><span id="86" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">file_exists</span>(<span class="php-var">$this</span>-&gt;storagePath) || !<span class="php-keyword2">is_dir</span>(<span class="php-var">$this</span>-&gt;storagePath) || !<span class="php-keyword2">is_writable</span>(<span class="php-var">$this</span>-&gt;storagePath)) {
-</span><span id="87" class="l">            <span class="php-keyword1">return</span> <span class="php-quote">'Could not write exception backtrace into %s because the directory could not be created or is not writable.'</span>;
+</span><span id="87" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword2">sprintf</span>(<span class="php-quote">'Could not write exception backtrace into %s because the directory could not be created or is not writable.'</span>, <span class="php-var">$this</span>-&gt;storagePath);
 </span><span id="88" class="l">        }
 </span><span id="89" class="l">
 </span><span id="90" class="l">        <span class="php-comment">// FIXME: getReferenceCode should probably become an interface.</span>
@@ -1047,6 +1047,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?1dd53dede415283834592e7c04810bbac8db121d"></script>
+<script src="elementlist.js?f9c507d9ea89a038f714fe9c9dcd36d5261f289d"></script>
 </body>
 </html>

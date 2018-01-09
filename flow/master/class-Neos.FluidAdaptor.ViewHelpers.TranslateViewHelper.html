@@ -943,7 +943,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.FluidAdaptor.html">FluidAdaptor</a>\<a href="namespace-Neos.FluidAdaptor.ViewHelpers.html">ViewHelpers</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#22-137" title="Go to source code">Neos.FluidAdaptor/Classes/ViewHelpers/TranslateViewHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#23-157" title="Go to source code">Neos.FluidAdaptor/Classes/ViewHelpers/TranslateViewHelper.php</a>
 		<br>
 	</div>
 
@@ -952,7 +952,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="injectTranslator" id="_injectTranslator">
+		<tr data-order="initializeArguments" id="_initializeArguments">
 
 			<td class="attributes"><code>
 				 public 
@@ -962,25 +962,23 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_injectTranslator">#</a>
-			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#79-85" title="Go to source code">injectTranslator</a>( <span><code><a href="class-Neos.Flow.I18n.Translator.html">Neos\Flow\I18n\Translator</a></code> <var>$translator</var></span> )</code>
+			<a class="anchor" href="#_initializeArguments">#</a>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#80-95" title="Go to source code">initializeArguments</a>( )</code>
 
 			<div class="description short">
-				
+				<p>Initialize arguments</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$translator</var></dt>
-						<dd></dd>
-					</dl></div>
+				<p>Initialize arguments</p>
 
 
 
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -997,36 +995,20 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 
 			<td class="name"><div>
 			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#87-136" title="Go to source code">render</a>( <span>string <var>$id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$value</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$arguments</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$source</var> = <span class="php-quote">'Main'</span></span>, <span>string <var>$package</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$quantity</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$locale</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#98-148" title="Go to source code">render</a>( )</code>
 
 			<div class="description short">
-				<p>Renders the translated label.</p>
+				<p>Renders the translated label.
+Replaces all placeholders with corresponding values if they exist in the
+translated label.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Renders the translated label.</p>
-
-<p>Replaces all placeholders with corresponding values if they exist in the
+				<p>Renders the translated label.
+Replaces all placeholders with corresponding values if they exist in the
 translated label.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$id</var></dt>
-						<dd>Id to use for finding translation (trans-unit id in XLIFF)</dd>
-						<dt><var>$value</var></dt>
-						<dd>If $key is not specified or could not be resolved, this value is used. If this argument is not set, child nodes will be used to render the default</dd>
-						<dt><var>$arguments</var></dt>
-						<dd>Numerically indexed array of values to be inserted into placeholders</dd>
-						<dt><var>$source</var></dt>
-						<dd>Name of file with translations (use / as a directory separator)</dd>
-						<dt><var>$package</var></dt>
-						<dd>Target package key. If not set, the current package key will be used</dd>
-						<dt><var>$quantity</var></dt>
-						<dd>A number to find plural form for (float or int), NULL to not use plural forms</dd>
-						<dt><var>$locale</var></dt>
-						<dd>An identifier of locale to use (NULL for use the default locale)</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
@@ -1037,6 +1019,40 @@ translated label.</p>
 					<div class="list">
 						<code><a href="class-Neos.FluidAdaptor.Core.ViewHelper.Exception.html">Neos\FluidAdaptor\Core\ViewHelper\Exception</a></code>
 					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectTranslator" id="_injectTranslator">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectTranslator">#</a>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#150-156" title="Go to source code">injectTranslator</a>( <span><code><a href="class-Neos.Flow.I18n.Translator.html">Neos\Flow\I18n\Translator</a></code> <var>$translator</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$translator</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
 
 
 
@@ -1081,7 +1097,7 @@ translated label.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#74-77" title="Go to source code"><var>$translator</var></a>
+					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.TranslateViewHelper.html#75-78" title="Go to source code"><var>$translator</var></a>
 
 				<div class="description short">
 					
@@ -1123,6 +1139,6 @@ translated label.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?1dd53dede415283834592e7c04810bbac8db121d"></script>
+<script src="elementlist.js?f9c507d9ea89a038f714fe9c9dcd36d5261f289d"></script>
 </body>
 </html>
