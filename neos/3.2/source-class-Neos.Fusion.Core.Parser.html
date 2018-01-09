@@ -1425,7 +1425,7 @@
 </span><span id="640" class="l">            }
 </span><span id="641" class="l">            <span class="php-var">$recursiveDirectoryIterator</span> = <span class="php-keyword1">new</span> \RecursiveDirectoryIterator(<span class="php-var">$basePath</span>);
 </span><span id="642" class="l">            <span class="php-var">$iterator</span> = <span class="php-keyword1">new</span> \RecursiveIteratorIterator(<span class="php-var">$recursiveDirectoryIterator</span>);
-</span><span id="643" class="l">            <span class="php-comment">// Match simple wildcard globbing &quot;*&quot;</span>
+</span><span id="643" class="l">        <span class="php-comment">// Match simple wildcard globbing &quot;*&quot;</span>
 </span><span id="644" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#([^\*]*)\*#'</span>, <span class="php-var">$include</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
 </span><span id="645" class="l">            <span class="php-var">$basePath</span> = <span class="php-var">$matches</span>[<span class="php-quote">'1'</span>];
 </span><span id="646" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$basePath</span>)) {
@@ -1783,6 +1783,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?df242af90eed6d70d47a28eb1e672d43261b0b59"></script>
+<script src="elementlist.js?a49d63946c212d0dd77293681426690cfc233186"></script>
 </body>
 </html>
