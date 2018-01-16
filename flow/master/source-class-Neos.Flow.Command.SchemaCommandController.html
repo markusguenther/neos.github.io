@@ -921,7 +921,7 @@
 </span><span id="54" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Validating &lt;b&gt;'</span> . <span class="php-var">$configurationFile</span> . <span class="php-quote">'&lt;/b&gt; with schema  &lt;b&gt;'</span> . <span class="php-var">$schemaFile</span> . <span class="php-quote">'&lt;/b&gt;'</span>);
 </span><span id="55" class="l">        <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="56" class="l">
-</span><span id="57" class="l">        <span class="php-var">$schema</span> = Yaml::parse(<span class="php-var">$schemaFile</span>);
+</span><span id="57" class="l">        <span class="php-var">$schema</span> = Yaml::parseFile(<span class="php-var">$schemaFile</span>);
 </span><span id="58" class="l">
 </span><span id="59" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-var">$configurationFile</span>)) {
 </span><span id="60" class="l">            <span class="php-var">$result</span> = <span class="php-keyword1">new</span> Result();
@@ -931,7 +931,7 @@
 </span><span id="64" class="l">                <span class="php-var">$packageSchemaPath</span> = Files::concatenatePaths([<span class="php-var">$package</span>-&gt;getResourcesPath(), <span class="php-quote">'Private/Schema'</span>]);
 </span><span id="65" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$packageSchemaPath</span>) &amp;&amp; <span class="php-var">$packageKey</span> !== <span class="php-quote">'Neos.Utility.Schema'</span>) {
 </span><span id="66" class="l">                    <span class="php-keyword1">foreach</span> (Files::getRecursiveDirectoryGenerator(<span class="php-var">$packageSchemaPath</span>, <span class="php-quote">'.schema.yaml'</span>) <span class="php-keyword1">as</span> <span class="php-var">$schemaFile</span>) {
-</span><span id="67" class="l">                        <span class="php-var">$configuration</span> = Yaml::parse(<span class="php-var">$schemaFile</span>);
+</span><span id="67" class="l">                        <span class="php-var">$configuration</span> = Yaml::parseFile(<span class="php-var">$schemaFile</span>);
 </span><span id="68" class="l">                        <span class="php-var">$schemaPath</span> = <span class="php-keyword2">str_replace</span>(FLOW_PATH_ROOT, <span class="php-quote">''</span>, <span class="php-var">$schemaFile</span>);
 </span><span id="69" class="l">                        <span class="php-var">$configurationResult</span> = <span class="php-var">$this</span>-&gt;schemaValidator-&gt;validate(<span class="php-var">$configuration</span>, <span class="php-var">$schema</span>);
 </span><span id="70" class="l">                        <span class="php-var">$result</span>-&gt;forProperty(<span class="php-var">$schemaPath</span>)-&gt;merge(<span class="php-var">$configurationResult</span>);
@@ -939,7 +939,7 @@
 </span><span id="72" class="l">                }
 </span><span id="73" class="l">            }
 </span><span id="74" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="75" class="l">            <span class="php-var">$configuration</span> = Yaml::parse(<span class="php-var">$configurationFile</span>);
+</span><span id="75" class="l">            <span class="php-var">$configuration</span> = Yaml::parseFile(<span class="php-var">$configurationFile</span>);
 </span><span id="76" class="l">            <span class="php-var">$result</span> = <span class="php-var">$this</span>-&gt;schemaValidator-&gt;validate(<span class="php-var">$configuration</span>, <span class="php-var">$schema</span>);
 </span><span id="77" class="l">        }
 </span><span id="78" class="l">
@@ -986,8 +986,8 @@
 </span><span id="119" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Validating &lt;b&gt;'</span> . <span class="php-var">$configurationFile</span> . <span class="php-quote">'&lt;/b&gt; with schema  &lt;b&gt;'</span> . <span class="php-var">$schemaFile</span> . <span class="php-quote">'&lt;/b&gt;'</span>);
 </span><span id="120" class="l">        <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="121" class="l">
-</span><span id="122" class="l">        <span class="php-var">$configuration</span> = Yaml::parse(<span class="php-var">$configurationFile</span>);
-</span><span id="123" class="l">        <span class="php-var">$schema</span> = Yaml::parse(<span class="php-var">$schemaFile</span>);
+</span><span id="122" class="l">        <span class="php-var">$configuration</span> = Yaml::parseFile(<span class="php-var">$configurationFile</span>);
+</span><span id="123" class="l">        <span class="php-var">$schema</span> = Yaml::parseFile(<span class="php-var">$schemaFile</span>);
 </span><span id="124" class="l">
 </span><span id="125" class="l">        <span class="php-var">$result</span> = <span class="php-var">$this</span>-&gt;schemaValidator-&gt;validate(<span class="php-var">$configuration</span>, <span class="php-var">$schema</span>);
 </span><span id="126" class="l">
