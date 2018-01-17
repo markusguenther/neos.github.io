@@ -1221,7 +1221,7 @@
 </span><span id="351" class="l">
 </span><span id="352" class="l">        <span class="php-var">$uriPathPrefix</span> = <span class="php-var">$this</span>-&gt;environment-&gt;isRewriteEnabled() ? <span class="php-quote">''</span> : <span class="php-quote">'index.php/'</span>;
 </span><span id="353" class="l">        <span class="php-var">$uriPathPrefix</span> = <span class="php-var">$httpRequest</span>-&gt;getScriptRequestPath() . <span class="php-var">$uriPathPrefix</span>;
-</span><span id="354" class="l">        <span class="php-var">$resolveContext</span> = <span class="php-keyword1">new</span> ResolveContext(<span class="php-var">$httpRequest</span>-&gt;getUri(), <span class="php-var">$arguments</span>, <span class="php-var">$this</span>-&gt;createAbsoluteUri, <span class="php-var">$uriPathPrefix</span>);
+</span><span id="354" class="l">        <span class="php-var">$resolveContext</span> = <span class="php-keyword1">new</span> ResolveContext(<span class="php-var">$httpRequest</span>-&gt;getBaseUri(), <span class="php-var">$arguments</span>, <span class="php-var">$this</span>-&gt;createAbsoluteUri, <span class="php-var">$uriPathPrefix</span>);
 </span><span id="355" class="l">        <span class="php-var">$resolvedUri</span> = <span class="php-var">$this</span>-&gt;router-&gt;resolve(<span class="php-var">$resolveContext</span>);
 </span><span id="356" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;section !== <span class="php-quote">''</span>) {
 </span><span id="357" class="l">            <span class="php-var">$resolvedUri</span> = <span class="php-var">$resolvedUri</span>-&gt;withFragment(<span class="php-var">$this</span>-&gt;section);
