@@ -929,7 +929,7 @@
 </span><span id="66" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$step</span>-&gt;getIdentifier() === <span class="php-quote">'neos.flow:resources'</span>) {
 </span><span id="67" class="l">                    <span class="php-var">$publicResourcesFileMonitor</span> = Monitor\FileMonitor::createFileMonitorAtBoot(<span class="php-quote">'Flow_PublicResourcesFiles'</span>, <span class="php-var">$bootstrap</span>);
 </span><span id="68" class="l">                    <span class="php-var">$packageManager</span> = <span class="php-var">$bootstrap</span>-&gt;getEarlyInstance(Package\PackageManagerInterface::<span class="php-keyword1">class</span>);
-</span><span id="69" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$packageManager</span>-&gt;getActivePackages() <span class="php-keyword1">as</span> <span class="php-var">$packageKey</span> =&gt; <span class="php-var">$package</span>) {
+</span><span id="69" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$packageManager</span>-&gt;getAvailablePackages() <span class="php-keyword1">as</span> <span class="php-var">$packageKey</span> =&gt; <span class="php-var">$package</span>) {
 </span><span id="70" class="l">                        <span class="php-keyword1">if</span> (<span class="php-var">$packageManager</span>-&gt;isPackageFrozen(<span class="php-var">$packageKey</span>)) {
 </span><span id="71" class="l">                            <span class="php-keyword1">continue</span>;
 </span><span id="72" class="l">                        }
@@ -999,6 +999,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?336400a211c271a4d3f558e84c3f1d52aa3502e7"></script>
+<script src="elementlist.js?9383211247c5ef2ed7c362b4092d3de59eacaafe"></script>
 </body>
 </html>

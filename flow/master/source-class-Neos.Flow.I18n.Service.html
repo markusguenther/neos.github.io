@@ -1160,7 +1160,7 @@
 </span><span id="293" class="l">        <span class="php-var">$blacklistPattern</span> = <span class="php-var">$this</span>-&gt;getScanBlacklistPattern();
 </span><span id="294" class="l">
 </span><span id="295" class="l">        <span class="php-comment">/** @var PackageInterface $activePackage */</span>
-</span><span id="296" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getActivePackages() <span class="php-keyword1">as</span> <span class="php-var">$activePackage</span>) {
+</span><span id="296" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getAvailablePackages() <span class="php-keyword1">as</span> <span class="php-var">$activePackage</span>) {
 </span><span id="297" class="l">            <span class="php-var">$packageResourcesPath</span> = Files::getNormalizedPath(<span class="php-var">$activePackage</span>-&gt;getResourcesPath());
 </span><span id="298" class="l">
 </span><span id="299" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$packageResourcesPath</span>)) {
@@ -1218,6 +1218,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?336400a211c271a4d3f558e84c3f1d52aa3502e7"></script>
+<script src="elementlist.js?9383211247c5ef2ed7c362b4092d3de59eacaafe"></script>
 </body>
 </html>

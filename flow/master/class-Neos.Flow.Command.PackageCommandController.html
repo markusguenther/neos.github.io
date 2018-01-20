@@ -902,7 +902,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Command.PackageCommandController.html#22-440" title="Go to source code">Neos.Flow/Classes/Command/PackageCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Command.PackageCommandController.html#22-366" title="Go to source code">Neos.Flow/Classes/Command/PackageCommandController.php</a>
 		<br>
 	</div>
 
@@ -1106,100 +1106,6 @@ directories and files.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="activateCommand" id="_activateCommand">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_activateCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#123-149" title="Go to source code">activateCommand</a>( <span>string <var>$packageKey</var></span> )</code>
-
-			<div class="description short">
-				<p>Activate an available package</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Activate an available package</p>
-
-<p>This command activates an existing, but currently inactive package.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageKey</var></dt>
-						<dd>The package key of the package to create</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-					<h4>Flow\flushescaches</h4>
-					<div class="list">
-					</div>
-					<h4>See</h4>
-					<div class="list">
-							neos.flow:package:deactivate<br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="deactivateCommand" id="_deactivateCommand">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_deactivateCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#151-177" title="Go to source code">deactivateCommand</a>( <span>string <var>$packageKey</var></span> )</code>
-
-			<div class="description short">
-				<p>Deactivate a package</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Deactivate a package</p>
-
-<p>This command deactivates a currently active package.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageKey</var></dt>
-						<dd>The package key of the package to create</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-					<h4>Flow\flushescaches</h4>
-					<div class="list">
-					</div>
-					<h4>See</h4>
-					<div class="list">
-							neos.flow:package:activate<br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="listCommand" id="_listCommand">
 
 			<td class="attributes"><code>
@@ -1211,7 +1117,7 @@ directories and files.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#179-237" title="Go to source code">listCommand</a>( <span>boolean <var>$loadingOrder</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#123-168" title="Go to source code">listCommand</a>( <span>boolean <var>$loadingOrder</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>List available packages</p>
@@ -1221,7 +1127,7 @@ directories and files.</p>
 				<p>List available packages</p>
 
 <p>Lists all locally available packages. Displays the package key, version and
-package title and its state – active or inactive.</p>
+package title.</p>
 
 
 					<h4>Parameters</h4>
@@ -1257,7 +1163,7 @@ package title and its state – active or inactive.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_freezeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#239-305" title="Go to source code">freezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#170-231" title="Go to source code">freezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
 
 			<div class="description short">
 				<p>Freeze a package</p>
@@ -1309,7 +1215,7 @@ frozen (the default).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unfreezeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#307-362" title="Go to source code">unfreezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#233-288" title="Go to source code">unfreezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
 
 			<div class="description short">
 				<p>Unfreeze a package</p>
@@ -1355,7 +1261,7 @@ unfrozen (the default).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refreezeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#364-423" title="Go to source code">refreezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#290-349" title="Go to source code">refreezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
 
 			<div class="description short">
 				<p>Refreeze a package</p>
@@ -1402,7 +1308,7 @@ refrozen (the default).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rescanCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#425-439" title="Go to source code">rescanCommand</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#351-365" title="Go to source code">rescanCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Rescan package availability and recreates the PackageStates configuration.</p>
@@ -1559,6 +1465,6 @@ refrozen (the default).</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?336400a211c271a4d3f558e84c3f1d52aa3502e7"></script>
+<script src="elementlist.js?9383211247c5ef2ed7c362b4092d3de59eacaafe"></script>
 </body>
 </html>

@@ -936,7 +936,7 @@
 </span><span id="69" class="l">        }
 </span><span id="70" class="l">        <span class="php-comment">// $packageKeyPattern can be used in a future implementation to filter by package key</span>
 </span><span id="71" class="l">
-</span><span id="72" class="l">        <span class="php-var">$packages</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getActivePackages();
+</span><span id="72" class="l">        <span class="php-var">$packages</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getAvailablePackages();
 </span><span id="73" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$packages</span> <span class="php-keyword1">as</span> <span class="php-var">$packageKey</span> =&gt; <span class="php-var">$package</span>) {
 </span><span id="74" class="l">            <span class="php-comment">/** @var PackageInterface $package */</span>
 </span><span id="75" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$directoryPattern</span> === <span class="php-quote">'*'</span>) {
@@ -1026,7 +1026,7 @@
 </span><span id="159" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getPublicResourcePaths()
 </span><span id="160" class="l">    {
 </span><span id="161" class="l">        <span class="php-var">$paths</span> = [];
-</span><span id="162" class="l">        <span class="php-var">$packages</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getActivePackages();
+</span><span id="162" class="l">        <span class="php-var">$packages</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getAvailablePackages();
 </span><span id="163" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$packages</span> <span class="php-keyword1">as</span> <span class="php-var">$packageKey</span> =&gt; <span class="php-var">$package</span>) {
 </span><span id="164" class="l">            <span class="php-comment">/** @var PackageInterface $package */</span>
 </span><span id="165" class="l">            <span class="php-var">$publicResourcesPath</span> = Files::concatenatePaths([<span class="php-var">$package</span>-&gt;getResourcesPath(), <span class="php-quote">'Public'</span>]);
@@ -1046,6 +1046,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?336400a211c271a4d3f558e84c3f1d52aa3502e7"></script>
+<script src="elementlist.js?9383211247c5ef2ed7c362b4092d3de59eacaafe"></script>
 </body>
 </html>

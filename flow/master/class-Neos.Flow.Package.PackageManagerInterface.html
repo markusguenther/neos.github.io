@@ -892,7 +892,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#15-191" title="Go to source code">Neos.Flow/Classes/Package/PackageManagerInterface.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#15-149" title="Go to source code">Neos.Flow/Classes/Package/PackageManagerInterface.php</a>
 		<br>
 	</div>
 
@@ -912,7 +912,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initialize">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#26-32" title="Go to source code">initialize</a>( <span><code><a href="class-Neos.Flow.Core.Bootstrap.html">Neos\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#22-28" title="Go to source code">initialize</a>( <span><code><a href="class-Neos.Flow.Core.Bootstrap.html">Neos\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
 
 			<div class="description short">
 				<p>Initializes the package manager</p>
@@ -946,16 +946,16 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageAvailable">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#34-42" title="Go to source code">isPackageAvailable</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#30-38" title="Go to source code">isPackageAvailable</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a package is available (the package's files exist in the packages directory)
-or FALSE if it's not. If a package is available it doesn't mean necessarily that it's active!</p>
+or FALSE if it's not.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Returns TRUE if a package is available (the package's files exist in the packages directory)
-or FALSE if it's not. If a package is available it doesn't mean necessarily that it's active!</p>
+or FALSE if it's not.</p>
 
 
 					<h4>Parameters</h4>
@@ -978,47 +978,6 @@ or FALSE if it's not. If a package is available it doesn't mean necessarily that
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="isPackageActive" id="_isPackageActive">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_isPackageActive">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#44-51" title="Go to source code">isPackageActive</a>( <span>string <var>$packageKey</var></span> )</code>
-
-			<div class="description short">
-				<p>Returns TRUE if a package is activated or FALSE if it's not.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns TRUE if a package is activated or FALSE if it's not.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageKey</var></dt>
-						<dd>The key of the package to check</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br>TRUE if package is active, otherwise FALSE
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getPackage" id="_getPackage">
 
 			<td class="attributes"><code>
@@ -1030,7 +989,7 @@ or FALSE if it's not. If a package is available it doesn't mean necessarily that
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#53-61" title="Go to source code">getPackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#40-48" title="Go to source code">getPackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a PackageInterface object for the specified package.
@@ -1073,7 +1032,7 @@ A package is available, if the package directory contains valid meta information
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAvailablePackages">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#63-70" title="Go to source code">getAvailablePackages</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#50-57" title="Go to source code">getAvailablePackages</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array of PackageInterface objects of all available packages.
@@ -1083,46 +1042,6 @@ A package is available, if the package directory contains valid meta information
 			<div class="description detailed hidden">
 				<p>Returns an array of PackageInterface objects of all available packages.
 A package is available, if the package directory contains valid meta information.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						array&lt;PackageInterface&gt;
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getActivePackages" id="_getActivePackages">
-
-			<td class="attributes"><code>
-				 public 
-				array&lt;PackageInterface&gt;
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getActivePackages">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#72-80" title="Go to source code">getActivePackages</a>( )</code>
-
-			<div class="description short">
-				<p>Returns an array of PackageInterface objects of all active packages.
-A package is active, if it is available and has been activated in the package
-manager settings.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns an array of PackageInterface objects of all active packages.
-A package is active, if it is available and has been activated in the package
-manager settings.</p>
 
 
 
@@ -1151,7 +1070,7 @@ manager settings.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFilteredPackages">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#82-93" title="Go to source code">getFilteredPackages</a>( <span>string <var>$packageState</var> = <span class="php-quote">'available'</span></span>, <span>string <var>$packagePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#59-70" title="Go to source code">getFilteredPackages</a>( <span>string <var>$packageState</var> = <span class="php-quote">'available'</span></span>, <span>string <var>$packagePath</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of PackageInterface objects of all packages that match
@@ -1198,7 +1117,7 @@ the given package state, path, and type filters. All three filters must match, i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCaseSensitivePackageKey">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#95-103" title="Go to source code">getCaseSensitivePackageKey</a>( <span>string <var>$unknownCasedPackageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#72-80" title="Go to source code">getCaseSensitivePackageKey</a>( <span>string <var>$unknownCasedPackageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the upper camel cased version of the given package key or FALSE
@@ -1241,7 +1160,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageKeyValid">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#105-111" title="Go to source code">isPackageKeyValid</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#82-88" title="Go to source code">isPackageKeyValid</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Check the conformance of the given package key</p>
@@ -1278,7 +1197,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createPackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#113-122" title="Go to source code">createPackage</a>( <span>string <var>$packageKey</var></span>, <span>array <var>$manifest</var> = []</span>, <span>string <var>$packagesPath</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#90-99" title="Go to source code">createPackage</a>( <span>string <var>$packageKey</var></span>, <span>array <var>$manifest</var> = []</span>, <span>string <var>$packagesPath</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new package, given the package key</p>
@@ -1312,80 +1231,6 @@ if no such package is available.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="deactivatePackage" id="_deactivatePackage">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_deactivatePackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#124-131" title="Go to source code">deactivatePackage</a>( <span>string <var>$packageKey</var></span> )</code>
-
-			<div class="description short">
-				<p>Deactivates a package if it is in the list of active packages</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Deactivates a package if it is in the list of active packages</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageKey</var></dt>
-						<dd>The package to deactivate</dd>
-					</dl></div>
-
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="activatePackage" id="_activatePackage">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_activatePackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#133-140" title="Go to source code">activatePackage</a>( <span>string <var>$packageKey</var></span> )</code>
-
-			<div class="description short">
-				<p>Activates a package</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Activates a package</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$packageKey</var></dt>
-						<dd>The package to activate</dd>
-					</dl></div>
-
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="freezePackage" id="_freezePackage">
 
 			<td class="attributes"><code>
@@ -1397,7 +1242,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_freezePackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#142-148" title="Go to source code">freezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#101-107" title="Go to source code">freezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Freezes a package</p>
@@ -1431,7 +1276,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isPackageFrozen">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#150-156" title="Go to source code">isPackageFrozen</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#109-115" title="Go to source code">isPackageFrozen</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Tells if a package is frozen</p>
@@ -1469,7 +1314,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unfreezePackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#158-164" title="Go to source code">unfreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#117-123" title="Go to source code">unfreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Unfreezes a package</p>
@@ -1503,7 +1348,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refreezePackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#166-172" title="Go to source code">refreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#125-131" title="Go to source code">refreezePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Refreezes a package</p>
@@ -1537,7 +1382,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deletePackage">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#174-181" title="Go to source code">deletePackage</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#133-140" title="Go to source code">deletePackage</a>( <span>string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes a package from registry and deletes it from filesystem</p>
@@ -1574,7 +1419,7 @@ if no such package is available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rescanPackages">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#183-190" title="Go to source code">rescanPackages</a>( <span>boolean <var>$reloadPackageStates</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageManagerInterface.html#142-148" title="Go to source code">rescanPackages</a>( )</code>
 
 			<div class="description short">
 				<p>Rescans available packages, order and write a new PackageStates file.</p>
@@ -1584,11 +1429,6 @@ if no such package is available.</p>
 				<p>Rescans available packages, order and write a new PackageStates file.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$reloadPackageStates</var></dt>
-						<dd>Should the package states be loaded before scanning or use the current configuration</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
@@ -1614,60 +1454,6 @@ if no such package is available.</p>
 
 
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Constants summary</h2></div>
-			<table class="summary table table-bordered table-striped constants" id="constants">
-			<tr data-order="PACKAGE_STATE_INACTIVE" id="PACKAGE_STATE_INACTIVE">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-PACKAGE_STATE_INACTIVE.html#22" title="Go to source code"><b>PACKAGE_STATE_INACTIVE</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#PACKAGE_STATE_INACTIVE" class="anchor">#</a>
-						<code><span class="php-quote">'inactive'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="PACKAGE_STATE_ACTIVE" id="PACKAGE_STATE_ACTIVE">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-PACKAGE_STATE_ACTIVE.html#24" title="Go to source code"><b>PACKAGE_STATE_ACTIVE</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#PACKAGE_STATE_ACTIVE" class="anchor">#</a>
-						<code><span class="php-quote">'active'</span></code>
-					</div>
-				</td>
-			</tr>
-			</table>
-		</div>
-
 
 
 
@@ -1679,6 +1465,6 @@ if no such package is available.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?336400a211c271a4d3f558e84c3f1d52aa3502e7"></script>
+<script src="elementlist.js?9383211247c5ef2ed7c362b4092d3de59eacaafe"></script>
 </body>
 </html>
