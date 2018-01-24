@@ -999,7 +999,7 @@ can be overridden in the initialize*Action() method like this::</p>
 
 			<td class="attributes"><code>
 				 public 
-				DateTime|<code><a href="class-Neos.Flow.Validation.Error.html">Neos\Flow\Validation\Error</a></code>
+				DateTimeInterface|<code><a href="class-Neos.Flow.Validation.Error.html">Neos\Flow\Validation\Error</a></code>
 				
 				</code>
 			</td>
@@ -1030,7 +1030,7 @@ can be overridden in the initialize*Action() method like this::</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						DateTime|<code><a href="class-Neos.Flow.Validation.Error.html">Neos\Flow\Validation\Error</a></code>
+						DateTimeInterface|<code><a href="class-Neos.Flow.Validation.Error.html">Neos\Flow\Validation\Error</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -1125,18 +1125,18 @@ If no format is specified in the mapping configuration DEFAULT_DATE_FORMAT is us
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="overrideTimeIfSpecified" id="_overrideTimeIfSpecified">
+		<tr data-order="overrideTime" id="_overrideTime">
 
 			<td class="attributes"><code>
 				 protected 
-				
+				DateTimeInterface
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_overrideTimeIfSpecified">#</a>
-			<code><a href="source-class-Neos.Flow.Property.TypeConverter.DateTimeConverter.html#209-225" title="Go to source code">overrideTimeIfSpecified</a>( <span>DateTime <var>$date</var></span>, <span>array <var>$source</var></span> )</code>
+			<a class="anchor" href="#_overrideTime">#</a>
+			<code><a href="source-class-Neos.Flow.Property.TypeConverter.DateTimeConverter.html#209-225" title="Go to source code">overrideTime</a>( <span>DateTimeInterface <var>$date</var></span>, <span>array <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Overrides hour, minute &amp; second of the given date with the values in the $source array</p>
@@ -1154,6 +1154,10 @@ If no format is specified in the mapping configuration DEFAULT_DATE_FORMAT is us
 						<dd></dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						DateTimeInterface
+					</div>
 
 
 
@@ -1335,6 +1339,6 @@ according to the W3C standard @see http://www.w3.org/TR/NOTE-datetime.html</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?f09e692e1314b3e3b4641c9a49ab4f6d103f2766"></script>
+<script src="elementlist.js?63997938ffe46388284bf2957d783fdb8f43ca76"></script>
 </body>
 </html>
