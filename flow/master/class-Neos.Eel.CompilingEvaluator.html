@@ -911,9 +911,7 @@ code into a function with a name built from the hashed expression.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Eel.html">Eel</a><br>
 		
 
-				<b>Flow\scope(&quot;singleton&quot;)</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Neos.Eel.CompilingEvaluator.html#17-123" title="Go to source code">Neos.Eel/Classes/CompilingEvaluator.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Eel.CompilingEvaluator.html#16-113" title="Go to source code">Neos.Eel/Classes/CompilingEvaluator.php</a>
 		<br>
 	</div>
 
@@ -922,7 +920,7 @@ code into a function with a name built from the hashed expression.</p>
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="initializeObject" id="_initializeObject">
+		<tr data-order="injectExpressionCache" id="_injectExpressionCache">
 
 			<td class="attributes"><code>
 				 public 
@@ -932,46 +930,22 @@ code into a function with a name built from the hashed expression.</p>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#38-44" title="Go to source code">initializeObject</a>( )</code>
+			<a class="anchor" href="#_injectExpressionCache">#</a>
+			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#37-45" title="Go to source code">injectExpressionCache</a>( <span>Neos\Cache\Frontend\StringFrontend <var>$expressionCache</var></span> )</code>
 
 			<div class="description short">
-				<p>Initialize the Evaluator</p>
+				<p>TODO: As soon as we support PSR-16 (Simple Cache) this could be replaced by a simple cache.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Initialize the Evaluator</p>
+				<p>TODO: As soon as we support PSR-16 (Simple Cache) this could be replaced by a simple cache.</p>
 
 
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="shutdownObject" id="_shutdownObject">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#46-70" title="Go to source code">shutdownObject</a>( )</code>
-
-			<div class="description short">
-				<p>Shutdown the Evaluator</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Shutdown the Evaluator</p>
-
-
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$expressionCache</var></dt>
+						<dd></dd>
+					</dl></div>
 
 
 
@@ -991,7 +965,7 @@ code into a function with a name built from the hashed expression.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#72-98" title="Go to source code">evaluate</a>( <span>string <var>$expression</var></span>, <span><code><a href="class-Neos.Eel.Context.html">Neos\Eel\Context</a></code> <var>$context</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#47-72" title="Go to source code">evaluate</a>( <span>string <var>$expression</var></span>, <span><code><a href="class-Neos.Eel.Context.html">Neos\Eel\Context</a></code> <var>$context</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an expression under a given context</p>
@@ -1022,6 +996,46 @@ code into a function with a name built from the hashed expression.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="evaluateAndUnwrap" id="_evaluateAndUnwrap">
+
+			<td class="attributes"><code>
+				 protected 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluateAndUnwrap">#</a>
+			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#74-87" title="Go to source code">evaluateAndUnwrap</a>( <span>closure <var>$expressionFunction</var></span>, <span><code><a href="class-Neos.Eel.Context.html">Neos\Eel\Context</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$expressionFunction</var></dt>
+						<dd></dd>
+						<dt><var>$context</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="generateEvaluatorCode" id="_generateEvaluatorCode">
 
 			<td class="attributes"><code>
@@ -1033,7 +1047,7 @@ code into a function with a name built from the hashed expression.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateEvaluatorCode">#</a>
-			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#100-122" title="Go to source code">generateEvaluatorCode</a>( <span>string <var>$expression</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.CompilingEvaluator.html#89-112" title="Go to source code">generateEvaluatorCode</a>( <span>string <var>$expression</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal generator method</p>
@@ -1082,27 +1096,27 @@ code into a function with a name built from the hashed expression.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="newExpressions" id="$newExpressions">
+		<tr data-order="evaluatedExpressions" id="$evaluatedExpressions">
 			<td class="attributes"><code>
 				protected  
-				array
+				closure[]
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Eel.CompilingEvaluator.html#27-30" title="Go to source code"><var>$newExpressions</var></a>
+					<a href="source-class-Neos.Eel.CompilingEvaluator.html#25-30" title="Go to source code"><var>$evaluatedExpressions</var></a>
 
 				<div class="description short">
-					
+					<p>Runtime cache of execution ready closures.</p>
 				</div>
 
 				<div class="description detailed hidden">
-					
+					<p>Runtime cache of execution ready closures.</p>
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$newExpressions" class="anchor">#</a>
+					<a href="#$evaluatedExpressions" class="anchor">#</a>
 					<code>[]</code>
 				</div>
 			</td>
@@ -1110,11 +1124,11 @@ code into a function with a name built from the hashed expression.</p>
 		<tr data-order="expressionCache" id="$expressionCache">
 			<td class="attributes"><code>
 				protected  
-				Neos\Cache\Frontend\PhpFrontend
+				Neos\Cache\Frontend\StringFrontend
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Eel.CompilingEvaluator.html#32-36" title="Go to source code"><var>$expressionCache</var></a>
+					<a href="source-class-Neos.Eel.CompilingEvaluator.html#32-35" title="Go to source code"><var>$expressionCache</var></a>
 
 				<div class="description short">
 					
@@ -1123,9 +1137,6 @@ code into a function with a name built from the hashed expression.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject(lazy=false)</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
@@ -1151,6 +1162,6 @@ code into a function with a name built from the hashed expression.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?c04a93d887d7c35825d09b341e0279533a490475"></script>
+<script src="elementlist.js?54a05c2d295c5662222533e4cb97da6849d08dfa"></script>
 </body>
 </html>

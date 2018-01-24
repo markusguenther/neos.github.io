@@ -890,7 +890,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#21-140" title="Go to source code">Neos.Flow/Classes/Aop/Pointcut/RuntimeExpressionEvaluator.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#21-121" title="Go to source code">Neos.Flow/Classes/Aop/Pointcut/RuntimeExpressionEvaluator.php</a>
 		<br>
 	</div>
 
@@ -910,7 +910,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectObjectManager">#</a>
-			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#54-69" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#47-61" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>This object is created very early and is part of the blacklisted "Neos\Flow\Aop" namespace so we can't rely on AOP for the property injection.</p>
@@ -933,35 +933,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="saveRuntimeExpressions" id="_saveRuntimeExpressions">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_saveRuntimeExpressions">#</a>
-			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#71-89" title="Go to source code">saveRuntimeExpressions</a>( )</code>
-
-			<div class="description short">
-				<p>Shutdown the Evaluator and save created expressions overwriting any existing expressions</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Shutdown the Evaluator and save created expressions overwriting any existing expressions</p>
-
-
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="evaluate" id="_evaluate">
 
 			<td class="attributes"><code>
@@ -973,7 +944,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#91-108" title="Go to source code">evaluate</a>( <span>string <var>$privilegeIdentifier</var></span>, <span><code><a href="class-Neos.Flow.Aop.JoinPointInterface.html">Neos\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#63-86" title="Go to source code">evaluate</a>( <span>string <var>$privilegeIdentifier</var></span>, <span><code><a href="class-Neos.Flow.Aop.JoinPointInterface.html">Neos\Flow\Aop\JoinPointInterface</a></code> <var>$joinPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an expression with the given JoinPoint</p>
@@ -1017,7 +988,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addExpression">#</a>
-			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#110-120" title="Go to source code">addExpression</a>( <span>string <var>$privilegeIdentifier</var></span>, <span>string <var>$expression</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#88-101" title="Go to source code">addExpression</a>( <span>string <var>$privilegeIdentifier</var></span>, <span>string <var>$expression</var></span> )</code>
 
 			<div class="description short">
 				<p>Add expression to the evaluator</p>
@@ -1057,7 +1028,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateExpressionFunctionName">#</a>
-			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#122-129" title="Go to source code">generateExpressionFunctionName</a>( <span>string <var>$privilegeIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#103-110" title="Go to source code">generateExpressionFunctionName</a>( <span>string <var>$privilegeIdentifier</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1095,7 +1066,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#131-139" title="Go to source code">flush</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#112-120" title="Go to source code">flush</a>( )</code>
 
 			<div class="description short">
 				<p>Flush all runtime expressions</p>
@@ -1132,7 +1103,7 @@
 		<tr data-order="runtimeExpressionsCache" id="$runtimeExpressionsCache">
 			<td class="attributes"><code>
 				protected  
-				Neos\Cache\Frontend\PhpFrontend
+				StringFrontend
 			</code></td>
 
 			<td class="name">
@@ -1204,31 +1175,6 @@
 				</div>
 			</td>
 		</tr>
-		<tr data-order="newExpressions" id="$newExpressions">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Aop.Pointcut.RuntimeExpressionEvaluator.html#47-52" title="Go to source code"><var>$newExpressions</var></a>
-
-				<div class="description short">
-					<p>Newly added expressions.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Newly added expressions.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$newExpressions" class="anchor">#</a>
-					<code>[]</code>
-				</div>
-			</td>
-		</tr>
 			</table>
 		</div>
 
@@ -1245,6 +1191,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?c04a93d887d7c35825d09b341e0279533a490475"></script>
+<script src="elementlist.js?54a05c2d295c5662222533e4cb97da6849d08dfa"></script>
 </body>
 </html>
