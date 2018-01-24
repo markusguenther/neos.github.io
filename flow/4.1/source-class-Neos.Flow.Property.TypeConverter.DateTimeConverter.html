@@ -984,7 +984,7 @@
 </span></span><span id="117" class="l"><span class="php-comment">     * @param string $targetType must be &quot;DateTime&quot;
 </span></span><span id="118" class="l"><span class="php-comment">     * @param array $convertedChildProperties not used currently
 </span></span><span id="119" class="l"><span class="php-comment">     * @param PropertyMappingConfigurationInterface $configuration
-</span></span><span id="120" class="l"><span class="php-comment">     * @return \DateTime|Error
+</span></span><span id="120" class="l"><span class="php-comment">     * @return \DateTimeInterface|Error
 </span></span><span id="121" class="l"><span class="php-comment">     * @throws TypeConverterException
 </span></span><span id="122" class="l"><span class="php-comment">     */</span>
 </span><span id="123" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = [], PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>)
@@ -1033,8 +1033,8 @@
 </span><span id="166" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$date</span> === <span class="php-keyword1">false</span>) {
 </span><span id="167" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Error(<span class="php-quote">'The date &quot;%s&quot; was not recognized (for format &quot;%s&quot;).'</span>, <span class="php-num">1307719788</span>, [<span class="php-var">$dateAsString</span>, <span class="php-var">$dateFormat</span>]);
 </span><span id="168" class="l">        }
-</span><span id="169" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$source</span>)) {
-</span><span id="170" class="l">            <span class="php-var">$this</span>-&gt;overrideTimeIfSpecified(<span class="php-var">$date</span>, <span class="php-var">$source</span>);
+</span><span id="169" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$source</span>) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'hour'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'minute'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'second'</span>])) {
+</span><span id="170" class="l">            <span class="php-var">$date</span> = <span class="php-var">$this</span>-&gt;overrideTime(<span class="php-var">$date</span>, <span class="php-var">$source</span>);
 </span><span id="171" class="l">        }
 </span><span id="172" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$date</span>;
 </span><span id="173" class="l">    }
@@ -1076,19 +1076,19 @@
 </span><span id="209" class="l">    <span class="php-comment">/**
 </span></span><span id="210" class="l"><span class="php-comment">     * Overrides hour, minute &amp; second of the given date with the values in the $source array
 </span></span><span id="211" class="l"><span class="php-comment">     *
-</span></span><span id="212" class="l"><span class="php-comment">     * @param \DateTime $date
+</span></span><span id="212" class="l"><span class="php-comment">     * @param \DateTimeInterface $date
 </span></span><span id="213" class="l"><span class="php-comment">     * @param array $source
-</span></span><span id="214" class="l"><span class="php-comment">     * @return void
+</span></span><span id="214" class="l"><span class="php-comment">     * @return \DateTimeInterface
 </span></span><span id="215" class="l"><span class="php-comment">     */</span>
-</span><span id="216" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> overrideTimeIfSpecified(\DateTime <span class="php-var">$date</span>, <span class="php-keyword1">array</span> <span class="php-var">$source</span>)
+</span><span id="216" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> overrideTime(\DateTimeInterface <span class="php-var">$date</span>, <span class="php-keyword1">array</span> <span class="php-var">$source</span>)
 </span><span id="217" class="l">    {
-</span><span id="218" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'hour'</span>]) &amp;&amp; !<span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'minute'</span>]) &amp;&amp; !<span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'second'</span>])) {
-</span><span id="219" class="l">            <span class="php-keyword1">return</span>;
-</span><span id="220" class="l">        }
-</span><span id="221" class="l">        <span class="php-var">$hour</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'hour'</span>]) ? (integer)<span class="php-var">$source</span>[<span class="php-quote">'hour'</span>] : <span class="php-num">0</span>;
-</span><span id="222" class="l">        <span class="php-var">$minute</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'minute'</span>]) ? (integer)<span class="php-var">$source</span>[<span class="php-quote">'minute'</span>] : <span class="php-num">0</span>;
-</span><span id="223" class="l">        <span class="php-var">$second</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'second'</span>]) ? (integer)<span class="php-var">$source</span>[<span class="php-quote">'second'</span>] : <span class="php-num">0</span>;
-</span><span id="224" class="l">        <span class="php-var">$date</span>-&gt;setTime(<span class="php-var">$hour</span>, <span class="php-var">$minute</span>, <span class="php-var">$second</span>);
+</span><span id="218" class="l">        <span class="php-var">$hour</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'hour'</span>]) ? (integer)<span class="php-var">$source</span>[<span class="php-quote">'hour'</span>] : <span class="php-num">0</span>;
+</span><span id="219" class="l">        <span class="php-var">$minute</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'minute'</span>]) ? (integer)<span class="php-var">$source</span>[<span class="php-quote">'minute'</span>] : <span class="php-num">0</span>;
+</span><span id="220" class="l">        <span class="php-var">$second</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'second'</span>]) ? (integer)<span class="php-var">$source</span>[<span class="php-quote">'second'</span>] : <span class="php-num">0</span>;
+</span><span id="221" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$date</span> <span class="php-keyword1">instanceof</span> \DateTime || <span class="php-var">$date</span> <span class="php-keyword1">instanceof</span> \DateTimeImmutable) {
+</span><span id="222" class="l">            <span class="php-var">$date</span> = <span class="php-var">$date</span>-&gt;setTime(<span class="php-var">$hour</span>, <span class="php-var">$minute</span>, <span class="php-var">$second</span>);
+</span><span id="223" class="l">        }
+</span><span id="224" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$date</span>;
 </span><span id="225" class="l">    }
 </span><span id="226" class="l">}
 </span><span id="227" class="l"></span></code></pre>
@@ -1100,6 +1100,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?e96a79d41c69553c483641bf8b8edcf1127c8058"></script>
+<script src="elementlist.js?4e759271a208b467fbea46c26b5425de8f41f208"></script>
 </body>
 </html>
