@@ -1344,7 +1344,7 @@
 </span><span id="487" class="l">                <span class="php-keyword1">continue</span>;
 </span><span id="488" class="l">            }
 </span><span id="489" class="l">
-</span><span id="490" class="l">            self::monitorDirectoryIfItExists(<span class="php-var">$fileMonitors</span>[<span class="php-quote">'Flow_ConfigurationFiles'</span>], <span class="php-var">$package</span>-&gt;getConfigurationPath(), <span class="php-quote">'\.yaml$'</span>);
+</span><span id="490" class="l">            self::monitorDirectoryIfItExists(<span class="php-var">$fileMonitors</span>[<span class="php-quote">'Flow_ConfigurationFiles'</span>], <span class="php-var">$package</span>-&gt;getConfigurationPath(), <span class="php-quote">'\.y(a)?ml$'</span>);
 </span><span id="491" class="l">            self::monitorDirectoryIfItExists(<span class="php-var">$fileMonitors</span>[<span class="php-quote">'Flow_TranslationFiles'</span>], <span class="php-var">$package</span>-&gt;getResourcesPath() . <span class="php-quote">'Private/Translations/'</span>, <span class="php-quote">'\.xlf'</span>);
 </span><span id="492" class="l">
 </span><span id="493" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$packageKey</span>, <span class="php-var">$packagesWithConfiguredObjects</span>)) {
@@ -1360,7 +1360,7 @@
 </span><span id="503" class="l">            }
 </span><span id="504" class="l">        }
 </span><span id="505" class="l">        self::monitorDirectoryIfItExists(<span class="php-var">$fileMonitors</span>[<span class="php-quote">'Flow_TranslationFiles'</span>], FLOW_PATH_DATA . <span class="php-quote">'Translations/'</span>, <span class="php-quote">'\.xlf'</span>);
-</span><span id="506" class="l">        self::monitorDirectoryIfItExists(<span class="php-var">$fileMonitors</span>[<span class="php-quote">'Flow_ConfigurationFiles'</span>], FLOW_PATH_CONFIGURATION, <span class="php-quote">'\.yaml$'</span>);
+</span><span id="506" class="l">        self::monitorDirectoryIfItExists(<span class="php-var">$fileMonitors</span>[<span class="php-quote">'Flow_ConfigurationFiles'</span>], FLOW_PATH_CONFIGURATION, <span class="php-quote">'\.y(a)?ml$'</span>);
 </span><span id="507" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$fileMonitors</span> <span class="php-keyword1">as</span> <span class="php-var">$fileMonitor</span>) {
 </span><span id="508" class="l">            <span class="php-var">$fileMonitor</span>-&gt;detectChanges();
 </span><span id="509" class="l">        }
@@ -1624,6 +1624,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?2e5a6ea133de86c6d5d53b683eeacf0aa9b0251f"></script>
+<script src="elementlist.js?c8ff95e38455349306426d52137919a4a41bcea2"></script>
 </body>
 </html>
