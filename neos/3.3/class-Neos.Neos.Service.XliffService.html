@@ -838,7 +838,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Service.XliffService.html#26-191" title="Go to source code">Neos.Neos/Classes/Service/XliffService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Service.XliffService.html#28-222" title="Go to source code">Neos.Neos/Classes/Service/XliffService.php</a>
 		<br>
 	</div>
 
@@ -858,7 +858,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedJson">#</a>
-			<code><a href="source-class-Neos.Neos.Service.XliffService.html#76-122" title="Go to source code">getCachedJson</a>( <span>Neos\Flow\I18n\Locale <var>$locale</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.XliffService.html#84-129" title="Go to source code">getCachedJson</a>( <span>Neos\Flow\I18n\Locale <var>$locale</var></span> )</code>
 
 			<div class="description short">
 				<p>Return the json array for a given locale, sourceCatalog, xliffPath and package.
@@ -891,48 +891,6 @@ The json will be cached.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="parseXliffToArray" id="_parseXliffToArray">
-
-			<td class="attributes"><code>
-				 public 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_parseXliffToArray">#</a>
-			<code><a href="source-class-Neos.Neos.Service.XliffService.html#124-150" title="Go to source code">parseXliffToArray</a>( <span>string <var>$xliffPathAndFilename</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$sourceName</var></span> )</code>
-
-			<div class="description short">
-				<p>Read the xliff file and create the desired json</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Read the xliff file and create the desired json</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$xliffPathAndFilename</var></dt>
-						<dd>The file to read</dd>
-						<dt><var>$packageKey</var></dt>
-						<dd></dd>
-						<dt><var>$sourceName</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						array
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getCacheVersion" id="_getCacheVersion">
 
 			<td class="attributes"><code>
@@ -944,7 +902,7 @@ The json will be cached.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheVersion">#</a>
-			<code><a href="source-class-Neos.Neos.Service.XliffService.html#152-163" title="Go to source code">getCacheVersion</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Service.XliffService.html#131-142" title="Go to source code">getCacheVersion</a>( )</code>
 
 			<div class="description short">
 				
@@ -966,6 +924,50 @@ The json will be cached.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="collectPackageSources" id="_collectPackageSources">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_collectPackageSources">#</a>
+			<code><a href="source-class-Neos.Neos.Service.XliffService.html#144-194" title="Go to source code">collectPackageSources</a>( <span>Neos\Flow\Package\PackageInterface <var>$package</var></span>, <span>array <var>$sourcesToBeIncluded</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Collect all sources found in the given package as array (key = source, value = true)
+If sourcecToBeIncluded is an array, only those sources are returned what match the wildcard-patterns in the
+array-values</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Collect all sources found in the given package as array (key = source, value = true)
+If sourcecToBeIncluded is an array, only those sources are returned what match the wildcard-patterns in the
+array-values</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$package</var></dt>
+						<dd></dd>
+						<dt><var>$sourcesToBeIncluded</var></dt>
+						<dd>optional array of wildcard-patterns to filter the sources</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setArrayDataValue" id="_setArrayDataValue">
 
 			<td class="attributes"><code>
@@ -977,7 +979,7 @@ The json will be cached.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setArrayDataValue">#</a>
-			<code><a href="source-class-Neos.Neos.Service.XliffService.html#165-190" title="Go to source code">setArrayDataValue</a>( <span>array <var>&amp; $arrayPointer</var></span>, <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.XliffService.html#196-221" title="Go to source code">setArrayDataValue</a>( <span>array <var>&amp; $arrayPointer</var></span>, <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper method to create the needed json array from a dotted xliff id</p>
@@ -1027,7 +1029,7 @@ The json will be cached.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#33-38" title="Go to source code"><var>$xliffBasePath</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#35-40" title="Go to source code"><var>$xliffBasePath</var></a>
 
 				<div class="description short">
 					<p>A relative path for translations inside the package resources.</p>
@@ -1045,14 +1047,14 @@ The json will be cached.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="xliffParser" id="$xliffParser">
+		<tr data-order="xliffReader" id="$xliffReader">
 			<td class="attributes"><code>
 				protected  
-				Neos\Flow\I18n\Xliff\XliffParser
+				Neos\Flow\I18n\Xliff\Service\XliffReader
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#40-44" title="Go to source code"><var>$xliffParser</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#42-46" title="Go to source code"><var>$xliffReader</var></a>
 
 				<div class="description short">
 					
@@ -1068,7 +1070,7 @@ The json will be cached.</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$xliffParser" class="anchor">#</a>
+					<a href="#$xliffReader" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1080,7 +1082,7 @@ The json will be cached.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#46-50" title="Go to source code"><var>$localizationService</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#48-52" title="Go to source code"><var>$localizationService</var></a>
 
 				<div class="description short">
 					
@@ -1108,7 +1110,7 @@ The json will be cached.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#52-56" title="Go to source code"><var>$xliffToJsonTranslationsCache</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#54-58" title="Go to source code"><var>$xliffToJsonTranslationsCache</var></a>
 
 				<div class="description short">
 					
@@ -1136,7 +1138,7 @@ The json will be cached.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#58-62" title="Go to source code"><var>$scrambleTranslatedLabels</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#60-64" title="Go to source code"><var>$scrambleTranslatedLabels</var></a>
 
 				<div class="description short">
 					
@@ -1165,7 +1167,7 @@ The json will be cached.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#64-68" title="Go to source code"><var>$packagesRegisteredForAutoInclusion</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#66-70" title="Go to source code"><var>$packagesRegisteredForAutoInclusion</var></a>
 
 				<div class="description short">
 					
@@ -1187,6 +1189,34 @@ The json will be cached.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="xliffFileProvider" id="$xliffFileProvider">
+			<td class="attributes"><code>
+				protected  
+				Neos\Flow\I18n\Xliff\Service\XliffFileProvider
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Service.XliffService.html#72-76" title="Go to source code"><var>$xliffFileProvider</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$xliffFileProvider" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="packageManager" id="$packageManager">
 			<td class="attributes"><code>
 				protected  
@@ -1194,7 +1224,7 @@ The json will be cached.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.XliffService.html#70-74" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-Neos.Neos.Service.XliffService.html#78-82" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1231,6 +1261,6 @@ The json will be cached.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?b2ec6585792e75b24520f5bdf16d9fc88c197fb0"></script>
+<script src="elementlist.js?97b498dbe485934569a49cf5fbc58e3f0032b930"></script>
 </body>
 </html>
