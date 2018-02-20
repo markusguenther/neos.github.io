@@ -892,7 +892,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Security.html">Security</a>\<a href="namespace-Neos.Flow.Security.Authentication.html">Authentication</a>\<a href="namespace-Neos.Flow.Security.Authentication.Provider.html">Provider</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#18-59" title="Go to source code">Neos.Flow/Classes/Security/Authentication/Provider/AbstractProvider.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#17-72" title="Go to source code">Neos.Flow/Classes/Security/Authentication/Provider/AbstractProvider.php</a>
 		<br>
 	</div>
 
@@ -901,10 +901,55 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-Neos.Flow.Security.Authentication.AuthenticationProviderInterface.html">Neos\Flow\Security\Authentication\AuthenticationProviderInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#32-43" title="Go to source code">create</a>( <span>Neos\Flow\Security\Authentication\Provider\string <var>$name</var></span>, <span>array <var>$options</var></span> )</code>
+
+			<div class="description short">
+				<p>Factory method</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Factory method</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd></dd>
+						<dt><var>$options</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Security.Authentication.AuthenticationProviderInterface.html">Neos\Flow\Security\Authentication\AuthenticationProviderInterface</a></code>
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Security.Authentication.AuthenticationProviderInterface.html#_create">Neos\Flow\Security\Authentication\AuthenticationProviderInterface::create()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
-				 public 
+				 protected 
 				
 				
 				</code>
@@ -912,14 +957,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#33-43" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#45-56" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
-				<p>Constructor</p>
+				<p>Protected constructor, see create method</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Constructor</p>
+				<p>Protected constructor, see create method</p>
 
 
 					<h4>Parameters</h4>
@@ -932,6 +977,10 @@
 
 
 
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#_create">Neos\Flow\Security\Authentication\Provider\AbstractProvider::create()</a></code><br>
+					</div>
 
 
 			</div>
@@ -948,7 +997,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canAuthenticate">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#45-58" title="Go to source code">canAuthenticate</a>( <span><code><a href="class-Neos.Flow.Security.Authentication.TokenInterface.html">Neos\Flow\Security\Authentication\TokenInterface</a></code> <var>$authenticationToken</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#58-71" title="Go to source code">canAuthenticate</a>( <span><code><a href="class-Neos.Flow.Security.Authentication.TokenInterface.html">Neos\Flow\Security\Authentication\TokenInterface</a></code> <var>$authenticationToken</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if the given token can be authenticated by this provider</p>
@@ -1007,7 +1056,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#23-26" title="Go to source code"><var>$name</var></a>
+					<a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#22-25" title="Go to source code"><var>$name</var></a>
 
 				<div class="description short">
 					
@@ -1032,7 +1081,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#28-31" title="Go to source code"><var>$options</var></a>
+					<a href="source-class-Neos.Flow.Security.Authentication.Provider.AbstractProvider.html#27-30" title="Go to source code"><var>$options</var></a>
 
 				<div class="description short">
 					
@@ -1066,6 +1115,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5840506a16f645c30c1c1c09360f923aa937f4fe"></script>
+<script src="elementlist.js?49f269717311020d26cbe5f1ba7d420bfae66240"></script>
 </body>
 </html>
