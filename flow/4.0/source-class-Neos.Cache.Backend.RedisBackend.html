@@ -997,7 +997,7 @@
 </span><span id="134" class="l">
 </span><span id="135" class="l">        <span class="php-var">$this</span>-&gt;redis-&gt;multi();
 </span><span id="136" class="l">        <span class="php-var">$result</span> = <span class="php-var">$this</span>-&gt;redis-&gt;set(<span class="php-var">$this</span>-&gt;buildKey(<span class="php-quote">'entry:'</span> . <span class="php-var">$entryIdentifier</span>), <span class="php-var">$this</span>-&gt;compress(<span class="php-var">$data</span>), <span class="php-var">$setOptions</span>);
-</span><span id="137" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$result</span> <span class="php-keyword1">instanceof</span> \Redis) {
+</span><span id="137" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$result</span> === <span class="php-keyword1">false</span>) {
 </span><span id="138" class="l">            <span class="php-var">$this</span>-&gt;verifyRedisVersionIsSupported();
 </span><span id="139" class="l">        }
 </span><span id="140" class="l">        <span class="php-var">$this</span>-&gt;redis-&gt;lRem(<span class="php-var">$this</span>-&gt;buildKey(<span class="php-quote">'entries'</span>), <span class="php-var">$entryIdentifier</span>, <span class="php-num">0</span>);
@@ -1380,7 +1380,7 @@
 </span><span id="517" class="l">        <span class="php-comment">// Redis client could be in multi mode, discard for checking the version</span>
 </span><span id="518" class="l">        <span class="php-var">$this</span>-&gt;redis-&gt;discard();
 </span><span id="519" class="l">
-</span><span id="520" class="l">        <span class="php-var">$serverInfo</span> = <span class="php-var">$this</span>-&gt;redis-&gt;info();
+</span><span id="520" class="l">        <span class="php-var">$serverInfo</span> = <span class="php-var">$this</span>-&gt;redis-&gt;info(<span class="php-quote">'SERVER'</span>);
 </span><span id="521" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$serverInfo</span>[<span class="php-quote">'redis_version'</span>])) {
 </span><span id="522" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> CacheException(<span class="php-quote">'Unsupported Redis version, the Redis cache backend needs at least version '</span> . self::MIN_REDIS_VERSION, <span class="php-num">1438251553</span>);
 </span><span id="523" class="l">        }
