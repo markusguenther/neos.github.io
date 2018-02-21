@@ -765,7 +765,7 @@ cache entries are flushed in one operation during Flow's shutdown procedure.</p>
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#23-150" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/TypoScript/Cache/ContentCacheFlusher.php</a>
+			<b>Located at</b> <a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#24-182" title="Go to source code">TYPO3.Neos/Classes/TYPO3/Neos/TypoScript/Cache/ContentCacheFlusher.php</a>
 		<br>
 	</div>
 
@@ -785,7 +785,7 @@ cache entries are flushed in one operation during Flow's shutdown procedure.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerNodeChange">#</a>
-			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#57-86" title="Go to source code">registerNodeChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#64-88" title="Go to source code">registerNodeChange</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeInterface.html">TYPO3\TYPO3CR\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Register a node change for a later cache flush. This method is triggered by a signal sent via TYPO3CR's Node
@@ -810,6 +810,76 @@ model or the Neos Publishing Service.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="registerChangeOnNodeIdentifier" id="_registerChangeOnNodeIdentifier">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registerChangeOnNodeIdentifier">#</a>
+			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#90-101" title="Go to source code">registerChangeOnNodeIdentifier</a>( <span>string <var>$nodeIdentifier</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeIdentifier</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="registerChangeOnNodeType" id="_registerChangeOnNodeType">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registerChangeOnNodeType">#</a>
+			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#103-115" title="Go to source code">registerChangeOnNodeType</a>( <span>string <var>$nodeTypeName</var></span>, <span>string <var>$referenceNodeIdentifier</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$nodeTypeName</var></dt>
+						<dd></dd>
+						<dt><var>$referenceNodeIdentifier</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="registerAssetResourceChange" id="_registerAssetResourceChange">
 
 			<td class="attributes"><code>
@@ -821,7 +891,7 @@ model or the Neos Publishing Service.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerAssetResourceChange">#</a>
-			<code class="deprecated"><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#88-98" title="Go to source code">registerAssetResourceChange</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code class="deprecated"><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#117-127" title="Go to source code">registerAssetResourceChange</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Deprecated. Please use ContentCacheFlush::registerAssetChange</p>
@@ -858,7 +928,7 @@ model or the Neos Publishing Service.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerAssetChange">#</a>
-			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#100-119" title="Go to source code">registerAssetChange</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#129-149" title="Go to source code">registerAssetChange</a>( <span><code><a href="class-TYPO3.Media.Domain.Model.AssetInterface.html">TYPO3\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetches possible usages of the asset and registers nodes that use the asset as changed.</p>
@@ -892,7 +962,7 @@ model or the Neos Publishing Service.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#121-136" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#151-166" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				<p>Flush caches according to the previously registered node changes.</p>
@@ -910,18 +980,18 @@ model or the Neos Publishing Service.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getAllImplementedNodeTypes" id="_getAllImplementedNodeTypes">
+		<tr data-order="getAllImplementedNodeTypeNames" id="_getAllImplementedNodeTypeNames">
 
 			<td class="attributes"><code>
 				 protected 
-				array&lt;NodeType&gt;
+				array&lt;string&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getAllImplementedNodeTypes">#</a>
-			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#138-149" title="Go to source code">getAllImplementedNodeTypes</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<a class="anchor" href="#_getAllImplementedNodeTypeNames">#</a>
+			<code><a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#168-181" title="Go to source code">getAllImplementedNodeTypeNames</a>( <span><code><a href="class-TYPO3.TYPO3CR.Domain.Model.NodeType.html">TYPO3\TYPO3CR\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				
@@ -939,7 +1009,7 @@ model or the Neos Publishing Service.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array&lt;NodeType&gt;
+						array&lt;string&gt;
 					</div>
 
 
@@ -971,7 +1041,7 @@ model or the Neos Publishing Service.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#34-38" title="Go to source code"><var>$contentCache</var></a>
+					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#35-39" title="Go to source code"><var>$contentCache</var></a>
 
 				<div class="description short">
 					
@@ -999,7 +1069,7 @@ model or the Neos Publishing Service.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#40-44" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#41-45" title="Go to source code"><var>$systemLogger</var></a>
 
 				<div class="description short">
 					
@@ -1027,7 +1097,7 @@ model or the Neos Publishing Service.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#46-49" title="Go to source code"><var>$tagsToFlush</var></a>
+					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#47-50" title="Go to source code"><var>$tagsToFlush</var></a>
 
 				<div class="description short">
 					
@@ -1052,7 +1122,7 @@ model or the Neos Publishing Service.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#51-55" title="Go to source code"><var>$assetService</var></a>
+					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#52-56" title="Go to source code"><var>$assetService</var></a>
 
 				<div class="description short">
 					
@@ -1073,6 +1143,34 @@ model or the Neos Publishing Service.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="nodeTypeManager" id="$nodeTypeManager">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-TYPO3.TYPO3CR.Domain.Service.NodeTypeManager.html">TYPO3\TYPO3CR\Domain\Service\NodeTypeManager</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TYPO3.Neos.TypoScript.Cache.ContentCacheFlusher.html#58-62" title="Go to source code"><var>$nodeTypeManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject()</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$nodeTypeManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -1089,6 +1187,6 @@ model or the Neos Publishing Service.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?a9f6f070092c6d7e6c9b13d0f1087070cf60e440"></script>
+<script src="elementlist.js?fe7b678aecc299deaa4da4130133e06656030bee"></script>
 </body>
 </html>
