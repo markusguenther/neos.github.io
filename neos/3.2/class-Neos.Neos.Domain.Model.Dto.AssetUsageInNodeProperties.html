@@ -808,7 +808,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Neos.html">Neos</a>\<a href="namespace-Neos.Neos.Domain.html">Domain</a>\<a href="namespace-Neos.Neos.Domain.Model.html">Model</a>\<a href="namespace-Neos.Neos.Domain.Model.Dto.html">Dto</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#18-98" title="Go to source code">Neos.Neos/Classes/Domain/Model/Dto/AssetUsageInNodeProperties.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#17-89" title="Go to source code">Neos.Neos/Classes/Domain/Model/Dto/AssetUsageInNodeProperties.php</a>
 		<br>
 	</div>
 
@@ -828,7 +828,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#43-57" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span><code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code> <var>$site</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$documentNode</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$accessible</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#42-56" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>string <var>$nodeIdentifier</var></span>, <span>string <var>$workspaceName</var></span>, <span>array <var>$dimensionValues</var></span>, <span>string <var>$nodeTypeName</var></span> )</code>
 
 			<div class="description short">
 				
@@ -842,13 +842,13 @@
 					<div class="list"><dl>
 						<dt><var>$asset</var></dt>
 						<dd></dd>
-						<dt><var>$site</var></dt>
+						<dt><var>$nodeIdentifier</var></dt>
 						<dd></dd>
-						<dt><var>$documentNode</var></dt>
+						<dt><var>$workspaceName</var></dt>
 						<dd></dd>
-						<dt><var>$node</var></dt>
+						<dt><var>$dimensionValues</var></dt>
 						<dd></dd>
-						<dt><var>$accessible</var></dt>
+						<dt><var>$nodeTypeName</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -861,31 +861,31 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getSite" id="_getSite">
+		<tr data-order="getNodeIdentifier" id="_getNodeIdentifier">
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code>
+				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getSite">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#59-67" title="Go to source code">getSite</a>( )</code>
+			<a class="anchor" href="#_getNodeIdentifier">#</a>
+			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#58-64" title="Go to source code">getNodeIdentifier</a>( )</code>
 
 			<div class="description short">
-				<p>Returns the Site object of the site where the asset is in use.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the Site object of the site where the asset is in use.</p>
+				
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code>
+						string
 					</div>
 
 
@@ -894,31 +894,31 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getDocumentNode" id="_getDocumentNode">
+		<tr data-order="getWorkspaceName" id="_getWorkspaceName">
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getDocumentNode">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#69-77" title="Go to source code">getDocumentNode</a>( )</code>
+			<a class="anchor" href="#_getWorkspaceName">#</a>
+			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#66-72" title="Go to source code">getWorkspaceName</a>( )</code>
 
 			<div class="description short">
-				<p>Returns the parent document node of the node where the asset is used.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the parent document node of the node where the asset is used.</p>
+				
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+						string
 					</div>
 
 
@@ -927,31 +927,31 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getNode" id="_getNode">
+		<tr data-order="getDimensionValues" id="_getDimensionValues">
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getNode">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#79-87" title="Go to source code">getNode</a>( )</code>
+			<a class="anchor" href="#_getDimensionValues">#</a>
+			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#74-80" title="Go to source code">getDimensionValues</a>( )</code>
 
 			<div class="description short">
-				<p>Returns the node where the asset is in use.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns the node where the asset is in use.</p>
+				
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+						array
 					</div>
 
 
@@ -960,31 +960,31 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="isAccessible" id="_isAccessible">
+		<tr data-order="getNodeTypeName" id="_getNodeTypeName">
 
 			<td class="attributes"><code>
 				 public 
-				boolean
+				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_isAccessible">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#89-97" title="Go to source code">isAccessible</a>( )</code>
+			<a class="anchor" href="#_getNodeTypeName">#</a>
+			<code><a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#82-88" title="Go to source code">getNodeTypeName</a>( )</code>
 
 			<div class="description short">
-				<p>Returns true if the node is accessible by the current user.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns true if the node is accessible by the current user.</p>
+				
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean
+						string
 					</div>
 
 
@@ -1015,14 +1015,14 @@
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="site" id="$site">
+		<tr data-order="nodeIdentifier" id="$nodeIdentifier">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code>
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#23-26" title="Go to source code"><var>$site</var></a>
+					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#22-25" title="Go to source code"><var>$nodeIdentifier</var></a>
 
 				<div class="description short">
 					
@@ -1035,19 +1035,19 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$site" class="anchor">#</a>
+					<a href="#$nodeIdentifier" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="documentNode" id="$documentNode">
+		<tr data-order="workspaceName" id="$workspaceName">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#28-31" title="Go to source code"><var>$documentNode</var></a>
+					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#27-30" title="Go to source code"><var>$workspaceName</var></a>
 
 				<div class="description short">
 					
@@ -1060,19 +1060,19 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$documentNode" class="anchor">#</a>
+					<a href="#$workspaceName" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="node" id="$node">
+		<tr data-order="dimensionValues" id="$dimensionValues">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#33-36" title="Go to source code"><var>$node</var></a>
+					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#32-35" title="Go to source code"><var>$dimensionValues</var></a>
 
 				<div class="description short">
 					
@@ -1085,19 +1085,19 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$node" class="anchor">#</a>
+					<a href="#$dimensionValues" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="accessible" id="$accessible">
+		<tr data-order="nodeTypeName" id="$nodeTypeName">
 			<td class="attributes"><code>
 				protected  
-				boolean
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#38-41" title="Go to source code"><var>$accessible</var></a>
+					<a href="source-class-Neos.Neos.Domain.Model.Dto.AssetUsageInNodeProperties.html#37-40" title="Go to source code"><var>$nodeTypeName</var></a>
 
 				<div class="description short">
 					
@@ -1110,7 +1110,7 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$accessible" class="anchor">#</a>
+					<a href="#$nodeTypeName" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1137,6 +1137,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4d92fab83e3a221c0b69a0897e131c6534da244d"></script>
+<script src="elementlist.js?c7a3f41d38cf3ee64d080ec46a852209bc477d24"></script>
 </body>
 </html>
