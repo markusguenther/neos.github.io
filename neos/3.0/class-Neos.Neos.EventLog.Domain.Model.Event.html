@@ -783,10 +783,15 @@
 				<br>
 				<b>Orm\table(:</b>
 				indexes={<br>
-				<b>Orm\index(name=&quot;eventtype&quot;,columns={&quot;eventtype&quot;}):</b>
-				<p>}
-)</p><br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#18-180" title="Go to source code">Neos.Neos/Classes/EventLog/Domain/Model/Event.php</a>
+				<b>Orm\index(name=&quot;eventtype&quot;,columns={&quot;eventtype&quot;}),</b>
+				<br>
+				<b>Orm\index(name=&quot;documentnodeidentifier&quot;,:</b>
+				<p>columns={"documentnodeidentifier"})
+   }
+)
+The "documentnodeidentifier" index defined above targets the NodeEvent, and needs to be here so Doctrine migrations
+picks it up, otherwise Doctrine would never create this index. See https://github.com/doctrine/doctrine2/issues/6248</p><br>
+			<b>Located at</b> <a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#18-183" title="Go to source code">Neos.Neos/Classes/EventLog/Domain/Model/Event.php</a>
 		<br>
 	</div>
 
@@ -806,7 +811,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#87-108" title="Go to source code">__construct</a>( <span>string <var>$eventType</var></span>, <span>array <var>$data</var></span>, <span>string <var>$user</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Neos.Neos.EventLog.Domain.Model.Event.html">Neos\Neos\EventLog\Domain\Model\Event</a></code> <var>$parentEvent</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#90-111" title="Go to source code">__construct</a>( <span>string <var>$eventType</var></span>, <span>array <var>$data</var></span>, <span>string <var>$user</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Neos.Neos.EventLog.Domain.Model.Event.html">Neos\Neos\EventLog\Domain\Model\Event</a></code> <var>$parentEvent</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new event</p>
@@ -846,7 +851,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getEventType">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#110-118" title="Go to source code">getEventType</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#113-121" title="Go to source code">getEventType</a>( )</code>
 
 			<div class="description short">
 				<p>Return the type of this event</p>
@@ -879,7 +884,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTimestamp">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#120-128" title="Go to source code">getTimestamp</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#123-131" title="Go to source code">getTimestamp</a>( )</code>
 
 			<div class="description short">
 				<p>Return the timestamp of this event</p>
@@ -912,7 +917,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#130-138" title="Go to source code">getData</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#133-141" title="Go to source code">getData</a>( )</code>
 
 			<div class="description short">
 				<p>Return the payload of this event</p>
@@ -945,7 +950,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAccountIdentifier">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#140-148" title="Go to source code">getAccountIdentifier</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#143-151" title="Go to source code">getAccountIdentifier</a>( )</code>
 
 			<div class="description short">
 				<p>Return the identifier of the account (if any) which triggered this event</p>
@@ -978,7 +983,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParentEvent">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#150-158" title="Go to source code">getParentEvent</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#153-161" title="Go to source code">getParentEvent</a>( )</code>
 
 			<div class="description short">
 				<p>Return the parent event (if any)</p>
@@ -1011,7 +1016,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getChildEvents">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#160-168" title="Go to source code">getChildEvents</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#163-171" title="Go to source code">getChildEvents</a>( )</code>
 
 			<div class="description short">
 				<p>Return the child events (if any)</p>
@@ -1044,7 +1049,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addChildEvent">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#170-179" title="Go to source code">addChildEvent</a>( <span><code><a href="class-Neos.Neos.EventLog.Domain.Model.Event.html">Neos\Neos\EventLog\Domain\Model\Event</a></code> <var>$childEvent</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#173-182" title="Go to source code">addChildEvent</a>( <span><code><a href="class-Neos.Neos.EventLog.Domain.Model.Event.html">Neos\Neos\EventLog\Domain\Model\Event</a></code> <var>$childEvent</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a new child event. Is called from the child event's constructor.</p>
@@ -1090,7 +1095,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#31-36" title="Go to source code"><var>$timestamp</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#34-39" title="Go to source code"><var>$timestamp</var></a>
 
 				<div class="description short">
 					<p>When was this event?</p>
@@ -1115,7 +1120,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#38-46" title="Go to source code"><var>$uid</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#41-49" title="Go to source code"><var>$uid</var></a>
 
 				<div class="description short">
 					<p>We introduce an auto_increment column to be able to sort events at the same timestamp</p>
@@ -1150,7 +1155,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#48-53" title="Go to source code"><var>$eventType</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#51-56" title="Go to source code"><var>$eventType</var></a>
 
 				<div class="description short">
 					<p>What was this event about? Is a required string constant.</p>
@@ -1175,7 +1180,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#55-61" title="Go to source code"><var>$accountIdentifier</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#58-64" title="Go to source code"><var>$accountIdentifier</var></a>
 
 				<div class="description short">
 					<p>The identifier of the account that triggered this event. Optional.</p>
@@ -1203,7 +1208,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#63-69" title="Go to source code"><var>$data</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#66-72" title="Go to source code"><var>$data</var></a>
 
 				<div class="description short">
 					<p>Payload of the event.</p>
@@ -1231,7 +1236,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#71-77" title="Go to source code"><var>$parentEvent</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#74-80" title="Go to source code"><var>$parentEvent</var></a>
 
 				<div class="description short">
 					<p>The parent event, if exists. E.g. if a "move node" operation triggered a bunch of other events, or a "publish"</p>
@@ -1259,7 +1264,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#79-85" title="Go to source code"><var>$childEvents</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.Event.html#82-88" title="Go to source code"><var>$childEvents</var></a>
 
 				<div class="description short">
 					<p>Child events, of this event</p>
