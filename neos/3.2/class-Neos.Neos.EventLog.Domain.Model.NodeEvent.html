@@ -810,17 +810,16 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Neos.html">Neos</a>\<a href="namespace-Neos.Neos.EventLog.html">EventLog</a>\<a href="namespace-Neos.Neos.EventLog.Domain.html">Domain</a>\<a href="namespace-Neos.Neos.EventLog.Domain.Model.html">Model</a><br>
 		
 
-				<b>Flow\entity</b>
-				<br>
-				<b>Orm\inheritancetype(&quot;single_table&quot;):</b>
-				The following annotation is not correctly picked up so doctrine migrations would never create this index. It is still contained in the migration.<br>
+				<b>Flow\entity:</b>
+				<p>The following annotation is not picked up by Doctrine migrations and thus included in the Event class as well.
+See https://github.com/doctrine/doctrine2/issues/6248</p><br>
 				<b>Orm\table(:</b>
 				indexes={<br>
 				<b>Orm\index(name=&quot;documentnodeidentifier&quot;,:</b>
 				<p>columns={"documentnodeidentifier"})
    }
 )</p><br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#25-260" title="Go to source code">Neos.Neos/Classes/EventLog/Domain/Model/NodeEvent.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#25-262" title="Go to source code">Neos.Neos/Classes/EventLog/Domain/Model/NodeEvent.php</a>
 		<br>
 	</div>
 
@@ -840,7 +839,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWorkspaceName">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#91-99" title="Go to source code">getWorkspaceName</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#93-101" title="Go to source code">getWorkspaceName</a>( )</code>
 
 			<div class="description short">
 				<p>Return name of the workspace where the node event happened</p>
@@ -873,7 +872,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isDocumentEvent">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#101-107" title="Go to source code">isDocumentEvent</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#103-109" title="Go to source code">isDocumentEvent</a>( )</code>
 
 			<div class="description short">
 				
@@ -906,7 +905,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDocumentNodeIdentifier">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#109-117" title="Go to source code">getDocumentNodeIdentifier</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#111-119" title="Go to source code">getDocumentNodeIdentifier</a>( )</code>
 
 			<div class="description short">
 				<p>Return the node identifier of the closest parent document node related to this event</p>
@@ -939,7 +938,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeIdentifier">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#119-127" title="Go to source code">getNodeIdentifier</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#121-129" title="Go to source code">getNodeIdentifier</a>( )</code>
 
 			<div class="description short">
 				<p>Return the node identifier of the node this event relates to</p>
@@ -972,7 +971,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNode">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#129-164" title="Go to source code">setNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#131-166" title="Go to source code">setNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the "context node" this operation was working on.</p>
@@ -1006,7 +1005,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setWorkspaceName">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#166-175" title="Go to source code">setWorkspaceName</a>( <span>string <var>$workspaceName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#168-177" title="Go to source code">setWorkspaceName</a>( <span>string <var>$workspaceName</var></span> )</code>
 
 			<div class="description short">
 				<p>Override the workspace name. <em>MUST</em> be called after setNode(), else it won't have an effect.</p>
@@ -1040,7 +1039,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClosestAggregateNode">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#177-189" title="Go to source code">getClosestAggregateNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#179-191" title="Go to source code">getClosestAggregateNode</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the closest aggregate node of the given node</p>
@@ -1078,7 +1077,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDocumentNode">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#191-213" title="Go to source code">getDocumentNode</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#193-215" title="Go to source code">getDocumentNode</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the closest document node, if it can be resolved.</p>
@@ -1115,7 +1114,7 @@ case and return NULL.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNode">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#215-237" title="Go to source code">getNode</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#217-239" title="Go to source code">getNode</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the node this even refers to, if it can be resolved.</p>
@@ -1152,7 +1151,7 @@ case and return NULL.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentSite">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#239-251" title="Go to source code">getCurrentSite</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#241-253" title="Go to source code">getCurrentSite</a>( )</code>
 
 			<div class="description short">
 				<p>Prevents invalid calls to the site repository in case the site data property is not available.</p>
@@ -1185,7 +1184,7 @@ case and return NULL.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#253-259" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#255-261" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				
@@ -1243,7 +1242,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#39-44" title="Go to source code"><var>$nodeIdentifier</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#41-46" title="Go to source code"><var>$nodeIdentifier</var></a>
 
 				<div class="description short">
 					<p>the node identifier which was created/modified/...</p>
@@ -1268,7 +1267,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#46-51" title="Go to source code"><var>$documentNodeIdentifier</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#48-53" title="Go to source code"><var>$documentNodeIdentifier</var></a>
 
 				<div class="description short">
 					<p>the document node identifier on which the action took place. is equal to NodeIdentifier if the action happened on documentNodes</p>
@@ -1293,7 +1292,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#53-58" title="Go to source code"><var>$workspaceName</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#55-60" title="Go to source code"><var>$workspaceName</var></a>
 
 				<div class="description short">
 					<p>the workspace name where the action took place</p>
@@ -1318,7 +1317,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#60-65" title="Go to source code"><var>$dimension</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#62-67" title="Go to source code"><var>$dimension</var></a>
 
 				<div class="description short">
 					<p>the dimension values for that event</p>
@@ -1343,7 +1342,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#67-71" title="Go to source code"><var>$userService</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#69-73" title="Go to source code"><var>$userService</var></a>
 
 				<div class="description short">
 					
@@ -1371,7 +1370,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#73-77" title="Go to source code"><var>$contextFactory</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#75-79" title="Go to source code"><var>$contextFactory</var></a>
 
 				<div class="description short">
 					
@@ -1399,7 +1398,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#79-83" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#81-85" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1427,7 +1426,7 @@ case and return NULL.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#85-89" title="Go to source code"><var>$siteRepository</var></a>
+					<a href="source-class-Neos.Neos.EventLog.Domain.Model.NodeEvent.html#87-91" title="Go to source code"><var>$siteRepository</var></a>
 
 				<div class="description short">
 					
@@ -1476,6 +1475,6 @@ case and return NULL.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?7544d1db9aa372f1214e1bc0cdcec831373262d6"></script>
+<script src="elementlist.js?01f8e438308ad35ee52133572aad4ba4e9961762"></script>
 </body>
 </html>
