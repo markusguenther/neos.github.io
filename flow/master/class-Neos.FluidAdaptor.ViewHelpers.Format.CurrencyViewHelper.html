@@ -935,6 +935,9 @@ Complex calculations and/or conversions should be done before the number is pass
 then becomes mandatory) are ignored and the CLDR (Common Locale Data Repository) is used for formatting.
 Fore more information about localization see section <code>Internationalization &amp; Localization Framework</code> in the
 Flow documentation.</p>
+
+<p>Additionally, if <code>currencyCode</code> is set, rounding and decimal digits are replaced by the rules for the
+respective currency (e.g. JPY never has decimal digits, CHF is rounded using 5 decimals.)</p>
 	</div>
 
 	<dl class="tree well">
@@ -980,7 +983,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#21-154" title="Go to source code">Neos.FluidAdaptor/Classes/ViewHelpers/Format/CurrencyViewHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#22-159" title="Go to source code">Neos.FluidAdaptor/Classes/ViewHelpers/Format/CurrencyViewHelper.php</a>
 		<br>
 	</div>
 
@@ -1000,7 +1003,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeArguments">#</a>
-			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#98-112" title="Go to source code">initializeArguments</a>( )</code>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#102-117" title="Go to source code">initializeArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize the arguments.</p>
@@ -1032,7 +1035,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 
 			<td class="name"><div>
 			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#114-153" title="Go to source code">render</a>( )</code>
+			<code><a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#119-158" title="Go to source code">render</a>( )</code>
 
 			<div class="description short">
 				
@@ -1108,7 +1111,7 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#92-96" title="Go to source code"><var>$numberFormatter</var></a>
+					<a href="source-class-Neos.FluidAdaptor.ViewHelpers.Format.CurrencyViewHelper.html#96-100" title="Go to source code"><var>$numberFormatter</var></a>
 
 				<div class="description short">
 					
@@ -1159,6 +1162,6 @@ TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?afcc55738720ddfab051875756525656776214c1"></script>
+<script src="elementlist.js?9c9a956bbdf29e647aa9465363eaecd32200a605"></script>
 </body>
 </html>
