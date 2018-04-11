@@ -898,7 +898,7 @@ class based DI mechanism is not yet available.</p>
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#26-482" title="Go to source code">Neos.Flow/Classes/ObjectManagement/CompileTimeObjectManager.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#26-438" title="Go to source code">Neos.Flow/Classes/ObjectManagement/CompileTimeObjectManager.php</a>
 		<br>
 	</div>
 
@@ -1254,16 +1254,16 @@ are registered.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterClassNamesFromConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#237-262" title="Go to source code">filterClassNamesFromConfiguration</a>( <span>array <var>$classNames</var></span>, <span>array <var>$includeClassesConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#237-251" title="Go to source code">filterClassNamesFromConfiguration</a>( <span>array <var>$classNames</var></span>, <span>array <var>$includeClassesConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Given an array of class names by package key this filters out classes that
-have been configured to be excluded or included by object management.</p>
+have been configured to be included by object management.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Given an array of class names by package key this filters out classes that
-have been configured to be excluded or included by object management.</p>
+have been configured to be included by object management.</p>
 
 
 					<h4>Parameters</h4>
@@ -1276,7 +1276,7 @@ have been configured to be excluded or included by object management.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>The input array with all configured to be excluded from object management filtered out
+						array<br>The input array with all configured to be included in object management added in
 					</div>
 
 					<h4>Throws</h4>
@@ -1284,44 +1284,6 @@ have been configured to be excluded or included by object management.</p>
 						<code><a href="class-Neos.Flow.Configuration.Exception.InvalidConfigurationTypeException.html">Neos\Flow\Configuration\Exception\InvalidConfigurationTypeException</a></code><br>
 						<code><a href="class-Neos.Flow.Configuration.Exception.NoSuchOptionException.html">Neos\Flow\Configuration\Exception\NoSuchOptionException</a></code>
 					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="collectExcludedPackages" id="_collectExcludedPackages">
-
-			<td class="attributes"><code>
-				 protected 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_collectExcludedPackages">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#264-287" title="Go to source code">collectExcludedPackages</a>( <span>array <var>$registeredPackageKeys</var></span> )</code>
-
-			<div class="description short">
-				<p>Explodes the regular expressions for package name in excludeClasses configuration to full package names.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Explodes the regular expressions for package name in excludeClasses configuration to full package names.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$registeredPackageKeys</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						array
-					</div>
-
 
 
 
@@ -1339,14 +1301,14 @@ have been configured to be excluded or included by object management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_applyClassFilterConfiguration">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#289-337" title="Go to source code">applyClassFilterConfiguration</a>( <span>array <var>$classNames</var></span>, <span>array <var>$filterConfiguration</var></span>, <span>string <var>$includeOrExclude</var> = <span class="php-quote">'include'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#253-293" title="Go to source code">applyClassFilterConfiguration</a>( <span>array <var>$classNames</var></span>, <span>array <var>$filterConfiguration</var></span> )</code>
 
 			<div class="description short">
-				<p>Filters the classnames available for object management by filter expressions that either include or exclude classes.</p>
+				<p>Filters the classnames available for object management by filter expressions that includes classes.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Filters the classnames available for object management by filter expressions that either include or exclude classes.</p>
+				<p>Filters the classnames available for object management by filter expressions that includes classes.</p>
 
 
 					<h4>Parameters</h4>
@@ -1355,8 +1317,6 @@ have been configured to be excluded or included by object management.</p>
 						<dd>All classnames per package</dd>
 						<dt><var>$filterConfiguration</var></dt>
 						<dd>The filter configuration to apply</dd>
-						<dt><var>$includeOrExclude</var></dt>
-						<dd>if this is an "include" or "exclude" filter</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1385,7 +1345,7 @@ have been configured to be excluded or included by object management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildObjectsArray">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#339-378" title="Go to source code">buildObjectsArray</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#295-334" title="Go to source code">buildObjectsArray</a>( )</code>
 
 			<div class="description short">
 				<p>Builds the  objects array which contains information about the registered objects,
@@ -1420,7 +1380,7 @@ their scope, class, built method etc.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectConfigurations">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#380-388" title="Go to source code">getObjectConfigurations</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#336-344" title="Go to source code">getObjectConfigurations</a>( )</code>
 
 			<div class="description short">
 				<p>Returns object configurations which were previously built by the ConfigurationBuilder.</p>
@@ -1453,7 +1413,7 @@ their scope, class, built method etc.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#390-469" title="Go to source code">get</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#346-425" title="Go to source code">get</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a fresh or existing instance of the object specified by $objectName.</p>
@@ -1502,7 +1462,7 @@ defined in the object configuration of the specified object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdown">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#471-481" title="Go to source code">shutdown</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.CompileTimeObjectManager.html#427-437" title="Go to source code">shutdown</a>( )</code>
 
 			<div class="description short">
 				<p>Shuts down this Object Container by calling the shutdown methods of all
@@ -1809,6 +1769,6 @@ object instances which were configured to be shut down.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ee7d8c1d0e0f1b3612653165461b6b08604daf46"></script>
+<script src="elementlist.js?897451b013c8eeb606353c53789c04ae739e10d4"></script>
 </body>
 </html>
