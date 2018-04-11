@@ -925,7 +925,7 @@ This is the object used for incoming requests from a browser.</p>
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Request.html#20-927" title="Go to source code">Neos.Flow/Classes/Http/Request.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Request.html#20-886" title="Go to source code">Neos.Flow/Classes/Http/Request.php</a>
 		<br>
 	</div>
 
@@ -2133,148 +2133,6 @@ Values and splitting the options into an array list, ordered by user preference.
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="parseMediaType" id="_parseMediaType">
-
-			<td class="attributes"><code>
-				 public static
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_parseMediaType">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Request.html#707-718" title="Go to source code">parseMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
-
-			<div class="description short">
-				<p>Parses a RFC 2616 Media Type and returns its parts in an associative array.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Parses a RFC 2616 Media Type and returns its parts in an associative array.</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							since Flow 2.1. Use \Neos\Utility\MediaTypes::parseMediaType() instead<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$rawMediaType</var></dt>
-						<dd>The raw media type, for example "application/json; charset=UTF-8"</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						array<br>An associative array with parsed information
-					</div>
-
-
-					<h4>See</h4>
-					<div class="list">
-							MediaTypes::parseMediaType()<br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="mediaRangeMatches" id="_mediaRangeMatches">
-
-			<td class="attributes"><code>
-				 public static
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_mediaRangeMatches">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Request.html#720-732" title="Go to source code">mediaRangeMatches</a>( <span>string <var>$mediaRange</var></span>, <span>string <var>$mediaType</var></span> )</code>
-
-			<div class="description short">
-				<p>Checks if the given media range and the media type match.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Checks if the given media range and the media type match.</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							since Flow 2.1. Use \Neos\Utility\MediaTypes::mediaRangeMatches() instead<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$mediaRange</var></dt>
-						<dd>The media range, for example "text/*"</dd>
-						<dt><var>$mediaType</var></dt>
-						<dd>The media type to match against, for example "text/html"</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br>TRUE if both match, FALSE if they don't match or either of them is invalid
-					</div>
-
-
-					<h4>See</h4>
-					<div class="list">
-							MediaTypes::mediaRangeMatches()<br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="trimMediaType" id="_trimMediaType">
-
-			<td class="attributes"><code>
-				 public static
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_trimMediaType">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Request.html#734-746" title="Go to source code">trimMediaType</a>( <span>string <var>$rawMediaType</var></span> )</code>
-
-			<div class="description short">
-				<p>Strips off any parameters from the given media type and returns just the type
-and subtype in the format "type/subtype".</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Strips off any parameters from the given media type and returns just the type
-and subtype in the format "type/subtype".</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							since Flow 2.1. Use \Neos\Utility\MediaTypes::trimMediaType() instead<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$rawMediaType</var></dt>
-						<dd>The full media type, for example "application/json; charset=UTF-8"</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>Just the type and subtype, for example "application/json"
-					</div>
-
-
-					<h4>See</h4>
-					<div class="list">
-							\Neos\Utility\MediaTypes::trimMediaType()<br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getCookieParams" id="_getCookieParams">
 
 			<td class="attributes"><code>
@@ -2286,7 +2144,7 @@ and subtype in the format "type/subtype".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCookieParams">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#748-765" title="Go to source code">getCookieParams</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#707-724" title="Go to source code">getCookieParams</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve cookies.</p>
@@ -2324,7 +2182,7 @@ superglobal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withCookieParams">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#767-791" title="Go to source code">withCookieParams</a>( <span>array <var>$cookies</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#726-750" title="Go to source code">withCookieParams</a>( <span>array <var>$cookies</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified cookies.</p>
@@ -2373,7 +2231,7 @@ updated cookie values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getQueryParams">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#793-808" title="Go to source code">getQueryParams</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#752-767" title="Go to source code">getQueryParams</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve query string arguments.</p>
@@ -2413,7 +2271,7 @@ or from the <code>QUERY_STRING</code> server param.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withQueryParams">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#810-837" title="Go to source code">withQueryParams</a>( <span>array <var>$query</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#769-796" title="Go to source code">withQueryParams</a>( <span>array <var>$query</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified query string arguments.</p>
@@ -2470,7 +2328,7 @@ updated query string arguments.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUploadedFiles">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#839-855" title="Go to source code">getUploadedFiles</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#798-814" title="Go to source code">getUploadedFiles</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve normalized file upload data.</p>
@@ -2514,7 +2372,7 @@ instantiation, or MAY be injected via withUploadedFiles().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withUploadedFiles">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#857-873" title="Go to source code">withUploadedFiles</a>( <span>array <var>$uploadedFiles</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#816-832" title="Go to source code">withUploadedFiles</a>( <span>array <var>$uploadedFiles</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a new instance with the specified uploaded files.</p>
@@ -2560,7 +2418,7 @@ updated body parameters.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParsedBody">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#875-893" title="Go to source code">getParsedBody</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#834-852" title="Go to source code">getParsedBody</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve any parameters provided in the request body.</p>
@@ -2606,7 +2464,7 @@ the absence of body content.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withParsedBody">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Request.html#895-926" title="Go to source code">withParsedBody</a>( <span>array|null|object <var>$data</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Request.html#854-885" title="Go to source code">withParsedBody</a>( <span>array|null|object <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified body parameters.</p>
@@ -2982,6 +2840,6 @@ updated body parameters.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?34cff2a5525389e5cbdc3ce5e6e78c9432040ee6"></script>
+<script src="elementlist.js?afcf2349a86dad61496ad7d42e34a877c715b8a7"></script>
 </body>
 </html>
