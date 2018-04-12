@@ -824,13 +824,11 @@
 			<ul>
 				<li><a href="class-Neos.Flow.Command.CacheCommandController.html">CacheCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ConfigurationCommandController.html">ConfigurationCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.CoreCommandController.html">CoreCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DatabaseCommandController.html">DatabaseCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DoctrineCommandController.html">DoctrineCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.HelpCommandController.html">HelpCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
@@ -910,7 +908,7 @@
 </span></span><span id="57" class="l"><span class="php-comment">     * ./flow configuration:show
 </span></span><span id="58" class="l"><span class="php-comment">     *
 </span></span><span id="59" class="l"><span class="php-comment">     * Display Flow persistence settings:
-</span></span><span id="60" class="l"><span class="php-comment">     * ./flow configuration:show --path TYPO3.Flow.persistence
+</span></span><span id="60" class="l"><span class="php-comment">     * ./flow configuration:show --path Neos.Flow.persistence
 </span></span><span id="61" class="l"><span class="php-comment">     *
 </span></span><span id="62" class="l"><span class="php-comment">     * Display Flow Object Cache configuration
 </span></span><span id="63" class="l"><span class="php-comment">     * ./flow configuration:show --type Caches --path Flow_Object_Classes
@@ -919,7 +917,7 @@
 </span></span><span id="66" class="l"><span class="php-comment">     * @param string $path path to subconfiguration separated by &quot;.&quot; like &quot;Neos.Flow&quot;
 </span></span><span id="67" class="l"><span class="php-comment">     * @return void
 </span></span><span id="68" class="l"><span class="php-comment">     */</span>
-</span><span id="69" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> showCommand(<span class="php-var">$type</span> = <span class="php-quote">'Settings'</span>, <span class="php-var">$path</span> = <span class="php-keyword1">null</span>)
+</span><span id="69" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> showCommand(string <span class="php-var">$type</span> = <span class="php-quote">'Settings'</span>, string <span class="php-var">$path</span> = <span class="php-keyword1">null</span>)
 </span><span id="70" class="l">    {
 </span><span id="71" class="l">        <span class="php-var">$availableConfigurationTypes</span> = <span class="php-var">$this</span>-&gt;configurationManager-&gt;getAvailableConfigurationTypes();
 </span><span id="72" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$type</span>, <span class="php-var">$availableConfigurationTypes</span>)) {
@@ -980,7 +978,7 @@
 </span></span><span id="127" class="l"><span class="php-comment">     * @param boolean $verbose if TRUE, output more verbose information on the schema files which were used
 </span></span><span id="128" class="l"><span class="php-comment">     * @return void
 </span></span><span id="129" class="l"><span class="php-comment">     */</span>
-</span><span id="130" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> validateCommand(<span class="php-var">$type</span> = <span class="php-keyword1">null</span>, <span class="php-var">$path</span> = <span class="php-keyword1">null</span>, <span class="php-var">$verbose</span> = <span class="php-keyword1">false</span>)
+</span><span id="130" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> validateCommand(string <span class="php-var">$type</span> = <span class="php-keyword1">null</span>, string <span class="php-var">$path</span> = <span class="php-keyword1">null</span>, bool <span class="php-var">$verbose</span> = <span class="php-keyword1">false</span>)
 </span><span id="131" class="l">    {
 </span><span id="132" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$type</span> === <span class="php-keyword1">null</span>) {
 </span><span id="133" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Validating &lt;b&gt;all&lt;/b&gt; configuration'</span>);
@@ -1045,7 +1043,7 @@
 </span></span><span id="192" class="l"><span class="php-comment">     * @param string $yaml YAML file to create a schema for
 </span></span><span id="193" class="l"><span class="php-comment">     * @return void
 </span></span><span id="194" class="l"><span class="php-comment">     */</span>
-</span><span id="195" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> generateSchemaCommand(<span class="php-var">$type</span> = <span class="php-keyword1">null</span>, <span class="php-var">$path</span> = <span class="php-keyword1">null</span>, <span class="php-var">$yaml</span> = <span class="php-keyword1">null</span>)
+</span><span id="195" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> generateSchemaCommand(string <span class="php-var">$type</span> = <span class="php-keyword1">null</span>, string <span class="php-var">$path</span> = <span class="php-keyword1">null</span>, string <span class="php-var">$yaml</span> = <span class="php-keyword1">null</span>)
 </span><span id="196" class="l">    {
 </span><span id="197" class="l">        <span class="php-var">$data</span> = <span class="php-keyword1">null</span>;
 </span><span id="198" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$yaml</span> !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">is_file</span>(<span class="php-var">$yaml</span>) &amp;&amp; <span class="php-keyword2">is_readable</span>(<span class="php-var">$yaml</span>)) {
@@ -1074,6 +1072,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eaaedf8a6124cfc1d170fc35b6a9ab5ecbc7adc0"></script>
+<script src="elementlist.js?aed46524b71ce72256a8bae5f24bd2e348802603"></script>
 </body>
 </html>

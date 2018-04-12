@@ -824,13 +824,11 @@
 			<ul>
 				<li><a href="class-Neos.Flow.Command.CacheCommandController.html">CacheCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ConfigurationCommandController.html">ConfigurationCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.CoreCommandController.html">CoreCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DatabaseCommandController.html">DatabaseCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DoctrineCommandController.html">DoctrineCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.HelpCommandController.html">HelpCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
@@ -972,7 +970,7 @@
 </span></span><span id="119" class="l"><span class="php-comment">     * @see neos.flow:doctrine:update
 </span></span><span id="120" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrate
 </span></span><span id="121" class="l"><span class="php-comment">     */</span>
-</span><span id="122" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createCommand(<span class="php-var">$output</span> = <span class="php-keyword1">null</span>)
+</span><span id="122" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createCommand(string <span class="php-var">$output</span> = <span class="php-keyword1">null</span>)
 </span><span id="123" class="l">    {
 </span><span id="124" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="125" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Database schema creation has been SKIPPED, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1000,7 +998,7 @@
 </span></span><span id="147" class="l"><span class="php-comment">     * @see neos.flow:doctrine:create
 </span></span><span id="148" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrate
 </span></span><span id="149" class="l"><span class="php-comment">     */</span>
-</span><span id="150" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateCommand(<span class="php-var">$unsafeMode</span> = <span class="php-keyword1">false</span>, <span class="php-var">$output</span> = <span class="php-keyword1">null</span>)
+</span><span id="150" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateCommand(bool <span class="php-var">$unsafeMode</span> = <span class="php-keyword1">false</span>, string <span class="php-var">$output</span> = <span class="php-keyword1">null</span>)
 </span><span id="151" class="l">    {
 </span><span id="152" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="153" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Database schema update has been SKIPPED, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1028,7 +1026,7 @@
 </span></span><span id="175" class="l"><span class="php-comment">     * @return void
 </span></span><span id="176" class="l"><span class="php-comment">     * @see neos.flow:doctrine:validate
 </span></span><span id="177" class="l"><span class="php-comment">     */</span>
-</span><span id="178" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> entityStatusCommand(<span class="php-var">$dumpMappingData</span> = <span class="php-keyword1">false</span>, <span class="php-var">$entityClassName</span> = <span class="php-keyword1">null</span>)
+</span><span id="178" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> entityStatusCommand(bool <span class="php-var">$dumpMappingData</span> = <span class="php-keyword1">false</span>, string <span class="php-var">$entityClassName</span> = <span class="php-keyword1">null</span>)
 </span><span id="179" class="l">    {
 </span><span id="180" class="l">        <span class="php-var">$info</span> = <span class="php-var">$this</span>-&gt;doctrineService-&gt;getEntityStatus();
 </span><span id="181" class="l">
@@ -1083,7 +1081,7 @@
 </span></span><span id="230" class="l"><span class="php-comment">     * @return void
 </span></span><span id="231" class="l"><span class="php-comment">     * @throws \InvalidArgumentException
 </span></span><span id="232" class="l"><span class="php-comment">     */</span>
-</span><span id="233" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> dqlCommand(<span class="php-var">$depth</span> = <span class="php-num">3</span>, <span class="php-var">$hydrationMode</span> = <span class="php-quote">'array'</span>, <span class="php-var">$offset</span> = <span class="php-keyword1">null</span>, <span class="php-var">$limit</span> = <span class="php-keyword1">null</span>)
+</span><span id="233" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> dqlCommand(int <span class="php-var">$depth</span> = <span class="php-num">3</span>, string <span class="php-var">$hydrationMode</span> = <span class="php-quote">'array'</span>, int <span class="php-var">$offset</span> = <span class="php-keyword1">null</span>, int <span class="php-var">$limit</span> = <span class="php-keyword1">null</span>)
 </span><span id="234" class="l">    {
 </span><span id="235" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="236" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'DQL query is not possible, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1116,7 +1114,7 @@
 </span></span><span id="263" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationgenerate
 </span></span><span id="264" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationversion
 </span></span><span id="265" class="l"><span class="php-comment">     */</span>
-</span><span id="266" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationStatusCommand(<span class="php-var">$showMigrations</span> = <span class="php-keyword1">false</span>, <span class="php-var">$showDescriptions</span> = <span class="php-keyword1">false</span>)
+</span><span id="266" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationStatusCommand(bool <span class="php-var">$showMigrations</span> = <span class="php-keyword1">false</span>, bool <span class="php-var">$showDescriptions</span> = <span class="php-keyword1">false</span>)
 </span><span id="267" class="l">    {
 </span><span id="268" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="269" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Doctrine migration status not available, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1146,7 +1144,7 @@
 </span></span><span id="293" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationgenerate
 </span></span><span id="294" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationversion
 </span></span><span id="295" class="l"><span class="php-comment">     */</span>
-</span><span id="296" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrateCommand(<span class="php-var">$version</span> = <span class="php-keyword1">null</span>, <span class="php-var">$output</span> = <span class="php-keyword1">null</span>, <span class="php-var">$dryRun</span> = <span class="php-keyword1">false</span>, <span class="php-var">$quiet</span> = <span class="php-keyword1">false</span>)
+</span><span id="296" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrateCommand(string <span class="php-var">$version</span> = <span class="php-keyword1">null</span>, string <span class="php-var">$output</span> = <span class="php-keyword1">null</span>, bool <span class="php-var">$dryRun</span> = <span class="php-keyword1">false</span>, bool <span class="php-var">$quiet</span> = <span class="php-keyword1">false</span>)
 </span><span id="297" class="l">    {
 </span><span id="298" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="299" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Doctrine migration not possible, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1155,7 +1153,7 @@
 </span><span id="302" class="l">
 </span><span id="303" class="l">        <span class="php-keyword1">try</span> {
 </span><span id="304" class="l">            <span class="php-var">$result</span> = <span class="php-var">$this</span>-&gt;doctrineService-&gt;executeMigrations(<span class="php-var">$version</span>, <span class="php-var">$output</span>, <span class="php-var">$dryRun</span>, <span class="php-var">$quiet</span>);
-</span><span id="305" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$result</span> == <span class="php-quote">''</span>) {
+</span><span id="305" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$result</span> === <span class="php-quote">''</span>) {
 </span><span id="306" class="l">                <span class="php-keyword1">if</span> (!<span class="php-var">$quiet</span>) {
 </span><span id="307" class="l">                    <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'No migration was necessary.'</span>);
 </span><span id="308" class="l">                }
@@ -1196,7 +1194,7 @@
 </span></span><span id="343" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationgenerate
 </span></span><span id="344" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationversion
 </span></span><span id="345" class="l"><span class="php-comment">     */</span>
-</span><span id="346" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationExecuteCommand(<span class="php-var">$version</span>, <span class="php-var">$direction</span> = <span class="php-quote">'up'</span>, <span class="php-var">$output</span> = <span class="php-keyword1">null</span>, <span class="php-var">$dryRun</span> = <span class="php-keyword1">false</span>)
+</span><span id="346" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationExecuteCommand(string <span class="php-var">$version</span>, string <span class="php-var">$direction</span> = <span class="php-quote">'up'</span>, string <span class="php-var">$output</span> = <span class="php-keyword1">null</span>, bool <span class="php-var">$dryRun</span> = <span class="php-keyword1">false</span>)
 </span><span id="347" class="l">    {
 </span><span id="348" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="349" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Doctrine migration not possible, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1226,7 +1224,7 @@
 </span></span><span id="373" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationexecute
 </span></span><span id="374" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationgenerate
 </span></span><span id="375" class="l"><span class="php-comment">     */</span>
-</span><span id="376" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationVersionCommand(<span class="php-var">$version</span>, <span class="php-var">$add</span> = <span class="php-keyword1">false</span>, <span class="php-var">$delete</span> = <span class="php-keyword1">false</span>)
+</span><span id="376" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationVersionCommand(string <span class="php-var">$version</span>, bool <span class="php-var">$add</span> = <span class="php-keyword1">false</span>, bool <span class="php-var">$delete</span> = <span class="php-keyword1">false</span>)
 </span><span id="377" class="l">    {
 </span><span id="378" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isDatabaseConfigured()) {
 </span><span id="379" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Doctrine migration not possible, the driver and host backend options are not set in /Configuration/Settings.yaml.'</span>);
@@ -1272,7 +1270,7 @@
 </span></span><span id="419" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationexecute
 </span></span><span id="420" class="l"><span class="php-comment">     * @see neos.flow:doctrine:migrationversion
 </span></span><span id="421" class="l"><span class="php-comment">     */</span>
-</span><span id="422" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationGenerateCommand(<span class="php-var">$diffAgainstCurrent</span> = <span class="php-keyword1">true</span>, <span class="php-var">$filterExpression</span> = <span class="php-keyword1">null</span>, <span class="php-var">$force</span> = <span class="php-keyword1">false</span>)
+</span><span id="422" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrationGenerateCommand(bool <span class="php-var">$diffAgainstCurrent</span> = <span class="php-keyword1">true</span>, string <span class="php-var">$filterExpression</span> = <span class="php-keyword1">null</span>, bool <span class="php-var">$force</span> = <span class="php-keyword1">false</span>)
 </span><span id="423" class="l">    {
 </span><span id="424" class="l">        <span class="php-comment">// &quot;driver&quot; is used only for Doctrine, thus we (mis-)use it here</span>
 </span><span id="425" class="l">        <span class="php-comment">// additionally, when no host is set, skip this step, assuming no DB is needed</span>
@@ -1367,6 +1365,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eaaedf8a6124cfc1d170fc35b6a9ab5ecbc7adc0"></script>
+<script src="elementlist.js?aed46524b71ce72256a8bae5f24bd2e348802603"></script>
 </body>
 </html>

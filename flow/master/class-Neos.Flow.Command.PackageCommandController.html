@@ -823,13 +823,11 @@
 			<ul>
 				<li><a href="class-Neos.Flow.Command.CacheCommandController.html">CacheCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ConfigurationCommandController.html">ConfigurationCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.CoreCommandController.html">CoreCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DatabaseCommandController.html">DatabaseCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DoctrineCommandController.html">DoctrineCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.HelpCommandController.html">HelpCommandController</a></li>
 				<li class="active"><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
@@ -858,10 +856,7 @@
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Flow.Cli.CommandController.html"><span>Neos\Flow\Cli\CommandController</span></a>
-			
-			 implements 
-				<a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html"><span>Neos\Flow\Mvc\Controller\ControllerInterface</span></a>
+Neos\Flow\Cli\CommandController
 			
 			
 		</dd>
@@ -1003,14 +998,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#71-100" title="Go to source code">createCommand</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$packageType</var> = Neos\Flow\Command\PackageInterface::DEFAULT_COMPOSER_TYPE</span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#71-100" title="Go to source code">createCommand</a>( <span>Neos\Flow\Command\string <var>$packageKey</var></span>, <span>Neos\Flow\Command\string <var>$packageType</var> = Neos\Flow\Command\PackageInterface::DEFAULT_COMPOSER_TYPE</span> )</code>
 
 			<div class="description short">
 				<p>Create a new package</p>
@@ -1031,10 +1026,6 @@ directories and files.</p>
 						<dd>The package type of the package to create</dd>
 					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
 
 
 					<h4>Flow\flushescaches</h4>
@@ -1053,14 +1044,14 @@ directories and files.</p>
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#102-121" title="Go to source code">deleteCommand</a>( <span>string <var>$packageKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#102-121" title="Go to source code">deleteCommand</a>( <span>Neos\Flow\Command\string <var>$packageKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Delete an existing package</p>
@@ -1078,10 +1069,6 @@ directories and files.</p>
 						<dd>The package key of the package to create</dd>
 					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
 
 
 					<h4>Flow\flushescaches</h4>
@@ -1096,14 +1083,14 @@ directories and files.</p>
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#123-168" title="Go to source code">listCommand</a>( <span>boolean <var>$loadingOrder</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#123-168" title="Go to source code">listCommand</a>( <span>Neos\Flow\Command\bool <var>$loadingOrder</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>List available packages</p>
@@ -1124,7 +1111,7 @@ package title.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The list of packages
+						<br>The list of packages
 					</div>
 
 
@@ -1149,7 +1136,7 @@ package title.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_freezeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#170-231" title="Go to source code">freezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#170-231" title="Go to source code">freezeCommand</a>( <span>Neos\Flow\Command\string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
 
 			<div class="description short">
 				<p>Freeze a package</p>
@@ -1201,7 +1188,7 @@ frozen (the default).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unfreezeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#233-288" title="Go to source code">unfreezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#233-288" title="Go to source code">unfreezeCommand</a>( <span>Neos\Flow\Command\string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
 
 			<div class="description short">
 				<p>Unfreeze a package</p>
@@ -1247,7 +1234,7 @@ unfrozen (the default).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refreezeCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#290-349" title="Go to source code">refreezeCommand</a>( <span>string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.PackageCommandController.html#290-349" title="Go to source code">refreezeCommand</a>( <span>Neos\Flow\Command\string <var>$packageKey</var> = <span class="php-quote">'all'</span></span> )</code>
 
 			<div class="description short">
 				<p>Refreeze a package</p>
@@ -1315,26 +1302,6 @@ refrozen (the default).</p>
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Cli.CommandController.html#methods">Neos\Flow\Cli\CommandController</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_callCommandMethod">callCommandMethod()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_forward">forward()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_getFlowInvocationString">getFlowInvocationString()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_initializeCommandMethodArguments">initializeCommandMethodArguments()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_injectCommandManager">injectCommandManager()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_injectObjectManager">injectObjectManager()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_mapRequestArgumentsToControllerArguments">mapRequestArgumentsToControllerArguments()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_output">output()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_outputFormatted">outputFormatted()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_outputLine">outputLine()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_processRequest">processRequest()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_quit">quit()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_resolveCommandMethodName">resolveCommandMethodName()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_sendAndExit">sendAndExit()</a></code>
-			</p>
-		</div>
 
 
 
@@ -1426,18 +1393,6 @@ refrozen (the default).</p>
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Cli.CommandController.html#properties">Neos\Flow\Cli\CommandController</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$arguments"><var>$arguments</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$commandManager"><var>$commandManager</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$commandMethodName"><var>$commandMethodName</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$objectManager"><var>$objectManager</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$output"><var>$output</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$request"><var>$request</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$response"><var>$response</var></a></code>
-			</p>
-		</div>
 
 
 
@@ -1451,6 +1406,6 @@ refrozen (the default).</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eaaedf8a6124cfc1d170fc35b6a9ab5ecbc7adc0"></script>
+<script src="elementlist.js?aed46524b71ce72256a8bae5f24bd2e348802603"></script>
 </body>
 </html>

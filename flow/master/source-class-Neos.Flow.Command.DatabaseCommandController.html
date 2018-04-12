@@ -824,13 +824,11 @@
 			<ul>
 				<li><a href="class-Neos.Flow.Command.CacheCommandController.html">CacheCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ConfigurationCommandController.html">ConfigurationCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.CoreCommandController.html">CoreCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DatabaseCommandController.html">DatabaseCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DoctrineCommandController.html">DoctrineCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.HelpCommandController.html">HelpCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
@@ -939,7 +937,7 @@
 </span></span><span id="86" class="l"><span class="php-comment">     * @param boolean $verbose If set, the statements will be shown as they are executed
 </span></span><span id="87" class="l"><span class="php-comment">     * @throws StopActionException
 </span></span><span id="88" class="l"><span class="php-comment">     */</span>
-</span><span id="89" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setCharsetCommand(<span class="php-var">$characterSet</span> = <span class="php-quote">'utf8'</span>, <span class="php-var">$collation</span> = <span class="php-quote">'utf8_unicode_ci'</span>, <span class="php-var">$output</span> = <span class="php-keyword1">null</span>, <span class="php-var">$verbose</span> = <span class="php-keyword1">false</span>)
+</span><span id="89" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setCharsetCommand(string <span class="php-var">$characterSet</span> = <span class="php-quote">'utf8'</span>, string <span class="php-var">$collation</span> = <span class="php-quote">'utf8_unicode_ci'</span>, string <span class="php-var">$output</span> = <span class="php-keyword1">null</span>, bool <span class="php-var">$verbose</span> = <span class="php-keyword1">false</span>)
 </span><span id="90" class="l">    {
 </span><span id="91" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$this</span>-&gt;persistenceSettings[<span class="php-quote">'backendOptions'</span>][<span class="php-quote">'driver'</span>], [<span class="php-quote">'pdo_mysql'</span>, <span class="php-quote">'mysqli'</span>])) {
 </span><span id="92" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Database charset/collation fixing is only supported on MySQL.'</span>);
@@ -971,7 +969,7 @@
 </span></span><span id="118" class="l"><span class="php-comment">     * @throws ConnectionException
 </span></span><span id="119" class="l"><span class="php-comment">     * @throws DBALException
 </span></span><span id="120" class="l"><span class="php-comment">     */</span>
-</span><span id="121" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> convertToCharacterSetAndCollation(<span class="php-var">$characterSet</span> = <span class="php-quote">'utf8'</span>, <span class="php-var">$collation</span> = <span class="php-quote">'utf8_unicode_ci'</span>, <span class="php-var">$outputPathAndFilename</span> = <span class="php-keyword1">null</span>, <span class="php-var">$verbose</span> = <span class="php-keyword1">false</span>)
+</span><span id="121" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> convertToCharacterSetAndCollation(string <span class="php-var">$characterSet</span> = <span class="php-quote">'utf8'</span>, string <span class="php-var">$collation</span> = <span class="php-quote">'utf8_unicode_ci'</span>, string <span class="php-var">$outputPathAndFilename</span> = <span class="php-keyword1">null</span>, bool <span class="php-var">$verbose</span> = <span class="php-keyword1">false</span>)
 </span><span id="122" class="l">    {
 </span><span id="123" class="l">        <span class="php-var">$statements</span> = [<span class="php-quote">'SET foreign_key_checks = 0'</span>];
 </span><span id="124" class="l">
@@ -1014,6 +1012,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eaaedf8a6124cfc1d170fc35b6a9ab5ecbc7adc0"></script>
+<script src="elementlist.js?aed46524b71ce72256a8bae5f24bd2e348802603"></script>
 </body>
 </html>

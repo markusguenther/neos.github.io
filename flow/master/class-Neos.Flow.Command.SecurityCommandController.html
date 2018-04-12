@@ -823,13 +823,11 @@
 			<ul>
 				<li><a href="class-Neos.Flow.Command.CacheCommandController.html">CacheCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ConfigurationCommandController.html">ConfigurationCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.CoreCommandController.html">CoreCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DatabaseCommandController.html">DatabaseCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.DoctrineCommandController.html">DoctrineCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.HelpCommandController.html">HelpCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.PackageCommandController.html">PackageCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ResourceCommandController.html">ResourceCommandController</a></li>
-				<li><a href="class-Neos.Flow.Command.RoutingCommandController.html">RoutingCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li class="active"><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
@@ -858,10 +856,7 @@
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Flow.Cli.CommandController.html"><span>Neos\Flow\Cli\CommandController</span></a>
-			
-			 implements 
-				<a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html"><span>Neos\Flow\Mvc\Controller\ControllerInterface</span></a>
+Neos\Flow\Cli\CommandController
 			
 			
 		</dd>
@@ -978,7 +973,7 @@ RSAWalletService.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateKeyPairCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#100-112" title="Go to source code">generateKeyPairCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#100-112" title="Go to source code">generateKeyPairCommand</a>( <span>Neos\Flow\Command\bool <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Generate a public/private key pair and add it to the RSAWalletService</p>
@@ -1016,7 +1011,7 @@ RSAWalletService.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importPrivateKeyCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#114-153" title="Go to source code">importPrivateKeyCommand</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#114-153" title="Go to source code">importPrivateKeyCommand</a>( <span>Neos\Flow\Command\bool <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Import a private key</p>
@@ -1073,7 +1068,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showEffectivePolicyCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#155-246" title="Go to source code">showEffectivePolicyCommand</a>( <span>string <var>$privilegeType</var></span>, <span>string <var>$roles</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#155-246" title="Go to source code">showEffectivePolicyCommand</a>( <span>Neos\Flow\Command\string <var>$privilegeType</var></span>, <span>Neos\Flow\Command\string <var>$roles</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Shows a list of all defined privilege targets and the effective permissions</p>
@@ -1138,7 +1133,7 @@ together with the private key as a key pair.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showMethodsForPrivilegeTargetCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#294-349" title="Go to source code">showMethodsForPrivilegeTargetCommand</a>( <span>string <var>$privilegeTarget</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.SecurityCommandController.html#294-349" title="Go to source code">showMethodsForPrivilegeTargetCommand</a>( <span>Neos\Flow\Command\string <var>$privilegeTarget</var></span> )</code>
 
 			<div class="description short">
 				<p>Shows the methods represented by the given security privilege target</p>
@@ -1168,26 +1163,6 @@ But be aware that this only works for parameters that have been specified in the
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Cli.CommandController.html#methods">Neos\Flow\Cli\CommandController</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_callCommandMethod">callCommandMethod()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_forward">forward()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_getFlowInvocationString">getFlowInvocationString()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_initializeCommandMethodArguments">initializeCommandMethodArguments()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_injectCommandManager">injectCommandManager()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_injectObjectManager">injectObjectManager()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_mapRequestArgumentsToControllerArguments">mapRequestArgumentsToControllerArguments()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_output">output()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_outputFormatted">outputFormatted()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_outputLine">outputLine()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_processRequest">processRequest()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_quit">quit()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_resolveCommandMethodName">resolveCommandMethodName()</a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#_sendAndExit">sendAndExit()</a></code>
-			</p>
-		</div>
 
 
 
@@ -1341,17 +1316,6 @@ But be aware that this only works for parameters that have been specified in the
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Cli.CommandController.html#properties">Neos\Flow\Cli\CommandController</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$arguments"><var>$arguments</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$commandManager"><var>$commandManager</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$commandMethodName"><var>$commandMethodName</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$output"><var>$output</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$request"><var>$request</var></a></code>, 
-				<code><a href="class-Neos.Flow.Cli.CommandController.html#$response"><var>$response</var></a></code>
-			</p>
-		</div>
 
 
 
@@ -1365,6 +1329,6 @@ But be aware that this only works for parameters that have been specified in the
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eaaedf8a6124cfc1d170fc35b6a9ab5ecbc7adc0"></script>
+<script src="elementlist.js?aed46524b71ce72256a8bae5f24bd2e348802603"></script>
 </body>
 </html>
