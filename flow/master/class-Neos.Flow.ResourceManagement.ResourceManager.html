@@ -81,10 +81,6 @@
 						<a href="namespace-Neos.Cache.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Cache.Frontend.html">
-							Frontend						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Eel.html">
@@ -822,7 +818,6 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.ResourceManagement.Collection.html">Collection</a></li>
-				<li><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">PersistentResource</a></li>
 				<li class="active"><a href="class-Neos.Flow.ResourceManagement.ResourceManager.html">ResourceManager</a></li>
 				<li><a href="class-Neos.Flow.ResourceManagement.ResourceRepository.html">ResourceRepository</a></li>
 				<li><a href="class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html">ResourceTypeConverter</a></li>
@@ -953,7 +948,7 @@ stream wrapper.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code>
+				PersistentResource
 				
 				</code>
 			</td>
@@ -986,7 +981,7 @@ publication target.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code><br>A resource object representing the imported resource
+						PersistentResource<br>A resource object representing the imported resource
 					</div>
 
 					<h4>Throws</h4>
@@ -1006,7 +1001,7 @@ publication target.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code>
+				PersistentResource
 				
 				</code>
 			</td>
@@ -1044,7 +1039,7 @@ important because the resource management will derive the IANA Media Type from i
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code><br>A resource object representing the imported resource
+						PersistentResource<br>A resource object representing the imported resource
 					</div>
 
 					<h4>Throws</h4>
@@ -1064,7 +1059,7 @@ important because the resource management will derive the IANA Media Type from i
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code>
+				PersistentResource
 				
 				</code>
 			</td>
@@ -1096,7 +1091,7 @@ the newly imported persistent resource.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code><br>A resource object representing the imported resource
+						PersistentResource<br>A resource object representing the imported resource
 					</div>
 
 					<h4>Throws</h4>
@@ -1113,7 +1108,7 @@ the newly imported persistent resource.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code>|null
+				PersistentResource|null
 				
 				</code>
 			</td>
@@ -1140,7 +1135,7 @@ object is known yet.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code>|null
+						PersistentResource|null
 					</div>
 
 
@@ -1163,7 +1158,7 @@ object is known yet.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStreamByResource">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceManager.html#266-282" title="Go to source code">getStreamByResource</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code> <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceManager.html#266-282" title="Go to source code">getStreamByResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a stream handle of the given persistent resource which allows for opening / copying the resource's
@@ -1252,7 +1247,7 @@ $resource2 => array('originalFilename' => 'Bar.txt'),
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteResource">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceManager.html#303-356" title="Go to source code">deleteResource</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code> <var>$resource</var></span>, <span>boolean <var>$unpublishResource</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceManager.html#303-356" title="Go to source code">deleteResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span>boolean <var>$unpublishResource</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Deletes the given PersistentResource from the ResourceRepository and, if the storage data is no longer used in another
@@ -1299,7 +1294,7 @@ PersistentResource object, also deletes the data from the storage.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicPersistentResourceUri">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceManager.html#358-376" title="Go to source code">getPublicPersistentResourceUri</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.PersistentResource.html">Neos\Flow\ResourceManagement\PersistentResource</a></code> <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceManager.html#358-376" title="Go to source code">getPublicPersistentResourceUri</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the web accessible URI for the given resource object</p>
@@ -2208,6 +2203,6 @@ move it outside of upload folder if open_basedir is enabled and check the filena
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?aed46524b71ce72256a8bae5f24bd2e348802603"></script>
+<script src="elementlist.js?472226adbf08cb760398a9d2c23ec60307135e62"></script>
 </body>
 </html>
