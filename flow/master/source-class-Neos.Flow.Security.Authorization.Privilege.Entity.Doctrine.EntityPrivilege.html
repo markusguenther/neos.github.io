@@ -863,8 +863,8 @@
 </span></span><span id="12" class="l"><span class="php-comment"> */</span>
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Doctrine\Common\Persistence\Mapping\ClassMetadata;
-</span><span id="15" class="l"><span class="php-keyword1">use</span> Doctrine\Common\Persistence\ObjectManager;
-</span><span id="16" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityManager;
+</span><span id="15" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityManager;
+</span><span id="16" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityManagerInterface;
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Eel\Context <span class="php-keyword1">as</span> EelContext;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
 </span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Security\Authorization\Privilege\AbstractPrivilege;
@@ -920,7 +920,7 @@
 </span><span id="69" class="l">        <span class="php-var">$this</span>-&gt;evaluateMatcher();
 </span><span id="70" class="l">
 </span><span id="71" class="l">        <span class="php-comment">/** @var EntityManager $entityManager */</span>
-</span><span id="72" class="l">        <span class="php-var">$entityManager</span> = <span class="php-var">$this</span>-&gt;objectManager-&gt;get(ObjectManager::<span class="php-keyword1">class</span>);
+</span><span id="72" class="l">        <span class="php-var">$entityManager</span> = <span class="php-var">$this</span>-&gt;objectManager-&gt;get(EntityManagerInterface::<span class="php-keyword1">class</span>);
 </span><span id="73" class="l">        <span class="php-var">$sqlFilter</span> = <span class="php-keyword1">new</span> SqlFilter(<span class="php-var">$entityManager</span>);
 </span><span id="74" class="l">
 </span><span id="75" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;matchesEntityType(<span class="php-var">$targetEntity</span>-&gt;getName())) {

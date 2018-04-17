@@ -858,8 +858,8 @@
 </span></span><span id="12" class="l"><span class="php-comment"> */</span>
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Doctrine\Common\Persistence\Mapping\ClassMetadata;
-</span><span id="15" class="l"><span class="php-keyword1">use</span> Doctrine\Common\Persistence\ObjectManager;
-</span><span id="16" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityManager;
+</span><span id="15" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityManager;
+</span><span id="16" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityManagerInterface;
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\EntityRepository;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Doctrine\ORM\Internal\Hydration\IterableResult;
 </span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
@@ -901,10 +901,10 @@
 </span><span id="55" class="l">    <span class="php-comment">/**
 </span></span><span id="56" class="l"><span class="php-comment">     * Initializes a new Repository.
 </span></span><span id="57" class="l"><span class="php-comment">     *
-</span></span><span id="58" class="l"><span class="php-comment">     * @param ObjectManager $entityManager The EntityManager to use.
+</span></span><span id="58" class="l"><span class="php-comment">     * @param EntityManagerInterface $entityManager The EntityManager to use.
 </span></span><span id="59" class="l"><span class="php-comment">     * @param ClassMetadata $classMetadata The class descriptor.
 </span></span><span id="60" class="l"><span class="php-comment">     */</span>
-</span><span id="61" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(ObjectManager <span class="php-var">$entityManager</span>, ClassMetadata <span class="php-var">$classMetadata</span> = <span class="php-keyword1">null</span>)
+</span><span id="61" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(EntityManagerInterface <span class="php-var">$entityManager</span>, ClassMetadata <span class="php-var">$classMetadata</span> = <span class="php-keyword1">null</span>)
 </span><span id="62" class="l">    {
 </span><span id="63" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$classMetadata</span> === <span class="php-keyword1">null</span>) {
 </span><span id="64" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">defined</span>(<span class="php-quote">'static::ENTITY_CLASSNAME'</span>) === <span class="php-keyword1">false</span>) {
