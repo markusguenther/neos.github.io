@@ -896,7 +896,7 @@
 				<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#31-424" title="Go to source code">Neos.Flow/Classes/Persistence/Doctrine/PersistenceManager.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#32-442" title="Go to source code">Neos.Flow/Classes/Persistence/Doctrine/PersistenceManager.php</a>
 		<br>
 	</div>
 
@@ -905,6 +905,40 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#69-78" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				<p>Injects the (system) logger based on PSR-3.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injects the (system) logger based on PSR-3.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="initializeObject" id="_initializeObject">
 
 			<td class="attributes"><code>
@@ -916,7 +950,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#63-71" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#80-88" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the persistence manager, called by Flow.</p>
@@ -945,7 +979,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onFlush">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#73-106" title="Go to source code">onFlush</a>( <span>Doctrine\ORM\Event\OnFlushEventArgs <var>$eventArgs</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#90-123" title="Go to source code">onFlush</a>( <span>Doctrine\ORM\Event\OnFlushEventArgs <var>$eventArgs</var></span> )</code>
 
 			<div class="description short">
 				<p>An onFlush event listener used to validate entities upon persistence.</p>
@@ -979,7 +1013,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validateObject">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#108-139" title="Go to source code">validateObject</a>( <span>object <var>$object</var></span>, <span>SplObjectStorage <var>$validatedInstancesContainer</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#125-156" title="Go to source code">validateObject</a>( <span>object <var>$object</var></span>, <span>SplObjectStorage <var>$validatedInstancesContainer</var></span> )</code>
 
 			<div class="description short">
 				<p>Validates the given object and throws an exception if validation fails.</p>
@@ -1019,7 +1053,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_persistAll">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#141-180" title="Go to source code">persistAll</a>( <span>boolean <var>$onlyWhitelistedObjects</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#158-198" title="Go to source code">persistAll</a>( <span>boolean <var>$onlyWhitelistedObjects</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Commits new objects and changes to objects in the current persistence
@@ -1058,7 +1092,7 @@ session into the backend</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clearState">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#182-194" title="Go to source code">clearState</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#200-212" title="Go to source code">clearState</a>( )</code>
 
 			<div class="description short">
 				<p>Clears the in-memory state of the persistence.</p>
@@ -1092,7 +1126,7 @@ return data directly from the persistence "backend".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNewObject">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#196-206" title="Go to source code">isNewObject</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#214-224" title="Go to source code">isNewObject</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given object has ever been persisted.</p>
@@ -1133,7 +1167,7 @@ return data directly from the persistence "backend".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getIdentifierByObject">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#208-236" title="Go to source code">getIdentifierByObject</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#226-254" title="Go to source code">getIdentifierByObject</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the (internal) identifier for the object, if it is known to the
@@ -1180,7 +1214,7 @@ to distinguish those cases.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectByIdentifier">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#238-262" title="Go to source code">getObjectByIdentifier</a>( <span>mixed <var>$identifier</var></span>, <span>string <var>$objectType</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$useLazyLoading</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#256-280" title="Go to source code">getObjectByIdentifier</a>( <span>mixed <var>$identifier</var></span>, <span>string <var>$objectType</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$useLazyLoading</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the object with the (internal) identifier, if it is known to the
@@ -1231,7 +1265,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createQueryForType">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#264-273" title="Go to source code">createQueryForType</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#282-291" title="Go to source code">createQueryForType</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				<p>Return a query object for the given type.</p>
@@ -1269,7 +1303,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#275-295" title="Go to source code">add</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#293-313" title="Go to source code">add</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds an object to the persistence.</p>
@@ -1311,7 +1345,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#297-307" title="Go to source code">remove</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#315-325" title="Go to source code">remove</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes an object to the persistence.</p>
@@ -1348,7 +1382,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_update">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#309-328" title="Go to source code">update</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#327-346" title="Go to source code">update</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Update an object in the persistence.</p>
@@ -1390,7 +1424,7 @@ backend. Otherwise NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isConnected">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#330-340" title="Go to source code">isConnected</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#348-358" title="Go to source code">isConnected</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE, if an active connection to the persistence
@@ -1428,7 +1462,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compile">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#342-368" title="Go to source code">compile</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#360-386" title="Go to source code">compile</a>( )</code>
 
 			<div class="description short">
 				<p>Called from functional tests, creates/updates database tables and compiles proxies.</p>
@@ -1461,7 +1495,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_tearDown">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#370-388" title="Go to source code">tearDown</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#388-406" title="Go to source code">tearDown</a>( )</code>
 
 			<div class="description short">
 				<p>Called after a functional test in Flow, dumps everything in the database.</p>
@@ -1490,7 +1524,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAllObjectsPersisted">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#390-398" title="Go to source code">emitAllObjectsPersisted</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#408-416" title="Go to source code">emitAllObjectsPersisted</a>( )</code>
 
 			<div class="description short">
 				<p>Signals that all persistAll() has been executed successfully.</p>
@@ -1522,7 +1556,7 @@ backend has been established, e.g. entities can be persisted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasUnpersistedChanges">#</a>
-			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#400-423" title="Go to source code">hasUnpersistedChanges</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#418-441" title="Go to source code">hasUnpersistedChanges</a>( )</code>
 
 			<div class="description short">
 				<p>Gives feedback if the persistence Manager has unpersisted changes.</p>
@@ -1577,14 +1611,39 @@ data in an unsafe request.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#39-43" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#40-43" title="Go to source code"><var>$logger</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$logger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="throwableStorage" id="$throwableStorage">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#45-49" title="Go to source code"><var>$throwableStorage</var></a>
 
 				<div class="description short">
 					
@@ -1600,7 +1659,7 @@ data in an unsafe request.</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$throwableStorage" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1612,7 +1671,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#45-49" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#51-55" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					
@@ -1640,7 +1699,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#51-55" title="Go to source code"><var>$validatorResolver</var></a>
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#57-61" title="Go to source code"><var>$validatorResolver</var></a>
 
 				<div class="description short">
 					
@@ -1668,7 +1727,7 @@ data in an unsafe request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#57-61" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.PersistenceManager.html#63-67" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1714,6 +1773,6 @@ data in an unsafe request.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

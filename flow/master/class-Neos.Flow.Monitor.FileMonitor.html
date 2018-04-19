@@ -1025,7 +1025,7 @@ framework because it is not initialized at the time the monitoring is used.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="injectSystemLogger" id="_injectSystemLogger">
+		<tr data-order="injectLogger" id="_injectLogger">
 
 			<td class="attributes"><code>
 				 public 
@@ -1035,20 +1035,20 @@ framework because it is not initialized at the time the monitoring is used.</p>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_injectSystemLogger">#</a>
-			<code><a href="source-class-Neos.Flow.Monitor.FileMonitor.html#148-157" title="Go to source code">injectSystemLogger</a>( <span><code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code> <var>$systemLogger</var></span> )</code>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Monitor.FileMonitor.html#148-157" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
 
 			<div class="description short">
-				<p>Injects the system logger</p>
+				<p>Injects the (system) logger based on PSR-3.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Injects the system logger</p>
+				<p>Injects the (system) logger based on PSR-3.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$systemLogger</var></dt>
+						<dt><var>$logger</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -1730,14 +1730,14 @@ accordingly.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Monitor.FileMonitor.html#46-49" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Monitor.FileMonitor.html#46-49" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1750,7 +1750,7 @@ accordingly.</p>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1921,6 +1921,6 @@ accordingly.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

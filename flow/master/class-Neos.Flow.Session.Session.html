@@ -901,7 +901,7 @@ that phase already, calling start() at a later stage will be a no-operation.</p>
 
 				<b>See:</b>
 				<code><a href="class-Neos.Flow.Session.SessionManager.html">Neos\Flow\Session\SessionManager</a></code><br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Session.Session.html#30-796" title="Go to source code">Neos.Flow/Classes/Session/Session.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Session.Session.html#30-806" title="Go to source code">Neos.Flow/Classes/Session/Session.php</a>
 		<br>
 	</div>
 
@@ -921,7 +921,7 @@ that phase already, calling start() at a later stage will be a no-operation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#190-220" title="Go to source code">__construct</a>( <span>string <var>$sessionIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$storageIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$lastActivityTimestamp</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$tags</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#189-219" title="Go to source code">__construct</a>( <span>string <var>$sessionIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$storageIdentifier</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$lastActivityTimestamp</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$tags</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Constructs this session</p>
@@ -972,7 +972,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#222-239" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#221-238" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the Flow settings</p>
@@ -995,6 +995,40 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#240-249" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				<p>Injects the (system) logger based on PSR-3.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injects the (system) logger based on PSR-3.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="initializeObject" id="_initializeObject">
 
 			<td class="attributes"><code>
@@ -1006,7 +1040,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#241-253" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#251-263" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				
@@ -1039,7 +1073,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isStarted">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#255-264" title="Go to source code">isStarted</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#265-274" title="Go to source code">isStarted</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if the session has been started already.</p>
@@ -1077,7 +1111,7 @@ the Session Manager or through dependency injection (use SessionInterface!).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemote">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#266-276" title="Go to source code">isRemote</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#276-286" title="Go to source code">isRemote</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if the session is local (the current session bound to the current HTTP
@@ -1115,7 +1149,7 @@ request) or remote (retrieved through the Session Manager).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_start">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#278-304" title="Go to source code">start</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#288-314" title="Go to source code">start</a>( )</code>
 
 			<div class="description short">
 				<p>Starts the session, if it has not been already started</p>
@@ -1153,7 +1187,7 @@ request) or remote (retrieved through the Session Manager).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canBeResumed">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#306-335" title="Go to source code">canBeResumed</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#316-345" title="Go to source code">canBeResumed</a>( )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if there is a session that can be resumed.</p>
@@ -1198,7 +1232,7 @@ so it doesn't have to be loaded again once the session is being used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resume">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#337-371" title="Go to source code">resume</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#347-381" title="Go to source code">resume</a>( )</code>
 
 			<div class="description short">
 				<p>Resumes an existing session, if any.</p>
@@ -1236,7 +1270,7 @@ so it doesn't have to be loaded again once the session is being used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getId">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#373-386" title="Go to source code">getId</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#383-396" title="Go to source code">getId</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current session identifier</p>
@@ -1278,7 +1312,7 @@ so it doesn't have to be loaded again once the session is being used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renewId">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#388-412" title="Go to source code">renewId</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#398-422" title="Go to source code">renewId</a>( )</code>
 
 			<div class="description short">
 				<p>Generates and propagates a new session ID and transfers all existing data
@@ -1323,7 +1357,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#414-427" title="Go to source code">getData</a>( <span>string <var>$key</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#424-437" title="Go to source code">getData</a>( <span>string <var>$key</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the data associated with the given key.</p>
@@ -1367,7 +1401,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasKey">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#429-442" title="Go to source code">hasKey</a>( <span>string <var>$key</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#439-452" title="Go to source code">hasKey</a>( <span>string <var>$key</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns TRUE if a session data entry $key is available.</p>
@@ -1411,7 +1445,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_putData">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#444-463" title="Go to source code">putData</a>( <span>string <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#454-473" title="Go to source code">putData</a>( <span>string <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Stores the given data under the given key in the session</p>
@@ -1457,7 +1491,7 @@ to the new session.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastActivityTimestamp">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#465-482" title="Go to source code">getLastActivityTimestamp</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#475-492" title="Go to source code">getLastActivityTimestamp</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the unix time stamp marking the last point in time this session has
@@ -1504,7 +1538,7 @@ time. For a remote session, the unix timestamp will be returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addTag">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#484-507" title="Go to source code">addTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#494-517" title="Go to source code">addTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Tags this session with the given tag.</p>
@@ -1551,7 +1585,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeTag">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#509-526" title="Go to source code">removeTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#519-536" title="Go to source code">removeTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified tag from this session.</p>
@@ -1594,7 +1628,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTags">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#529-542" title="Go to source code">getTags</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#539-552" title="Go to source code">getTags</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the tags this session has been tagged with.</p>
@@ -1636,7 +1670,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_touch">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#544-562" title="Go to source code">touch</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#554-572" title="Go to source code">touch</a>( )</code>
 
 			<div class="description short">
 				<p>Updates the last activity time to "now".</p>
@@ -1671,7 +1705,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#564-573" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#574-583" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Explicitly writes and closes the session</p>
@@ -1709,7 +1743,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_destroy">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#575-602" title="Go to source code">destroy</a>( <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#585-612" title="Go to source code">destroy</a>( <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Explicitly destroys all session data</p>
@@ -1752,7 +1786,7 @@ recommended to use namespaced tags such as "Acme-Demo-MySpecialTag".</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_collectGarbage">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#604-644" title="Go to source code">collectGarbage</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#614-654" title="Go to source code">collectGarbage</a>( )</code>
 
 			<div class="description short">
 				<p>Iterates over all existing sessions and removes their data if the inactivity
@@ -1792,7 +1826,7 @@ timeout was reached.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#646-677" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#656-687" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				<p>Shuts down this session</p>
@@ -1824,7 +1858,7 @@ management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_autoExpire">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#679-695" title="Go to source code">autoExpire</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#689-705" title="Go to source code">autoExpire</a>( )</code>
 
 			<div class="description short">
 				<p>Automatically expires the session if the user has been inactive for too long.</p>
@@ -1857,7 +1891,7 @@ management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeHttpAndCookie">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#697-720" title="Go to source code">initializeHttpAndCookie</a>( <span><code><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">Neos\Flow\Http\HttpRequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#707-730" title="Go to source code">initializeHttpAndCookie</a>( <span><code><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">Neos\Flow\Http\HttpRequestHandlerInterface</a></code> <var>$requestHandler</var></span> )</code>
 
 			<div class="description short">
 				<p>Initialize request, response and session cookie</p>
@@ -1895,7 +1929,7 @@ management.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_storeAuthenticatedAccountsInfo">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#722-752" title="Go to source code">storeAuthenticatedAccountsInfo</a>( <span>array <var>$tokens</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#732-762" title="Go to source code">storeAuthenticatedAccountsInfo</a>( <span>array <var>$tokens</var></span> )</code>
 
 			<div class="description short">
 				<p>Stores some information about the authenticated accounts in the session data.</p>
@@ -1940,7 +1974,7 @@ session will NOT be tagged with authenticated accounts.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_writeSessionMetaDataCacheEntry">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#754-781" title="Go to source code">writeSessionMetaDataCacheEntry</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#764-791" title="Go to source code">writeSessionMetaDataCacheEntry</a>( )</code>
 
 			<div class="description short">
 				<p>Writes the cache entry containing information about the session, such as the
@@ -1977,7 +2011,7 @@ and any custom tags of this session, prefixed with TAG_PREFIX.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeSessionMetaDataCacheEntry">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Session.html#783-795" title="Go to source code">removeSessionMetaDataCacheEntry</a>( <span>string <var>$sessionIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Session.html#793-805" title="Go to source code">removeSessionMetaDataCacheEntry</a>( <span>string <var>$sessionIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the session info cache entry for the specified session.</p>
@@ -2077,14 +2111,14 @@ related data referred to by the storage identifier.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#57-61" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#57-60" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -2093,14 +2127,11 @@ related data referred to by the storage identifier.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -2112,7 +2143,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#63-69" title="Go to source code"><var>$metaDataCache</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#62-68" title="Go to source code"><var>$metaDataCache</var></a>
 
 				<div class="description short">
 					<p>Meta data cache for this session</p>
@@ -2140,7 +2171,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#71-77" title="Go to source code"><var>$storageCache</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#70-76" title="Go to source code"><var>$storageCache</var></a>
 
 				<div class="description short">
 					<p>Storage cache for this session</p>
@@ -2168,7 +2199,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#79-85" title="Go to source code"><var>$bootstrap</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#78-84" title="Go to source code"><var>$bootstrap</var></a>
 
 				<div class="description short">
 					<p>Bootstrap for retrieving the current HTTP request</p>
@@ -2196,7 +2227,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#87-90" title="Go to source code"><var>$sessionCookieName</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#86-89" title="Go to source code"><var>$sessionCookieName</var></a>
 
 				<div class="description short">
 					
@@ -2221,7 +2252,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#92-95" title="Go to source code"><var>$sessionCookieLifetime</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#91-94" title="Go to source code"><var>$sessionCookieLifetime</var></a>
 
 				<div class="description short">
 					
@@ -2246,7 +2277,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#97-100" title="Go to source code"><var>$sessionCookieDomain</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#96-99" title="Go to source code"><var>$sessionCookieDomain</var></a>
 
 				<div class="description short">
 					
@@ -2271,7 +2302,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#102-105" title="Go to source code"><var>$sessionCookiePath</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#101-104" title="Go to source code"><var>$sessionCookiePath</var></a>
 
 				<div class="description short">
 					
@@ -2296,7 +2327,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#107-110" title="Go to source code"><var>$sessionCookieSecure</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#106-109" title="Go to source code"><var>$sessionCookieSecure</var></a>
 
 				<div class="description short">
 					
@@ -2321,7 +2352,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#112-115" title="Go to source code"><var>$sessionCookieHttpOnly</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#111-114" title="Go to source code"><var>$sessionCookieHttpOnly</var></a>
 
 				<div class="description short">
 					
@@ -2346,7 +2377,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#117-120" title="Go to source code"><var>$sessionCookie</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#116-119" title="Go to source code"><var>$sessionCookie</var></a>
 
 				<div class="description short">
 					
@@ -2371,7 +2402,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#122-125" title="Go to source code"><var>$inactivityTimeout</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#121-124" title="Go to source code"><var>$inactivityTimeout</var></a>
 
 				<div class="description short">
 					
@@ -2396,7 +2427,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#127-130" title="Go to source code"><var>$lastActivityTimestamp</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#126-129" title="Go to source code"><var>$lastActivityTimestamp</var></a>
 
 				<div class="description short">
 					
@@ -2421,7 +2452,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#132-135" title="Go to source code"><var>$tags</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#131-134" title="Go to source code"><var>$tags</var></a>
 
 				<div class="description short">
 					
@@ -2446,7 +2477,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#137-140" title="Go to source code"><var>$now</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#136-139" title="Go to source code"><var>$now</var></a>
 
 				<div class="description short">
 					
@@ -2471,7 +2502,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#142-145" title="Go to source code"><var>$garbageCollectionProbability</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#141-144" title="Go to source code"><var>$garbageCollectionProbability</var></a>
 
 				<div class="description short">
 					
@@ -2496,7 +2527,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#147-150" title="Go to source code"><var>$garbageCollectionMaximumPerRun</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#146-149" title="Go to source code"><var>$garbageCollectionMaximumPerRun</var></a>
 
 				<div class="description short">
 					
@@ -2521,7 +2552,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#152-157" title="Go to source code"><var>$sessionIdentifier</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#151-156" title="Go to source code"><var>$sessionIdentifier</var></a>
 
 				<div class="description short">
 					<p>The session identifier</p>
@@ -2546,7 +2577,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#159-164" title="Go to source code"><var>$storageIdentifier</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#158-163" title="Go to source code"><var>$storageIdentifier</var></a>
 
 				<div class="description short">
 					<p>Internal identifier used for storing session data in the cache</p>
@@ -2571,7 +2602,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#166-171" title="Go to source code"><var>$started</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#165-170" title="Go to source code"><var>$started</var></a>
 
 				<div class="description short">
 					<p>If this session has been started</p>
@@ -2596,7 +2627,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#173-178" title="Go to source code"><var>$remote</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#172-177" title="Go to source code"><var>$remote</var></a>
 
 				<div class="description short">
 					<p>If this session is remote or the "current" session</p>
@@ -2621,7 +2652,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#180-183" title="Go to source code"><var>$request</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#179-182" title="Go to source code"><var>$request</var></a>
 
 				<div class="description short">
 					
@@ -2646,7 +2677,7 @@ related data referred to by the storage identifier.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Session.html#185-188" title="Go to source code"><var>$response</var></a>
+					<a href="source-class-Neos.Flow.Session.Session.html#184-187" title="Go to source code"><var>$response</var></a>
 
 				<div class="description short">
 					
@@ -2680,6 +2711,6 @@ related data referred to by the storage identifier.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

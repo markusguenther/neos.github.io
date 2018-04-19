@@ -881,7 +881,7 @@ for invalid csrf protection tokens.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Security.html">Security</a>\<a href="namespace-Neos.Flow.Security.RequestPattern.html">RequestPattern</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#27-146" title="Go to source code">Neos.Flow/Classes/Security/RequestPattern/CsrfProtection.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#27-156" title="Go to source code">Neos.Flow/Classes/Security/RequestPattern/CsrfProtection.php</a>
 		<br>
 	</div>
 
@@ -890,6 +890,40 @@ for invalid csrf protection tokens.</p>
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#68-77" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				<p>Injects the (system) logger based on PSR-3.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injects the (system) logger based on PSR-3.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="matchRequest" id="_matchRequest">
 
 			<td class="attributes"><code>
@@ -901,7 +935,7 @@ for invalid csrf protection tokens.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchRequest">#</a>
-			<code><a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#69-128" title="Go to source code">matchRequest</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#79-138" title="Go to source code">matchRequest</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Matches a \Neos\Flow\Mvc\RequestInterface against the configured CSRF pattern rules and
@@ -947,7 +981,7 @@ searches for invalid csrf tokens. If this returns TRUE, the request is invalid!<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasPolicyEntryForMethod">#</a>
-			<code><a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#130-145" title="Go to source code">hasPolicyEntryForMethod</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#140-155" title="Go to source code">hasPolicyEntryForMethod</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1132,14 +1166,14 @@ searches for invalid csrf tokens. If this returns TRUE, the request is invalid!<
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#63-67" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Security.RequestPattern.CsrfProtection.html#63-66" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1148,14 +1182,11 @@ searches for invalid csrf tokens. If this returns TRUE, the request is invalid!<
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1176,6 +1207,6 @@ searches for invalid csrf tokens. If this returns TRUE, the request is invalid!<
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

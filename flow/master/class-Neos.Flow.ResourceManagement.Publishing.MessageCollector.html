@@ -869,7 +869,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#22-112" title="Go to source code">Neos.Flow/Classes/ResourceManagement/Publishing/MessageCollector.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#23-131" title="Go to source code">Neos.Flow/Classes/ResourceManagement/Publishing/MessageCollector.php</a>
 		<br>
 	</div>
 
@@ -878,6 +878,40 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#47-56" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				<p>Injects the (system) logger based on PSR-3.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injects the (system) logger based on PSR-3.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
@@ -889,7 +923,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#40-46" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#58-64" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Message Collector Constructor</p>
@@ -918,7 +952,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_append">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#48-75" title="Go to source code">append</a>( <span>string <var>$message</var></span>, <span>string <var>$severity</var> = Neos\Flow\ResourceManagement\Publishing\Error::SEVERITY_ERROR</span>, <span>integer <var>$code</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#66-93" title="Go to source code">append</a>( <span>string <var>$message</var></span>, <span>string <var>$severity</var> = Neos\Flow\ResourceManagement\Publishing\Error::SEVERITY_ERROR</span>, <span>integer <var>$code</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -963,7 +997,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasMessages">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#77-84" title="Go to source code">hasMessages</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#95-102" title="Go to source code">hasMessages</a>( )</code>
 
 			<div class="description short">
 				
@@ -999,7 +1033,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flush">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#86-101" title="Go to source code">flush</a>( <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#104-120" title="Go to source code">flush</a>( <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1036,7 +1070,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___destruct">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#103-111" title="Go to source code">__destruct</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#122-130" title="Go to source code">__destruct</a>( )</code>
 
 			<div class="description short">
 				<p>Flush all notification during the object lifecycle</p>
@@ -1064,6 +1098,36 @@
 
 
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="LOGLEVEL_MAPPING" id="LOGLEVEL_MAPPING">
+
+				<td class="attributes"><code>array</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-LOGLEVEL_MAPPING.html#30-35" title="Go to source code"><b>LOGLEVEL_MAPPING</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#LOGLEVEL_MAPPING" class="anchor">#</a>
+						<code>[Error::SEVERITY_ERROR=&gt;LogLevel::ERROR,Error::SEVERITY_NOTICE=&gt;LogLevel::NOTICE,Error::SEVERITY_OK=&gt;LogLevel::INFO,Error::SEVERITY_WARNING=&gt;LogLevel::WARNING]</code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
 
 
 
@@ -1077,7 +1141,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#29-32" title="Go to source code"><var>$messages</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#37-40" title="Go to source code"><var>$messages</var></a>
 
 				<div class="description short">
 					
@@ -1095,14 +1159,14 @@
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#34-38" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Publishing.MessageCollector.html#42-45" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1111,14 +1175,11 @@
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1139,6 +1200,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

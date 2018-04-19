@@ -895,7 +895,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Error.html">Error</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#28-359" title="Go to source code">Neos.Flow/Classes/Error/AbstractExceptionHandler.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#31-384" title="Go to source code">Neos.Flow/Classes/Error/AbstractExceptionHandler.php</a>
 		<br>
 	</div>
 
@@ -915,7 +915,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSystemLogger">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#48-57" title="Go to source code">injectSystemLogger</a>( <span><code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code> <var>$systemLogger</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#63-72" title="Go to source code">injectSystemLogger</a>( <span><code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html" class="deprecated">Neos\Flow\Log\SystemLoggerInterface</a></code> <var>$systemLogger</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the system logger</p>
@@ -938,6 +938,77 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#74-82" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+					<h4>Flow\autowiring(enabled=false)</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectThrowableStorage" id="_injectThrowableStorage">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectThrowableStorage">#</a>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#84-90" title="Go to source code">injectThrowableStorage</a>( <span><code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code> <var>$throwableStorage</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$throwableStorage</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="setOptions" id="_setOptions">
 
 			<td class="attributes"><code>
@@ -949,7 +1020,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOptions">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#59-69" title="Go to source code">setOptions</a>( <span>array <var>$options</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#92-102" title="Go to source code">setOptions</a>( <span>array <var>$options</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets options of this exception handler.</p>
@@ -985,7 +1056,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#71-78" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#104-111" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Constructs this exception handler - registers itself as the default exception handler.</p>
@@ -1014,7 +1085,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleException">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#80-115" title="Go to source code">handleException</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#113-140" title="Go to source code">handleException</a>( <span>object <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Handles the given exception</p>
@@ -1050,7 +1121,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_echoExceptionWeb">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#117-123" title="Go to source code">echoExceptionWeb</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#142-148" title="Go to source code">echoExceptionWeb</a>( <span>object <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Echoes an exception for the web.</p>
@@ -1084,7 +1155,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildView">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#126-173" title="Go to source code">buildView</a>( <span>object <var>$exception</var></span>, <span>array <var>$renderingOptions</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#151-198" title="Go to source code">buildView</a>( <span>object <var>$exception</var></span>, <span>array <var>$renderingOptions</var></span> )</code>
 
 			<div class="description short">
 				<p>Prepares a Fluid view for rendering the custom error page.</p>
@@ -1124,7 +1195,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_applyLegacyViewOptions">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#175-198" title="Go to source code">applyLegacyViewOptions</a>( <span><code><a href="class-Neos.Flow.Mvc.View.ViewInterface.html">Neos\Flow\Mvc\View\ViewInterface</a></code> <var>$view</var></span>, <span>array <var>$renderingOptions</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#200-223" title="Go to source code">applyLegacyViewOptions</a>( <span><code><a href="class-Neos.Flow.Mvc.View.ViewInterface.html">Neos\Flow\Mvc\View\ViewInterface</a></code> <var>$view</var></span>, <span>array <var>$renderingOptions</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets legacy "option" properties to the view for backwards compatibility.</p>
@@ -1164,7 +1235,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveCustomRenderingOptions">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#200-218" title="Go to source code">resolveCustomRenderingOptions</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#225-243" title="Go to source code">resolveCustomRenderingOptions</a>( <span>object <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if custom rendering rules apply to the given $exception and returns those.</p>
@@ -1202,7 +1273,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveRenderingGroup">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#220-243" title="Go to source code">resolveRenderingGroup</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#245-268" title="Go to source code">resolveRenderingGroup</a>( <span>object <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1240,7 +1311,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_echoExceptionCli">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#245-265" title="Go to source code">echoExceptionCli</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#270-290" title="Go to source code">echoExceptionCli</a>( <span>object <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Formats and echoes the exception and its previous exceptions (if any) for the command line</p>
@@ -1274,7 +1345,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderNestedExceptonsCli">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#267-284" title="Go to source code">renderNestedExceptonsCli</a>( <span>object <var>$exception</var></span>, <span>string <var>&amp; $exceptionMessage</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#292-309" title="Go to source code">renderNestedExceptonsCli</a>( <span>object <var>$exception</var></span>, <span>string <var>&amp; $exceptionMessage</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1314,7 +1385,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderSingleExceptionCli">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#286-309" title="Go to source code">renderSingleExceptionCli</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#311-334" title="Go to source code">renderSingleExceptionCli</a>( <span>object <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders a single exception including message, code and affected file</p>
@@ -1352,7 +1423,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderExceptionDetailCli">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#311-325" title="Go to source code">renderExceptionDetailCli</a>( <span>string <var>$label</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#336-350" title="Go to source code">renderExceptionDetailCli</a>( <span>string <var>$label</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders the given $value word-wrapped and prefixed with $label</p>
@@ -1392,7 +1463,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_splitExceptionMessage">#</a>
-			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#327-358" title="Go to source code">splitExceptionMessage</a>( <span>string <var>$exceptionMessage</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#352-383" title="Go to source code">splitExceptionMessage</a>( <span>string <var>$exceptionMessage</var></span> )</code>
 
 			<div class="description short">
 				<p>Splits the given string into subject and body according to following rules:
@@ -1442,11 +1513,44 @@
 		<tr data-order="systemLogger" id="$systemLogger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html" class="deprecated">Neos\Flow\Log\SystemLoggerInterface</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#33-36" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#36-41" title="Go to source code"><var>$systemLogger</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Deprecated</h4>
+						<div class="list">
+								Use the PSR logger<br>
+						</div>
+						<h4>See</h4>
+						<div class="list">
+								<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#$logger">Neos\Flow\Error\AbstractExceptionHandler::<var>$logger</var></a></code><br>
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$systemLogger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="logger" id="$logger">
+			<td class="attributes"><code>
+				protected  
+				Psr\Log\LoggerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#43-46" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1459,7 +1563,32 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="throwableStorage" id="$throwableStorage">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#48-51" title="Go to source code"><var>$throwableStorage</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$throwableStorage" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1471,7 +1600,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#38-41" title="Go to source code"><var>$options</var></a>
+					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#53-56" title="Go to source code"><var>$options</var></a>
 
 				<div class="description short">
 					
@@ -1496,7 +1625,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#43-46" title="Go to source code"><var>$renderingOptions</var></a>
+					<a href="source-class-Neos.Flow.Error.AbstractExceptionHandler.html#58-61" title="Go to source code"><var>$renderingOptions</var></a>
 
 				<div class="description short">
 					
@@ -1530,6 +1659,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

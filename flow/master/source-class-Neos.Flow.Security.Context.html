@@ -876,7 +876,7 @@
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
 </span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Cache\CacheAwareInterface;
-</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\<span class="php-keyword2">Log</span>\SecurityLoggerInterface;
+</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\<span class="php-keyword2">Log</span>\PsrSecurityLoggerInterface;
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\RequestInterface;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Flow\ObjectManagement\ObjectManagerInterface;
 </span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Security\Authentication\TokenInterface;
@@ -1003,7 +1003,7 @@
 </span><span id="140" class="l">
 </span><span id="141" class="l">    <span class="php-comment">/**
 </span></span><span id="142" class="l"><span class="php-comment">     * @Flow\Inject
-</span></span><span id="143" class="l"><span class="php-comment">     * @var SecurityLoggerInterface
+</span></span><span id="143" class="l"><span class="php-comment">     * @var PsrSecurityLoggerInterface
 </span></span><span id="144" class="l"><span class="php-comment">     */</span>
 </span><span id="145" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$securityLogger</span>;
 </span><span id="146" class="l">
@@ -1568,14 +1568,14 @@
 </span><span id="705" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$sessionTokens</span> <span class="php-keyword1">as</span> <span class="php-var">$sessionToken</span>) {
 </span><span id="706" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$sessionToken</span>-&gt;getAuthenticationProviderName() === <span class="php-var">$managerToken</span>-&gt;getAuthenticationProviderName()) {
 </span><span id="707" class="l">                    <span class="php-var">$session</span> = <span class="php-var">$this</span>-&gt;sessionManager-&gt;getCurrentSession();
-</span><span id="708" class="l">                    <span class="php-var">$this</span>-&gt;securityLogger-&gt;<span class="php-keyword2">log</span>(
+</span><span id="708" class="l">                    <span class="php-var">$this</span>-&gt;securityLogger-&gt;info(
 </span><span id="709" class="l">                        <span class="php-keyword2">sprintf</span>(
 </span><span id="710" class="l">                            <span class="php-quote">'Session %s contains auth token %s for provider %s. Status: %s'</span>,
 </span><span id="711" class="l">                            <span class="php-var">$session</span>-&gt;getId(),
 </span><span id="712" class="l">                            <span class="php-keyword2">get_class</span>(<span class="php-var">$sessionToken</span>),
 </span><span id="713" class="l">                            <span class="php-var">$sessionToken</span>-&gt;getAuthenticationProviderName(),
 </span><span id="714" class="l">                            <span class="php-var">$this</span>-&gt;tokenStatusLabels[<span class="php-var">$sessionToken</span>-&gt;getAuthenticationStatus()]
-</span><span id="715" class="l">                        ), LOG_INFO, <span class="php-keyword1">null</span>, <span class="php-quote">'Flow'</span>
+</span><span id="715" class="l">                        )
 </span><span id="716" class="l">                    );
 </span><span id="717" class="l">
 </span><span id="718" class="l">                    <span class="php-var">$resultTokens</span>[<span class="php-var">$sessionToken</span>-&gt;getAuthenticationProviderName()] = <span class="php-var">$sessionToken</span>;
@@ -1707,6 +1707,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

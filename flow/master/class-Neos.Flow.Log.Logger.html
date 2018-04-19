@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\Log\Logger | Flow Framework (master branch)</title>
+	<title>Deprecated Class Neos\Flow\Log\Logger | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -830,17 +830,18 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.Log.DefaultLogger.html">DefaultLogger</a></li>
-				<li class="active"><a href="class-Neos.Flow.Log.Logger.html">Logger</a></li>
-				<li><a href="class-Neos.Flow.Log.LoggerFactory.html">LoggerFactory</a></li>
+				<li class="active"><a href="class-Neos.Flow.Log.Logger.html" class="deprecated">Logger</a></li>
 				<li><a href="class-Neos.Flow.Log.PlainTextFormatter.html">PlainTextFormatter</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.Log.LoggerInterface.html">LoggerInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html">SecurityLoggerInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">SystemLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.LoggerInterface.html" class="deprecated">LoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.PsrLoggerFactoryInterface.html">PsrLoggerFactoryInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.PsrSecurityLoggerInterface.html">PsrSecurityLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.PsrSystemLoggerInterface.html">PsrSystemLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html" class="deprecated">SecurityLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.SystemLoggerInterface.html" class="deprecated">SystemLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">ThrowableLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">ThrowableStorageInterface</a></li>
 			</ul>
@@ -861,29 +862,26 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class Logger</h1>
+	<h1 class="deprecated">Class Logger</h1>
 
 
 	<div class="description">
-	<p>The Flow enabled logger currently used as default for logging.</p>
+	<p>The Flow enabled logger previously used as default for logging.</p>
 	</div>
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Flow.Log.DefaultLogger.html"><span>Neos\Flow\Log\DefaultLogger</span></a>
-			
-			 implements 
-				<a href="class-Neos.Flow.Log.LoggerInterface.html"><span>Neos\Flow\Log\LoggerInterface</span></a>
+Neos\Flow\Log\DefaultLogger
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Neos\Flow\Log\Logger</span></b>			
+<b><span class="deprecated">Neos\Flow\Log\Logger</span></b>			
 			 implements 
-				<a href="class-Neos.Flow.Log.SystemLoggerInterface.html"><span>Neos\Flow\Log\SystemLoggerInterface</span></a>, 
+				<a href="class-Neos.Flow.Log.SystemLoggerInterface.html"><span class="deprecated">Neos\Flow\Log\SystemLoggerInterface</span></a>, 
 			
-				<a href="class-Neos.Flow.Log.SecurityLoggerInterface.html"><span>Neos\Flow\Log\SecurityLoggerInterface</span></a>, 
+				<a href="class-Neos.Flow.Log.SecurityLoggerInterface.html"><span class="deprecated">Neos\Flow\Log\SecurityLoggerInterface</span></a>, 
 			
 				<a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html"><span>Neos\Flow\Log\ThrowableLoggerInterface</span></a>
 			
@@ -904,7 +902,13 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Log.html">Log</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Logger.html#14-56" title="Go to source code">Neos.Flow/Classes/Log/Logger.php</a>
+				<b>Deprecated:</b>
+				Instead a \Psr\Log\LoggerInterface should be used in all places.<br>
+				<b>See:</b>
+				\Psr\Log\LoggerInterface<br>
+				<b>See:</b>
+				<code><a href="class-Neos.Flow.Log.PsrLoggerFactoryInterface.html">Neos\Flow\Log\PsrLoggerFactoryInterface</a></code><br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Log.Logger.html#14-60" title="Go to source code">Neos.Flow/Classes/Log/Logger.php</a>
 		<br>
 	</div>
 
@@ -924,7 +928,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectThrowableStorage">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Logger.html#24-30" title="Go to source code">injectThrowableStorage</a>( <span><code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code> <var>$throwableStorage</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Log.Logger.html#28-34" title="Go to source code">injectThrowableStorage</a>( <span><code><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></code> <var>$throwableStorage</var></span> )</code>
 
 			<div class="description short">
 				
@@ -958,7 +962,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logException">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Log.Logger.html#32-43" title="Go to source code">logException</a>( <span><code><a href="class-Neos.Flow.Log.Exception.html">Neos\Flow\Log\Exception</a></code> <var>$exception</var></span>, <span>array <var>$additionalData</var> = []</span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Log.Logger.html#36-47" title="Go to source code">logException</a>( <span><code><a href="class-Neos.Flow.Log.Exception.html">Neos\Flow\Log\Exception</a></code> <var>$exception</var></span>, <span>array <var>$additionalData</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Writes information about the given exception into the log.</p>
@@ -967,9 +971,6 @@
 			<div class="description detailed hidden">
 				<p>Writes information about the given exception into the log.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -982,8 +983,6 @@
 
 
 
-					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Log.DefaultLogger.html#_logException">Neos\Flow\Log\DefaultLogger::logException</a></code></div>
 
 					<h4>Implementation of</h4>
 					<div class="list"><code><a href="class-Neos.Flow.Log.LoggerInterface.html#_logException">Neos\Flow\Log\LoggerInterface::logException()</a></code></div>
@@ -1001,7 +1000,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_logThrowable">#</a>
-			<code><a href="source-class-Neos.Flow.Log.Logger.html#45-55" title="Go to source code">logThrowable</a>( <span>Throwable <var>$throwable</var></span>, <span>array <var>$additionalData</var> = []</span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Log.Logger.html#49-59" title="Go to source code">logThrowable</a>( <span>Throwable <var>$throwable</var></span>, <span>array <var>$additionalData</var> = []</span> )</code>
 
 			<div class="description short">
 				
@@ -1035,16 +1034,11 @@
 		</div>
 
 		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Log.DefaultLogger.html#methods">Neos\Flow\Log\DefaultLogger</a></h3></div>
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Log.LoggerInterface.html#methods">Neos\Flow\Log\LoggerInterface</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_addBackend">addBackend()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_log">log()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_removeBackend">removeBackend()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_setBackend">setBackend()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_setRenderBacktraceCallback">setRenderBacktraceCallback()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_setRequestInfoCallback">setRequestInfoCallback()</a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#_shutdownObject">shutdownObject()</a></code>
+				<code><a href="class-Neos.Flow.Log.LoggerInterface.html#_addBackend"><span class="deprecated">addBackend()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Log.LoggerInterface.html#_log"><span class="deprecated">log()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Log.LoggerInterface.html#_removeBackend"><span class="deprecated">removeBackend()</span></a></code>
 			</p>
 		</div>
 
@@ -1067,7 +1061,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Log.Logger.html#19-22" title="Go to source code"><var>$throwableStorage</var></a>
+					<a href="source-class-Neos.Flow.Log.Logger.html#23-26" title="Go to source code"><var>$throwableStorage</var></a>
 
 				<div class="description short">
 					
@@ -1088,14 +1082,6 @@
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Log.DefaultLogger.html#properties">Neos\Flow\Log\DefaultLogger</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#$backends"><var>$backends</var></a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#$renderBacktraceCallback"><var>$renderBacktraceCallback</var></a></code>, 
-				<code><a href="class-Neos.Flow.Log.DefaultLogger.html#$requestInfoCallback"><var>$requestInfoCallback</var></a></code>
-			</p>
-		</div>
 
 
 
@@ -1109,6 +1095,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

@@ -884,7 +884,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#27-297" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/RouterCachingService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#27-304" title="Go to source code">Neos.Flow/Classes/Mvc/Routing/RouterCachingService.php</a>
 		<br>
 	</div>
 
@@ -893,6 +893,40 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#69-75" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="initializeObject" id="_initializeObject">
 
 			<td class="attributes"><code>
@@ -904,7 +938,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#70-80" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#77-87" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				
@@ -933,7 +967,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedMatchResults">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#82-96" title="Go to source code">getCachedMatchResults</a>( <span>Neos\Flow\Mvc\Routing\Dto\RouteContext <var>$routeContext</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#89-103" title="Go to source code">getCachedMatchResults</a>( <span>Neos\Flow\Mvc\Routing\Dto\RouteContext <var>$routeContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks the cache for the given RouteContext and returns the result or FALSE if no matching ache entry was found</p>
@@ -971,7 +1005,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_storeMatchResults">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#98-116" title="Go to source code">storeMatchResults</a>( <span>Neos\Flow\Mvc\Routing\Dto\RouteContext <var>$routeContext</var></span>, <span>array <var>$matchResults</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\RouteTags <var>$matchedTags</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#105-123" title="Go to source code">storeMatchResults</a>( <span>Neos\Flow\Mvc\Routing\Dto\RouteContext <var>$routeContext</var></span>, <span>array <var>$matchResults</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\RouteTags <var>$matchedTags</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Stores the $matchResults in the cache</p>
@@ -1009,7 +1043,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCachedResolvedUriConstraints">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#118-131" title="Go to source code">getCachedResolvedUriConstraints</a>( <span>Neos\Flow\Mvc\Routing\Dto\ResolveContext <var>$resolveContext</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#125-138" title="Go to source code">getCachedResolvedUriConstraints</a>( <span>Neos\Flow\Mvc\Routing\Dto\ResolveContext <var>$resolveContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks the cache for the given ResolveContext and returns the cached UriConstraints if a cache entry is found</p>
@@ -1047,7 +1081,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_storeResolvedUriConstraints">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#133-154" title="Go to source code">storeResolvedUriConstraints</a>( <span>Neos\Flow\Mvc\Routing\Dto\ResolveContext <var>$resolveContext</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\UriConstraints <var>$uriConstraints</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\RouteTags <var>$resolvedTags</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#140-161" title="Go to source code">storeResolvedUriConstraints</a>( <span>Neos\Flow\Mvc\Routing\Dto\ResolveContext <var>$resolveContext</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\UriConstraints <var>$uriConstraints</var></span>, <span>Neos\Flow\Mvc\Routing\Dto\RouteTags <var>$resolvedTags</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Stores the resolved UriConstraints in the cache together with the $routeValues</p>
@@ -1085,7 +1119,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateRouteTags">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#156-174" title="Go to source code">generateRouteTags</a>( <span>string <var>$uriPath</var></span>, <span>array <var>$routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#163-181" title="Go to source code">generateRouteTags</a>( <span>string <var>$uriPath</var></span>, <span>array <var>$routeValues</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1125,7 +1159,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushCaches">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#176-185" title="Go to source code">flushCaches</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#183-192" title="Go to source code">flushCaches</a>( )</code>
 
 			<div class="description short">
 				<p>Flushes 'route' and 'resolve' caches.</p>
@@ -1154,7 +1188,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushCachesByTag">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#187-197" title="Go to source code">flushCachesByTag</a>( <span>string <var>$tag</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#194-204" title="Go to source code">flushCachesByTag</a>( <span>string <var>$tag</var></span> )</code>
 
 			<div class="description short">
 				<p>Flushes 'findMatchResults' and 'resolve' caches for the given $tag</p>
@@ -1188,7 +1222,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushCachesForUriPath">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#199-209" title="Go to source code">flushCachesForUriPath</a>( <span>string <var>$uriPath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#206-216" title="Go to source code">flushCachesForUriPath</a>( <span>string <var>$uriPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Flushes 'findMatchResults' caches that are tagged with the given $uriPath</p>
@@ -1222,7 +1256,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_containsObject">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#211-231" title="Go to source code">containsObject</a>( <span>mixed <var>$subject</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#218-238" title="Go to source code">containsObject</a>( <span>mixed <var>$subject</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given subject contains an object</p>
@@ -1260,7 +1294,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertObjectsToHashes">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#233-260" title="Go to source code">convertObjectsToHashes</a>( <span>array <var>$routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#240-267" title="Go to source code">convertObjectsToHashes</a>( <span>array <var>$routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Recursively converts objects in an array to their identifiers</p>
@@ -1298,7 +1332,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildResolveCacheIdentifier">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#262-274" title="Go to source code">buildResolveCacheIdentifier</a>( <span>Neos\Flow\Mvc\Routing\Dto\ResolveContext <var>$resolveContext</var></span>, <span>array <var>$routeValues</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#269-281" title="Go to source code">buildResolveCacheIdentifier</a>( <span>Neos\Flow\Mvc\Routing\Dto\ResolveContext <var>$resolveContext</var></span>, <span>array <var>$routeValues</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates the Resolve cache identifier for the given Request</p>
@@ -1338,7 +1372,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_extractUuids">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#276-296" title="Go to source code">extractUuids</a>( <span>array <var>$values</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#283-303" title="Go to source code">extractUuids</a>( <span>array <var>$values</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper method to generate tags by taking all UUIDs contained
@@ -1467,14 +1501,14 @@ in the given $routeValues or $matchResults</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#52-56" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#52-55" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1483,14 +1517,11 @@ in the given $routeValues or $matchResults</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1502,7 +1533,7 @@ in the given $routeValues or $matchResults</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#58-62" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#57-61" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1530,7 +1561,7 @@ in the given $routeValues or $matchResults</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#64-68" title="Go to source code"><var>$routingSettings</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Routing.RouterCachingService.html#63-67" title="Go to source code"><var>$routingSettings</var></a>
 
 				<div class="description short">
 					
@@ -1567,6 +1598,6 @@ in the given $routeValues or $matchResults</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>

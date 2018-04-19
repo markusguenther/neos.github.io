@@ -879,7 +879,7 @@
 				interfaceName = "Neos\Flow\Session\Aspect\LazyLoadingProxyInterface")<br>
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#20-112" title="Go to source code">Neos.Flow/Classes/Session/Aspect/LazyLoadingAspect.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#20-122" title="Go to source code">Neos.Flow/Classes/Session/Aspect/LazyLoadingAspect.php</a>
 		<br>
 	</div>
 
@@ -888,6 +888,40 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#51-60" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				<p>Injects the (system) logger based on PSR-3.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injects the (system) logger based on PSR-3.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="registerSessionInstance" id="_registerSessionInstance">
 
 			<td class="attributes"><code>
@@ -899,7 +933,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerSessionInstance">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#52-63" title="Go to source code">registerSessionInstance</a>( <span>string <var>$objectName</var></span>, <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#62-73" title="Go to source code">registerSessionInstance</a>( <span>string <var>$objectName</var></span>, <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Registers an object of scope session.</p>
@@ -939,7 +973,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeSession">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#65-86" title="Go to source code">initializeSession</a>( <span>Neos\Flow\Aop\JoinPointInterface <var>$joinPoint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#75-96" title="Go to source code">initializeSession</a>( <span>Neos\Flow\Aop\JoinPointInterface <var>$joinPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>Before advice for all methods annotated with "@Flow\Session(autoStart=true)".
@@ -984,7 +1018,7 @@ yet.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_callMethodOnOriginalSessionObject">#</a>
-			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#88-111" title="Go to source code">callMethodOnOriginalSessionObject</a>( <span>Neos\Flow\Aop\JoinPointInterface <var>$joinPoint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#98-121" title="Go to source code">callMethodOnOriginalSessionObject</a>( <span>Neos\Flow\Aop\JoinPointInterface <var>$joinPoint</var></span> )</code>
 
 			<div class="description short">
 				<p>Around advice, wrapping every method of a scope session object. It redirects
@@ -1088,14 +1122,14 @@ all method calls to the session object once there is one.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></code>
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#41-45" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#41-44" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1104,14 +1138,11 @@ all method calls to the session object once there is one.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1123,7 +1154,7 @@ all method calls to the session object once there is one.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#47-50" title="Go to source code"><var>$sessionOriginalInstances</var></a>
+					<a href="source-class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html#46-49" title="Go to source code"><var>$sessionOriginalInstances</var></a>
 
 				<div class="description short">
 					
@@ -1157,6 +1188,6 @@ all method calls to the session object once there is one.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
+<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
 </body>
 </html>
