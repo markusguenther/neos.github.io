@@ -892,7 +892,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#23-154" title="Go to source code">Neos.Flow/Classes/Command/DatabaseCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#22-154" title="Go to source code">Neos.Flow/Classes/Command/DatabaseCommandController.php</a>
 		<br>
 	</div>
 
@@ -912,7 +912,7 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeConnection">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#41-50" title="Go to source code">initializeConnection</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#40-49" title="Go to source code">initializeConnection</a>( )</code>
 
 			<div class="description short">
 				<p>Create a Doctrine DBAL Connection with the configured settings.</p>
@@ -945,17 +945,17 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setCharsetCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#52-109" title="Go to source code">setCharsetCommand</a>( <span>Neos\Flow\Command\string <var>$characterSet</var> = <span class="php-quote">'utf8'</span></span>, <span>Neos\Flow\Command\string <var>$collation</var> = <span class="php-quote">'utf8_unicode_ci'</span></span>, <span>Neos\Flow\Command\string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>Neos\Flow\Command\bool <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#51-109" title="Go to source code">setCharsetCommand</a>( <span>Neos\Flow\Command\string <var>$characterSet</var> = <span class="php-quote">'utf8mb4'</span></span>, <span>Neos\Flow\Command\string <var>$collation</var> = <span class="php-quote">'utf8mb4_unicode_ci'</span></span>, <span>Neos\Flow\Command\string <var>$output</var> = <span class="php-keyword1">null</span></span>, <span>Neos\Flow\Command\bool <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Convert the database schema to use the given character set and collation (defaults to utf8 and utf8_unicode_ci).</p>
+				<p>Convert the database schema to use the given character set and collation (defaults to utf8mb4 and utf8mb4_unicode_ci).</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Convert the database schema to use the given character set and collation (defaults to utf8 and utf8_unicode_ci).</p>
+				<p>Convert the database schema to use the given character set and collation (defaults to utf8mb4 and utf8mb4_unicode_ci).</p>
 
-<p>This command can be used to convert the database configured in the Flow settings to the utf8 character
-set and the utf8_unicode_ci collation (by default, a custom collation can be given). It will only
+<p>This command can be used to convert the database configured in the Flow settings to the utf8mb4 character
+set and the utf8mb4_unicode_ci collation (by default, a custom collation can be given). It will only
 work when using the pdo_mysql driver.</p>
 
 <p><b>Make a backup</b> before using it, to be on the safe side. If you want to inspect the statements used
@@ -967,20 +967,17 @@ the conversion manually.</p>
 <ul>
 <li>http://stackoverflow.com/questions/766809/</li>
 <li>http://dev.mysql.com/doc/refman/5.5/en/alter-table.html</li>
-</ul>
-
-<p>The main purpose of this is to fix setups that were created with Flow 2.3.x or earlier and whose
-database server did not have a default collation of utf8_unicode_ci. In those cases, the tables will
-have a collation that does not match the default collation of later Flow versions, potentially leading
-to problems when creating foreign key constraints (among others, potentially).</p>
-
-<p>If you have special needs regarding the charset and collation, you <i>can</i> override the defaults with
-different ones. One thing this might be useful for is when switching to the utf8mb4 character set, see:</p>
-
-<ul>
+<li>https://medium.com/@adamhooper/in-mysql-never-use-utf8-use-utf8mb4-11761243e434</li>
 <li>https://mathiasbynens.be/notes/mysql-utf8mb4</li>
 <li>https://florian.ec/articles/mysql-doctrine-utf8/</li>
 </ul>
+
+<p>The main purpose of this is to fix setups that were created with Flow before version 5.0. In those cases,
+the tables will have a collation that does not match the default collation of later Flow versions, potentially
+leading to problems when creating foreign key constraints (among others, potentially).</p>
+
+<p>If you have special needs regarding the charset and collation, you <i>can</i> override the defaults with
+different ones.</p>
 
 <p>Note: This command <b>is not a general purpose conversion tool</b>. It will specifically not fix cases
 of actual utf8 stored in latin1 columns. For this a conversion to BLOB followed by a conversion to the
@@ -990,9 +987,9 @@ proper type, charset and collation is needed instead.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$characterSet</var></dt>
-						<dd>Character set, defaults to utf8</dd>
+						<dd>Character set, defaults to utf8mb4</dd>
 						<dt><var>$collation</var></dt>
-						<dd>Collation to use, defaults to utf8_unicode_ci</dd>
+						<dd>Collation to use, defaults to utf8mb4_unicode_ci</dd>
 						<dt><var>$output</var></dt>
 						<dd>A file to write SQL to, instead of executing it</dd>
 						<dt><var>$verbose</var></dt>
@@ -1002,6 +999,8 @@ proper type, charset and collation is needed instead.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
+						Doctrine\DBAL\ConnectionException<br>
+						Doctrine\DBAL\DBALException<br>
 						<code><a href="class-Neos.Flow.Mvc.Exception.StopActionException.html">Neos\Flow\Mvc\Exception\StopActionException</a></code>
 					</div>
 
@@ -1021,7 +1020,7 @@ proper type, charset and collation is needed instead.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertToCharacterSetAndCollation">#</a>
-			<code><a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#111-153" title="Go to source code">convertToCharacterSetAndCollation</a>( <span>Neos\Flow\Command\string <var>$characterSet</var> = <span class="php-quote">'utf8'</span></span>, <span>Neos\Flow\Command\string <var>$collation</var> = <span class="php-quote">'utf8_unicode_ci'</span></span>, <span>Neos\Flow\Command\string <var>$outputPathAndFilename</var> = <span class="php-keyword1">null</span></span>, <span>Neos\Flow\Command\bool <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#111-153" title="Go to source code">convertToCharacterSetAndCollation</a>( <span>Neos\Flow\Command\string <var>$characterSet</var></span>, <span>Neos\Flow\Command\string <var>$collation</var></span>, <span>Neos\Flow\Command\string <var>$outputPathAndFilename</var> = <span class="php-keyword1">null</span></span>, <span>Neos\Flow\Command\bool <var>$verbose</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert the tables in the current database to use given character set and collation.</p>
@@ -1078,7 +1077,7 @@ proper type, charset and collation is needed instead.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#30-34" title="Go to source code"><var>$persistenceSettings</var></a>
+					<a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#29-33" title="Go to source code"><var>$persistenceSettings</var></a>
 
 				<div class="description short">
 					
@@ -1106,7 +1105,7 @@ proper type, charset and collation is needed instead.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#36-39" title="Go to source code"><var>$connection</var></a>
+					<a href="source-class-Neos.Flow.Command.DatabaseCommandController.html#35-38" title="Go to source code"><var>$connection</var></a>
 
 				<div class="description short">
 					
