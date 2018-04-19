@@ -855,14 +855,27 @@
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Flow.Package.Package.html"><span>Neos\Flow\Package\Package</span></a>
+			<a href="class-Neos.Flow.Package.GenericPackage.html"><span>Neos\Flow\Package\GenericPackage</span></a>
 			
 			 implements 
-				<a href="class-Neos.Flow.Package.PackageInterface.html"><span>Neos\Flow\Package\PackageInterface</span></a>
+				<a href="class-Neos.Flow.Package.PackageInterface.html"><span>Neos\Flow\Package\PackageInterface</span></a>, 
+			
+				<a href="class-Neos.Flow.Package.PackageKeyAwareInterface.html"><span>Neos\Flow\Package\PackageKeyAwareInterface</span></a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-Neos.Flow.Package.Package.html"><span>Neos\Flow\Package\Package</span></a>
+			
+			 implements 
+				<a href="class-Neos.Flow.Package.FlowPackageInterface.html"><span>Neos\Flow\Package\FlowPackageInterface</span></a>, 
+			
+				<a href="class-Neos.Flow.Package.BootablePackageInterface.html"><span>Neos\Flow\Package\BootablePackageInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>Neos\Kickstarter\Package</span></b>			
 			
@@ -934,29 +947,31 @@
 		<div class="panel panel-default">
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Package.Package.html#methods">Neos\Flow\Package\Package</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Neos.Flow.Package.Package.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_explodeAutoloadConfiguration">explodeAutoloadConfiguration()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getAutoloadConfiguration">getAutoloadConfiguration()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getAutoloadPaths">getAutoloadPaths()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getAutoloadTypes">getAutoloadTypes()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getClassFiles">getClassFiles()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getClassesInNormalizedAutoloadPath">getClassesInNormalizedAutoloadPath()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getComposerManifest">getComposerManifest()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getComposerName">getComposerName()</a></code>, 
 				<code><a href="class-Neos.Flow.Package.Package.html#_getConfigurationPath">getConfigurationPath()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getFlattenedAutoloadConfiguration">getFlattenedAutoloadConfiguration()</a></code>, 
 				<code><a href="class-Neos.Flow.Package.Package.html#_getFunctionalTestsClassFiles">getFunctionalTestsClassFiles()</a></code>, 
 				<code><a href="class-Neos.Flow.Package.Package.html#_getFunctionalTestsPath">getFunctionalTestsPath()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getInstalledVersion">getInstalledVersion()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getNamespaces">getNamespaces()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getPackageKey">getPackageKey()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getPackagePath">getPackagePath()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_getResourcesPath">getResourcesPath()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_isObjectManagementEnabled">isObjectManagementEnabled()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_isPathAutoloadEntryPoint">isPathAutoloadEntryPoint()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_isProtected">isProtected()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_normalizeAutoloadPath">normalizeAutoloadPath()</a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#_setProtected">setProtected()</a></code>
+				<code><a href="class-Neos.Flow.Package.Package.html#_getResourcesPath">getResourcesPath()</a></code>
+			</p>
+		</div>
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Package.GenericPackage.html#methods">Neos\Flow\Package\GenericPackage</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#___construct">__construct()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_explodeAutoloadConfiguration">explodeAutoloadConfiguration()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getAutoloadConfiguration">getAutoloadConfiguration()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getAutoloadPaths">getAutoloadPaths()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getAutoloadTypes">getAutoloadTypes()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getClassFiles">getClassFiles()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getClassesInNormalizedAutoloadPath">getClassesInNormalizedAutoloadPath()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getComposerManifest">getComposerManifest()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getComposerName">getComposerName()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getFlattenedAutoloadConfiguration">getFlattenedAutoloadConfiguration()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getInstalledVersion">getInstalledVersion()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getNamespaces">getNamespaces()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getPackageKey">getPackageKey()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_getPackagePath">getPackagePath()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_isPathAutoloadEntryPoint">isPathAutoloadEntryPoint()</a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#_normalizeAutoloadPath">normalizeAutoloadPath()</a></code>
 			</p>
 		</div>
 
@@ -971,14 +986,19 @@
 		</div>
 
 		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Constants inherited from <a href="class-Neos.Flow.Package.FlowPackageInterface.html#constants">Neos\Flow\Package\FlowPackageInterface</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Flow.Package.FlowPackageInterface.html#DIRECTORY_CLASSES"><b>DIRECTORY_CLASSES</b></a></code>, 
+				<code><a href="class-Neos.Flow.Package.FlowPackageInterface.html#DIRECTORY_CONFIGURATION"><b>DIRECTORY_CONFIGURATION</b></a></code>, 
+				<code><a href="class-Neos.Flow.Package.FlowPackageInterface.html#DIRECTORY_RESOURCES"><b>DIRECTORY_RESOURCES</b></a></code>, 
+				<code><a href="class-Neos.Flow.Package.FlowPackageInterface.html#DIRECTORY_TESTS_FUNCTIONAL"><b>DIRECTORY_TESTS_FUNCTIONAL</b></a></code>, 
+				<code><a href="class-Neos.Flow.Package.FlowPackageInterface.html#DIRECTORY_TESTS_UNIT"><b>DIRECTORY_TESTS_UNIT</b></a></code>
+			</p>
+		</div>
+		<div class="panel panel-default">
             <div class="panel-heading"><h3>Constants inherited from <a href="class-Neos.Flow.Package.PackageInterface.html#constants">Neos\Flow\Package\PackageInterface</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Flow.Package.PackageInterface.html#DEFAULT_COMPOSER_TYPE"><b>DEFAULT_COMPOSER_TYPE</b></a></code>, 
-				<code><a href="class-Neos.Flow.Package.PackageInterface.html#DIRECTORY_CLASSES"><b>DIRECTORY_CLASSES</b></a></code>, 
-				<code><a href="class-Neos.Flow.Package.PackageInterface.html#DIRECTORY_CONFIGURATION"><b>DIRECTORY_CONFIGURATION</b></a></code>, 
-				<code><a href="class-Neos.Flow.Package.PackageInterface.html#DIRECTORY_RESOURCES"><b>DIRECTORY_RESOURCES</b></a></code>, 
-				<code><a href="class-Neos.Flow.Package.PackageInterface.html#DIRECTORY_TESTS_FUNCTIONAL"><b>DIRECTORY_TESTS_FUNCTIONAL</b></a></code>, 
-				<code><a href="class-Neos.Flow.Package.PackageInterface.html#DIRECTORY_TESTS_UNIT"><b>DIRECTORY_TESTS_UNIT</b></a></code>, 
 				<code><a href="class-Neos.Flow.Package.PackageInterface.html#PATTERN_MATCH_PACKAGEKEY"><b>PATTERN_MATCH_PACKAGEKEY</b></a></code>
 			</p>
 		</div>
@@ -990,18 +1010,15 @@
 		</div>
 
 		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Package.Package.html#properties">Neos\Flow\Package\Package</a></h3></div>
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Package.GenericPackage.html#properties">Neos\Flow\Package\GenericPackage</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Neos.Flow.Package.Package.html#$autoloadConfiguration"><var>$autoloadConfiguration</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$autoloadTypes"><var>$autoloadTypes</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$composerName"><var>$composerName</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$flattenedAutoloadConfiguration"><var>$flattenedAutoloadConfiguration</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$namespace"><var>$namespace</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$namespaces"><var>$namespaces</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$objectManagementEnabled"><var>$objectManagementEnabled</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$packageKey"><var>$packageKey</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$packagePath"><var>$packagePath</var></a></code>, 
-				<code><a href="class-Neos.Flow.Package.Package.html#$protected"><var>$protected</var></a></code>
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$autoloadConfiguration"><var>$autoloadConfiguration</var></a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$autoloadTypes"><var>$autoloadTypes</var></a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$composerName"><var>$composerName</var></a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$flattenedAutoloadConfiguration"><var>$flattenedAutoloadConfiguration</var></a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$namespaces"><var>$namespaces</var></a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$packageKey"><var>$packageKey</var></a></code>, 
+				<code><a href="class-Neos.Flow.Package.GenericPackage.html#$packagePath"><var>$packagePath</var></a></code>
 			</p>
 		</div>
 
@@ -1017,6 +1034,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ffd4b2dd3c66acec0c854826e597c8d1d1dfe92b"></script>
+<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
 </body>
 </html>

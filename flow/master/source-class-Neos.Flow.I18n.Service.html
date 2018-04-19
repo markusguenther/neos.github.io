@@ -875,8 +875,8 @@
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
 </span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Cache\Frontend\VariableFrontend;
-</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Package\PackageInterface;
-</span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Package\PackageManagerInterface;
+</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Package\FlowPackageInterface;
+</span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Package\PackageManager;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Utility\Files;
 </span><span id="19" class="l">
 </span><span id="20" class="l"><span class="php-comment">/**
@@ -895,7 +895,7 @@
 </span><span id="33" class="l">
 </span><span id="34" class="l">    <span class="php-comment">/**
 </span></span><span id="35" class="l"><span class="php-comment">     * @Flow\Inject
-</span></span><span id="36" class="l"><span class="php-comment">     * @var PackageManagerInterface
+</span></span><span id="36" class="l"><span class="php-comment">     * @var PackageManager
 </span></span><span id="37" class="l"><span class="php-comment">     */</span>
 </span><span id="38" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$packageManager</span>;
 </span><span id="39" class="l">
@@ -1154,8 +1154,8 @@
 </span><span id="292" class="l">        }
 </span><span id="293" class="l">        <span class="php-var">$blacklistPattern</span> = <span class="php-var">$this</span>-&gt;getScanBlacklistPattern();
 </span><span id="294" class="l">
-</span><span id="295" class="l">        <span class="php-comment">/** @var PackageInterface $activePackage */</span>
-</span><span id="296" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getAvailablePackages() <span class="php-keyword1">as</span> <span class="php-var">$activePackage</span>) {
+</span><span id="295" class="l">        <span class="php-comment">/** @var FlowPackageInterface $activePackage */</span>
+</span><span id="296" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getFlowPackages() <span class="php-keyword1">as</span> <span class="php-var">$activePackage</span>) {
 </span><span id="297" class="l">            <span class="php-var">$packageResourcesPath</span> = Files::getNormalizedPath(<span class="php-var">$activePackage</span>-&gt;getResourcesPath());
 </span><span id="298" class="l">
 </span><span id="299" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$packageResourcesPath</span>)) {
@@ -1213,6 +1213,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ffd4b2dd3c66acec0c854826e597c8d1d1dfe92b"></script>
+<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
 </body>
 </html>

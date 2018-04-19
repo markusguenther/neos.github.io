@@ -830,6 +830,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-Neos.Flow.Package.GenericPackage.html">GenericPackage</a></li>
 				<li><a href="class-Neos.Flow.Package.Package.html">Package</a></li>
 				<li class="active"><a href="class-Neos.Flow.Package.PackageFactory.html">PackageFactory</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageManager.html">PackageManager</a></li>
@@ -838,7 +839,10 @@
 
 			<h3>Interfaces</h3>
 			<ul>
+				<li><a href="class-Neos.Flow.Package.BootablePackageInterface.html">BootablePackageInterface</a></li>
+				<li><a href="class-Neos.Flow.Package.FlowPackageInterface.html">FlowPackageInterface</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageInterface.html">PackageInterface</a></li>
+				<li><a href="class-Neos.Flow.Package.PackageKeyAwareInterface.html">PackageKeyAwareInterface</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageManagerInterface.html">PackageManagerInterface</a></li>
 			</ul>
 
@@ -879,7 +883,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Package.html">Package</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageFactory.html#18-107" title="Go to source code">Neos.Flow/Classes/Package/PackageFactory.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageFactory.html#18-110" title="Go to source code">Neos.Flow/Classes/Package/PackageFactory.php</a>
 		<br>
 	</div>
 
@@ -892,14 +896,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Package.PackageInterface.html">Neos\Flow\Package\PackageInterface</a></code>
+				<code><a href="class-Neos.Flow.Package.PackageInterface.html">Neos\Flow\Package\PackageInterface</a></code>|<code><a href="class-Neos.Flow.Package.PackageKeyAwareInterface.html">Neos\Flow\Package\PackageKeyAwareInterface</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageFactory.html#23-56" title="Go to source code">create</a>( <span>string <var>$packagesBasePath</var></span>, <span>string <var>$packagePath</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$composerName</var></span>, <span>array <var>$autoloadConfiguration</var> = []</span>, <span>array <var>$packageClassInformation</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageFactory.html#23-59" title="Go to source code">create</a>( <span>string <var>$packagesBasePath</var></span>, <span>string <var>$packagePath</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$composerName</var></span>, <span>array <var>$autoloadConfiguration</var> = []</span>, <span>array <var>$packageClassInformation</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns a package instance.</p>
@@ -927,7 +931,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Package.PackageInterface.html">Neos\Flow\Package\PackageInterface</a></code>
+						<code><a href="class-Neos.Flow.Package.PackageInterface.html">Neos\Flow\Package\PackageInterface</a></code>|<code><a href="class-Neos.Flow.Package.PackageKeyAwareInterface.html">Neos\Flow\Package\PackageKeyAwareInterface</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -951,7 +955,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_detectFlowPackageFilePath">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageFactory.html#58-106" title="Go to source code">detectFlowPackageFilePath</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$absolutePackagePath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageFactory.html#61-109" title="Go to source code">detectFlowPackageFilePath</a>( <span>string <var>$packageKey</var></span>, <span>string <var>$absolutePackagePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Detects if the package contains a package file and returns the path and classname.</p>
@@ -1006,6 +1010,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ffd4b2dd3c66acec0c854826e597c8d1d1dfe92b"></script>
+<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
 </body>
 </html>

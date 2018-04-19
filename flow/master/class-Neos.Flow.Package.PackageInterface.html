@@ -830,6 +830,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-Neos.Flow.Package.GenericPackage.html">GenericPackage</a></li>
 				<li><a href="class-Neos.Flow.Package.Package.html">Package</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageFactory.html">PackageFactory</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageManager.html">PackageManager</a></li>
@@ -838,7 +839,10 @@
 
 			<h3>Interfaces</h3>
 			<ul>
+				<li><a href="class-Neos.Flow.Package.BootablePackageInterface.html">BootablePackageInterface</a></li>
+				<li><a href="class-Neos.Flow.Package.FlowPackageInterface.html">FlowPackageInterface</a></li>
 				<li class="active"><a href="class-Neos.Flow.Package.PackageInterface.html">PackageInterface</a></li>
+				<li><a href="class-Neos.Flow.Package.PackageKeyAwareInterface.html">PackageKeyAwareInterface</a></li>
 				<li><a href="class-Neos.Flow.Package.PackageManagerInterface.html">PackageManagerInterface</a></li>
 			</ul>
 
@@ -862,7 +866,7 @@
 
 
 	<div class="description">
-	<p>Interface for a Flow Package class</p>
+	<p>Interface for a basic Package class</p>
 	</div>
 
 
@@ -872,7 +876,8 @@
 	<div>
 		<h3>Direct known implementers</h3>
 		<p class="elementList">
-			<code><a href="class-Neos.Flow.Package.Package.html">Neos\Flow\Package\Package</a></code>
+			<code><a href="class-Neos.Flow.Package.FlowPackageInterface.html">Neos\Flow\Package\FlowPackageInterface</a></code>, 
+			<code><a href="class-Neos.Flow.Package.GenericPackage.html">Neos\Flow\Package\GenericPackage</a></code>
 		</p>
 	</div>
 
@@ -881,6 +886,7 @@
 		<p class="elementList">
 			<code><a href="class-Neos.Eel.Package.html">Neos\Eel\Package</a></code>, 
 			<code><a href="class-Neos.Flow.Package.html">Neos\Flow\Package</a></code>, 
+			<code><a href="class-Neos.Flow.Package.Package.html">Neos\Flow\Package\Package</a></code>, 
 			<code><a href="class-Neos.FluidAdaptor.Package.html">Neos\FluidAdaptor\Package</a></code>, 
 			<code><a href="class-Neos.Kickstarter.Package.html">Neos\Kickstarter\Package</a></code>
 		</p>
@@ -896,7 +902,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageInterface.html#15-137" title="Go to source code">Neos.Flow/Classes/Package/PackageInterface.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Package.PackageInterface.html#14-74" title="Go to source code">Neos.Flow/Classes/Package/PackageInterface.php</a>
 		<br>
 	</div>
 
@@ -905,40 +911,6 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="boot" id="_boot">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_boot">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#32-38" title="Go to source code">boot</a>( <span><code><a href="class-Neos.Flow.Core.Bootstrap.html">Neos\Flow\Core\Bootstrap</a></code> <var>$bootstrap</var></span> )</code>
-
-			<div class="description short">
-				<p>Invokes custom PHP code directly after the package manager has been initialized.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Invokes custom PHP code directly after the package manager has been initialized.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$bootstrap</var></dt>
-						<dd>The current bootstrap</dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getClassFiles" id="_getClassFiles">
 
 			<td class="attributes"><code>
@@ -950,7 +922,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassFiles">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#40-46" title="Go to source code">getClassFiles</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#24-30" title="Go to source code">getClassFiles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the array of filenames of the class files</p>
@@ -975,42 +947,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getPackageKey" id="_getPackageKey">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getPackageKey">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#48-54" title="Go to source code">getPackageKey</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the package key of this package.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the package key of this package.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getComposerName" id="_getComposerName">
 
 			<td class="attributes"><code>
@@ -1022,7 +958,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getComposerName">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#56-62" title="Go to source code">getComposerName</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#32-38" title="Go to source code">getComposerName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the composer name of this package.</p>
@@ -1058,7 +994,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNamespaces">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#64-70" title="Go to source code">getNamespaces</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#40-46" title="Go to source code">getNamespaces</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array of all namespaces declared for this package.</p>
@@ -1083,112 +1019,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="isProtected" id="_isProtected">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_isProtected">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#72-78" title="Go to source code">isProtected</a>( )</code>
-
-			<div class="description short">
-				<p>Tells if this package is protected and therefore cannot be deactivated or deleted</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Tells if this package is protected and therefore cannot be deactivated or deleted</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="isObjectManagementEnabled" id="_isObjectManagementEnabled">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_isObjectManagementEnabled">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#80-85" title="Go to source code">isObjectManagementEnabled</a>( )</code>
-
-			<div class="description short">
-				<p>Tells if files in the Classes directory should be registered and object management enabled for this package.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Tells if files in the Classes directory should be registered and object management enabled for this package.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="setProtected" id="_setProtected">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_setProtected">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#87-94" title="Go to source code">setProtected</a>( <span>boolean <var>$protected</var></span> )</code>
-
-			<div class="description short">
-				<p>Sets the protection flag of the package</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Sets the protection flag of the package</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$protected</var></dt>
-						<dd>TRUE if the package should be protected, otherwise FALSE</dd>
-					</dl></div>
-
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getPackagePath" id="_getPackagePath">
 
 			<td class="attributes"><code>
@@ -1200,7 +1030,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackagePath">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#96-102" title="Go to source code">getPackagePath</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#48-54" title="Go to source code">getPackagePath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the full path to this package's main directory</p>
@@ -1225,78 +1055,6 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getResourcesPath" id="_getResourcesPath">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getResourcesPath">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#104-110" title="Go to source code">getResourcesPath</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the full path to this package's Resources directory</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the full path to this package's Resources directory</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>Path to this package's Resources directory
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getConfigurationPath" id="_getConfigurationPath">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getConfigurationPath">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#112-118" title="Go to source code">getConfigurationPath</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the full path to this package's Configuration directory</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the full path to this package's Configuration directory</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>Path to this package's Configuration directory
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="getInstalledVersion" id="_getInstalledVersion">
 
 			<td class="attributes"><code>
@@ -1308,7 +1066,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInstalledVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#120-126" title="Go to source code">getInstalledVersion</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#57-63" title="Go to source code">getInstalledVersion</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the currently installed version of this package.</p>
@@ -1344,7 +1102,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getComposerManifest">#</a>
-			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#128-136" title="Go to source code">getComposerManifest</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Package.PackageInterface.html#65-73" title="Go to source code">getComposerManifest</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns the composer manifest of this package or
@@ -1394,7 +1152,7 @@ just contents of a specific key of the full configuration.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_PACKAGEKEY.html#22" title="Go to source code"><b>PATTERN_MATCH_PACKAGEKEY</b></a>
+						<a href="source-constant-PATTERN_MATCH_PACKAGEKEY.html#21" title="Go to source code"><b>PATTERN_MATCH_PACKAGEKEY</b></a>
 					</code>
 
 					<div class="description short">
@@ -1413,132 +1171,12 @@ just contents of a specific key of the full configuration.</p>
 					</div>
 				</td>
 			</tr>
-			<tr data-order="DIRECTORY_CLASSES" id="DIRECTORY_CLASSES">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-DIRECTORY_CLASSES.html#24" title="Go to source code"><b>DIRECTORY_CLASSES</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#DIRECTORY_CLASSES" class="anchor">#</a>
-						<code><span class="php-quote">'Classes/'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="DIRECTORY_CONFIGURATION" id="DIRECTORY_CONFIGURATION">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-DIRECTORY_CONFIGURATION.html#25" title="Go to source code"><b>DIRECTORY_CONFIGURATION</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#DIRECTORY_CONFIGURATION" class="anchor">#</a>
-						<code><span class="php-quote">'Configuration/'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="DIRECTORY_TESTS_FUNCTIONAL" id="DIRECTORY_TESTS_FUNCTIONAL">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-DIRECTORY_TESTS_FUNCTIONAL.html#26" title="Go to source code"><b>DIRECTORY_TESTS_FUNCTIONAL</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#DIRECTORY_TESTS_FUNCTIONAL" class="anchor">#</a>
-						<code><span class="php-quote">'Tests/Functional/'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="DIRECTORY_TESTS_UNIT" id="DIRECTORY_TESTS_UNIT">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-DIRECTORY_TESTS_UNIT.html#27" title="Go to source code"><b>DIRECTORY_TESTS_UNIT</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#DIRECTORY_TESTS_UNIT" class="anchor">#</a>
-						<code><span class="php-quote">'Tests/Unit/'</span></code>
-					</div>
-				</td>
-			</tr>
-			<tr data-order="DIRECTORY_RESOURCES" id="DIRECTORY_RESOURCES">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-constant-DIRECTORY_RESOURCES.html#28" title="Go to source code"><b>DIRECTORY_RESOURCES</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#DIRECTORY_RESOURCES" class="anchor">#</a>
-						<code><span class="php-quote">'Resources/'</span></code>
-					</div>
-				</td>
-			</tr>
 			<tr data-order="DEFAULT_COMPOSER_TYPE" id="DEFAULT_COMPOSER_TYPE">
 
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-DEFAULT_COMPOSER_TYPE.html#30" title="Go to source code"><b>DEFAULT_COMPOSER_TYPE</b></a>
+						<a href="source-constant-DEFAULT_COMPOSER_TYPE.html#22" title="Go to source code"><b>DEFAULT_COMPOSER_TYPE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1571,6 +1209,6 @@ just contents of a specific key of the full configuration.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ffd4b2dd3c66acec0c854826e597c8d1d1dfe92b"></script>
+<script src="elementlist.js?4467cb289217d186224e4db1916a916c645b71ca"></script>
 </body>
 </html>
