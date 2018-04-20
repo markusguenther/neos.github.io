@@ -959,7 +959,7 @@
 </span><span id="169" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doDiscardNode(NodeInterface <span class="php-var">$node</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$alreadyDiscardedNodeIdentifiers</span> = [])
 </span><span id="170" class="l">    {
 </span><span id="171" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getWorkspace()-&gt;getBaseWorkspace() === <span class="php-keyword1">null</span>) {
-</span><span id="172" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> WorkspaceException(<span class="php-quote">'Nodes in a in a workspace without a base workspace cannot be discarded.'</span>, <span class="php-num">1395841899</span>);
+</span><span id="172" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> WorkspaceException(<span class="php-quote">'Nodes in a workspace without a base workspace cannot be discarded.'</span>, <span class="php-num">1395841899</span>);
 </span><span id="173" class="l">        }
 </span><span id="174" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getPath() === <span class="php-quote">'/'</span>) {
 </span><span id="175" class="l">            <span class="php-keyword1">return</span>;
