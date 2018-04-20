@@ -1460,7 +1460,7 @@
 </span><span id="604" class="l">    {
 </span><span id="605" class="l">        <span class="php-comment">// Make sure that all configuration types are loaded before writing configuration caches.</span>
 </span><span id="606" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;configurationTypes) <span class="php-keyword1">as</span> <span class="php-var">$configurationType</span>) {
-</span><span id="607" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;configurations[<span class="php-var">$configurationType</span>]) || !<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;configurations[<span class="php-var">$configurationType</span>])) {
+</span><span id="607" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;unprocessedConfiguration[<span class="php-var">$configurationType</span>]) || !<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;unprocessedConfiguration[<span class="php-var">$configurationType</span>])) {
 </span><span id="608" class="l">                <span class="php-var">$this</span>-&gt;loadConfiguration(<span class="php-var">$configurationType</span>, <span class="php-var">$this</span>-&gt;packages);
 </span><span id="609" class="l">            }
 </span><span id="610" class="l">        }
@@ -1748,6 +1748,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?63997938ffe46388284bf2957d783fdb8f43ca76"></script>
+<script src="elementlist.js?e1523744717525d14aa0c972f7359c29bf849f16"></script>
 </body>
 </html>
