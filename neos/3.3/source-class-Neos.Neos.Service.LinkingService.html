@@ -1107,7 +1107,7 @@
 </span><span id="289" class="l">            -&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$resolvedNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="290" class="l">
 </span><span id="291" class="l">        <span class="php-var">$siteNode</span> = <span class="php-var">$resolvedNode</span>-&gt;getContext()-&gt;getCurrentSiteNode();
-</span><span id="292" class="l">        <span class="php-keyword1">if</span> (NodePaths::isSubPathOf(<span class="php-var">$siteNode</span>-&gt;getPath(), <span class="php-var">$resolvedNode</span>-&gt;getPath())) {
+</span><span id="292" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$siteNode</span> <span class="php-keyword1">instanceof</span> NodeInterface &amp;&amp; NodePaths::isSubPathOf(<span class="php-var">$siteNode</span>-&gt;getPath(), <span class="php-var">$resolvedNode</span>-&gt;getPath())) {
 </span><span id="293" class="l">            <span class="php-comment">/** @var Site $site */</span>
 </span><span id="294" class="l">            <span class="php-var">$site</span> = <span class="php-var">$resolvedNode</span>-&gt;getContext()-&gt;getCurrentSite();
 </span><span id="295" class="l">        } <span class="php-keyword1">else</span> {
