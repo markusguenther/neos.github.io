@@ -189,10 +189,6 @@
 						<a href="namespace-Neos.Flow.Configuration.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Configuration.Source.html">
-							Source						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Core.html">
@@ -1158,7 +1154,7 @@
 </span><span id="297" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;request === <span class="php-keyword1">null</span>) {
 </span><span id="298" class="l">            <span class="php-var">$requestHandler</span> = <span class="php-var">$this</span>-&gt;bootstrap-&gt;getActiveRequestHandler();
 </span><span id="299" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$requestHandler</span> <span class="php-keyword1">instanceof</span> HttpRequestHandlerInterface) {
-</span><span id="300" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidRequestHandlerException(<span class="php-quote">'Could not start a session because the currently active request handler (%s) is not an HTTP Request Handler.'</span>, <span class="php-num">1364367520</span>);
+</span><span id="300" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidRequestHandlerException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Could not start a session because the currently active request handler (%s) is not an HTTP Request Handler.'</span>, <span class="php-keyword2">gettype</span>(<span class="php-var">$requestHandler</span>)), <span class="php-num">1364367520</span>);
 </span><span id="301" class="l">            }
 </span><span id="302" class="l">            <span class="php-var">$this</span>-&gt;initializeHttpAndCookie(<span class="php-var">$requestHandler</span>);
 </span><span id="303" class="l">        }
@@ -1674,6 +1670,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
+<script src="elementlist.js?08b978f6642ff8f51411331f75bcb69563e56e4c"></script>
 </body>
 </html>

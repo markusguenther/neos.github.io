@@ -188,10 +188,6 @@
 						<a href="namespace-Neos.Flow.Configuration.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Configuration.Source.html">
-							Source						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Core.html">
@@ -830,11 +826,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html">AbstractExceptionHandler</a></li>
 				<li class="active"><a href="class-Neos.Flow.Error.DebugExceptionHandler.html">DebugExceptionHandler</a></li>
-				<li><a href="class-Neos.Flow.Error.Debugger.html">Debugger</a></li>
 				<li><a href="class-Neos.Flow.Error.ErrorHandler.html">ErrorHandler</a></li>
-				<li><a href="class-Neos.Flow.Error.ProductionExceptionHandler.html">ProductionExceptionHandler</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -869,10 +862,7 @@ information.</p>
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Flow.Error.AbstractExceptionHandler.html"><span>Neos\Flow\Error\AbstractExceptionHandler</span></a>
-			
-			 implements 
-				<a href="class-Neos.Flow.Error.ExceptionHandlerInterface.html"><span>Neos\Flow\Error\ExceptionHandlerInterface</span></a>
+Neos\Flow\Error\AbstractExceptionHandler
 			
 			
 		</dd>
@@ -919,7 +909,7 @@ information.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_echoExceptionWeb">#</a>
-			<code><a href="source-class-Neos.Flow.Error.DebugExceptionHandler.html#54-83" title="Go to source code">echoExceptionWeb</a>( <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.DebugExceptionHandler.html#54-83" title="Go to source code">echoExceptionWeb</a>( <span>Throwable <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Formats and echoes the exception as XHTML.</p>
@@ -932,7 +922,7 @@ information.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$exception</var></dt>
-						<dd>\Exception or \Throwable</dd>
+						<dd></dd>
 					</dl></div>
 
 
@@ -953,7 +943,7 @@ information.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderStatically">#</a>
-			<code><a href="source-class-Neos.Flow.Error.DebugExceptionHandler.html#85-152" title="Go to source code">renderStatically</a>( <span>integer <var>$statusCode</var></span>, <span>object <var>$exception</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Error.DebugExceptionHandler.html#85-152" title="Go to source code">renderStatically</a>( <span>Neos\Flow\Error\int <var>$statusCode</var></span>, <span>Throwable <var>$exception</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the statically rendered exception message</p>
@@ -968,7 +958,7 @@ information.</p>
 						<dt><var>$statusCode</var></dt>
 						<dd></dd>
 						<dt><var>$exception</var></dt>
-						<dd>\Exception or \Throwable</dd>
+						<dd></dd>
 					</dl></div>
 
 
@@ -981,26 +971,6 @@ information.</p>
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#methods">Neos\Flow\Error\AbstractExceptionHandler</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_applyLegacyViewOptions">applyLegacyViewOptions()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_buildView">buildView()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_echoExceptionCli">echoExceptionCli()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_handleException">handleException()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_injectLogger">injectLogger()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_injectSystemLogger">injectSystemLogger()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_injectThrowableStorage">injectThrowableStorage()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_renderExceptionDetailCli">renderExceptionDetailCli()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_renderNestedExceptonsCli">renderNestedExceptonsCli()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_renderSingleExceptionCli">renderSingleExceptionCli()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_resolveCustomRenderingOptions">resolveCustomRenderingOptions()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_resolveRenderingGroup">resolveRenderingGroup()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_setOptions">setOptions()</a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#_splitExceptionMessage">splitExceptionMessage()</a></code>
-			</p>
-		</div>
 
 
 
@@ -1060,16 +1030,6 @@ EOD</span></code>
 			</table>
 		</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#properties">Neos\Flow\Error\AbstractExceptionHandler</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#$logger"><var>$logger</var></a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#$options"><var>$options</var></a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#$renderingOptions"><var>$renderingOptions</var></a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#$systemLogger"><var><span class="deprecated">$systemLogger</span></var></a></code>, 
-				<code><a href="class-Neos.Flow.Error.AbstractExceptionHandler.html#$throwableStorage"><var>$throwableStorage</var></a></code>
-			</p>
-		</div>
 
 
 
@@ -1083,6 +1043,6 @@ EOD</span></code>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
+<script src="elementlist.js?08b978f6642ff8f51411331f75bcb69563e56e4c"></script>
 </body>
 </html>

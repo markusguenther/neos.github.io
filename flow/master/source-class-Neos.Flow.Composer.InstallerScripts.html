@@ -189,10 +189,6 @@
 						<a href="namespace-Neos.Flow.Configuration.Exception.html">
 							Exception						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Flow.Configuration.Source.html">
-							Source						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.Core.html">
@@ -831,7 +827,6 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.Composer.ComposerUtility.html">ComposerUtility</a></li>
 				<li><a href="class-Neos.Flow.Composer.InstallerScripts.html">InstallerScripts</a></li>
 			</ul>
 
@@ -968,7 +963,7 @@
 </span></span><span id="113" class="l"><span class="php-comment">     * @param string $installerResourcesDirectory Path to the installer directory that contains the Distribution/Essentials and/or Distribution/Defaults directories.
 </span></span><span id="114" class="l"><span class="php-comment">     * @return void
 </span></span><span id="115" class="l"><span class="php-comment">     */</span>
-</span><span id="116" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> copyDistributionFiles(<span class="php-var">$installerResourcesDirectory</span>)
+</span><span id="116" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> copyDistributionFiles(string <span class="php-var">$installerResourcesDirectory</span>)
 </span><span id="117" class="l">    {
 </span><span id="118" class="l">        <span class="php-var">$essentialsPath</span> = <span class="php-var">$installerResourcesDirectory</span> . <span class="php-quote">'Distribution/Essentials'</span>;
 </span><span id="119" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$essentialsPath</span>)) {
@@ -988,7 +983,7 @@
 </span></span><span id="133" class="l"><span class="php-comment">     * @return void
 </span></span><span id="134" class="l"><span class="php-comment">     * @throws Exception\InvalidConfigurationException
 </span></span><span id="135" class="l"><span class="php-comment">     */</span>
-</span><span id="136" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> runPackageScripts(<span class="php-var">$staticMethodReference</span>)
+</span><span id="136" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> runPackageScripts(string <span class="php-var">$staticMethodReference</span>)
 </span><span id="137" class="l">    {
 </span><span id="138" class="l">        <span class="php-var">$className</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$staticMethodReference</span>, <span class="php-num">0</span>, <span class="php-keyword2">strpos</span>(<span class="php-var">$staticMethodReference</span>, <span class="php-quote">'::'</span>));
 </span><span id="139" class="l">        <span class="php-var">$methodName</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$staticMethodReference</span>, <span class="php-keyword2">strpos</span>(<span class="php-var">$staticMethodReference</span>, <span class="php-quote">'::'</span>) + <span class="php-num">2</span>);
@@ -1011,6 +1006,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?13ce400dce88dd1bca958d55a82562e5d98373f9"></script>
+<script src="elementlist.js?08b978f6642ff8f51411331f75bcb69563e56e4c"></script>
 </body>
 </html>
