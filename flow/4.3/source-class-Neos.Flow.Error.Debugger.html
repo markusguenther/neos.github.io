@@ -1449,15 +1449,15 @@
 </span><span id="582" class="l">    }
 </span><span id="583" class="l">    Debugger::clearState();
 </span><span id="584" class="l">
-</span><span id="585" class="l">    <span class="php-keyword1">if</span> (!<span class="php-var">$plaintext</span> &amp;&amp; Debugger::<span class="php-var">$stylesheetEchoed</span> === <span class="php-keyword1">false</span>) {
-</span><span id="586" class="l">        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;style type=&quot;text/css&quot;&gt;'</span> . <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'resource://Neos.Flow/Public/Error/Debugger.css'</span>) . <span class="php-quote">'&lt;/style&gt;'</span>;
-</span><span id="587" class="l">        Debugger::<span class="php-var">$stylesheetEchoed</span> = <span class="php-keyword1">true</span>;
-</span><span id="588" class="l">    }
-</span><span id="589" class="l">
-</span><span id="590" class="l">    <span class="php-keyword1">if</span> (<span class="php-var">$plaintext</span>) {
-</span><span id="591" class="l">        <span class="php-var">$output</span> = <span class="php-var">$title</span> . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>) . Debugger::renderDump(<span class="php-var">$variable</span>, <span class="php-num">0</span>, <span class="php-keyword1">true</span>, <span class="php-var">$ansiColors</span>) . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>) . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>);
-</span><span id="592" class="l">    } <span class="php-keyword1">else</span> {
-</span><span id="593" class="l">        <span class="php-var">$output</span> = <span class="php-quote">'
+</span><span id="585" class="l">    <span class="php-keyword1">if</span> (<span class="php-var">$plaintext</span>) {
+</span><span id="586" class="l">        <span class="php-var">$output</span> = <span class="php-var">$title</span> . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>) . Debugger::renderDump(<span class="php-var">$variable</span>, <span class="php-num">0</span>, <span class="php-keyword1">true</span>, <span class="php-var">$ansiColors</span>) . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>) . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>);
+</span><span id="587" class="l">    } <span class="php-keyword1">else</span> {
+</span><span id="588" class="l">        <span class="php-var">$output</span> = <span class="php-quote">''</span>;
+</span><span id="589" class="l">        <span class="php-keyword1">if</span> (Debugger::<span class="php-var">$stylesheetEchoed</span> === <span class="php-keyword1">false</span>) {
+</span><span id="590" class="l">            <span class="php-var">$output</span> .= <span class="php-quote">'&lt;style type=&quot;text/css&quot;&gt;'</span> . <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'resource://Neos.Flow/Public/Error/Debugger.css'</span>) . <span class="php-quote">'&lt;/style&gt;'</span>;
+</span><span id="591" class="l">            Debugger::<span class="php-var">$stylesheetEchoed</span> = <span class="php-keyword1">true</span>;
+</span><span id="592" class="l">        }
+</span><span id="593" class="l">        <span class="php-var">$output</span> .= <span class="php-quote">'
 </span></span><span id="594" class="l"><span class="php-quote">            &lt;div class=&quot;Flow-Error-Debugger-VarDump '</span> . (<span class="php-var">$return</span> ? <span class="php-quote">'Flow-Error-Debugger-VarDump-Inline'</span> : <span class="php-quote">'Flow-Error-Debugger-VarDump-Floating'</span>) . <span class="php-quote">'&quot;&gt;
 </span></span><span id="595" class="l"><span class="php-quote">                &lt;div class=&quot;Flow-Error-Debugger-VarDump-Top&quot;&gt;
 </span></span><span id="596" class="l"><span class="php-quote">                    '</span> . <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$title</span>) . <span class="php-quote">'
