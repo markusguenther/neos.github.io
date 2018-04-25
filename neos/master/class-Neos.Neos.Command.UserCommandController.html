@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -803,7 +852,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Command.UserCommandController.html#24-356" title="Go to source code">Neos.Neos/Classes/Command/UserCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Command.UserCommandController.html#24-403" title="Go to source code">Neos.Neos/Classes/Command/UserCommandController.php</a>
 		<br>
 	</div>
 
@@ -952,14 +1001,14 @@ Neos, the role namespace "Neos.Neos:" can be omitted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#152-184" title="Go to source code">deleteCommand</a>( <span>string <var>$username</var></span>, <span>boolean <var>$assumeYes</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#152-192" title="Go to source code">deleteCommand</a>( <span>string <var>$username</var></span>, <span>boolean <var>$assumeYes</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Delete a user</p>
+				<p>Delete a user (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Delete a user</p>
+				<p>Delete a user (with globbing)</p>
 
 <p>This command deletes an existing Neos user. All content and data directly related to this user, including but
 not limited to draft workspace contents, will be removed as well.</p>
@@ -975,7 +1024,7 @@ related accounts will be deleted.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$username</var></dt>
-						<dd>The username of the user to be removed</dd>
+						<dd>The username of the user to be removed (globbing is supported)</dd>
 						<dt><var>$assumeYes</var></dt>
 						<dd>Assume "yes" as the answer to the confirmation dialog</dd>
 						<dt><var>$authenticationProvider</var></dt>
@@ -1000,14 +1049,14 @@ related accounts will be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#186-205" title="Go to source code">activateCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#194-220" title="Go to source code">activateCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Activate a user</p>
+				<p>Activate a user (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Activate a user</p>
+				<p>Activate a user (with globbing)</p>
 
 <p>This command reactivates possibly expired accounts for the given user.</p>
 
@@ -1019,7 +1068,7 @@ found.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$username</var></dt>
-						<dd>The username of the user to be activated.</dd>
+						<dd>The username of the user to be activated (globbing is supported)</dd>
 						<dt><var>$authenticationProvider</var></dt>
 						<dd>Name of the authentication provider to use for finding the user. Example: "Neos.Neos:Backend"</dd>
 					</dl></div>
@@ -1042,14 +1091,14 @@ found.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#207-226" title="Go to source code">deactivateCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#222-248" title="Go to source code">deactivateCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Deactivate a user</p>
+				<p>Deactivate a user (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Deactivate a user</p>
+				<p>Deactivate a user (with globbing)</p>
 
 <p>This command deactivates a user by flagging all of its accounts as expired.</p>
 
@@ -1061,7 +1110,7 @@ found.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$username</var></dt>
-						<dd>The username of the user to be deactivated.</dd>
+						<dd>The username of the user to be deactivated (globbing is supported)</dd>
 						<dt><var>$authenticationProvider</var></dt>
 						<dd>Name of the authentication provider to use for finding the user. Example: "Neos.Neos:Backend"</dd>
 					</dl></div>
@@ -1084,7 +1133,7 @@ found.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPasswordCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#228-247" title="Go to source code">setPasswordCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#250-273" title="Go to source code">setPasswordCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Set a new password for the given user</p>
@@ -1128,7 +1177,7 @@ related to the given provider.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addRoleCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#249-280" title="Go to source code">addRoleCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$role</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#275-313" title="Go to source code">addRoleCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$role</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Add a role to a user</p>
@@ -1150,7 +1199,7 @@ existing accounts related to that user, regardless of its authentication provide
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$username</var></dt>
-						<dd>The username of the user</dd>
+						<dd>The username of the user (globbing is supported)</dd>
 						<dt><var>$role</var></dt>
 						<dd>Role to be added to the user, for example "Neos.Neos:Administrator" or just "Administrator"</dd>
 						<dt><var>$authenticationProvider</var></dt>
@@ -1175,7 +1224,7 @@ existing accounts related to that user, regardless of its authentication provide
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeRoleCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#282-310" title="Go to source code">removeRoleCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$role</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#315-350" title="Go to source code">removeRoleCommand</a>( <span>string <var>$username</var></span>, <span>string <var>$role</var></span>, <span>string <var>$authenticationProvider</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Remove a role from a user</p>
@@ -1194,7 +1243,7 @@ existing accounts related to that user, regardless of its authentication provide
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$username</var></dt>
-						<dd>The username of the user</dd>
+						<dd>The username of the user (globbing is supported)</dd>
 						<dt><var>$role</var></dt>
 						<dd>Role to be removed from the user, for example "Neos.Neos:Administrator" or just "Administrator"</dd>
 						<dt><var>$authenticationProvider</var></dt>
@@ -1208,44 +1257,40 @@ existing accounts related to that user, regardless of its authentication provide
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getUserOrFail" id="_getUserOrFail">
+		<tr data-order="findUsersByUsernamePattern" id="_findUsersByUsernamePattern">
 
 			<td class="attributes"><code>
 				 protected 
-				<code><a href="class-Neos.Neos.Domain.Model.User.html">Neos\Neos\Domain\Model\User</a></code>
+				array&lt;User&gt;
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getUserOrFail">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#312-328" title="Go to source code">getUserOrFail</a>( <span>string <var>$username</var></span>, <span>string <var>$authenticationProviderName</var></span> )</code>
+			<a class="anchor" href="#_findUsersByUsernamePattern">#</a>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#352-375" title="Go to source code">findUsersByUsernamePattern</a>( <span>string <var>$usernamePattern</var></span>, <span>string <var>$authenticationProviderName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Retrieves the given user or fails by exiting with code 1 and a message</p>
+				<p>Find all users the match the given username with globbing support</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Retrieves the given user or fails by exiting with code 1 and a message</p>
+				<p>Find all users the match the given username with globbing support</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$username</var></dt>
-						<dd>Username of the user to find</dd>
+						<dt><var>$usernamePattern</var></dt>
+						<dd>pattern for the username of the users to find</dd>
 						<dt><var>$authenticationProviderName</var></dt>
 						<dd>Name of the authentication provider to use</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Neos.Domain.Model.User.html">Neos\Neos\Domain\Model\User</a></code><br>The user
+						array&lt;User&gt;
 					</div>
 
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Neos.Domain.Exception.html">Neos\Neos\Domain\Exception</a></code>
-					</div>
 
 
 
@@ -1263,7 +1308,7 @@ existing accounts related to that user, regardless of its authentication provide
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTableRowForUser">#</a>
-			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#330-355" title="Go to source code">getTableRowForUser</a>( <span><code><a href="class-Neos.Neos.Domain.Model.User.html">Neos\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.UserCommandController.html#377-402" title="Go to source code">getTableRowForUser</a>( <span><code><a href="class-Neos.Neos.Domain.Model.User.html">Neos\Neos\Domain\Model\User</a></code> <var>$user</var></span> )</code>
 
 			<div class="description short">
 				<p>Prepares a table row for output with data of the given User</p>
@@ -1379,6 +1424,6 @@ existing accounts related to that user, regardless of its authentication provide
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

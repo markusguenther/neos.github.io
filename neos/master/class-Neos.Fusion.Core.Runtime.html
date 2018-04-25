@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -803,7 +852,7 @@ these, it must call popContext() to reset the context to the last state.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Fusion.html">Fusion</a>\<a href="namespace-Neos.Fusion.Core.html">Core</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Runtime.html#32-995" title="Go to source code">Neos.Fusion/Classes/Core/Runtime.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Runtime.html#32-945" title="Go to source code">Neos.Fusion/Classes/Core/Runtime.php</a>
 		<br>
 	</div>
 
@@ -1442,56 +1491,6 @@ and has an implementation.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="prepareContextForTypoScriptObject" id="_prepareContextForTypoScriptObject">
-
-			<td class="attributes"><code>
-				 protected 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_prepareContextForTypoScriptObject">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Fusion.Core.Runtime.html#485-499" title="Go to source code">prepareContextForTypoScriptObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$fusionObject</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span>, <span>array <var>$cacheContext</var></span> )</code>
-
-			<div class="description short">
-				<p>Possibly prepares a new context for the current FusionObject and cache context and pushes it to the stack.
-Returns if a new context was pushed to the stack or not.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Possibly prepares a new context for the current FusionObject and cache context and pushes it to the stack.
-Returns if a new context was pushed to the stack or not.</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							with 3.0 will be removed with 4.0<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$fusionObject</var></dt>
-						<dd></dd>
-						<dt><var>$fusionPath</var></dt>
-						<dd></dd>
-						<dt><var>$fusionConfiguration</var></dt>
-						<dd></dd>
-						<dt><var>$cacheContext</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="prepareContextForFusionObject" id="_prepareContextForFusionObject">
 
 			<td class="attributes"><code>
@@ -1503,7 +1502,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareContextForFusionObject">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#501-536" title="Go to source code">prepareContextForFusionObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$fusionObject</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span>, <span>array <var>$cacheContext</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#485-524" title="Go to source code">prepareContextForFusionObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$fusionObject</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span>, <span>array <var>$cacheContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Possibly prepares a new context for the current FusionObject and cache context and pushes it to the stack.
@@ -1532,6 +1531,13 @@ Returns if a new context was pushed to the stack or not.</p>
 						boolean
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code><br>
+						<code><a href="class-Neos.Fusion.Exception.RuntimeException.html">Neos\Fusion\Exception\RuntimeException</a></code><br>
+						Neos\Flow\Security\Exception<br>
+						Neos\Flow\Mvc\Exception\StopActionException
+					</div>
 
 
 
@@ -1549,7 +1555,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_finalizePathEvaluation">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#538-552" title="Go to source code">finalizePathEvaluation</a>( <span>array <var>$cacheContext</var></span>, <span>boolean <var>$needToPopContext</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#526-540" title="Go to source code">finalizePathEvaluation</a>( <span>array <var>$cacheContext</var></span>, <span>boolean <var>$needToPopContext</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Ends the evaluation of a fusion path by popping the context stack if needed and leaving the cache context.</p>
@@ -1585,7 +1591,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigurationForPath">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#554-590" title="Go to source code">getConfigurationForPath</a>( <span>string <var>$fusionPath</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#542-578" title="Go to source code">getConfigurationForPath</a>( <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the Fusion Configuration for the given Fusion path</p>
@@ -1627,7 +1633,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchCurrentPathPart">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#592-636" title="Go to source code">matchCurrentPathPart</a>( <span>string <var>$pathPart</var></span>, <span>array <var>$previousConfiguration</var></span>, <span>array <var>&amp; $currentPrototypeDefinitions</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#580-624" title="Go to source code">matchCurrentPathPart</a>( <span>string <var>$pathPart</var></span>, <span>array <var>$previousConfiguration</var></span>, <span>array <var>&amp; $currentPrototypeDefinitions</var></span> )</code>
 
 			<div class="description short">
 				<p>Matches the current path segment and prepares the configuration.</p>
@@ -1673,7 +1679,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mergePrototypesWithConfigurationForPathSegment">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#638-682" title="Go to source code">mergePrototypesWithConfigurationForPathSegment</a>( <span>array <var>$configuration</var></span>, <span>array <var>&amp; $currentPrototypeDefinitions</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#626-670" title="Go to source code">mergePrototypesWithConfigurationForPathSegment</a>( <span>array <var>$configuration</var></span>, <span>array <var>&amp; $currentPrototypeDefinitions</var></span> )</code>
 
 			<div class="description short">
 				<p>Merges the prototype chain into the configuration.</p>
@@ -1706,54 +1712,6 @@ Returns if a new context was pushed to the stack or not.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="instantiateTypoScriptObject" id="_instantiateTypoScriptObject">
-
-			<td class="attributes"><code>
-				 protected 
-				<code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_instantiateTypoScriptObject">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Fusion.Core.Runtime.html#684-696" title="Go to source code">instantiateTypoScriptObject</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span> )</code>
-
-			<div class="description short">
-				<p>Instantiates a Fusion object specified by the given path and configuration</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Instantiates a Fusion object specified by the given path and configuration</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							with 3.0 will be removed with 4.0<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$fusionPath</var></dt>
-						<dd>Path to the configuration for this object instance</dd>
-						<dt><var>$fusionConfiguration</var></dt>
-						<dd>Configuration at the given path</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code>
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code>
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="instantiateFusionObject" id="_instantiateFusionObject">
 
 			<td class="attributes"><code>
@@ -1765,7 +1723,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_instantiateFusionObject">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#698-734" title="Go to source code">instantiateFusionObject</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#672-708" title="Go to source code">instantiateFusionObject</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Instantiates a Fusion object specified by the given path and configuration</p>
@@ -1792,48 +1750,6 @@ Returns if a new context was pushed to the stack or not.</p>
 					<div class="list">
 						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code>
 					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="isArrayTypoScriptObject" id="_isArrayTypoScriptObject">
-
-			<td class="attributes"><code>
-				 protected 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_isArrayTypoScriptObject">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Fusion.Core.Runtime.html#736-746" title="Go to source code">isArrayTypoScriptObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$fusionObject</var></span> )</code>
-
-			<div class="description short">
-				<p>Check if the given object is an array like object that should get all properties set to iterate or process internally.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Check if the given object is an array like object that should get all properties set to iterate or process internally.</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							with 3.0 will be removed with 4.0<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$fusionObject</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean
-					</div>
-
 
 
 
@@ -1851,7 +1767,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isArrayFusionObject">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#748-757" title="Go to source code">isArrayFusionObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$fusionObject</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#710-719" title="Go to source code">isArrayFusionObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$fusionObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if the given object is an array like object that should get all properties set to iterate or process internally.</p>
@@ -1889,7 +1805,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasExpressionOrValue">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#759-768" title="Go to source code">hasExpressionOrValue</a>( <span>array <var>$fusionConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#721-730" title="Go to source code">hasExpressionOrValue</a>( <span>array <var>$fusionConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Does the given Fusion configuration array hold an EEL expression or simple value.</p>
@@ -1916,46 +1832,6 @@ Returns if a new context was pushed to the stack or not.</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="setPropertiesOnTypoScriptObject" id="_setPropertiesOnTypoScriptObject">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_setPropertiesOnTypoScriptObject">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Fusion.Core.Runtime.html#770-781" title="Go to source code">setPropertiesOnTypoScriptObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractArrayFusionObject.html">Neos\Fusion\FusionObjects\AbstractArrayFusionObject</a></code> <var>$fusionObject</var></span>, <span>array <var>$fusionConfiguration</var></span> )</code>
-
-			<div class="description short">
-				<p>Set options on the given (AbstractArray)Fusion object</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Set options on the given (AbstractArray)Fusion object</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							with 3.0 will be removed with 4.0<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$fusionObject</var></dt>
-						<dd></dd>
-						<dt><var>$fusionConfiguration</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="setPropertiesOnFusionObject" id="_setPropertiesOnFusionObject">
 
 			<td class="attributes"><code>
@@ -1967,7 +1843,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPropertiesOnFusionObject">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#783-800" title="Go to source code">setPropertiesOnFusionObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractArrayFusionObject.html">Neos\Fusion\FusionObjects\AbstractArrayFusionObject</a></code> <var>$fusionObject</var></span>, <span>array <var>$fusionConfiguration</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#732-749" title="Go to source code">setPropertiesOnFusionObject</a>( <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractArrayFusionObject.html">Neos\Fusion\FusionObjects\AbstractArrayFusionObject</a></code> <var>$fusionObject</var></span>, <span>array <var>$fusionConfiguration</var></span> )</code>
 
 			<div class="description short">
 				<p>Set options on the given (AbstractArray)Fusion object</p>
@@ -2003,7 +1879,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateEelExpressionOrSimpleValueWithProcessor">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#802-822" title="Go to source code">evaluateEelExpressionOrSimpleValueWithProcessor</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$valueConfiguration</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#751-772" title="Go to source code">evaluateEelExpressionOrSimpleValueWithProcessor</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$valueConfiguration</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate a simple value or eel expression with processors</p>
@@ -2028,6 +1904,10 @@ Returns if a new context was pushed to the stack or not.</p>
 						mixed<br>The result of the evaluation
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code>
+					</div>
 
 
 
@@ -2045,7 +1925,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateEelExpression">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#824-851" title="Go to source code">evaluateEelExpression</a>( <span>string <var>$expression</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#774-801" title="Go to source code">evaluateEelExpression</a>( <span>string <var>$expression</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an Eel expression</p>
@@ -2089,7 +1969,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateProcessors">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#853-886" title="Go to source code">evaluateProcessors</a>( <span>mixed <var>$valueToProcess</var></span>, <span>array <var>$configurationWithEventualProcessors</var></span>, <span>string <var>$fusionPath</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#803-836" title="Go to source code">evaluateProcessors</a>( <span>mixed <var>$valueToProcess</var></span>, <span>array <var>$configurationWithEventualProcessors</var></span>, <span>string <var>$fusionPath</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate processors on given value.</p>
@@ -2133,7 +2013,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateIfCondition">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#888-908" title="Go to source code">evaluateIfCondition</a>( <span>array <var>$configurationWithEventualIf</var></span>, <span>string <var>$configurationPath</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#838-858" title="Go to source code">evaluateIfCondition</a>( <span>array <var>$configurationWithEventualIf</var></span>, <span>string <var>$configurationPath</var></span>, <span><code><a href="class-Neos.Fusion.FusionObjects.AbstractFusionObject.html">Neos\Fusion\FusionObjects\AbstractFusionObject</a></code> <var>$contextObject</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate eventually existing meta "@if" conditionals inside the given configuration and path.</p>
@@ -2175,7 +2055,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getControllerContext">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#910-918" title="Go to source code">getControllerContext</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#860-868" title="Go to source code">getControllerContext</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the context which has been passed by the currently active MVC Controller</p>
@@ -2208,7 +2088,7 @@ Returns if a new context was pushed to the stack or not.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultContextVariables">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#920-936" title="Go to source code">getDefaultContextVariables</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#870-886" title="Go to source code">getDefaultContextVariables</a>( )</code>
 
 			<div class="description short">
 				<p>Get variables from configuration that should be set in the context by default.
@@ -2243,7 +2123,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_throwExceptionForUnrenderablePathIfNeeded">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#938-966" title="Go to source code">throwExceptionForUnrenderablePathIfNeeded</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span>, <span>string <var>$behaviorIfPathNotFound</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#888-916" title="Go to source code">throwExceptionForUnrenderablePathIfNeeded</a>( <span>string <var>$fusionPath</var></span>, <span>array <var>$fusionConfiguration</var></span>, <span>string <var>$behaviorIfPathNotFound</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks and throws an exception for an unrenderable path.</p>
@@ -2286,7 +2166,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDebugMode">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#968-975" title="Go to source code">setDebugMode</a>( <span>boolean <var>$debugMode</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#918-925" title="Go to source code">setDebugMode</a>( <span>boolean <var>$debugMode</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2320,7 +2200,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isDebugMode">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#977-983" title="Go to source code">isDebugMode</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#927-933" title="Go to source code">isDebugMode</a>( )</code>
 
 			<div class="description short">
 				
@@ -2353,7 +2233,7 @@ For example Eel helpers are made available by this.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setEnableContentCache">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#985-994" title="Go to source code">setEnableContentCache</a>( <span>boolean <var>$flag</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Runtime.html#935-944" title="Go to source code">setEnableContentCache</a>( <span>boolean <var>$flag</var></span> )</code>
 
 			<div class="description short">
 				<p>If the Fusion content cache should be enabled at all</p>
@@ -2816,6 +2696,6 @@ For example Eel helpers are made available by this.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

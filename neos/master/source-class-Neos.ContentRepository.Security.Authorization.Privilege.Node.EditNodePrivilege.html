@@ -245,6 +245,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -316,6 +326,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -339,13 +353,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -374,6 +388,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -408,6 +432,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -718,15 +762,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -748,7 +797,6 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.ContentRepository.Security.Authorization.Privilege.Node.AbstractNodePrivilege.html">AbstractNodePrivilege</a></li>
 				<li><a href="class-Neos.ContentRepository.Security.Authorization.Privilege.Node.AbstractNodePropertyPrivilege.html">AbstractNodePropertyPrivilege</a></li>
 				<li><a href="class-Neos.ContentRepository.Security.Authorization.Privilege.Node.CreateNodePrivilege.html">CreateNodePrivilege</a></li>
 				<li><a href="class-Neos.ContentRepository.Security.Authorization.Privilege.Node.CreateNodePrivilegeContext.html">CreateNodePrivilegeContext</a></li>
@@ -812,8 +860,8 @@
 </span><span id="32" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidPrivilegeTypeException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Privileges of type &quot;%s&quot; only support subjects of type &quot;%s&quot; or &quot;%s&quot;, but we got a subject of type: &quot;%s&quot;.'</span>, EditNodePrivilege::<span class="php-keyword1">class</span>, NodePrivilegeSubject::<span class="php-keyword1">class</span>, MethodPrivilegeSubject::<span class="php-keyword1">class</span>, <span class="php-keyword2">get_class</span>(<span class="php-var">$subject</span>)), <span class="php-num">1417017239</span>);
 </span><span id="33" class="l">        }
 </span><span id="34" class="l">
-</span><span id="35" class="l">        <span class="php-var">$this</span>-&gt;initialize();
-</span><span id="36" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$subject</span> <span class="php-keyword1">instanceof</span> MethodPrivilegeSubject === <span class="php-keyword1">true</span>) {
+</span><span id="35" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$subject</span> <span class="php-keyword1">instanceof</span> MethodPrivilegeSubject === <span class="php-keyword1">true</span>) {
+</span><span id="36" class="l">            <span class="php-var">$this</span>-&gt;initializeMethodPrivilege();
 </span><span id="37" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;methodPrivilege-&gt;matchesSubject(<span class="php-var">$subject</span>) === <span class="php-keyword1">false</span>) {
 </span><span id="38" class="l">                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="39" class="l">            }
@@ -847,6 +895,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

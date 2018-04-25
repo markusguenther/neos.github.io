@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -747,12 +796,12 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Media.Domain.Model.Asset.html">Asset</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.AssetCollection.html">AssetCollection</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.Audio.html">Audio</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.Document.html">Document</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.Image.html">Image</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.ImageVariant.html">ImageVariant</a></li>
+				<li><a href="class-Neos.Media.Domain.Model.ImportedAssetManager.html">ImportedAssetManager</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.Tag.html">Tag</a></li>
 				<li class="active"><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Thumbnail</a></li>
 				<li><a href="class-Neos.Media.Domain.Model.ThumbnailConfiguration.html">ThumbnailConfiguration</a></li>
@@ -772,6 +821,7 @@
 			<h3>Traits</h3>
 			<ul>
 				<li><a href="class-Neos.Media.Domain.Model.DimensionsTrait.html">DimensionsTrait</a></li>
+				<li><a href="class-Neos.Media.Domain.Model.QualityTrait.html">QualityTrait</a></li>
 			</ul>
 
 
@@ -799,7 +849,9 @@
 				<a href="class-Neos.Media.Domain.Model.ImageInterface.html"><span>Neos\Media\Domain\Model\ImageInterface</span></a>
 			
 			 uses 
-					<a href="class-Neos.Media.Domain.Model.DimensionsTrait.html"><span>Neos\Media\Domain\Model\DimensionsTrait</span></a>
+					<a href="class-Neos.Media.Domain.Model.DimensionsTrait.html"><span>Neos\Media\Domain\Model\DimensionsTrait</span></a>, 
+			
+					<a href="class-Neos.Media.Domain.Model.QualityTrait.html"><span>Neos\Media\Domain\Model\QualityTrait</span></a>
 			
 		</dd>
 	</dl>
@@ -825,7 +877,7 @@
 				<p>"configurationhash"})
  }
 )</p><br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#21-214" title="Go to source code">Neos.Media/Classes/Domain/Model/Thumbnail.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#21-224" title="Go to source code">Neos.Media/Classes/Domain/Model/Thumbnail.php</a>
 		<br>
 	</div>
 
@@ -845,7 +897,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#79-91" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$originalAsset</var></span>, <span><code><a href="class-Neos.Media.Domain.Model.ThumbnailConfiguration.html">Neos\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#80-92" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$originalAsset</var></span>, <span><code><a href="class-Neos.Media.Domain.Model.ThumbnailConfiguration.html">Neos\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs a new Thumbnail</p>
@@ -885,7 +937,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#93-107" title="Go to source code">initializeObject</a>( <span>integer <var>$initializationCause</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#94-108" title="Go to source code">initializeObject</a>( <span>integer <var>$initializationCause</var></span> )</code>
 
 			<div class="description short">
 				<p>Initializes this thumbnail</p>
@@ -919,7 +971,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOriginalAsset">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#109-117" title="Go to source code">getOriginalAsset</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#110-118" title="Go to source code">getOriginalAsset</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the Asset this thumbnail is derived from</p>
@@ -952,7 +1004,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setConfiguration">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#119-127" title="Go to source code">setConfiguration</a>( <span><code><a href="class-Neos.Media.Domain.Model.ThumbnailConfiguration.html">Neos\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#120-128" title="Go to source code">setConfiguration</a>( <span><code><a href="class-Neos.Media.Domain.Model.ThumbnailConfiguration.html">Neos\Media\Domain\Model\ThumbnailConfiguration</a></code> <var>$configuration</var></span> )</code>
 
 			<div class="description short">
 				
@@ -986,7 +1038,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigurationValue">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#129-136" title="Go to source code">getConfigurationValue</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#130-137" title="Go to source code">getConfigurationValue</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1024,7 +1076,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResource">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#138-146" title="Go to source code">getResource</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#139-147" title="Go to source code">getResource</a>( )</code>
 
 			<div class="description short">
 				<p>PersistentResource of this thumbnail</p>
@@ -1059,7 +1111,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setResource">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#148-155" title="Go to source code">setResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#149-156" title="Go to source code">setResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1093,7 +1145,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStaticResource">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#157-163" title="Go to source code">getStaticResource</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#158-164" title="Go to source code">getStaticResource</a>( )</code>
 
 			<div class="description short">
 				
@@ -1126,7 +1178,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setStaticResource">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#165-172" title="Go to source code">setStaticResource</a>( <span>string <var>$staticResource</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#166-173" title="Go to source code">setStaticResource</a>( <span>string <var>$staticResource</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1160,7 +1212,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setWidth">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#174-181" title="Go to source code">setWidth</a>( <span>integer <var>$width</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#175-182" title="Go to source code">setWidth</a>( <span>integer <var>$width</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1194,7 +1246,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHeight">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#183-190" title="Go to source code">setHeight</a>( <span>integer <var>$height</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#184-191" title="Go to source code">setHeight</a>( <span>integer <var>$height</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1217,6 +1269,40 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="setQuality" id="_setQuality">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setQuality">#</a>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#193-200" title="Go to source code">setQuality</a>( <span>integer <var>$quality</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$quality</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="refresh" id="_refresh">
 
 			<td class="attributes"><code>
@@ -1228,7 +1314,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_refresh">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#192-200" title="Go to source code">refresh</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#202-210" title="Go to source code">refresh</a>( )</code>
 
 			<div class="description short">
 				<p>Refreshes this asset after the PersistentResource has been modified</p>
@@ -1259,7 +1345,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitThumbnailCreated">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#202-213" title="Go to source code">emitThumbnailCreated</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#212-223" title="Go to source code">emitThumbnailCreated</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a thumbnail was created.</p>
@@ -1319,6 +1405,12 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 				<code><a href="class-Neos.Media.Domain.Model.DimensionsTrait.html#_isOrientationSquare">isOrientationSquare()</a></code>
 			</p>
 		</div>
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods used from <a href="class-Neos.Media.Domain.Model.QualityTrait.html#methods">Neos\Media\Domain\Model\QualityTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Media.Domain.Model.QualityTrait.html#_getQuality">getQuality()</a></code>
+			</p>
+		</div>
 
 
 
@@ -1352,7 +1444,7 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#35-39" title="Go to source code"><var>$generatorStrategy</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#36-40" title="Go to source code"><var>$generatorStrategy</var></a>
 
 				<div class="description short">
 					
@@ -1376,11 +1468,11 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 		<tr data-order="originalAsset" id="$originalAsset">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Media.Domain.Model.Asset.html">Neos\Media\Domain\Model\Asset</a></code>
+				Asset
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#41-46" title="Go to source code"><var>$originalAsset</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#42-47" title="Go to source code"><var>$originalAsset</var></a>
 
 				<div class="description short">
 					
@@ -1412,7 +1504,7 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#48-53" title="Go to source code"><var>$resource</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#49-54" title="Go to source code"><var>$resource</var></a>
 
 				<div class="description short">
 					
@@ -1444,7 +1536,7 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#55-59" title="Go to source code"><var>$staticResource</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#56-60" title="Go to source code"><var>$staticResource</var></a>
 
 				<div class="description short">
 					<p>Supports the 'resource://Package.Key/Public/File' format</p>
@@ -1472,7 +1564,7 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#61-65" title="Go to source code"><var>$configuration</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#62-66" title="Go to source code"><var>$configuration</var></a>
 
 				<div class="description short">
 					
@@ -1500,7 +1592,7 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#67-71" title="Go to source code"><var>$configurationHash</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#68-72" title="Go to source code"><var>$configurationHash</var></a>
 
 				<div class="description short">
 					
@@ -1528,7 +1620,7 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#73-77" title="Go to source code"><var>$async</var></a>
+					<a href="source-class-Neos.Media.Domain.Model.Thumbnail.html#74-78" title="Go to source code"><var>$async</var></a>
 
 				<div class="description short">
 					
@@ -1560,6 +1652,12 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 				<code><a href="class-Neos.Media.Domain.Model.DimensionsTrait.html#$width"><var>$width</var></a></code>
 			</p>
 		</div>
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties used from <a href="class-Neos.Media.Domain.Model.QualityTrait.html#properties">Neos\Media\Domain\Model\QualityTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Media.Domain.Model.QualityTrait.html#$quality"><var>$quality</var></a></code>
+			</p>
+		</div>
 
 
 
@@ -1572,6 +1670,6 @@ Use ThumbnailService::emitThumbnailCreated signal instead.</p><br>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

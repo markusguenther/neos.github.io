@@ -245,6 +245,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -316,6 +326,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -339,13 +353,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -374,6 +388,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -408,6 +432,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -718,15 +762,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -752,7 +801,7 @@
 				<li><a href="class-Neos.Neos.Domain.Service.ContentContext.html">ContentContext</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.ContentContextFactory.html">ContentContextFactory</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.DefaultContentPrototypeGenerator.html">DefaultContentPrototypeGenerator</a></li>
-				<li><a href="class-Neos.Neos.Domain.Service.DefaultDocumentPrototypeGenerator.html">DefaultDocumentPrototypeGenerator</a></li>
+				<li><a href="class-Neos.Neos.Domain.Service.DefaultDocumentPrototypeGenerator.html" class="deprecated">DefaultDocumentPrototypeGenerator</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.DefaultPluginPrototypeGenerator.html">DefaultPluginPrototypeGenerator</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.DefaultPrototypeGenerator.html">DefaultPrototypeGenerator</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.DomainMatchingStrategy.html">DomainMatchingStrategy</a></li>
@@ -762,7 +811,6 @@
 				<li><a href="class-Neos.Neos.Domain.Service.SiteExportService.html">SiteExportService</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.SiteImportService.html">SiteImportService</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.SiteService.html">SiteService</a></li>
-				<li><a href="class-Neos.Neos.Domain.Service.TypoScriptService.html" class="deprecated">TypoScriptService</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.UserInterfaceModeService.html">UserInterfaceModeService</a></li>
 				<li><a href="class-Neos.Neos.Domain.Service.UserService.html">UserService</a></li>
 			</ul>
@@ -930,7 +978,7 @@
 </span></span><span id="141" class="l"><span class="php-comment">     */</span>
 </span><span id="142" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> importFromPackage(<span class="php-var">$packageKey</span>)
 </span><span id="143" class="l">    {
-</span><span id="144" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageActive(<span class="php-var">$packageKey</span>)) {
+</span><span id="144" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-var">$packageKey</span>)) {
 </span><span id="145" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> NeosException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Error: Package &quot;%s&quot; is not active.'</span>, <span class="php-var">$packageKey</span>), <span class="php-num">1384192950</span>);
 </span><span id="146" class="l">        }
 </span><span id="147" class="l">        <span class="php-var">$contentPathAndFilename</span> = <span class="php-keyword2">sprintf</span>(<span class="php-quote">'resource://%s/Private/Content/Sites.xml'</span>, <span class="php-var">$packageKey</span>);
@@ -976,7 +1024,7 @@
 </span><span id="187" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-var">$siteResourcesPackageKey</span>)) {
 </span><span id="188" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> UnknownPackageException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Package &quot;%s&quot; specified in the XML as site resources package does not exist.'</span>, <span class="php-var">$siteResourcesPackageKey</span>), <span class="php-num">1303891443</span>);
 </span><span id="189" class="l">            }
-</span><span id="190" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageActive(<span class="php-var">$siteResourcesPackageKey</span>)) {
+</span><span id="190" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-var">$siteResourcesPackageKey</span>)) {
 </span><span id="191" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidPackageStateException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Package &quot;%s&quot; specified in the XML as site resources package is not active.'</span>, <span class="php-var">$siteResourcesPackageKey</span>), <span class="php-num">1303898135</span>);
 </span><span id="192" class="l">            }
 </span><span id="193" class="l">            <span class="php-var">$site</span>-&gt;setSiteResourcesPackageKey(<span class="php-var">$siteResourcesPackageKey</span>);
@@ -1042,6 +1090,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

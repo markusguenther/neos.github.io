@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -863,7 +912,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getChildNodesForTreeAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#128-140" title="Go to source code">getChildNodesForTreeAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span>string <var>$nodeTypeFilter</var></span>, <span>integer <var>$depth</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$untilNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#128-140" title="Go to source code">getChildNodesForTreeAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>string <var>$nodeTypeFilter</var></span>, <span>integer <var>$depth</var></span>, <span>Neos\ContentRepository\Domain\Model\Node <var>$untilNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Return child nodes of specified node for usage in a TreeLoader</p>
@@ -903,7 +952,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_filterChildNodesForTreeAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#142-170" title="Go to source code">filterChildNodesForTreeAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span>string <var>$term</var></span>, <span>string <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#142-170" title="Go to source code">filterChildNodesForTreeAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>string <var>$term</var></span>, <span>string <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Return child nodes of specified node for usage in a TreeLoader based on filter</p>
@@ -941,7 +990,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#172-193" title="Go to source code">createAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$referenceNode</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#172-193" title="Go to source code">createAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$referenceNode</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a new node</p>
@@ -982,7 +1031,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#195-208" title="Go to source code">createAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$referenceNode</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#195-208" title="Go to source code">createAndRenderAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$referenceNode</var></span>, <span>string <var>$fusionPath</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a new node and renders the node inside the containing content collection.</p>
@@ -1026,7 +1075,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNodeForTheTreeAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#210-223" title="Go to source code">createNodeForTheTreeAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$referenceNode</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#210-223" title="Go to source code">createNodeForTheTreeAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$referenceNode</var></span>, <span>array <var>$nodeData</var></span>, <span>string <var>$position</var></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates a new node and returns tree structure</p>
@@ -1066,7 +1115,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#225-249" title="Go to source code">moveAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#225-249" title="Go to source code">moveAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>Neos\ContentRepository\Domain\Model\Node <var>$targetNode</var></span>, <span>string <var>$position</var></span> )</code>
 
 			<div class="description short">
 				<p>Move $node before, into or after $targetNode</p>
@@ -1107,7 +1156,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#251-264" title="Go to source code">moveAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$fusionPath</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#251-264" title="Go to source code">moveAndRenderAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>Neos\ContentRepository\Domain\Model\Node <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Move the given node before, into or after the target node depending on the given position and renders it's content collection.</p>
@@ -1147,7 +1196,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#266-300" title="Go to source code">copyAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#266-300" title="Go to source code">copyAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>Neos\ContentRepository\Domain\Model\Node <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Copy $node before, into or after $targetNode</p>
@@ -1194,7 +1243,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#302-316" title="Go to source code">copyAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$fusionPath</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#302-316" title="Go to source code">copyAndRenderAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>Neos\ContentRepository\Domain\Model\Node <var>$targetNode</var></span>, <span>string <var>$position</var></span>, <span>string <var>$fusionPath</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Copies the given node before, into or after the target node depending on the given position and renders it's content collection.</p>
@@ -1236,7 +1285,7 @@ because they might be connected to images / resources which need to be updated a
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#318-351" title="Go to source code">updateAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#318-351" title="Go to source code">updateAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the specified node.</p>
@@ -1282,7 +1331,7 @@ This is important to handle renames of nodes correctly.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_updateAndRenderAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#353-363" title="Go to source code">updateAndRenderAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span>, <span>string <var>$fusionPath</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#353-363" title="Go to source code">updateAndRenderAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span>, <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Updates the specified node and renders it's content collection.</p>
@@ -1318,7 +1367,7 @@ This is important to handle renames of nodes correctly.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteAction">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#365-386" title="Go to source code">deleteAction</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Node.html">Neos\ContentRepository\Domain\Model\Node</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Controller.NodeController.html#365-386" title="Go to source code">deleteAction</a>( <span>Neos\ContentRepository\Domain\Model\Node <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Deletes the specified node and all of its sub nodes</p>
@@ -1604,7 +1653,7 @@ link plugins to represent the passed Node instance.</p>
 		<tr data-order="nodeSearchService" id="$nodeSearchService">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Neos.Domain.Service.NodeSearchService.html">Neos\Neos\Domain\Service\NodeSearchService</a></code>
+				<code><a href="class-Neos.Neos.Domain.Service.NodeSearchServiceInterface.html">Neos\Neos\Domain\Service\NodeSearchServiceInterface</a></code>
 			</code></td>
 
 			<td class="name">
@@ -1792,6 +1841,6 @@ link plugins to represent the passed Node instance.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

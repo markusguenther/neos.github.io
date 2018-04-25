@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -787,7 +836,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Fusion.html">Fusion</a>\<a href="namespace-Neos.Fusion.Core.html">Core</a>\<a href="namespace-Neos.Fusion.Core.Cache.html">Cache</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#16-175" title="Go to source code">Neos.Fusion/Classes/Core/Cache/CacheSegmentParser.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#16-310" title="Go to source code">Neos.Fusion/Classes/Core/Cache/CacheSegmentParser.php</a>
 		<br>
 	</div>
 
@@ -796,18 +845,18 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="extractRenderedSegments" id="_extractRenderedSegments">
+		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
 				 public 
-				string
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_extractRenderedSegments">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#31-152" title="Go to source code">extractRenderedSegments</a>( <span>string <var>$content</var></span>, <span>string <var>$randomCacheMarker</var> = <span class="php-quote">''</span></span> )</code>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#56-96" title="Go to source code">__construct</a>( <span>string <var>$content</var></span>, <span>string <var>$randomCacheMarker</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Parses the given content and extracts segments by searching for start end end markers. Those segments can later
@@ -824,20 +873,263 @@ be retrieved via getCacheSegments() and stored in a cache.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$content</var></dt>
-						<dd>The content to process, ie. the rendered content with some segment markers already in place</dd>
+						<dd></dd>
 						<dt><var>$randomCacheMarker</var></dt>
-						<dd>A random cache marker that should be used to "protect" against content containing special characters used to mark cache segments</dd>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseSegment" id="_parseSegment">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseSegment">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#98-175" title="Go to source code">parseSegment</a>( <span>integer <var>$currentPosition</var></span> )</code>
+
+			<div class="description short">
+				<p>Parses a segment at current position diving down into nested segments.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parses a segment at current position diving down into nested segments.</p>
+
+<p>The returned segmentData array has the following keys:
+- identifier -> The identifier of this entry for cached segments (or the eval expression for everything else)
+- type -> The type of segment (one of the ContentCache::SEGMENT_TYPE_* constants)
+- context -> eventual context information saved for a cached segment (optional)
+- metadata -> cache entry metadata like tags
+- content -> the content of this segment including embed code for sub segments
+- cleanContent -> the raw content without any cache references for this segment and all sub segments
+- embed -> the placeholder content for this segment to be used in "content" of parent segments</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$currentPosition</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The outer content with placeholders instead of the actual content segments
+						array
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
 						<code><a href="class-Neos.Fusion.Exception.html">Neos\Fusion\Exception</a></code>
 					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="extractContentAndSubSegments" id="_extractContentAndSubSegments">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_extractContentAndSubSegments">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#177-217" title="Go to source code">extractContentAndSubSegments</a>( <span>integer <var>$currentPosition</var></span>, <span>array <var>$segmentData</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$currentPosition</var></dt>
+						<dd></dd>
+						<dt><var>$segmentData</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="reduceSegmentDataToCacheRelevantInformation" id="_reduceSegmentDataToCacheRelevantInformation">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_reduceSegmentDataToCacheRelevantInformation">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#219-233" title="Go to source code">reduceSegmentDataToCacheRelevantInformation</a>( <span>array <var>$segmentData</var></span> )</code>
+
+			<div class="description short">
+				<p>Make sure that we keep only necessary information for caching and strip all internal segment data.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Make sure that we keep only necessary information for caching and strip all internal segment data.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$segmentData</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="extractContent" id="_extractContent">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_extractContent">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#235-248" title="Go to source code">extractContent</a>( <span>integer <var>$fromPosition</var></span>, <span>integer <var>$toPosition</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fromPosition</var></dt>
+						<dd></dd>
+						<dt><var>$toPosition</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="calculateCurrentPosition" id="_calculateCurrentPosition">
+
+			<td class="attributes"><code>
+				 protected 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_calculateCurrentPosition">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#250-259" title="Go to source code">calculateCurrentPosition</a>( <span>integer <var>$position</var></span> )</code>
+
+			<div class="description short">
+				<p>Calculates a position assuming that the given position is a token followed by the random cache marker</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Calculates a position assuming that the given position is a token followed by the random cache marker</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$position</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="calculateNextTokenPosition" id="_calculateNextTokenPosition">
+
+			<td class="attributes"><code>
+				 protected 
+				integer|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_calculateNextTokenPosition">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#261-271" title="Go to source code">calculateNextTokenPosition</a>( <span>integer <var>$currentPosition</var></span>, <span>string <var>$token</var></span> )</code>
+
+			<div class="description short">
+				<p>Find the next position of the given token (one of the ContentCache::CACHE_SEGMENT_*_TOKEN constants) in the parsed content.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find the next position of the given token (one of the ContentCache::CACHE_SEGMENT_*_TOKEN constants) in the parsed content.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$currentPosition</var></dt>
+						<dd>The position to start searching from</dd>
+						<dt><var>$token</var></dt>
+						<dd>the token to search for (will internally be appeneded by the randomCacheMarker)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer|boolean<br>Position of the token or false if the token was not found
+					</div>
+
 
 
 
@@ -855,7 +1147,7 @@ be retrieved via getCacheSegments() and stored in a cache.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOutput">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#154-163" title="Go to source code">getOutput</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#273-282" title="Go to source code">getOutput</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the fully intact content as originally given to extractRenderedSegments() but without the markers. This
@@ -890,7 +1182,7 @@ content is suitable for being used as output for the user.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheSegments">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#165-174" title="Go to source code">getCacheSegments</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#284-293" title="Go to source code">getCacheSegments</a>( )</code>
 
 			<div class="description short">
 				<p>Returns an array with extracted content segments, including the type (if they can be cached or not) and tags to
@@ -906,6 +1198,72 @@ be used for their entries when the segments are stored in a persistent cache.</p
 					<h4>Returns</h4>
 					<div class="list">
 						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUncachedPartCount" id="_getUncachedPartCount">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUncachedPartCount">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#295-301" title="Go to source code">getUncachedPartCount</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getOuterSegmentContent" id="_getOuterSegmentContent">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getOuterSegmentContent">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#303-309" title="Go to source code">getOuterSegmentContent</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
 					</div>
 
 
@@ -930,6 +1288,56 @@ be used for their entries when the segments are stored in a persistent cache.</p
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="randomCacheMarker" id="$randomCacheMarker">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#21-24" title="Go to source code"><var>$randomCacheMarker</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$randomCacheMarker" class="anchor">#</a>
+					<code><span class="php-quote">''</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="randomCacheMarkerLength" id="$randomCacheMarkerLength">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#26-29" title="Go to source code"><var>$randomCacheMarkerLength</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$randomCacheMarkerLength" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="output" id="$output">
 			<td class="attributes"><code>
 				protected  
@@ -937,7 +1345,7 @@ be used for their entries when the segments are stored in a persistent cache.</p
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#21-24" title="Go to source code"><var>$output</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#31-34" title="Go to source code"><var>$output</var></a>
 
 				<div class="description short">
 					
@@ -951,18 +1359,18 @@ be used for their entries when the segments are stored in a persistent cache.</p
 			<td class="value">
 				<div>
 					<a href="#$output" class="anchor">#</a>
-					<code></code>
+					<code><span class="php-quote">''</span></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="cacheEntries" id="$cacheEntries">
+		<tr data-order="outerSegmentContent" id="$outerSegmentContent">
 			<td class="attributes"><code>
 				protected  
-				array
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#26-29" title="Go to source code"><var>$cacheEntries</var></a>
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#36-39" title="Go to source code"><var>$outerSegmentContent</var></a>
 
 				<div class="description short">
 					
@@ -975,7 +1383,82 @@ be used for their entries when the segments are stored in a persistent cache.</p
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$cacheEntries" class="anchor">#</a>
+					<a href="#$outerSegmentContent" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="cacheSegments" id="$cacheSegments">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#41-44" title="Go to source code"><var>$cacheSegments</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$cacheSegments" class="anchor">#</a>
+					<code>[]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="uncachedPartCount" id="$uncachedPartCount">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#46-49" title="Go to source code"><var>$uncachedPartCount</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$uncachedPartCount" class="anchor">#</a>
+					<code><span class="php-num">0</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="content" id="$content">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Fusion.Core.Cache.CacheSegmentParser.html#51-54" title="Go to source code"><var>$content</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$content" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -996,6 +1479,6 @@ be used for their entries when the segments are stored in a persistent cache.</p
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

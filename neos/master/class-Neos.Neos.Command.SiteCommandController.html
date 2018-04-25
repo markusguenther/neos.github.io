@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -803,7 +852,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Command.SiteCommandController.html#29-381" title="Go to source code">Neos.Neos/Classes/Command/SiteCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Command.SiteCommandController.html#29-399" title="Go to source code">Neos.Neos/Classes/Command/SiteCommandController.php</a>
 		<br>
 	</div>
 
@@ -974,20 +1023,22 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pruneCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#272-292" title="Go to source code">pruneCommand</a>( <span>string <var>$siteNode</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#272-291" title="Go to source code">pruneCommand</a>( <span>string <var>$siteNode</var></span> )</code>
 
 			<div class="description short">
-				<p>Remove all content and related data - for now. In the future we need some more sophisticated cleanup.</p>
+				<p>Remove site with content and related data (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Remove all content and related data - for now. In the future we need some more sophisticated cleanup.</p>
+				<p>Remove site with content and related data (with globbing)</p>
+
+<p>In the future we need some more sophisticated cleanup.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$siteNode</var></dt>
-						<dd>Name of a site root node to clear only content of this site.</dd>
+						<dd>Name for site root nodes to clear only content of this sites (globbing is supported)</dd>
 					</dl></div>
 
 
@@ -1008,7 +1059,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#294-339" title="Go to source code">listCommand</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#293-338" title="Go to source code">listCommand</a>( )</code>
 
 			<div class="description short">
 				<p>List available sites</p>
@@ -1037,14 +1088,14 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#341-360" title="Go to source code">activateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#340-360" title="Go to source code">activateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
 
 			<div class="description short">
-				<p>Activate a site</p>
+				<p>Activate a site (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Activate a site</p>
+				<p>Activate a site (with globbing)</p>
 
 <p>This command activates the specified site.</p>
 
@@ -1052,7 +1103,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$siteNode</var></dt>
-						<dd>The node name of the site to activate</dd>
+						<dd>The node name of the sites to activate (globbing is supported)</dd>
 					</dl></div>
 
 
@@ -1073,14 +1124,14 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#362-380" title="Go to source code">deactivateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#362-382" title="Go to source code">deactivateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
 
 			<div class="description short">
-				<p>Deactivate a site</p>
+				<p>Deactivate a site (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Deactivate a site</p>
+				<p>Deactivate a site (with globbing)</p>
 
 <p>This command deactivates the specified site.</p>
 
@@ -1088,9 +1139,47 @@ assets will be embedded into the XML in base64 encoded form.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$siteNode</var></dt>
-						<dd>The node name of the site to deactivate</dd>
+						<dd>The node name of the sites to deactivate (globbing is supported)</dd>
 					</dl></div>
 
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findSitesByNodeNamePattern" id="_findSitesByNodeNamePattern">
+
+			<td class="attributes"><code>
+				 protected 
+				array&lt;Site&gt;
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findSitesByNodeNamePattern">#</a>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#384-398" title="Go to source code">findSitesByNodeNamePattern</a>( <span>string <var>$siteNodePattern</var></span> )</code>
+
+			<div class="description short">
+				<p>Find all sites the match the given site-node-name-pattern with support for globbing</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find all sites the match the given site-node-name-pattern with support for globbing</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$siteNodePattern</var></dt>
+						<dd>nodeName patterns for sites to find</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array&lt;Site&gt;
+					</div>
 
 
 
@@ -1410,6 +1499,6 @@ assets will be embedded into the XML in base64 encoded form.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

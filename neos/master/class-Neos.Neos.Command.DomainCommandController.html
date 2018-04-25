@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -803,7 +852,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Command.DomainCommandController.html#22-182" title="Go to source code">Neos.Neos/Classes/Command/DomainCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Command.DomainCommandController.html#22-201" title="Go to source code">Neos.Neos/Classes/Command/DomainCommandController.php</a>
 		<br>
 	</div>
 
@@ -897,20 +946,20 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#127-143" title="Go to source code">deleteCommand</a>( <span>string <var>$hostname</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#127-144" title="Go to source code">deleteCommand</a>( <span>string <var>$hostname</var></span> )</code>
 
 			<div class="description short">
-				<p>Delete a domain record by hostname</p>
+				<p>Delete a domain record by hostname (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Delete a domain record by hostname</p>
+				<p>Delete a domain record by hostname (with globbing)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$hostname</var></dt>
-						<dd>The hostname to remove</dd>
+						<dd>The hostname to remove (globbing is supported)</dd>
 					</dl></div>
 
 
@@ -931,20 +980,20 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#145-162" title="Go to source code">activateCommand</a>( <span>string <var>$hostname</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#146-164" title="Go to source code">activateCommand</a>( <span>string <var>$hostname</var></span> )</code>
 
 			<div class="description short">
-				<p>Activate a domain record by hostname</p>
+				<p>Activate a domain record by hostname (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Activate a domain record by hostname</p>
+				<p>Activate a domain record by hostname (with globbing)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$hostname</var></dt>
-						<dd>The hostname to activate</dd>
+						<dd>The hostname to activate (globbing is supported)</dd>
 					</dl></div>
 
 
@@ -965,22 +1014,60 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#164-181" title="Go to source code">deactivateCommand</a>( <span>string <var>$hostname</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#166-184" title="Go to source code">deactivateCommand</a>( <span>string <var>$hostname</var></span> )</code>
 
 			<div class="description short">
-				<p>Deactivate a domain record by hostname</p>
+				<p>Deactivate a domain record by hostname (with globbing)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Deactivate a domain record by hostname</p>
+				<p>Deactivate a domain record by hostname (with globbing)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$hostname</var></dt>
-						<dd>The hostname to deactivate</dd>
+						<dd>The hostname to deactivate (globbing is supported)</dd>
 					</dl></div>
 
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findDomainsByHostnamePattern" id="_findDomainsByHostnamePattern">
+
+			<td class="attributes"><code>
+				 protected 
+				array&lt;Domain&gt;
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findDomainsByHostnamePattern">#</a>
+			<code><a href="source-class-Neos.Neos.Command.DomainCommandController.html#186-200" title="Go to source code">findDomainsByHostnamePattern</a>( <span>string <var>$hostnamePattern</var></span> )</code>
+
+			<div class="description short">
+				<p>Find domains that match the given hostname with globbing support</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find domains that match the given hostname with globbing support</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$hostnamePattern</var></dt>
+						<dd>pattern for the hostname of the domains</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array&lt;Domain&gt;
+					</div>
 
 
 
@@ -1104,6 +1191,6 @@ Neos\Flow\Cli\CommandController
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

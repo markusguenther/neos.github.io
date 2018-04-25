@@ -244,6 +244,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -315,6 +325,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -338,13 +352,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -373,6 +387,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -407,6 +431,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -717,15 +761,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -809,7 +858,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#42-408" title="Go to source code">Neos.Neos/Classes/Controller/Backend/ContentController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#40-408" title="Go to source code">Neos.Neos/Classes/Controller/Backend/ContentController.php</a>
 		<br>
 	</div>
 
@@ -829,7 +878,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeUploadAssetAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#114-124" title="Go to source code">initializeUploadAssetAction</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#106-116" title="Go to source code">initializeUploadAssetAction</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize property mapping as the upload usually comes from the Inspector JavaScript</p>
@@ -858,7 +907,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_uploadAssetAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#126-165" title="Go to source code">uploadAssetAction</a>( <span><code><a href="class-Neos.Media.Domain.Model.Asset.html">Neos\Media\Domain\Model\Asset</a></code> <var>$asset</var></span>, <span>string <var>$metadata</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#118-152" title="Go to source code">uploadAssetAction</a>( <span>Neos\Media\Domain\Model\Asset <var>$asset</var></span>, <span>Neos\Neos\Controller\Backend\string <var>$metadata</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>Neos\Neos\Controller\Backend\string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Upload a new image, and return its metadata.</p>
@@ -870,6 +919,9 @@ Neos\Flow\Mvc\Controller\ActionController
 <p>Depending on the $metadata argument it will return asset metadata for the AssetEditor
 or image metadata for the ImageEditor</p>
 
+<p>Note: This action triggers the AssetUploaded signal that can be used to adjust the asset based on the
+(site) node it was attached to.</p>
+
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -877,6 +929,10 @@ or image metadata for the ImageEditor</p>
 						<dd></dd>
 						<dt><var>$metadata</var></dt>
 						<dd>Type of metadata to return ("Asset" or "Image")</dd>
+						<dt><var>$node</var></dt>
+						<dd>The node the new asset should be assigned to</dd>
+						<dt><var>$propertyName</var></dt>
+						<dd>The node property name the new asset should be assigned to</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -901,7 +957,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeCreateImageVariantAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#167-178" title="Go to source code">initializeCreateImageVariantAction</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#154-165" title="Go to source code">initializeCreateImageVariantAction</a>( )</code>
 
 			<div class="description short">
 				<p>Configure property mapping for adding a new image variant.</p>
@@ -930,7 +986,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createImageVariantAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#180-195" title="Go to source code">createImageVariantAction</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageVariant.html">Neos\Media\Domain\Model\ImageVariant</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#167-182" title="Go to source code">createImageVariantAction</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageVariant.html">Neos\Media\Domain\Model\ImageVariant</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate a new image variant from given data.</p>
@@ -968,7 +1024,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_imageWithMetadataAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#197-210" title="Go to source code">imageWithMetadataAction</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#184-197" title="Go to source code">imageWithMetadataAction</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetch the metadata for a given image</p>
@@ -1006,7 +1062,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImageInterfacePreviewData">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#212-237" title="Go to source code">getImageInterfacePreviewData</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#199-224" title="Go to source code">getImageInterfacePreviewData</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code> <var>$image</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns important meta data for the given object implementing ImageInterface.</p>
@@ -1052,7 +1108,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImagePreviewData">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#239-263" title="Go to source code">getImagePreviewData</a>( <span><code><a href="class-Neos.Media.Domain.Model.Image.html">Neos\Media\Domain\Model\Image</a></code> <var>$image</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#226-250" title="Go to source code">getImagePreviewData</a>( <span><code><a href="class-Neos.Media.Domain.Model.Image.html">Neos\Media\Domain\Model\Image</a></code> <var>$image</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1090,7 +1146,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImageVariantPreviewData">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#265-274" title="Go to source code">getImageVariantPreviewData</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageVariant.html">Neos\Media\Domain\Model\ImageVariant</a></code> <var>$imageVariant</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#252-261" title="Go to source code">getImageVariantPreviewData</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageVariant.html">Neos\Media\Domain\Model\ImageVariant</a></code> <var>$imageVariant</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1128,7 +1184,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeAssetsWithMetadataAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#276-285" title="Go to source code">initializeAssetsWithMetadataAction</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#263-272" title="Go to source code">initializeAssetsWithMetadataAction</a>( )</code>
 
 			<div class="description short">
 				
@@ -1157,7 +1213,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_assetsWithMetadataAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#287-302" title="Go to source code">assetsWithMetadataAction</a>( <span>array <var>$assets</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#274-289" title="Go to source code">assetsWithMetadataAction</a>( <span>array <var>$assets</var></span> )</code>
 
 			<div class="description short">
 				<p>Fetch the metadata for multiple assets</p>
@@ -1195,7 +1251,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAssetProperties">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#304-321" title="Go to source code">getAssetProperties</a>( <span><code><a href="class-Neos.Media.Domain.Model.Asset.html">Neos\Media\Domain\Model\Asset</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#291-308" title="Go to source code">getAssetProperties</a>( <span>Neos\Media\Domain\Model\Asset <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1233,7 +1289,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pluginViewsAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#323-367" title="Go to source code">pluginViewsAction</a>( <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#310-354" title="Go to source code">pluginViewsAction</a>( <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Fetch the configured views for the given master plugin</p>
@@ -1275,7 +1331,7 @@ or image metadata for the ImageEditor</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_masterPluginsAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#369-407" title="Go to source code">masterPluginsAction</a>( <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#356-394" title="Go to source code">masterPluginsAction</a>( <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Fetch all master plugins that are available in the current
@@ -1301,6 +1357,47 @@ workspace.</p>
 					</div>
 
 
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="emitAssetUploaded" id="_emitAssetUploaded">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_emitAssetUploaded">#</a>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#396-407" title="Go to source code">emitAssetUploaded</a>( <span>Neos\Media\Domain\Model\Asset <var>$asset</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>Neos\Neos\Controller\Backend\string <var>$propertyName</var></span> )</code>
+
+			<div class="description short">
+				<p>Signals that a new asset has been uploaded through the Neos Backend</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Signals that a new asset has been uploaded through the Neos Backend</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$asset</var></dt>
+						<dd>The uploaded asset</dd>
+						<dt><var>$node</var></dt>
+						<dd>The node the asset belongs to</dd>
+						<dt><var>$propertyName</var></dt>
+						<dd>The node property name the asset is assigned to</dd>
+					</dl></div>
+
+
+
+					<h4>Flow\signal</h4>
+					<div class="list">
+					</div>
 
 
 			</div>
@@ -1342,7 +1439,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#52-56" title="Go to source code"><var>$assetRepository</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#50-54" title="Go to source code"><var>$assetRepository</var></a>
 
 				<div class="description short">
 					
@@ -1370,7 +1467,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#58-62" title="Go to source code"><var>$imageRepository</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#56-60" title="Go to source code"><var>$imageRepository</var></a>
 
 				<div class="description short">
 					
@@ -1391,62 +1488,6 @@ workspace.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="assetCollectionRepository" id="$assetCollectionRepository">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Repository.AssetCollectionRepository.html">Neos\Media\Domain\Repository\AssetCollectionRepository</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#64-68" title="Go to source code"><var>$assetCollectionRepository</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$assetCollectionRepository" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="siteRepository" id="$siteRepository">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Neos.Domain.Repository.SiteRepository.html">Neos\Neos\Domain\Repository\SiteRepository</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#70-74" title="Go to source code"><var>$siteRepository</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$siteRepository" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="persistenceManager" id="$persistenceManager">
 			<td class="attributes"><code>
 				protected  
@@ -1454,7 +1495,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#76-80" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#62-66" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1482,7 +1523,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#82-86" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#68-72" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1510,7 +1551,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#88-94" title="Go to source code"><var>$pluginService</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#74-80" title="Go to source code"><var>$pluginService</var></a>
 
 				<div class="description short">
 					<p>The pluginService</p>
@@ -1538,7 +1579,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#96-100" title="Go to source code"><var>$imageInterfaceArrayPresenter</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#82-86" title="Go to source code"><var>$imageInterfaceArrayPresenter</var></a>
 
 				<div class="description short">
 					
@@ -1566,7 +1607,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#102-106" title="Go to source code"><var>$entityToIdentityConverter</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#88-92" title="Go to source code"><var>$entityToIdentityConverter</var></a>
 
 				<div class="description short">
 					
@@ -1594,7 +1635,7 @@ workspace.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#108-112" title="Go to source code"><var>$thumbnailService</var></a>
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#94-98" title="Go to source code"><var>$thumbnailService</var></a>
 
 				<div class="description short">
 					
@@ -1615,6 +1656,34 @@ workspace.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="propertyMapper" id="$propertyMapper">
+			<td class="attributes"><code>
+				protected  
+				Neos\Flow\Property\PropertyMapper
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Controller.Backend.ContentController.html#100-104" title="Go to source code"><var>$propertyMapper</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$propertyMapper" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -1630,7 +1699,6 @@ workspace.</p>
             <div class="panel-heading"><h3>Properties used from <a href="class-Neos.Neos.Controller.CreateContentContextTrait.html#properties">Neos\Neos\Controller\CreateContentContextTrait</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Neos.Controller.CreateContentContextTrait.html#$_contextFactory"><var>$_contextFactory</var></a></code>, 
-				<code><a href="class-Neos.Neos.Controller.CreateContentContextTrait.html#$_domainRepository"><var>$_domainRepository</var></a></code>, 
 				<code><a href="class-Neos.Neos.Controller.CreateContentContextTrait.html#$_siteRepository"><var>$_siteRepository</var></a></code>
 			</p>
 		</div>
@@ -1646,6 +1714,6 @@ workspace.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>

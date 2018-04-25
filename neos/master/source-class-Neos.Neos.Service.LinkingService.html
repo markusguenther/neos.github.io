@@ -245,6 +245,16 @@
 							TypeConverter						</a>
 							</li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.ViewHelpers.html">
 							ViewHelpers<span></span>
 						</a>
@@ -316,6 +326,10 @@
 							</li>
 								</ul></li>
 					<li>
+						<a href="namespace-Neos.Fusion.Service.html">
+							Service						</a>
+							</li>
+					<li>
 						<a href="namespace-Neos.Fusion.View.html">
 							View						</a>
 							</li>
@@ -339,13 +353,13 @@
 							Controller						</a>
 							</li>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.html">
-							Domain<span></span>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.html">
+							ViewHelpers<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Media.Browser.Domain.Session.html">
-							Session						</a>
+						<a href="namespace-Neos.Media.Browser.ViewHelpers.Controller.html">
+							Controller						</a>
 							</li>
 								</ul></li></ul></li>
 					<li>
@@ -374,6 +388,16 @@
 						<a href="namespace-Neos.Media.Domain.Model.Adjustment.html">
 							Adjustment						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.html">
+							AssetSource<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Domain.Model.AssetSource.Neos.html">
+							Neos						</a>
+							</li>
+								</ul></li>
 					<li>
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
@@ -408,6 +432,26 @@
 						<a href="namespace-Neos.Media.Imagine.html">
 							Imagine						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Media.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Media.Security.Authorization.Privilege.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.Media.TypeConverter.html">
 							TypeConverter						</a>
@@ -718,15 +762,20 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.html">
+						<a href="namespace-Neos.NodeTypes.Form.html">
+							Form<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.NodeTypes.Form.Service.html">
 							Service<span></span>
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.NodeTypes.Service.DataSource.html">
+						<a href="namespace-Neos.NodeTypes.Form.Service.DataSource.html">
 							DataSource						</a>
 							</li>
-								</ul></li></ul></li>
+								</ul></li></ul></li></ul></li>
 					<li>
 						<a href="namespace-Neos.SiteKickstarter.html">
 							SiteKickstarter<span></span>
@@ -751,7 +800,6 @@
 				<li><a href="class-Neos.Neos.Service.BackendRedirectionService.html">BackendRedirectionService</a></li>
 				<li><a href="class-Neos.Neos.Service.ContentElementEditableService.html">ContentElementEditableService</a></li>
 				<li><a href="class-Neos.Neos.Service.ContentElementWrappingService.html">ContentElementWrappingService</a></li>
-				<li><a href="class-Neos.Neos.Service.HtmlAugmenter.html">HtmlAugmenter</a></li>
 				<li><a href="class-Neos.Neos.Service.ImageVariantGarbageCollector.html">ImageVariantGarbageCollector</a></li>
 				<li><a href="class-Neos.Neos.Service.LinkingService.html">LinkingService</a></li>
 				<li><a href="class-Neos.Neos.Service.NodeOperations.html">NodeOperations</a></li>
@@ -761,7 +809,6 @@
 				<li><a href="class-Neos.Neos.Service.TransliterationService.html">TransliterationService</a></li>
 				<li><a href="class-Neos.Neos.Service.UserService.html">UserService</a></li>
 				<li><a href="class-Neos.Neos.Service.VieSchemaBuilder.html">VieSchemaBuilder</a></li>
-				<li><a href="class-Neos.Neos.Service.XliffService.html">XliffService</a></li>
 			</ul>
 
 
@@ -844,7 +891,7 @@
 </span></span><span id="64" class="l"><span class="php-comment">     *
 </span></span><span id="65" class="l"><span class="php-comment">     * @var string
 </span></span><span id="66" class="l"><span class="php-comment">     */</span>
-</span><span id="67" class="l">    <span class="php-keyword1">const</span> PATTERN_SUPPORTED_URIS = <span class="php-quote">'/(node|asset):\/\/(([a-f0-9]){8}-([a-f0-9]){4}-([a-f0-9]){4}-([a-f0-9]){4}-([a-f0-9]){12})/'</span>;
+</span><span id="67" class="l">    <span class="php-keyword1">const</span> PATTERN_SUPPORTED_URIS = <span class="php-quote">'/(node|asset):\/\/([a-z0-9\-]+|([a-f0-9]){8}-([a-f0-9]){4}-([a-f0-9]){4}-([a-f0-9]){4}-([a-f0-9]){12})/'</span>;
 </span><span id="68" class="l">
 </span><span id="69" class="l">    <span class="php-comment">/**
 </span></span><span id="70" class="l"><span class="php-comment">     * @Flow\Inject
@@ -1069,7 +1116,7 @@
 </span><span id="289" class="l">            -&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$resolvedNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="290" class="l">
 </span><span id="291" class="l">        <span class="php-var">$siteNode</span> = <span class="php-var">$resolvedNode</span>-&gt;getContext()-&gt;getCurrentSiteNode();
-</span><span id="292" class="l">        <span class="php-keyword1">if</span> (NodePaths::isSubPathOf(<span class="php-var">$siteNode</span>-&gt;getPath(), <span class="php-var">$resolvedNode</span>-&gt;getPath())) {
+</span><span id="292" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$siteNode</span> <span class="php-keyword1">instanceof</span> NodeInterface &amp;&amp; NodePaths::isSubPathOf(<span class="php-var">$siteNode</span>-&gt;getPath(), <span class="php-var">$resolvedNode</span>-&gt;getPath())) {
 </span><span id="293" class="l">            <span class="php-comment">/** @var Site $site */</span>
 </span><span id="294" class="l">            <span class="php-var">$site</span> = <span class="php-var">$resolvedNode</span>-&gt;getContext()-&gt;getCurrentSite();
 </span><span id="295" class="l">        } <span class="php-keyword1">else</span> {
@@ -1139,6 +1186,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ad42db8feb5b69676ea719d88a418cb1b5a5f39e"></script>
+<script src="elementlist.js?f3090af917a0f58d131ce5c052209d1b2c3b0c07"></script>
 </body>
 </html>
