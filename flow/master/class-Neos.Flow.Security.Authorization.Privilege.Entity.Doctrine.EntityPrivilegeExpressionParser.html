@@ -1087,6 +1087,9 @@ PhpPeg\Parser
 			<p class="elementList">
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_ArrayLiteral_Expression">ArrayLiteral_Expression()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_ArrayLiteral__finalise">ArrayLiteral__finalise()</a></code>, 
+				<code><a href="class-Neos.Eel.CompilingEelParser.html#_ArrowFunction__finalise">ArrowFunction__finalise()</a></code>, 
+				<code><a href="class-Neos.Eel.CompilingEelParser.html#_ArrowFunction_arguments">ArrowFunction_arguments()</a></code>, 
+				<code><a href="class-Neos.Eel.CompilingEelParser.html#_ArrowFunction_exp">ArrowFunction_exp()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_BooleanLiteral__finalise">BooleanLiteral__finalise()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_Comparison_comp">Comparison_comp()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_Comparison_lft">Comparison_lft()</a></code>, 
@@ -1096,6 +1099,9 @@ PhpPeg\Parser
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_Conjunction_lft">Conjunction_lft()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_Disjunction_lft">Disjunction_lft()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_Expression_exp">Expression_exp()</a></code>, 
+				<code><a href="class-Neos.Eel.CompilingEelParser.html#_MethodArgumentsWithParens_Identifier">MethodArgumentsWithParens_Identifier()</a></code>, 
+				<code><a href="class-Neos.Eel.CompilingEelParser.html#_MethodArgumentsWithoutParens_Identifier">MethodArgumentsWithoutParens_Identifier()</a></code>, 
+				<code><a href="class-Neos.Eel.CompilingEelParser.html#_MethodArguments_arguments">MethodArguments_arguments()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_MethodCall_Expression">MethodCall_Expression()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_MethodCall_Identifier">MethodCall_Identifier()</a></code>, 
 				<code><a href="class-Neos.Eel.CompilingEelParser.html#_NumberLiteral__finalise">NumberLiteral__finalise()</a></code>, 
@@ -1125,11 +1131,15 @@ PhpPeg\Parser
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Eel.EelParser.html#methods">Neos\Eel\EelParser</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Eel.EelParser.html#_match_ArrayLiteral">match_ArrayLiteral()</a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#_match_ArrowFunction">match_ArrowFunction()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_Comparison">match_Comparison()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_ConditionalExpression">match_ConditionalExpression()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_Conjunction">match_Conjunction()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_Disjunction">match_Disjunction()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_Expression">match_Expression()</a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#_match_MethodArguments">match_MethodArguments()</a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#_match_MethodArgumentsWithParens">match_MethodArgumentsWithParens()</a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#_match_MethodArgumentsWithoutParens">match_MethodArgumentsWithoutParens()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_MethodCall">match_MethodCall()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_NotExpression">match_NotExpression()</a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#_match_ObjectLiteral">match_ObjectLiteral()</a></code>, 
@@ -1183,11 +1193,15 @@ PhpPeg\Parser
             <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Eel.EelParser.html#properties">Neos\Eel\EelParser</a></h3></div>
 			<p class="elementList">
 				<code><a href="class-Neos.Eel.EelParser.html#$match_ArrayLiteral_typestack"><var>$match_ArrayLiteral_typestack</var></a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#$match_ArrowFunction_typestack"><var>$match_ArrowFunction_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_Comparison_typestack"><var>$match_Comparison_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_ConditionalExpression_typestack"><var>$match_ConditionalExpression_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_Conjunction_typestack"><var>$match_Conjunction_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_Disjunction_typestack"><var>$match_Disjunction_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_Expression_typestack"><var>$match_Expression_typestack</var></a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#$match_MethodArgumentsWithParens_typestack"><var>$match_MethodArgumentsWithParens_typestack</var></a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#$match_MethodArgumentsWithoutParens_typestack"><var>$match_MethodArgumentsWithoutParens_typestack</var></a></code>, 
+				<code><a href="class-Neos.Eel.EelParser.html#$match_MethodArguments_typestack"><var>$match_MethodArguments_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_MethodCall_typestack"><var>$match_MethodCall_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_NotExpression_typestack"><var>$match_NotExpression_typestack</var></a></code>, 
 				<code><a href="class-Neos.Eel.EelParser.html#$match_ObjectLiteralProperty_typestack"><var>$match_ObjectLiteralProperty_typestack</var></a></code>, 
@@ -1230,6 +1244,6 @@ PhpPeg\Parser
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?499b0566a942d5bcdd7582e0f888e0d42863bffe"></script>
+<script src="elementlist.js?a85db144afe552b4941b0d1f17fc7cbd59be48e7"></script>
 </body>
 </html>
