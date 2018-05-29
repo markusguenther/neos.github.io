@@ -1184,7 +1184,7 @@
 </span><span id="326" class="l">
 </span><span id="327" class="l">        <span class="php-var">$collectionName</span> = <span class="php-var">$resource</span>-&gt;getCollectionName();
 </span><span id="328" class="l">
-</span><span id="329" class="l">        <span class="php-var">$result</span> = <span class="php-var">$this</span>-&gt;resourceRepository-&gt;findBySha1(<span class="php-var">$resource</span>-&gt;getSha1());
+</span><span id="329" class="l">        <span class="php-var">$result</span> = <span class="php-var">$this</span>-&gt;resourceRepository-&gt;findBySha1AndCollectionName(<span class="php-var">$resource</span>-&gt;getSha1(), <span class="php-var">$collectionName</span>);
 </span><span id="330" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$result</span>) &gt; <span class="php-num">1</span>) {
 </span><span id="331" class="l">            <span class="php-var">$this</span>-&gt;logger-&gt;debug(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Not removing storage data of resource %s (%s) because it is still in use by %s other PersistentResource object(s).'</span>, <span class="php-var">$resource</span>-&gt;getFilename(), <span class="php-var">$resource</span>-&gt;getSha1(), <span class="php-keyword2">count</span>(<span class="php-var">$result</span>) - <span class="php-num">1</span>));
 </span><span id="332" class="l">        } <span class="php-keyword1">else</span> {
@@ -1514,6 +1514,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?499b0566a942d5bcdd7582e0f888e0d42863bffe"></script>
+<script src="elementlist.js?c8884d7300bf54385cdf82091f345c65347e6e83"></script>
 </body>
 </html>
