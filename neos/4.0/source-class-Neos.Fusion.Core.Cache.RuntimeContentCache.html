@@ -987,7 +987,7 @@
 </span><span id="168" class="l">                <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheIdentifierValues'</span>] = <span class="php-var">$this</span>-&gt;buildCacheIdentifierValues(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'configuration'</span>], <span class="php-var">$evaluateContext</span>[<span class="php-quote">'fusionPath'</span>], <span class="php-var">$fusionObject</span>);
 </span><span id="169" class="l">                <span class="php-var">$cacheDiscriminator</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheDiscriminator'</span>]) ? <span class="php-var">$evaluateContext</span>[<span class="php-quote">'cacheDiscriminator'</span>] : <span class="php-keyword1">null</span>;
 </span><span id="170" class="l">                <span class="php-var">$self</span> = <span class="php-var">$this</span>;
-</span><span id="171" class="l">                <span class="php-var">$segment</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;getCachedSegment(<span class="php-keyword1">function</span> (<span class="php-var">$command</span>, <span class="php-var">$additionalData</span>, <span class="php-var">$cache</span>) <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$evaluateContext</span>, <span class="php-var">$fusionObject</span>) {
+</span><span id="171" class="l">                <span class="php-var">$segment</span> = <span class="php-var">$this</span>-&gt;contentCache-&gt;getCachedSegment(<span class="php-keyword1">function</span> (<span class="php-var">$command</span>, <span class="php-var">$additionalData</span>, <span class="php-var">$cache</span>) <span class="php-keyword1">use</span> (<span class="php-var">$self</span>) {
 </span><span id="172" class="l">                    <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$command</span>, <span class="php-quote">'eval='</span>) === <span class="php-num">0</span>) {
 </span><span id="173" class="l">                        <span class="php-var">$unserializedContext</span> = <span class="php-var">$self</span>-&gt;unserializeContext(<span class="php-var">$additionalData</span>[<span class="php-quote">'context'</span>]);
 </span><span id="174" class="l">                        <span class="php-var">$path</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$command</span>, <span class="php-num">5</span>);
@@ -1223,6 +1223,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0a11d77067904e2cfd45b2bcb6201e18d26ea366"></script>
+<script src="elementlist.js?11d418d9cb3335475aebccf83391314bd244add1"></script>
 </body>
 </html>

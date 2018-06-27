@@ -933,7 +933,7 @@
 </span><span id="116" class="l">
 </span><span id="117" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$assetProxy</span> <span class="php-keyword1">instanceof</span> HasRemoteOriginalInterface) {
 </span><span id="118" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setStatus(<span class="php-num">400</span>, <span class="php-quote">'Cannot import asset which does not have a remote original'</span>);
-</span><span id="119" class="l">            <span class="php-var">$this</span>-&gt;systemLogger-&gt;<span class="php-keyword2">log</span>(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Failed importing an the asset %s from asset source %s because it does not have a remote original.'</span>, <span class="php-var">$assetProxy</span>-&gt;getFilename(), <span class="php-var">$assetSourceIdentifier</span>, <span class="php-var">$assetProxy</span>-&gt;getImportStream()), LOG_ERR);
+</span><span id="119" class="l">            <span class="php-var">$this</span>-&gt;systemLogger-&gt;<span class="php-keyword2">log</span>(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Failed importing an the asset %s from asset source %s because it does not have a remote original.'</span>, <span class="php-var">$assetProxy</span>-&gt;getFilename(), <span class="php-var">$assetSourceIdentifier</span>), LOG_ERR);
 </span><span id="120" class="l">            <span class="php-keyword1">return</span> <span class="php-quote">''</span>;
 </span><span id="121" class="l">        }
 </span><span id="122" class="l">
@@ -991,6 +991,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0a11d77067904e2cfd45b2bcb6201e18d26ea366"></script>
+<script src="elementlist.js?11d418d9cb3335475aebccf83391314bd244add1"></script>
 </body>
 </html>

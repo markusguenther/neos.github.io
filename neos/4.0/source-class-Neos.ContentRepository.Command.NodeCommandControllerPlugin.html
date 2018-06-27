@@ -1395,7 +1395,7 @@
 </span><span id="574" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="575" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$dryRun</span>) {
 </span><span id="576" class="l">            <span class="php-var">$self</span> = <span class="php-var">$this</span>;
-</span><span id="577" class="l">            <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-quote">'Abstract or undefined node types found, do you want to remove them?'</span>, <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodes</span>, <span class="php-var">$workspaceName</span>, <span class="php-var">$removableNodesCount</span>) {
+</span><span id="577" class="l">            <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-quote">'Abstract or undefined node types found, do you want to remove them?'</span>, <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodes</span>, <span class="php-var">$removableNodesCount</span>) {
 </span><span id="578" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="579" class="l">                    <span class="php-var">$self</span>-&gt;removeNode(<span class="php-var">$node</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$node</span>[<span class="php-quote">'dimensionsHash'</span>]);
 </span><span id="580" class="l">                }
@@ -1427,7 +1427,7 @@
 </span><span id="606" class="l">
 </span><span id="607" class="l">        <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
 </span><span id="608" class="l">        <span class="php-var">$nodeExceptionCount</span> = <span class="php-num">0</span>;
-</span><span id="609" class="l">        <span class="php-var">$removeDisallowedChildNodes</span> = <span class="php-keyword1">function</span> (NodeInterface <span class="php-var">$node</span>) <span class="php-keyword1">use</span> (&amp;<span class="php-var">$removeDisallowedChildNodes</span>, &amp;<span class="php-var">$nodes</span>, &amp;<span class="php-var">$nodeExceptionCount</span>, <span class="php-var">$queryBuilder</span>) {
+</span><span id="609" class="l">        <span class="php-var">$removeDisallowedChildNodes</span> = <span class="php-keyword1">function</span> (NodeInterface <span class="php-var">$node</span>) <span class="php-keyword1">use</span> (&amp;<span class="php-var">$removeDisallowedChildNodes</span>, &amp;<span class="php-var">$nodes</span>, &amp;<span class="php-var">$nodeExceptionCount</span>) {
 </span><span id="610" class="l">            <span class="php-keyword1">try</span> {
 </span><span id="611" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$node</span>-&gt;getChildNodes() <span class="php-keyword1">as</span> <span class="php-var">$childNode</span>) {
 </span><span id="612" class="l">                    <span class="php-comment">/** @var $childNode NodeInterface */</span>
@@ -1588,7 +1588,7 @@
 </span><span id="767" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="768" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$dryRun</span>) {
 </span><span id="769" class="l">                <span class="php-var">$self</span> = <span class="php-var">$this</span>;
-</span><span id="770" class="l">                <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-quote">'Do you want to remove undefined node properties?'</span>, <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodesWithUndefinedPropertiesNodes</span>, <span class="php-var">$undefinedPropertiesCount</span>, <span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>) {
+</span><span id="770" class="l">                <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-quote">'Do you want to remove undefined node properties?'</span>, <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodesWithUndefinedPropertiesNodes</span>, <span class="php-var">$undefinedPropertiesCount</span>) {
 </span><span id="771" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$nodesWithUndefinedPropertiesNodes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodesWithUndefinedPropertiesNode</span>) {
 </span><span id="772" class="l">                        <span class="php-comment">/** @var NodeInterface $node */</span>
 </span><span id="773" class="l">                        <span class="php-var">$node</span> = <span class="php-var">$nodesWithUndefinedPropertiesNode</span>[<span class="php-quote">'node'</span>];
@@ -1677,7 +1677,7 @@
 </span><span id="856" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="857" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$dryRun</span>) {
 </span><span id="858" class="l">                <span class="php-var">$self</span> = <span class="php-var">$this</span>;
-</span><span id="859" class="l">                <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-quote">'Do you want to remove the broken entity references?'</span>, <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodesWithBrokenEntityReferences</span>, <span class="php-var">$brokenReferencesCount</span>, <span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>) {
+</span><span id="859" class="l">                <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-quote">'Do you want to remove the broken entity references?'</span>, <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodesWithBrokenEntityReferences</span>, <span class="php-var">$brokenReferencesCount</span>) {
 </span><span id="860" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$nodesWithBrokenEntityReferences</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeIdentifier</span> =&gt; <span class="php-var">$properties</span>) {
 </span><span id="861" class="l">                        <span class="php-keyword1">foreach</span> (<span class="php-var">$properties</span> <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; <span class="php-var">$nodeData</span>) {
 </span><span id="862" class="l">                            <span class="php-comment">/** @var NodeData $nodeData */</span>
@@ -1805,7 +1805,7 @@
 </span><span id="984" class="l">            <span class="php-var">$self</span> = <span class="php-var">$this</span>;
 </span><span id="985" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="986" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Nodes with invalid dimension values found.'</span> . PHP_EOL . <span class="php-quote">'You might solve this by migrating them to your current dimension configuration or by removing them.'</span>);
-</span><span id="987" class="l">            <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Do you want to remove %s node%s with invalid dimensions now?'</span>, <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>), <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodesArray</span>, <span class="php-var">$workspaceName</span>) {
+</span><span id="987" class="l">            <span class="php-var">$this</span>-&gt;askBeforeExecutingTask(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Do you want to remove %s node%s with invalid dimensions now?'</span>, <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>), <span class="php-keyword1">function</span> () <span class="php-keyword1">use</span> (<span class="php-var">$self</span>, <span class="php-var">$nodesArray</span>) {
 </span><span id="988" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$nodesArray</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeArray</span>) {
 </span><span id="989" class="l">                    <span class="php-var">$self</span>-&gt;removeNode(<span class="php-var">$nodeArray</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$nodeArray</span>[<span class="php-quote">'dimensionsHash'</span>]);
 </span><span id="990" class="l">                }
@@ -2196,6 +2196,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0a11d77067904e2cfd45b2bcb6201e18d26ea366"></script>
+<script src="elementlist.js?11d418d9cb3335475aebccf83391314bd244add1"></script>
 </body>
 </html>

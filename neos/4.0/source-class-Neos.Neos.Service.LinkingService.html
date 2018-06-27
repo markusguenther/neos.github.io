@@ -1060,7 +1060,7 @@
 </span><span id="233" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$node</span>)) {
 </span><span id="234" class="l">            <span class="php-var">$nodeString</span> = <span class="php-var">$node</span>;
 </span><span id="235" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$nodeString</span> === <span class="php-quote">''</span>) {
-</span><span id="236" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> NeosException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Empty strings can not be resolved to nodes.'</span>, <span class="php-var">$nodeString</span>), <span class="php-num">1415709942</span>);
+</span><span id="236" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> NeosException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Empty strings can not be resolved to nodes.'</span>), <span class="php-num">1415709942</span>);
 </span><span id="237" class="l">            }
 </span><span id="238" class="l">            <span class="php-keyword2">preg_match</span>(NodeInterface::MATCH_PATTERN_CONTEXTPATH, <span class="php-var">$nodeString</span>, <span class="php-var">$matches</span>);
 </span><span id="239" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-quote">'WorkspaceName'</span>]) &amp;&amp; <span class="php-var">$matches</span>[<span class="php-quote">'WorkspaceName'</span>] !== <span class="php-quote">''</span>) {
@@ -1186,6 +1186,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0a11d77067904e2cfd45b2bcb6201e18d26ea366"></script>
+<script src="elementlist.js?11d418d9cb3335475aebccf83391314bd244add1"></script>
 </body>
 </html>
