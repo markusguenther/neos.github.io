@@ -1032,7 +1032,7 @@ other Unit of Work) in order to find in-memory nodes.</p>
 						<dt><var>$dimensions</var></dt>
 						<dd>An array of dimensions with array of ordered values to use for fallback matching</dd>
 						<dt><var>$removedNodes</var></dt>
-						<dd>Include removed nodes, NULL (all), FALSE (no removed nodes) or TRUE (only removed nodes)</dd>
+						<dd>Include removed nodes, NULL (all), false (no removed nodes) or true (only removed nodes)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1404,7 +1404,7 @@ the whole index of the current node level will be renumbered.</p>
 						<dt><var>$dimensions</var></dt>
 						<dd>An array of dimensions to dimension values</dd>
 						<dt><var>$removedNodes</var></dt>
-						<dd>If TRUE the result has ONLY removed nodes. If FALSE removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to FALSE)</dd>
+						<dd>If true the result has ONLY removed nodes. If false removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to false)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1437,12 +1437,12 @@ the whole index of the current node level will be renumbered.</p>
 
 			<div class="description short">
 				<p>Finds nodes by its parent and (optionally) by its node type.
-If the $recursive flag is set to TRUE, all matching nodes underneath $parentPath will be returned</p>
+If the $recursive flag is set to true, all matching nodes underneath $parentPath will be returned</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Finds nodes by its parent and (optionally) by its node type.
-If the $recursive flag is set to TRUE, all matching nodes underneath $parentPath will be returned</p>
+If the $recursive flag is set to true, all matching nodes underneath $parentPath will be returned</p>
 
 <p>Note: Filters out removed nodes.</p>
 
@@ -1461,9 +1461,9 @@ only occurs in very rare cases) is the <em>identifier</em>.</p>
 						<dt><var>$dimensions</var></dt>
 						<dd>An array of dimensions to dimension values</dd>
 						<dt><var>$removedNodes</var></dt>
-						<dd>If TRUE the result has ONLY removed nodes. If FALSE removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to FALSE)</dd>
+						<dd>If true the result has ONLY removed nodes. If false removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to false)</dd>
 						<dt><var>$recursive</var></dt>
-						<dd>If TRUE <em>all</em> matching nodes underneath the specified parent path are returned</dd>
+						<dd>If true <em>all</em> matching nodes underneath the specified parent path are returned</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1641,7 +1641,7 @@ only occurs in very rare cases) is the <em>identifier</em>.</p>
 						<dt><var>$context</var></dt>
 						<dd>The containing workspace</dd>
 						<dt><var>$recursive</var></dt>
-						<dd>If TRUE <em>all</em> matching nodes underneath the specified parent path are returned</dd>
+						<dd>If true <em>all</em> matching nodes underneath the specified parent path are returned</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1689,7 +1689,7 @@ only occurs in very rare cases) is the <em>identifier</em>.</p>
 						<dt><var>$dimensions</var></dt>
 						<dd></dd>
 						<dt><var>$includeRemovedNodes</var></dt>
-						<dd>Should removed nodes be included in the result (defaults to FALSE)</dd>
+						<dd>Should removed nodes be included in the result (defaults to false)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -2023,7 +2023,7 @@ given index exists at that level, NULL is returned.</p>
 						<dt><var>$dimensions</var></dt>
 						<dd>$workspace The containing workspace</dd>
 						<dt><var>$removedNodes</var></dt>
-						<dd>If TRUE the result has ONLY removed nodes. If FALSE removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to FALSE)</dd>
+						<dd>If true the result has ONLY removed nodes. If false removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to false)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -2116,7 +2116,7 @@ try to find a corresponding node in one of the base workspaces (if any).</p>
 						<dt><var>$dimensions</var></dt>
 						<dd>Array of dimensions to array of dimension values</dd>
 						<dt><var>$includeRemovedNodes</var></dt>
-						<dd>Should removed nodes be included in the result (defaults to FALSE)</dd>
+						<dd>Should removed nodes be included in the result (defaults to false)</dd>
 						<dt><var>$nodeTypeFilter</var></dt>
 						<dd>Optional filter for the node type of the nodes, supports complex expressions (e.g. "Neos.Neos:Page", "!Neos.Neos:Page,Neos.Neos:Text" or NULL)</dd>
 					</dl></div>
@@ -2747,7 +2747,7 @@ If you need this functionality use \Neos\ContentRepository\Domain\Service\NodeSe
 						<dt><var>$workspace</var></dt>
 						<dd></dd>
 						<dt><var>$includeRemovedNodes</var></dt>
-						<dd>Should removed nodes be included in the result (defaults to FALSE)</dd>
+						<dd>Should removed nodes be included in the result (defaults to false)</dd>
 						<dt><var>$recursive</var></dt>
 						<dd></dd>
 					</dl></div>
@@ -2916,7 +2916,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE If the NodeData was marked for removal
+						boolean<br>true If the NodeData was marked for removal
 					</div>
 
 
@@ -3105,7 +3105,7 @@ See buildQueryBuilderForRelationMap for the relationMap definition.</p>
 						<dt><var>$dimensions</var></dt>
 						<dd></dd>
 						<dt><var>$includeRemovedNodes</var></dt>
-						<dd>Should removed nodes be included in the result (defaults to FALSE)</dd>
+						<dd>Should removed nodes be included in the result (defaults to false)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
