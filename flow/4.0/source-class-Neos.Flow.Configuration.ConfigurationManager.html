@@ -1493,16 +1493,16 @@
 </span><span id="645" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> replaceVariablesInPhpString(<span class="php-var">$phpString</span>)
 </span><span id="646" class="l">    {
 </span><span id="647" class="l">        <span class="php-var">$phpString</span> = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'/
-</span></span><span id="648" class="l"><span class="php-quote">            (?&lt;startString&gt;=&gt;\s\'.*)?      # optionally assignment operator and starting a string
-</span></span><span id="649" class="l"><span class="php-quote">            (?P&lt;fullMatch&gt;%                # an expression is indicated by %
+</span></span><span id="648" class="l"><span class="php-quote">            (?&lt;startString&gt;=&gt;\s\'.*?)?         # optionally assignment operator and starting a string
+</span></span><span id="649" class="l"><span class="php-quote">            (?P&lt;fullMatch&gt;%                    # an expression is indicated by %
 </span></span><span id="650" class="l"><span class="php-quote">            (?P&lt;expression&gt;
-</span></span><span id="651" class="l"><span class="php-quote">            (?:(?:\\\?[\d\w_\\\]+\:\:)     # either a class name followed by ::
-</span></span><span id="652" class="l"><span class="php-quote">            |                              # or
-</span></span><span id="653" class="l"><span class="php-quote">            (?:(?P&lt;prefix&gt;[a-z]+)\:)       # a prefix followed by : (like &quot;env:&quot;)
+</span></span><span id="651" class="l"><span class="php-quote">            (?:(?:\\\?[\d\w_\\\]+\:\:)         # either a class name followed by ::
+</span></span><span id="652" class="l"><span class="php-quote">            |                                  # or
+</span></span><span id="653" class="l"><span class="php-quote">            (?:(?P&lt;prefix&gt;[a-z]+)\:)           # a prefix followed by : (like &quot;env:&quot;)
 </span></span><span id="654" class="l"><span class="php-quote">            )?
-</span></span><span id="655" class="l"><span class="php-quote">            (?P&lt;name&gt;[A-Z_0-9]+))          # the actual variable name in all upper
-</span></span><span id="656" class="l"><span class="php-quote">            %)                             # concluded by %
-</span></span><span id="657" class="l"><span class="php-quote">            (?&lt;endString&gt;.*\',\n)?         # optionally concluding a string
+</span></span><span id="655" class="l"><span class="php-quote">            (?P&lt;name&gt;[A-Z_0-9]+))              # the actual variable name in all upper
+</span></span><span id="656" class="l"><span class="php-quote">            %)                                 # concluded by %
+</span></span><span id="657" class="l"><span class="php-quote">            (?&lt;endString&gt;[^%]*?(?:\',\n)?)?    # optionally concluding a string
 </span></span><span id="658" class="l"><span class="php-quote">        /mx'</span>, <span class="php-keyword1">function</span> (<span class="php-var">$matchGroup</span>) {
 </span><span id="659" class="l">            <span class="php-var">$replacement</span> = <span class="php-quote">&quot;&quot;</span>;
 </span><span id="660" class="l">            <span class="php-var">$constantDoesNotStartAsBeginning</span> = <span class="php-keyword1">false</span>;
