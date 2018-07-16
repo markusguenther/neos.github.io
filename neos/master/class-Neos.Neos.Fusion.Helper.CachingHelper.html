@@ -606,10 +606,6 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Neos.Fusion.Cache.html">
-							Cache						</a>
-							</li>
-					<li>
 						<a href="namespace-Neos.Neos.Fusion.ExceptionHandlers.html">
 							ExceptionHandlers						</a>
 							</li>
@@ -845,7 +841,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Neos.html">Neos</a>\<a href="namespace-Neos.Neos.Fusion.html">Fusion</a>\<a href="namespace-Neos.Neos.Fusion.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#20-138" title="Go to source code">Neos.Neos/Classes/Fusion/Helper/CachingHelper.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#21-158" title="Go to source code">Neos.Neos/Classes/Fusion/Helper/CachingHelper.php</a>
 		<br>
 	</div>
 
@@ -865,7 +861,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertArrayOfNodesToArrayOfNodeIdentifiersWithPrefix">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#25-55" title="Go to source code">convertArrayOfNodesToArrayOfNodeIdentifiersWithPrefix</a>( <span>mixed <var>$nodes</var></span>, <span>string <var>$prefix</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#26-56" title="Go to source code">convertArrayOfNodesToArrayOfNodeIdentifiersWithPrefix</a>( <span>mixed <var>$nodes</var></span>, <span>string <var>$prefix</var></span> )</code>
 
 			<div class="description short">
 				<p>Render a caching configuration for array of Nodes</p>
@@ -909,7 +905,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_nodeTag">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#57-68" title="Go to source code">nodeTag</a>( <span>mixed <var>$nodes</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#58-70" title="Go to source code">nodeTag</a>( <span>mixed <var>$nodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate a <code>@cache</code> entry tag for a single node, array of nodes or a FlowQuery result
@@ -934,6 +930,10 @@ given nodes (for any variant) is updated.</p>
 						array
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Neos.Exception.html">Neos\Neos\Exception</a></code>
+					</div>
 
 
 
@@ -951,7 +951,7 @@ given nodes (for any variant) is updated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_nodeTypeTag">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#70-91" title="Go to source code">nodeTypeTag</a>( <span>string|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code>|string[]|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a>[]</code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#72-94" title="Go to source code">nodeTypeTag</a>( <span>string|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code>|string[]|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a>[]</code> <var>$nodeType</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$contextNode</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Generate an <code>@cache</code> entry tag for a node type
@@ -971,6 +971,8 @@ A cache entry with this tag will be flushed whenever a node
 					<div class="list"><dl>
 						<dt><var>$nodeType</var></dt>
 						<dd></dd>
+						<dt><var>$contextNode</var></dt>
+						<dd>$contextNode|null</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -995,7 +997,7 @@ A cache entry with this tag will be flushed whenever a node
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeTypeTagFor">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#93-112" title="Go to source code">getNodeTypeTagFor</a>( <span>string|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#96-122" title="Go to source code">getNodeTypeTagFor</a>( <span>string|<code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$contextNode</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1009,6 +1011,8 @@ A cache entry with this tag will be flushed whenever a node
 					<div class="list"><dl>
 						<dt><var>$nodeType</var></dt>
 						<dd></dd>
+						<dt><var>$contextNode</var></dt>
+						<dd>$contextNode|null</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1033,7 +1037,7 @@ A cache entry with this tag will be flushed whenever a node
 
 			<td class="name"><div>
 			<a class="anchor" href="#_descendantOfTag">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#114-126" title="Go to source code">descendantOfTag</a>( <span>mixed <var>$nodes</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#124-137" title="Go to source code">descendantOfTag</a>( <span>mixed <var>$nodes</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate a <code>@cache</code> entry tag for descendants of a node, an array of nodes or a FlowQuery result
@@ -1060,6 +1064,48 @@ the given nodes is updated.</p>
 						array
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Neos.Exception.html">Neos\Neos\Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="renderWorkspaceTagForContextNode" id="_renderWorkspaceTagForContextNode">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_renderWorkspaceTagForContextNode">#</a>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#139-146" title="Go to source code">renderWorkspaceTagForContextNode</a>( <span>Neos\Neos\Fusion\Helper\string <var>$workspaceName</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$workspaceName</var></dt>
+						<dd>$contextNode</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
 
 
 
@@ -1077,7 +1123,7 @@ the given nodes is updated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsCallOfMethod">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#128-137" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.Helper.CachingHelper.html#148-157" title="Go to source code">allowsCallOfMethod</a>( <span>string <var>$methodName</var></span> )</code>
 
 			<div class="description short">
 				<p>All methods are considered safe</p>
@@ -1125,6 +1171,6 @@ the given nodes is updated.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?27e298ed9a9cac4fc721a472b1ad4dbd8c910eb0"></script>
+<script src="elementlist.js?96cbb58f60df4fe4f62d4027cbb7cf72b1e4da54"></script>
 </body>
 </html>
