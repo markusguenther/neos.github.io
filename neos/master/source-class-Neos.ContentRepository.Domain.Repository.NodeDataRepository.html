@@ -993,7 +993,7 @@
 </span></span><span id="179" class="l"><span class="php-comment">     * @param string $path Absolute path of the node
 </span></span><span id="180" class="l"><span class="php-comment">     * @param Workspace $workspace The containing workspace
 </span></span><span id="181" class="l"><span class="php-comment">     * @param array $dimensions An array of dimensions with array of ordered values to use for fallback matching
-</span></span><span id="182" class="l"><span class="php-comment">     * @param boolean|NULL $removedNodes Include removed nodes, NULL (all), FALSE (no removed nodes) or TRUE (only removed nodes)
+</span></span><span id="182" class="l"><span class="php-comment">     * @param boolean|NULL $removedNodes Include removed nodes, NULL (all), false (no removed nodes) or true (only removed nodes)
 </span></span><span id="183" class="l"><span class="php-comment">     * @throws \InvalidArgumentException
 </span></span><span id="184" class="l"><span class="php-comment">     * @return NodeData The matching node if found, otherwise NULL
 </span></span><span id="185" class="l"><span class="php-comment">     */</span>
@@ -1316,7 +1316,7 @@
 </span></span><span id="502" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Filter the node type of the nodes, allows complex expressions (e.g. &quot;Neos.Neos:Page&quot;, &quot;!Neos.Neos:Page,Neos.Neos:Text&quot; or NULL)
 </span></span><span id="503" class="l"><span class="php-comment">     * @param Workspace $workspace The containing workspace
 </span></span><span id="504" class="l"><span class="php-comment">     * @param array $dimensions An array of dimensions to dimension values
-</span></span><span id="505" class="l"><span class="php-comment">     * @param boolean $removedNodes If TRUE the result has ONLY removed nodes. If FALSE removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to FALSE)
+</span></span><span id="505" class="l"><span class="php-comment">     * @param boolean $removedNodes If true the result has ONLY removed nodes. If false removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to false)
 </span></span><span id="506" class="l"><span class="php-comment">     * @return array&lt;\Neos\ContentRepository\Domain\Model\NodeData&gt; The nodes found on the given path
 </span></span><span id="507" class="l"><span class="php-comment">     */</span>
 </span><span id="508" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> findByParentAndNodeTypeRecursively(<span class="php-var">$parentPath</span>, <span class="php-var">$nodeTypeFilter</span>, Workspace <span class="php-var">$workspace</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span> = <span class="php-keyword1">null</span>, <span class="php-var">$removedNodes</span> = <span class="php-keyword1">false</span>)
@@ -1326,7 +1326,7 @@
 </span><span id="512" class="l">
 </span><span id="513" class="l">    <span class="php-comment">/**
 </span></span><span id="514" class="l"><span class="php-comment">     * Finds nodes by its parent and (optionally) by its node type.
-</span></span><span id="515" class="l"><span class="php-comment">     * If the $recursive flag is set to TRUE, all matching nodes underneath $parentPath will be returned
+</span></span><span id="515" class="l"><span class="php-comment">     * If the $recursive flag is set to true, all matching nodes underneath $parentPath will be returned
 </span></span><span id="516" class="l"><span class="php-comment">     *
 </span></span><span id="517" class="l"><span class="php-comment">     * Note: Filters out removed nodes.
 </span></span><span id="518" class="l"><span class="php-comment">     *
@@ -1337,8 +1337,8 @@
 </span></span><span id="523" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Filter the node type of the nodes, allows complex expressions (e.g. &quot;Neos.Neos:Page&quot;, &quot;!Neos.Neos:Page,Neos.Neos:Text&quot; or NULL)
 </span></span><span id="524" class="l"><span class="php-comment">     * @param Workspace $workspace The containing workspace
 </span></span><span id="525" class="l"><span class="php-comment">     * @param array $dimensions An array of dimensions to dimension values
-</span></span><span id="526" class="l"><span class="php-comment">     * @param boolean $removedNodes If TRUE the result has ONLY removed nodes. If FALSE removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to FALSE)
-</span></span><span id="527" class="l"><span class="php-comment">     * @param boolean $recursive If TRUE *all* matching nodes underneath the specified parent path are returned
+</span></span><span id="526" class="l"><span class="php-comment">     * @param boolean $removedNodes If true the result has ONLY removed nodes. If false removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to false)
+</span></span><span id="527" class="l"><span class="php-comment">     * @param boolean $recursive If true *all* matching nodes underneath the specified parent path are returned
 </span></span><span id="528" class="l"><span class="php-comment">     * @return array&lt;\Neos\ContentRepository\Domain\Model\NodeData&gt; The nodes found on the given path
 </span></span><span id="529" class="l"><span class="php-comment">     * @todo Improve implementation by using DQL
 </span></span><span id="530" class="l"><span class="php-comment">     */</span>
@@ -1500,7 +1500,7 @@
 </span></span><span id="686" class="l"><span class="php-comment">     * @param string $parentPath Absolute path of the parent node
 </span></span><span id="687" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Filter the node type of the nodes, allows complex expressions (e.g. &quot;Neos.Neos:Page&quot;, &quot;!Neos.Neos:Page,Neos.Neos:Text&quot; or NULL)
 </span></span><span id="688" class="l"><span class="php-comment">     * @param Context $context The containing workspace
-</span></span><span id="689" class="l"><span class="php-comment">     * @param boolean $recursive If TRUE *all* matching nodes underneath the specified parent path are returned
+</span></span><span id="689" class="l"><span class="php-comment">     * @param boolean $recursive If true *all* matching nodes underneath the specified parent path are returned
 </span></span><span id="690" class="l"><span class="php-comment">     * @return array&lt;\Neos\ContentRepository\Domain\Model\NodeInterface&gt; The nodes found on the given path
 </span></span><span id="691" class="l"><span class="php-comment">     */</span>
 </span><span id="692" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> findByParentAndNodeTypeInContext(<span class="php-var">$parentPath</span>, <span class="php-var">$nodeTypeFilter</span>, Context <span class="php-var">$context</span>, <span class="php-var">$recursive</span> = <span class="php-keyword1">false</span>)
@@ -1526,7 +1526,7 @@
 </span></span><span id="712" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Filter the node type of the nodes, allows complex expressions (e.g. &quot;Neos.Neos:Page&quot;, &quot;!Neos.Neos:Page,Neos.Neos:Text&quot; or NULL)
 </span></span><span id="713" class="l"><span class="php-comment">     * @param Workspace $workspace The containing workspace
 </span></span><span id="714" class="l"><span class="php-comment">     * @param array $dimensions
-</span></span><span id="715" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to FALSE)
+</span></span><span id="715" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to false)
 </span></span><span id="716" class="l"><span class="php-comment">     * @return integer The number of nodes a similar call to findByParentAndNodeType() would return without any pending added nodes
 </span></span><span id="717" class="l"><span class="php-comment">     */</span>
 </span><span id="718" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> countByParentAndNodeType(<span class="php-var">$parentPath</span>, <span class="php-var">$nodeTypeFilter</span>, Workspace <span class="php-var">$workspace</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span> = <span class="php-keyword1">null</span>, <span class="php-var">$includeRemovedNodes</span> = <span class="php-keyword1">false</span>)
@@ -1723,7 +1723,7 @@
 </span></span><span id="909" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Filter the node type of the nodes, allows complex expressions (e.g. &quot;Neos.Neos:Page&quot;, &quot;!Neos.Neos:Page,Neos.Neos:Text&quot; or NULL)
 </span></span><span id="910" class="l"><span class="php-comment">     * @param array $dimensions
 </span></span><span id="911" class="l"><span class="php-comment">     * @param Workspace $workspace The containing workspace
-</span></span><span id="912" class="l"><span class="php-comment">     * @param boolean $removedNodes If TRUE the result has ONLY removed nodes. If FALSE removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to FALSE)
+</span></span><span id="912" class="l"><span class="php-comment">     * @param boolean $removedNodes If true the result has ONLY removed nodes. If false removed nodes are NOT inside the result. If NULL the result contains BOTH removed and non-removed nodes. (defaults to false)
 </span></span><span id="913" class="l"><span class="php-comment">     * @return NodeData The node found or NULL
 </span></span><span id="914" class="l"><span class="php-comment">     */</span>
 </span><span id="915" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> findFirstByParentAndNodeType(<span class="php-var">$parentPath</span>, <span class="php-var">$nodeTypeFilter</span>, Workspace <span class="php-var">$workspace</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span>, <span class="php-var">$removedNodes</span> = <span class="php-keyword1">false</span>)
@@ -1767,7 +1767,7 @@
 </span></span><span id="953" class="l"><span class="php-comment">     * @param string $pathEndPoint Absolute path specifying the end point
 </span></span><span id="954" class="l"><span class="php-comment">     * @param Workspace $workspace The containing workspace
 </span></span><span id="955" class="l"><span class="php-comment">     * @param array $dimensions Array of dimensions to array of dimension values
-</span></span><span id="956" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to FALSE)
+</span></span><span id="956" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to false)
 </span></span><span id="957" class="l"><span class="php-comment">     * @param string $nodeTypeFilter Optional filter for the node type of the nodes, supports complex expressions (e.g. &quot;Neos.Neos:Page&quot;, &quot;!Neos.Neos:Page,Neos.Neos:Text&quot; or NULL)
 </span></span><span id="958" class="l"><span class="php-comment">     * @throws \InvalidArgumentException
 </span></span><span id="959" class="l"><span class="php-comment">     * @return array&lt;\Neos\ContentRepository\Domain\Model\NodeData&gt; The nodes found on the given path
@@ -2245,7 +2245,7 @@
 </span></span><span id="1431" class="l"><span class="php-comment">     *
 </span></span><span id="1432" class="l"><span class="php-comment">     * @param string $path
 </span></span><span id="1433" class="l"><span class="php-comment">     * @param Workspace $workspace
-</span></span><span id="1434" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to FALSE)
+</span></span><span id="1434" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to false)
 </span></span><span id="1435" class="l"><span class="php-comment">     * @param boolean $recursive
 </span></span><span id="1436" class="l"><span class="php-comment">     * @return array&lt;NodeData&gt; Node data reduced by workspace but with all existing content dimension variants, includes removed nodes
 </span></span><span id="1437" class="l"><span class="php-comment">     */</span>
@@ -2330,7 +2330,7 @@
 </span></span><span id="1516" class="l"><span class="php-comment">     * Test if a given NodeData is in the set of removed node data objects
 </span></span><span id="1517" class="l"><span class="php-comment">     *
 </span></span><span id="1518" class="l"><span class="php-comment">     * @param NodeData $nodeData
-</span></span><span id="1519" class="l"><span class="php-comment">     * @return boolean TRUE If the NodeData was marked for removal
+</span></span><span id="1519" class="l"><span class="php-comment">     * @return boolean true If the NodeData was marked for removal
 </span></span><span id="1520" class="l"><span class="php-comment">     */</span>
 </span><span id="1521" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isInRemovedNodes(NodeData <span class="php-var">$nodeData</span>)
 </span><span id="1522" class="l">    {
@@ -2412,7 +2412,7 @@
 </span></span><span id="1598" class="l"><span class="php-comment">     * @param array $nodeDataObjects
 </span></span><span id="1599" class="l"><span class="php-comment">     * @param Workspace $workspace
 </span></span><span id="1600" class="l"><span class="php-comment">     * @param array $dimensions
-</span></span><span id="1601" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to FALSE)
+</span></span><span id="1601" class="l"><span class="php-comment">     * @param boolean $includeRemovedNodes Should removed nodes be included in the result (defaults to false)
 </span></span><span id="1602" class="l"><span class="php-comment">     * @return array
 </span></span><span id="1603" class="l"><span class="php-comment">     */</span>
 </span><span id="1604" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> filterNodeDataByBestMatchInContext(<span class="php-keyword1">array</span> <span class="php-var">$nodeDataObjects</span>, Workspace <span class="php-var">$workspace</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span>, <span class="php-var">$includeRemovedNodes</span> = <span class="php-keyword1">false</span>)

@@ -1022,7 +1022,7 @@
 </span><span id="207" class="l">            <span class="php-comment">// If the node exists in another dimension, we want to know how many nodes in the rootline are also missing for the target</span>
 </span><span id="208" class="l">            <span class="php-comment">// dimension. This is needed in the UI to tell the user if nodes will be materialized recursively upwards in the rootline.</span>
 </span><span id="209" class="l">            <span class="php-comment">// To find the node path for the given identifier, we just use the first result. This is a safe assumption at least for</span>
-</span><span id="210" class="l">            <span class="php-comment">// &quot;Document&quot; nodes (aggregate=TRUE), because they are always moved in-sync.</span>
+</span><span id="210" class="l">            <span class="php-comment">// &quot;Document&quot; nodes (aggregate=true), because they are always moved in-sync.</span>
 </span><span id="211" class="l">            <span class="php-var">$node</span> = <span class="php-keyword2">reset</span>(<span class="php-var">$nodeVariants</span>);
 </span><span id="212" class="l">            <span class="php-comment">/** @var NodeInterface $node */</span>
 </span><span id="213" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getNodeType()-&gt;isAggregate()) {
@@ -1046,7 +1046,7 @@
 </span></span><span id="231" class="l"><span class="php-comment">     *
 </span></span><span id="232" class="l"><span class="php-comment">     * @param NodeInterface $node
 </span></span><span id="233" class="l"><span class="php-comment">     * @param ContentContext $contentContext
-</span></span><span id="234" class="l"><span class="php-comment">     * @param boolean $copyContent TRUE if the content from the nodes that are translated should be copied
+</span></span><span id="234" class="l"><span class="php-comment">     * @param boolean $copyContent true if the content from the nodes that are translated should be copied
 </span></span><span id="235" class="l"><span class="php-comment">     * @return void
 </span></span><span id="236" class="l"><span class="php-comment">     */</span>
 </span><span id="237" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> adoptNodeAndParents(NodeInterface <span class="php-var">$node</span>, ContentContext <span class="php-var">$contentContext</span>, <span class="php-var">$copyContent</span>)

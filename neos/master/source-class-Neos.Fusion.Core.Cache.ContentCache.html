@@ -1036,7 +1036,7 @@
 </span><span id="221" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$segments</span> <span class="php-keyword1">as</span> <span class="php-var">$segment</span>) {
 </span><span id="222" class="l">                <span class="php-var">$metadata</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">';'</span>, <span class="php-var">$segment</span>[<span class="php-quote">'metadata'</span>]);
 </span><span id="223" class="l">                <span class="php-var">$tagsValue</span> = <span class="php-var">$metadata</span>[<span class="php-num">0</span>] === <span class="php-quote">''</span> ? [] : (<span class="php-var">$metadata</span>[<span class="php-num">0</span>] === <span class="php-quote">'*'</span> ? <span class="php-keyword1">false</span> : <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$metadata</span>[<span class="php-num">0</span>]));
-</span><span id="224" class="l">                <span class="php-comment">// FALSE means we do not need to store the cache entry again (because it was previously fetched)</span>
+</span><span id="224" class="l">                <span class="php-comment">// false means we do not need to store the cache entry again (because it was previously fetched)</span>
 </span><span id="225" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$tagsValue</span> !== <span class="php-keyword1">false</span>) {
 </span><span id="226" class="l">                    <span class="php-var">$lifetime</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$metadata</span>[<span class="php-num">1</span>]) ? (integer)<span class="php-var">$metadata</span>[<span class="php-num">1</span>] : <span class="php-keyword1">null</span>;
 </span><span id="227" class="l">                    <span class="php-var">$this</span>-&gt;cache-&gt;set(<span class="php-var">$segment</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$segment</span>[<span class="php-quote">'content'</span>], <span class="php-var">$this</span>-&gt;sanitizeTags(<span class="php-var">$tagsValue</span>), <span class="php-var">$lifetime</span>);
@@ -1055,8 +1055,8 @@
 </span></span><span id="240" class="l"><span class="php-comment">     * @param string $fusionPath Fusion path identifying the Fusion object to retrieve from the content cache
 </span></span><span id="241" class="l"><span class="php-comment">     * @param array $cacheIdentifierValues Further values which play into the cache identifier hash, must be the same as the ones specified while the cache entry was written
 </span></span><span id="242" class="l"><span class="php-comment">     * @param boolean $addCacheSegmentMarkersToPlaceholders If cache segment markers should be added – this makes sense if the cached segment is about to be included in a not-yet-cached segment
-</span></span><span id="243" class="l"><span class="php-comment">     * @param string|bool $cacheDiscriminator The evaluated cache discriminator value, if any and FALSE if the cache discriminator is disabled for the current context
-</span></span><span id="244" class="l"><span class="php-comment">     * @return string|boolean The segment with replaced cache placeholders, or FALSE if a segment was missing in the cache
+</span></span><span id="243" class="l"><span class="php-comment">     * @param string|bool $cacheDiscriminator The evaluated cache discriminator value, if any and false if the cache discriminator is disabled for the current context
+</span></span><span id="244" class="l"><span class="php-comment">     * @return string|boolean The segment with replaced cache placeholders, or false if a segment was missing in the cache
 </span></span><span id="245" class="l"><span class="php-comment">     * @throws Exception
 </span></span><span id="246" class="l"><span class="php-comment">     */</span>
 </span><span id="247" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getCachedSegment(<span class="php-var">$uncachedCommandCallback</span>, <span class="php-var">$fusionPath</span>, <span class="php-var">$cacheIdentifierValues</span>, <span class="php-var">$addCacheSegmentMarkersToPlaceholders</span> = <span class="php-keyword1">false</span>, <span class="php-var">$cacheDiscriminator</span> = <span class="php-keyword1">null</span>)
@@ -1100,7 +1100,7 @@
 </span></span><span id="285" class="l"><span class="php-comment">     *
 </span></span><span id="286" class="l"><span class="php-comment">     * @param string $content
 </span></span><span id="287" class="l"><span class="php-comment">     * @param boolean $addCacheSegmentMarkersToPlaceholders
-</span></span><span id="288" class="l"><span class="php-comment">     * @return integer|boolean Number of replaced placeholders or FALSE if a placeholder couldn't be found
+</span></span><span id="288" class="l"><span class="php-comment">     * @return integer|boolean Number of replaced placeholders or false if a placeholder couldn't be found
 </span></span><span id="289" class="l"><span class="php-comment">     */</span>
 </span><span id="290" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> replaceCachePlaceholders(&amp;<span class="php-var">$content</span>, <span class="php-var">$addCacheSegmentMarkersToPlaceholders</span>)
 </span><span id="291" class="l">    {

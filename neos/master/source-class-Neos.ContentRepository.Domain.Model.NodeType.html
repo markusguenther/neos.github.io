@@ -1078,7 +1078,7 @@
 </span><span id="252" class="l">    }
 </span><span id="253" class="l">
 </span><span id="254" class="l">    <span class="php-comment">/**
-</span></span><span id="255" class="l"><span class="php-comment">     * Return boolean TRUE if marked abstract
+</span></span><span id="255" class="l"><span class="php-comment">     * Return boolean true if marked abstract
 </span></span><span id="256" class="l"><span class="php-comment">     *
 </span></span><span id="257" class="l"><span class="php-comment">     * @return boolean
 </span></span><span id="258" class="l"><span class="php-comment">     */</span>
@@ -1088,7 +1088,7 @@
 </span><span id="262" class="l">    }
 </span><span id="263" class="l">
 </span><span id="264" class="l">    <span class="php-comment">/**
-</span></span><span id="265" class="l"><span class="php-comment">     * Return boolean TRUE if marked final
+</span></span><span id="265" class="l"><span class="php-comment">     * Return boolean true if marked final
 </span></span><span id="266" class="l"><span class="php-comment">     *
 </span></span><span id="267" class="l"><span class="php-comment">     * @return boolean
 </span></span><span id="268" class="l"><span class="php-comment">     */</span>
@@ -1124,7 +1124,7 @@
 </span></span><span id="298" class="l"><span class="php-comment">     * - when moving this node, all node variants are also moved (across all dimensions)
 </span></span><span id="299" class="l"><span class="php-comment">     * - Recursive copying only happens *inside* this aggregate, and stops at nested aggregates.
 </span></span><span id="300" class="l"><span class="php-comment">     *
-</span></span><span id="301" class="l"><span class="php-comment">     * @return boolean TRUE if the node type is an aggregate
+</span></span><span id="301" class="l"><span class="php-comment">     * @return boolean true if the node type is an aggregate
 </span></span><span id="302" class="l"><span class="php-comment">     * @api
 </span></span><span id="303" class="l"><span class="php-comment">     */</span>
 </span><span id="304" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isAggregate()
@@ -1137,7 +1137,7 @@
 </span></span><span id="311" class="l"><span class="php-comment">     * has the given name.
 </span></span><span id="312" class="l"><span class="php-comment">     *
 </span></span><span id="313" class="l"><span class="php-comment">     * @param string $nodeType
-</span></span><span id="314" class="l"><span class="php-comment">     * @return boolean TRUE if this node type is of the given kind, otherwise FALSE
+</span></span><span id="314" class="l"><span class="php-comment">     * @return boolean true if this node type is of the given kind, otherwise false
 </span></span><span id="315" class="l"><span class="php-comment">     * @api
 </span></span><span id="316" class="l"><span class="php-comment">     */</span>
 </span><span id="317" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isOfType(<span class="php-var">$nodeType</span>)
@@ -1343,7 +1343,7 @@
 </span></span><span id="517" class="l"><span class="php-comment">     * Otherwise, allowsGrandchildNodeType() needs to be called on the *parent node type*.
 </span></span><span id="518" class="l"><span class="php-comment">     *
 </span></span><span id="519" class="l"><span class="php-comment">     * @param NodeType $nodeType
-</span></span><span id="520" class="l"><span class="php-comment">     * @return boolean TRUE if the $nodeType is allowed as child node, FALSE otherwise.
+</span></span><span id="520" class="l"><span class="php-comment">     * @return boolean true if the $nodeType is allowed as child node, false otherwise.
 </span></span><span id="521" class="l"><span class="php-comment">     */</span>
 </span><span id="522" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> allowsChildNodeType(NodeType <span class="php-var">$nodeType</span>)
 </span><span id="523" class="l">    {
@@ -1359,7 +1359,7 @@
 </span></span><span id="533" class="l"><span class="php-comment">     *
 </span></span><span id="534" class="l"><span class="php-comment">     * @param string $childNodeName The name of a configured childNode of this NodeType
 </span></span><span id="535" class="l"><span class="php-comment">     * @param NodeType $nodeType The NodeType to check constraints for.
-</span></span><span id="536" class="l"><span class="php-comment">     * @return boolean TRUE if the $nodeType is allowed as grandchild node, FALSE otherwise.
+</span></span><span id="536" class="l"><span class="php-comment">     * @return boolean true if the $nodeType is allowed as grandchild node, false otherwise.
 </span></span><span id="537" class="l"><span class="php-comment">     * @throws \InvalidArgumentException If the given $childNodeName is not configured to be auto-created in $this.
 </span></span><span id="538" class="l"><span class="php-comment">     */</span>
 </span><span id="539" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> allowsGrandchildNodeType(<span class="php-var">$childNodeName</span>, NodeType <span class="php-var">$nodeType</span>)
@@ -1384,8 +1384,8 @@
 </span><span id="558" class="l">    <span class="php-comment">/**
 </span></span><span id="559" class="l"><span class="php-comment">     * Internal method to check whether the passed-in $nodeType is allowed by the $constraints array.
 </span></span><span id="560" class="l"><span class="php-comment">     *
-</span></span><span id="561" class="l"><span class="php-comment">     * $constraints is an associative array where the key is the Node Type Name. If the value is &quot;TRUE&quot;,
-</span></span><span id="562" class="l"><span class="php-comment">     * the node type is explicitly allowed. If the value is &quot;FALSE&quot;, the node type is explicitly denied.
+</span></span><span id="561" class="l"><span class="php-comment">     * $constraints is an associative array where the key is the Node Type Name. If the value is &quot;true&quot;,
+</span></span><span id="562" class="l"><span class="php-comment">     * the node type is explicitly allowed. If the value is &quot;false&quot;, the node type is explicitly denied.
 </span></span><span id="563" class="l"><span class="php-comment">     * If nothing is specified, the fallback &quot;*&quot; is used. If that one is also not specified, we DENY by
 </span></span><span id="564" class="l"><span class="php-comment">     * default.
 </span></span><span id="565" class="l"><span class="php-comment">     *
@@ -1418,7 +1418,7 @@
 </span><span id="592" class="l">    <span class="php-comment">/**
 </span></span><span id="593" class="l"><span class="php-comment">     * @param NodeType $nodeType
 </span></span><span id="594" class="l"><span class="php-comment">     * @param array $constraints
-</span></span><span id="595" class="l"><span class="php-comment">     * @return boolean TRUE if the passed $nodeType is allowed by the $constraints
+</span></span><span id="595" class="l"><span class="php-comment">     * @return boolean true if the passed $nodeType is allowed by the $constraints
 </span></span><span id="596" class="l"><span class="php-comment">     */</span>
 </span><span id="597" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> isNodeTypeAllowedByDirectConstraints(NodeType <span class="php-var">$nodeType</span>, <span class="php-keyword1">array</span> <span class="php-var">$constraints</span>)
 </span><span id="598" class="l">    {

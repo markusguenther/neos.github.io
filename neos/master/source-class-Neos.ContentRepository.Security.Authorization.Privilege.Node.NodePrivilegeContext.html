@@ -893,7 +893,7 @@
 </span></span><span id="69" class="l"><span class="php-comment">     * Example: isAncestorNodeOf('/sites/some/path') matches for the nodes &quot;/sites&quot;, &quot;/sites/some&quot; and &quot;/sites/some/path&quot; but not for &quot;/sites/some/other&quot;
 </span></span><span id="70" class="l"><span class="php-comment">     *
 </span></span><span id="71" class="l"><span class="php-comment">     * @param string $nodePathOrIdentifier The identifier or absolute path of the node to match
-</span></span><span id="72" class="l"><span class="php-comment">     * @return boolean TRUE if the given node matches otherwise false
+</span></span><span id="72" class="l"><span class="php-comment">     * @return boolean true if the given node matches otherwise false
 </span></span><span id="73" class="l"><span class="php-comment">     */</span>
 </span><span id="74" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isAncestorNodeOf(<span class="php-var">$nodePathOrIdentifier</span>)
 </span><span id="75" class="l">    {
@@ -911,7 +911,7 @@
 </span></span><span id="87" class="l"><span class="php-comment">     * Example: isDescendantNodeOf('/sites/some/path') matches for the nodes &quot;/sites/some/path&quot;, &quot;/sites/some/path/subnode&quot; but not for &quot;/sites/some/other&quot;
 </span></span><span id="88" class="l"><span class="php-comment">     *
 </span></span><span id="89" class="l"><span class="php-comment">     * @param string $nodePathOrIdentifier The identifier or absolute path of the node to match
-</span></span><span id="90" class="l"><span class="php-comment">     * @return boolean TRUE if the given node matches otherwise false
+</span></span><span id="90" class="l"><span class="php-comment">     * @return boolean true if the given node matches otherwise false
 </span></span><span id="91" class="l"><span class="php-comment">     */</span>
 </span><span id="92" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isDescendantNodeOf(<span class="php-var">$nodePathOrIdentifier</span>)
 </span><span id="93" class="l">    {
@@ -928,7 +928,7 @@
 </span></span><span id="104" class="l"><span class="php-comment">     * Example: isAncestorOrDescendantNodeOf('/sites/some') matches for the nodes &quot;/sites&quot;, &quot;/sites/some&quot;, &quot;/sites/some/sub&quot; but not &quot;/sites/other&quot;
 </span></span><span id="105" class="l"><span class="php-comment">     *
 </span></span><span id="106" class="l"><span class="php-comment">     * @param string $nodePathOrIdentifier The identifier or absolute path of the node to match
-</span></span><span id="107" class="l"><span class="php-comment">     * @return boolean TRUE if the given node matches otherwise false
+</span></span><span id="107" class="l"><span class="php-comment">     * @return boolean true if the given node matches otherwise false
 </span></span><span id="108" class="l"><span class="php-comment">     */</span>
 </span><span id="109" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isAncestorOrDescendantNodeOf(<span class="php-var">$nodePathOrIdentifier</span>)
 </span><span id="110" class="l">    {
@@ -941,7 +941,7 @@
 </span></span><span id="117" class="l"><span class="php-comment">     * Example: nodeIsOfType(['Neos.ContentRepository:NodeType1', 'Neos.ContentRepository:NodeType2']) matches if the selected node is of (sub) type *Neos.ContentRepository:NodeType1* or *Neos.ContentRepository:NodeType1*
 </span></span><span id="118" class="l"><span class="php-comment">     *
 </span></span><span id="119" class="l"><span class="php-comment">     * @param string|array $nodeTypes A single or an array of fully qualified NodeType name(s), e.g. &quot;Neos.Neos:Document&quot;
-</span></span><span id="120" class="l"><span class="php-comment">     * @return boolean TRUE if the selected node matches the $nodeTypes, otherwise FALSE
+</span></span><span id="120" class="l"><span class="php-comment">     * @return boolean true if the selected node matches the $nodeTypes, otherwise false
 </span></span><span id="121" class="l"><span class="php-comment">     */</span>
 </span><span id="122" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> nodeIsOfType(<span class="php-var">$nodeTypes</span>)
 </span><span id="123" class="l">    {
@@ -966,7 +966,7 @@
 </span></span><span id="142" class="l"><span class="php-comment">     * Example: isInWorkspace(['live', 'user-admin']) matches if the selected node is in one of the workspaces &quot;user-admin&quot; or &quot;live&quot;
 </span></span><span id="143" class="l"><span class="php-comment">     *
 </span></span><span id="144" class="l"><span class="php-comment">     * @param array $workspaceNames An array of workspace names, e.g. [&quot;live&quot;, &quot;user-admin&quot;]
-</span></span><span id="145" class="l"><span class="php-comment">     * @return boolean TRUE if the selected node matches the $workspaceNames, otherwise FALSE
+</span></span><span id="145" class="l"><span class="php-comment">     * @return boolean true if the selected node matches the $workspaceNames, otherwise false
 </span></span><span id="146" class="l"><span class="php-comment">     */</span>
 </span><span id="147" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isInWorkspace(<span class="php-var">$workspaceNames</span>)
 </span><span id="148" class="l">    {
@@ -1020,7 +1020,7 @@
 </span></span><span id="196" class="l"><span class="php-comment">     * Resolves the given $nodePathOrIdentifier and returns its absolute path and or a boolean if the result directly matches the currently selected node
 </span></span><span id="197" class="l"><span class="php-comment">     *
 </span></span><span id="198" class="l"><span class="php-comment">     * @param string $nodePathOrIdentifier identifier or absolute path for the node to resolve
-</span></span><span id="199" class="l"><span class="php-comment">     * @return bool|string TRUE if the node matches the selected node, FALSE if the corresponding node does not exist. Otherwise the resolved absolute path with trailing slash
+</span></span><span id="199" class="l"><span class="php-comment">     * @return bool|string true if the node matches the selected node, false if the corresponding node does not exist. Otherwise the resolved absolute path with trailing slash
 </span></span><span id="200" class="l"><span class="php-comment">     */</span>
 </span><span id="201" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> resolveNodePath(<span class="php-var">$nodePathOrIdentifier</span>)
 </span><span id="202" class="l">    {

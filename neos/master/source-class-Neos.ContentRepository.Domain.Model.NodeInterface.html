@@ -1036,7 +1036,7 @@
 </span><span id="210" class="l">    <span class="php-comment">/**
 </span></span><span id="211" class="l"><span class="php-comment">     * Sets the &quot;hidden&quot; flag for this node.
 </span></span><span id="212" class="l"><span class="php-comment">     *
-</span></span><span id="213" class="l"><span class="php-comment">     * @param boolean $hidden If TRUE, this Node will be hidden
+</span></span><span id="213" class="l"><span class="php-comment">     * @param boolean $hidden If true, this Node will be hidden
 </span></span><span id="214" class="l"><span class="php-comment">     * @return void
 </span></span><span id="215" class="l"><span class="php-comment">     * @api
 </span></span><span id="216" class="l"><span class="php-comment">     */</span>
@@ -1087,7 +1087,7 @@
 </span><span id="261" class="l">    <span class="php-comment">/**
 </span></span><span id="262" class="l"><span class="php-comment">     * Sets if this node should be hidden in indexes, such as a site navigation.
 </span></span><span id="263" class="l"><span class="php-comment">     *
-</span></span><span id="264" class="l"><span class="php-comment">     * @param boolean $hidden TRUE if it should be hidden, otherwise FALSE
+</span></span><span id="264" class="l"><span class="php-comment">     * @param boolean $hidden true if it should be hidden, otherwise false
 </span></span><span id="265" class="l"><span class="php-comment">     * @return void
 </span></span><span id="266" class="l"><span class="php-comment">     * @api
 </span></span><span id="267" class="l"><span class="php-comment">     */</span>
@@ -1291,13 +1291,13 @@
 </span></span><span id="465" class="l"><span class="php-comment">     * Checks if this node has any child nodes.
 </span></span><span id="466" class="l"><span class="php-comment">     *
 </span></span><span id="467" class="l"><span class="php-comment">     * @param string $nodeTypeFilter If specified, only nodes with that node type are considered
-</span></span><span id="468" class="l"><span class="php-comment">     * @return boolean TRUE if this node has child nodes, otherwise FALSE
+</span></span><span id="468" class="l"><span class="php-comment">     * @return boolean true if this node has child nodes, otherwise false
 </span></span><span id="469" class="l"><span class="php-comment">     * @api
 </span></span><span id="470" class="l"><span class="php-comment">     */</span>
 </span><span id="471" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hasChildNodes(<span class="php-var">$nodeTypeFilter</span> = <span class="php-keyword1">null</span>);
 </span><span id="472" class="l">
 </span><span id="473" class="l">    <span class="php-comment">/**
-</span></span><span id="474" class="l"><span class="php-comment">     * Removes this node and all its child nodes. This is an alias for setRemoved(TRUE)
+</span></span><span id="474" class="l"><span class="php-comment">     * Removes this node and all its child nodes. This is an alias for setRemoved(true)
 </span></span><span id="475" class="l"><span class="php-comment">     *
 </span></span><span id="476" class="l"><span class="php-comment">     * @return void
 </span></span><span id="477" class="l"><span class="php-comment">     * @api
@@ -1307,7 +1307,7 @@
 </span><span id="481" class="l">    <span class="php-comment">/**
 </span></span><span id="482" class="l"><span class="php-comment">     * Removes this node and all its child nodes or sets ONLY this node to not being removed.
 </span></span><span id="483" class="l"><span class="php-comment">     *
-</span></span><span id="484" class="l"><span class="php-comment">     * @param boolean $removed If TRUE, this node and it's child nodes will be removed or set to be not removed.
+</span></span><span id="484" class="l"><span class="php-comment">     * @param boolean $removed If true, this node and it's child nodes will be removed or set to be not removed.
 </span></span><span id="485" class="l"><span class="php-comment">     * @return void
 </span></span><span id="486" class="l"><span class="php-comment">     * @api
 </span></span><span id="487" class="l"><span class="php-comment">     */</span>
@@ -1352,7 +1352,7 @@
 </span></span><span id="526" class="l"><span class="php-comment">     * Checks if the given $nodeType would be allowed as a child node of this node according to the configured constraints.
 </span></span><span id="527" class="l"><span class="php-comment">     *
 </span></span><span id="528" class="l"><span class="php-comment">     * @param NodeType $nodeType
-</span></span><span id="529" class="l"><span class="php-comment">     * @return boolean TRUE if the passed $nodeType is allowed as child node
+</span></span><span id="529" class="l"><span class="php-comment">     * @return boolean true if the passed $nodeType is allowed as child node
 </span></span><span id="530" class="l"><span class="php-comment">     */</span>
 </span><span id="531" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isNodeTypeAllowedAsChildNode(NodeType <span class="php-var">$nodeType</span>);
 </span><span id="532" class="l">
@@ -1451,7 +1451,7 @@
 </span></span><span id="625" class="l"><span class="php-comment">     * Determine if this node is configured as auto-created childNode of the parent node. If that is the case, it
 </span></span><span id="626" class="l"><span class="php-comment">     * should not be deleted.
 </span></span><span id="627" class="l"><span class="php-comment">     *
-</span></span><span id="628" class="l"><span class="php-comment">     * @return boolean TRUE if this node is auto-created by the parent.
+</span></span><span id="628" class="l"><span class="php-comment">     * @return boolean true if this node is auto-created by the parent.
 </span></span><span id="629" class="l"><span class="php-comment">     */</span>
 </span><span id="630" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isAutoCreated();
 </span><span id="631" class="l">
