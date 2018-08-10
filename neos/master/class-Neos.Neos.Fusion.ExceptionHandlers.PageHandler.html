@@ -845,7 +845,7 @@ handlers depending on the login status.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Neos.html">Neos</a>\<a href="namespace-Neos.Neos.Fusion.html">Fusion</a>\<a href="namespace-Neos.Neos.Fusion.ExceptionHandlers.html">ExceptionHandlers</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#22-100" title="Go to source code">Neos.Neos/Classes/Fusion/ExceptionHandlers/PageHandler.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#26-132" title="Go to source code">Neos.Neos/Classes/Fusion/ExceptionHandlers/PageHandler.php</a>
 		<br>
 	</div>
 
@@ -865,7 +865,7 @@ handlers depending on the login status.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handle">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#40-82" title="Go to source code">handle</a>( <span>array <var>$fusionPath</var></span>, <span>Exception <var>$exception</var></span>, <span>integer <var>$referenceCode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#50-92" title="Go to source code">handle</a>( <span>string <var>$fusionPath</var></span>, <span>Exception <var>$exception</var></span>, <span>integer <var>$referenceCode</var></span> )</code>
 
 			<div class="description short">
 				<p>Handle an exception by displaying an error message inside the Neos backend, if logged in and not displaying the live workspace.</p>
@@ -896,6 +896,46 @@ handlers depending on the login status.</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="wrapHttpResponse" id="_wrapHttpResponse">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_wrapHttpResponse">#</a>
+			<code><a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#94-114" title="Go to source code">wrapHttpResponse</a>( <span>Exception <var>$exception</var></span>, <span>string <var>$bodyContent</var></span> )</code>
+
+			<div class="description short">
+				<p>Renders an actual HTTP response including the correct status and cache control header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Renders an actual HTTP response including the correct status and cache control header.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$exception</var></dt>
+						<dd>exception</dd>
+						<dt><var>$bodyContent</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="prepareFluidView" id="_prepareFluidView">
 
 			<td class="attributes"><code>
@@ -907,7 +947,7 @@ handlers depending on the login status.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareFluidView">#</a>
-			<code><a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#84-99" title="Go to source code">prepareFluidView</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#116-131" title="Go to source code">prepareFluidView</a>( )</code>
 
 			<div class="description short">
 				<p>Prepare a Fluid view for rendering an error page with the Neos backend</p>
@@ -962,7 +1002,7 @@ handlers depending on the login status.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#28-32" title="Go to source code"><var>$privilegeManager</var></a>
+					<a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#32-36" title="Go to source code"><var>$privilegeManager</var></a>
 
 				<div class="description short">
 					
@@ -990,7 +1030,7 @@ handlers depending on the login status.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#34-38" title="Go to source code"><var>$contentElementWrappingService</var></a>
+					<a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#38-42" title="Go to source code"><var>$contentElementWrappingService</var></a>
 
 				<div class="description short">
 					
@@ -1007,6 +1047,34 @@ handlers depending on the login status.</p>
 			<td class="value">
 				<div>
 					<a href="#$contentElementWrappingService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="environment" id="$environment">
+			<td class="attributes"><code>
+				protected  
+				Neos\Flow\Utility\Environment
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Fusion.ExceptionHandlers.PageHandler.html#44-48" title="Go to source code"><var>$environment</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$environment" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1033,6 +1101,6 @@ handlers depending on the login status.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?96cbb58f60df4fe4f62d4027cbb7cf72b1e4da54"></script>
+<script src="elementlist.js?38e67c099fd67df0477f68502e0bf35245f71d9b"></script>
 </body>
 </html>
