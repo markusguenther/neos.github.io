@@ -870,10 +870,10 @@
 </span><span id="50" class="l">
 </span><span id="51" class="l">            <span class="php-comment">/** @var AssetInterface $asset */</span>
 </span><span id="52" class="l">            <span class="php-var">$asset</span> = <span class="php-var">$thumbnail</span>-&gt;getOriginalAsset();
-</span><span id="53" class="l">            <span class="php-var">$icon</span> = FileTypeIconService::getIcon(<span class="php-var">$asset</span>-&gt;getResource()-&gt;getFilename(), <span class="php-var">$width</span>, <span class="php-var">$height</span>);
+</span><span id="53" class="l">            <span class="php-var">$icon</span> = FileTypeIconService::getIcon(<span class="php-var">$asset</span>-&gt;getResource()-&gt;getFilename());
 </span><span id="54" class="l">            <span class="php-var">$thumbnail</span>-&gt;setStaticResource(<span class="php-var">$icon</span>[<span class="php-quote">'src'</span>]);
-</span><span id="55" class="l">            <span class="php-var">$thumbnail</span>-&gt;setWidth(<span class="php-var">$icon</span>[<span class="php-quote">'width'</span>]);
-</span><span id="56" class="l">            <span class="php-var">$thumbnail</span>-&gt;setHeight(<span class="php-var">$icon</span>[<span class="php-quote">'height'</span>]);
+</span><span id="55" class="l">            <span class="php-var">$thumbnail</span>-&gt;setWidth(<span class="php-var">$width</span>);
+</span><span id="56" class="l">            <span class="php-var">$thumbnail</span>-&gt;setHeight(<span class="php-var">$height</span>);
 </span><span id="57" class="l">        } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$exception</span>) {
 </span><span id="58" class="l">            <span class="php-var">$message</span> = <span class="php-keyword2">sprintf</span>(<span class="php-quote">'Unable to generate thumbnail for the given image (filename: %s, SHA1: %s)'</span>, <span class="php-var">$thumbnail</span>-&gt;getOriginalAsset()-&gt;getResource()-&gt;getFilename(), <span class="php-var">$thumbnail</span>-&gt;getOriginalAsset()-&gt;getResource()-&gt;getSha1());
 </span><span id="59" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\NoThumbnailAvailableException(<span class="php-var">$message</span>, <span class="php-num">1433109654</span>, <span class="php-var">$exception</span>);
@@ -889,6 +889,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?38e67c099fd67df0477f68502e0bf35245f71d9b"></script>
+<script src="elementlist.js?9193359e772c702f1d56b30fbcf824b437bfb998"></script>
 </body>
 </html>
