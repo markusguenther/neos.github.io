@@ -841,7 +841,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Command.MediaCommandController.html#30-326" title="Go to source code">Neos.Media/Classes/Command/MediaCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Media.Command.MediaCommandController.html#32-352" title="Go to source code">Neos.Media/Classes/Command/MediaCommandController.php</a>
 		<br>
 	</div>
 
@@ -861,7 +861,7 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importResourcesCommand">#</a>
-			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#83-138" title="Go to source code">importResourcesCommand</a>( <span>boolean <var>$simulate</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#85-140" title="Go to source code">importResourcesCommand</a>( <span>boolean <var>$simulate</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Import resources to asset management</p>
@@ -899,7 +899,7 @@ PersistentResource.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeUnusedCommand">#</a>
-			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#140-222" title="Go to source code">removeUnusedCommand</a>( <span>Neos\Media\Command\string <var>$assetSource</var> = <span class="php-quote">''</span></span>, <span>Neos\Media\Command\bool <var>$quiet</var> = <span class="php-keyword1">false</span></span>, <span>Neos\Media\Command\bool <var>$assumeYes</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#142-248" title="Go to source code">removeUnusedCommand</a>( <span>Neos\Media\Command\string <var>$assetSource</var> = <span class="php-quote">''</span></span>, <span>Neos\Media\Command\bool <var>$quiet</var> = <span class="php-keyword1">false</span></span>, <span>Neos\Media\Command\bool <var>$assumeYes</var> = <span class="php-keyword1">false</span></span>, <span>Neos\Media\Command\string <var>$onlyTags</var> = <span class="php-quote">''</span></span>, <span>Neos\Media\Command\int <var>$limit</var> = <span class="php-num">0</span></span> )</code>
 
 			<div class="description short">
 				<p>Remove unused assets</p>
@@ -920,6 +920,10 @@ reported as used by any AssetUsageStrategies. The unused assets can than be remo
 						<dd>If set, only errors will be displayed.</dd>
 						<dt><var>$assumeYes</var></dt>
 						<dd>If set, "yes" is assumed for the "shall I remove ..." dialogs</dd>
+						<dt><var>$onlyTags</var></dt>
+						<dd>Comma-separated list of asset tags, that should be taken into account</dd>
+						<dt><var>$limit</var></dt>
+						<dd>Limit the result of unused assets displayed and removed for this run.</dd>
 					</dl></div>
 
 
@@ -940,7 +944,7 @@ reported as used by any AssetUsageStrategies. The unused assets can than be remo
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createThumbnailsCommand">#</a>
-			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#224-254" title="Go to source code">createThumbnailsCommand</a>( <span>string <var>$preset</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$async</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#250-280" title="Go to source code">createThumbnailsCommand</a>( <span>string <var>$preset</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$async</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Create thumbnails</p>
@@ -981,7 +985,7 @@ thumbnails for a specific thumbnail preset configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clearThumbnailsCommand">#</a>
-			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#256-281" title="Go to source code">clearThumbnailsCommand</a>( <span>string <var>$preset</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#282-307" title="Go to source code">clearThumbnailsCommand</a>( <span>string <var>$preset</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Remove thumbnails</p>
@@ -1018,7 +1022,7 @@ matching a specific thumbnail preset configuration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderThumbnailsCommand">#</a>
-			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#283-309" title="Go to source code">renderThumbnailsCommand</a>( <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#309-335" title="Go to source code">renderThumbnailsCommand</a>( <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Render ungenerated thumbnails</p>
@@ -1055,7 +1059,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeConnection">#</a>
-			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#311-325" title="Go to source code">initializeConnection</a>( )</code>
+			<code><a href="source-class-Neos.Media.Command.MediaCommandController.html#337-351" title="Go to source code">initializeConnection</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the DBAL connection which is currently bound to the Doctrine Entity Manager</p>
@@ -1096,7 +1100,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#35-39" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#37-41" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1124,7 +1128,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#41-45" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#43-47" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					
@@ -1152,7 +1156,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#47-50" title="Go to source code"><var>$dbalConnection</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#49-52" title="Go to source code"><var>$dbalConnection</var></a>
 
 				<div class="description short">
 					
@@ -1177,7 +1181,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#52-56" title="Go to source code"><var>$assetRepository</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#54-58" title="Go to source code"><var>$assetRepository</var></a>
 
 				<div class="description short">
 					
@@ -1205,7 +1209,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#58-62" title="Go to source code"><var>$thumbnailRepository</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#60-64" title="Go to source code"><var>$thumbnailRepository</var></a>
 
 				<div class="description short">
 					
@@ -1233,7 +1237,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#64-68" title="Go to source code"><var>$thumbnailService</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#66-70" title="Go to source code"><var>$thumbnailService</var></a>
 
 				<div class="description short">
 					
@@ -1261,7 +1265,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#70-75" title="Go to source code"><var>$asyncThumbnails</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#72-77" title="Go to source code"><var>$asyncThumbnails</var></a>
 
 				<div class="description short">
 					<p>If enabled</p>
@@ -1289,7 +1293,7 @@ thumbnails to be rendered to avoid memory exhaustion.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Command.MediaCommandController.html#77-81" title="Go to source code"><var>$mappingStrategy</var></a>
+					<a href="source-class-Neos.Media.Command.MediaCommandController.html#79-83" title="Go to source code"><var>$mappingStrategy</var></a>
 
 				<div class="description short">
 					
