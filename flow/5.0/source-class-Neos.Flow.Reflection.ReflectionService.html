@@ -1024,7 +1024,7 @@
 </span><span id="168" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$useStatementsForClassCache</span>;
 </span><span id="169" class="l">
 </span><span id="170" class="l">    <span class="php-comment">/**
-</span></span><span id="171" class="l"><span class="php-comment">     * In Production context, with frozen caches, this flag will be TRUE
+</span></span><span id="171" class="l"><span class="php-comment">     * In Production context, with frozen caches, this flag will be true
 </span></span><span id="172" class="l"><span class="php-comment">     *
 </span></span><span id="173" class="l"><span class="php-comment">     * @var boolean
 </span></span><span id="174" class="l"><span class="php-comment">     */</span>
@@ -1268,10 +1268,10 @@
 </span><span id="412" class="l">    <span class="php-comment">/**
 </span></span><span id="413" class="l"><span class="php-comment">     * Searches for and returns the class name of the default implementation of the given
 </span></span><span id="414" class="l"><span class="php-comment">     * interface name. If no class implementing the interface was found or more than one
-</span></span><span id="415" class="l"><span class="php-comment">     * implementation was found in the package defining the interface, FALSE is returned.
+</span></span><span id="415" class="l"><span class="php-comment">     * implementation was found in the package defining the interface, false is returned.
 </span></span><span id="416" class="l"><span class="php-comment">     *
 </span></span><span id="417" class="l"><span class="php-comment">     * @param string $interfaceName Name of the interface
-</span></span><span id="418" class="l"><span class="php-comment">     * @return mixed Either the class name of the default implementation for the object type or FALSE
+</span></span><span id="418" class="l"><span class="php-comment">     * @return mixed Either the class name of the default implementation for the object type or false
 </span></span><span id="419" class="l"><span class="php-comment">     * @throws \InvalidArgumentException if the given interface does not exist
 </span></span><span id="420" class="l"><span class="php-comment">     * @api
 </span></span><span id="421" class="l"><span class="php-comment">     */</span>
@@ -1444,7 +1444,7 @@
 </span></span><span id="588" class="l"><span class="php-comment">     *
 </span></span><span id="589" class="l"><span class="php-comment">     * @param string $className Name of the class
 </span></span><span id="590" class="l"><span class="php-comment">     * @param string $interfaceName interface to check for
-</span></span><span id="591" class="l"><span class="php-comment">     * @return boolean TRUE if the class implements $interfaceName, otherwise FALSE
+</span></span><span id="591" class="l"><span class="php-comment">     * @return boolean true if the class implements $interfaceName, otherwise false
 </span></span><span id="592" class="l"><span class="php-comment">     * @api
 </span></span><span id="593" class="l"><span class="php-comment">     */</span>
 </span><span id="594" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isClassImplementationOf(<span class="php-var">$className</span>, <span class="php-var">$interfaceName</span>)
@@ -1461,7 +1461,7 @@
 </span></span><span id="605" class="l"><span class="php-comment">     * Tells if the specified class is abstract or not
 </span></span><span id="606" class="l"><span class="php-comment">     *
 </span></span><span id="607" class="l"><span class="php-comment">     * @param string $className Name of the class to analyze
-</span></span><span id="608" class="l"><span class="php-comment">     * @return boolean TRUE if the class is abstract, otherwise FALSE
+</span></span><span id="608" class="l"><span class="php-comment">     * @return boolean true if the class is abstract, otherwise false
 </span></span><span id="609" class="l"><span class="php-comment">     * @api
 </span></span><span id="610" class="l"><span class="php-comment">     */</span>
 </span><span id="611" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isClassAbstract(<span class="php-var">$className</span>)
@@ -1474,7 +1474,7 @@
 </span></span><span id="618" class="l"><span class="php-comment">     * Tells if the specified class is final or not
 </span></span><span id="619" class="l"><span class="php-comment">     *
 </span></span><span id="620" class="l"><span class="php-comment">     * @param string $className Name of the class to analyze
-</span></span><span id="621" class="l"><span class="php-comment">     * @return boolean TRUE if the class is final, otherwise FALSE
+</span></span><span id="621" class="l"><span class="php-comment">     * @return boolean true if the class is final, otherwise false
 </span></span><span id="622" class="l"><span class="php-comment">     * @api
 </span></span><span id="623" class="l"><span class="php-comment">     */</span>
 </span><span id="624" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isClassFinal(<span class="php-var">$className</span>)
@@ -1487,7 +1487,7 @@
 </span></span><span id="631" class="l"><span class="php-comment">     * Tells if the class is unconfigurable or not
 </span></span><span id="632" class="l"><span class="php-comment">     *
 </span></span><span id="633" class="l"><span class="php-comment">     * @param string $className Name of the class to analyze
-</span></span><span id="634" class="l"><span class="php-comment">     * @return boolean return TRUE if class not could not be automatically configured, otherwise FALSE
+</span></span><span id="634" class="l"><span class="php-comment">     * @return boolean return true if class not could not be automatically configured, otherwise false
 </span></span><span id="635" class="l"><span class="php-comment">     * @api
 </span></span><span id="636" class="l"><span class="php-comment">     */</span>
 </span><span id="637" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isClassUnconfigurable(<span class="php-var">$className</span>)
@@ -1535,7 +1535,7 @@
 </span></span><span id="679" class="l"><span class="php-comment">     *
 </span></span><span id="680" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="681" class="l"><span class="php-comment">     * @param string $methodName Name of the method to analyze
-</span></span><span id="682" class="l"><span class="php-comment">     * @return boolean TRUE if the method is final, otherwise FALSE
+</span></span><span id="682" class="l"><span class="php-comment">     * @return boolean true if the method is final, otherwise false
 </span></span><span id="683" class="l"><span class="php-comment">     * @api
 </span></span><span id="684" class="l"><span class="php-comment">     */</span>
 </span><span id="685" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isMethodFinal(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>)
@@ -1549,7 +1549,7 @@
 </span></span><span id="693" class="l"><span class="php-comment">     *
 </span></span><span id="694" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="695" class="l"><span class="php-comment">     * @param string $methodName Name of the method to analyze
-</span></span><span id="696" class="l"><span class="php-comment">     * @return boolean TRUE if the method is static, otherwise FALSE
+</span></span><span id="696" class="l"><span class="php-comment">     * @return boolean true if the method is static, otherwise false
 </span></span><span id="697" class="l"><span class="php-comment">     * @api
 </span></span><span id="698" class="l"><span class="php-comment">     */</span>
 </span><span id="699" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isMethodStatic(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>)
@@ -1563,7 +1563,7 @@
 </span></span><span id="707" class="l"><span class="php-comment">     *
 </span></span><span id="708" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="709" class="l"><span class="php-comment">     * @param string $methodName Name of the method to analyze
-</span></span><span id="710" class="l"><span class="php-comment">     * @return boolean TRUE if the method is public, otherwise FALSE
+</span></span><span id="710" class="l"><span class="php-comment">     * @return boolean true if the method is public, otherwise false
 </span></span><span id="711" class="l"><span class="php-comment">     * @api
 </span></span><span id="712" class="l"><span class="php-comment">     */</span>
 </span><span id="713" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isMethodPublic(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>)
@@ -1577,7 +1577,7 @@
 </span></span><span id="721" class="l"><span class="php-comment">     *
 </span></span><span id="722" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="723" class="l"><span class="php-comment">     * @param string $methodName Name of the method to analyze
-</span></span><span id="724" class="l"><span class="php-comment">     * @return boolean TRUE if the method is protected, otherwise FALSE
+</span></span><span id="724" class="l"><span class="php-comment">     * @return boolean true if the method is protected, otherwise false
 </span></span><span id="725" class="l"><span class="php-comment">     * @api
 </span></span><span id="726" class="l"><span class="php-comment">     */</span>
 </span><span id="727" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isMethodProtected(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>)
@@ -1591,7 +1591,7 @@
 </span></span><span id="735" class="l"><span class="php-comment">     *
 </span></span><span id="736" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="737" class="l"><span class="php-comment">     * @param string $methodName Name of the method to analyze
-</span></span><span id="738" class="l"><span class="php-comment">     * @return boolean TRUE if the method is private, otherwise FALSE
+</span></span><span id="738" class="l"><span class="php-comment">     * @return boolean true if the method is private, otherwise false
 </span></span><span id="739" class="l"><span class="php-comment">     * @api
 </span></span><span id="740" class="l"><span class="php-comment">     */</span>
 </span><span id="741" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isMethodPrivate(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>)
@@ -1606,7 +1606,7 @@
 </span></span><span id="750" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="751" class="l"><span class="php-comment">     * @param string $methodName Name of the method to analyze
 </span></span><span id="752" class="l"><span class="php-comment">     * @param string $tag Tag to check for
-</span></span><span id="753" class="l"><span class="php-comment">     * @return boolean TRUE if the method is tagged with $tag, otherwise FALSE
+</span></span><span id="753" class="l"><span class="php-comment">     * @return boolean true if the method is tagged with $tag, otherwise false
 </span></span><span id="754" class="l"><span class="php-comment">     * @api
 </span></span><span id="755" class="l"><span class="php-comment">     */</span>
 </span><span id="756" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isMethodTaggedWith(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>, <span class="php-var">$tag</span>)
@@ -1838,7 +1838,7 @@
 </span></span><span id="982" class="l"><span class="php-comment">     *
 </span></span><span id="983" class="l"><span class="php-comment">     * @param string $className Name of the class containing the method
 </span></span><span id="984" class="l"><span class="php-comment">     * @param string $propertyName Name of the property to analyze
-</span></span><span id="985" class="l"><span class="php-comment">     * @return boolean TRUE if the property is private, otherwise FALSE
+</span></span><span id="985" class="l"><span class="php-comment">     * @return boolean true if the property is private, otherwise false
 </span></span><span id="986" class="l"><span class="php-comment">     * @api
 </span></span><span id="987" class="l"><span class="php-comment">     */</span>
 </span><span id="988" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isPropertyPrivate(<span class="php-var">$className</span>, <span class="php-var">$propertyName</span>)
@@ -1854,7 +1854,7 @@
 </span></span><span id="998" class="l"><span class="php-comment">     * @param string $className Name of the class
 </span></span><span id="999" class="l"><span class="php-comment">     * @param string $propertyName Name of the property
 </span></span><span id="1000" class="l"><span class="php-comment">     * @param string $tag Tag to check for
-</span></span><span id="1001" class="l"><span class="php-comment">     * @return boolean TRUE if the class property is tagged with $tag, otherwise FALSE
+</span></span><span id="1001" class="l"><span class="php-comment">     * @return boolean true if the class property is tagged with $tag, otherwise false
 </span></span><span id="1002" class="l"><span class="php-comment">     * @api
 </span></span><span id="1003" class="l"><span class="php-comment">     */</span>
 </span><span id="1004" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isPropertyTaggedWith(<span class="php-var">$className</span>, <span class="php-var">$propertyName</span>, <span class="php-var">$tag</span>)
@@ -2047,7 +2047,7 @@
 </span></span><span id="1191" class="l"><span class="php-comment">     * Check if a specific annotation tag is configured to be ignored.
 </span></span><span id="1192" class="l"><span class="php-comment">     *
 </span></span><span id="1193" class="l"><span class="php-comment">     * @param string $tagName The annotation tag to check
-</span></span><span id="1194" class="l"><span class="php-comment">     * @return boolean TRUE if the tag is configured to be ignored, FALSE otherwise
+</span></span><span id="1194" class="l"><span class="php-comment">     * @return boolean true if the tag is configured to be ignored, false otherwise
 </span></span><span id="1195" class="l"><span class="php-comment">     */</span>
 </span><span id="1196" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> isTagIgnored(<span class="php-var">$tagName</span>)
 </span><span id="1197" class="l">    {
@@ -2782,10 +2782,10 @@
 </span></span><span id="1926" class="l"><span class="php-comment">     *
 </span></span><span id="1927" class="l"><span class="php-comment">     * If no reflection data was found, this method will at least load the precompiled
 </span></span><span id="1928" class="l"><span class="php-comment">     * reflection data of any possible frozen package. Even if precompiled reflection
-</span></span><span id="1929" class="l"><span class="php-comment">     * data could be loaded, FALSE will be returned in order to signal that other
+</span></span><span id="1929" class="l"><span class="php-comment">     * data could be loaded, false will be returned in order to signal that other
 </span></span><span id="1930" class="l"><span class="php-comment">     * packages still need to be reflected.
 </span></span><span id="1931" class="l"><span class="php-comment">     *
-</span></span><span id="1932" class="l"><span class="php-comment">     * @return boolean TRUE if reflection data could be loaded, otherwise FALSE
+</span></span><span id="1932" class="l"><span class="php-comment">     * @return boolean true if reflection data could be loaded, otherwise false
 </span></span><span id="1933" class="l"><span class="php-comment">     */</span>
 </span><span id="1934" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> loadClassReflectionCompiletimeCache()
 </span><span id="1935" class="l">    {

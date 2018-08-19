@@ -892,7 +892,7 @@
 </span></span><span id="41" class="l"><span class="php-comment">     * Any resources which were locked, or allocated, during opening and use of
 </span></span><span id="42" class="l"><span class="php-comment">     * the directory stream should be released.
 </span></span><span id="43" class="l"><span class="php-comment">     *
-</span></span><span id="44" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="44" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="45" class="l"><span class="php-comment">     * @api
 </span></span><span id="46" class="l"><span class="php-comment">     */</span>
 </span><span id="47" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> closeDirectory();
@@ -904,7 +904,7 @@
 </span></span><span id="53" class="l"><span class="php-comment">     *
 </span></span><span id="54" class="l"><span class="php-comment">     * @param string $path Specifies the URL that was passed to opendir().
 </span></span><span id="55" class="l"><span class="php-comment">     * @param int $options Whether or not to enforce safe_mode (0x04).
-</span></span><span id="56" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="56" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="57" class="l"><span class="php-comment">     * @api
 </span></span><span id="58" class="l"><span class="php-comment">     */</span>
 </span><span id="59" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> openDirectory(<span class="php-var">$path</span>, <span class="php-var">$options</span>);
@@ -914,7 +914,7 @@
 </span></span><span id="63" class="l"><span class="php-comment">     *
 </span></span><span id="64" class="l"><span class="php-comment">     * This method is called in response to readdir().
 </span></span><span id="65" class="l"><span class="php-comment">     *
-</span></span><span id="66" class="l"><span class="php-comment">     * @return string Should return string representing the next filename, or FALSE if there is no next file.
+</span></span><span id="66" class="l"><span class="php-comment">     * @return string Should return string representing the next filename, or false if there is no next file.
 </span></span><span id="67" class="l"><span class="php-comment">     * @api
 </span></span><span id="68" class="l"><span class="php-comment">     */</span>
 </span><span id="69" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> readDirectory();
@@ -928,7 +928,7 @@
 </span></span><span id="77" class="l"><span class="php-comment">     * to dir_readdir() should return the first entry in the location returned
 </span></span><span id="78" class="l"><span class="php-comment">     * by dir_opendir().
 </span></span><span id="79" class="l"><span class="php-comment">     *
-</span></span><span id="80" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="80" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="81" class="l"><span class="php-comment">     * @api
 </span></span><span id="82" class="l"><span class="php-comment">     */</span>
 </span><span id="83" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> rewindDirectory();
@@ -944,7 +944,7 @@
 </span></span><span id="93" class="l"><span class="php-comment">     * @param string $path Directory which should be created.
 </span></span><span id="94" class="l"><span class="php-comment">     * @param integer $mode The value passed to mkdir().
 </span></span><span id="95" class="l"><span class="php-comment">     * @param integer $options A bitwise mask of values, such as STREAM_MKDIR_RECURSIVE.
-</span></span><span id="96" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="96" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="97" class="l"><span class="php-comment">     * @api
 </span></span><span id="98" class="l"><span class="php-comment">     */</span>
 </span><span id="99" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> makeDirectory(<span class="php-var">$path</span>, <span class="php-var">$mode</span>, <span class="php-var">$options</span>);
@@ -959,7 +959,7 @@
 </span></span><span id="108" class="l"><span class="php-comment">     *
 </span></span><span id="109" class="l"><span class="php-comment">     * @param string $path The directory URL which should be removed.
 </span></span><span id="110" class="l"><span class="php-comment">     * @param integer $options A bitwise mask of values, such as STREAM_MKDIR_RECURSIVE.
-</span></span><span id="111" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="111" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="112" class="l"><span class="php-comment">     * @api
 </span></span><span id="113" class="l"><span class="php-comment">     */</span>
 </span><span id="114" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> removeDirectory(<span class="php-var">$path</span>, <span class="php-var">$options</span>);
@@ -973,7 +973,7 @@
 </span></span><span id="122" class="l"><span class="php-comment">     *
 </span></span><span id="123" class="l"><span class="php-comment">     * @param string $source The URL to the current file.
 </span></span><span id="124" class="l"><span class="php-comment">     * @param string $target The URL which the path_from should be renamed to.
-</span></span><span id="125" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="125" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="126" class="l"><span class="php-comment">     * @api
 </span></span><span id="127" class="l"><span class="php-comment">     */</span>
 </span><span id="128" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">rename</span>(<span class="php-var">$source</span>, <span class="php-var">$target</span>);
@@ -984,7 +984,7 @@
 </span></span><span id="133" class="l"><span class="php-comment">     * This method is called in response to stream_select().
 </span></span><span id="134" class="l"><span class="php-comment">     *
 </span></span><span id="135" class="l"><span class="php-comment">     * @param integer $castType Can be STREAM_CAST_FOR_SELECT when stream_select() is calling stream_cast() or STREAM_CAST_AS_STREAM when stream_cast() is called for other uses.
-</span></span><span id="136" class="l"><span class="php-comment">     * @return resource Should return the underlying stream resource used by the wrapper, or FALSE.
+</span></span><span id="136" class="l"><span class="php-comment">     * @return resource Should return the underlying stream resource used by the wrapper, or false.
 </span></span><span id="137" class="l"><span class="php-comment">     * @api
 </span></span><span id="138" class="l"><span class="php-comment">     */</span>
 </span><span id="139" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> cast(<span class="php-var">$castType</span>);
@@ -1007,7 +1007,7 @@
 </span></span><span id="156" class="l"><span class="php-comment">     *
 </span></span><span id="157" class="l"><span class="php-comment">     * This method is called in response to feof().
 </span></span><span id="158" class="l"><span class="php-comment">     *
-</span></span><span id="159" class="l"><span class="php-comment">     * @return boolean Should return TRUE if the read/write position is at the end of the stream and if no more data is available to be read, or FALSE otherwise.
+</span></span><span id="159" class="l"><span class="php-comment">     * @return boolean Should return true if the read/write position is at the end of the stream and if no more data is available to be read, or false otherwise.
 </span></span><span id="160" class="l"><span class="php-comment">     * @api
 </span></span><span id="161" class="l"><span class="php-comment">     */</span>
 </span><span id="162" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isAtEof();
@@ -1020,9 +1020,9 @@
 </span></span><span id="169" class="l"><span class="php-comment">     * If you have cached data in your stream but not yet stored it into the
 </span></span><span id="170" class="l"><span class="php-comment">     * underlying storage, you should do so now.
 </span></span><span id="171" class="l"><span class="php-comment">     *
-</span></span><span id="172" class="l"><span class="php-comment">     * Note: If not implemented, FALSE is assumed as the return value.
+</span></span><span id="172" class="l"><span class="php-comment">     * Note: If not implemented, false is assumed as the return value.
 </span></span><span id="173" class="l"><span class="php-comment">     *
-</span></span><span id="174" class="l"><span class="php-comment">     * @return boolean Should return TRUE if the cached data was successfully stored (or if there was no data to store), or FALSE if the data could not be stored.
+</span></span><span id="174" class="l"><span class="php-comment">     * @return boolean Should return true if the cached data was successfully stored (or if there was no data to store), or false if the data could not be stored.
 </span></span><span id="175" class="l"><span class="php-comment">     * @api
 </span></span><span id="176" class="l"><span class="php-comment">     */</span>
 </span><span id="177" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">flush</span>();
@@ -1039,7 +1039,7 @@
 </span></span><span id="188" class="l"><span class="php-comment">     *  LOCK_NB if you don't want flock() to block while locking.
 </span></span><span id="189" class="l"><span class="php-comment">     *
 </span></span><span id="190" class="l"><span class="php-comment">     * @param integer $operation One of the LOCK_* constants
-</span></span><span id="191" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="191" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="192" class="l"><span class="php-comment">     * @api
 </span></span><span id="193" class="l"><span class="php-comment">     */</span>
 </span><span id="194" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> lock(<span class="php-var">$operation</span>);
@@ -1049,7 +1049,7 @@
 </span></span><span id="198" class="l"><span class="php-comment">     *
 </span></span><span id="199" class="l"><span class="php-comment">     * This method is called when closing the stream (LOCK_UN).
 </span></span><span id="200" class="l"><span class="php-comment">     *
-</span></span><span id="201" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="201" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="202" class="l"><span class="php-comment">     * @api
 </span></span><span id="203" class="l"><span class="php-comment">     */</span>
 </span><span id="204" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> unlock();
@@ -1072,7 +1072,7 @@
 </span></span><span id="221" class="l"><span class="php-comment">     * @param string $mode The mode used to open the file, as detailed for fopen().
 </span></span><span id="222" class="l"><span class="php-comment">     * @param integer $options Holds additional flags set by the streams API.
 </span></span><span id="223" class="l"><span class="php-comment">     * @param string &amp;$openedPathAndFilename path If the path is opened successfully, and STREAM_USE_PATH is set in options, opened_path should be set to the full path of the file/resource that was actually opened.
-</span></span><span id="224" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="224" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="225" class="l"><span class="php-comment">     * @api
 </span></span><span id="226" class="l"><span class="php-comment">     */</span>
 </span><span id="227" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> open(<span class="php-var">$path</span>, <span class="php-var">$mode</span>, <span class="php-var">$options</span>, &amp;<span class="php-var">$openedPathAndFilename</span>);
@@ -1086,7 +1086,7 @@
 </span></span><span id="235" class="l"><span class="php-comment">     * number of bytes that were successfully read).
 </span></span><span id="236" class="l"><span class="php-comment">     *
 </span></span><span id="237" class="l"><span class="php-comment">     * @param integer $count How many bytes of data from the current position should be returned.
-</span></span><span id="238" class="l"><span class="php-comment">     * @return string If there are less than count bytes available, return as many as are available. If no more data is available, return either FALSE or an empty string.
+</span></span><span id="238" class="l"><span class="php-comment">     * @return string If there are less than count bytes available, return as many as are available. If no more data is available, return either false or an empty string.
 </span></span><span id="239" class="l"><span class="php-comment">     * @api
 </span></span><span id="240" class="l"><span class="php-comment">     */</span>
 </span><span id="241" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> read(<span class="php-var">$count</span>);
@@ -1106,7 +1106,7 @@
 </span></span><span id="255" class="l"><span class="php-comment">     *
 </span></span><span id="256" class="l"><span class="php-comment">     * @param integer $offset The stream offset to seek to.
 </span></span><span id="257" class="l"><span class="php-comment">     * @param integer $whence
-</span></span><span id="258" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="258" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="259" class="l"><span class="php-comment">     * @api
 </span></span><span id="260" class="l"><span class="php-comment">     */</span>
 </span><span id="261" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> seek(<span class="php-var">$offset</span>, <span class="php-var">$whence</span> = SEEK_SET);
@@ -1134,7 +1134,7 @@
 </span></span><span id="283" class="l"><span class="php-comment">     * @param integer $option
 </span></span><span id="284" class="l"><span class="php-comment">     * @param integer $argument1
 </span></span><span id="285" class="l"><span class="php-comment">     * @param integer $argument2
-</span></span><span id="286" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure. If option is not implemented, FALSE should be returned.
+</span></span><span id="286" class="l"><span class="php-comment">     * @return boolean true on success or false on failure. If option is not implemented, false should be returned.
 </span></span><span id="287" class="l"><span class="php-comment">     * @api
 </span></span><span id="288" class="l"><span class="php-comment">     */</span>
 </span><span id="289" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setOption(<span class="php-var">$option</span>, <span class="php-var">$argument1</span>, <span class="php-var">$argument2</span>);
@@ -1176,7 +1176,7 @@
 </span></span><span id="325" class="l"><span class="php-comment">     * files.
 </span></span><span id="326" class="l"><span class="php-comment">     *
 </span></span><span id="327" class="l"><span class="php-comment">     * @param string $path The file URL which should be deleted.
-</span></span><span id="328" class="l"><span class="php-comment">     * @return boolean TRUE on success or FALSE on failure.
+</span></span><span id="328" class="l"><span class="php-comment">     * @return boolean true on success or false on failure.
 </span></span><span id="329" class="l"><span class="php-comment">     * @api
 </span></span><span id="330" class="l"><span class="php-comment">     */</span>
 </span><span id="331" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">unlink</span>(<span class="php-var">$path</span>);

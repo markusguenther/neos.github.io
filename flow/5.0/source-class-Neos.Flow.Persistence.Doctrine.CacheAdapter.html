@@ -912,7 +912,7 @@
 </span></span><span id="56" class="l"><span class="php-comment">     * Fetches an entry from the cache.
 </span></span><span id="57" class="l"><span class="php-comment">     *
 </span></span><span id="58" class="l"><span class="php-comment">     * @param string $id The id of the cache entry to fetch.
-</span></span><span id="59" class="l"><span class="php-comment">     * @return mixed The cached data or FALSE, if no cache entry exists for the given id.
+</span></span><span id="59" class="l"><span class="php-comment">     * @return mixed The cached data or false, if no cache entry exists for the given id.
 </span></span><span id="60" class="l"><span class="php-comment">     */</span>
 </span><span id="61" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> fetch(<span class="php-var">$id</span>)
 </span><span id="62" class="l">    {
@@ -923,7 +923,7 @@
 </span></span><span id="67" class="l"><span class="php-comment">     * Tests if an entry exists in the cache.
 </span></span><span id="68" class="l"><span class="php-comment">     *
 </span></span><span id="69" class="l"><span class="php-comment">     * @param string $id The cache id of the entry to check for.
-</span></span><span id="70" class="l"><span class="php-comment">     * @return boolean TRUE if a cache entry exists for the given cache id, FALSE otherwise.
+</span></span><span id="70" class="l"><span class="php-comment">     * @return boolean true if a cache entry exists for the given cache id, false otherwise.
 </span></span><span id="71" class="l"><span class="php-comment">     */</span>
 </span><span id="72" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> contains(<span class="php-var">$id</span>)
 </span><span id="73" class="l">    {
@@ -936,7 +936,7 @@
 </span></span><span id="80" class="l"><span class="php-comment">     * @param string $id The cache id.
 </span></span><span id="81" class="l"><span class="php-comment">     * @param mixed $data The cache entry/data.
 </span></span><span id="82" class="l"><span class="php-comment">     * @param int $lifeTime The cache lifetime. If != 0, sets a specific lifetime for this cache entry (0 =&gt; infinite lifeTime).
-</span></span><span id="83" class="l"><span class="php-comment">     * @return boolean TRUE if the entry was successfully stored in the cache, FALSE otherwise.
+</span></span><span id="83" class="l"><span class="php-comment">     * @return boolean true if the entry was successfully stored in the cache, false otherwise.
 </span></span><span id="84" class="l"><span class="php-comment">     */</span>
 </span><span id="85" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> save(<span class="php-var">$id</span>, <span class="php-var">$data</span>, <span class="php-var">$lifeTime</span> = <span class="php-num">0</span>)
 </span><span id="86" class="l">    {
@@ -947,7 +947,7 @@
 </span></span><span id="91" class="l"><span class="php-comment">     * Deletes a cache entry.
 </span></span><span id="92" class="l"><span class="php-comment">     *
 </span></span><span id="93" class="l"><span class="php-comment">     * @param string $id The cache id.
-</span></span><span id="94" class="l"><span class="php-comment">     * @return boolean TRUE if the cache entry was successfully deleted, FALSE otherwise.
+</span></span><span id="94" class="l"><span class="php-comment">     * @return boolean true if the cache entry was successfully deleted, false otherwise.
 </span></span><span id="95" class="l"><span class="php-comment">     */</span>
 </span><span id="96" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">delete</span>(<span class="php-var">$id</span>)
 </span><span id="97" class="l">    {

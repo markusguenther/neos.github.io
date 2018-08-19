@@ -897,7 +897,7 @@
 </span></span><span id="45" class="l"><span class="php-comment">     * @param string $methodName Name of the method to check against
 </span></span><span id="46" class="l"><span class="php-comment">     * @param string $methodDeclaringClassName Name of the class the method was originally declared in
 </span></span><span id="47" class="l"><span class="php-comment">     * @param mixed $pointcutQueryIdentifier Some identifier for this query - must at least differ from a previous identifier. Used for circular reference detection.
-</span></span><span id="48" class="l"><span class="php-comment">     * @return boolean TRUE if the class / method match, otherwise FALSE
+</span></span><span id="48" class="l"><span class="php-comment">     * @return boolean true if the class / method match, otherwise false
 </span></span><span id="49" class="l"><span class="php-comment">     */</span>
 </span><span id="50" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> matches(<span class="php-var">$className</span>, <span class="php-var">$methodName</span>, <span class="php-var">$methodDeclaringClassName</span>, <span class="php-var">$pointcutQueryIdentifier</span>)
 </span><span id="51" class="l">    {
@@ -922,9 +922,9 @@
 </span><span id="70" class="l">    }
 </span><span id="71" class="l">
 </span><span id="72" class="l">    <span class="php-comment">/**
-</span></span><span id="73" class="l"><span class="php-comment">     * Returns TRUE if this filter holds runtime evaluations for a previously matched pointcut
+</span></span><span id="73" class="l"><span class="php-comment">     * Returns true if this filter holds runtime evaluations for a previously matched pointcut
 </span></span><span id="74" class="l"><span class="php-comment">     *
-</span></span><span id="75" class="l"><span class="php-comment">     * @return boolean TRUE if this filter has runtime evaluations
+</span></span><span id="75" class="l"><span class="php-comment">     * @return boolean true if this filter has runtime evaluations
 </span></span><span id="76" class="l"><span class="php-comment">     */</span>
 </span><span id="77" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hasRuntimeEvaluationsDefinition()
 </span><span id="78" class="l">    {

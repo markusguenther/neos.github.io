@@ -966,7 +966,7 @@
 </span></span><span id="117" class="l"><span class="php-comment">     *
 </span></span><span id="118" class="l"><span class="php-comment">     * @param string $packageKey key of the package to migrate
 </span></span><span id="119" class="l"><span class="php-comment">     * @param string $versionNumber version of the migration to execute (e.g. &quot;20120126163610&quot;), or NULL to execute all migrations
-</span></span><span id="120" class="l"><span class="php-comment">     * @param boolean $force if TRUE migrations will be applied even if the corresponding package is not a git working copy or contains local changes
+</span></span><span id="120" class="l"><span class="php-comment">     * @param boolean $force if true migrations will be applied even if the corresponding package is not a git working copy or contains local changes
 </span></span><span id="121" class="l"><span class="php-comment">     * @return void
 </span></span><span id="122" class="l"><span class="php-comment">     */</span>
 </span><span id="123" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> migrate(<span class="php-var">$packageKey</span>, <span class="php-var">$versionNumber</span> = <span class="php-keyword1">null</span>, <span class="php-var">$force</span> = <span class="php-keyword1">false</span>)
@@ -985,7 +985,7 @@
 </span></span><span id="136" class="l"><span class="php-comment">     * Apply the given migration to the package and commit the result.
 </span></span><span id="137" class="l"><span class="php-comment">     *
 </span></span><span id="138" class="l"><span class="php-comment">     * @param AbstractMigration $migration
-</span></span><span id="139" class="l"><span class="php-comment">     * @param boolean $force if TRUE the migration will be applied even if the current package is not a git working copy or contains local changes
+</span></span><span id="139" class="l"><span class="php-comment">     * @param boolean $force if true the migration will be applied even if the current package is not a git working copy or contains local changes
 </span></span><span id="140" class="l"><span class="php-comment">     * @return void
 </span></span><span id="141" class="l"><span class="php-comment">     * @throws \RuntimeException
 </span></span><span id="142" class="l"><span class="php-comment">     */</span>
@@ -1065,7 +1065,7 @@
 </span><span id="216" class="l">    <span class="php-comment">/**
 </span></span><span id="217" class="l"><span class="php-comment">     * Imports the core migration log from the git history if it has not been imported previously (the &quot;applied-flow-migrations&quot; composer manifest property does not exist)
 </span></span><span id="218" class="l"><span class="php-comment">     *
-</span></span><span id="219" class="l"><span class="php-comment">     * @param boolean $commitChanges if TRUE the modified composer manifest is committed - if it changed
+</span></span><span id="219" class="l"><span class="php-comment">     * @param boolean $commitChanges if true the modified composer manifest is committed - if it changed
 </span></span><span id="220" class="l"><span class="php-comment">     * @return string
 </span></span><span id="221" class="l"><span class="php-comment">     */</span>
 </span><span id="222" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> importMigrationLogFromGitHistory(<span class="php-var">$commitChanges</span> = <span class="php-keyword1">false</span>)

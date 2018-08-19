@@ -1050,10 +1050,10 @@ index 'category'). The array is indexed by package key.</p>
 				<p>Does a search and replace operation on the given file.</p>
 
 <p>A simple str_replace is used, unless $regularExpression is set
-to TRUE. In that case preg_replace is used. The given patterns
+to true. In that case preg_replace is used. The given patterns
 are used as given, no quoting is applied!</p>
 
-<p>In case $regularExpression is TRUE, a closure can be given for
+<p>In case $regularExpression is true, a closure can be given for
 the $replace variable. It should return a string and is given an
 array of matches as parameter.</p>
 
@@ -1072,7 +1072,7 @@ array of matches as parameter.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean|null<br>FALSE on errors, NULL on skip, TRUE on success
+						boolean|null<br>false on errors, NULL on skip, true on success
 					</div>
 
 

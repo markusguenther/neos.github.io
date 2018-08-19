@@ -976,12 +976,12 @@
 </span><span id="115" class="l">
 </span><span id="116" class="l">    <span class="php-comment">/**
 </span></span><span id="117" class="l"><span class="php-comment">     * Checks, whether given value can be matched.
-</span></span><span id="118" class="l"><span class="php-comment">     * If the value is empty, FALSE is returned.
+</span></span><span id="118" class="l"><span class="php-comment">     * If the value is empty, false is returned.
 </span></span><span id="119" class="l"><span class="php-comment">     * Otherwise the ObjectPathMappingRepository is asked for a matching ObjectPathMapping.
 </span></span><span id="120" class="l"><span class="php-comment">     * If that is found the identifier is stored in $this-&gt;value, otherwise this route part does not match.
 </span></span><span id="121" class="l"><span class="php-comment">     *
 </span></span><span id="122" class="l"><span class="php-comment">     * @param string $value value to match, usually the current query path segment(s)
-</span></span><span id="123" class="l"><span class="php-comment">     * @return boolean TRUE if value could be matched successfully, otherwise FALSE
+</span></span><span id="123" class="l"><span class="php-comment">     * @return boolean true if value could be matched successfully, otherwise false
 </span></span><span id="124" class="l"><span class="php-comment">     * @api
 </span></span><span id="125" class="l"><span class="php-comment">     */</span>
 </span><span id="126" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> matchValue(<span class="php-var">$value</span>)
@@ -1053,7 +1053,7 @@
 </span></span><span id="192" class="l"><span class="php-comment">     * Resolves the given entity and sets the value to a URI representation (path segment) that matches $this-&gt;uriPattern and is unique for the given object.
 </span></span><span id="193" class="l"><span class="php-comment">     *
 </span></span><span id="194" class="l"><span class="php-comment">     * @param mixed $value
-</span></span><span id="195" class="l"><span class="php-comment">     * @return boolean TRUE if the object could be resolved and stored in $this-&gt;value, otherwise FALSE.
+</span></span><span id="195" class="l"><span class="php-comment">     * @return boolean true if the object could be resolved and stored in $this-&gt;value, otherwise false.
 </span></span><span id="196" class="l"><span class="php-comment">     */</span>
 </span><span id="197" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> resolveValue(<span class="php-var">$value</span>)
 </span><span id="198" class="l">    {

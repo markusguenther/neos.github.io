@@ -894,7 +894,7 @@
 </span><span id="35" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$securityContext</span>;
 </span><span id="36" class="l">
 </span><span id="37" class="l">    <span class="php-comment">/**
-</span></span><span id="38" class="l"><span class="php-comment">     * If set to TRUE access will be granted for objects where all voters abstain from decision.
+</span></span><span id="38" class="l"><span class="php-comment">     * If set to true access will be granted for objects where all voters abstain from decision.
 </span></span><span id="39" class="l"><span class="php-comment">     *
 </span></span><span id="40" class="l"><span class="php-comment">     * @Flow\InjectConfiguration(&quot;security.authorization.allowAccessIfAllVotersAbstain&quot;)
 </span></span><span id="41" class="l"><span class="php-comment">     * @var boolean
@@ -912,7 +912,7 @@
 </span><span id="53" class="l">    }
 </span><span id="54" class="l">
 </span><span id="55" class="l">    <span class="php-comment">/**
-</span></span><span id="56" class="l"><span class="php-comment">     * Returns TRUE, if the given privilege type is granted for the given subject based
+</span></span><span id="56" class="l"><span class="php-comment">     * Returns true, if the given privilege type is granted for the given subject based
 </span></span><span id="57" class="l"><span class="php-comment">     * on the current security context.
 </span></span><span id="58" class="l"><span class="php-comment">     *
 </span></span><span id="59" class="l"><span class="php-comment">     * @param string $privilegeType The type of privilege that should be evaluated
@@ -926,7 +926,7 @@
 </span><span id="67" class="l">    }
 </span><span id="68" class="l">
 </span><span id="69" class="l">    <span class="php-comment">/**
-</span></span><span id="70" class="l"><span class="php-comment">     * Returns TRUE, if the given privilege type would be granted for the given roles and subject
+</span></span><span id="70" class="l"><span class="php-comment">     * Returns true, if the given privilege type would be granted for the given roles and subject
 </span></span><span id="71" class="l"><span class="php-comment">     *
 </span></span><span id="72" class="l"><span class="php-comment">     * @param array&lt;Role&gt; $roles The roles that should be evaluated
 </span></span><span id="73" class="l"><span class="php-comment">     * @param string $privilegeType The type of privilege that should be evaluated
@@ -990,11 +990,11 @@
 </span><span id="131" class="l">    }
 </span><span id="132" class="l">
 </span><span id="133" class="l">    <span class="php-comment">/**
-</span></span><span id="134" class="l"><span class="php-comment">     * Returns TRUE if access is granted on the given privilege target in the current security context
+</span></span><span id="134" class="l"><span class="php-comment">     * Returns true if access is granted on the given privilege target in the current security context
 </span></span><span id="135" class="l"><span class="php-comment">     *
 </span></span><span id="136" class="l"><span class="php-comment">     * @param string $privilegeTargetIdentifier The identifier of the privilege target to decide on
 </span></span><span id="137" class="l"><span class="php-comment">     * @param array $privilegeParameters Optional array of privilege parameters (simple key =&gt; value array)
-</span></span><span id="138" class="l"><span class="php-comment">     * @return boolean TRUE if access is granted, FALSE otherwise
+</span></span><span id="138" class="l"><span class="php-comment">     * @return boolean true if access is granted, false otherwise
 </span></span><span id="139" class="l"><span class="php-comment">     */</span>
 </span><span id="140" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isPrivilegeTargetGranted(<span class="php-var">$privilegeTargetIdentifier</span>, <span class="php-keyword1">array</span> <span class="php-var">$privilegeParameters</span> = [])
 </span><span id="141" class="l">    {
@@ -1002,12 +1002,12 @@
 </span><span id="143" class="l">    }
 </span><span id="144" class="l">
 </span><span id="145" class="l">    <span class="php-comment">/**
-</span></span><span id="146" class="l"><span class="php-comment">     * Returns TRUE if access is granted on the given privilege target in the current security context
+</span></span><span id="146" class="l"><span class="php-comment">     * Returns true if access is granted on the given privilege target in the current security context
 </span></span><span id="147" class="l"><span class="php-comment">     *
 </span></span><span id="148" class="l"><span class="php-comment">     * @param array&lt;Role&gt; $roles The roles that should be evaluated
 </span></span><span id="149" class="l"><span class="php-comment">     * @param string $privilegeTargetIdentifier The identifier of the privilege target to decide on
 </span></span><span id="150" class="l"><span class="php-comment">     * @param array $privilegeParameters Optional array of privilege parameters (simple key =&gt; value array)
-</span></span><span id="151" class="l"><span class="php-comment">     * @return boolean TRUE if access is granted, FALSE otherwise
+</span></span><span id="151" class="l"><span class="php-comment">     * @return boolean true if access is granted, false otherwise
 </span></span><span id="152" class="l"><span class="php-comment">     */</span>
 </span><span id="153" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isPrivilegeTargetGrantedForRoles(<span class="php-keyword1">array</span> <span class="php-var">$roles</span>, <span class="php-var">$privilegeTargetIdentifier</span>, <span class="php-keyword1">array</span> <span class="php-var">$privilegeParameters</span> = [])
 </span><span id="154" class="l">    {

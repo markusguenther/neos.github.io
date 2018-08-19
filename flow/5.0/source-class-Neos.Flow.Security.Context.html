@@ -937,7 +937,7 @@
 </span><span id="78" class="l">    <span class="php-keyword1">const</span> CONTEXT_HASH_UNINITIALIZED = <span class="php-quote">'__uninitialized__'</span>;
 </span><span id="79" class="l">
 </span><span id="80" class="l">    <span class="php-comment">/**
-</span></span><span id="81" class="l"><span class="php-comment">     * TRUE if the context is initialized in the current request, FALSE or NULL otherwise.
+</span></span><span id="81" class="l"><span class="php-comment">     * true if the context is initialized in the current request, false or NULL otherwise.
 </span></span><span id="82" class="l"><span class="php-comment">     *
 </span></span><span id="83" class="l"><span class="php-comment">     * @var boolean
 </span></span><span id="84" class="l"><span class="php-comment">     * @Flow\Transient
@@ -1109,7 +1109,7 @@
 </span><span id="250" class="l">    }
 </span><span id="251" class="l">
 </span><span id="252" class="l">    <span class="php-comment">/**
-</span></span><span id="253" class="l"><span class="php-comment">     * Returns TRUE if authorization should be ignored, otherwise FALSE
+</span></span><span id="253" class="l"><span class="php-comment">     * Returns true if authorization should be ignored, otherwise false
 </span></span><span id="254" class="l"><span class="php-comment">     * This is mainly useful to fetch records without Content Security to kick in (e.g. for AuthenticationProviders)
 </span></span><span id="255" class="l"><span class="php-comment">     *
 </span></span><span id="256" class="l"><span class="php-comment">     * @return boolean
@@ -1128,7 +1128,7 @@
 </span></span><span id="269" class="l"><span class="php-comment">     *
 </span></span><span id="270" class="l"><span class="php-comment">     * @param ActionRequest $request The current ActionRequest
 </span></span><span id="271" class="l"><span class="php-comment">     * @return void
-</span></span><span id="272" class="l"><span class="php-comment">     * @Flow\Autowiring(FALSE)
+</span></span><span id="272" class="l"><span class="php-comment">     * @Flow\Autowiring(false)
 </span></span><span id="273" class="l"><span class="php-comment">     */</span>
 </span><span id="274" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setRequest(ActionRequest <span class="php-var">$request</span>)
 </span><span id="275" class="l">    {
@@ -1209,7 +1209,7 @@
 </span><span id="350" class="l">    }
 </span><span id="351" class="l">
 </span><span id="352" class="l">    <span class="php-comment">/**
-</span></span><span id="353" class="l"><span class="php-comment">     * @return boolean TRUE if the Context is initialized, FALSE otherwise.
+</span></span><span id="353" class="l"><span class="php-comment">     * @return boolean true if the Context is initialized, false otherwise.
 </span></span><span id="354" class="l"><span class="php-comment">     */</span>
 </span><span id="355" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isInitialized()
 </span><span id="356" class="l">    {
@@ -1324,11 +1324,11 @@
 </span><span id="465" class="l">    }
 </span><span id="466" class="l">
 </span><span id="467" class="l">    <span class="php-comment">/**
-</span></span><span id="468" class="l"><span class="php-comment">     * Returns TRUE, if at least one of the currently authenticated accounts holds
+</span></span><span id="468" class="l"><span class="php-comment">     * Returns true, if at least one of the currently authenticated accounts holds
 </span></span><span id="469" class="l"><span class="php-comment">     * a role with the given identifier, also recursively.
 </span></span><span id="470" class="l"><span class="php-comment">     *
 </span></span><span id="471" class="l"><span class="php-comment">     * @param string $roleIdentifier The string representation of the role to search for
-</span></span><span id="472" class="l"><span class="php-comment">     * @return boolean TRUE, if a role with the given string representation was found
+</span></span><span id="472" class="l"><span class="php-comment">     * @return boolean true, if a role with the given string representation was found
 </span></span><span id="473" class="l"><span class="php-comment">     */</span>
 </span><span id="474" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hasRole(<span class="php-var">$roleIdentifier</span>)
 </span><span id="475" class="l">    {
@@ -1415,9 +1415,9 @@
 </span><span id="556" class="l">    }
 </span><span id="557" class="l">
 </span><span id="558" class="l">    <span class="php-comment">/**
-</span></span><span id="559" class="l"><span class="php-comment">     * Returns TRUE if the context has CSRF protection tokens.
+</span></span><span id="559" class="l"><span class="php-comment">     * Returns true if the context has CSRF protection tokens.
 </span></span><span id="560" class="l"><span class="php-comment">     *
-</span></span><span id="561" class="l"><span class="php-comment">     * @return boolean TRUE, if the token is valid. FALSE otherwise.
+</span></span><span id="561" class="l"><span class="php-comment">     * @return boolean true, if the token is valid. false otherwise.
 </span></span><span id="562" class="l"><span class="php-comment">     */</span>
 </span><span id="563" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hasCsrfProtectionTokens()
 </span><span id="564" class="l">    {
@@ -1425,11 +1425,11 @@
 </span><span id="566" class="l">    }
 </span><span id="567" class="l">
 </span><span id="568" class="l">    <span class="php-comment">/**
-</span></span><span id="569" class="l"><span class="php-comment">     * Returns TRUE if the given string is a valid CSRF protection token. The token will be removed if the configured
+</span></span><span id="569" class="l"><span class="php-comment">     * Returns true if the given string is a valid CSRF protection token. The token will be removed if the configured
 </span></span><span id="570" class="l"><span class="php-comment">     * csrf strategy is 'onePerUri'.
 </span></span><span id="571" class="l"><span class="php-comment">     *
 </span></span><span id="572" class="l"><span class="php-comment">     * @param string $csrfToken The token string to be validated
-</span></span><span id="573" class="l"><span class="php-comment">     * @return boolean TRUE, if the token is valid. FALSE otherwise.
+</span></span><span id="573" class="l"><span class="php-comment">     * @return boolean true, if the token is valid. false otherwise.
 </span></span><span id="574" class="l"><span class="php-comment">     */</span>
 </span><span id="575" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isCsrfProtectionTokenValid(<span class="php-var">$csrfToken</span>)
 </span><span id="576" class="l">    {
@@ -1516,7 +1516,7 @@
 </span></span><span id="657" class="l"><span class="php-comment">     * - Otherwise it is active only if at least one configured RequestPattern per type matches the request
 </span></span><span id="658" class="l"><span class="php-comment">     *
 </span></span><span id="659" class="l"><span class="php-comment">     * @param TokenInterface $token
-</span></span><span id="660" class="l"><span class="php-comment">     * @return bool TRUE if the given token is active, otherwise FALSE
+</span></span><span id="660" class="l"><span class="php-comment">     * @return bool true if the given token is active, otherwise false
 </span></span><span id="661" class="l"><span class="php-comment">     */</span>
 </span><span id="662" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> isTokenActive(TokenInterface <span class="php-var">$token</span>)
 </span><span id="663" class="l">    {

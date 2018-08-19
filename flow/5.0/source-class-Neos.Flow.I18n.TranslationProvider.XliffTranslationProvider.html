@@ -910,7 +910,7 @@
 </span></span><span id="60" class="l"><span class="php-comment">     * @param string $pluralForm One of RULE constants of PluralsReader
 </span></span><span id="61" class="l"><span class="php-comment">     * @param string $sourceName A relative path to the filename with translations (labels' catalog)
 </span></span><span id="62" class="l"><span class="php-comment">     * @param string $packageKey Key of the package containing the source file
-</span></span><span id="63" class="l"><span class="php-comment">     * @return mixed Translated label or FALSE on failure
+</span></span><span id="63" class="l"><span class="php-comment">     * @return mixed Translated label or false on failure
 </span></span><span id="64" class="l"><span class="php-comment">     * @throws Exception\InvalidPluralFormException
 </span></span><span id="65" class="l"><span class="php-comment">     */</span>
 </span><span id="66" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getTranslationByOriginalLabel(<span class="php-var">$originalLabel</span>, I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$pluralForm</span> = <span class="php-keyword1">null</span>, <span class="php-var">$sourceName</span> = <span class="php-quote">'Main'</span>, <span class="php-var">$packageKey</span> = <span class="php-quote">'Neos.Flow'</span>)
@@ -942,7 +942,7 @@
 </span></span><span id="92" class="l"><span class="php-comment">     * @param string $pluralForm One of RULE constants of PluralsReader
 </span></span><span id="93" class="l"><span class="php-comment">     * @param string $sourceName A relative path to the filename with translations (labels' catalog)
 </span></span><span id="94" class="l"><span class="php-comment">     * @param string $packageKey Key of the package containing the source file
-</span></span><span id="95" class="l"><span class="php-comment">     * @return mixed Translated label or FALSE on failure
+</span></span><span id="95" class="l"><span class="php-comment">     * @return mixed Translated label or false on failure
 </span></span><span id="96" class="l"><span class="php-comment">     * @throws Exception\InvalidPluralFormException
 </span></span><span id="97" class="l"><span class="php-comment">     */</span>
 </span><span id="98" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getTranslationById(<span class="php-var">$labelId</span>, I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$pluralForm</span> = <span class="php-keyword1">null</span>, <span class="php-var">$sourceName</span> = <span class="php-quote">'Main'</span>, <span class="php-var">$packageKey</span> = <span class="php-quote">'Neos.Flow'</span>)

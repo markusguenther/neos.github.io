@@ -895,7 +895,7 @@
 </span></span><span id="37" class="l"><span class="php-comment">     *
 </span></span><span id="38" class="l"><span class="php-comment">     * @param string $clearString
 </span></span><span id="39" class="l"><span class="php-comment">     * @param string $hashedStringAndSalt
-</span></span><span id="40" class="l"><span class="php-comment">     * @return boolean TRUE if the clear string matches, otherwise FALSE
+</span></span><span id="40" class="l"><span class="php-comment">     * @return boolean true if the clear string matches, otherwise false
 </span></span><span id="41" class="l"><span class="php-comment">     * @throws \InvalidArgumentException
 </span></span><span id="42" class="l"><span class="php-comment">     */</span>
 </span><span id="43" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> validateSaltedMd5(<span class="php-var">$clearString</span>, <span class="php-var">$hashedStringAndSalt</span>)
@@ -925,7 +925,7 @@
 </span></span><span id="67" class="l"><span class="php-comment">     * @param string $password The cleartext password
 </span></span><span id="68" class="l"><span class="php-comment">     * @param string $hashedPasswordAndSalt The hashed password with salt
 </span></span><span id="69" class="l"><span class="php-comment">     * @param string $staticSalt ignored parameter
-</span></span><span id="70" class="l"><span class="php-comment">     * @return boolean TRUE if the given password matches the hashed password
+</span></span><span id="70" class="l"><span class="php-comment">     * @return boolean true if the given password matches the hashed password
 </span></span><span id="71" class="l"><span class="php-comment">     */</span>
 </span><span id="72" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> validatePassword(<span class="php-var">$password</span>, <span class="php-var">$hashedPasswordAndSalt</span>, <span class="php-var">$staticSalt</span> = <span class="php-keyword1">null</span>)
 </span><span id="73" class="l">    {
