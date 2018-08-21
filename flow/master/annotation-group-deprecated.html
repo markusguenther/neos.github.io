@@ -611,6 +611,10 @@
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.SignalSlot.html">
@@ -925,9 +929,7 @@
 				<li><a href="class-Neos.Flow.Http.ContentStream.html">Neos\Flow\Http\ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">Neos\Flow\Http\FlowUploadedFile</a></li>
-				<li><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></li>
-				<li><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">Neos\Flow\Http\UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></li>
@@ -1167,7 +1169,8 @@
 				<li><a href="class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html">Neos\Flow\Session\Aspect\LazyLoadingAspect</a></li>
 				<li><a href="class-Neos.Flow.Session.Aspect.LoggingAspect.html">Neos\Flow\Session\Aspect\LoggingAspect</a></li>
 				<li><a href="class-Neos.Flow.Session.Aspect.SessionObjectMethodsPointcutFilter.html">Neos\Flow\Session\Aspect\SessionObjectMethodsPointcutFilter</a></li>
-				<li><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></li>
+				<li><a href="class-Neos.Flow.Session.Http.SessionRequestComponent.html">Neos\Flow\Session\Http\SessionRequestComponent</a></li>
+				<li><a href="class-Neos.Flow.Session.Http.SessionResponseComponent.html">Neos\Flow\Session\Http\SessionResponseComponent</a></li>
 				<li><a href="class-Neos.Flow.Session.SessionManager.html">Neos\Flow\Session\SessionManager</a></li>
 				<li><a href="class-Neos.Flow.Session.TransientSession.html">Neos\Flow\Session\TransientSession</a></li>
 				<li><a href="class-Neos.Flow.SignalSlot.Dispatcher.html">Neos\Flow\SignalSlot\Dispatcher</a></li>
@@ -1329,7 +1332,7 @@
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.StrategyWithMarkDeletedInterface.html">Neos\Flow\Monitor\ChangeDetectionStrategy\StrategyWithMarkDeletedInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></li>
-				<li><a href="class-Neos.Flow.Mvc.ResponseInterface.html">Neos\Flow\Mvc\ResponseInterface</a></li>
+				<li><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">Neos\Flow\Mvc\Routing\DynamicRoutePartInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html">Neos\Flow\Mvc\Routing\ParameterAwareRoutePartInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html">Neos\Flow\Mvc\Routing\RoutePartInterface</a></li>
@@ -1701,6 +1704,11 @@
 		</td>
 	</tr>
 	<tr>
+		<td class="name"><a href="class-Neos.Flow.Mvc.ResponseInterface.html">Neos\Flow\Mvc\ResponseInterface</a></td>
+		<td>
+		</td>
+	</tr>
+	<tr>
 		<td class="name"><a href="class-Neos.FluidAdaptor.Core.ViewHelper.Facets.CompilableInterface.html">Neos\FluidAdaptor\Core\ViewHelper\Facets\CompilableInterface</a></td>
 		<td>
 		</td>
@@ -1713,6 +1721,546 @@
 			<div class="panel panel-default">
                 <div class="panel-heading"><h2>Methods summary</h2></div>
 				<table class="summary table table-bordered table-striped" id="methods">
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setHeader">setHeader()</a></code></td>
+						<td>
+										Since Flow 5.1, use withHeader or withAddedHeader instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setContent">setContent()</a></code></td>
+						<td>
+										Since Flow 5.1, use withBody<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getContent">getContent()</a></code></td>
+						<td>
+										Since Flow 5.1, use getBody<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCharset">setCharset()</a></code></td>
+						<td>
+										Since Flow 5.1, just set the full Content-Type header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCharset">getCharset()</a></code></td>
+						<td>
+										Since Flow 5.1, parse it from the "Content-Type" header via RequestInformationHelper::getContentCharset<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setVersion">setVersion()</a></code></td>
+						<td>
+										Since Flow 5.1, use withProtocolVersion<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getVersion">getVersion()</a></code></td>
+						<td>
+										Since Flow 5.1, use getProtocolVersion which gives ONLY the actual version, eg. "1.1"<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCookie">setCookie()</a></code></td>
+						<td>
+										Since Flow 5.1, replacement only on ServerRequestInterface<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookie">getCookie()</a></code></td>
+						<td>
+										Since Flow 5.1, replacement only on ServerRequestInterface<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookies">getCookies()</a></code></td>
+						<td>
+										Since Flow 5.1, replacement only on ServerRequestInterface<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasCookie">hasCookie()</a></code></td>
+						<td>
+										Since Flow 5.1, replacement only on ServerRequestInterface<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_removeCookie">removeCookie()</a></code></td>
+						<td>
+										Since Flow 5.1, replacement only on ServerRequestInterface<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getStartLine">getStartLine()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getBaseUri">getBaseUri()</a></code></td>
+						<td>
+										Since Flow 5.1, no replacement on BaseRequest, use attribute on ServerRequestInterface<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_setBaseUri">setBaseUri()</a></code></td>
+						<td>
+										Since Flow 5.1, set as an attribute on ServerRequestInterface instead.<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_detectBaseUri">detectBaseUri()</a></code></td>
+						<td>
+										Since Flow 5.1<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_setMethod">setMethod()</a></code></td>
+						<td>
+										Since Flow 5.1, create a fresh request if you need to change the method or use BaseRequest::withMethod<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_setContent">setContent()</a></code></td>
+						<td>
+										Since Flow 5.1, use withBody<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getContent">getContent()</a></code></td>
+						<td>
+										Since Flow 5.1, use getBody<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getRequestLine">getRequestLine()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getStartLine">getStartLine()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_renderHeaders">renderHeaders()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getScriptRequestPath">getScriptRequestPath()</a></code></td>
+						<td>
+										Since Flow 5.1<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_isSecure">isSecure()</a></code></td>
+						<td>
+										Since Flow 5.1, use the SecurityHelper<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getPort">getPort()</a></code></td>
+						<td>
+										Since Flow 5.1, use $this->getUri()->getPort() instead.<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_isMethodSafe">isMethodSafe()</a></code></td>
+						<td>
+										Since Flow 5.1, use the SecurityHelper<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getBaseUri">getBaseUri()</a></code></td>
+						<td>
+										Since Flow 5.1, use attribute<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_setBaseUri">setBaseUri()</a></code></td>
+						<td>
+										Since Flow 5.1, set as an attribute on ServerRequestInterface instead.<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_detectBaseUri">detectBaseUri()</a></code></td>
+						<td>
+										Since Flow 5.1<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getArguments">getArguments()</a></code></td>
+						<td>
+										Since Flow 5.1, use ArgumentsHelper to get an array of unified arguments<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_hasArgument">hasArgument()</a></code></td>
+						<td>
+										Since Flow 5.1, use ArgumentsHelper to get an array of unified arguments<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getArgument">getArgument()</a></code></td>
+						<td>
+										Since Flow 5.1, use ArgumentsHelper to get an array of unified arguments<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getClientIpAddress">getClientIpAddress()</a></code></td>
+						<td>
+										Since Flow 5.1, use ->getAttribute(Request::ATTRIBUTE_CLIENT_IP)<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getAcceptedMediaTypes">getAcceptedMediaTypes()</a></code></td>
+						<td>
+										Since Flow 5.1, in favor of using the separate MediaTypeHelper<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getNegotiatedMediaType">getNegotiatedMediaType()</a></code></td>
+						<td>
+										Since Flow 5.1, in favor of using the separate MediaTypeHelper<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getScriptRequestPathAndFilename">getScriptRequestPathAndFilename()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getScriptRequestPath">getScriptRequestPath()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getRelativePath">getRelativePath()</a></code></td>
+						<td>
+										Since Flow 5.1, use the RequestInformationHelper instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_parseContentNegotiationQualityValues">parseContentNegotiationQualityValues()</a></code></td>
+						<td>
+										Since Flow 5.1, in favor of using the separate MediaTypeHelper<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStatusMessageByCode">getStatusMessageByCode()</a></code></td>
+						<td>
+										Since Flow 5.1, use ResponseInformationHelper::getStatusMessageByCode<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_createFromRaw">createFromRaw()</a></code></td>
+						<td>
+										Since Flow 5.1, use ResponseInformationHelper::createFromRaw<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getParentResponse">getParentResponse()</a></code></td>
+						<td>
+										Since Flow 5.1, without replacement<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_appendContent">appendContent()</a></code></td>
+						<td>
+										Since Flow 5.1, without replacement<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getContent">getContent()</a></code></td>
+						<td>
+										Since Flow 5.1, use getBody<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setStatus">setStatus()</a></code></td>
+						<td>
+										Since Flow 5.1, use withStatus<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStatus">getStatus()</a></code></td>
+						<td>
+										Since Flow 5.1, use getStatusCode<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setHeaders">setHeaders()</a></code></td>
+						<td>
+										Since Flow 5.1, without replacement<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setNow">setNow()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the "Date" header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setDate">setDate()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the "Date" header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getDate">getDate()</a></code></td>
+						<td>
+										Since Flow 5.1, directly get the "Date" header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setLastModified">setLastModified()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the Last-Modified header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getLastModified">getLastModified()</a></code></td>
+						<td>
+										Since Flow 5.1, directly get the Last-Modified header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setExpires">setExpires()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the Expires header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getExpires">getExpires()</a></code></td>
+						<td>
+										Since Flow 5.1, directly get the Expires header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getAge">getAge()</a></code></td>
+						<td>
+										Since Flow 5.1, directly get the Age header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setMaximumAge">setMaximumAge()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the cache header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getMaximumAge">getMaximumAge()</a></code></td>
+						<td>
+										Since Flow 5.1, directly get the cache header and parse it<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setSharedMaximumAge">setSharedMaximumAge()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the cache header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getSharedMaximumAge">getSharedMaximumAge()</a></code></td>
+						<td>
+										Since Flow 5.1, directly get the cache header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_renderHeaders">renderHeaders()</a></code></td>
+						<td>
+										Since Flow 5.1, use ResponseInformationHelper::prepareHeaders<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setPublic">setPublic()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the cache header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setPrivate">setPrivate()</a></code></td>
+						<td>
+										Since Flow 5.1, directly set the cache header<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_makeStandardsCompliant">makeStandardsCompliant()</a></code></td>
+						<td>
+										Since Flow 5.1, use ResponseInformationHelper::makeStandardsCompliant<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_sendHeaders">sendHeaders()</a></code></td>
+						<td>
+										<p>Since Flow 5.1, without replacement
+TODO: Make private after deprecation period</p><br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStatusLine">getStatusLine()</a></code></td>
+						<td>
+										Since Flow 5.1<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStartLine">getStartLine()</a></code></td>
+						<td>
+										Since Flow 5.1<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setScheme">setScheme()</a></code></td>
+						<td>
+										Since Flow 5.1, use withScheme<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getUsername">getUsername()</a></code></td>
+						<td>
+										Since Flow 5.1, use getUserInfo and extract via UriHelper::getUsername()<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setUsername">setUsername()</a></code></td>
+						<td>
+										Since Flow 5.1, use withUserInfo instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getPassword">getPassword()</a></code></td>
+						<td>
+										Since Flow 5.1, use getUserInfo instead and extract via UriHelper::getPassword()<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setPassword">setPassword()</a></code></td>
+						<td>
+										Since Flow 5.1, use withUserInfo instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setHost">setHost()</a></code></td>
+						<td>
+										Since Flow 5.1, use withHost instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setPort">setPort()</a></code></td>
+						<td>
+										Since Flow 5.1, use withPort instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setPath">setPath()</a></code></td>
+						<td>
+										Since Flow 5.1, use withPath instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setQuery">setQuery()</a></code></td>
+						<td>
+										Since Flow 5.1, use withQuery instead<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getArguments">getArguments()</a></code></td>
+						<td>
+										Since Flow 5.1, use UriHelper::parseQueryIntoArguments<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setFragment">setFragment()</a></code></td>
+						<td>
+										Since Flow 5.1, use withFragment instead<br>
+						</td>
+					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html">Neos\Flow\Log\Backend\AbstractBackend</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Log.Backend.AbstractBackend.html#_getFormattedVarDump">getFormattedVarDump()</a></code></td>
@@ -1754,6 +2302,13 @@
 			<div class="panel panel-default">
                 <div class="panel-heading"><h2>Properties summary</h2></div>
 				<table class="summary table table-bordered table-striped" id="properties">
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
+						<td class="name"><a href="class-Neos.Flow.Http.Uri.html#$arguments"><var>$arguments</var></a></td>
+						<td>
+									Since Flow 5.1, can be removed together with the respective method.<br>
+						</td>
+					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Mvc.Controller.ActionController.html">Neos\Flow\Mvc\Controller\ActionController</a></td>
 						<td class="name"><a href="class-Neos.Flow.Mvc.Controller.ActionController.html#$systemLogger"><var>$systemLogger</var></a></td>

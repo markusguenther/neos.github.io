@@ -611,6 +611,10 @@
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.SignalSlot.html">
@@ -925,9 +929,7 @@
 				<li><a href="class-Neos.Flow.Http.ContentStream.html">Neos\Flow\Http\ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">Neos\Flow\Http\FlowUploadedFile</a></li>
-				<li><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></li>
-				<li><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">Neos\Flow\Http\UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></li>
@@ -1167,7 +1169,8 @@
 				<li><a href="class-Neos.Flow.Session.Aspect.LazyLoadingAspect.html">Neos\Flow\Session\Aspect\LazyLoadingAspect</a></li>
 				<li><a href="class-Neos.Flow.Session.Aspect.LoggingAspect.html">Neos\Flow\Session\Aspect\LoggingAspect</a></li>
 				<li><a href="class-Neos.Flow.Session.Aspect.SessionObjectMethodsPointcutFilter.html">Neos\Flow\Session\Aspect\SessionObjectMethodsPointcutFilter</a></li>
-				<li><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></li>
+				<li><a href="class-Neos.Flow.Session.Http.SessionRequestComponent.html">Neos\Flow\Session\Http\SessionRequestComponent</a></li>
+				<li><a href="class-Neos.Flow.Session.Http.SessionResponseComponent.html">Neos\Flow\Session\Http\SessionResponseComponent</a></li>
 				<li><a href="class-Neos.Flow.Session.SessionManager.html">Neos\Flow\Session\SessionManager</a></li>
 				<li><a href="class-Neos.Flow.Session.TransientSession.html">Neos\Flow\Session\TransientSession</a></li>
 				<li><a href="class-Neos.Flow.SignalSlot.Dispatcher.html">Neos\Flow\SignalSlot\Dispatcher</a></li>
@@ -1329,7 +1332,7 @@
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.StrategyWithMarkDeletedInterface.html">Neos\Flow\Monitor\ChangeDetectionStrategy\StrategyWithMarkDeletedInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></li>
-				<li><a href="class-Neos.Flow.Mvc.ResponseInterface.html">Neos\Flow\Mvc\ResponseInterface</a></li>
+				<li><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePartInterface.html">Neos\Flow\Mvc\Routing\DynamicRoutePartInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.ParameterAwareRoutePartInterface.html">Neos\Flow\Mvc\Routing\ParameterAwareRoutePartInterface</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.RoutePartInterface.html">Neos\Flow\Mvc\Routing\RoutePartInterface</a></li>
@@ -1723,11 +1726,6 @@
 	</tr>
 	<tr>
 		<td class="name"><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
 		<td>
 		</td>
 	</tr>
@@ -2631,11 +2629,6 @@
 	</tr>
 	<tr>
 		<td class="name"><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td class="name"><a href="class-Neos.Flow.Mvc.ResponseInterface.html">Neos\Flow\Mvc\ResponseInterface</a></td>
 		<td>
 		</td>
 	</tr>
@@ -3887,95 +3880,19 @@
 						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaders">getHeaders()</a></code></td>
 						<td>
+										Note: This method will return an array of headers after next major according to PSR-7, prepare for that. To help the headers object is iteratable now.<br>
 						</td>
 					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">getHeader()</a></code></td>
 						<td>
+										NOTE: This method signature will change in next major of Flow according to PSR-7. It will ALWAYS return an array of strings and nothing else.<br>
 						</td>
 					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasHeader">hasHeader()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setHeader">setHeader()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setContent">setContent()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getContent">getContent()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCharset">setCharset()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCharset">getCharset()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setVersion">setVersion()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getVersion">getVersion()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCookie">setCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookie">getCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookies">getCookies()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasCookie">hasCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_removeCookie">removeCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getStartLine">getStartLine()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -3987,55 +3904,7 @@
 					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getBaseUri">getBaseUri()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_setBaseUri">setBaseUri()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_setMethod">setMethod()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getMethod">getMethod()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_setContent">setContent()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getContent">getContent()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getRequestLine">getRequestLine()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_getStartLine">getStartLine()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.BaseRequest.html#_renderHeaders">renderHeaders()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -4229,90 +4098,6 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_set">set()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_get">get()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_getAll">getAll()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_has">has()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_remove">remove()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_setCookie">setCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_getCookie">getCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_getCookies">getCookies()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_hasCookie">hasCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_removeCookie">removeCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_eatCookie">eatCookie()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_setCacheControlDirective">setCacheControlDirective()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#_getCacheControlDirective">getCacheControlDirective()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Headers.html">Neos\Flow\Http\Headers</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Headers.html#___toString">__toString()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#___construct">__construct()</a></code></td>
 						<td>
@@ -4327,72 +4112,6 @@
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_createFromEnvironment">createFromEnvironment()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_isSecure">isSecure()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getPort">getPort()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_isMethodSafe">isMethodSafe()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getArguments">getArguments()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_hasArgument">hasArgument()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getArgument">getArgument()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getClientIpAddress">getClientIpAddress()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getAcceptedMediaTypes">getAcceptedMediaTypes()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getNegotiatedMediaType">getNegotiatedMediaType()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getScriptRequestPathAndFilename">getScriptRequestPathAndFilename()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Request.html#_getScriptRequestPath">getScriptRequestPath()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -4432,164 +4151,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.RequestHandler.html#_canHandleRequest">canHandleRequest()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.RequestHandler.html#_getPriority">getPriority()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.RequestHandler.html#_getHttpRequest">getHttpRequest()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.RequestHandler.html">Neos\Flow\Http\RequestHandler</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.RequestHandler.html#_getHttpResponse">getHttpResponse()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_appendContent">appendContent()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getContent">getContent()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setStatus">setStatus()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStatus">getStatus()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStatusCode">getStatusCode()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setHeaders">setHeaders()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setNow">setNow()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setDate">setDate()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getDate">getDate()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setLastModified">setLastModified()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getLastModified">getLastModified()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setExpires">setExpires()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getExpires">getExpires()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getAge">getAge()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setMaximumAge">setMaximumAge()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getMaximumAge">getMaximumAge()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setSharedMaximumAge">setSharedMaximumAge()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getSharedMaximumAge">getSharedMaximumAge()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_renderHeaders">renderHeaders()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setPublic">setPublic()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_setPrivate">setPrivate()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_makeStandardsCompliant">makeStandardsCompliant()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_sendHeaders">sendHeaders()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -4598,18 +4161,6 @@
 						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_send">send()</a></code></td>
 						<td>
 										PSR-7<br>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStatusLine">getStatusLine()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Response.html#_getStartLine">getStartLine()</a></code></td>
-						<td>
 						</td>
 					</tr>
 					<tr>
@@ -4688,43 +4239,7 @@
 					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setScheme">setScheme()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getUsername">getUsername()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setUsername">setUsername()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getPassword">getPassword()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setPassword">setPassword()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getHost">getHost()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setHost">setHost()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -4736,19 +4251,7 @@
 					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setPort">setPort()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getPath">getPath()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setPath">setPath()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -4760,25 +4263,7 @@
 					</tr>
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setQuery">setQuery()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getArguments">getArguments()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_getFragment">getFragment()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.Uri.html#_setFragment">setFragment()</a></code></td>
 						<td>
 						</td>
 					</tr>
@@ -7392,96 +6877,6 @@
 					<tr>
 						<td class="name"><a href="class-Neos.Flow.Security.Cryptography.HashService.html">Neos\Flow\Security\Cryptography\HashService</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.Security.Cryptography.HashService.html#_validatePassword">validatePassword()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_isStarted">isStarted()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_isRemote">isRemote()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_start">start()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_canBeResumed">canBeResumed()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_resume">resume()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_getId">getId()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_renewId">renewId()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_putData">putData()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_getLastActivityTimestamp">getLastActivityTimestamp()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_addTag">addTag()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_removeTag">removeTag()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_getTags">getTags()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_close">close()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_destroy">destroy()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Session.Session.html">Neos\Flow\Session\Session</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Session.Session.html#_collectGarbage">collectGarbage()</a></code></td>
 						<td>
 						</td>
 					</tr>

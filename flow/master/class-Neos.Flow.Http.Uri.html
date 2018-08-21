@@ -614,6 +614,10 @@
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.SignalSlot.html">
@@ -831,9 +835,7 @@
 				<li><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
-				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
-				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
 				<li class="active"><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
@@ -895,7 +897,7 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Uri.html#19-651" title="Go to source code">Neos.Flow/Classes/Http/Uri.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Uri.html#20-679" title="Go to source code">Neos.Flow/Classes/Http/Uri.php</a>
 		<br>
 	</div>
 
@@ -915,7 +917,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#97-136" title="Go to source code">__construct</a>( <span>string <var>$uriString</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#99-138" title="Go to source code">__construct</a>( <span>string <var>$uriString</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs the URI object from a string</p>
@@ -956,7 +958,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getScheme">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#138-147" title="Go to source code">getScheme</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#140-149" title="Go to source code">getScheme</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the URI's scheme / protocol</p>
@@ -992,7 +994,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setScheme">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#149-164" title="Go to source code">setScheme</a>( <span>string <var>$scheme</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#151-167" title="Go to source code">setScheme</a>( <span>string <var>$scheme</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the URI's scheme / protocol</p>
@@ -1001,6 +1003,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the URI's scheme / protocol</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withScheme<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1014,8 +1020,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withScheme">Neos\Flow\Http\Uri::withScheme()</a></code><br>
 					</div>
 
 
@@ -1033,7 +1040,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsername">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#166-175" title="Go to source code">getUsername</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#169-180" title="Go to source code">getUsername</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the username of a login</p>
@@ -1042,6 +1049,10 @@
 			<div class="description detailed hidden">
 				<p>Returns the username of a login</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use getUserInfo and extract via UriHelper::getUsername()<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1050,8 +1061,10 @@
 					</div>
 
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_getUserInfo">Neos\Flow\Http\Uri::getUserInfo()</a></code><br>
+							UriHelper::getUsername()<br>
 					</div>
 
 
@@ -1069,7 +1082,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setUsername">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#177-192" title="Go to source code">setUsername</a>( <span>string <var>$username</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#182-198" title="Go to source code">setUsername</a>( <span>string <var>$username</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the URI's username</p>
@@ -1078,6 +1091,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the URI's username</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withUserInfo instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1091,8 +1108,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withUserInfo">Neos\Flow\Http\Uri::withUserInfo()</a></code><br>
 					</div>
 
 
@@ -1110,7 +1128,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPassword">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#194-203" title="Go to source code">getPassword</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#200-211" title="Go to source code">getPassword</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the password of a login</p>
@@ -1119,6 +1137,10 @@
 			<div class="description detailed hidden">
 				<p>Returns the password of a login</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use getUserInfo instead and extract via UriHelper::getPassword()<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1127,8 +1149,10 @@
 					</div>
 
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_getUserInfo">Neos\Flow\Http\Uri::getUserInfo()</a></code><br>
+							UriHelper::getPassword()<br>
 					</div>
 
 
@@ -1146,7 +1170,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPassword">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#205-220" title="Go to source code">setPassword</a>( <span>string <var>$password</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#213-229" title="Go to source code">setPassword</a>( <span>string <var>$password</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the URI's password</p>
@@ -1155,6 +1179,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the URI's password</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withUserInfo instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1168,8 +1196,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withUserInfo">Neos\Flow\Http\Uri::withUserInfo()</a></code><br>
 					</div>
 
 
@@ -1187,7 +1216,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHost">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#222-231" title="Go to source code">getHost</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#231-240" title="Go to source code">getHost</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the host(s) of the URI</p>
@@ -1223,7 +1252,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHost">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#233-248" title="Go to source code">setHost</a>( <span>string <var>$host</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#242-258" title="Go to source code">setHost</a>( <span>string <var>$host</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the host(s) of the URI</p>
@@ -1232,6 +1261,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the host(s) of the URI</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withHost instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1245,8 +1278,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withHost">Neos\Flow\Http\Uri::withHost()</a></code><br>
 					</div>
 
 
@@ -1264,7 +1298,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPort">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#250-259" title="Go to source code">getPort</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#260-269" title="Go to source code">getPort</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the port of the URI</p>
@@ -1300,7 +1334,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPort">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#261-276" title="Go to source code">setPort</a>( <span>string <var>$port</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#271-287" title="Go to source code">setPort</a>( <span>string <var>$port</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the port in the URI</p>
@@ -1309,6 +1343,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the port in the URI</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withPort instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1322,8 +1360,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withPort">Neos\Flow\Http\Uri::withPort()</a></code><br>
 					</div>
 
 
@@ -1341,7 +1380,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPath">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#278-287" title="Go to source code">getPath</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#289-298" title="Go to source code">getPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the URI path</p>
@@ -1377,7 +1416,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPath">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#289-304" title="Go to source code">setPath</a>( <span>string <var>$path</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#300-316" title="Go to source code">setPath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the path of the URI</p>
@@ -1386,6 +1425,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the path of the URI</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withPath instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1399,8 +1442,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withPath">Neos\Flow\Http\Uri::withPath()</a></code><br>
 					</div>
 
 
@@ -1418,7 +1462,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getQuery">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#306-315" title="Go to source code">getQuery</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#318-327" title="Go to source code">getQuery</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the URI's query part</p>
@@ -1454,7 +1498,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setQuery">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#317-328" title="Go to source code">setQuery</a>( <span>string <var>$query</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#329-340" title="Go to source code">setQuery</a>( <span>string <var>$query</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the URI's query part. Updates (= overwrites) the arguments accordingly!</p>
@@ -1463,6 +1507,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the URI's query part. Updates (= overwrites) the arguments accordingly!</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withQuery instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1472,8 +1520,9 @@
 
 
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withQuery">Neos\Flow\Http\Uri::withQuery()</a></code><br>
 					</div>
 
 
@@ -1491,7 +1540,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#330-339" title="Go to source code">getArguments</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#342-355" title="Go to source code">getArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the arguments from the URI's query part</p>
@@ -1500,6 +1549,10 @@
 			<div class="description detailed hidden">
 				<p>Returns the arguments from the URI's query part</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use UriHelper::parseQueryIntoArguments<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1508,8 +1561,9 @@
 					</div>
 
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							UriHelper::parseQueryIntoArguments()<br>
 					</div>
 
 
@@ -1527,7 +1581,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFragment">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#341-350" title="Go to source code">getFragment</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#357-366" title="Go to source code">getFragment</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the fragment / anchor, if any</p>
@@ -1563,7 +1617,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setFragment">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#352-367" title="Go to source code">setFragment</a>( <span>string <var>$fragment</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Uri.html#368-384" title="Go to source code">setFragment</a>( <span>string <var>$fragment</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the fragment in the URI</p>
@@ -1572,6 +1626,10 @@
 			<div class="description detailed hidden">
 				<p>Sets the fragment in the URI</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							Since Flow 5.1, use withFragment instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1585,8 +1643,9 @@
 						InvalidArgumentException
 					</div>
 
-					<h4>Api</h4>
+					<h4>See</h4>
 					<div class="list">
+							<code><a href="class-Neos.Flow.Http.Uri.html#_withFragment">Neos\Flow\Http\Uri::withFragment()</a></code><br>
 					</div>
 
 
@@ -1604,7 +1663,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHostAndOptionalPort">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#369-383" title="Go to source code">getHostAndOptionalPort</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#386-400" title="Go to source code">getHostAndOptionalPort</a>( )</code>
 
 			<div class="description short">
 				
@@ -1637,7 +1696,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAuthority">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#385-421" title="Go to source code">getAuthority</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#402-438" title="Go to source code">getAuthority</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve the authority component of the URI.</p>
@@ -1688,7 +1747,7 @@ scheme, it SHOULD NOT be included.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserInfo">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#423-457" title="Go to source code">getUserInfo</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#440-474" title="Go to source code">getUserInfo</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve the user information component of the URI.</p>
@@ -1735,7 +1794,7 @@ NOT be added.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withScheme">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#459-480" title="Go to source code">withScheme</a>( <span>string <var>$scheme</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#476-501" title="Go to source code">withScheme</a>( <span>string <var>$scheme</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified scheme.</p>
@@ -1789,7 +1848,7 @@ insensitively, and MAY accommodate other schemes if required.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withUserInfo">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#482-503" title="Go to source code">withUserInfo</a>( <span>string <var>$user</var></span>, <span>null|string <var>$password</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#503-524" title="Go to source code">withUserInfo</a>( <span>string <var>$user</var></span>, <span>null|string <var>$password</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified user information.</p>
@@ -1840,7 +1899,7 @@ information.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withHost">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#505-523" title="Go to source code">withHost</a>( <span>string <var>$host</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#526-547" title="Go to source code">withHost</a>( <span>string <var>$host</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified host.</p>
@@ -1891,7 +1950,7 @@ an instance that contains the specified host.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withPort">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#525-548" title="Go to source code">withPort</a>( <span>null|integer <var>$port</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#549-575" title="Go to source code">withPort</a>( <span>null|integer <var>$port</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified port.</p>
@@ -1947,7 +2006,7 @@ information.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withPath">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#550-578" title="Go to source code">withPath</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#577-605" title="Go to source code">withPath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified path.</p>
@@ -2008,7 +2067,7 @@ Implementations ensure the correct encoding as outlined in getPath().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withQuery">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#580-601" title="Go to source code">withQuery</a>( <span>string <var>$query</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#607-629" title="Go to source code">withQuery</a>( <span>string <var>$query</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified query string.</p>
@@ -2062,7 +2121,7 @@ Implementations ensure the correct encoding as outlined in getQuery().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withFragment">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#603-623" title="Go to source code">withFragment</a>( <span>string <var>$fragment</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#631-651" title="Go to source code">withFragment</a>( <span>string <var>$fragment</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified URI fragment.</p>
@@ -2112,7 +2171,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveDefaultPortForScheme">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#625-632" title="Go to source code">resolveDefaultPortForScheme</a>( <span>string <var>$scheme</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#653-660" title="Go to source code">resolveDefaultPortForScheme</a>( <span>string <var>$scheme</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2150,7 +2209,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Uri.html#634-650" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.Uri.html#662-678" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a string representation of this URI</p>
@@ -2193,7 +2252,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_SCHEME.html#27" title="Go to source code"><b>PATTERN_MATCH_SCHEME</b></a>
+						<a href="source-constant-PATTERN_MATCH_SCHEME.html#28" title="Go to source code"><b>PATTERN_MATCH_SCHEME</b></a>
 					</code>
 
 					<div class="description short">
@@ -2217,7 +2276,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_USERNAME.html#28" title="Go to source code"><b>PATTERN_MATCH_USERNAME</b></a>
+						<a href="source-constant-PATTERN_MATCH_USERNAME.html#29" title="Go to source code"><b>PATTERN_MATCH_USERNAME</b></a>
 					</code>
 
 					<div class="description short">
@@ -2241,7 +2300,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_PASSWORD.html#29" title="Go to source code"><b>PATTERN_MATCH_PASSWORD</b></a>
+						<a href="source-constant-PATTERN_MATCH_PASSWORD.html#30" title="Go to source code"><b>PATTERN_MATCH_PASSWORD</b></a>
 					</code>
 
 					<div class="description short">
@@ -2265,7 +2324,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_HOST.html#30" title="Go to source code"><b>PATTERN_MATCH_HOST</b></a>
+						<a href="source-constant-PATTERN_MATCH_HOST.html#31" title="Go to source code"><b>PATTERN_MATCH_HOST</b></a>
 					</code>
 
 					<div class="description short">
@@ -2289,7 +2348,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_PORT.html#31" title="Go to source code"><b>PATTERN_MATCH_PORT</b></a>
+						<a href="source-constant-PATTERN_MATCH_PORT.html#32" title="Go to source code"><b>PATTERN_MATCH_PORT</b></a>
 					</code>
 
 					<div class="description short">
@@ -2313,7 +2372,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_PATH.html#32" title="Go to source code"><b>PATTERN_MATCH_PATH</b></a>
+						<a href="source-constant-PATTERN_MATCH_PATH.html#33" title="Go to source code"><b>PATTERN_MATCH_PATH</b></a>
 					</code>
 
 					<div class="description short">
@@ -2337,7 +2396,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_FRAGMENT.html#33" title="Go to source code"><b>PATTERN_MATCH_FRAGMENT</b></a>
+						<a href="source-constant-PATTERN_MATCH_FRAGMENT.html#34" title="Go to source code"><b>PATTERN_MATCH_FRAGMENT</b></a>
 					</code>
 
 					<div class="description short">
@@ -2372,7 +2431,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#35-39" title="Go to source code"><var>$scheme</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#36-40" title="Go to source code"><var>$scheme</var></a>
 
 				<div class="description short">
 					<p>The scheme / protocol of the locator, eg. http</p>
@@ -2397,7 +2456,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#41-45" title="Go to source code"><var>$username</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#42-46" title="Go to source code"><var>$username</var></a>
 
 				<div class="description short">
 					<p>User name of a login, if any</p>
@@ -2422,7 +2481,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#47-51" title="Go to source code"><var>$password</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#48-52" title="Go to source code"><var>$password</var></a>
 
 				<div class="description short">
 					<p>Password of a login, if any</p>
@@ -2447,7 +2506,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#53-57" title="Go to source code"><var>$host</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#54-58" title="Go to source code"><var>$host</var></a>
 
 				<div class="description short">
 					<p>Host of the locator, eg. some.subdomain.example.com</p>
@@ -2472,7 +2531,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#59-63" title="Go to source code"><var>$port</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#60-64" title="Go to source code"><var>$port</var></a>
 
 				<div class="description short">
 					<p>Port of the locator, if any was specified. Eg. 80</p>
@@ -2497,7 +2556,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#65-69" title="Go to source code"><var>$path</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#66-70" title="Go to source code"><var>$path</var></a>
 
 				<div class="description short">
 					<p>The hierarchical part of the URI, eg. /products/acme_soap</p>
@@ -2522,7 +2581,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#71-75" title="Go to source code"><var>$query</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#72-76" title="Go to source code"><var>$query</var></a>
 
 				<div class="description short">
 					<p>Query string of the locator, if any. Eg. color=red&amp;size=large</p>
@@ -2547,7 +2606,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#77-81" title="Go to source code"><var>$arguments</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#78-83" title="Go to source code"><var>$arguments</var></a>
 
 				<div class="description short">
 					<p>Array representation of the URI query</p>
@@ -2556,12 +2615,16 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 				<div class="description detailed hidden">
 					<p>Array representation of the URI query</p>
 
+						<h4>Deprecated</h4>
+						<div class="list">
+								Since Flow 5.1, can be removed together with the respective method.<br>
+						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
 					<a href="#$arguments" class="anchor">#</a>
-					<code>[]</code>
+					<code></code>
 				</div>
 			</td>
 		</tr>
@@ -2572,7 +2635,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#83-87" title="Go to source code"><var>$fragment</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#85-89" title="Go to source code"><var>$fragment</var></a>
 
 				<div class="description short">
 					<p>Fragment / anchor, if one was specified.</p>
@@ -2597,7 +2660,7 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Uri.html#89-95" title="Go to source code"><var>$defaultPortsForScheme</var></a>
+					<a href="source-class-Neos.Flow.Http.Uri.html#91-97" title="Go to source code"><var>$defaultPortsForScheme</var></a>
 
 				<div class="description short">
 					
@@ -2634,6 +2697,6 @@ Implementations ensure the correct encoding as outlined in getFragment().</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?7484c45701f622a6c6418825a3623fc2ff0ca1e3"></script>
+<script src="elementlist.js?bc221751f3b3476090905b02b19155c8df16f596"></script>
 </body>
 </html>

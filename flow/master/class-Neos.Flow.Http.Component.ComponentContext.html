@@ -614,6 +614,10 @@
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.SignalSlot.html">
@@ -904,7 +908,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Component.ComponentContext.html#53-61" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code> <var>$httpRequest</var></span>, <span><code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code> <var>$httpResponse</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Component.ComponentContext.html#53-61" title="Go to source code">__construct</a>( <span>Psr\Http\Message\RequestInterface <var>$httpRequest</var></span>, <span>Psr\Http\Message\ResponseInterface <var>$httpResponse</var></span> )</code>
 
 			<div class="description short">
 				
@@ -933,7 +937,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				Psr\Http\Message\RequestInterface
 				
 				</code>
 			</td>
@@ -953,7 +957,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+						Psr\Http\Message\RequestInterface
 					</div>
 
 
@@ -976,7 +980,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceHttpRequest">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Component.ComponentContext.html#72-80" title="Go to source code">replaceHttpRequest</a>( <span><code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code> <var>$httpRequest</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Component.ComponentContext.html#72-80" title="Go to source code">replaceHttpRequest</a>( <span>Psr\Http\Message\RequestInterface <var>$httpRequest</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1006,7 +1010,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				Psr\Http\Message\ResponseInterface
 				
 				</code>
 			</td>
@@ -1026,7 +1030,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+						Psr\Http\Message\ResponseInterface
 					</div>
 
 
@@ -1049,7 +1053,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceHttpResponse">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Component.ComponentContext.html#91-99" title="Go to source code">replaceHttpResponse</a>( <span><code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code> <var>$httpResponse</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.Component.ComponentContext.html#91-99" title="Go to source code">replaceHttpResponse</a>( <span>Psr\Http\Message\ResponseInterface <var>$httpResponse</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1178,7 +1182,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 		<tr data-order="httpRequest" id="$httpRequest">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
+				Psr\Http\Message\RequestInterface
 			</code></td>
 
 			<td class="name">
@@ -1203,7 +1207,7 @@ Besides handling of the chain is interrupted as soon as the "cancelled" flag is 
 		<tr data-order="httpResponse" id="$httpResponse">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				Psr\Http\Message\ResponseInterface
 			</code></td>
 
 			<td class="name">
@@ -1268,6 +1272,6 @@ The first dimension is the fully qualified Component name, the second dimension 
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?7484c45701f622a6c6418825a3623fc2ff0ca1e3"></script>
+<script src="elementlist.js?bc221751f3b3476090905b02b19155c8df16f596"></script>
 </body>
 </html>

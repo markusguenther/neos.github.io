@@ -615,6 +615,10 @@
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.SignalSlot.html">
@@ -870,8 +874,8 @@
 </span></span><span id="12" class="l"><span class="php-comment"> */</span>
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
-</span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\Request;
-</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\Response;
+</span><span id="15" class="l"><span class="php-keyword1">use</span> Psr\Http\Message\RequestInterface;
+</span><span id="16" class="l"><span class="php-keyword1">use</span> Psr\Http\Message\ResponseInterface;
 </span><span id="17" class="l">
 </span><span id="18" class="l"><span class="php-comment">/**
 </span></span><span id="19" class="l"><span class="php-comment"> * The component context
@@ -889,14 +893,14 @@
 </span><span id="31" class="l">    <span class="php-comment">/**
 </span></span><span id="32" class="l"><span class="php-comment">     * The current HTTP request
 </span></span><span id="33" class="l"><span class="php-comment">     *
-</span></span><span id="34" class="l"><span class="php-comment">     * @var Request
+</span></span><span id="34" class="l"><span class="php-comment">     * @var RequestInterface
 </span></span><span id="35" class="l"><span class="php-comment">     */</span>
 </span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$httpRequest</span>;
 </span><span id="37" class="l">
 </span><span id="38" class="l">    <span class="php-comment">/**
 </span></span><span id="39" class="l"><span class="php-comment">     * The current HTTP response
 </span></span><span id="40" class="l"><span class="php-comment">     *
-</span></span><span id="41" class="l"><span class="php-comment">     * @var Response
+</span></span><span id="41" class="l"><span class="php-comment">     * @var ResponseInterface
 </span></span><span id="42" class="l"><span class="php-comment">     */</span>
 </span><span id="43" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$httpResponse</span>;
 </span><span id="44" class="l">
@@ -909,17 +913,17 @@
 </span><span id="51" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$parameters</span> = [];
 </span><span id="52" class="l">
 </span><span id="53" class="l">    <span class="php-comment">/**
-</span></span><span id="54" class="l"><span class="php-comment">     * @param Request $httpRequest
-</span></span><span id="55" class="l"><span class="php-comment">     * @param Response $httpResponse
+</span></span><span id="54" class="l"><span class="php-comment">     * @param RequestInterface $httpRequest
+</span></span><span id="55" class="l"><span class="php-comment">     * @param ResponseInterface $httpResponse
 </span></span><span id="56" class="l"><span class="php-comment">     */</span>
-</span><span id="57" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(Request <span class="php-var">$httpRequest</span>, Response <span class="php-var">$httpResponse</span>)
+</span><span id="57" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(RequestInterface <span class="php-var">$httpRequest</span>, ResponseInterface <span class="php-var">$httpResponse</span>)
 </span><span id="58" class="l">    {
 </span><span id="59" class="l">        <span class="php-var">$this</span>-&gt;httpRequest = <span class="php-var">$httpRequest</span>;
 </span><span id="60" class="l">        <span class="php-var">$this</span>-&gt;httpResponse = <span class="php-var">$httpResponse</span>;
 </span><span id="61" class="l">    }
 </span><span id="62" class="l">
 </span><span id="63" class="l">    <span class="php-comment">/**
-</span></span><span id="64" class="l"><span class="php-comment">     * @return Request
+</span></span><span id="64" class="l"><span class="php-comment">     * @return RequestInterface
 </span></span><span id="65" class="l"><span class="php-comment">     * @api
 </span></span><span id="66" class="l"><span class="php-comment">     */</span>
 </span><span id="67" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getHttpRequest()
@@ -928,17 +932,17 @@
 </span><span id="70" class="l">    }
 </span><span id="71" class="l">
 </span><span id="72" class="l">    <span class="php-comment">/**
-</span></span><span id="73" class="l"><span class="php-comment">     * @param Request $httpRequest
+</span></span><span id="73" class="l"><span class="php-comment">     * @param RequestInterface $httpRequest
 </span></span><span id="74" class="l"><span class="php-comment">     * @return void
 </span></span><span id="75" class="l"><span class="php-comment">     * @api
 </span></span><span id="76" class="l"><span class="php-comment">     */</span>
-</span><span id="77" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> replaceHttpRequest(Request <span class="php-var">$httpRequest</span>)
+</span><span id="77" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> replaceHttpRequest(RequestInterface <span class="php-var">$httpRequest</span>)
 </span><span id="78" class="l">    {
 </span><span id="79" class="l">        <span class="php-var">$this</span>-&gt;httpRequest = <span class="php-var">$httpRequest</span>;
 </span><span id="80" class="l">    }
 </span><span id="81" class="l">
 </span><span id="82" class="l">    <span class="php-comment">/**
-</span></span><span id="83" class="l"><span class="php-comment">     * @return Response
+</span></span><span id="83" class="l"><span class="php-comment">     * @return ResponseInterface
 </span></span><span id="84" class="l"><span class="php-comment">     * @api
 </span></span><span id="85" class="l"><span class="php-comment">     */</span>
 </span><span id="86" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getHttpResponse()
@@ -947,11 +951,11 @@
 </span><span id="89" class="l">    }
 </span><span id="90" class="l">
 </span><span id="91" class="l">    <span class="php-comment">/**
-</span></span><span id="92" class="l"><span class="php-comment">     * @param Response $httpResponse
+</span></span><span id="92" class="l"><span class="php-comment">     * @param ResponseInterface $httpResponse
 </span></span><span id="93" class="l"><span class="php-comment">     * @return void
 </span></span><span id="94" class="l"><span class="php-comment">     * @api
 </span></span><span id="95" class="l"><span class="php-comment">     */</span>
-</span><span id="96" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> replaceHttpResponse(Response <span class="php-var">$httpResponse</span>)
+</span><span id="96" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> replaceHttpResponse(ResponseInterface <span class="php-var">$httpResponse</span>)
 </span><span id="97" class="l">    {
 </span><span id="98" class="l">        <span class="php-var">$this</span>-&gt;httpResponse = <span class="php-var">$httpResponse</span>;
 </span><span id="99" class="l">    }
@@ -990,6 +994,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?7484c45701f622a6c6418825a3623fc2ff0ca1e3"></script>
+<script src="elementlist.js?bc221751f3b3476090905b02b19155c8df16f596"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\Http\RequestHandler | Flow Framework (master branch)</title>
+	<title>Class Neos\Flow\Session\Http\SessionRequestComponent | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,7 +28,7 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.Flow.Http.html" title="Summary of Neos\Flow\Http"><span>Namespace</span></a>
+						<a href="namespace-Neos.Flow.Session.Http.html" title="Summary of Neos\Flow\Session\Http"><span>Namespace</span></a>
 					</li>
 					<li class="active">
 <span>Class</span>					</li>
@@ -213,7 +213,7 @@
 						<a href="namespace-Neos.Flow.Error.html">
 							Error						</a>
 							</li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Flow.Http.html">
 							Http<span></span>
 						</a>
@@ -601,7 +601,7 @@
 							RequestPattern						</a>
 							</li>
 								</ul></li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Flow.Session.html">
 							Session<span></span>
 						</a>
@@ -613,6 +613,10 @@
 					<li>
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
 							</li>
 								</ul></li>
 					<li>
@@ -826,30 +830,12 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
-				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
-				<li><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
-				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
-				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
-				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
-				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
-				<li class="active"><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
-				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
-				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
-				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
-				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
-			</ul>
-
-			<h3>Interfaces</h3>
-			<ul>
-				<li><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">HttpRequestHandlerInterface</a></li>
+				<li class="active"><a href="class-Neos.Flow.Session.Http.SessionRequestComponent.html">SessionRequestComponent</a></li>
+				<li><a href="class-Neos.Flow.Session.Http.SessionResponseComponent.html">SessionResponseComponent</a></li>
 			</ul>
 
 
-			<h3>Exceptions</h3>
-			<ul>
-				<li><a href="class-Neos.Flow.Http.Exception.html">Exception</a></li>
-			</ul>
+
 
 
 		</div>
@@ -861,18 +847,18 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class RequestHandler</h1>
+	<h1>Class SessionRequestComponent</h1>
 
 
 	<div class="description">
-	<p>A request handler which can handle HTTP requests.</p>
+	<p>A HTTP component that initialises the standard Flow session with cookie information.</p>
 	</div>
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-<b><span>Neos\Flow\Http\RequestHandler</span></b>			
+<b><span>Neos\Flow\Session\Http\SessionRequestComponent</span></b>			
 			 implements 
-				<a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html"><span>Neos\Flow\Http\HttpRequestHandlerInterface</span></a>
+				<a href="class-Neos.Flow.Http.Component.ComponentInterface.html"><span>Neos\Flow\Http\Component\ComponentInterface</span></a>
 			
 			
 		</dd>
@@ -888,14 +874,10 @@
 	<div class="alert alert-info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Http.html">Http</a><br>
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Session.html">Session</a>\<a href="namespace-Neos.Flow.Session.Http.html">Http</a><br>
 		
 
-				<b>Flow\scope(&quot;singleton&quot;)</b>
-				<br>
-				<b>Flow\proxy(false)</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.RequestHandler.html#22-235" title="Go to source code">Neos.Flow/Classes/Http/RequestHandler.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Session.Http.SessionRequestComponent.html#23-86" title="Go to source code">Neos.Flow/Classes/Session/Http/SessionRequestComponent.php</a>
 		<br>
 	</div>
 
@@ -904,7 +886,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="__construct" id="___construct">
+		<tr data-order="handle" id="_handle">
 
 			<td class="attributes"><code>
 				 public 
@@ -914,8 +896,8 @@
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#59-68" title="Go to source code">__construct</a>( <span>Neos\Flow\Core\Bootstrap <var>$bootstrap</var></span> )</code>
+			<a class="anchor" href="#_handle">#</a>
+			<code><a href="source-class-Neos.Flow.Session.Http.SessionRequestComponent.html#40-64" title="Go to source code">handle</a>( <span><code><a href="class-Neos.Flow.Http.Component.ComponentContext.html">Neos\Flow\Http\Component\ComponentContext</a></code> <var>$componentContext</var></span> )</code>
 
 			<div class="description short">
 				
@@ -927,7 +909,7 @@
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$bootstrap</var></dt>
+						<dt><var>$componentContext</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -935,358 +917,43 @@
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="canHandleRequest" id="_canHandleRequest">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_canHandleRequest">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#70-79" title="Go to source code">canHandleRequest</a>( )</code>
-
-			<div class="description short">
-				<p>This request handler can handle any web request.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>This request handler can handle any web request.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br>If the request is a web request, TRUE otherwise FALSE
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
 					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html#_canHandleRequest">Neos\Flow\Core\RequestHandlerInterface::canHandleRequest()</a></code></div>
+					<div class="list"><code><a href="class-Neos.Flow.Http.Component.ComponentInterface.html#_handle">Neos\Flow\Http\Component\ComponentInterface::handle()</a></code></div>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getPriority" id="_getPriority">
-
-			<td class="attributes"><code>
-				 public 
-				integer
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getPriority">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#81-91" title="Go to source code">getPriority</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the priority - how eager the handler is to actually handle the
-request.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the priority - how eager the handler is to actually handle the
-request.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						integer<br>The priority of the request handler.
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html#_getPriority">Neos\Flow\Core\RequestHandlerInterface::getPriority()</a></code></div>
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="handleRequest" id="_handleRequest">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_handleRequest">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#93-119" title="Go to source code">handleRequest</a>( )</code>
-
-			<div class="description short">
-				<p>Handles a HTTP request</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Handles a HTTP request</p>
-
-
-
-
-
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Core.RequestHandlerInterface.html#_handleRequest">Neos\Flow\Core\RequestHandlerInterface::handleRequest()</a></code></div>
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getHttpRequest" id="_getHttpRequest">
-
-			<td class="attributes"><code>
-				 public 
-				<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getHttpRequest">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#121-130" title="Go to source code">getHttpRequest</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the currently handled HTTP request</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the currently handled HTTP request</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code>
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html#_getHttpRequest">Neos\Flow\Http\HttpRequestHandlerInterface::getHttpRequest()</a></code></div>
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getHttpResponse" id="_getHttpResponse">
-
-			<td class="attributes"><code>
-				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getHttpResponse">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#132-141" title="Go to source code">getHttpResponse</a>( )</code>
-
-			<div class="description short">
-				<p>Returns the HTTP response corresponding to the currently handled request</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns the HTTP response corresponding to the currently handled request</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
-					</div>
-
-
-					<h4>Api</h4>
-					<div class="list">
-					</div>
-
-
-					<h4>Implementation of</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html#_getHttpResponse">Neos\Flow\Http\HttpRequestHandlerInterface::getHttpResponse()</a></code></div>
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="boot" id="_boot">
+		<tr data-order="prepareCookie" id="_prepareCookie">
 
 			<td class="attributes"><code>
 				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_boot">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#143-152" title="Go to source code">boot</a>( )</code>
-
-			<div class="description short">
-				<p>Boots up Flow to runtime</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Boots up Flow to runtime</p>
-
-
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="resolveDependencies" id="_resolveDependencies">
-
-			<td class="attributes"><code>
-				 protected 
-				
+				<code><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_resolveDependencies">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#154-168" title="Go to source code">resolveDependencies</a>( )</code>
+			<a class="anchor" href="#_prepareCookie">#</a>
+			<code><a href="source-class-Neos.Flow.Session.Http.SessionRequestComponent.html#66-85" title="Go to source code">prepareCookie</a>( <span>Neos\Flow\Session\Http\string <var>$name</var></span>, <span>Neos\Flow\Session\Http\string <var>$value</var></span> )</code>
 
 			<div class="description short">
-				<p>Resolves a few dependencies of this request handler which can't be resolved
-automatically due to the early stage of the boot process this request handler
-is invoked at.</p>
+				<p>Prepares a cookie object for the session.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Resolves a few dependencies of this request handler which can't be resolved
-automatically due to the early stage of the boot process this request handler
-is invoked at.</p>
-
-
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="addPoweredByHeader" id="_addPoweredByHeader">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_addPoweredByHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#170-210" title="Go to source code">addPoweredByHeader</a>( <span><code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code> <var>$response</var></span> )</code>
-
-			<div class="description short">
-				<p>Adds an HTTP header to the Response which indicates that the application is powered by Flow.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Adds an HTTP header to the Response which indicates that the application is powered by Flow.</p>
+				<p>Prepares a cookie object for the session.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$response</var></dt>
+						<dt><var>$name</var></dt>
+						<dd></dd>
+						<dt><var>$value</var></dt>
 						<dd></dd>
 					</dl></div>
 
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="renderMajorVersion" id="_renderMajorVersion">
-
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_renderMajorVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#212-222" title="Go to source code">renderMajorVersion</a>( <span>string <var>$version</var></span> )</code>
-
-			<div class="description short">
-				<p>Renders a major version out of a full version string</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Renders a major version out of a full version string</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$version</var></dt>
-						<dd>For example "2.3.7"</dd>
-					</dl></div>
-
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>For example "2"
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="renderMinorVersion" id="_renderMinorVersion">
-
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_renderMinorVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Http.RequestHandler.html#224-234" title="Go to source code">renderMinorVersion</a>( <span>string <var>$version</var></span> )</code>
-
-			<div class="description short">
-				<p>Renders a minor version out of a full version string</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Renders a minor version out of a full version string</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$version</var></dt>
-						<dd>For example "2.3.7"</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>For example "2.3"
+						<code><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></code>
 					</div>
 
 
@@ -1311,127 +978,59 @@ is invoked at.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="bootstrap" id="$bootstrap">
-			<td class="attributes"><code>
-				protected  
-				Neos\Flow\Core\Bootstrap
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Http.RequestHandler.html#30-33" title="Go to source code"><var>$bootstrap</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$bootstrap" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="baseComponentChain" id="$baseComponentChain">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Flow.Http.Component.ComponentChain.html">Neos\Flow\Http\Component\ComponentChain</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Http.RequestHandler.html#35-38" title="Go to source code"><var>$baseComponentChain</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$baseComponentChain" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="componentContext" id="$componentContext">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Flow.Http.Component.ComponentContext.html">Neos\Flow\Http\Component\ComponentContext</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Flow.Http.RequestHandler.html#40-43" title="Go to source code"><var>$componentContext</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$componentContext" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="settings" id="$settings">
+		<tr data-order="sessionSettings" id="$sessionSettings">
 			<td class="attributes"><code>
 				protected  
 				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.RequestHandler.html#45-50" title="Go to source code"><var>$settings</var></a>
+					<a href="source-class-Neos.Flow.Session.Http.SessionRequestComponent.html#28-32" title="Go to source code"><var>$sessionSettings</var></a>
 
 				<div class="description short">
-					<p>The "http" settings</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The "http" settings</p>
+					
 
+						<h4>Flow\injectconfiguration(package=&quot;neos.flow&quot;,</h4>
+						<div class="list">
+								path="session")<br>
+						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$settings" class="anchor">#</a>
+					<a href="#$sessionSettings" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="exit" id="$exit">
+		<tr data-order="sessionManager" id="$sessionManager">
 			<td class="attributes"><code>
-				public  
-				Closure
+				protected  
+				<code><a href="class-Neos.Flow.Session.SessionManagerInterface.html">Neos\Flow\Session\SessionManagerInterface</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.RequestHandler.html#52-57" title="Go to source code"><var>$exit</var></a>
+					<a href="source-class-Neos.Flow.Session.Http.SessionRequestComponent.html#34-38" title="Go to source code"><var>$sessionManager</var></a>
 
 				<div class="description short">
-					<p>Make exit() a closure so it can be manipulated during tests</p>
+					
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Make exit() a closure so it can be manipulated during tests</p>
+					
 
+						<h4>Flow\inject(lazy=false)</h4>
+						<div class="list">
+						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$exit" class="anchor">#</a>
+					<a href="#$sessionManager" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1452,6 +1051,6 @@ is invoked at.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?7484c45701f622a6c6418825a3623fc2ff0ca1e3"></script>
+<script src="elementlist.js?bc221751f3b3476090905b02b19155c8df16f596"></script>
 </body>
 </html>

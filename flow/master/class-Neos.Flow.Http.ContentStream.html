@@ -614,6 +614,10 @@
 						<a href="namespace-Neos.Flow.Session.Exception.html">
 							Exception						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Flow.SignalSlot.html">
@@ -831,9 +835,7 @@
 				<li class="active"><a href="class-Neos.Flow.Http.ContentStream.html">ContentStream</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
-				<li><a href="class-Neos.Flow.Http.Headers.html">Headers</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
-				<li><a href="class-Neos.Flow.Http.RequestHandler.html">RequestHandler</a></li>
 				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
@@ -893,7 +895,7 @@
 
 				<b>Api:</b>
 				PSR-7<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.ContentStream.html#8-402" title="Go to source code">Neos.Flow/Classes/Http/ContentStream.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.ContentStream.html#18-412" title="Go to source code">Neos.Flow/Classes/Http/ContentStream.php</a>
 		<br>
 	</div>
 
@@ -913,7 +915,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#31-39" title="Go to source code">__construct</a>( <span>string|resource <var>$stream</var></span>, <span>string <var>$mode</var> = <span class="php-quote">'r'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#41-49" title="Go to source code">__construct</a>( <span>string|resource <var>$stream</var></span>, <span>string <var>$mode</var> = <span class="php-quote">'r'</span></span> )</code>
 
 			<div class="description short">
 				
@@ -953,7 +955,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#41-54" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#51-64" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Closes the stream and any underlying resources.</p>
@@ -982,7 +984,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_detach">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#56-69" title="Go to source code">detach</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#66-79" title="Go to source code">detach</a>( )</code>
 
 			<div class="description short">
 				<p>Separates any underlying resources from the stream.</p>
@@ -1017,7 +1019,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replace">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#71-89" title="Go to source code">replace</a>( <span>string|resource <var>$stream</var></span>, <span>string <var>$mode</var> = <span class="php-quote">'r'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#81-99" title="Go to source code">replace</a>( <span>string|resource <var>$stream</var></span>, <span>string <var>$mode</var> = <span class="php-quote">'r'</span></span> )</code>
 
 			<div class="description short">
 				<p>Attach a new stream/resource to the instance.</p>
@@ -1053,7 +1055,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSize">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#91-105" title="Go to source code">getSize</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#101-115" title="Go to source code">getSize</a>( )</code>
 
 			<div class="description short">
 				<p>Get the size of the stream if known.</p>
@@ -1086,7 +1088,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_tell">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#107-123" title="Go to source code">tell</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#117-133" title="Go to source code">tell</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current position of the file read/write pointer</p>
@@ -1123,7 +1125,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_eof">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#125-137" title="Go to source code">eof</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#135-147" title="Go to source code">eof</a>( )</code>
 
 			<div class="description short">
 				<p>Returns true if the stream is at the end of the stream.</p>
@@ -1156,7 +1158,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isSeekable">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#139-153" title="Go to source code">isSeekable</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#149-163" title="Go to source code">isSeekable</a>( )</code>
 
 			<div class="description short">
 				<p>Returns whether or not the stream is seekable.</p>
@@ -1189,7 +1191,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_seek">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#155-183" title="Go to source code">seek</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$whence</var> = SEEK_SET</span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#165-193" title="Go to source code">seek</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$whence</var> = SEEK_SET</span> )</code>
 
 			<div class="description short">
 				<p>Seek to a position in the stream.</p>
@@ -1241,7 +1243,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_rewind">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#185-198" title="Go to source code">rewind</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#195-208" title="Go to source code">rewind</a>( )</code>
 
 			<div class="description short">
 				<p>Seek to the beginning of the stream.</p>
@@ -1285,7 +1287,7 @@ otherwise, it will perform a seek(0).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isWritable">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#200-221" title="Go to source code">isWritable</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#210-231" title="Go to source code">isWritable</a>( )</code>
 
 			<div class="description short">
 				<p>Returns whether or not the stream is writable.</p>
@@ -1318,7 +1320,7 @@ otherwise, it will perform a seek(0).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_write">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#223-243" title="Go to source code">write</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#233-253" title="Go to source code">write</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Write data to the stream.</p>
@@ -1360,7 +1362,7 @@ otherwise, it will perform a seek(0).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isReadable">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#245-260" title="Go to source code">isReadable</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#255-270" title="Go to source code">isReadable</a>( )</code>
 
 			<div class="description short">
 				<p>Returns whether or not the stream is readable.</p>
@@ -1393,7 +1395,7 @@ otherwise, it will perform a seek(0).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_read">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#262-283" title="Go to source code">read</a>( <span>integer <var>$length</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#272-293" title="Go to source code">read</a>( <span>integer <var>$length</var></span> )</code>
 
 			<div class="description short">
 				<p>Read data from the stream.</p>
@@ -1438,7 +1440,7 @@ otherwise, it will perform a seek(0).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContents">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#285-302" title="Go to source code">getContents</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#295-312" title="Go to source code">getContents</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the remaining contents in a string</p>
@@ -1476,7 +1478,7 @@ otherwise, it will perform a seek(0).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMetadata">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#304-328" title="Go to source code">getMetadata</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#314-338" title="Go to source code">getMetadata</a>( <span>string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get stream metadata as an associative array or retrieve a specific key.</p>
@@ -1523,7 +1525,7 @@ stream_get_meta_data() function.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_openStream">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#330-341" title="Go to source code">openStream</a>( <span>string <var>$stream</var></span>, <span>string <var>$mode</var> = <span class="php-quote">'r'</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#340-351" title="Go to source code">openStream</a>( <span>string <var>$stream</var></span>, <span>string <var>$mode</var> = <span class="php-quote">'r'</span></span> )</code>
 
 			<div class="description short">
 				<p>Set the internal stream resource.</p>
@@ -1563,7 +1565,7 @@ stream_get_meta_data() function.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ensureResourceReadable">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#343-351" title="Go to source code">ensureResourceReadable</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#353-361" title="Go to source code">ensureResourceReadable</a>( )</code>
 
 			<div class="description short">
 				<p>Throw an exception if the current resource is not readable.</p>
@@ -1592,7 +1594,7 @@ stream_get_meta_data() function.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ensureResourceOpen">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#353-361" title="Go to source code">ensureResourceOpen</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#363-371" title="Go to source code">ensureResourceOpen</a>( )</code>
 
 			<div class="description short">
 				<p>Throw an exception if the current resource is not valid.</p>
@@ -1621,7 +1623,7 @@ stream_get_meta_data() function.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isValidResource">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#363-369" title="Go to source code">isValidResource</a>( <span> <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#373-379" title="Go to source code">isValidResource</a>( <span> <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1654,7 +1656,7 @@ stream_get_meta_data() function.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#371-401" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Http.ContentStream.html#381-411" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Reads all data from the stream into a string, from the beginning to end.</p>
@@ -1711,7 +1713,7 @@ string casting operations.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.ContentStream.html#15-18" title="Go to source code"><var>$resource</var></a>
+					<a href="source-class-Neos.Flow.Http.ContentStream.html#25-28" title="Go to source code"><var>$resource</var></a>
 
 				<div class="description short">
 					
@@ -1736,7 +1738,7 @@ string casting operations.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.ContentStream.html#20-23" title="Go to source code"><var>$stream</var></a>
+					<a href="source-class-Neos.Flow.Http.ContentStream.html#30-33" title="Go to source code"><var>$stream</var></a>
 
 				<div class="description short">
 					
@@ -1761,7 +1763,7 @@ string casting operations.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.ContentStream.html#25-29" title="Go to source code"><var>$logger</var></a>
+					<a href="source-class-Neos.Flow.Http.ContentStream.html#35-39" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1798,6 +1800,6 @@ string casting operations.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?7484c45701f622a6c6418825a3623fc2ff0ca1e3"></script>
+<script src="elementlist.js?bc221751f3b3476090905b02b19155c8df16f596"></script>
 </body>
 </html>
