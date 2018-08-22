@@ -911,8 +911,8 @@
 </span></span><span id="60" class="l"><span class="php-comment">     * @param string $numberToParse Number to be parsed
 </span></span><span id="61" class="l"><span class="php-comment">     * @param string $format Number format to use
 </span></span><span id="62" class="l"><span class="php-comment">     * @param Locale $locale Locale to use
-</span></span><span id="63" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="64" class="l"><span class="php-comment">     * @return mixed Parsed float number or FALSE on failure
+</span></span><span id="63" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="64" class="l"><span class="php-comment">     * @return mixed Parsed float number or false on failure
 </span></span><span id="65" class="l"><span class="php-comment">     * @api
 </span></span><span id="66" class="l"><span class="php-comment">     */</span>
 </span><span id="67" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parseNumberWithCustomPattern(<span class="php-var">$numberToParse</span>, <span class="php-var">$format</span>, Locale <span class="php-var">$locale</span>, <span class="php-var">$strictMode</span> = <span class="php-keyword1">true</span>)
@@ -926,8 +926,8 @@
 </span></span><span id="75" class="l"><span class="php-comment">     * @param string $numberToParse Number to be parsed
 </span></span><span id="76" class="l"><span class="php-comment">     * @param Locale $locale Locale to use
 </span></span><span id="77" class="l"><span class="php-comment">     * @param string $formatLength One of NumbersReader FORMAT_LENGTH constants
-</span></span><span id="78" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="79" class="l"><span class="php-comment">     * @return mixed Parsed float number or FALSE on failure
+</span></span><span id="78" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="79" class="l"><span class="php-comment">     * @return mixed Parsed float number or false on failure
 </span></span><span id="80" class="l"><span class="php-comment">     * @api
 </span></span><span id="81" class="l"><span class="php-comment">     */</span>
 </span><span id="82" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parseDecimalNumber(<span class="php-var">$numberToParse</span>, Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = NumbersReader::FORMAT_LENGTH_DEFAULT, <span class="php-var">$strictMode</span> = <span class="php-keyword1">true</span>)
@@ -942,8 +942,8 @@
 </span></span><span id="91" class="l"><span class="php-comment">     * @param string $numberToParse Number to be parsed
 </span></span><span id="92" class="l"><span class="php-comment">     * @param Locale $locale Locale to use
 </span></span><span id="93" class="l"><span class="php-comment">     * @param string $formatLength One of NumbersReader FORMAT_LENGTH constants
-</span></span><span id="94" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="95" class="l"><span class="php-comment">     * @return mixed Parsed float number or FALSE on failure
+</span></span><span id="94" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="95" class="l"><span class="php-comment">     * @return mixed Parsed float number or false on failure
 </span></span><span id="96" class="l"><span class="php-comment">     * @api
 </span></span><span id="97" class="l"><span class="php-comment">     */</span>
 </span><span id="98" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parsePercentNumber(<span class="php-var">$numberToParse</span>, Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = NumbersReader::FORMAT_LENGTH_DEFAULT, <span class="php-var">$strictMode</span> = <span class="php-keyword1">true</span>)
@@ -958,8 +958,8 @@
 </span></span><span id="107" class="l"><span class="php-comment">     * @param string $numberToParse Number to be parsed
 </span></span><span id="108" class="l"><span class="php-comment">     * @param array $parsedFormat Parsed format (from NumbersReader)
 </span></span><span id="109" class="l"><span class="php-comment">     * @param array $localizedSymbols An array with symbols to use
-</span></span><span id="110" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="111" class="l"><span class="php-comment">     * @return mixed Parsed float number or FALSE on failure
+</span></span><span id="110" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="111" class="l"><span class="php-comment">     * @return mixed Parsed float number or false on failure
 </span></span><span id="112" class="l"><span class="php-comment">     */</span>
 </span><span id="113" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doParsingWithParsedFormat(<span class="php-var">$numberToParse</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFormat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedSymbols</span>, <span class="php-var">$strictMode</span>)
 </span><span id="114" class="l">    {
@@ -970,12 +970,12 @@
 </span></span><span id="119" class="l"><span class="php-comment">     * Parses number in strict mode.
 </span></span><span id="120" class="l"><span class="php-comment">     *
 </span></span><span id="121" class="l"><span class="php-comment">     * In strict mode parser checks all constraints of provided parsed format,
-</span></span><span id="122" class="l"><span class="php-comment">     * and if any of them is not fullfiled, parsing fails (FALSE is returned).
+</span></span><span id="122" class="l"><span class="php-comment">     * and if any of them is not fullfiled, parsing fails (false is returned).
 </span></span><span id="123" class="l"><span class="php-comment">     *
 </span></span><span id="124" class="l"><span class="php-comment">     * @param string $numberToParse Number to be parsed
 </span></span><span id="125" class="l"><span class="php-comment">     * @param array $parsedFormat Parsed format (from NumbersReader)
 </span></span><span id="126" class="l"><span class="php-comment">     * @param array $localizedSymbols An array with symbols to use
-</span></span><span id="127" class="l"><span class="php-comment">     * @return mixed Parsed float number or FALSE on failure
+</span></span><span id="127" class="l"><span class="php-comment">     * @return mixed Parsed float number or false on failure
 </span></span><span id="128" class="l"><span class="php-comment">     */</span>
 </span><span id="129" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doParsingInStrictMode(<span class="php-var">$numberToParse</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFormat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedSymbols</span>)
 </span><span id="130" class="l">    {
@@ -1092,7 +1092,7 @@
 </span></span><span id="241" class="l"><span class="php-comment">     * @param string $numberToParse Number to be parsed
 </span></span><span id="242" class="l"><span class="php-comment">     * @param array $parsedFormat Parsed format (from NumbersReader)
 </span></span><span id="243" class="l"><span class="php-comment">     * @param array $localizedSymbols An array with symbols to use
-</span></span><span id="244" class="l"><span class="php-comment">     * @return mixed Parsed float number or FALSE on failure
+</span></span><span id="244" class="l"><span class="php-comment">     * @return mixed Parsed float number or false on failure
 </span></span><span id="245" class="l"><span class="php-comment">     */</span>
 </span><span id="246" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doParsingInLenientMode(<span class="php-var">$numberToParse</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFormat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedSymbols</span>)
 </span><span id="247" class="l">    {
@@ -1167,6 +1167,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

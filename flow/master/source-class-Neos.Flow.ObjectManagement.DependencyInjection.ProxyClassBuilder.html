@@ -1221,11 +1221,11 @@
 </span><span id="366" class="l">                    } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$propertyValue</span>)) {
 </span><span id="367" class="l">                        <span class="php-var">$preparedSetterArgument</span> = <span class="php-keyword2">var_export</span>(<span class="php-var">$propertyValue</span>, <span class="php-keyword1">true</span>);
 </span><span id="368" class="l">                    } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_bool</span>(<span class="php-var">$propertyValue</span>)) {
-</span><span id="369" class="l">                        <span class="php-var">$preparedSetterArgument</span> = <span class="php-var">$propertyValue</span> ? <span class="php-quote">'TRUE'</span> : <span class="php-quote">'FALSE'</span>;
+</span><span id="369" class="l">                        <span class="php-var">$preparedSetterArgument</span> = <span class="php-var">$propertyValue</span> ? <span class="php-quote">'true'</span> : <span class="php-quote">'false'</span>;
 </span><span id="370" class="l">                    } <span class="php-keyword1">else</span> {
 </span><span id="371" class="l">                        <span class="php-var">$preparedSetterArgument</span> = <span class="php-var">$propertyValue</span>;
 </span><span id="372" class="l">                    }
-</span><span id="373" class="l">                    <span class="php-var">$commands</span>[] = <span class="php-quote">'if (\Neos\Utility\ObjectAccess::setProperty($this, \''</span> . <span class="php-var">$propertyName</span> . <span class="php-quote">'\', '</span> . <span class="php-var">$preparedSetterArgument</span> . <span class="php-quote">') === FALSE) { $this-&gt;'</span> . <span class="php-var">$propertyName</span> . <span class="php-quote">' = '</span> . <span class="php-var">$preparedSetterArgument</span> . <span class="php-quote">';}'</span>;
+</span><span id="373" class="l">                    <span class="php-var">$commands</span>[] = <span class="php-quote">'if (\Neos\Utility\ObjectAccess::setProperty($this, \''</span> . <span class="php-var">$propertyName</span> . <span class="php-quote">'\', '</span> . <span class="php-var">$preparedSetterArgument</span> . <span class="php-quote">') === false) { $this-&gt;'</span> . <span class="php-var">$propertyName</span> . <span class="php-quote">' = '</span> . <span class="php-var">$preparedSetterArgument</span> . <span class="php-quote">';}'</span>;
 </span><span id="374" class="l">                    <span class="php-keyword1">break</span>;
 </span><span id="375" class="l">                <span class="php-keyword1">case</span> ConfigurationProperty::PROPERTY_TYPES_CONFIGURATION:
 </span><span id="376" class="l">                    <span class="php-var">$configurationType</span> = <span class="php-var">$propertyValue</span>[<span class="php-quote">'type'</span>];
@@ -1422,7 +1422,7 @@
 </span><span id="567" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$cause</span> === ObjectManagerInterface::INITIALIZATIONCAUSE_RECREATED) {
 </span><span id="568" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $classParents = class_parents($this);'</span>;
 </span><span id="569" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $classImplements = class_implements($this);'</span>;
-</span><span id="570" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $isClassProxy = array_search(\''</span> . <span class="php-var">$className</span> . <span class="php-quote">'\', $classParents) !== FALSE &amp;&amp; array_search(\'Doctrine\ORM\Proxy\Proxy\', $classImplements) !== FALSE;'</span> . <span class="php-quote">&quot;\n&quot;</span>;
+</span><span id="570" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $isClassProxy = array_search(\''</span> . <span class="php-var">$className</span> . <span class="php-quote">'\', $classParents) !== false &amp;&amp; array_search(\'Doctrine\ORM\Proxy\Proxy\', $classImplements) !== false;'</span> . <span class="php-quote">&quot;\n&quot;</span>;
 </span><span id="571" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        if ($isSameClass || $isClassProxy) {'</span> . <span class="php-quote">&quot;\n&quot;</span>;
 </span><span id="572" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="573" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        if ($isSameClass) {'</span> . <span class="php-quote">&quot;\n&quot;</span>;
@@ -1450,7 +1450,7 @@
 </span><span id="595" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$cause</span> === ObjectManagerInterface::INITIALIZATIONCAUSE_RECREATED) {
 </span><span id="596" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $classParents = class_parents($this);'</span>;
 </span><span id="597" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $classImplements = class_implements($this);'</span>;
-</span><span id="598" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $isClassProxy = array_search(\''</span> . <span class="php-var">$className</span> . <span class="php-quote">'\', $classParents) !== FALSE &amp;&amp; array_search(\'Doctrine\ORM\Proxy\Proxy\', $classImplements) !== FALSE;'</span> . <span class="php-quote">&quot;\n&quot;</span>;
+</span><span id="598" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        $isClassProxy = array_search(\''</span> . <span class="php-var">$className</span> . <span class="php-quote">'\', $classParents) !== false &amp;&amp; array_search(\'Doctrine\ORM\Proxy\Proxy\', $classImplements) !== false;'</span> . <span class="php-quote">&quot;\n&quot;</span>;
 </span><span id="599" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        if ($isSameClass || $isClassProxy) {'</span> . <span class="php-quote">&quot;\n&quot;</span>;
 </span><span id="600" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="601" class="l">            <span class="php-var">$code</span> .= <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'        if ($isSameClass) {'</span> . <span class="php-quote">&quot;\n&quot;</span>;
@@ -1558,6 +1558,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

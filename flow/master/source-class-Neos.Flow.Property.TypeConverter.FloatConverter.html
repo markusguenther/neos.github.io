@@ -903,11 +903,11 @@
 </span></span><span id="33" class="l"><span class="php-comment"> *
 </span></span><span id="34" class="l"><span class="php-comment"> *  protected function initializeCreateAction() {
 </span></span><span id="35" class="l"><span class="php-comment"> *      $this-&gt;arguments['newBid']-&gt;getPropertyMappingConfiguration()-&gt;forProperty('price')-&gt;setTypeConverterOption(
-</span></span><span id="36" class="l"><span class="php-comment"> *          \Neos\Flow\Property\TypeConverter\FloatConverter::class, 'locale', TRUE
+</span></span><span id="36" class="l"><span class="php-comment"> *          \Neos\Flow\Property\TypeConverter\FloatConverter::class, 'locale', true
 </span></span><span id="37" class="l"><span class="php-comment"> *      );
 </span></span><span id="38" class="l"><span class="php-comment"> *  }
 </span></span><span id="39" class="l"><span class="php-comment"> *
-</span></span><span id="40" class="l"><span class="php-comment"> * Just providing TRUE as option value will use the current default locale. In case that default locale is &quot;DE&quot;
+</span></span><span id="40" class="l"><span class="php-comment"> * Just providing true as option value will use the current default locale. In case that default locale is &quot;DE&quot;
 </span></span><span id="41" class="l"><span class="php-comment"> * for Germany for example, where a comma is used as decimal separator, the mentioned code will return
 </span></span><span id="42" class="l"><span class="php-comment"> * (float)15.5 when the input was (string)&quot;15,50&quot;.
 </span></span><span id="43" class="l"><span class="php-comment"> *
@@ -924,12 +924,12 @@
 </span></span><span id="54" class="l"><span class="php-comment"> * There are two parsing modes available, strict and lenient mode. Strict mode will check all constraints of the provided
 </span></span><span id="55" class="l"><span class="php-comment"> * format, and if any of them are not fulfilled, the conversion will not take place.
 </span></span><span id="56" class="l"><span class="php-comment"> * In Lenient mode the parser will try to extract the intended number from the string, even if it's not well formed.
-</span></span><span id="57" class="l"><span class="php-comment"> * Default for strict mode is TRUE.
+</span></span><span id="57" class="l"><span class="php-comment"> * Default for strict mode is true.
 </span></span><span id="58" class="l"><span class="php-comment"> *
 </span></span><span id="59" class="l"><span class="php-comment"> * *Example setting lenient mode (abridged)*::
 </span></span><span id="60" class="l"><span class="php-comment"> *
 </span></span><span id="61" class="l"><span class="php-comment"> *  -&gt;setTypeConverterOption(
-</span></span><span id="62" class="l"><span class="php-comment"> *      \Neos\Flow\Property\TypeConverter\FloatConverter::class, 'strictMode', FALSE
+</span></span><span id="62" class="l"><span class="php-comment"> *      \Neos\Flow\Property\TypeConverter\FloatConverter::class, 'strictMode', false
 </span></span><span id="63" class="l"><span class="php-comment"> *  );
 </span></span><span id="64" class="l"><span class="php-comment"> *
 </span></span><span id="65" class="l"><span class="php-comment"> * **Format type**
@@ -1103,6 +1103,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

@@ -1124,7 +1124,7 @@ This setting can be overwritten for all dynamic Route parts.</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$lowerCase</var></dt>
-						<dd>TRUE: Route parts are converted to lower case by default. FALSE: Route parts are not altered.</dd>
+						<dd>true: Route parts are converted to lower case by default. false: Route parts are not altered.</dd>
 					</dl></div>
 
 
@@ -1158,7 +1158,7 @@ This setting can be overwritten for all dynamic Route parts.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if this Route part will be converted to lower case, otherwise FALSE.
+						boolean<br>true if this Route part will be converted to lower case, otherwise false.
 					</div>
 
 
@@ -1187,21 +1187,21 @@ This setting can be overwritten for all dynamic Route parts.</p>
 			<div class="description short">
 				<p>Specifies whether Route values, that are not part of the Route configuration, should be appended to the
 Resulting URI as query string.
-If set to FALSE, the route won't resolve if there are route values left after iterating through all Route Part
+If set to false, the route won't resolve if there are route values left after iterating through all Route Part
 handlers and removing the matching default values.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Specifies whether Route values, that are not part of the Route configuration, should be appended to the
 Resulting URI as query string.
-If set to FALSE, the route won't resolve if there are route values left after iterating through all Route Part
+If set to false, the route won't resolve if there are route values left after iterating through all Route Part
 handlers and removing the matching default values.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$appendExceedingArguments</var></dt>
-						<dd>TRUE: exceeding arguments will be appended to the resulting URI</dd>
+						<dd>true: exceeding arguments will be appended to the resulting URI</dd>
 					</dl></div>
 
 
@@ -1225,11 +1225,11 @@ handlers and removing the matching default values.</p>
 			<code><a href="source-class-Neos.Flow.Mvc.Routing.Route.html#251-259" title="Go to source code">getAppendExceedingArguments</a>( )</code>
 
 			<div class="description short">
-				<p>Returns TRUE if exceeding arguments should be appended to the URI as query string, otherwise FALSE</p>
+				<p>Returns true if exceeding arguments should be appended to the URI as query string, otherwise false</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns TRUE if exceeding arguments should be appended to the URI as query string, otherwise FALSE</p>
+				<p>Returns true if exceeding arguments should be appended to the URI as query string, otherwise false</p>
 
 
 
@@ -1574,13 +1574,13 @@ If empty all HTTP verbs are accepted</p>
 
 			<div class="description short">
 				<p>Checks whether $routeContext corresponds to this Route.
-If all Route Parts match successfully TRUE is returned an $this->matchResults contains an array
+If all Route Parts match successfully true is returned an $this->matchResults contains an array
 combining Route default values and calculated matchResults from the individual Route Parts.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Checks whether $routeContext corresponds to this Route.
-If all Route Parts match successfully TRUE is returned an $this->matchResults contains an array
+If all Route Parts match successfully true is returned an $this->matchResults contains an array
 combining Route default values and calculated matchResults from the individual Route Parts.</p>
 
 
@@ -1592,7 +1592,7 @@ combining Route default values and calculated matchResults from the individual R
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if this Route corresponds to the given $routeContext, otherwise FALSE
+						boolean<br>true if this Route corresponds to the given $routeContext, otherwise false
 					</div>
 
 					<h4>Throws</h4>
@@ -1624,14 +1624,14 @@ combining Route default values and calculated matchResults from the individual R
 
 			<div class="description short">
 				<p>Checks whether $routeValues can be resolved to a corresponding uri.
-If all Route Parts can resolve one or more of the $routeValues, TRUE is
+If all Route Parts can resolve one or more of the $routeValues, true is
 returned and $this->resolvedUriConstraints contains an instance of UriConstraints that can be applied
 to a template URI transforming it accordingly (@see Router::resolve())</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Checks whether $routeValues can be resolved to a corresponding uri.
-If all Route Parts can resolve one or more of the $routeValues, TRUE is
+If all Route Parts can resolve one or more of the $routeValues, true is
 returned and $this->resolvedUriConstraints contains an instance of UriConstraints that can be applied
 to a template URI transforming it accordingly (@see Router::resolve())</p>
 
@@ -1644,7 +1644,7 @@ to a template URI transforming it accordingly (@see Router::resolve())</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if this Route corresponds to the given $routeValues, otherwise FALSE
+						boolean<br>true if this Route corresponds to the given $routeValues, otherwise false
 					</div>
 
 					<h4>Throws</h4>
@@ -1675,7 +1675,7 @@ to a template URI transforming it accordingly (@see Router::resolve())</p>
 If a route value is equal to a default value, it's removed
 from $routeValues.
 If a value exists but is not equal to is corresponding default,
-iteration is interrupted and FALSE is returned.</p>
+iteration is interrupted and false is returned.</p>
 			</div>
 
 			<div class="description detailed hidden">
@@ -1683,7 +1683,7 @@ iteration is interrupted and FALSE is returned.</p>
 If a route value is equal to a default value, it's removed
 from $routeValues.
 If a value exists but is not equal to is corresponding default,
-iteration is interrupted and FALSE is returned.</p>
+iteration is interrupted and false is returned.</p>
 
 
 					<h4>Parameters</h4>
@@ -1696,7 +1696,7 @@ iteration is interrupted and FALSE is returned.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>FALSE if one of the $routeValues is not equal to it's default value. Otherwise TRUE
+						boolean<br>false if one of the $routeValues is not equal to it's default value. Otherwise true
 					</div>
 
 
@@ -2315,6 +2315,6 @@ For better performance, routes are only parsed if needed.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

@@ -1077,7 +1077,7 @@
 </span></span><span id="217" class="l"><span class="php-comment">     * Checks if the given object has ever been persisted.
 </span></span><span id="218" class="l"><span class="php-comment">     *
 </span></span><span id="219" class="l"><span class="php-comment">     * @param object $object The object to check
-</span></span><span id="220" class="l"><span class="php-comment">     * @return boolean TRUE if the object is new, FALSE if the object exists in the persistence session
+</span></span><span id="220" class="l"><span class="php-comment">     * @return boolean true if the object is new, false if the object exists in the persistence session
 </span></span><span id="221" class="l"><span class="php-comment">     * @api
 </span></span><span id="222" class="l"><span class="php-comment">     */</span>
 </span><span id="223" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isNewObject(<span class="php-var">$object</span>)
@@ -1131,11 +1131,11 @@
 </span><span id="271" class="l">
 </span><span id="272" class="l">    <span class="php-comment">/**
 </span></span><span id="273" class="l"><span class="php-comment">     * Returns the object data for the (internal) identifier, if it is known to
-</span></span><span id="274" class="l"><span class="php-comment">     * the backend. Otherwise FALSE is returned.
+</span></span><span id="274" class="l"><span class="php-comment">     * the backend. Otherwise false is returned.
 </span></span><span id="275" class="l"><span class="php-comment">     *
 </span></span><span id="276" class="l"><span class="php-comment">     * @param string $identifier
 </span></span><span id="277" class="l"><span class="php-comment">     * @param string $objectType
-</span></span><span id="278" class="l"><span class="php-comment">     * @return object The object data for the identifier if it is known, or FALSE
+</span></span><span id="278" class="l"><span class="php-comment">     * @return object The object data for the identifier if it is known, or false
 </span></span><span id="279" class="l"><span class="php-comment">     */</span>
 </span><span id="280" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getObjectDataByIdentifier(<span class="php-var">$identifier</span>, <span class="php-var">$objectType</span> = <span class="php-keyword1">null</span>)
 </span><span id="281" class="l">    {
@@ -1202,10 +1202,10 @@
 </span><span id="342" class="l">    }
 </span><span id="343" class="l">
 </span><span id="344" class="l">    <span class="php-comment">/**
-</span></span><span id="345" class="l"><span class="php-comment">     * Returns TRUE, if an active connection to the persistence
+</span></span><span id="345" class="l"><span class="php-comment">     * Returns true, if an active connection to the persistence
 </span></span><span id="346" class="l"><span class="php-comment">     * backend has been established, e.g. entities can be persisted.
 </span></span><span id="347" class="l"><span class="php-comment">     *
-</span></span><span id="348" class="l"><span class="php-comment">     * @return boolean TRUE, if an connection has been established, FALSE if add object will not be persisted by the backend
+</span></span><span id="348" class="l"><span class="php-comment">     * @return boolean true, if an connection has been established, false if add object will not be persisted by the backend
 </span></span><span id="349" class="l"><span class="php-comment">     * @api
 </span></span><span id="350" class="l"><span class="php-comment">     */</span>
 </span><span id="351" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isConnected()
@@ -1247,6 +1247,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

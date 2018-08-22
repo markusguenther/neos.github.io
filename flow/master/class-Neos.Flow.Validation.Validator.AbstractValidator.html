@@ -944,7 +944,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#18-154" title="Go to source code">Neos.Flow/Classes/Validation/Validator/AbstractValidator.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#18-189" title="Go to source code">Neos.Flow/Classes/Validation/Validator/AbstractValidator.php</a>
 		<br>
 	</div>
 
@@ -964,7 +964,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#58-93" title="Go to source code">__construct</a>( <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#64-101" title="Go to source code">__construct</a>( <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Constructs the validator and sets validation options</p>
@@ -994,6 +994,84 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="pushResult" id="_pushResult">
+
+			<td class="attributes"><code>
+				 protected 
+				Neos\Error\Messages\Result
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pushResult">#</a>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#103-116" title="Go to source code">pushResult</a>( )</code>
+
+			<div class="description short">
+				<p>Push a new Result onto the Result stack and return it in order to fix cyclic calls to a single validator.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Push a new Result onto the Result stack and return it in order to fix cyclic calls to a single validator.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						Neos\Error\Messages\Result
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							Flow 4.3<br>
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							https://github.com/neos/flow-development-collection/pull/1275#issuecomment-414052031<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="popResult" id="_popResult">
+
+			<td class="attributes"><code>
+				 protected 
+				Neos\Error\Messages\Result
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_popResult">#</a>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#118-128" title="Go to source code">popResult</a>( )</code>
+
+			<div class="description short">
+				<p>Pop and return the current Result from the stack and make $this->result point to the last Result again.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Pop and return the current Result from the stack and make $this->result point to the last Result again.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						Neos\Error\Messages\Result
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							Flow 4.3<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="validate" id="_validate">
 
 			<td class="attributes"><code>
@@ -1005,7 +1083,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validate">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#95-110" title="Go to source code">validate</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#130-145" title="Go to source code">validate</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given value is valid according to the validator, and returns
@@ -1050,7 +1128,7 @@ the Error Messages object which occurred.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isValid">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#112-120" title="Go to source code">isValid</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#147-155" title="Go to source code">isValid</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if $value is valid. If it is not valid, needs to add an error
@@ -1090,7 +1168,7 @@ to Result.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addError">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#122-134" title="Go to source code">addError</a>( <span>string <var>$message</var></span>, <span>integer <var>$code</var></span>, <span>array <var>$arguments</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#157-169" title="Go to source code">addError</a>( <span>string <var>$message</var></span>, <span>integer <var>$code</var></span>, <span>array <var>$arguments</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Creates a new validation error object and adds it to $this->errors</p>
@@ -1131,7 +1209,7 @@ to Result.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOptions">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#136-144" title="Go to source code">getOptions</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#171-179" title="Go to source code">getOptions</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the options of this validator</p>
@@ -1166,7 +1244,7 @@ to Result.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isEmpty">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#146-153" title="Go to source code">isEmpty</a>( <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#181-188" title="Go to source code">isEmpty</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1184,7 +1262,7 @@ to Result.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if the given $value is NULL or an empty string ('')
+						boolean<br>true if the given $value is NULL or an empty string ('')
 					</div>
 
 
@@ -1225,7 +1303,7 @@ to Result.</p>
 				<div class="description detailed hidden">
 					<p>Specifies whether this validator accepts empty values.</p>
 
-<p>If this is TRUE, the validators isValid() method is not called in case of an empty value
+<p>If this is true, the validators isValid() method is not called in case of an empty value
 Note: A value is considered empty if it is NULL or an empty string!
 By default all validators except for NotEmpty and the Composite Validators accept empty values</p>
 
@@ -1300,7 +1378,36 @@ By default all validators except for NotEmpty and the Composite Validators accep
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#53-56" title="Go to source code"><var>$result</var></a>
+					<a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#53-57" title="Go to source code"><var>$result</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Deprecated</h4>
+						<div class="list">
+								since Flow 4.3. Don't overwrite this and instead use pushResult/popResult<br>
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$result" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="resultStack" id="$resultStack">
+			<td class="attributes"><code>
+				protected  
+				array&lt;ErrorResult&gt;
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Validation.Validator.AbstractValidator.html#59-62" title="Go to source code"><var>$resultStack</var></a>
 
 				<div class="description short">
 					
@@ -1313,7 +1420,7 @@ By default all validators except for NotEmpty and the Composite Validators accep
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$result" class="anchor">#</a>
+					<a href="#$resultStack" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1334,6 +1441,6 @@ By default all validators except for NotEmpty and the Composite Validators accep
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

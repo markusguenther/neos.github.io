@@ -1080,7 +1080,7 @@
 </span></span><span id="215" class="l"><span class="php-comment">     * Specifies whether Route parts of this route should be converted to lower case when resolved.
 </span></span><span id="216" class="l"><span class="php-comment">     * This setting can be overwritten for all dynamic Route parts.
 </span></span><span id="217" class="l"><span class="php-comment">     *
-</span></span><span id="218" class="l"><span class="php-comment">     * @param boolean $lowerCase TRUE: Route parts are converted to lower case by default. FALSE: Route parts are not altered.
+</span></span><span id="218" class="l"><span class="php-comment">     * @param boolean $lowerCase true: Route parts are converted to lower case by default. false: Route parts are not altered.
 </span></span><span id="219" class="l"><span class="php-comment">     * @return void
 </span></span><span id="220" class="l"><span class="php-comment">     */</span>
 </span><span id="221" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setLowerCase(<span class="php-var">$lowerCase</span>)
@@ -1091,7 +1091,7 @@
 </span><span id="226" class="l">    <span class="php-comment">/**
 </span></span><span id="227" class="l"><span class="php-comment">     * Getter for $this-&gt;lowerCase.
 </span></span><span id="228" class="l"><span class="php-comment">     *
-</span></span><span id="229" class="l"><span class="php-comment">     * @return boolean TRUE if this Route part will be converted to lower case, otherwise FALSE.
+</span></span><span id="229" class="l"><span class="php-comment">     * @return boolean true if this Route part will be converted to lower case, otherwise false.
 </span></span><span id="230" class="l"><span class="php-comment">     * @see setLowerCase()
 </span></span><span id="231" class="l"><span class="php-comment">     */</span>
 </span><span id="232" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isLowerCase()
@@ -1102,10 +1102,10 @@
 </span><span id="237" class="l">    <span class="php-comment">/**
 </span></span><span id="238" class="l"><span class="php-comment">     * Specifies whether Route values, that are not part of the Route configuration, should be appended to the
 </span></span><span id="239" class="l"><span class="php-comment">     * Resulting URI as query string.
-</span></span><span id="240" class="l"><span class="php-comment">     * If set to FALSE, the route won't resolve if there are route values left after iterating through all Route Part
+</span></span><span id="240" class="l"><span class="php-comment">     * If set to false, the route won't resolve if there are route values left after iterating through all Route Part
 </span></span><span id="241" class="l"><span class="php-comment">     * handlers and removing the matching default values.
 </span></span><span id="242" class="l"><span class="php-comment">     *
-</span></span><span id="243" class="l"><span class="php-comment">     * @param boolean $appendExceedingArguments TRUE: exceeding arguments will be appended to the resulting URI
+</span></span><span id="243" class="l"><span class="php-comment">     * @param boolean $appendExceedingArguments true: exceeding arguments will be appended to the resulting URI
 </span></span><span id="244" class="l"><span class="php-comment">     * @return void
 </span></span><span id="245" class="l"><span class="php-comment">     */</span>
 </span><span id="246" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setAppendExceedingArguments(<span class="php-var">$appendExceedingArguments</span>)
@@ -1114,7 +1114,7 @@
 </span><span id="249" class="l">    }
 </span><span id="250" class="l">
 </span><span id="251" class="l">    <span class="php-comment">/**
-</span></span><span id="252" class="l"><span class="php-comment">     * Returns TRUE if exceeding arguments should be appended to the URI as query string, otherwise FALSE
+</span></span><span id="252" class="l"><span class="php-comment">     * Returns true if exceeding arguments should be appended to the URI as query string, otherwise false
 </span></span><span id="253" class="l"><span class="php-comment">     *
 </span></span><span id="254" class="l"><span class="php-comment">     * @return boolean
 </span></span><span id="255" class="l"><span class="php-comment">     */</span>
@@ -1225,11 +1225,11 @@
 </span><span id="360" class="l">
 </span><span id="361" class="l">    <span class="php-comment">/**
 </span></span><span id="362" class="l"><span class="php-comment">     * Checks whether $routeContext corresponds to this Route.
-</span></span><span id="363" class="l"><span class="php-comment">     * If all Route Parts match successfully TRUE is returned an $this-&gt;matchResults contains an array
+</span></span><span id="363" class="l"><span class="php-comment">     * If all Route Parts match successfully true is returned an $this-&gt;matchResults contains an array
 </span></span><span id="364" class="l"><span class="php-comment">     * combining Route default values and calculated matchResults from the individual Route Parts.
 </span></span><span id="365" class="l"><span class="php-comment">     *
 </span></span><span id="366" class="l"><span class="php-comment">     * @param RouteContext $routeContext The Route Context containing the current HTTP request object and, optional, Routing RouteParameters
-</span></span><span id="367" class="l"><span class="php-comment">     * @return boolean TRUE if this Route corresponds to the given $routeContext, otherwise FALSE
+</span></span><span id="367" class="l"><span class="php-comment">     * @return boolean true if this Route corresponds to the given $routeContext, otherwise false
 </span></span><span id="368" class="l"><span class="php-comment">     * @throws InvalidRoutePartValueException
 </span></span><span id="369" class="l"><span class="php-comment">     * @see getMatchResults()
 </span></span><span id="370" class="l"><span class="php-comment">     */</span>
@@ -1309,12 +1309,12 @@
 </span><span id="444" class="l">
 </span><span id="445" class="l">    <span class="php-comment">/**
 </span></span><span id="446" class="l"><span class="php-comment">     * Checks whether $routeValues can be resolved to a corresponding uri.
-</span></span><span id="447" class="l"><span class="php-comment">     * If all Route Parts can resolve one or more of the $routeValues, TRUE is
+</span></span><span id="447" class="l"><span class="php-comment">     * If all Route Parts can resolve one or more of the $routeValues, true is
 </span></span><span id="448" class="l"><span class="php-comment">     * returned and $this-&gt;resolvedUriConstraints contains an instance of UriConstraints that can be applied
 </span></span><span id="449" class="l"><span class="php-comment">     * to a template URI transforming it accordingly (@see Router::resolve())
 </span></span><span id="450" class="l"><span class="php-comment">     *
 </span></span><span id="451" class="l"><span class="php-comment">     * @param array $routeValues An array containing key/value pairs to be resolved to uri segments
-</span></span><span id="452" class="l"><span class="php-comment">     * @return boolean TRUE if this Route corresponds to the given $routeValues, otherwise FALSE
+</span></span><span id="452" class="l"><span class="php-comment">     * @return boolean true if this Route corresponds to the given $routeValues, otherwise false
 </span></span><span id="453" class="l"><span class="php-comment">     * @throws InvalidRoutePartValueException
 </span></span><span id="454" class="l"><span class="php-comment">     */</span>
 </span><span id="455" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> resolves(<span class="php-keyword1">array</span> <span class="php-var">$routeValues</span>)
@@ -1412,11 +1412,11 @@
 </span></span><span id="547" class="l"><span class="php-comment">     * If a route value is equal to a default value, it's removed
 </span></span><span id="548" class="l"><span class="php-comment">     * from $routeValues.
 </span></span><span id="549" class="l"><span class="php-comment">     * If a value exists but is not equal to is corresponding default,
-</span></span><span id="550" class="l"><span class="php-comment">     * iteration is interrupted and FALSE is returned.
+</span></span><span id="550" class="l"><span class="php-comment">     * iteration is interrupted and false is returned.
 </span></span><span id="551" class="l"><span class="php-comment">     *
 </span></span><span id="552" class="l"><span class="php-comment">     * @param array $defaults
 </span></span><span id="553" class="l"><span class="php-comment">     * @param array $routeValues
-</span></span><span id="554" class="l"><span class="php-comment">     * @return boolean FALSE if one of the $routeValues is not equal to it's default value. Otherwise TRUE
+</span></span><span id="554" class="l"><span class="php-comment">     * @return boolean false if one of the $routeValues is not equal to it's default value. Otherwise true
 </span></span><span id="555" class="l"><span class="php-comment">     */</span>
 </span><span id="556" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> compareAndRemoveMatchingDefaultValues(<span class="php-keyword1">array</span> <span class="php-var">$defaults</span>, <span class="php-keyword1">array</span> &amp;<span class="php-var">$routeValues</span>)
 </span><span id="557" class="l">    {
@@ -1603,6 +1603,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

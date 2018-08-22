@@ -896,7 +896,7 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#24-568" title="Go to source code">Neos.Flow/Classes/ObjectManagement/ObjectManager.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#24-573" title="Go to source code">Neos.Flow/Classes/ObjectManagement/ObjectManager.php</a>
 		<br>
 	</div>
 
@@ -1059,11 +1059,11 @@
 			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#134-152" title="Go to source code">isRegistered</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
-				<p>Returns TRUE if an object with the given name is registered</p>
+				<p>Returns true if an object with the given name is registered</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns TRUE if an object with the given name is registered</p>
+				<p>Returns true if an object with the given name is registered</p>
 
 
 					<h4>Parameters</h4>
@@ -1074,7 +1074,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if the object has been registered, otherwise FALSE
+						boolean<br>true if the object has been registered, otherwise false
 					</div>
 
 					<h4>Throws</h4>
@@ -1186,7 +1186,7 @@ Returns false otherwise.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#183-223" title="Go to source code">get</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#183-228" title="Go to source code">get</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a fresh or existing instance of the object specified by $objectName.</p>
@@ -1234,7 +1234,7 @@ Returns false otherwise.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getScope">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#225-240" title="Go to source code">getScope</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#230-245" title="Go to source code">getScope</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the scope of the specified object.</p>
@@ -1281,18 +1281,18 @@ Returns false otherwise.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCaseSensitiveObjectName">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#242-271" title="Go to source code">getCaseSensitiveObjectName</a>( <span>string <var>$caseInsensitiveObjectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#247-276" title="Go to source code">getCaseSensitiveObjectName</a>( <span>string <var>$caseInsensitiveObjectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the case sensitive object name of an object specified by a
 case insensitive object name. If no object of that name exists,
-FALSE is returned.</p>
+false is returned.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Returns the case sensitive object name of an object specified by a
 case insensitive object name. If no object of that name exists,
-FALSE is returned.</p>
+false is returned.</p>
 
 <p>In general, the case sensitive variant is used everywhere in Flow,
 however there might be special situations in which the
@@ -1308,7 +1308,7 @@ rare cases.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed<br>Either the mixed case object name or FALSE if no object of that name was found.
+						mixed<br>Either the mixed case object name or false if no object of that name was found.
 					</div>
 
 
@@ -1333,7 +1333,7 @@ rare cases.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getObjectNameByClassName">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#273-297" title="Go to source code">getObjectNameByClassName</a>( <span>string <var>$className</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#278-302" title="Go to source code">getObjectNameByClassName</a>( <span>string <var>$className</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the object name corresponding to a given class name.</p>
@@ -1351,7 +1351,7 @@ rare cases.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The object name corresponding to the given class name or FALSE if no object is configured to use that class
+						string<br>The object name corresponding to the given class name or false if no object is configured to use that class
 					</div>
 
 					<h4>Throws</h4>
@@ -1380,7 +1380,7 @@ rare cases.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getClassNameByObjectName">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#299-312" title="Go to source code">getClassNameByObjectName</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#304-317" title="Go to source code">getClassNameByObjectName</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the implementation class name for the specified object</p>
@@ -1398,7 +1398,7 @@ rare cases.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The class name corresponding to the given object name or FALSE if no such object is registered
+						string<br>The class name corresponding to the given object name or false if no such object is registered
 					</div>
 
 
@@ -1423,7 +1423,7 @@ rare cases.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPackageKeyByObjectName">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#314-324" title="Go to source code">getPackageKeyByObjectName</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#319-329" title="Go to source code">getPackageKeyByObjectName</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the key of the package the specified object is contained in.</p>
@@ -1441,7 +1441,7 @@ rare cases.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>The package key or FALSE if no such object exists
+						string<br>The package key or false if no such object exists
 					</div>
 
 
@@ -1466,7 +1466,7 @@ rare cases.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setInstance">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#326-351" title="Go to source code">setInstance</a>( <span>string <var>$objectName</var></span>, <span>object <var>$instance</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#331-356" title="Go to source code">setInstance</a>( <span>string <var>$objectName</var></span>, <span>object <var>$instance</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the instance of the given object</p>
@@ -1512,15 +1512,15 @@ lazy loading proxy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasInstance">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#353-363" title="Go to source code">hasInstance</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#358-368" title="Go to source code">hasInstance</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
-				<p>Returns TRUE if this object manager already has an instance for the specified
+				<p>Returns true if this object manager already has an instance for the specified
 object.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Returns TRUE if this object manager already has an instance for the specified
+				<p>Returns true if this object manager already has an instance for the specified
 object.</p>
 
 
@@ -1532,7 +1532,7 @@ object.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>TRUE if an instance already exists
+						boolean<br>true if an instance already exists
 					</div>
 
 
@@ -1552,7 +1552,7 @@ object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInstance">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#365-375" title="Go to source code">getInstance</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#370-380" title="Go to source code">getInstance</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the instance of the specified object or NULL if no instance has been
@@ -1592,7 +1592,7 @@ registered yet.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLazyDependencyByHash">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#377-396" title="Go to source code">getLazyDependencyByHash</a>( <span>string <var>$hash</var></span>, <span>mixed <var>&amp; $propertyReferenceVariable</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#382-401" title="Go to source code">getLazyDependencyByHash</a>( <span>string <var>$hash</var></span>, <span>mixed <var>&amp; $propertyReferenceVariable</var></span> )</code>
 
 			<div class="description short">
 				<p>This method is used internally to retrieve either an actual (singleton) instance
@@ -1640,7 +1640,7 @@ it is used the first time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createLazyDependency">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#398-417" title="Go to source code">createLazyDependency</a>( <span>string <var>$hash</var></span>, <span>string <var>&amp; $propertyReferenceVariable</var></span>, <span>string <var>$className</var></span>, <span>Closure <var>$builder</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#403-422" title="Go to source code">createLazyDependency</a>( <span>string <var>$hash</var></span>, <span>string <var>&amp; $propertyReferenceVariable</var></span>, <span>string <var>$className</var></span>, <span>Closure <var>$builder</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a new DependencyProxy class for a dependency built through code
@@ -1692,7 +1692,7 @@ instance once it needs to be materialized.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_forgetInstance">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#420-433" title="Go to source code">forgetInstance</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#425-438" title="Go to source code">forgetInstance</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Unsets the instance of the given object</p>
@@ -1732,7 +1732,7 @@ this method should only be used in a setUp() method of a functional test case.</
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSessionInstances">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#435-449" title="Go to source code">getSessionInstances</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#440-454" title="Go to source code">getSessionInstances</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all instances of objects with scope session</p>
@@ -1767,7 +1767,7 @@ this method should only be used in a setUp() method of a functional test case.</
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdown">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#451-470" title="Go to source code">shutdown</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#456-475" title="Go to source code">shutdown</a>( )</code>
 
 			<div class="description short">
 				<p>Shuts down this Object Container by calling the shutdown methods of all
@@ -1800,7 +1800,7 @@ object instances which were configured to be shut down.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSettingsByPath">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#472-481" title="Go to source code">getSettingsByPath</a>( <span>array <var>$settingsPath</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#477-486" title="Go to source code">getSettingsByPath</a>( <span>array <var>$settingsPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the an array of package settings or a single setting value by the given path.</p>
@@ -1838,7 +1838,7 @@ object instances which were configured to be shut down.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAllObjectConfigurations">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#483-492" title="Go to source code">getAllObjectConfigurations</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#488-497" title="Go to source code">getAllObjectConfigurations</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all current object configurations.
@@ -1873,7 +1873,7 @@ For internal use in bootstrap only. Can change anytime.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildObjectByFactory">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#494-528" title="Go to source code">buildObjectByFactory</a>( <span>string <var>$objectName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#499-533" title="Go to source code">buildObjectByFactory</a>( <span>string <var>$objectName</var></span> )</code>
 
 			<div class="description short">
 				<p>Invokes the Factory defined in the object configuration of the specified object in order
@@ -1915,7 +1915,7 @@ passed to the factory method.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_instantiateClass">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#530-553" title="Go to source code">instantiateClass</a>( <span>string <var>$className</var></span>, <span>array <var>$arguments</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#535-558" title="Go to source code">instantiateClass</a>( <span>string <var>$className</var></span>, <span>array <var>$arguments</var></span> )</code>
 
 			<div class="description short">
 				<p>Speed optimized alternative to ReflectionClass::newInstanceArgs()</p>
@@ -1960,7 +1960,7 @@ passed to the factory method.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_callShutdownMethods">#</a>
-			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#555-567" title="Go to source code">callShutdownMethods</a>( <span>SplObjectStorage <var>$shutdownObjects</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ObjectManagement.ObjectManager.html#560-572" title="Go to source code">callShutdownMethods</a>( <span>SplObjectStorage <var>$shutdownObjects</var></span> )</code>
 
 			<div class="description short">
 				<p>Executes the methods of the provided objects.</p>
@@ -2255,6 +2255,6 @@ These shutdown method will be called after all other shutdown methods have been 
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

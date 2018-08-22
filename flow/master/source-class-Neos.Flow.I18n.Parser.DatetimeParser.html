@@ -914,8 +914,8 @@
 </span></span><span id="63" class="l"><span class="php-comment">     * @param string $datetimeToParse Date/time to be parsed
 </span></span><span id="64" class="l"><span class="php-comment">     * @param string $format Format string
 </span></span><span id="65" class="l"><span class="php-comment">     * @param I18n\Locale $locale A locale used for finding literals array
-</span></span><span id="66" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="67" class="l"><span class="php-comment">     * @return mixed Array of parsed date / time elements, FALSE on failure
+</span></span><span id="66" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="67" class="l"><span class="php-comment">     * @return mixed Array of parsed date / time elements, false on failure
 </span></span><span id="68" class="l"><span class="php-comment">     * @api
 </span></span><span id="69" class="l"><span class="php-comment">     * @see DatesReader
 </span></span><span id="70" class="l"><span class="php-comment">     */</span>
@@ -931,8 +931,8 @@
 </span></span><span id="80" class="l"><span class="php-comment">     * @param string $dateToParse date to be parsed
 </span></span><span id="81" class="l"><span class="php-comment">     * @param I18n\Locale $locale
 </span></span><span id="82" class="l"><span class="php-comment">     * @param string $formatLength One of: full, long, medium, short, or 'default' in order to use default length from CLDR
-</span></span><span id="83" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="84" class="l"><span class="php-comment">     * @return mixed Array of parsed date elements, FALSE on failure
+</span></span><span id="83" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="84" class="l"><span class="php-comment">     * @return mixed Array of parsed date elements, false on failure
 </span></span><span id="85" class="l"><span class="php-comment">     * @api
 </span></span><span id="86" class="l"><span class="php-comment">     */</span>
 </span><span id="87" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parseDate(<span class="php-var">$dateToParse</span>, I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = DatesReader::FORMAT_LENGTH_DEFAULT, <span class="php-var">$strictMode</span> = <span class="php-keyword1">true</span>)
@@ -948,8 +948,8 @@
 </span></span><span id="97" class="l"><span class="php-comment">     * @param string $timeToParse Time to be parsed
 </span></span><span id="98" class="l"><span class="php-comment">     * @param I18n\Locale $locale
 </span></span><span id="99" class="l"><span class="php-comment">     * @param string $formatLength One of: full, long, medium, short, or 'default' in order to use default length from CLDR
-</span></span><span id="100" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="101" class="l"><span class="php-comment">     * @return mixed Array of parsed time elements, FALSE on failure
+</span></span><span id="100" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="101" class="l"><span class="php-comment">     * @return mixed Array of parsed time elements, false on failure
 </span></span><span id="102" class="l"><span class="php-comment">     * @api
 </span></span><span id="103" class="l"><span class="php-comment">     */</span>
 </span><span id="104" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parseTime(<span class="php-var">$timeToParse</span>, I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = DatesReader::FORMAT_LENGTH_DEFAULT, <span class="php-var">$strictMode</span> = <span class="php-keyword1">true</span>)
@@ -965,8 +965,8 @@
 </span></span><span id="114" class="l"><span class="php-comment">     * @param string $dateAndTimeToParse Date and time to be parsed
 </span></span><span id="115" class="l"><span class="php-comment">     * @param I18n\Locale $locale
 </span></span><span id="116" class="l"><span class="php-comment">     * @param string $formatLength One of: full, long, medium, short, or 'default' in order to use default length from CLDR
-</span></span><span id="117" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="118" class="l"><span class="php-comment">     * @return mixed Array of parsed date and time elements, FALSE on failure
+</span></span><span id="117" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="118" class="l"><span class="php-comment">     * @return mixed Array of parsed date and time elements, false on failure
 </span></span><span id="119" class="l"><span class="php-comment">     */</span>
 </span><span id="120" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parseDateAndTime(<span class="php-var">$dateAndTimeToParse</span>, I18n\Locale <span class="php-var">$locale</span>, <span class="php-var">$formatLength</span> = DatesReader::FORMAT_LENGTH_DEFAULT, <span class="php-var">$strictMode</span> = <span class="php-keyword1">true</span>)
 </span><span id="121" class="l">    {
@@ -980,8 +980,8 @@
 </span></span><span id="129" class="l"><span class="php-comment">     * @param string $datetimeToParse Date/time to be parsed
 </span></span><span id="130" class="l"><span class="php-comment">     * @param array $parsedFormat Parsed format (from DatesReader)
 </span></span><span id="131" class="l"><span class="php-comment">     * @param array $localizedLiterals Array of date / time literals from CLDR
-</span></span><span id="132" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when TRUE, lenient when FALSE)
-</span></span><span id="133" class="l"><span class="php-comment">     * @return mixed Array of parsed date and / or time elements, FALSE on failure
+</span></span><span id="132" class="l"><span class="php-comment">     * @param boolean $strictMode Work mode (strict when true, lenient when false)
+</span></span><span id="133" class="l"><span class="php-comment">     * @return mixed Array of parsed date and / or time elements, false on failure
 </span></span><span id="134" class="l"><span class="php-comment">     */</span>
 </span><span id="135" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> doParsingWithParsedFormat(<span class="php-var">$datetimeToParse</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFormat</span>, <span class="php-keyword1">array</span> <span class="php-var">$localizedLiterals</span>, <span class="php-var">$strictMode</span>)
 </span><span id="136" class="l">    {
@@ -994,7 +994,7 @@
 </span></span><span id="143" class="l"><span class="php-comment">     * @param string $datetimeToParse Date/time to be parsed
 </span></span><span id="144" class="l"><span class="php-comment">     * @param array $parsedFormat Format parsed by DatesReader
 </span></span><span id="145" class="l"><span class="php-comment">     * @param array $localizedLiterals Array of date / time literals from CLDR
-</span></span><span id="146" class="l"><span class="php-comment">     * @return array Array of parsed date and / or time elements, FALSE on failure
+</span></span><span id="146" class="l"><span class="php-comment">     * @return array Array of parsed date and / or time elements, false on failure
 </span></span><span id="147" class="l"><span class="php-comment">     * @throws InvalidArgumentException When unexpected symbol found in format
 </span></span><span id="148" class="l"><span class="php-comment">     * @see DatesReader
 </span></span><span id="149" class="l"><span class="php-comment">     */</span>
@@ -1426,14 +1426,14 @@
 </span><span id="575" class="l">    <span class="php-comment">/**
 </span></span><span id="576" class="l"><span class="php-comment">     * Extracts one or two-digit number from the beginning of the string.
 </span></span><span id="577" class="l"><span class="php-comment">     *
-</span></span><span id="578" class="l"><span class="php-comment">     * If the number has certainly two digits, $isTwoDigits can be set to TRUE
+</span></span><span id="578" class="l"><span class="php-comment">     * If the number has certainly two digits, $isTwoDigits can be set to true
 </span></span><span id="579" class="l"><span class="php-comment">     * so no additional checking is done (this implies from some date/time
 </span></span><span id="580" class="l"><span class="php-comment">     * formats, like 'hh').
 </span></span><span id="581" class="l"><span class="php-comment">     *
 </span></span><span id="582" class="l"><span class="php-comment">     * Number is also checked for constraints: minimum and maximum value.
 </span></span><span id="583" class="l"><span class="php-comment">     *
 </span></span><span id="584" class="l"><span class="php-comment">     * @param string $datetimeToParse Date/time to be parsed
-</span></span><span id="585" class="l"><span class="php-comment">     * @param boolean $isTwoDigits TRUE if number has surely two digits, FALSE if it has one or two digits
+</span></span><span id="585" class="l"><span class="php-comment">     * @param boolean $isTwoDigits true if number has surely two digits, false if it has one or two digits
 </span></span><span id="586" class="l"><span class="php-comment">     * @param int $minValue
 </span></span><span id="587" class="l"><span class="php-comment">     * @param int $maxValue
 </span></span><span id="588" class="l"><span class="php-comment">     * @return int Parsed number
@@ -1503,6 +1503,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

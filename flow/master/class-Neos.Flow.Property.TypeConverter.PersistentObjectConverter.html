@@ -876,12 +876,12 @@
 <li>If the input is string, it is assumed to be a UUID. Then, the object is fetched from persistence.</li>
 <li><p>If the input is array, we check if it has an identity property.</p></li>
 <li><p>If the input has NO identity property, but additional properties, we create a new object and return it.
-However, we only do this if the configuration option "CONFIGURATION_CREATION_ALLOWED" is TRUE.</p></li>
+However, we only do this if the configuration option "CONFIGURATION_CREATION_ALLOWED" is true.</p></li>
 <li>If the input has an identity property AND the configuration option "CONFIGURATION_IDENTITY_CREATION_ALLOWED" is set,
 we fetch the object from persistent or create a new object if none was found and then set the sub-properties.</li>
 <li>If the input has an identity property and NO additional properties, we fetch the object from persistence.</li>
 <li>If the input has an identity property AND additional properties, we fetch the object from persistence,
-and set the sub-properties. We only do this if the configuration option "CONFIGURATION_MODIFICATION_ALLOWED" is TRUE.</li>
+and set the sub-properties. We only do this if the configuration option "CONFIGURATION_MODIFICATION_ALLOWED" is true.</li>
 </ul>
 	</div>
 
@@ -1532,6 +1532,6 @@ and set the sub-properties. We only do this if the configuration option "CONFIGU
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

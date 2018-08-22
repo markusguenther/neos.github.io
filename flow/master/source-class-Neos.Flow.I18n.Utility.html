@@ -889,7 +889,7 @@
 </span><span id="27" class="l">
 </span><span id="28" class="l">    <span class="php-comment">/**
 </span></span><span id="29" class="l"><span class="php-comment">     * Parses Accept-Language header and returns array of locale tags (like:
-</span></span><span id="30" class="l"><span class="php-comment">     * en-GB, en), or FALSE if no tags were found.
+</span></span><span id="30" class="l"><span class="php-comment">     * en-GB, en), or false if no tags were found.
 </span></span><span id="31" class="l"><span class="php-comment">     *
 </span></span><span id="32" class="l"><span class="php-comment">     * This method only returns tags that conforms ISO 639 for language codes
 </span></span><span id="33" class="l"><span class="php-comment">     * and ISO 3166 for region codes. HTTP spec (RFC 2616) defines both of these
@@ -904,7 +904,7 @@
 </span></span><span id="42" class="l"><span class="php-comment">     * with the web browsers.
 </span></span><span id="43" class="l"><span class="php-comment">     *
 </span></span><span id="44" class="l"><span class="php-comment">     * @param string $acceptLanguageHeader
-</span></span><span id="45" class="l"><span class="php-comment">     * @return mixed The array of locale identifiers or FALSE
+</span></span><span id="45" class="l"><span class="php-comment">     * @return mixed The array of locale identifiers or false
 </span></span><span id="46" class="l"><span class="php-comment">     */</span>
 </span><span id="47" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> parseAcceptLanguageHeader(<span class="php-var">$acceptLanguageHeader</span>)
 </span><span id="48" class="l">    {
@@ -951,7 +951,7 @@
 </span></span><span id="89" class="l"><span class="php-comment">     * Note: this ignores matches on rss, xml and php and validates the identifier.
 </span></span><span id="90" class="l"><span class="php-comment">     *
 </span></span><span id="91" class="l"><span class="php-comment">     * @param string $filename Filename to extract locale identifier from
-</span></span><span id="92" class="l"><span class="php-comment">     * @return mixed The string with extracted locale identifier of FALSE on failure
+</span></span><span id="92" class="l"><span class="php-comment">     * @return mixed The string with extracted locale identifier of false on failure
 </span></span><span id="93" class="l"><span class="php-comment">     */</span>
 </span><span id="94" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> extractLocaleTagFromFilename(<span class="php-var">$filename</span>)
 </span><span id="95" class="l">    {
@@ -978,7 +978,7 @@
 </span></span><span id="116" class="l"><span class="php-comment">     * Note: Locale tag will be extracted from the last directory path segment only.
 </span></span><span id="117" class="l"><span class="php-comment">     *
 </span></span><span id="118" class="l"><span class="php-comment">     * @param string $directory Directory path to extract locale identifier from
-</span></span><span id="119" class="l"><span class="php-comment">     * @return mixed The string with extracted locale identifier of FALSE on failure
+</span></span><span id="119" class="l"><span class="php-comment">     * @return mixed The string with extracted locale identifier of false on failure
 </span></span><span id="120" class="l"><span class="php-comment">     */</span>
 </span><span id="121" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> extractLocaleTagFromDirectory(<span class="php-var">$directory</span>)
 </span><span id="122" class="l">    {
@@ -997,7 +997,7 @@
 </span></span><span id="135" class="l"><span class="php-comment">     *
 </span></span><span id="136" class="l"><span class="php-comment">     * @param string $haystack
 </span></span><span id="137" class="l"><span class="php-comment">     * @param string $needle
-</span></span><span id="138" class="l"><span class="php-comment">     * @return boolean TRUE if $haystack begins with $needle
+</span></span><span id="138" class="l"><span class="php-comment">     * @return boolean true if $haystack begins with $needle
 </span></span><span id="139" class="l"><span class="php-comment">     */</span>
 </span><span id="140" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> stringBeginsWith(<span class="php-var">$haystack</span>, <span class="php-var">$needle</span>)
 </span><span id="141" class="l">    {
@@ -1013,7 +1013,7 @@
 </span></span><span id="151" class="l"><span class="php-comment">     *
 </span></span><span id="152" class="l"><span class="php-comment">     * @param string $haystack
 </span></span><span id="153" class="l"><span class="php-comment">     * @param string $needle
-</span></span><span id="154" class="l"><span class="php-comment">     * @return boolean TRUE if $haystack ends with $needle
+</span></span><span id="154" class="l"><span class="php-comment">     * @return boolean true if $haystack ends with $needle
 </span></span><span id="155" class="l"><span class="php-comment">     */</span>
 </span><span id="156" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> stringEndsWith(<span class="php-var">$haystack</span>, <span class="php-var">$needle</span>)
 </span><span id="157" class="l">    {
@@ -1033,6 +1033,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

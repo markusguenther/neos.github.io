@@ -931,7 +931,7 @@
 </span></span><span id="66" class="l"><span class="php-comment">     * @see matchWithParameters()
 </span></span><span id="67" class="l"><span class="php-comment">     *
 </span></span><span id="68" class="l"><span class="php-comment">     * @param string $routePath The request path to be matched - without query parameters, host and fragment.
-</span></span><span id="69" class="l"><span class="php-comment">     * @return bool|MatchResult TRUE or an instance of MatchResult if Route Part matched $routePath, otherwise FALSE.
+</span></span><span id="69" class="l"><span class="php-comment">     * @return bool|MatchResult true or an instance of MatchResult if Route Part matched $routePath, otherwise false.
 </span></span><span id="70" class="l"><span class="php-comment">     */</span>
 </span><span id="71" class="l">    <span class="php-keyword1">final</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> match(&amp;<span class="php-var">$routePath</span>)
 </span><span id="72" class="l">    {
@@ -946,7 +946,7 @@
 </span></span><span id="81" class="l"><span class="php-comment">     *
 </span></span><span id="82" class="l"><span class="php-comment">     * @param string $routePath The request path to be matched - without query parameters, host and fragment.
 </span></span><span id="83" class="l"><span class="php-comment">     * @param RouteParameters $parameters Routing parameters that will be stored in $this-&gt;parameters and can be evaluated in sub classes
-</span></span><span id="84" class="l"><span class="php-comment">     * @return bool|MatchResult TRUE or an instance of MatchResult if Route Part matched $routePath, otherwise FALSE.
+</span></span><span id="84" class="l"><span class="php-comment">     * @return bool|MatchResult true or an instance of MatchResult if Route Part matched $routePath, otherwise false.
 </span></span><span id="85" class="l"><span class="php-comment">     */</span>
 </span><span id="86" class="l">    <span class="php-keyword1">final</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> matchWithParameters(&amp;<span class="php-var">$routePath</span>, RouteParameters <span class="php-var">$parameters</span>)
 </span><span id="87" class="l">    {
@@ -997,7 +997,7 @@
 </span></span><span id="132" class="l"><span class="php-comment">     * This method can be overridden by custom RoutePartHandlers to implement custom matching mechanisms.
 </span></span><span id="133" class="l"><span class="php-comment">     *
 </span></span><span id="134" class="l"><span class="php-comment">     * @param string $value value to match
-</span></span><span id="135" class="l"><span class="php-comment">     * @return bool|MatchResult An instance of MatchResult if value could be matched successfully, otherwise FALSE.
+</span></span><span id="135" class="l"><span class="php-comment">     * @return bool|MatchResult An instance of MatchResult if value could be matched successfully, otherwise false.
 </span></span><span id="136" class="l"><span class="php-comment">     * @api
 </span></span><span id="137" class="l"><span class="php-comment">     */</span>
 </span><span id="138" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> matchValue(<span class="php-var">$value</span>)
@@ -1029,7 +1029,7 @@
 </span></span><span id="164" class="l"><span class="php-comment">     * If a corresponding element is found in $routeValues, this element is removed from the array.
 </span></span><span id="165" class="l"><span class="php-comment">     *
 </span></span><span id="166" class="l"><span class="php-comment">     * @param array $routeValues An array with key/value pairs to be resolved by Dynamic Route Parts.
-</span></span><span id="167" class="l"><span class="php-comment">     * @return bool|ResolveResult TRUE or an instance of ResolveResult if current Route Part could be resolved, otherwise FALSE
+</span></span><span id="167" class="l"><span class="php-comment">     * @return bool|ResolveResult true or an instance of ResolveResult if current Route Part could be resolved, otherwise false
 </span></span><span id="168" class="l"><span class="php-comment">     */</span>
 </span><span id="169" class="l">    <span class="php-keyword1">final</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> resolve(<span class="php-keyword1">array</span> &amp;<span class="php-var">$routeValues</span>)
 </span><span id="170" class="l">    {
@@ -1068,7 +1068,7 @@
 </span></span><span id="203" class="l"><span class="php-comment">     * This method can be overridden by custom RoutePartHandlers to implement custom resolving mechanisms.
 </span></span><span id="204" class="l"><span class="php-comment">     *
 </span></span><span id="205" class="l"><span class="php-comment">     * @param mixed $value value to resolve
-</span></span><span id="206" class="l"><span class="php-comment">     * @return boolean|ResolveResult An instance of ResolveResult if value could be resolved successfully, otherwise FALSE.
+</span></span><span id="206" class="l"><span class="php-comment">     * @return boolean|ResolveResult An instance of ResolveResult if value could be resolved successfully, otherwise false.
 </span></span><span id="207" class="l"><span class="php-comment">     * @api
 </span></span><span id="208" class="l"><span class="php-comment">     */</span>
 </span><span id="209" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> resolveValue(<span class="php-var">$value</span>)
@@ -1098,6 +1098,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>

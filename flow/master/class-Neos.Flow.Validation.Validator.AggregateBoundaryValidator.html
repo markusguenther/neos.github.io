@@ -928,7 +928,7 @@ other Aggregate Roots eager loaded.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Validation.html">Validation</a>\<a href="namespace-Neos.Flow.Validation.Validator.html">Validator</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.Validation.Validator.AggregateBoundaryValidator.html#15-49" title="Go to source code">Neos.Flow/Classes/Validation/Validator/AggregateBoundaryValidator.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Validation.Validator.AggregateBoundaryValidator.html#15-48" title="Go to source code">Neos.Flow/Classes/Validation/Validator/AggregateBoundaryValidator.php</a>
 		<br>
 	</div>
 
@@ -937,18 +937,18 @@ other Aggregate Roots eager loaded.</p>
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="validate" id="_validate">
+		<tr data-order="isValid" id="_isValid">
 
 			<td class="attributes"><code>
 				 public 
-				Neos\Error\Messages\Result
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_validate">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.Validator.AggregateBoundaryValidator.html#24-48" title="Go to source code">validate</a>( <span>mixed <var>$value</var></span> )</code>
+			<a class="anchor" href="#_isValid">#</a>
+			<code><a href="source-class-Neos.Flow.Validation.Validator.AggregateBoundaryValidator.html#24-47" title="Go to source code">isValid</a>( <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given value is valid according to the validator, and returns
@@ -968,18 +968,18 @@ an uninitialized lazy loading proxy.</p>
 						<dd>The value that should be validated</dd>
 					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						Neos\Error\Messages\Result
-					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidValidationOptionsException<br>if invalid validation options have been specified in the constructor
+					</div>
 
 					<h4>Api</h4>
 					<div class="list">
 					</div>
 
 					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_validate">Neos\Flow\Validation\Validator\GenericObjectValidator::validate</a></code></div>
+					<div class="list"><code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_isValid">Neos\Flow\Validation\Validator\GenericObjectValidator::isValid</a></code></div>
 
 			</div>
 			</div></td>
@@ -994,7 +994,6 @@ an uninitialized lazy loading proxy.</p>
 				<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_checkProperty">checkProperty()</a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_getPropertyValidators">getPropertyValidators()</a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_getPropertyValue">getPropertyValue()</a></code>, 
-				<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_isValid">isValid()</a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_isValidatedAlready">isValidatedAlready()</a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html#_setValidatedInstancesContainer">setValidatedInstancesContainer()</a></code>
 			</p>
@@ -1005,7 +1004,10 @@ an uninitialized lazy loading proxy.</p>
 				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#___construct">__construct()</a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_addError">addError()</a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_getOptions">getOptions()</a></code>, 
-				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_isEmpty">isEmpty()</a></code>
+				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_isEmpty">isEmpty()</a></code>, 
+				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_popResult">popResult()</a></code>, 
+				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_pushResult">pushResult()</a></code>, 
+				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#_validate">validate()</a></code>
 			</p>
 		</div>
 
@@ -1034,7 +1036,8 @@ an uninitialized lazy loading proxy.</p>
 			<p class="elementList">
 				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#$acceptsEmptyValues"><var>$acceptsEmptyValues</var></a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#$options"><var>$options</var></a></code>, 
-				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#$result"><var>$result</var></a></code>, 
+				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#$result"><var><span class="deprecated">$result</span></var></a></code>, 
+				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#$resultStack"><var>$resultStack</var></a></code>, 
 				<code><a href="class-Neos.Flow.Validation.Validator.AbstractValidator.html#$supportedOptions"><var>$supportedOptions</var></a></code>
 			</p>
 		</div>
@@ -1051,6 +1054,6 @@ an uninitialized lazy loading proxy.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?36e2912ff658b50d9106aae73c9f36d6f7a23d52"></script>
+<script src="elementlist.js?2907fad97707acc7537f0312dc04bc11c942dce3"></script>
 </body>
 </html>
