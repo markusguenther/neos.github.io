@@ -876,7 +876,7 @@
 				<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#25-467" title="Go to source code">Neos.Flow/Classes/Validation/ValidatorResolver.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#26-493" title="Go to source code">Neos.Flow/Classes/Validation/ValidatorResolver.php</a>
 		<br>
 	</div>
 
@@ -896,7 +896,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createValidator">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#82-120" title="Go to source code">createValidator</a>( <span>string <var>$validatorType</var></span>, <span>array <var>$validatorOptions</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#83-121" title="Go to source code">createValidator</a>( <span>string <var>$validatorType</var></span>, <span>array <var>$validatorOptions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Get a validator for a given data type. Returns a validator implementing
@@ -948,7 +948,7 @@ could be resolved.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBaseValidatorConjunction">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#122-141" title="Go to source code">getBaseValidatorConjunction</a>( <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var> = [<span class="php-quote">'Default'</span>]</span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#123-145" title="Go to source code">getBaseValidatorConjunction</a>( <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var> = [<span class="php-quote">'Default'</span>]</span> )</code>
 
 			<div class="description short">
 				<p>Resolves and returns the base validator conjunction for the given data type.</p>
@@ -973,6 +973,12 @@ could be resolved.</p>
 						<code><a href="class-Neos.Flow.Validation.Validator.ConjunctionValidator.html">Neos\Flow\Validation\Validator\ConjunctionValidator</a></code><br>The validator conjunction
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationConfigurationException.html">Neos\Flow\Validation\Exception\InvalidValidationConfigurationException</a></code><br>
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationOptionsException.html">Neos\Flow\Validation\Exception\InvalidValidationOptionsException</a></code><br>
+						<code><a href="class-Neos.Flow.Validation.Exception.NoSuchValidatorException.html">Neos\Flow\Validation\Exception\NoSuchValidatorException</a></code>
+					</div>
 
 					<h4>Api</h4>
 					<div class="list">
@@ -993,7 +999,7 @@ could be resolved.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildMethodArgumentsValidatorConjunctions">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#143-214" title="Go to source code">buildMethodArgumentsValidatorConjunctions</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>array <var>$methodParameters</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$methodValidateAnnotations</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#147-220" title="Go to source code">buildMethodArgumentsValidatorConjunctions</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>array <var>$methodParameters</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$methodValidateAnnotations</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Detects and registers any validators for arguments:
@@ -1028,7 +1034,8 @@ could be resolved.</p>
 					<div class="list">
 						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationConfigurationException.html">Neos\Flow\Validation\Exception\InvalidValidationConfigurationException</a></code><br>
 						<code><a href="class-Neos.Flow.Validation.Exception.NoSuchValidatorException.html">Neos\Flow\Validation\Exception\NoSuchValidatorException</a></code><br>
-						<code><a href="class-Neos.Flow.Validation.Exception.InvalidTypeHintException.html">Neos\Flow\Validation\Exception\InvalidTypeHintException</a></code>
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidTypeHintException.html">Neos\Flow\Validation\Exception\InvalidTypeHintException</a></code><br>
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationOptionsException.html">Neos\Flow\Validation\Exception\InvalidValidationOptionsException</a></code>
 					</div>
 
 
@@ -1047,7 +1054,7 @@ could be resolved.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reset">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#216-225" title="Go to source code">reset</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#222-231" title="Go to source code">reset</a>( )</code>
 
 			<div class="description short">
 				<p>Resets the baseValidatorConjunctions
@@ -1078,7 +1085,7 @@ It is usually not required to reset the ValidatorResolver during one request. Th
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildSubObjectValidator">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#227-250" title="Go to source code">buildSubObjectValidator</a>( <span>array <var>$objectPath</var></span>, <span><code><a href="class-Neos.Flow.Validation.Validator.ValidatorInterface.html">Neos\Flow\Validation\Validator\ValidatorInterface</a></code> <var>$propertyValidator</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#233-257" title="Go to source code">buildSubObjectValidator</a>( <span>array <var>$objectPath</var></span>, <span><code><a href="class-Neos.Flow.Validation.Validator.ValidatorInterface.html">Neos\Flow\Validation\Validator\ValidatorInterface</a></code> <var>$propertyValidator</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a chain of nested object validators by specification of the given
@@ -1103,6 +1110,10 @@ object path.</p>
 						<code><a href="class-Neos.Flow.Validation.Validator.GenericObjectValidator.html">Neos\Flow\Validation\Validator\GenericObjectValidator</a></code>
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationOptionsException.html">Neos\Flow\Validation\Exception\InvalidValidationOptionsException</a></code>
+					</div>
 
 
 
@@ -1120,7 +1131,7 @@ object path.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_buildBaseValidatorConjunction">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#252-334" title="Go to source code">buildBaseValidatorConjunction</a>( <span>string <var>$indexKey</var></span>, <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#259-357" title="Go to source code">buildBaseValidatorConjunction</a>( <span>string <var>$indexKey</var></span>, <span>string <var>$targetClassName</var></span>, <span>array <var>$validationGroups</var></span> )</code>
 
 			<div class="description short">
 				<p>Builds a base validator conjunction for the given data type.</p>
@@ -1157,7 +1168,9 @@ name Neos\Foo\Domain\Validator\QuuxValidator</p>
 					<h4>Throws</h4>
 					<div class="list">
 						<code><a href="class-Neos.Flow.Validation.Exception.NoSuchValidatorException.html">Neos\Flow\Validation\Exception\NoSuchValidatorException</a></code><br>
-						InvalidArgumentException
+						InvalidArgumentException<br>
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationOptionsException.html">Neos\Flow\Validation\Exception\InvalidValidationOptionsException</a></code><br>
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationConfigurationException.html">Neos\Flow\Validation\Exception\InvalidValidationConfigurationException</a></code>
 					</div>
 
 
@@ -1169,14 +1182,14 @@ name Neos\Foo\Domain\Validator\QuuxValidator</p>
 
 			<td class="attributes"><code>
 				 protected 
-				null|<code><a href="class-Neos.Flow.Validation.Validator.ObjectValidatorInterface.html">Neos\Flow\Validation\Validator\ObjectValidatorInterface</a></code>
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addCustomValidators">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#336-378" title="Go to source code">addCustomValidators</a>( <span>string <var>$targetClassName</var></span>, <span><code><a href="class-Neos.Flow.Validation.Validator.ConjunctionValidator.html">Neos\Flow\Validation\Validator\ConjunctionValidator</a></code> <var>&amp; $conjunctionValidator</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#359-404" title="Go to source code">addCustomValidators</a>( <span>string <var>$targetClassName</var></span>, <span><code><a href="class-Neos.Flow.Validation.Validator.ConjunctionValidator.html">Neos\Flow\Validation\Validator\ConjunctionValidator</a></code> <var>&amp; $conjunctionValidator</var></span> )</code>
 
 			<div class="description short">
 				<p>This adds custom validators to the passed $conjunctionValidator.</p>
@@ -1201,11 +1214,12 @@ If multiple validators have the same priority, which one will be added is not de
 						<dd></dd>
 					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						null|<code><a href="class-Neos.Flow.Validation.Validator.ObjectValidatorInterface.html">Neos\Flow\Validation\Validator\ObjectValidatorInterface</a></code>
-					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Validation.Exception.InvalidValidationConfigurationException.html">Neos\Flow\Validation\Exception\InvalidValidationConfigurationException</a></code><br>
+						<code><a href="class-Neos.Flow.Validation.Exception.NoSuchValidatorException.html">Neos\Flow\Validation\Exception\NoSuchValidatorException</a></code>
+					</div>
 
 
 
@@ -1223,7 +1237,7 @@ If multiple validators have the same priority, which one will be added is not de
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPolyTypeObjectValidatorImplementationClassNames">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#380-392" title="Go to source code">getPolyTypeObjectValidatorImplementationClassNames</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#406-418" title="Go to source code">getPolyTypeObjectValidatorImplementationClassNames</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a map of object validator class names.</p>
@@ -1264,7 +1278,7 @@ If multiple validators have the same priority, which one will be added is not de
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveValidatorObjectName">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#394-422" title="Go to source code">resolveValidatorObjectName</a>( <span>string <var>$validatorType</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#420-448" title="Go to source code">resolveValidatorObjectName</a>( <span>string <var>$validatorType</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the class name of an appropriate validator for the given type. If no
@@ -1304,7 +1318,7 @@ validator is available false is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValidatorImplementationClassNames">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#424-436" title="Go to source code">getValidatorImplementationClassNames</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#450-462" title="Go to source code">getValidatorImplementationClassNames</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns all class names implementing the ValidatorInterface.</p>
@@ -1345,7 +1359,7 @@ validator is available false is returned</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getValidatorType">#</a>
-			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#438-466" title="Go to source code">getValidatorType</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#464-492" title="Go to source code">getValidatorType</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				<p>Used to map PHP types to validator types.</p>
@@ -1390,7 +1404,7 @@ validator is available false is returned</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_VALIDATORS.html#33-48" title="Go to source code"><b>PATTERN_MATCH_VALIDATORS</b></a>
+						<a href="source-constant-PATTERN_MATCH_VALIDATORS.html#34-49" title="Go to source code"><b>PATTERN_MATCH_VALIDATORS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1425,7 +1439,7 @@ validator is available false is returned</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-PATTERN_MATCH_VALIDATOROPTIONS.html#50-63" title="Go to source code"><b>PATTERN_MATCH_VALIDATOROPTIONS</b></a>
+						<a href="source-constant-PATTERN_MATCH_VALIDATOROPTIONS.html#51-64" title="Go to source code"><b>PATTERN_MATCH_VALIDATOROPTIONS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1469,7 +1483,7 @@ validator is available false is returned</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#65-69" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#66-70" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1497,7 +1511,7 @@ validator is available false is returned</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#71-75" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#72-76" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1525,7 +1539,7 @@ validator is available false is returned</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#77-80" title="Go to source code"><var>$baseValidatorConjunctions</var></a>
+					<a href="source-class-Neos.Flow.Validation.ValidatorResolver.html#78-81" title="Go to source code"><var>$baseValidatorConjunctions</var></a>
 
 				<div class="description short">
 					
