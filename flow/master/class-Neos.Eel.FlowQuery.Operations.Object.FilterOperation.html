@@ -875,11 +875,11 @@ following operators:</p>
   <p>=
     Value is greater than or equal to operand
   $=
-    Value ends with operand (string-based)
+    Value ends with operand (string-based) or value's last element is equal to operand (array-based)
   ^=
-    Value starts with operand (string-based)
+    Value starts with operand (string-based) or value's first element is equal to operand (array-based)
   *=
-    Value contains operand (string-based)
+    Value contains operand (string-based) or value contains an element that is equal to operand (array based)
   instanceof
     Checks if the value is an instance of the operand
   !instanceof
@@ -922,7 +922,7 @@ classname with the PHP instanceof operation to check if the value matches.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Eel.html">Eel</a>\<a href="namespace-Neos.Eel.FlowQuery.html">FlowQuery</a>\<a href="namespace-Neos.Eel.FlowQuery.Operations.html">Operations</a>\<a href="namespace-Neos.Eel.FlowQuery.Operations.Object.html">Object</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#23-292" title="Go to source code">Neos.Eel/Classes/FlowQuery/Operations/Object/FilterOperation.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#23-315" title="Go to source code">Neos.Eel/Classes/FlowQuery/Operations/Object/FilterOperation.php</a>
 		<br>
 	</div>
 
@@ -1234,7 +1234,7 @@ to make overriding this functionality easy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateOperator">#</a>
-			<code><a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#213-257" title="Go to source code">evaluateOperator</a>( <span>mixed <var>$value</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#213-280" title="Go to source code">evaluateOperator</a>( <span>mixed <var>$value</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				<p>Evaluate an operator</p>
@@ -1276,7 +1276,7 @@ to make overriding this functionality easy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_operandIsSimpleType">#</a>
-			<code><a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#259-266" title="Go to source code">operandIsSimpleType</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#282-289" title="Go to source code">operandIsSimpleType</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1314,7 +1314,7 @@ to make overriding this functionality easy.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleSimpleTypeOperand">#</a>
-			<code><a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#268-291" title="Go to source code">handleSimpleTypeOperand</a>( <span>string <var>$operand</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Eel.FlowQuery.Operations.Object.FilterOperation.html#291-314" title="Go to source code">handleSimpleTypeOperand</a>( <span>string <var>$operand</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				
