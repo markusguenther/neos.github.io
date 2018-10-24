@@ -963,7 +963,7 @@
 </span></span><span id="101" class="l"><span class="php-comment">     */</span>
 </span><span id="102" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> injectSettings(<span class="php-keyword1">array</span> <span class="php-var">$settings</span>)
 </span><span id="103" class="l">    {
-</span><span id="104" class="l">        <span class="php-var">$this</span>-&gt;settings = <span class="php-var">$settings</span>;
+</span><span id="104" class="l">        <span class="php-var">$this</span>-&gt;settings = <span class="php-var">$settings</span>[<span class="php-quote">'resource'</span>];
 </span><span id="105" class="l">    }
 </span><span id="106" class="l">
 </span><span id="107" class="l">    <span class="php-comment">/**
@@ -1407,7 +1407,7 @@
 </span></span><span id="545" class="l"><span class="php-comment">     */</span>
 </span><span id="546" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> initializeStorages()
 </span><span id="547" class="l">    {
-</span><span id="548" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'storages'</span>] <span class="php-keyword1">as</span> <span class="php-var">$storageName</span> =&gt; <span class="php-var">$storageDefinition</span>) {
+</span><span id="548" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'storages'</span>] <span class="php-keyword1">as</span> <span class="php-var">$storageName</span> =&gt; <span class="php-var">$storageDefinition</span>) {
 </span><span id="549" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$storageDefinition</span>[<span class="php-quote">'storage'</span>])) {
 </span><span id="550" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'The configuration for the resource storage &quot;%s&quot; defined in your settings has no valid &quot;storage&quot; option. Please check the configuration syntax and make sure to specify a valid storage class name.'</span>, <span class="php-var">$storageName</span>), <span class="php-num">1361467211</span>);
 </span><span id="551" class="l">            }
@@ -1427,7 +1427,7 @@
 </span></span><span id="565" class="l"><span class="php-comment">     */</span>
 </span><span id="566" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> initializeTargets()
 </span><span id="567" class="l">    {
-</span><span id="568" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'targets'</span>] <span class="php-keyword1">as</span> <span class="php-var">$targetName</span> =&gt; <span class="php-var">$targetDefinition</span>) {
+</span><span id="568" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'targets'</span>] <span class="php-keyword1">as</span> <span class="php-var">$targetName</span> =&gt; <span class="php-var">$targetDefinition</span>) {
 </span><span id="569" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$targetDefinition</span>[<span class="php-quote">'target'</span>])) {
 </span><span id="570" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'The configuration for the resource target &quot;%s&quot; defined in your settings has no valid &quot;target&quot; option. Please check the configuration syntax and make sure to specify a valid target class name.'</span>, <span class="php-var">$targetName</span>), <span class="php-num">1361467838</span>);
 </span><span id="571" class="l">            }
@@ -1447,7 +1447,7 @@
 </span></span><span id="585" class="l"><span class="php-comment">     */</span>
 </span><span id="586" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> initializeCollections()
 </span><span id="587" class="l">    {
-</span><span id="588" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'collections'</span>] <span class="php-keyword1">as</span> <span class="php-var">$collectionName</span> =&gt; <span class="php-var">$collectionDefinition</span>) {
+</span><span id="588" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'collections'</span>] <span class="php-keyword1">as</span> <span class="php-var">$collectionName</span> =&gt; <span class="php-var">$collectionDefinition</span>) {
 </span><span id="589" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$collectionDefinition</span>[<span class="php-quote">'storage'</span>])) {
 </span><span id="590" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'The configuration for the resource collection &quot;%s&quot; defined in your settings has no valid &quot;storage&quot; option. Please check the configuration syntax.'</span>, <span class="php-var">$collectionName</span>), <span class="php-num">1361468805</span>);
 </span><span id="591" class="l">            }
@@ -1486,7 +1486,7 @@
 </span><span id="624" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'The given upload file &quot;'</span> . <span class="php-keyword2">strip_tags</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'basename'</span>]) . <span class="php-quote">'&quot; was not uploaded through PHP. As it could pose a security risk it cannot be imported.'</span>, <span class="php-num">1422461503</span>);
 </span><span id="625" class="l">        }
 </span><span id="626" class="l">
-</span><span id="627" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'extension'</span>]) &amp;&amp; <span class="php-keyword2">array_key_exists</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'extension'</span>]), <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'uploadExtensionBlacklist'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'resource'</span>][<span class="php-quote">'uploadExtensionBlacklist'</span>][<span class="php-keyword2">strtolower</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'extension'</span>])] === <span class="php-keyword1">true</span>) {
+</span><span id="627" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'extension'</span>]) &amp;&amp; <span class="php-keyword2">array_key_exists</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'extension'</span>]), <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'uploadExtensionBlacklist'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'uploadExtensionBlacklist'</span>][<span class="php-keyword2">strtolower</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'extension'</span>])] === <span class="php-keyword1">true</span>) {
 </span><span id="628" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-quote">'The extension of the given upload file &quot;'</span> . <span class="php-keyword2">strip_tags</span>(<span class="php-var">$pathInfo</span>[<span class="php-quote">'basename'</span>]) . <span class="php-quote">'&quot; is blacklisted. As it could pose a security risk it cannot be imported.'</span>, <span class="php-num">1447148472</span>);
 </span><span id="629" class="l">        }
 </span><span id="630" class="l">
@@ -1518,6 +1518,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5fc1171f46a0109a2361ff42cef3344619cd2042"></script>
+<script src="elementlist.js?cce1528a7f18bae5723ee60c5b54d983cee0a11f"></script>
 </body>
 </html>
