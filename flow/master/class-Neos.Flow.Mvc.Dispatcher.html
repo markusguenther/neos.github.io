@@ -887,7 +887,7 @@ returns the response the controller generated.</p>
 				<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Dispatcher.html#32-209" title="Go to source code">Neos.Flow/Classes/Mvc/Dispatcher.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Dispatcher.html#34-216" title="Go to source code">Neos.Flow/Classes/Mvc/Dispatcher.php</a>
 		<br>
 	</div>
 
@@ -907,7 +907,7 @@ returns the response the controller generated.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectObjectManager">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#46-56" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#48-58" title="Go to source code">injectObjectManager</a>( <span><code><a href="class-Neos.Flow.ObjectManagement.ObjectManagerInterface.html">Neos\Flow\ObjectManagement\ObjectManagerInterface</a></code> <var>$objectManager</var></span> )</code>
 
 			<div class="description short">
 				<p>Inject the Object Manager through setter injection because property injection
@@ -943,7 +943,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dispatch">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#58-118" title="Go to source code">dispatch</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#60-125" title="Go to source code">dispatch</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
 
 			<div class="description short">
 				<p>Dispatches a request to a controller</p>
@@ -964,7 +964,12 @@ is not available during compile time.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Security.Exception.AuthenticationRequiredException.html">Neos\Flow\Security\Exception\AuthenticationRequiredException</a></code>|<code><a href="class-Neos.Flow.Security.Exception.AccessDeniedException.html">Neos\Flow\Security\Exception\AccessDeniedException</a></code>
+						<code><a href="class-Neos.Flow.Security.Exception.AccessDeniedException.html">Neos\Flow\Security\Exception\AccessDeniedException</a></code><br>
+						<code><a href="class-Neos.Flow.Security.Exception.AuthenticationRequiredException.html">Neos\Flow\Security\Exception\AuthenticationRequiredException</a></code><br>
+						<code><a href="class-Neos.Flow.Mvc.Exception.InfiniteLoopException.html">Neos\Flow\Mvc\Exception\InfiniteLoopException</a></code><br>
+						<code><a href="class-Neos.Flow.Mvc.Controller.Exception.InvalidControllerException.html">Neos\Flow\Mvc\Controller\Exception\InvalidControllerException</a></code><br>
+						<code><a href="class-Neos.Flow.Configuration.Exception.NoSuchOptionException.html">Neos\Flow\Configuration\Exception\NoSuchOptionException</a></code><br>
+						<code><a href="class-Neos.Flow.Security.Exception.MissingConfigurationException.html">Neos\Flow\Security\Exception\MissingConfigurationException</a></code>
 					</div>
 
 					<h4>Api</h4>
@@ -986,7 +991,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initiateDispatchLoop">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#120-149" title="Go to source code">initiateDispatchLoop</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#127-156" title="Go to source code">initiateDispatchLoop</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
 
 			<div class="description short">
 				<p>Try processing the request until it is successfully marked "dispatched"</p>
@@ -1026,7 +1031,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeControllerInvocation">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#151-162" title="Go to source code">emitBeforeControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#158-169" title="Go to source code">emitBeforeControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
 
 			<div class="description short">
 				<p>This signal is emitted directly before the request is been dispatched to a controller.</p>
@@ -1067,7 +1072,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterControllerInvocation">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#164-176" title="Go to source code">emitAfterControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#171-183" title="Go to source code">emitAfterControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
 
 			<div class="description short">
 				<p>This signal is emitted directly after the request has been dispatched to a controller and the controller
@@ -1110,7 +1115,7 @@ returned control back to the dispatcher.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveController">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#178-208" title="Go to source code">resolveController</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#185-215" title="Go to source code">resolveController</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds and instantiates a controller that matches the current request.
@@ -1167,7 +1172,7 @@ If no controller can be found, an instance of NotFoundControllerInterface is ret
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Dispatcher.html#41-44" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Dispatcher.html#43-46" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					

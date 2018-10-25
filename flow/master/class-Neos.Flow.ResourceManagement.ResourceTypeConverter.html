@@ -929,7 +929,7 @@ and a PersistentResource representing this content is created and returned.</p>
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#25-344" title="Go to source code">Neos.Flow/Classes/ResourceManagement/ResourceTypeConverter.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#26-350" title="Go to source code">Neos.Flow/Classes/ResourceManagement/ResourceTypeConverter.php</a>
 		<br>
 	</div>
 
@@ -949,7 +949,7 @@ and a PersistentResource representing this content is created and returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectLogger">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#124-133" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#125-134" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the (system) logger based on PSR-3.</p>
@@ -983,7 +983,7 @@ and a PersistentResource representing this content is created and returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#135-172" title="Go to source code">convertFrom</a>( <span>array <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#136-176" title="Go to source code">convertFrom</a>( <span>array <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Converts the given string or array to a PersistentResource object.</p>
@@ -1019,7 +1019,9 @@ uploaded. In that case its value will be \UPLOAD_ERR_OK.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						Exception\TypeConverterException<br>thrown in case a developer error occurred
+						<code><a href="class-Neos.Flow.ResourceManagement.Exception.html">Neos\Flow\ResourceManagement\Exception</a></code><br>
+						<code><a href="class-Neos.Flow.ResourceManagement.Exception.InvalidResourceDataException.html">Neos\Flow\ResourceManagement\Exception\InvalidResourceDataException</a></code><br>
+						<code><a href="class-Neos.Flow.Property.Exception.InvalidPropertyMappingConfigurationException.html">Neos\Flow\Property\Exception\InvalidPropertyMappingConfigurationException</a></code>
 					</div>
 
 
@@ -1038,7 +1040,7 @@ uploaded. In that case its value will be \UPLOAD_ERR_OK.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleFileUploads">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#174-213" title="Go to source code">handleFileUploads</a>( <span>array <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#178-217" title="Go to source code">handleFileUploads</a>( <span>array <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1082,7 +1084,7 @@ uploaded. In that case its value will be \UPLOAD_ERR_OK.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleHashAndData">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#215-267" title="Go to source code">handleHashAndData</a>( <span>array <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#219-273" title="Go to source code">handleHashAndData</a>( <span>array <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1107,6 +1109,8 @@ uploaded. In that case its value will be \UPLOAD_ERR_OK.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
+						<code><a href="class-Neos.Flow.ResourceManagement.Exception.html">Neos\Flow\ResourceManagement\Exception</a></code><br>
+						<code><a href="class-Neos.Flow.ResourceManagement.Exception.InvalidResourceDataException.html">Neos\Flow\ResourceManagement\Exception\InvalidResourceDataException</a></code><br>
 						<code><a href="class-Neos.Flow.Property.Exception.InvalidPropertyMappingConfigurationException.html">Neos\Flow\Property\Exception\InvalidPropertyMappingConfigurationException</a></code>
 					</div>
 
@@ -1126,7 +1130,7 @@ uploaded. In that case its value will be \UPLOAD_ERR_OK.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleUploadedFile">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#269-310" title="Go to source code">handleUploadedFile</a>( <span>Psr\Http\Message\UploadedFileInterface <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#275-316" title="Go to source code">handleUploadedFile</a>( <span>Psr\Http\Message\UploadedFileInterface <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1166,7 +1170,7 @@ uploaded. In that case its value will be \UPLOAD_ERR_OK.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCollectionName">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#313-343" title="Go to source code">getCollectionName</a>( <span>array|Psr\Http\Message\UploadedFileInterface <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#319-349" title="Go to source code">getCollectionName</a>( <span>array|Psr\Http\Message\UploadedFileInterface <var>$source</var></span>, <span><code><a href="class-Neos.Flow.Property.PropertyMappingConfigurationInterface.html">Neos\Flow\Property\PropertyMappingConfigurationInterface</a></code> <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the collection name this resource will be stored in. Default will be ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME
@@ -1233,7 +1237,7 @@ and __collectionName is in the $source this will finally be the value.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CONFIGURATION_RESOURCE_LOAD_PATH.html#63-66" title="Go to source code"><b>CONFIGURATION_RESOURCE_LOAD_PATH</b></a>
+						<a href="source-constant-CONFIGURATION_RESOURCE_LOAD_PATH.html#64-67" title="Go to source code"><b>CONFIGURATION_RESOURCE_LOAD_PATH</b></a>
 					</code>
 
 					<div class="description short">
@@ -1257,7 +1261,7 @@ and __collectionName is in the $source this will finally be the value.</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CONFIGURATION_IDENTITY_CREATION_ALLOWED.html#68-71" title="Go to source code"><b>CONFIGURATION_IDENTITY_CREATION_ALLOWED</b></a>
+						<a href="source-constant-CONFIGURATION_IDENTITY_CREATION_ALLOWED.html#69-72" title="Go to source code"><b>CONFIGURATION_IDENTITY_CREATION_ALLOWED</b></a>
 					</code>
 
 					<div class="description short">
@@ -1281,7 +1285,7 @@ and __collectionName is in the $source this will finally be the value.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-CONFIGURATION_COLLECTION_NAME.html#73-79" title="Go to source code"><b>CONFIGURATION_COLLECTION_NAME</b></a>
+						<a href="source-constant-CONFIGURATION_COLLECTION_NAME.html#74-80" title="Go to source code"><b>CONFIGURATION_COLLECTION_NAME</b></a>
 					</code>
 
 					<div class="description short">
@@ -1318,7 +1322,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#81-84" title="Go to source code"><var>$sourceTypes</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#82-85" title="Go to source code"><var>$sourceTypes</var></a>
 
 				<div class="description short">
 					
@@ -1343,7 +1347,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#86-89" title="Go to source code"><var>$targetType</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#87-90" title="Go to source code"><var>$targetType</var></a>
 
 				<div class="description short">
 					
@@ -1368,7 +1372,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#91-94" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#92-95" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
@@ -1393,7 +1397,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#96-100" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#97-101" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1421,7 +1425,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#102-106" title="Go to source code"><var>$resourceRepository</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#103-107" title="Go to source code"><var>$resourceRepository</var></a>
 
 				<div class="description short">
 					
@@ -1449,7 +1453,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#108-112" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#109-113" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1477,7 +1481,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#114-117" title="Go to source code"><var>$logger</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#115-118" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1502,7 +1506,7 @@ will fallback to ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#119-122" title="Go to source code"><var>$convertedResources</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.ResourceTypeConverter.html#120-123" title="Go to source code"><var>$convertedResources</var></a>
 
 				<div class="description short">
 					
