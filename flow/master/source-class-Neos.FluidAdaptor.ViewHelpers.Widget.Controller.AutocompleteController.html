@@ -875,7 +875,7 @@
 </span><span id="24" class="l">    <span class="php-comment">/**
 </span></span><span id="25" class="l"><span class="php-comment">     * @var array
 </span></span><span id="26" class="l"><span class="php-comment">     */</span>
-</span><span id="27" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$configuration</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'limit'</span> =&gt; <span class="php-num">10</span>);
+</span><span id="27" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$configuration</span> = [<span class="php-quote">'limit'</span> =&gt; <span class="php-num">10</span>];
 </span><span id="28" class="l">
 </span><span id="29" class="l">    <span class="php-comment">/**
 </span></span><span id="30" class="l"><span class="php-comment">     * @return void
@@ -921,19 +921,19 @@
 </span><span id="70" class="l">
 </span><span id="71" class="l">        <span class="php-var">$results</span> = <span class="php-var">$query</span>-&gt;execute();
 </span><span id="72" class="l">
-</span><span id="73" class="l">        <span class="php-var">$output</span> = <span class="php-keyword1">array</span>();
-</span><span id="74" class="l">        <span class="php-var">$values</span> = <span class="php-keyword1">array</span>();
+</span><span id="73" class="l">        <span class="php-var">$output</span> = [];
+</span><span id="74" class="l">        <span class="php-var">$values</span> = [];
 </span><span id="75" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$results</span> <span class="php-keyword1">as</span> <span class="php-var">$singleResult</span>) {
 </span><span id="76" class="l">            <span class="php-var">$val</span> = ObjectAccess::getPropertyPath(<span class="php-var">$singleResult</span>, <span class="php-var">$searchProperty</span>);
 </span><span id="77" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$values</span>[<span class="php-var">$val</span>])) {
 </span><span id="78" class="l">                <span class="php-keyword1">continue</span>;
 </span><span id="79" class="l">            }
 </span><span id="80" class="l">            <span class="php-var">$values</span>[<span class="php-var">$val</span>] = <span class="php-keyword1">true</span>;
-</span><span id="81" class="l">            <span class="php-var">$output</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="81" class="l">            <span class="php-var">$output</span>[] = [
 </span><span id="82" class="l">                <span class="php-quote">'id'</span> =&gt; <span class="php-var">$val</span>,
 </span><span id="83" class="l">                <span class="php-quote">'label'</span> =&gt; <span class="php-var">$val</span>,
 </span><span id="84" class="l">                <span class="php-quote">'value'</span> =&gt; <span class="php-var">$val</span>
-</span><span id="85" class="l">            );
+</span><span id="85" class="l">            ];
 </span><span id="86" class="l">        }
 </span><span id="87" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$output</span>);
 </span><span id="88" class="l">    }

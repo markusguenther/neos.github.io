@@ -998,7 +998,7 @@
 </span></span><span id="138" class="l"><span class="php-comment">     */</span>
 </span><span id="139" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getEntityStatus()
 </span><span id="140" class="l">    {
-</span><span id="141" class="l">        <span class="php-var">$info</span> = <span class="php-keyword1">array</span>();
+</span><span id="141" class="l">        <span class="php-var">$info</span> = [];
 </span><span id="142" class="l">        <span class="php-var">$entityClassNames</span> = <span class="php-var">$this</span>-&gt;entityManager-&gt;getConfiguration()-&gt;getMetadataDriverImpl()-&gt;getAllClassNames();
 </span><span id="143" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$entityClassNames</span> <span class="php-keyword1">as</span> <span class="php-var">$entityClassName</span>) {
 </span><span id="144" class="l">            <span class="php-keyword1">try</span> {
@@ -1052,7 +1052,7 @@
 </span><span id="192" class="l">        <span class="php-comment">/** @var \Doctrine\DBAL\Connection $connection */</span>
 </span><span id="193" class="l">        <span class="php-var">$connection</span> = <span class="php-var">$this</span>-&gt;entityManager-&gt;getConnection();
 </span><span id="194" class="l">        <span class="php-var">$schemaManager</span> = <span class="php-var">$connection</span>-&gt;getSchemaManager();
-</span><span id="195" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$schemaManager</span>-&gt;tablesExist(<span class="php-keyword1">array</span>(<span class="php-quote">'flow3_doctrine_migrationstatus'</span>)) === <span class="php-keyword1">true</span>) {
+</span><span id="195" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$schemaManager</span>-&gt;tablesExist([<span class="php-quote">'flow3_doctrine_migrationstatus'</span>]) === <span class="php-keyword1">true</span>) {
 </span><span id="196" class="l">            <span class="php-var">$schemaManager</span>-&gt;renameTable(<span class="php-quote">'flow3_doctrine_migrationstatus'</span>, self::DOCTRINE_MIGRATIONSTABLENAME);
 </span><span id="197" class="l">        }
 </span><span id="198" class="l">

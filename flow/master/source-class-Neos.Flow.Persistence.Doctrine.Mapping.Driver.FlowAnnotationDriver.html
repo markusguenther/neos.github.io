@@ -1118,10 +1118,10 @@
 </span><span id="268" class="l">        <span class="php-comment">// Evaluate @Cache annotation</span>
 </span><span id="269" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$classAnnotations</span>[ORM\Cache::<span class="php-keyword1">class</span>])) {
 </span><span id="270" class="l">            <span class="php-var">$cacheAnnotation</span> = <span class="php-var">$classAnnotations</span>[ORM\Cache::<span class="php-keyword1">class</span>];
-</span><span id="271" class="l">            <span class="php-var">$cacheMap</span>   = <span class="php-keyword1">array</span>(
+</span><span id="271" class="l">            <span class="php-var">$cacheMap</span>   = [
 </span><span id="272" class="l">                <span class="php-quote">'region'</span> =&gt; <span class="php-var">$cacheAnnotation</span>-&gt;region,
 </span><span id="273" class="l">                <span class="php-quote">'usage'</span>  =&gt; <span class="php-keyword2">constant</span>(<span class="php-quote">'Doctrine\ORM\Mapping\ClassMetadata::CACHE_USAGE_'</span> . <span class="php-var">$cacheAnnotation</span>-&gt;usage),
-</span><span id="274" class="l">            );
+</span><span id="274" class="l">            ];
 </span><span id="275" class="l">
 </span><span id="276" class="l">            <span class="php-var">$metadata</span>-&gt;enableCache(<span class="php-var">$cacheMap</span>);
 </span><span id="277" class="l">        }
@@ -1638,10 +1638,10 @@
 </span><span id="788" class="l">
 </span><span id="789" class="l">            <span class="php-comment">// Evaluate @Cache annotation</span>
 </span><span id="790" class="l">            <span class="php-keyword1">if</span> ((<span class="php-var">$cacheAnnotation</span> = <span class="php-var">$this</span>-&gt;reader-&gt;getPropertyAnnotation(<span class="php-var">$property</span>, ORM\Cache::<span class="php-keyword1">class</span>)) !== <span class="php-keyword1">null</span>) {
-</span><span id="791" class="l">                <span class="php-var">$metadata</span>-&gt;enableAssociationCache(<span class="php-var">$mapping</span>[<span class="php-quote">'fieldName'</span>], <span class="php-keyword1">array</span>(
+</span><span id="791" class="l">                <span class="php-var">$metadata</span>-&gt;enableAssociationCache(<span class="php-var">$mapping</span>[<span class="php-quote">'fieldName'</span>], [
 </span><span id="792" class="l">                    <span class="php-quote">'usage'</span>         =&gt; <span class="php-keyword2">constant</span>(<span class="php-quote">'Doctrine\ORM\Mapping\ClassMetadata::CACHE_USAGE_'</span> . <span class="php-var">$cacheAnnotation</span>-&gt;usage),
 </span><span id="793" class="l">                    <span class="php-quote">'region'</span>        =&gt; <span class="php-var">$cacheAnnotation</span>-&gt;region,
-</span><span id="794" class="l">                ));
+</span><span id="794" class="l">                ]);
 </span><span id="795" class="l">            }
 </span><span id="796" class="l">        }
 </span><span id="797" class="l">    }
@@ -1859,35 +1859,35 @@
 </span><span id="1009" class="l">
 </span><span id="1010" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$annotations</span> <span class="php-keyword1">as</span> <span class="php-var">$annotation</span>) {
 </span><span id="1011" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PrePersist) {
-</span><span id="1012" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::prePersist);
+</span><span id="1012" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::prePersist];
 </span><span id="1013" class="l">            }
 </span><span id="1014" class="l">
 </span><span id="1015" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PostPersist) {
-</span><span id="1016" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::postPersist);
+</span><span id="1016" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::postPersist];
 </span><span id="1017" class="l">            }
 </span><span id="1018" class="l">
 </span><span id="1019" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PreUpdate) {
-</span><span id="1020" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::preUpdate);
+</span><span id="1020" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::preUpdate];
 </span><span id="1021" class="l">            }
 </span><span id="1022" class="l">
 </span><span id="1023" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PostUpdate) {
-</span><span id="1024" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::postUpdate);
+</span><span id="1024" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::postUpdate];
 </span><span id="1025" class="l">            }
 </span><span id="1026" class="l">
 </span><span id="1027" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PreRemove) {
-</span><span id="1028" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::preRemove);
+</span><span id="1028" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::preRemove];
 </span><span id="1029" class="l">            }
 </span><span id="1030" class="l">
 </span><span id="1031" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PostRemove) {
-</span><span id="1032" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::postRemove);
+</span><span id="1032" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::postRemove];
 </span><span id="1033" class="l">            }
 </span><span id="1034" class="l">
 </span><span id="1035" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PostLoad) {
-</span><span id="1036" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::postLoad);
+</span><span id="1036" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::postLoad];
 </span><span id="1037" class="l">            }
 </span><span id="1038" class="l">
 </span><span id="1039" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$annotation</span> <span class="php-keyword1">instanceof</span> ORM\PreFlush) {
-</span><span id="1040" class="l">                <span class="php-var">$callbacks</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$method</span>-&gt;name, Events::preFlush);
+</span><span id="1040" class="l">                <span class="php-var">$callbacks</span>[] = [<span class="php-var">$method</span>-&gt;name, Events::preFlush];
 </span><span id="1041" class="l">            }
 </span><span id="1042" class="l">        }
 </span><span id="1043" class="l">

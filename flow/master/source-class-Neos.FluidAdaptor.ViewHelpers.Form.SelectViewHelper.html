@@ -1075,7 +1075,7 @@
 </span><span id="214" class="l">
 </span><span id="215" class="l">            <span class="php-var">$output</span> .= <span class="php-var">$this</span>-&gt;renderOptionTag(<span class="php-var">$value</span>, <span class="php-var">$label</span>) . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>);
 </span><span id="216" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$options</span>)) {
-</span><span id="217" class="l">            <span class="php-var">$options</span> = <span class="php-keyword1">array</span>(<span class="php-quote">''</span> =&gt; <span class="php-quote">''</span>);
+</span><span id="217" class="l">            <span class="php-var">$options</span> = [<span class="php-quote">''</span> =&gt; <span class="php-quote">''</span>];
 </span><span id="218" class="l">        }
 </span><span id="219" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$options</span> <span class="php-keyword1">as</span> <span class="php-var">$value</span> =&gt; <span class="php-var">$label</span>) {
 </span><span id="220" class="l">            <span class="php-var">$output</span> .= <span class="php-var">$this</span>-&gt;renderOptionTag(<span class="php-var">$value</span>, <span class="php-var">$label</span>) . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>);
@@ -1092,9 +1092,9 @@
 </span><span id="231" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getOptions()
 </span><span id="232" class="l">    {
 </span><span id="233" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;arguments[<span class="php-quote">'options'</span>]) &amp;&amp; !(<span class="php-var">$this</span>-&gt;arguments[<span class="php-quote">'options'</span>] <span class="php-keyword1">instanceof</span> \Traversable)) {
-</span><span id="234" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="234" class="l">            <span class="php-keyword1">return</span> [];
 </span><span id="235" class="l">        }
-</span><span id="236" class="l">        <span class="php-var">$options</span> = <span class="php-keyword1">array</span>();
+</span><span id="236" class="l">        <span class="php-var">$options</span> = [];
 </span><span id="237" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;arguments[<span class="php-quote">'options'</span>] <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
 </span><span id="238" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$value</span>)) {
 </span><span id="239" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;hasArgument(<span class="php-quote">'optionValueField'</span>)) {
@@ -1175,7 +1175,7 @@
 </span><span id="314" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$value</span>) &amp;&amp; !(<span class="php-var">$value</span> <span class="php-keyword1">instanceof</span> \Traversable)) {
 </span><span id="315" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getOptionValueScalar(<span class="php-var">$value</span>);
 </span><span id="316" class="l">        }
-</span><span id="317" class="l">        <span class="php-var">$selectedValues</span> = <span class="php-keyword1">array</span>();
+</span><span id="317" class="l">        <span class="php-var">$selectedValues</span> = [];
 </span><span id="318" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$selectedValueElement</span>) {
 </span><span id="319" class="l">            <span class="php-var">$selectedValues</span>[] = <span class="php-var">$this</span>-&gt;getOptionValueScalar(<span class="php-var">$selectedValueElement</span>);
 </span><span id="320" class="l">        }
@@ -1259,10 +1259,10 @@
 </span><span id="398" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$translateBy</span>) {
 </span><span id="399" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'label'</span>:
 </span><span id="400" class="l">                <span class="php-var">$label</span> =  <span class="php-keyword1">isset</span>(<span class="php-var">$translationConfiguration</span>[<span class="php-quote">'using'</span>]) &amp;&amp; <span class="php-var">$translationConfiguration</span>[<span class="php-quote">'using'</span>] === <span class="php-quote">'value'</span> ? <span class="php-var">$value</span> : <span class="php-var">$label</span>;
-</span><span id="401" class="l">                <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;translator-&gt;translateByOriginalLabel(<span class="php-var">$label</span>, <span class="php-keyword1">array</span>(), <span class="php-keyword1">null</span>, <span class="php-var">$localeObject</span>, <span class="php-var">$sourceName</span>, <span class="php-var">$packageKey</span>);
+</span><span id="401" class="l">                <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;translator-&gt;translateByOriginalLabel(<span class="php-var">$label</span>, [], <span class="php-keyword1">null</span>, <span class="php-var">$localeObject</span>, <span class="php-var">$sourceName</span>, <span class="php-var">$packageKey</span>);
 </span><span id="402" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'id'</span>:
 </span><span id="403" class="l">                <span class="php-var">$id</span> =  <span class="php-var">$prefix</span> . (<span class="php-keyword1">isset</span>(<span class="php-var">$translationConfiguration</span>[<span class="php-quote">'using'</span>]) &amp;&amp; <span class="php-var">$translationConfiguration</span>[<span class="php-quote">'using'</span>] === <span class="php-quote">'label'</span> ? <span class="php-var">$label</span> : <span class="php-var">$value</span>);
-</span><span id="404" class="l">                <span class="php-var">$translation</span> = <span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-var">$id</span>, <span class="php-keyword1">array</span>(), <span class="php-keyword1">null</span>, <span class="php-var">$localeObject</span>, <span class="php-var">$sourceName</span>, <span class="php-var">$packageKey</span>);
+</span><span id="404" class="l">                <span class="php-var">$translation</span> = <span class="php-var">$this</span>-&gt;translator-&gt;translateById(<span class="php-var">$id</span>, [], <span class="php-keyword1">null</span>, <span class="php-var">$localeObject</span>, <span class="php-var">$sourceName</span>, <span class="php-var">$packageKey</span>);
 </span><span id="405" class="l">                <span class="php-keyword1">return</span> (<span class="php-var">$translation</span> !== <span class="php-keyword1">null</span>) ? <span class="php-var">$translation</span> : <span class="php-var">$label</span>;
 </span><span id="406" class="l">            <span class="php-keyword1">default</span>:
 </span><span id="407" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ViewHelper\Exception(<span class="php-quote">'You can only request to translate by &quot;label&quot; or by &quot;id&quot;, but asked for &quot;'</span> . <span class="php-var">$translateBy</span> . <span class="php-quote">'&quot; in your SelectViewHelper tag.'</span>, <span class="php-num">1340050647</span>);

@@ -925,7 +925,7 @@
 </span><span id="65" class="l">        <span class="php-var">$context</span> = <span class="php-var">$this</span>-&gt;bootstrap-&gt;getContext();
 </span><span id="66" class="l">        <span class="php-var">$applicationPackage</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$this</span>-&gt;applicationPackageKey);
 </span><span id="67" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%s %s (&quot;%s&quot; context)&lt;/b&gt;'</span>, [<span class="php-var">$this</span>-&gt;applicationName, <span class="php-var">$applicationPackage</span>-&gt;getInstalledVersion() ?: <span class="php-quote">'dev'</span>, <span class="php-var">$context</span>]);
-</span><span id="68" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;i&gt;usage: %s &lt;command identifier&gt;&lt;/i&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$this</span>-&gt;getFlowInvocationString()));
+</span><span id="68" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;i&gt;usage: %s &lt;command identifier&gt;&lt;/i&gt;'</span>, [<span class="php-var">$this</span>-&gt;getFlowInvocationString()]);
 </span><span id="69" class="l">        <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="70" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'See &quot;%s help&quot; for a list of all available commands.'</span>, [<span class="php-var">$this</span>-&gt;getFlowInvocationString()]);
 </span><span id="71" class="l">        <span class="php-var">$this</span>-&gt;outputLine();

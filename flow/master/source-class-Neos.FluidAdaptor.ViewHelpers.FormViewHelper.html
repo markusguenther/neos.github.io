@@ -962,17 +962,17 @@
 </span><span id="108" class="l">        <span class="php-var">$this</span>-&gt;registerTagAttribute(<span class="php-quote">'onreset'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'JavaScript: On reset of the form'</span>);
 </span><span id="109" class="l">        <span class="php-var">$this</span>-&gt;registerTagAttribute(<span class="php-quote">'onsubmit'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'JavaScript: On submit of the form'</span>);
 </span><span id="110" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'action'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'Target action'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
-</span><span id="111" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'arguments'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'Arguments'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">array</span>());
+</span><span id="111" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'arguments'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'Arguments'</span>, <span class="php-keyword1">false</span>, []);
 </span><span id="112" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'controller'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'Target controller. If NULL current controllerName is used'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
 </span><span id="113" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'package'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'Target package. if NULL current package is used'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
 </span><span id="114" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'subpackage'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'Target subpackage. if NULL current subpackage is used'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
 </span><span id="115" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'object'</span>, <span class="php-quote">'mixed'</span>, <span class="php-quote">'object to use for the form. Use in conjunction with the &quot;property&quot; attribute on the sub tags'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
 </span><span id="116" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'section'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'The anchor to be added to the URI'</span>, <span class="php-keyword1">false</span>, <span class="php-quote">''</span>);
 </span><span id="117" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'format'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'The requested format, e.g. &quot;.html&quot;'</span>, <span class="php-keyword1">false</span>, <span class="php-quote">''</span>);
-</span><span id="118" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'additionalParams'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'additional query parameters that won\'t be prefixed like $arguments (overrule $arguments)'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">array</span>());
+</span><span id="118" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'additionalParams'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'additional query parameters that won\'t be prefixed like $arguments (overrule $arguments)'</span>, <span class="php-keyword1">false</span>, []);
 </span><span id="119" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'absolute'</span>, <span class="php-quote">'boolean'</span>, <span class="php-quote">'If set, an absolute action URI is rendered (only active if $actionUri is not set)'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">false</span>);
 </span><span id="120" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'addQueryString'</span>, <span class="php-quote">'boolean'</span>, <span class="php-quote">'If set, the current query parameters will be kept in the URI'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">false</span>);
-</span><span id="121" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'argumentsToBeExcludedFromQueryString'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'arguments to be removed from the URI. Only active if $addQueryString = true'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">array</span>());
+</span><span id="121" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'argumentsToBeExcludedFromQueryString'</span>, <span class="php-quote">'array'</span>, <span class="php-quote">'arguments to be removed from the URI. Only active if $addQueryString = true'</span>, <span class="php-keyword1">false</span>, []);
 </span><span id="122" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'fieldNamePrefix'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'Prefix that will be added to all field names within this form'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
 </span><span id="123" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'actionUri'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'can be used to overwrite the &quot;action&quot; attribute of the form tag'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
 </span><span id="124" class="l">        <span class="php-var">$this</span>-&gt;registerArgument(<span class="php-quote">'objectName'</span>, <span class="php-quote">'string'</span>, <span class="php-quote">'name of the object that is bound to this form. If this argument is not specified, the name attribute of this form is used to determine the FormObjectName'</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">null</span>);
@@ -1149,13 +1149,13 @@
 </span><span id="295" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$request</span>-&gt;isMainRequest()) {
 </span><span id="296" class="l">            <span class="php-var">$argumentNamespace</span> = <span class="php-var">$request</span>-&gt;getArgumentNamespace();
 </span><span id="297" class="l">
-</span><span id="298" class="l">            <span class="php-var">$referrer</span> = <span class="php-keyword1">array</span>(
+</span><span id="298" class="l">            <span class="php-var">$referrer</span> = [
 </span><span id="299" class="l">                <span class="php-quote">'@package'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerPackageKey(),
 </span><span id="300" class="l">                <span class="php-quote">'@subpackage'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerSubpackageKey(),
 </span><span id="301" class="l">                <span class="php-quote">'@controller'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerName(),
 </span><span id="302" class="l">                <span class="php-quote">'@action'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerActionName(),
 </span><span id="303" class="l">                <span class="php-quote">'arguments'</span> =&gt; <span class="php-var">$this</span>-&gt;hashService-&gt;appendHmac(<span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-var">$request</span>-&gt;getArguments())))
-</span><span id="304" class="l">            );
+</span><span id="304" class="l">            ];
 </span><span id="305" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$referrer</span> <span class="php-keyword1">as</span> <span class="php-var">$referrerKey</span> =&gt; <span class="php-var">$referrerValue</span>) {
 </span><span id="306" class="l">                <span class="php-var">$referrerValue</span> = <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$referrerValue</span>);
 </span><span id="307" class="l">                <span class="php-var">$result</span> .= <span class="php-quote">'&lt;input type=&quot;hidden&quot; name=&quot;'</span> . <span class="php-var">$argumentNamespace</span> . <span class="php-quote">'[__referrer]['</span> . <span class="php-var">$referrerKey</span> . <span class="php-quote">']&quot; value=&quot;'</span> . <span class="php-var">$referrerValue</span> . <span class="php-quote">'&quot; /&gt;'</span> . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>);
@@ -1170,13 +1170,13 @@
 </span><span id="316" class="l">            <span class="php-keyword1">unset</span>(<span class="php-var">$arguments</span>[<span class="php-var">$argumentNamespace</span>]);
 </span><span id="317" class="l">        }
 </span><span id="318" class="l">
-</span><span id="319" class="l">        <span class="php-var">$referrer</span> = <span class="php-keyword1">array</span>(
+</span><span id="319" class="l">        <span class="php-var">$referrer</span> = [
 </span><span id="320" class="l">            <span class="php-quote">'@package'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerPackageKey(),
 </span><span id="321" class="l">            <span class="php-quote">'@subpackage'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerSubpackageKey(),
 </span><span id="322" class="l">            <span class="php-quote">'@controller'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerName(),
 </span><span id="323" class="l">            <span class="php-quote">'@action'</span> =&gt; <span class="php-var">$request</span>-&gt;getControllerActionName(),
 </span><span id="324" class="l">            <span class="php-quote">'arguments'</span> =&gt; <span class="php-var">$this</span>-&gt;hashService-&gt;appendHmac(<span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-var">$arguments</span>)))
-</span><span id="325" class="l">        );
+</span><span id="325" class="l">        ];
 </span><span id="326" class="l">
 </span><span id="327" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$referrer</span> <span class="php-keyword1">as</span> <span class="php-var">$referrerKey</span> =&gt; <span class="php-var">$referrerValue</span>) {
 </span><span id="328" class="l">            <span class="php-var">$result</span> .= <span class="php-quote">'&lt;input type=&quot;hidden&quot; name=&quot;__referrer['</span> . <span class="php-var">$referrerKey</span> . <span class="php-quote">']&quot; value=&quot;'</span> . <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$referrerValue</span>) . <span class="php-quote">'&quot; /&gt;'</span> . <span class="php-keyword2">chr</span>(<span class="php-num">10</span>);
@@ -1237,7 +1237,7 @@
 </span><span id="383" class="l">    {
 </span><span id="384" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;hasArgument(<span class="php-quote">'object'</span>)) {
 </span><span id="385" class="l">            <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'formObject'</span>, <span class="php-var">$this</span>-&gt;arguments[<span class="php-quote">'object'</span>]);
-</span><span id="386" class="l">            <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'additionalIdentityProperties'</span>, <span class="php-keyword1">array</span>());
+</span><span id="386" class="l">            <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'additionalIdentityProperties'</span>, []);
 </span><span id="387" class="l">        }
 </span><span id="388" class="l">    }
 </span><span id="389" class="l">
@@ -1314,7 +1314,7 @@
 </span></span><span id="460" class="l"><span class="php-comment">     */</span>
 </span><span id="461" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> addFormFieldNamesToViewHelperVariableContainer()
 </span><span id="462" class="l">    {
-</span><span id="463" class="l">        <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'formFieldNames'</span>, <span class="php-keyword1">array</span>());
+</span><span id="463" class="l">        <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'formFieldNames'</span>, []);
 </span><span id="464" class="l">    }
 </span><span id="465" class="l">
 </span><span id="466" class="l">    <span class="php-comment">/**
@@ -1335,7 +1335,7 @@
 </span></span><span id="481" class="l"><span class="php-comment">     */</span>
 </span><span id="482" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> addEmptyHiddenFieldNamesToViewHelperVariableContainer()
 </span><span id="483" class="l">    {
-</span><span id="484" class="l">        <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'emptyHiddenFieldNames'</span>, <span class="php-keyword1">array</span>());
+</span><span id="484" class="l">        <span class="php-var">$this</span>-&gt;viewHelperVariableContainer-&gt;add(\Neos\FluidAdaptor\ViewHelpers\FormViewHelper::<span class="php-keyword1">class</span>, <span class="php-quote">'emptyHiddenFieldNames'</span>, []);
 </span><span id="485" class="l">    }
 </span><span id="486" class="l">
 </span><span id="487" class="l">    <span class="php-comment">/**

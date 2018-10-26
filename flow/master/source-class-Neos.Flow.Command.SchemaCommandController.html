@@ -940,11 +940,11 @@
 </span><span id="80" class="l">            <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="81" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$result</span>-&gt;hasNotices()) {
 </span><span id="82" class="l">                <span class="php-var">$notices</span> = <span class="php-var">$result</span>-&gt;getFlattenedNotices();
-</span><span id="83" class="l">                <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d notices:&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$notices</span>)));
+</span><span id="83" class="l">                <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d notices:&lt;/b&gt;'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$notices</span>)]);
 </span><span id="84" class="l">                <span class="php-comment">/** @var Notice $notice */</span>
 </span><span id="85" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$notices</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span> =&gt; <span class="php-var">$pathNotices</span>) {
 </span><span id="86" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$pathNotices</span> <span class="php-keyword1">as</span> <span class="php-var">$notice</span>) {
-</span><span id="87" class="l">                        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s -&gt; %s'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$path</span>, <span class="php-var">$notice</span>-&gt;render()));
+</span><span id="87" class="l">                        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s -&gt; %s'</span>, [<span class="php-var">$path</span>, <span class="php-var">$notice</span>-&gt;render()]);
 </span><span id="88" class="l">                    }
 </span><span id="89" class="l">                }
 </span><span id="90" class="l">                <span class="php-var">$this</span>-&gt;outputLine();
@@ -953,11 +953,11 @@
 </span><span id="93" class="l">
 </span><span id="94" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$result</span>-&gt;hasErrors()) {
 </span><span id="95" class="l">            <span class="php-var">$errors</span> = <span class="php-var">$result</span>-&gt;getFlattenedErrors();
-</span><span id="96" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d errors were found:&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$errors</span>)));
+</span><span id="96" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d errors were found:&lt;/b&gt;'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$errors</span>)]);
 </span><span id="97" class="l">            <span class="php-comment">/** @var Error $error */</span>
 </span><span id="98" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$errors</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span> =&gt; <span class="php-var">$pathErrors</span>) {
 </span><span id="99" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$pathErrors</span> <span class="php-keyword1">as</span> <span class="php-var">$error</span>) {
-</span><span id="100" class="l">                    <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s -&gt; %s'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$path</span>, <span class="php-var">$error</span>-&gt;render()));
+</span><span id="100" class="l">                    <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s -&gt; %s'</span>, [<span class="php-var">$path</span>, <span class="php-var">$error</span>-&gt;render()]);
 </span><span id="101" class="l">                }
 </span><span id="102" class="l">            }
 </span><span id="103" class="l">            <span class="php-var">$this</span>-&gt;quit(<span class="php-num">1</span>);
@@ -988,11 +988,11 @@
 </span><span id="128" class="l">            <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="129" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$result</span>-&gt;hasNotices()) {
 </span><span id="130" class="l">                <span class="php-var">$notices</span> = <span class="php-var">$result</span>-&gt;getFlattenedNotices();
-</span><span id="131" class="l">                <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d notices:&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$notices</span>)));
+</span><span id="131" class="l">                <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d notices:&lt;/b&gt;'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$notices</span>)]);
 </span><span id="132" class="l">                <span class="php-comment">/** @var Notice $notice */</span>
 </span><span id="133" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$notices</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span> =&gt; <span class="php-var">$pathNotices</span>) {
 </span><span id="134" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$pathNotices</span> <span class="php-keyword1">as</span> <span class="php-var">$notice</span>) {
-</span><span id="135" class="l">                        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s -&gt; %s'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$path</span>, <span class="php-var">$notice</span>-&gt;render()));
+</span><span id="135" class="l">                        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s -&gt; %s'</span>, [<span class="php-var">$path</span>, <span class="php-var">$notice</span>-&gt;render()]);
 </span><span id="136" class="l">                    }
 </span><span id="137" class="l">                }
 </span><span id="138" class="l">                <span class="php-var">$this</span>-&gt;outputLine();
@@ -1001,11 +1001,11 @@
 </span><span id="141" class="l">
 </span><span id="142" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$result</span>-&gt;hasErrors()) {
 </span><span id="143" class="l">            <span class="php-var">$errors</span> = <span class="php-var">$result</span>-&gt;getFlattenedErrors();
-</span><span id="144" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d errors were found:&lt;/b&gt;'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$errors</span>)));
+</span><span id="144" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;%d errors were found:&lt;/b&gt;'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$errors</span>)]);
 </span><span id="145" class="l">            <span class="php-comment">/** @var Error $error */</span>
 </span><span id="146" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$errors</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span> =&gt; <span class="php-var">$pathErrors</span>) {
 </span><span id="147" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$pathErrors</span> <span class="php-keyword1">as</span> <span class="php-var">$error</span>) {
-</span><span id="148" class="l">                    <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$error</span>-&gt;render()));
+</span><span id="148" class="l">                    <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">' - %s'</span>, [<span class="php-var">$error</span>-&gt;render()]);
 </span><span id="149" class="l">                }
 </span><span id="150" class="l">            }
 </span><span id="151" class="l">            <span class="php-var">$this</span>-&gt;quit(<span class="php-num">1</span>);

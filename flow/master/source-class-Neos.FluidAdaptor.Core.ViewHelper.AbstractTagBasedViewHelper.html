@@ -895,7 +895,7 @@
 </span></span><span id="35" class="l"><span class="php-comment">     *
 </span></span><span id="36" class="l"><span class="php-comment">     * @var array
 </span></span><span id="37" class="l"><span class="php-comment">     */</span>
-</span><span id="38" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var">$tagAttributes</span> = <span class="php-keyword1">array</span>();
+</span><span id="38" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var">$tagAttributes</span> = [];
 </span><span id="39" class="l">
 </span><span id="40" class="l">    <span class="php-comment">/**
 </span></span><span id="41" class="l"><span class="php-comment">     * Tag builder instance
@@ -1022,7 +1022,7 @@
 </span></span><span id="162" class="l"><span class="php-comment">     */</span>
 </span><span id="163" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> handleAdditionalArguments(<span class="php-keyword1">array</span> <span class="php-var">$arguments</span>)
 </span><span id="164" class="l">    {
-</span><span id="165" class="l">        <span class="php-var">$unassigned</span> = <span class="php-keyword1">array</span>();
+</span><span id="165" class="l">        <span class="php-var">$unassigned</span> = [];
 </span><span id="166" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$arguments</span> <span class="php-keyword1">as</span> <span class="php-var">$argumentName</span> =&gt; <span class="php-var">$argumentValue</span>) {
 </span><span id="167" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$argumentName</span>, <span class="php-quote">'data-'</span>) === <span class="php-num">0</span>) {
 </span><span id="168" class="l">                <span class="php-var">$this</span>-&gt;tag-&gt;addAttribute(<span class="php-var">$argumentName</span>, <span class="php-var">$argumentValue</span>);

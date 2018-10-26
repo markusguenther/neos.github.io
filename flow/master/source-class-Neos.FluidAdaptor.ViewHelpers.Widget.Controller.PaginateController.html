@@ -879,7 +879,7 @@
 </span><span id="28" class="l">    <span class="php-comment">/**
 </span></span><span id="29" class="l"><span class="php-comment">     * @var array
 </span></span><span id="30" class="l"><span class="php-comment">     */</span>
-</span><span id="31" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$configuration</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'itemsPerPage'</span> =&gt; <span class="php-num">10</span>, <span class="php-quote">'insertAbove'</span> =&gt; <span class="php-keyword1">false</span>, <span class="php-quote">'insertBelow'</span> =&gt; <span class="php-keyword1">true</span>, <span class="php-quote">'maximumNumberOfLinks'</span> =&gt; <span class="php-num">99</span>);
+</span><span id="31" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$configuration</span> = [<span class="php-quote">'itemsPerPage'</span> =&gt; <span class="php-num">10</span>, <span class="php-quote">'insertAbove'</span> =&gt; <span class="php-keyword1">false</span>, <span class="php-quote">'insertBelow'</span> =&gt; <span class="php-keyword1">true</span>, <span class="php-quote">'maximumNumberOfLinks'</span> =&gt; <span class="php-num">99</span>];
 </span><span id="32" class="l">
 </span><span id="33" class="l">    <span class="php-comment">/**
 </span></span><span id="34" class="l"><span class="php-comment">     * @var integer
@@ -948,9 +948,9 @@
 </span><span id="97" class="l">        }
 </span><span id="98" class="l">        <span class="php-var">$modifiedObjects</span> = <span class="php-var">$query</span>-&gt;execute();
 </span><span id="99" class="l">
-</span><span id="100" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'contentArguments'</span>, <span class="php-keyword1">array</span>(
+</span><span id="100" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'contentArguments'</span>, [
 </span><span id="101" class="l">            <span class="php-var">$this</span>-&gt;widgetConfiguration[<span class="php-quote">'as'</span>] =&gt; <span class="php-var">$modifiedObjects</span>
-</span><span id="102" class="l">        ));
+</span><span id="102" class="l">        ]);
 </span><span id="103" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'configuration'</span>, <span class="php-var">$this</span>-&gt;configuration);
 </span><span id="104" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'pagination'</span>, <span class="php-var">$this</span>-&gt;buildPagination());
 </span><span id="105" class="l">    }
@@ -988,11 +988,11 @@
 </span><span id="137" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildPagination()
 </span><span id="138" class="l">    {
 </span><span id="139" class="l">        <span class="php-var">$this</span>-&gt;calculateDisplayRange();
-</span><span id="140" class="l">        <span class="php-var">$pages</span> = <span class="php-keyword1">array</span>();
+</span><span id="140" class="l">        <span class="php-var">$pages</span> = [];
 </span><span id="141" class="l">        <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-var">$this</span>-&gt;displayRangeStart; <span class="php-var">$i</span> &lt;= <span class="php-var">$this</span>-&gt;displayRangeEnd; <span class="php-var">$i</span>++) {
-</span><span id="142" class="l">            <span class="php-var">$pages</span>[] = <span class="php-keyword1">array</span>(<span class="php-quote">'number'</span> =&gt; <span class="php-var">$i</span>, <span class="php-quote">'isCurrent'</span> =&gt; (<span class="php-var">$i</span> === <span class="php-var">$this</span>-&gt;currentPage));
+</span><span id="142" class="l">            <span class="php-var">$pages</span>[] = [<span class="php-quote">'number'</span> =&gt; <span class="php-var">$i</span>, <span class="php-quote">'isCurrent'</span> =&gt; (<span class="php-var">$i</span> === <span class="php-var">$this</span>-&gt;currentPage)];
 </span><span id="143" class="l">        }
-</span><span id="144" class="l">        <span class="php-var">$pagination</span> = <span class="php-keyword1">array</span>(
+</span><span id="144" class="l">        <span class="php-var">$pagination</span> = [
 </span><span id="145" class="l">            <span class="php-quote">'pages'</span> =&gt; <span class="php-var">$pages</span>,
 </span><span id="146" class="l">            <span class="php-quote">'current'</span> =&gt; <span class="php-var">$this</span>-&gt;currentPage,
 </span><span id="147" class="l">            <span class="php-quote">'numberOfPages'</span> =&gt; <span class="php-var">$this</span>-&gt;numberOfPages,
@@ -1000,7 +1000,7 @@
 </span><span id="149" class="l">            <span class="php-quote">'displayRangeEnd'</span> =&gt; <span class="php-var">$this</span>-&gt;displayRangeEnd,
 </span><span id="150" class="l">            <span class="php-quote">'hasLessPages'</span> =&gt; <span class="php-var">$this</span>-&gt;displayRangeStart &gt; <span class="php-num">2</span>,
 </span><span id="151" class="l">            <span class="php-quote">'hasMorePages'</span> =&gt; <span class="php-var">$this</span>-&gt;displayRangeEnd + <span class="php-num">1</span> &lt; <span class="php-var">$this</span>-&gt;numberOfPages
-</span><span id="152" class="l">        );
+</span><span id="152" class="l">        ];
 </span><span id="153" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;currentPage &lt; <span class="php-var">$this</span>-&gt;numberOfPages) {
 </span><span id="154" class="l">            <span class="php-var">$pagination</span>[<span class="php-quote">'nextPage'</span>] = <span class="php-var">$this</span>-&gt;currentPage + <span class="php-num">1</span>;
 </span><span id="155" class="l">        }

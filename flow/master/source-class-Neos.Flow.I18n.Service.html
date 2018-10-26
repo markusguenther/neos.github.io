@@ -1182,7 +1182,7 @@
 </span><span id="320" class="l">
 </span><span id="321" class="l">            <span class="php-var">$directories</span> = [];
 </span><span id="322" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$whitelistPaths</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span>) {
-</span><span id="323" class="l">                <span class="php-var">$scanPath</span> = Files::concatenatePaths(<span class="php-keyword1">array</span>(<span class="php-var">$packageResourcesPath</span>, <span class="php-var">$path</span>));
+</span><span id="323" class="l">                <span class="php-var">$scanPath</span> = Files::concatenatePaths([<span class="php-var">$packageResourcesPath</span>, <span class="php-var">$path</span>]);
 </span><span id="324" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$scanPath</span>)) {
 </span><span id="325" class="l">                    <span class="php-keyword2">array_push</span>(<span class="php-var">$directories</span>, Files::getNormalizedPath(<span class="php-var">$scanPath</span>));
 </span><span id="326" class="l">                }
