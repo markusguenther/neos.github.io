@@ -845,7 +845,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#31-167" title="Go to source code">Neos.Media.Browser/Classes/Controller/AssetProxyController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#19-51" title="Go to source code">Neos.Media.Browser/Classes/Controller/AssetProxyController.php</a>
 		<br>
 	</div>
 
@@ -854,35 +854,6 @@ Neos\Flow\Mvc\Controller\ActionController
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="initializeObject" id="_initializeObject">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#77-87" title="Go to source code">initializeObject</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
 		<tr data-order="importAction" id="_importAction">
 
 			<td class="attributes"><code>
@@ -894,7 +865,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importAction">#</a>
-			<code><a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#89-166" title="Go to source code">importAction</a>( <span>Neos\Media\Browser\Controller\string <var>$assetSourceIdentifier</var></span>, <span>Neos\Media\Browser\Controller\string <var>$assetIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#30-50" title="Go to source code">importAction</a>( <span>Neos\Media\Browser\Controller\string <var>$assetSourceIdentifier</var></span>, <span>Neos\Media\Browser\Controller\string <var>$assetIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Import a specified asset from the given Asset Source</p>
@@ -917,10 +888,6 @@ Neos\Flow\Mvc\Controller\ActionController
 						string
 					</div>
 
-					<h4>Throws</h4>
-					<div class="list">
-						Neos\Flow\Persistence\Exception\IllegalObjectTypeException
-					</div>
 
 
 
@@ -943,68 +910,14 @@ Neos\Flow\Mvc\Controller\ActionController
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="assetSourcesConfiguration" id="$assetSourcesConfiguration">
+		<tr data-order="assetSourceService" id="$assetSourceService">
 			<td class="attributes"><code>
 				protected  
-				array
+				Neos\Media\Domain\Service\AssetSourceService
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#36-40" title="Go to source code"><var>$assetSourcesConfiguration</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\injectconfiguration(path=&quot;assetsources&quot;,</h4>
-						<div class="list">
-								package="Neos.Media")<br>
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$assetSourcesConfiguration" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="assetSources" id="$assetSources">
-			<td class="attributes"><code>
-				protected  
-				Neos\Media\Domain\Model\AssetSource\AssetSourceInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#42-45" title="Go to source code"><var>$assetSources</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$assetSources" class="anchor">#</a>
-					<code>[]</code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="resourceManager" id="$resourceManager">
-			<td class="attributes"><code>
-				protected  
-				Neos\Flow\ResourceManagement\ResourceManager
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#47-51" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#24-28" title="Go to source code"><var>$assetSourceService</var></a>
 
 				<div class="description short">
 					
@@ -1020,119 +933,7 @@ Neos\Flow\Mvc\Controller\ActionController
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$resourceManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="assetRepository" id="$assetRepository">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Repository.AssetRepository.html">Neos\Media\Domain\Repository\AssetRepository</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#53-57" title="Go to source code"><var>$assetRepository</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$assetRepository" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="importedAssetRepository" id="$importedAssetRepository">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Repository.ImportedAssetRepository.html">Neos\Media\Domain\Repository\ImportedAssetRepository</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#59-63" title="Go to source code"><var>$importedAssetRepository</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$importedAssetRepository" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="assetModelMappingStrategy" id="$assetModelMappingStrategy">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Strategy.AssetModelMappingStrategyInterface.html">Neos\Media\Domain\Strategy\AssetModelMappingStrategyInterface</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#65-69" title="Go to source code"><var>$assetModelMappingStrategy</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$assetModelMappingStrategy" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="importedAssetManager" id="$importedAssetManager">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Model.ImportedAssetManager.html">Neos\Media\Domain\Model\ImportedAssetManager</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Browser.Controller.AssetProxyController.html#71-75" title="Go to source code"><var>$importedAssetManager</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$importedAssetManager" class="anchor">#</a>
+					<a href="#$assetSourceService" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1153,6 +954,6 @@ Neos\Flow\Mvc\Controller\ActionController
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?42eefe694c7d49059a59b6c133c2fb84ab9277ce"></script>
+<script src="elementlist.js?8cdf513dd4e18d0b83e1e3ba940558c37b5aa16e"></script>
 </body>
 </html>
