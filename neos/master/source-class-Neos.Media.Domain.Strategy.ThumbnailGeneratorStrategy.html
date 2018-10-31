@@ -884,7 +884,7 @@
 </span><span id="65" class="l">        <span class="php-var">$generatorClassNames</span> = <span class="php-var">$reflectionService</span>-&gt;getAllImplementationClassNamesForInterface(ThumbnailGeneratorInterface::<span class="php-keyword1">class</span>);
 </span><span id="66" class="l">        <span class="php-var">$configurationManager</span> = <span class="php-var">$objectManager</span>-&gt;get(ConfigurationManager::<span class="php-keyword1">class</span>);
 </span><span id="67" class="l">        <span class="php-var">$generatorOptions</span> = <span class="php-var">$configurationManager</span>-&gt;getConfiguration(<span class="php-quote">'Settings'</span>, <span class="php-quote">'Neos.Media.thumbnailGenerators'</span>);
-</span><span id="68" class="l">        <span class="php-var">$generators</span> = <span class="php-keyword1">array</span>();
+</span><span id="68" class="l">        <span class="php-var">$generators</span> = [];
 </span><span id="69" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$generatorClassNames</span> <span class="php-keyword1">as</span> <span class="php-var">$generatorClassName</span>) {
 </span><span id="70" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$generatorOptions</span>[<span class="php-var">$generatorClassName</span>][<span class="php-quote">'disable'</span>]) &amp;&amp; <span class="php-var">$generatorOptions</span>[<span class="php-var">$generatorClassName</span>][<span class="php-quote">'disable'</span>] === <span class="php-keyword1">true</span>) {
 </span><span id="71" class="l">                <span class="php-keyword1">continue</span>;
@@ -894,10 +894,10 @@
 </span><span id="75" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="76" class="l">                <span class="php-var">$priority</span> = <span class="php-var">$generatorClassName</span>::getPriority();
 </span><span id="77" class="l">            }
-</span><span id="78" class="l">            <span class="php-var">$generators</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="78" class="l">            <span class="php-var">$generators</span>[] = [
 </span><span id="79" class="l">                <span class="php-quote">'priority'</span> =&gt; (integer)<span class="php-var">$priority</span>,
 </span><span id="80" class="l">                <span class="php-quote">'className'</span> =&gt; <span class="php-var">$generatorClassName</span>
-</span><span id="81" class="l">            );
+</span><span id="81" class="l">            ];
 </span><span id="82" class="l">        }
 </span><span id="83" class="l">
 </span><span id="84" class="l">        <span class="php-var">$sorter</span> = <span class="php-keyword1">new</span> PositionalArraySorter(<span class="php-var">$generators</span>, <span class="php-quote">'priority'</span>);

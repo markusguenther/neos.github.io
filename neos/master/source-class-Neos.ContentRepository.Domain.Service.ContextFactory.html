@@ -858,7 +858,7 @@
 </span><span id="33" class="l">    <span class="php-comment">/**
 </span></span><span id="34" class="l"><span class="php-comment">     * @var array&lt;Context&gt;
 </span></span><span id="35" class="l"><span class="php-comment">     */</span>
-</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$contextInstances</span> = <span class="php-keyword1">array</span>();
+</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$contextInstances</span> = [];
 </span><span id="37" class="l">
 </span><span id="38" class="l">    <span class="php-comment">/**
 </span></span><span id="39" class="l"><span class="php-comment">     * The context implementation this factory will create
@@ -908,7 +908,7 @@
 </span></span><span id="83" class="l"><span class="php-comment">     * @return Context
 </span></span><span id="84" class="l"><span class="php-comment">     * @api
 </span></span><span id="85" class="l"><span class="php-comment">     */</span>
-</span><span id="86" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> create(<span class="php-keyword1">array</span> <span class="php-var">$contextProperties</span> = <span class="php-keyword1">array</span>())
+</span><span id="86" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> create(<span class="php-keyword1">array</span> <span class="php-var">$contextProperties</span> = [])
 </span><span id="87" class="l">    {
 </span><span id="88" class="l">        <span class="php-var">$contextProperties</span> = <span class="php-var">$this</span>-&gt;mergeContextPropertiesWithDefaults(<span class="php-var">$contextProperties</span>);
 </span><span id="89" class="l">        <span class="php-var">$contextIdentifier</span> = <span class="php-var">$this</span>-&gt;getIdentifier(<span class="php-var">$contextProperties</span>);
@@ -944,15 +944,15 @@
 </span><span id="119" class="l">    {
 </span><span id="120" class="l">        <span class="php-var">$contextProperties</span> = <span class="php-var">$this</span>-&gt;removeDeprecatedProperties(<span class="php-var">$contextProperties</span>);
 </span><span id="121" class="l">
-</span><span id="122" class="l">        <span class="php-var">$defaultContextProperties</span> = <span class="php-keyword1">array</span>(
+</span><span id="122" class="l">        <span class="php-var">$defaultContextProperties</span> = [
 </span><span id="123" class="l">            <span class="php-quote">'workspaceName'</span> =&gt; <span class="php-quote">'live'</span>,
 </span><span id="124" class="l">            <span class="php-quote">'currentDateTime'</span> =&gt; <span class="php-var">$this</span>-&gt;now,
-</span><span id="125" class="l">            <span class="php-quote">'dimensions'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="126" class="l">            <span class="php-quote">'targetDimensions'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="125" class="l">            <span class="php-quote">'dimensions'</span> =&gt; [],
+</span><span id="126" class="l">            <span class="php-quote">'targetDimensions'</span> =&gt; [],
 </span><span id="127" class="l">            <span class="php-quote">'invisibleContentShown'</span> =&gt; <span class="php-keyword1">false</span>,
 </span><span id="128" class="l">            <span class="php-quote">'removedContentShown'</span> =&gt; <span class="php-keyword1">false</span>,
 </span><span id="129" class="l">            <span class="php-quote">'inaccessibleContentShown'</span> =&gt; <span class="php-keyword1">false</span>
-</span><span id="130" class="l">        );
+</span><span id="130" class="l">        ];
 </span><span id="131" class="l">
 </span><span id="132" class="l">        <span class="php-var">$mergedProperties</span> = Arrays::arrayMergeRecursiveOverrule(<span class="php-var">$defaultContextProperties</span>, <span class="php-var">$contextProperties</span>, <span class="php-keyword1">true</span>);
 </span><span id="133" class="l">
@@ -985,13 +985,13 @@
 </span><span id="160" class="l">        <span class="php-var">$identifierSource</span> = <span class="php-var">$this</span>-&gt;contextImplementation;
 </span><span id="161" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$contextProperties</span> <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; <span class="php-var">$propertyValue</span>) {
 </span><span id="162" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$propertyName</span> === <span class="php-quote">'dimensions'</span>) {
-</span><span id="163" class="l">                <span class="php-var">$stringParts</span> = <span class="php-keyword1">array</span>();
+</span><span id="163" class="l">                <span class="php-var">$stringParts</span> = [];
 </span><span id="164" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">as</span> <span class="php-var">$dimensionName</span> =&gt; <span class="php-var">$dimensionValues</span>) {
 </span><span id="165" class="l">                    <span class="php-var">$stringParts</span>[] = <span class="php-var">$dimensionName</span> . <span class="php-quote">'='</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">','</span>, <span class="php-var">$dimensionValues</span>);
 </span><span id="166" class="l">                }
 </span><span id="167" class="l">                <span class="php-var">$stringValue</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$stringParts</span>);
 </span><span id="168" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$propertyName</span> === <span class="php-quote">'targetDimensions'</span>) {
-</span><span id="169" class="l">                <span class="php-var">$stringParts</span> = <span class="php-keyword1">array</span>();
+</span><span id="169" class="l">                <span class="php-var">$stringParts</span> = [];
 </span><span id="170" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">as</span> <span class="php-var">$dimensionName</span> =&gt; <span class="php-var">$dimensionValue</span>) {
 </span><span id="171" class="l">                    <span class="php-var">$stringParts</span>[] = <span class="php-var">$dimensionName</span> . <span class="php-quote">'='</span> . <span class="php-var">$dimensionValue</span>;
 </span><span id="172" class="l">                }
@@ -1043,7 +1043,7 @@
 </span><span id="218" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$dimensions</span> <span class="php-keyword1">as</span> <span class="php-var">$dimension</span>) {
 </span><span id="219" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimension</span>-&gt;getIdentifier()])
 </span><span id="220" class="l">                || !<span class="php-keyword2">is_array</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimension</span>-&gt;getIdentifier()])
-</span><span id="221" class="l">                || <span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimension</span>-&gt;getIdentifier()] === <span class="php-keyword1">array</span>()
+</span><span id="221" class="l">                || <span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$dimension</span>-&gt;getIdentifier()] === []
 </span><span id="222" class="l">            ) {
 </span><span id="223" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeContextException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'You have to set a non-empty array with one or more values for content dimension &quot;%s&quot; in the context'</span>, <span class="php-var">$dimension</span>-&gt;getIdentifier()), <span class="php-num">1390300646</span>);
 </span><span id="224" class="l">            }
@@ -1087,7 +1087,7 @@
 </span></span><span id="262" class="l"><span class="php-comment">     */</span>
 </span><span id="263" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">reset</span>()
 </span><span id="264" class="l">    {
-</span><span id="265" class="l">        <span class="php-var">$this</span>-&gt;contextInstances = <span class="php-keyword1">array</span>();
+</span><span id="265" class="l">        <span class="php-var">$this</span>-&gt;contextInstances = [];
 </span><span id="266" class="l">    }
 </span><span id="267" class="l">
 </span><span id="268" class="l">    <span class="php-comment">/**
@@ -1103,7 +1103,7 @@
 </span><span id="278" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword2">reset</span>(<span class="php-var">$values</span>);
 </span><span id="279" class="l">        }, <span class="php-var">$mergedProperties</span>[<span class="php-quote">'dimensions'</span>]);
 </span><span id="280" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'targetDimensions'</span>])) {
-</span><span id="281" class="l">            <span class="php-var">$contextProperties</span>[<span class="php-quote">'targetDimensions'</span>] = <span class="php-keyword1">array</span>();
+</span><span id="281" class="l">            <span class="php-var">$contextProperties</span>[<span class="php-quote">'targetDimensions'</span>] = [];
 </span><span id="282" class="l">        }
 </span><span id="283" class="l">        <span class="php-var">$mergedProperties</span>[<span class="php-quote">'targetDimensions'</span>] = Arrays::arrayMergeRecursiveOverrule(<span class="php-var">$defaultContextProperties</span>[<span class="php-quote">'targetDimensions'</span>], <span class="php-var">$contextProperties</span>[<span class="php-quote">'targetDimensions'</span>]);
 </span><span id="284" class="l">    }
@@ -1120,7 +1120,7 @@
 </span><span id="295" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$dimensions</span> <span class="php-keyword1">as</span> <span class="php-var">$dimension</span>) {
 </span><span id="296" class="l">            <span class="php-comment">/** @var ContentDimension $dimension */</span>
 </span><span id="297" class="l">            <span class="php-var">$identifier</span> = <span class="php-var">$dimension</span>-&gt;getIdentifier();
-</span><span id="298" class="l">            <span class="php-var">$values</span> = <span class="php-keyword1">array</span>(<span class="php-var">$dimension</span>-&gt;getDefault());
+</span><span id="298" class="l">            <span class="php-var">$values</span> = [<span class="php-var">$dimension</span>-&gt;getDefault()];
 </span><span id="299" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$identifier</span>])) {
 </span><span id="300" class="l">                <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$identifier</span>])) {
 </span><span id="301" class="l">                    <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeContextException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'The given dimension fallback chain for &quot;%s&quot; should be an array of string, but &quot;%s&quot; was given.'</span>, <span class="php-var">$identifier</span>, <span class="php-keyword2">gettype</span>(<span class="php-var">$contextProperties</span>[<span class="php-quote">'dimensions'</span>][<span class="php-var">$identifier</span>])), <span class="php-num">1407417930</span>);

@@ -1170,10 +1170,10 @@
 </span><span id="349" class="l">
 </span><span id="350" class="l">        <span class="php-var">$newDimensions</span> = <span class="php-keyword1">clone</span> <span class="php-var">$originalDimensions</span>;
 </span><span id="351" class="l">
-</span><span id="352" class="l">        <span class="php-var">$ratios</span> = <span class="php-keyword1">array</span>(
+</span><span id="352" class="l">        <span class="php-var">$ratios</span> = [
 </span><span id="353" class="l">            <span class="php-var">$requestedWidth</span> / <span class="php-var">$originalDimensions</span>-&gt;getWidth(),
 </span><span id="354" class="l">            <span class="php-var">$requestedHeight</span> / <span class="php-var">$originalDimensions</span>-&gt;getHeight()
-</span><span id="355" class="l">        );
+</span><span id="355" class="l">        ];
 </span><span id="356" class="l">
 </span><span id="357" class="l">        <span class="php-var">$ratio</span> = <span class="php-keyword2">min</span>(<span class="php-var">$ratios</span>);
 </span><span id="358" class="l">        <span class="php-var">$newDimensions</span> = <span class="php-var">$newDimensions</span>-&gt;scale(<span class="php-var">$ratio</span>);
@@ -1203,10 +1203,10 @@
 </span><span id="382" class="l">        }
 </span><span id="383" class="l">
 </span><span id="384" class="l">        <span class="php-comment">// We need to make sure that the new dimensions are such that no upscaling is needed.</span>
-</span><span id="385" class="l">        <span class="php-var">$ratios</span> = <span class="php-keyword1">array</span>(
+</span><span id="385" class="l">        <span class="php-var">$ratios</span> = [
 </span><span id="386" class="l">            <span class="php-var">$originalDimensions</span>-&gt;getWidth() / <span class="php-var">$requestedWidth</span>,
 </span><span id="387" class="l">            <span class="php-var">$originalDimensions</span>-&gt;getHeight() / <span class="php-var">$requestedHeight</span>
-</span><span id="388" class="l">        );
+</span><span id="388" class="l">        ];
 </span><span id="389" class="l">
 </span><span id="390" class="l">        <span class="php-var">$ratio</span> = <span class="php-keyword2">min</span>(<span class="php-var">$ratios</span>);
 </span><span id="391" class="l">        <span class="php-var">$newDimensions</span> = <span class="php-var">$newDimensions</span>-&gt;scale(<span class="php-var">$ratio</span>);
@@ -1301,10 +1301,10 @@
 </span></span><span id="480" class="l"><span class="php-comment">     */</span>
 </span><span id="481" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> calculateOutboundScalingDimensions(BoxInterface <span class="php-var">$imageSize</span>, BoxInterface <span class="php-var">$requestedDimensions</span>)
 </span><span id="482" class="l">    {
-</span><span id="483" class="l">        <span class="php-var">$ratios</span> = <span class="php-keyword1">array</span>(
+</span><span id="483" class="l">        <span class="php-var">$ratios</span> = [
 </span><span id="484" class="l">            <span class="php-var">$requestedDimensions</span>-&gt;getWidth() / <span class="php-var">$imageSize</span>-&gt;getWidth(),
 </span><span id="485" class="l">            <span class="php-var">$requestedDimensions</span>-&gt;getHeight() / <span class="php-var">$imageSize</span>-&gt;getHeight()
-</span><span id="486" class="l">        );
+</span><span id="486" class="l">        ];
 </span><span id="487" class="l">
 </span><span id="488" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$imageSize</span>-&gt;scale(<span class="php-keyword2">max</span>(<span class="php-var">$ratios</span>));
 </span><span id="489" class="l">    }

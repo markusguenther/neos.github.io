@@ -887,7 +887,7 @@
 </span><span id="69" class="l">    {
 </span><span id="70" class="l">        <span class="php-var">$redirectionUri</span> = <span class="php-var">$this</span>-&gt;backendRedirectionService-&gt;getAfterLoginRedirectionUri(<span class="php-var">$this</span>-&gt;request);
 </span><span id="71" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$redirectionUri</span> === <span class="php-keyword1">null</span>) {
-</span><span id="72" class="l">            <span class="php-var">$redirectionUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;uriFor(<span class="php-quote">'index'</span>, <span class="php-keyword1">array</span>(), <span class="php-quote">'Login'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="72" class="l">            <span class="php-var">$redirectionUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;uriFor(<span class="php-quote">'index'</span>, [], <span class="php-quote">'Login'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="73" class="l">        }
 </span><span id="74" class="l">        <span class="php-var">$this</span>-&gt;redirectToUri(<span class="php-var">$redirectionUri</span>);
 </span><span id="75" class="l">    }

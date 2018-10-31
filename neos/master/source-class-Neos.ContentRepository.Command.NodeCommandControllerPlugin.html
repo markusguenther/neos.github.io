@@ -910,7 +910,7 @@
 </span><span id="93" class="l">    <span class="php-comment">/**
 </span></span><span id="94" class="l"><span class="php-comment">     * @var array
 </span></span><span id="95" class="l"><span class="php-comment">     */</span>
-</span><span id="96" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$pluginConfigurations</span> = <span class="php-keyword1">array</span>();
+</span><span id="96" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$pluginConfigurations</span> = [];
 </span><span id="97" class="l">
 </span><span id="98" class="l">    <span class="php-comment">/**
 </span></span><span id="99" class="l"><span class="php-comment">     * @var ContentDimensionCombinator
@@ -1087,7 +1087,7 @@
 </span><span id="270" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> askBeforeExecutingTask(<span class="php-var">$question</span>, \Closure <span class="php-var">$task</span>)
 </span><span id="271" class="l">    {
 </span><span id="272" class="l">        <span class="php-var">$response</span> = <span class="php-keyword1">null</span>;
-</span><span id="273" class="l">        <span class="php-keyword1">while</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$response</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'y'</span>, <span class="php-quote">'n'</span>))) {
+</span><span id="273" class="l">        <span class="php-keyword1">while</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$response</span>, [<span class="php-quote">'y'</span>, <span class="php-quote">'n'</span>])) {
 </span><span id="274" class="l">            <span class="php-var">$response</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$this</span>-&gt;output-&gt;ask(<span class="php-quote">'&lt;comment&gt;'</span> . <span class="php-var">$question</span> . <span class="php-quote">' (y/n)&lt;/comment&gt;'</span>));
 </span><span id="275" class="l">        }
 </span><span id="276" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
@@ -1114,7 +1114,7 @@
 </span><span id="297" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createMissingChildNodes(<span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>, NodeType <span class="php-var">$nodeType</span> = <span class="php-keyword1">null</span>)
 </span><span id="298" class="l">    {
 </span><span id="299" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$nodeType</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="300" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking nodes of type &quot;%s&quot; for missing child nodes ...'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeType</span>-&gt;getName()));
+</span><span id="300" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking nodes of type &quot;%s&quot; for missing child nodes ...'</span>, [<span class="php-var">$nodeType</span>-&gt;getName()]);
 </span><span id="301" class="l">            <span class="php-var">$this</span>-&gt;createChildNodesByNodeType(<span class="php-var">$nodeType</span>, <span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>);
 </span><span id="302" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="303" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for missing child nodes ...'</span>);
@@ -1154,7 +1154,7 @@
 </span><span id="337" class="l">            <span class="php-var">$nodeType</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType((string)<span class="php-var">$nodeType</span>);
 </span><span id="338" class="l">            <span class="php-var">$nodeTypeNames</span>[<span class="php-var">$nodeType</span>-&gt;getName()] = <span class="php-var">$nodeType</span>;
 </span><span id="339" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="340" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, <span class="php-keyword1">array</span>((string)<span class="php-var">$nodeType</span>));
+</span><span id="340" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, [(string)<span class="php-var">$nodeType</span>]);
 </span><span id="341" class="l">            <span class="php-keyword1">exit</span>(<span class="php-num">1</span>);
 </span><span id="342" class="l">        }
 </span><span id="343" class="l">
@@ -1178,9 +1178,9 @@
 </span><span id="361" class="l">                                } <span class="php-keyword1">else</span> {
 </span><span id="362" class="l">                                    <span class="php-var">$node</span>-&gt;setRemoved(<span class="php-keyword1">false</span>);
 </span><span id="363" class="l">                                }
-</span><span id="364" class="l">                                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Auto created node named &quot;%s&quot; in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath()));
+</span><span id="364" class="l">                                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Auto created node named &quot;%s&quot; in &quot;%s&quot;'</span>, [<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath()]);
 </span><span id="365" class="l">                            } <span class="php-keyword1">else</span> {
-</span><span id="366" class="l">                                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Missing node named &quot;%s&quot; in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath()));
+</span><span id="366" class="l">                                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Missing node named &quot;%s&quot; in &quot;%s&quot;'</span>, [<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath()]);
 </span><span id="367" class="l">                            }
 </span><span id="368" class="l">                            <span class="php-var">$createdNodesCount</span>++;
 </span><span id="369" class="l">                        } <span class="php-keyword1">elseif</span> (<span class="php-var">$childNode</span>-&gt;getIdentifier() !== <span class="php-var">$childNodeIdentifier</span>) {
@@ -1192,7 +1192,7 @@
 </span><span id="375" class="l">                            }
 </span><span id="376" class="l">                        }
 </span><span id="377" class="l">                    } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$exception</span>) {
-</span><span id="378" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Could not create node named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$exception</span>-&gt;getMessage()));
+</span><span id="378" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Could not create node named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, [<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$exception</span>-&gt;getMessage()]);
 </span><span id="379" class="l">                        <span class="php-var">$nodeCreationExceptions</span>++;
 </span><span id="380" class="l">                    }
 </span><span id="381" class="l">                }
@@ -1222,27 +1222,27 @@
 </span><span id="405" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$createdNodesCount</span> !== <span class="php-num">0</span> || <span class="php-var">$nodeCreationExceptions</span> !== <span class="php-num">0</span> || <span class="php-var">$updatedNodesCount</span> !== <span class="php-num">0</span> || <span class="php-var">$incorrectNodeTypeCount</span> !== <span class="php-num">0</span>) {
 </span><span id="406" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$dryRun</span> === <span class="php-keyword1">false</span>) {
 </span><span id="407" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$createdNodesCount</span> &gt; <span class="php-num">0</span>) {
-</span><span id="408" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Created %s new child nodes'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$createdNodesCount</span>));
+</span><span id="408" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Created %s new child nodes'</span>, [<span class="php-var">$createdNodesCount</span>]);
 </span><span id="409" class="l">                }
 </span><span id="410" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$updatedNodesCount</span> &gt; <span class="php-num">0</span>) {
-</span><span id="411" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Updated identifier of %s child nodes'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$updatedNodesCount</span>));
+</span><span id="411" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Updated identifier of %s child nodes'</span>, [<span class="php-var">$updatedNodesCount</span>]);
 </span><span id="412" class="l">                }
 </span><span id="413" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$incorrectNodeTypeCount</span> &gt; <span class="php-num">0</span>) {
-</span><span id="414" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Changed node type of %s child nodes'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$incorrectNodeTypeCount</span>));
+</span><span id="414" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Changed node type of %s child nodes'</span>, [<span class="php-var">$incorrectNodeTypeCount</span>]);
 </span><span id="415" class="l">                }
 </span><span id="416" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$nodeCreationExceptions</span> &gt; <span class="php-num">0</span>) {
-</span><span id="417" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s Errors occurred during child node creation'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeCreationExceptions</span>));
+</span><span id="417" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s Errors occurred during child node creation'</span>, [<span class="php-var">$nodeCreationExceptions</span>]);
 </span><span id="418" class="l">                }
 </span><span id="419" class="l">                <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
 </span><span id="420" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="421" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$createdNodesCount</span> &gt; <span class="php-num">0</span>) {
-</span><span id="422" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s missing child nodes need to be created'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$createdNodesCount</span>));
+</span><span id="422" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s missing child nodes need to be created'</span>, [<span class="php-var">$createdNodesCount</span>]);
 </span><span id="423" class="l">                }
 </span><span id="424" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$updatedNodesCount</span> &gt; <span class="php-num">0</span>) {
-</span><span id="425" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s identifiers of child nodes need to be updated'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$updatedNodesCount</span>));
+</span><span id="425" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s identifiers of child nodes need to be updated'</span>, [<span class="php-var">$updatedNodesCount</span>]);
 </span><span id="426" class="l">                }
 </span><span id="427" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$incorrectNodeTypeCount</span> &gt; <span class="php-num">0</span>) {
-</span><span id="428" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s child nodes have incorrect node type'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$incorrectNodeTypeCount</span>));
+</span><span id="428" class="l">                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s child nodes have incorrect node type'</span>, [<span class="php-var">$incorrectNodeTypeCount</span>]);
 </span><span id="429" class="l">                }
 </span><span id="430" class="l">            }
 </span><span id="431" class="l">        }
@@ -1259,7 +1259,7 @@
 </span><span id="442" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> addMissingDefaultValues(<span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>, NodeType <span class="php-var">$nodeType</span> = <span class="php-keyword1">null</span>)
 </span><span id="443" class="l">    {
 </span><span id="444" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$nodeType</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="445" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking nodes of type &quot;%s&quot; for missing default values ...'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeType</span>-&gt;getName()));
+</span><span id="445" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking nodes of type &quot;%s&quot; for missing default values ...'</span>, [<span class="php-var">$nodeType</span>-&gt;getName()]);
 </span><span id="446" class="l">            <span class="php-var">$this</span>-&gt;addMissingDefaultValuesByNodeType(<span class="php-var">$nodeType</span>, <span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>);
 </span><span id="447" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="448" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for missing default values ...'</span>);
@@ -1292,7 +1292,7 @@
 </span><span id="475" class="l">            <span class="php-var">$nodeType</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType((string)<span class="php-var">$nodeType</span>);
 </span><span id="476" class="l">            <span class="php-var">$nodeTypeNames</span>[<span class="php-var">$nodeType</span>-&gt;getName()] = <span class="php-var">$nodeType</span>;
 </span><span id="477" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="478" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, <span class="php-keyword1">array</span>((string)<span class="php-var">$nodeType</span>));
+</span><span id="478" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, [(string)<span class="php-var">$nodeType</span>]);
 </span><span id="479" class="l">            <span class="php-keyword1">exit</span>(<span class="php-num">1</span>);
 </span><span id="480" class="l">        }
 </span><span id="481" class="l">
@@ -1324,9 +1324,9 @@
 </span><span id="507" class="l">                        <span class="php-var">$addedMissingDefaultValuesCount</span>++;
 </span><span id="508" class="l">                        <span class="php-keyword1">if</span> (!<span class="php-var">$dryRun</span>) {
 </span><span id="509" class="l">                            <span class="php-var">$node</span>-&gt;setProperty(<span class="php-var">$propertyName</span>, <span class="php-var">$defaultValue</span>);
-</span><span id="510" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Set default value for property named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$propertyName</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getName()));
+</span><span id="510" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Set default value for property named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, [<span class="php-var">$propertyName</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getName()]);
 </span><span id="511" class="l">                        } <span class="php-keyword1">else</span> {
-</span><span id="512" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found missing default value for property named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$propertyName</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getName()));
+</span><span id="512" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found missing default value for property named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, [<span class="php-var">$propertyName</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getName()]);
 </span><span id="513" class="l">                        }
 </span><span id="514" class="l">                    }
 </span><span id="515" class="l">                }
@@ -1336,9 +1336,9 @@
 </span><span id="519" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$addedMissingDefaultValuesCount</span> !== <span class="php-num">0</span>) {
 </span><span id="520" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$dryRun</span> === <span class="php-keyword1">false</span>) {
 </span><span id="521" class="l">                <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
-</span><span id="522" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Added %s new default values'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$addedMissingDefaultValuesCount</span>));
+</span><span id="522" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Added %s new default values'</span>, [<span class="php-var">$addedMissingDefaultValuesCount</span>]);
 </span><span id="523" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="524" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s missing default values need to be set'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$addedMissingDefaultValuesCount</span>));
+</span><span id="524" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s missing default values need to be set'</span>, [<span class="php-var">$addedMissingDefaultValuesCount</span>]);
 </span><span id="525" class="l">            }
 </span><span id="526" class="l">        }
 </span><span id="527" class="l">    }
@@ -1354,8 +1354,8 @@
 </span><span id="537" class="l">    {
 </span><span id="538" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for nodes with abstract or undefined node types ...'</span>);
 </span><span id="539" class="l">
-</span><span id="540" class="l">        <span class="php-var">$abstractNodeTypes</span> = <span class="php-keyword1">array</span>();
-</span><span id="541" class="l">        <span class="php-var">$nonAbstractNodeTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="540" class="l">        <span class="php-var">$abstractNodeTypes</span> = [];
+</span><span id="541" class="l">        <span class="php-var">$nonAbstractNodeTypes</span> = [];
 </span><span id="542" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeTypes() <span class="php-keyword1">as</span> <span class="php-var">$nodeType</span>) {
 </span><span id="543" class="l">            <span class="php-comment">/** @var NodeType $nodeType */</span>
 </span><span id="544" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$nodeType</span>-&gt;isAbstract()) {
@@ -1387,7 +1387,7 @@
 </span><span id="570" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="571" class="l">            <span class="php-var">$name</span> = <span class="php-var">$node</span>[<span class="php-quote">'path'</span>] === <span class="php-quote">'/'</span> ? <span class="php-quote">''</span> : <span class="php-keyword2">substr</span>(<span class="php-var">$node</span>[<span class="php-quote">'path'</span>], <span class="php-keyword2">strrpos</span>(<span class="php-var">$node</span>[<span class="php-quote">'path'</span>], <span class="php-quote">'/'</span>) + <span class="php-num">1</span>);
 </span><span id="572" class="l">            <span class="php-var">$type</span> = <span class="php-keyword2">in_array</span>(<span class="php-var">$node</span>[<span class="php-quote">'nodeType'</span>], <span class="php-var">$abstractNodeTypes</span>) ? <span class="php-quote">'abstract'</span> : <span class="php-quote">'undefined'</span>;
-</span><span id="573" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found node with %s node type named &quot;%s&quot; (%s) in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$type</span>, <span class="php-var">$name</span>, <span class="php-var">$node</span>[<span class="php-quote">'nodeType'</span>], <span class="php-var">$node</span>[<span class="php-quote">'path'</span>]));
+</span><span id="573" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found node with %s node type named &quot;%s&quot; (%s) in &quot;%s&quot;'</span>, [<span class="php-var">$type</span>, <span class="php-var">$name</span>, <span class="php-var">$node</span>[<span class="php-quote">'nodeType'</span>], <span class="php-var">$node</span>[<span class="php-quote">'path'</span>]]);
 </span><span id="574" class="l">        }
 </span><span id="575" class="l">
 </span><span id="576" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
@@ -1397,10 +1397,10 @@
 </span><span id="580" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="581" class="l">                    <span class="php-var">$self</span>-&gt;removeNode(<span class="php-var">$node</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$node</span>[<span class="php-quote">'dimensionsHash'</span>]);
 </span><span id="582" class="l">                }
-</span><span id="583" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s node%s with abstract or undefined node types.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$removableNodesCount</span>, <span class="php-var">$removableNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="583" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s node%s with abstract or undefined node types.'</span>, [<span class="php-var">$removableNodesCount</span>, <span class="php-var">$removableNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="584" class="l">            });
 </span><span id="585" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="586" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s with abstract or undefined node types to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$removableNodesCount</span>, <span class="php-var">$removableNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="586" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s with abstract or undefined node types to be removed.'</span>, [<span class="php-var">$removableNodesCount</span>, <span class="php-var">$removableNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="587" class="l">        }
 </span><span id="588" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="589" class="l">    }
@@ -1423,7 +1423,7 @@
 </span><span id="606" class="l">        <span class="php-comment">/** @var \Neos\ContentRepository\Domain\Model\Workspace $workspace */</span>
 </span><span id="607" class="l">        <span class="php-var">$workspace</span> = <span class="php-var">$this</span>-&gt;workspaceRepository-&gt;findByIdentifier(<span class="php-var">$workspaceName</span>);
 </span><span id="608" class="l">
-</span><span id="609" class="l">        <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="609" class="l">        <span class="php-var">$nodes</span> = [];
 </span><span id="610" class="l">        <span class="php-var">$nodeExceptionCount</span> = <span class="php-num">0</span>;
 </span><span id="611" class="l">        <span class="php-var">$removeDisallowedChildNodes</span> = <span class="php-keyword1">function</span> (NodeInterface <span class="php-var">$node</span>) <span class="php-keyword1">use</span> (&amp;<span class="php-var">$removeDisallowedChildNodes</span>, &amp;<span class="php-var">$nodes</span>, &amp;<span class="php-var">$nodeExceptionCount</span>) {
 </span><span id="612" class="l">            <span class="php-keyword1">try</span> {
@@ -1432,7 +1432,7 @@
 </span><span id="615" class="l">                    <span class="php-keyword1">if</span> (!<span class="php-var">$childNode</span>-&gt;isAutoCreated() &amp;&amp; !<span class="php-var">$node</span>-&gt;isNodeTypeAllowedAsChildNode(<span class="php-var">$childNode</span>-&gt;getNodeType())) {
 </span><span id="616" class="l">                        <span class="php-var">$nodes</span>[] = <span class="php-var">$childNode</span>;
 </span><span id="617" class="l">                        <span class="php-var">$parent</span> = <span class="php-var">$node</span>-&gt;isAutoCreated() ? <span class="php-var">$node</span>-&gt;getParent() : <span class="php-var">$node</span>;
-</span><span id="618" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found disallowed node named &quot;%s&quot; (%s) in &quot;%s&quot;, child of node &quot;%s&quot; (%s)'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNode</span>-&gt;getName(), <span class="php-var">$childNode</span>-&gt;getNodeType()-&gt;getName(), <span class="php-var">$childNode</span>-&gt;getPath(), <span class="php-var">$parent</span>-&gt;getName(), <span class="php-var">$parent</span>-&gt;getNodeType()-&gt;getName()));
+</span><span id="618" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found disallowed node named &quot;%s&quot; (%s) in &quot;%s&quot;, child of node &quot;%s&quot; (%s)'</span>, [<span class="php-var">$childNode</span>-&gt;getName(), <span class="php-var">$childNode</span>-&gt;getNodeType()-&gt;getName(), <span class="php-var">$childNode</span>-&gt;getPath(), <span class="php-var">$parent</span>-&gt;getName(), <span class="php-var">$parent</span>-&gt;getNodeType()-&gt;getName()]);
 </span><span id="619" class="l">                    } <span class="php-keyword1">else</span> {
 </span><span id="620" class="l">                        <span class="php-var">$removeDisallowedChildNodes</span>(<span class="php-var">$childNode</span>);
 </span><span id="621" class="l">                    }
@@ -1459,15 +1459,15 @@
 </span><span id="642" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="643" class="l">                        <span class="php-var">$self</span>-&gt;removeNodeAndChildNodesInWorkspaceByPath(<span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$workspaceName</span>);
 </span><span id="644" class="l">                    }
-</span><span id="645" class="l">                    <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s disallowed node%s.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$disallowedChildNodesCount</span>, <span class="php-var">$disallowedChildNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="645" class="l">                    <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s disallowed node%s.'</span>, [<span class="php-var">$disallowedChildNodesCount</span>, <span class="php-var">$disallowedChildNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="646" class="l">                });
 </span><span id="647" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="648" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s disallowed node%s to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$disallowedChildNodesCount</span>, <span class="php-var">$disallowedChildNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="648" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s disallowed node%s to be removed.'</span>, [<span class="php-var">$disallowedChildNodesCount</span>, <span class="php-var">$disallowedChildNodesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="649" class="l">            }
 </span><span id="650" class="l">
 </span><span id="651" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$nodeExceptionCount</span> &gt; <span class="php-num">0</span>) {
 </span><span id="652" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
-</span><span id="653" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s error%s occurred during child node traversing.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeExceptionCount</span>, <span class="php-var">$nodeExceptionCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="653" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'%s error%s occurred during child node traversing.'</span>, [<span class="php-var">$nodeExceptionCount</span>, <span class="php-var">$nodeExceptionCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="654" class="l">            }
 </span><span id="655" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="656" class="l">        }
@@ -1488,7 +1488,7 @@
 </span><span id="671" class="l">        <span class="php-comment">/** @var \Doctrine\ORM\QueryBuilder $queryBuilder */</span>
 </span><span id="672" class="l">        <span class="php-var">$queryBuilder</span> = <span class="php-var">$this</span>-&gt;entityManager-&gt;createQueryBuilder();
 </span><span id="673" class="l">
-</span><span id="674" class="l">        <span class="php-var">$workspaceList</span> = <span class="php-keyword1">array</span>();
+</span><span id="674" class="l">        <span class="php-var">$workspaceList</span> = [];
 </span><span id="675" class="l">        <span class="php-comment">/** @var \Neos\ContentRepository\Domain\Model\Workspace $workspace */</span>
 </span><span id="676" class="l">        <span class="php-var">$workspace</span> = <span class="php-var">$this</span>-&gt;workspaceRepository-&gt;findByIdentifier(<span class="php-var">$workspaceName</span>);
 </span><span id="677" class="l">        <span class="php-keyword1">while</span> (<span class="php-var">$workspace</span> !== <span class="php-keyword1">null</span>) {
@@ -1526,7 +1526,7 @@
 </span><span id="709" class="l">
 </span><span id="710" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="711" class="l">            <span class="php-var">$name</span> = <span class="php-var">$node</span>[<span class="php-quote">'path'</span>] === <span class="php-quote">'/'</span> ? <span class="php-quote">''</span> : <span class="php-keyword2">substr</span>(<span class="php-var">$node</span>[<span class="php-quote">'path'</span>], <span class="php-keyword2">strrpos</span>(<span class="php-var">$node</span>[<span class="php-quote">'path'</span>], <span class="php-quote">'/'</span>) + <span class="php-num">1</span>);
-</span><span id="712" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found orphan node named &quot;%s&quot; (%s) in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$name</span>, <span class="php-var">$node</span>[<span class="php-quote">'nodeType'</span>], <span class="php-var">$node</span>[<span class="php-quote">'path'</span>]));
+</span><span id="712" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found orphan node named &quot;%s&quot; (%s) in &quot;%s&quot;'</span>, [<span class="php-var">$name</span>, <span class="php-var">$node</span>[<span class="php-quote">'nodeType'</span>], <span class="php-var">$node</span>[<span class="php-quote">'path'</span>]]);
 </span><span id="713" class="l">        }
 </span><span id="714" class="l">
 </span><span id="715" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
@@ -1536,10 +1536,10 @@
 </span><span id="719" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="720" class="l">                    <span class="php-var">$self</span>-&gt;removeNodeAndChildNodesInWorkspaceByPath(<span class="php-var">$node</span>[<span class="php-quote">'path'</span>], <span class="php-var">$workspaceName</span>);
 </span><span id="721" class="l">                }
-</span><span id="722" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s orphan node%s.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodesToBeRemoved</span>, <span class="php-keyword2">count</span>(<span class="php-var">$nodes</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="722" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s orphan node%s.'</span>, [<span class="php-var">$nodesToBeRemoved</span>, <span class="php-keyword2">count</span>(<span class="php-var">$nodes</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="723" class="l">            });
 </span><span id="724" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="725" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s orphan node%s to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodesToBeRemoved</span>, <span class="php-keyword2">count</span>(<span class="php-var">$nodes</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="725" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s orphan node%s to be removed.'</span>, [<span class="php-var">$nodesToBeRemoved</span>, <span class="php-keyword2">count</span>(<span class="php-var">$nodes</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="726" class="l">        }
 </span><span id="727" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="728" class="l">    }
@@ -1559,7 +1559,7 @@
 </span><span id="742" class="l">        <span class="php-comment">/** @var \Neos\ContentRepository\Domain\Model\Workspace $workspace */</span>
 </span><span id="743" class="l">        <span class="php-var">$workspace</span> = <span class="php-var">$this</span>-&gt;workspaceRepository-&gt;findByIdentifier(<span class="php-var">$workspaceName</span>);
 </span><span id="744" class="l">
-</span><span id="745" class="l">        <span class="php-var">$nodesWithUndefinedPropertiesNodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="745" class="l">        <span class="php-var">$nodesWithUndefinedPropertiesNodes</span> = [];
 </span><span id="746" class="l">        <span class="php-var">$undefinedPropertiesCount</span> = <span class="php-num">0</span>;
 </span><span id="747" class="l">        <span class="php-var">$nodes</span> = <span class="php-var">$nodeType</span> !== <span class="php-keyword1">null</span> ? <span class="php-var">$this</span>-&gt;getNodeDataByNodeTypeAndWorkspace(<span class="php-var">$nodeType</span>, <span class="php-var">$workspaceName</span>) : <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findByWorkspace(<span class="php-var">$workspace</span>);
 </span><span id="748" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeData</span>) {
@@ -1575,15 +1575,15 @@
 </span><span id="758" class="l">                }
 </span><span id="759" class="l">                <span class="php-var">$nodeType</span> = <span class="php-var">$node</span>-&gt;getNodeType();
 </span><span id="760" class="l">                <span class="php-var">$undefinedProperties</span> = <span class="php-keyword2">array_diff</span>(<span class="php-keyword2">array_keys</span>(<span class="php-var">$node</span>-&gt;getProperties()), <span class="php-keyword2">array_keys</span>(<span class="php-var">$nodeType</span>-&gt;getProperties()));
-</span><span id="761" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$undefinedProperties</span> !== <span class="php-keyword1">array</span>()) {
-</span><span id="762" class="l">                    <span class="php-var">$nodesWithUndefinedPropertiesNodes</span>[<span class="php-var">$node</span>-&gt;getIdentifier()] = <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>, <span class="php-quote">'undefinedProperties'</span> =&gt; <span class="php-var">$undefinedProperties</span>);
+</span><span id="761" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$undefinedProperties</span> !== []) {
+</span><span id="762" class="l">                    <span class="php-var">$nodesWithUndefinedPropertiesNodes</span>[<span class="php-var">$node</span>-&gt;getIdentifier()] = [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>, <span class="php-quote">'undefinedProperties'</span> =&gt; <span class="php-var">$undefinedProperties</span>];
 </span><span id="763" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$undefinedProperties</span> <span class="php-keyword1">as</span> <span class="php-var">$undefinedProperty</span>) {
 </span><span id="764" class="l">                        <span class="php-var">$undefinedPropertiesCount</span>++;
-</span><span id="765" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found undefined property named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$undefinedProperty</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getName()));
+</span><span id="765" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found undefined property named &quot;%s&quot; in &quot;%s&quot; (%s)'</span>, [<span class="php-var">$undefinedProperty</span>, <span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getName()]);
 </span><span id="766" class="l">                    }
 </span><span id="767" class="l">                }
 </span><span id="768" class="l">            } <span class="php-keyword1">catch</span> (NodeTypeNotFoundException <span class="php-var">$exception</span>) {
-</span><span id="769" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Skipped undefined node type in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeData</span>-&gt;getPath()));
+</span><span id="769" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Skipped undefined node type in &quot;%s&quot;'</span>, [<span class="php-var">$nodeData</span>-&gt;getPath()]);
 </span><span id="770" class="l">            }
 </span><span id="771" class="l">        }
 </span><span id="772" class="l">
@@ -1601,10 +1601,10 @@
 </span><span id="784" class="l">                            }
 </span><span id="785" class="l">                        }
 </span><span id="786" class="l">                    }
-</span><span id="787" class="l">                    <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s undefined propert%s.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$undefinedPropertiesCount</span>, <span class="php-var">$undefinedPropertiesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'ies'</span> : <span class="php-quote">'y'</span>));
+</span><span id="787" class="l">                    <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s undefined propert%s.'</span>, [<span class="php-var">$undefinedPropertiesCount</span>, <span class="php-var">$undefinedPropertiesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'ies'</span> : <span class="php-quote">'y'</span>]);
 </span><span id="788" class="l">                });
 </span><span id="789" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="790" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s undefined propert%s to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$undefinedPropertiesCount</span>, <span class="php-var">$undefinedPropertiesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'ies'</span> : <span class="php-quote">'y'</span>));
+</span><span id="790" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s undefined propert%s to be removed.'</span>, [<span class="php-var">$undefinedPropertiesCount</span>, <span class="php-var">$undefinedPropertiesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'ies'</span> : <span class="php-quote">'y'</span>]);
 </span><span id="791" class="l">            }
 </span><span id="792" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="793" class="l">        }
@@ -1628,21 +1628,21 @@
 </span><span id="811" class="l">        <span class="php-comment">/** @var \Neos\ContentRepository\Domain\Model\Workspace $workspace */</span>
 </span><span id="812" class="l">        <span class="php-var">$workspace</span> = <span class="php-var">$this</span>-&gt;workspaceRepository-&gt;findByIdentifier(<span class="php-var">$workspaceName</span>);
 </span><span id="813" class="l">
-</span><span id="814" class="l">        <span class="php-var">$nodeTypesWithEntityReferences</span> = <span class="php-keyword1">array</span>();
+</span><span id="814" class="l">        <span class="php-var">$nodeTypesWithEntityReferences</span> = [];
 </span><span id="815" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeTypes() <span class="php-keyword1">as</span> <span class="php-var">$nodeType</span>) {
 </span><span id="816" class="l">            <span class="php-comment">/** @var NodeType $nodeType */</span>
 </span><span id="817" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_keys</span>(<span class="php-var">$nodeType</span>-&gt;getProperties()) <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span>) {
 </span><span id="818" class="l">                <span class="php-var">$propertyType</span> = <span class="php-var">$nodeType</span>-&gt;getPropertyType(<span class="php-var">$propertyName</span>);
 </span><span id="819" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$propertyType</span>, <span class="php-quote">'\\'</span>) !== <span class="php-keyword1">false</span>) {
 </span><span id="820" class="l">                    <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$nodeTypesWithEntityReferences</span>[<span class="php-var">$nodeType</span>-&gt;getName()])) {
-</span><span id="821" class="l">                        <span class="php-var">$nodeTypesWithEntityReferences</span>[<span class="php-var">$nodeType</span>-&gt;getName()] = <span class="php-keyword1">array</span>();
+</span><span id="821" class="l">                        <span class="php-var">$nodeTypesWithEntityReferences</span>[<span class="php-var">$nodeType</span>-&gt;getName()] = [];
 </span><span id="822" class="l">                    }
 </span><span id="823" class="l">                    <span class="php-var">$nodeTypesWithEntityReferences</span>[<span class="php-var">$nodeType</span>-&gt;getName()][<span class="php-var">$propertyName</span>] = <span class="php-var">$propertyType</span>;
 </span><span id="824" class="l">                }
 </span><span id="825" class="l">            }
 </span><span id="826" class="l">        }
 </span><span id="827" class="l">
-</span><span id="828" class="l">        <span class="php-var">$nodesWithBrokenEntityReferences</span> = <span class="php-keyword1">array</span>();
+</span><span id="828" class="l">        <span class="php-var">$nodesWithBrokenEntityReferences</span> = [];
 </span><span id="829" class="l">        <span class="php-var">$brokenReferencesCount</span> = <span class="php-num">0</span>;
 </span><span id="830" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypesWithEntityReferences</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeTypeName</span> =&gt; <span class="php-var">$properties</span>) {
 </span><span id="831" class="l">            <span class="php-var">$nodeDatas</span> = <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findByParentAndNodeTypeRecursively(<span class="php-quote">'/'</span>, <span class="php-var">$nodeTypeName</span>, <span class="php-var">$workspace</span>);
@@ -1659,7 +1659,7 @@
 </span><span id="842" class="l">                        <span class="php-var">$convertedProperty</span> = <span class="php-var">$this</span>-&gt;propertyMapper-&gt;convert(<span class="php-var">$propertyValue</span>, <span class="php-var">$propertyType</span>);
 </span><span id="843" class="l">                        <span class="php-keyword1">if</span> (<span class="php-var">$convertedProperty</span> === <span class="php-keyword1">null</span>) {
 </span><span id="844" class="l">                            <span class="php-var">$nodesWithBrokenEntityReferences</span>[<span class="php-var">$nodeData</span>-&gt;getIdentifier()][<span class="php-var">$propertyName</span>] = <span class="php-var">$nodeData</span>;
-</span><span id="845" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Broken reference in &quot;%s&quot;, property &quot;%s&quot; (%s) referring to %s.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeData</span>-&gt;getPath(), <span class="php-var">$nodeData</span>-&gt;getIdentifier(), <span class="php-var">$propertyName</span>, <span class="php-var">$propertyType</span>, <span class="php-var">$propertyValue</span>));
+</span><span id="845" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Broken reference in &quot;%s&quot;, property &quot;%s&quot; (%s) referring to %s.'</span>, [<span class="php-var">$nodeData</span>-&gt;getPath(), <span class="php-var">$nodeData</span>-&gt;getIdentifier(), <span class="php-var">$propertyName</span>, <span class="php-var">$propertyType</span>, <span class="php-var">$propertyValue</span>]);
 </span><span id="846" class="l">                            <span class="php-var">$brokenReferencesCount</span> ++;
 </span><span id="847" class="l">                        }
 </span><span id="848" class="l">                    }
@@ -1668,7 +1668,7 @@
 </span><span id="851" class="l">                            <span class="php-var">$convertedProperty</span>-&gt;__load();
 </span><span id="852" class="l">                        } <span class="php-keyword1">catch</span> (EntityNotFoundException <span class="php-var">$e</span>) {
 </span><span id="853" class="l">                            <span class="php-var">$nodesWithBrokenEntityReferences</span>[<span class="php-var">$nodeData</span>-&gt;getIdentifier()][<span class="php-var">$propertyName</span>] = <span class="php-var">$nodeData</span>;
-</span><span id="854" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Broken reference in &quot;%s&quot;, property &quot;%s&quot; (%s) referring to %s.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeData</span>-&gt;getPath(), <span class="php-var">$nodeData</span>-&gt;getIdentifier(), <span class="php-var">$propertyName</span>, <span class="php-var">$propertyType</span>, <span class="php-var">$propertyValue</span>));
+</span><span id="854" class="l">                            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Broken reference in &quot;%s&quot;, property &quot;%s&quot; (%s) referring to %s.'</span>, [<span class="php-var">$nodeData</span>-&gt;getPath(), <span class="php-var">$nodeData</span>-&gt;getIdentifier(), <span class="php-var">$propertyName</span>, <span class="php-var">$propertyType</span>, <span class="php-var">$propertyValue</span>]);
 </span><span id="855" class="l">                            <span class="php-var">$brokenReferencesCount</span> ++;
 </span><span id="856" class="l">                        }
 </span><span id="857" class="l">                    }
@@ -1687,10 +1687,10 @@
 </span><span id="870" class="l">                            <span class="php-var">$nodeData</span>-&gt;setProperty(<span class="php-var">$propertyName</span>, <span class="php-keyword1">null</span>);
 </span><span id="871" class="l">                        }
 </span><span id="872" class="l">                    }
-</span><span id="873" class="l">                    <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s broken entity reference%s.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$brokenReferencesCount</span>, <span class="php-var">$brokenReferencesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="873" class="l">                    <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s broken entity reference%s.'</span>, [<span class="php-var">$brokenReferencesCount</span>, <span class="php-var">$brokenReferencesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="874" class="l">                });
 </span><span id="875" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="876" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s broken entity reference%s to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$brokenReferencesCount</span>, <span class="php-var">$brokenReferencesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="876" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s broken entity reference%s to be removed.'</span>, [<span class="php-var">$brokenReferencesCount</span>, <span class="php-var">$brokenReferencesCount</span> &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="877" class="l">            }
 </span><span id="878" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="879" class="l">
@@ -1707,13 +1707,13 @@
 </span></span><span id="890" class="l"><span class="php-comment">     */</span>
 </span><span id="891" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createContext(<span class="php-var">$workspaceName</span>, <span class="php-var">$dimensions</span>)
 </span><span id="892" class="l">    {
-</span><span id="893" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;contextFactory-&gt;create(<span class="php-keyword1">array</span>(
+</span><span id="893" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;contextFactory-&gt;create([
 </span><span id="894" class="l">            <span class="php-quote">'workspaceName'</span> =&gt; <span class="php-var">$workspaceName</span>,
 </span><span id="895" class="l">            <span class="php-quote">'dimensions'</span> =&gt; <span class="php-var">$dimensions</span>,
 </span><span id="896" class="l">            <span class="php-quote">'invisibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="897" class="l">            <span class="php-quote">'inaccessibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="898" class="l">            <span class="php-quote">'removedContentShown'</span> =&gt; <span class="php-keyword1">true</span>
-</span><span id="899" class="l">        ));
+</span><span id="899" class="l">        ]);
 </span><span id="900" class="l">    }
 </span><span id="901" class="l">
 </span><span id="902" class="l">    <span class="php-comment">/**
@@ -1759,7 +1759,7 @@
 </span><span id="942" class="l">            -&gt;where(<span class="php-quote">'n.path LIKE :path'</span>)
 </span><span id="943" class="l">            -&gt;orWhere(<span class="php-quote">'n.path LIKE :subpath'</span>)
 </span><span id="944" class="l">            -&gt;andWhere(<span class="php-quote">'n.workspace = :workspace'</span>)
-</span><span id="945" class="l">            -&gt;setParameters(<span class="php-keyword1">array</span>(<span class="php-quote">'path'</span> =&gt; <span class="php-var">$nodePath</span>, <span class="php-quote">'subpath'</span> =&gt; <span class="php-var">$nodePath</span> . <span class="php-quote">'/%'</span>, <span class="php-quote">'workspace'</span> =&gt; <span class="php-var">$workspaceName</span>))
+</span><span id="945" class="l">            -&gt;setParameters([<span class="php-quote">'path'</span> =&gt; <span class="php-var">$nodePath</span>, <span class="php-quote">'subpath'</span> =&gt; <span class="php-var">$nodePath</span> . <span class="php-quote">'/%'</span>, <span class="php-quote">'workspace'</span> =&gt; <span class="php-var">$workspaceName</span>])
 </span><span id="946" class="l">            -&gt;getQuery()
 </span><span id="947" class="l">            -&gt;execute();
 </span><span id="948" class="l">    }
@@ -1780,7 +1780,7 @@
 </span><span id="963" class="l">            -&gt;<span class="php-keyword2">delete</span>(NodeData::<span class="php-keyword1">class</span>, <span class="php-quote">'n'</span>)
 </span><span id="964" class="l">            -&gt;where(<span class="php-quote">'n.identifier = :identifier'</span>)
 </span><span id="965" class="l">            -&gt;andWhere(<span class="php-quote">'n.dimensionsHash = :dimensionsHash'</span>)
-</span><span id="966" class="l">            -&gt;setParameters(<span class="php-keyword1">array</span>(<span class="php-quote">'identifier'</span> =&gt; <span class="php-var">$nodeIdentifier</span>, <span class="php-quote">'dimensionsHash'</span> =&gt; <span class="php-var">$dimensionsHash</span>))
+</span><span id="966" class="l">            -&gt;setParameters([<span class="php-quote">'identifier'</span> =&gt; <span class="php-var">$nodeIdentifier</span>, <span class="php-quote">'dimensionsHash'</span> =&gt; <span class="php-var">$dimensionsHash</span>])
 </span><span id="967" class="l">            -&gt;getQuery()
 </span><span id="968" class="l">            -&gt;execute();
 </span><span id="969" class="l">    }
@@ -1812,10 +1812,10 @@
 </span><span id="995" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$nodesArray</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeArray</span>) {
 </span><span id="996" class="l">                    <span class="php-var">$self</span>-&gt;removeNode(<span class="php-var">$nodeArray</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$nodeArray</span>[<span class="php-quote">'dimensionsHash'</span>]);
 </span><span id="997" class="l">                }
-</span><span id="998" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s node%s with invalid dimension values.'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="998" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s node%s with invalid dimension values.'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="999" class="l">            });
 </span><span id="1000" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="1001" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s with invalid dimension values to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="1001" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s with invalid dimension values to be removed.'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="1002" class="l">        }
 </span><span id="1003" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="1004" class="l">    }
@@ -1894,10 +1894,10 @@
 </span><span id="1077" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$nodesArray</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeArray</span>) {
 </span><span id="1078" class="l">                    <span class="php-var">$self</span>-&gt;removeNode(<span class="php-var">$nodeArray</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$nodeArray</span>[<span class="php-quote">'dimensionsHash'</span>]);
 </span><span id="1079" class="l">                }
-</span><span id="1080" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s node%s referring to an invalid workspace.'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="1080" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Removed %s node%s referring to an invalid workspace.'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="1081" class="l">            });
 </span><span id="1082" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="1083" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s referring to an invalid workspace to be removed.'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="1083" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s referring to an invalid workspace to be removed.'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="1084" class="l">        }
 </span><span id="1085" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="1086" class="l">    }
@@ -2008,7 +2008,7 @@
 </span><span id="1191" class="l">                <span class="php-var">$self</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Fixed inconsistent identifiers.'</span>);
 </span><span id="1192" class="l">            });
 </span><span id="1193" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="1194" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s with inconsistent identifiers which need to be fixed.'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>));
+</span><span id="1194" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found %s node%s with inconsistent identifiers which need to be fixed.'</span>, [<span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>), <span class="php-keyword2">count</span>(<span class="php-var">$nodesArray</span>) &gt; <span class="php-num">1</span> ? <span class="php-quote">'s'</span> : <span class="php-quote">''</span>]);
 </span><span id="1195" class="l">        }
 </span><span id="1196" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine();
 </span><span id="1197" class="l">    }
@@ -2024,7 +2024,7 @@
 </span><span id="1207" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> reorderChildNodes(<span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>, NodeType <span class="php-var">$nodeType</span> = <span class="php-keyword1">null</span>)
 </span><span id="1208" class="l">    {
 </span><span id="1209" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$nodeType</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="1210" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking nodes of type &quot;%s&quot; for child nodes that need reordering ...'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeType</span>-&gt;getName()));
+</span><span id="1210" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking nodes of type &quot;%s&quot; for child nodes that need reordering ...'</span>, [<span class="php-var">$nodeType</span>-&gt;getName()]);
 </span><span id="1211" class="l">            <span class="php-var">$this</span>-&gt;reorderChildNodesByNodeType(<span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>, <span class="php-var">$nodeType</span>);
 </span><span id="1212" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="1213" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for child nodes that need reordering ...'</span>);
@@ -2057,14 +2057,14 @@
 </span><span id="1240" class="l">            <span class="php-var">$nodeType</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType((string)<span class="php-var">$nodeType</span>);
 </span><span id="1241" class="l">            <span class="php-var">$nodeTypeNames</span>[<span class="php-var">$nodeType</span>-&gt;getName()] = <span class="php-var">$nodeType</span>;
 </span><span id="1242" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="1243" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, <span class="php-keyword1">array</span>((string)<span class="php-var">$nodeType</span>));
+</span><span id="1243" class="l">            <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, [(string)<span class="php-var">$nodeType</span>]);
 </span><span id="1244" class="l">            <span class="php-keyword1">exit</span>(<span class="php-num">1</span>);
 </span><span id="1245" class="l">        }
 </span><span id="1246" class="l">
 </span><span id="1247" class="l">        <span class="php-comment">/** @var $nodeType NodeType */</span>
 </span><span id="1248" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeTypeName</span> =&gt; <span class="php-var">$nodeType</span>) {
 </span><span id="1249" class="l">            <span class="php-var">$childNodes</span> = <span class="php-var">$nodeType</span>-&gt;getAutoCreatedChildNodes();
-</span><span id="1250" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$childNodes</span> === <span class="php-keyword1">array</span>()) {
+</span><span id="1250" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$childNodes</span> === []) {
 </span><span id="1251" class="l">                <span class="php-keyword1">continue</span>;
 </span><span id="1252" class="l">            }
 </span><span id="1253" class="l">
@@ -2083,14 +2083,14 @@
 </span><span id="1266" class="l">                            <span class="php-keyword1">if</span> (<span class="php-var">$dryRun</span> === <span class="php-keyword1">false</span>) {
 </span><span id="1267" class="l">                                <span class="php-keyword1">if</span> (<span class="php-var">$childNodeBefore</span>-&gt;getIndex() &gt;= <span class="php-var">$childNode</span>-&gt;getIndex()) {
 </span><span id="1268" class="l">                                    <span class="php-var">$childNode</span>-&gt;moveAfter(<span class="php-var">$childNodeBefore</span>);
-</span><span id="1269" class="l">                                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Moved node named &quot;%s&quot; after node named &quot;%s&quot; in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNodeName</span>, <span class="php-var">$childNodeBefore</span>-&gt;getName(), <span class="php-var">$node</span>-&gt;getPath()));
+</span><span id="1269" class="l">                                    <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Moved node named &quot;%s&quot; after node named &quot;%s&quot; in &quot;%s&quot;'</span>, [<span class="php-var">$childNodeName</span>, <span class="php-var">$childNodeBefore</span>-&gt;getName(), <span class="php-var">$node</span>-&gt;getPath()]);
 </span><span id="1270" class="l">                                }
 </span><span id="1271" class="l">                            } <span class="php-keyword1">else</span> {
-</span><span id="1272" class="l">                                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Should move node named &quot;%s&quot; after node named &quot;%s&quot; in &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNodeName</span>, <span class="php-var">$childNodeBefore</span>-&gt;getName(), <span class="php-var">$node</span>-&gt;getPath()));
+</span><span id="1272" class="l">                                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Should move node named &quot;%s&quot; after node named &quot;%s&quot; in &quot;%s&quot;'</span>, [<span class="php-var">$childNodeName</span>, <span class="php-var">$childNodeBefore</span>-&gt;getName(), <span class="php-var">$node</span>-&gt;getPath()]);
 </span><span id="1273" class="l">                            }
 </span><span id="1274" class="l">                        }
 </span><span id="1275" class="l">                    } <span class="php-keyword1">else</span> {
-</span><span id="1276" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Missing child node named &quot;%s&quot; in &quot;%s&quot;.'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath()));
+</span><span id="1276" class="l">                        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Missing child node named &quot;%s&quot; in &quot;%s&quot;.'</span>, [<span class="php-var">$childNodeName</span>, <span class="php-var">$node</span>-&gt;getPath()]);
 </span><span id="1277" class="l">                    }
 </span><span id="1278" class="l">
 </span><span id="1279" class="l">                    <span class="php-var">$childNodeBefore</span> = <span class="php-var">$childNode</span>;

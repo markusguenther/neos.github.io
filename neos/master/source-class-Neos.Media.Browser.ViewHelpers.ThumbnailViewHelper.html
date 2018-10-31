@@ -883,11 +883,11 @@
 </span><span id="70" class="l">            <span class="php-var">$thumbnailUri</span> = <span class="php-var">$assetProxy</span>-&gt;getPreviewUri();
 </span><span id="71" class="l">        }
 </span><span id="72" class="l">
-</span><span id="73" class="l">        <span class="php-var">$this</span>-&gt;tag-&gt;addAttributes(<span class="php-keyword1">array</span>(
+</span><span id="73" class="l">        <span class="php-var">$this</span>-&gt;tag-&gt;addAttributes([
 </span><span id="74" class="l">            <span class="php-quote">'width'</span> =&gt; <span class="php-var">$width</span>,
 </span><span id="75" class="l">            <span class="php-quote">'height'</span> =&gt; <span class="php-var">$height</span>,
 </span><span id="76" class="l">            <span class="php-quote">'src'</span> =&gt; <span class="php-var">$thumbnailUri</span>
-</span><span id="77" class="l">        ));
+</span><span id="77" class="l">        ]);
 </span><span id="78" class="l">
 </span><span id="79" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;tag-&gt;render();
 </span><span id="80" class="l">    }

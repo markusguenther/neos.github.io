@@ -848,28 +848,28 @@
 </span></span><span id="32" class="l"><span class="php-comment">     */</span>
 </span><span id="33" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> indexAction()
 </span><span id="34" class="l">    {
-</span><span id="35" class="l">        <span class="php-var">$packageGroups</span> = <span class="php-keyword1">array</span>();
+</span><span id="35" class="l">        <span class="php-var">$packageGroups</span> = [];
 </span><span id="36" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getAvailablePackages() <span class="php-keyword1">as</span> <span class="php-var">$package</span>) {
 </span><span id="37" class="l">            <span class="php-comment">/** @var Package $package */</span>
 </span><span id="38" class="l">            <span class="php-var">$packagePath</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$package</span>-&gt;getPackagepath(), <span class="php-keyword2">strlen</span>(FLOW_PATH_PACKAGES));
 </span><span id="39" class="l">            <span class="php-var">$packageGroup</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$packagePath</span>, <span class="php-num">0</span>, <span class="php-keyword2">strpos</span>(<span class="php-var">$packagePath</span>, <span class="php-quote">'/'</span>));
-</span><span id="40" class="l">            <span class="php-var">$packageGroups</span>[<span class="php-var">$packageGroup</span>][<span class="php-var">$package</span>-&gt;getPackageKey()] = <span class="php-keyword1">array</span>(
+</span><span id="40" class="l">            <span class="php-var">$packageGroups</span>[<span class="php-var">$packageGroup</span>][<span class="php-var">$package</span>-&gt;getPackageKey()] = [
 </span><span id="41" class="l">                <span class="php-quote">'sanitizedPackageKey'</span> =&gt; <span class="php-keyword2">str_replace</span>(<span class="php-quote">'.'</span>, <span class="php-quote">''</span>, <span class="php-var">$package</span>-&gt;getPackageKey()),
 </span><span id="42" class="l">                <span class="php-quote">'version'</span> =&gt; <span class="php-var">$package</span>-&gt;getInstalledVersion(),
 </span><span id="43" class="l">                <span class="php-quote">'name'</span> =&gt; <span class="php-var">$package</span>-&gt;getComposerManifest(<span class="php-quote">'name'</span>),
 </span><span id="44" class="l">                <span class="php-quote">'type'</span> =&gt; <span class="php-var">$package</span>-&gt;getComposerManifest(<span class="php-quote">'type'</span>),
 </span><span id="45" class="l">                <span class="php-quote">'description'</span> =&gt; <span class="php-var">$package</span>-&gt;getComposerManifest(<span class="php-quote">'description'</span>),
 </span><span id="46" class="l">                <span class="php-quote">'isFrozen'</span> =&gt; <span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageFrozen(<span class="php-var">$package</span>-&gt;getPackageKey())
-</span><span id="47" class="l">            );
+</span><span id="47" class="l">            ];
 </span><span id="48" class="l">        }
 </span><span id="49" class="l">        <span class="php-keyword2">ksort</span>(<span class="php-var">$packageGroups</span>);
 </span><span id="50" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_keys</span>(<span class="php-var">$packageGroups</span>) <span class="php-keyword1">as</span> <span class="php-var">$packageGroup</span>) {
 </span><span id="51" class="l">            <span class="php-keyword2">ksort</span>(<span class="php-var">$packageGroups</span>[<span class="php-var">$packageGroup</span>]);
 </span><span id="52" class="l">        }
-</span><span id="53" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="53" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="54" class="l">            <span class="php-quote">'packageGroups'</span> =&gt; <span class="php-var">$packageGroups</span>,
 </span><span id="55" class="l">            <span class="php-quote">'isDevelopmentContext'</span> =&gt; <span class="php-var">$this</span>-&gt;objectManager-&gt;getContext()-&gt;isDevelopment()
-</span><span id="56" class="l">        ));
+</span><span id="56" class="l">        ]);
 </span><span id="57" class="l">    }
 </span><span id="58" class="l">}
 </span><span id="59" class="l"></span></code></pre>

@@ -938,8 +938,8 @@
 </span><span id="124" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> export(<span class="php-var">$startingPointNodePath</span> = <span class="php-quote">'/'</span>, <span class="php-var">$workspaceName</span> = <span class="php-quote">'live'</span>, \XMLWriter <span class="php-var">$xmlWriter</span> = <span class="php-keyword1">null</span>, <span class="php-var">$tidy</span> = <span class="php-keyword1">true</span>, <span class="php-var">$endDocument</span> = <span class="php-keyword1">true</span>, <span class="php-var">$resourceSavePath</span> = <span class="php-keyword1">null</span>, <span class="php-var">$nodeTypeFilter</span> = <span class="php-keyword1">null</span>)
 </span><span id="125" class="l">    {
 </span><span id="126" class="l">        <span class="php-var">$this</span>-&gt;propertyMappingConfiguration = <span class="php-keyword1">new</span> ImportExportPropertyMappingConfiguration(<span class="php-var">$resourceSavePath</span>);
-</span><span id="127" class="l">        <span class="php-var">$this</span>-&gt;exceptionsDuringExport = <span class="php-keyword1">array</span>();
-</span><span id="128" class="l">        <span class="php-var">$this</span>-&gt;exportedNodePaths = <span class="php-keyword1">array</span>();
+</span><span id="127" class="l">        <span class="php-var">$this</span>-&gt;exceptionsDuringExport = [];
+</span><span id="128" class="l">        <span class="php-var">$this</span>-&gt;exportedNodePaths = [];
 </span><span id="129" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$startingPointNodePath</span> !== <span class="php-quote">'/'</span>) {
 </span><span id="130" class="l">            <span class="php-var">$startingPointParentPath</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$startingPointNodePath</span>, <span class="php-num">0</span>, <span class="php-keyword2">strrpos</span>(<span class="php-var">$startingPointNodePath</span>, <span class="php-quote">'/'</span>));
 </span><span id="131" class="l">            <span class="php-var">$this</span>-&gt;exportedNodePaths[<span class="php-var">$startingPointParentPath</span>] = <span class="php-keyword1">true</span>;
@@ -1043,7 +1043,7 @@
 </span><span id="229" class="l">        <span class="php-var">$this</span>-&gt;xmlWriter-&gt;startElement(<span class="php-quote">'nodes'</span>);
 </span><span id="230" class="l">        <span class="php-var">$this</span>-&gt;xmlWriter-&gt;writeAttribute(<span class="php-quote">'formatVersion'</span>, self::SUPPORTED_FORMAT_VERSION);
 </span><span id="231" class="l">
-</span><span id="232" class="l">        <span class="php-var">$nodesStack</span> = <span class="php-keyword1">array</span>();
+</span><span id="232" class="l">        <span class="php-var">$nodesStack</span> = [];
 </span><span id="233" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeDataList</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeData</span>) {
 </span><span id="234" class="l">            <span class="php-var">$this</span>-&gt;exportNodeData(<span class="php-var">$nodeData</span>, <span class="php-var">$nodesStack</span>);
 </span><span id="235" class="l">        }
@@ -1104,14 +1104,14 @@
 </span><span id="290" class="l">        }
 </span><span id="291" class="l">
 </span><span id="292" class="l">        <span class="php-keyword1">foreach</span> (
-</span><span id="293" class="l">            <span class="php-keyword1">array</span>(
+</span><span id="293" class="l">            [
 </span><span id="294" class="l">                <span class="php-quote">'workspace'</span>,
 </span><span id="295" class="l">                <span class="php-quote">'nodeType'</span>,
 </span><span id="296" class="l">                <span class="php-quote">'version'</span>,
 </span><span id="297" class="l">                <span class="php-quote">'removed'</span>,
 </span><span id="298" class="l">                <span class="php-quote">'hidden'</span>,
 </span><span id="299" class="l">                <span class="php-quote">'hiddenInIndex'</span>
-</span><span id="300" class="l">            ) <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span>) {
+</span><span id="300" class="l">            ] <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span>) {
 </span><span id="301" class="l">            <span class="php-var">$this</span>-&gt;xmlWriter-&gt;writeAttribute(<span class="php-var">$propertyName</span>, <span class="php-var">$nodeData</span>[<span class="php-var">$propertyName</span>]);
 </span><span id="302" class="l">        }
 </span><span id="303" class="l">
@@ -1124,7 +1124,7 @@
 </span><span id="310" class="l">        <span class="php-var">$this</span>-&gt;xmlWriter-&gt;endElement();
 </span><span id="311" class="l">
 </span><span id="312" class="l">        <span class="php-keyword1">foreach</span> (
-</span><span id="313" class="l">            <span class="php-keyword1">array</span>(
+</span><span id="313" class="l">            [
 </span><span id="314" class="l">                <span class="php-quote">'accessRoles'</span>,
 </span><span id="315" class="l">                <span class="php-quote">'hiddenBeforeDateTime'</span>,
 </span><span id="316" class="l">                <span class="php-quote">'hiddenAfterDateTime'</span>,
@@ -1132,7 +1132,7 @@
 </span><span id="318" class="l">                <span class="php-quote">'lastModificationDateTime'</span>,
 </span><span id="319" class="l">                <span class="php-quote">'lastPublicationDateTime'</span>,
 </span><span id="320" class="l">                <span class="php-quote">'contentObjectProxy'</span>
-</span><span id="321" class="l">            ) <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span>) {
+</span><span id="321" class="l">            ] <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span>) {
 </span><span id="322" class="l">            <span class="php-var">$this</span>-&gt;writeConvertedElement(<span class="php-var">$nodeData</span>, <span class="php-var">$propertyName</span>);
 </span><span id="323" class="l">        }
 </span><span id="324" class="l">

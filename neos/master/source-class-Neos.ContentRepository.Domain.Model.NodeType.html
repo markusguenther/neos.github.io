@@ -983,14 +983,14 @@
 </span></span><span id="157" class="l"><span class="php-comment">     */</span>
 </span><span id="158" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildFullConfiguration()
 </span><span id="159" class="l">    {
-</span><span id="160" class="l">        <span class="php-var">$mergedConfiguration</span> = <span class="php-keyword1">array</span>();
+</span><span id="160" class="l">        <span class="php-var">$mergedConfiguration</span> = [];
 </span><span id="161" class="l">        <span class="php-var">$applicableSuperTypes</span> = <span class="php-var">$this</span>-&gt;buildInheritanceChain();
 </span><span id="162" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$applicableSuperTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$superType</span>) {
 </span><span id="163" class="l">            <span class="php-var">$mergedConfiguration</span> = Arrays::arrayMergeRecursiveOverrule(<span class="php-var">$mergedConfiguration</span>, <span class="php-var">$superType</span>-&gt;getLocalConfiguration());
 </span><span id="164" class="l">        }
 </span><span id="165" class="l">        <span class="php-var">$this</span>-&gt;fullConfiguration = Arrays::arrayMergeRecursiveOverrule(<span class="php-var">$mergedConfiguration</span>, <span class="php-var">$this</span>-&gt;localConfiguration);
 </span><span id="166" class="l">
-</span><span id="167" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>]) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>] !== <span class="php-keyword1">array</span>()) {
+</span><span id="167" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>]) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>] !== []) {
 </span><span id="168" class="l">            <span class="php-var">$sorter</span> = <span class="php-keyword1">new</span> PositionalArraySorter(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>]);
 </span><span id="169" class="l">            <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>] = <span class="php-var">$sorter</span>-&gt;toArray();
 </span><span id="170" class="l">        }
@@ -1003,7 +1003,7 @@
 </span></span><span id="177" class="l"><span class="php-comment">     */</span>
 </span><span id="178" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> buildInheritanceChain()
 </span><span id="179" class="l">    {
-</span><span id="180" class="l">        <span class="php-var">$superTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="180" class="l">        <span class="php-var">$superTypes</span> = [];
 </span><span id="181" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;declaredSuperTypes <span class="php-keyword1">as</span> <span class="php-var">$superTypeName</span> =&gt; <span class="php-var">$superType</span>) {
 </span><span id="182" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$superType</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="183" class="l">                <span class="php-var">$this</span>-&gt;addInheritedSuperTypes(<span class="php-var">$superTypes</span>, <span class="php-var">$superType</span>);
@@ -1058,7 +1058,7 @@
 </span><span id="232" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$postprocessor</span> <span class="php-keyword1">instanceof</span> NodeTypePostprocessorInterface) {
 </span><span id="233" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidNodeTypePostprocessorException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Expected NodeTypePostprocessorInterface but got &quot;%s&quot;'</span>, <span class="php-keyword2">get_class</span>(<span class="php-var">$postprocessor</span>)), <span class="php-num">1364759955</span>);
 </span><span id="234" class="l">            }
-</span><span id="235" class="l">            <span class="php-var">$postprocessorOptions</span> = <span class="php-keyword1">array</span>();
+</span><span id="235" class="l">            <span class="php-var">$postprocessorOptions</span> = [];
 </span><span id="236" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$postprocessorConfiguration</span>[<span class="php-quote">'postprocessorOptions'</span>])) {
 </span><span id="237" class="l">                <span class="php-var">$postprocessorOptions</span> = <span class="php-var">$postprocessorConfiguration</span>[<span class="php-quote">'postprocessorOptions'</span>];
 </span><span id="238" class="l">            }
@@ -1227,7 +1227,7 @@
 </span><span id="401" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getOptions()
 </span><span id="402" class="l">    {
 </span><span id="403" class="l">        <span class="php-var">$this</span>-&gt;initialize();
-</span><span id="404" class="l">        <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'options'</span>]) ? <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'options'</span>] : <span class="php-keyword1">array</span>());
+</span><span id="404" class="l">        <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'options'</span>]) ? <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'options'</span>] : []);
 </span><span id="405" class="l">    }
 </span><span id="406" class="l">
 </span><span id="407" class="l">    <span class="php-comment">/**
@@ -1266,7 +1266,7 @@
 </span><span id="440" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getProperties()
 </span><span id="441" class="l">    {
 </span><span id="442" class="l">        <span class="php-var">$this</span>-&gt;initialize();
-</span><span id="443" class="l">        <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'properties'</span>]) ? <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'properties'</span>] : <span class="php-keyword1">array</span>());
+</span><span id="443" class="l">        <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'properties'</span>]) ? <span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'properties'</span>] : []);
 </span><span id="444" class="l">    }
 </span><span id="445" class="l">
 </span><span id="446" class="l">    <span class="php-comment">/**
@@ -1295,10 +1295,10 @@
 </span><span id="469" class="l">    {
 </span><span id="470" class="l">        <span class="php-var">$this</span>-&gt;initialize();
 </span><span id="471" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'properties'</span>])) {
-</span><span id="472" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="472" class="l">            <span class="php-keyword1">return</span> [];
 </span><span id="473" class="l">        }
 </span><span id="474" class="l">
-</span><span id="475" class="l">        <span class="php-var">$defaultValues</span> = <span class="php-keyword1">array</span>();
+</span><span id="475" class="l">        <span class="php-var">$defaultValues</span> = [];
 </span><span id="476" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'properties'</span>] <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; <span class="php-var">$propertyConfiguration</span>) {
 </span><span id="477" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'defaultValue'</span>])) {
 </span><span id="478" class="l">                <span class="php-var">$type</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'type'</span>]) ? <span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'type'</span>] : <span class="php-quote">''</span>;
@@ -1325,10 +1325,10 @@
 </span><span id="499" class="l">    {
 </span><span id="500" class="l">        <span class="php-var">$this</span>-&gt;initialize();
 </span><span id="501" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>])) {
-</span><span id="502" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="502" class="l">            <span class="php-keyword1">return</span> [];
 </span><span id="503" class="l">        }
 </span><span id="504" class="l">
-</span><span id="505" class="l">        <span class="php-var">$autoCreatedChildNodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="505" class="l">        <span class="php-var">$autoCreatedChildNodes</span> = [];
 </span><span id="506" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;fullConfiguration[<span class="php-quote">'childNodes'</span>] <span class="php-keyword1">as</span> <span class="php-var">$childNodeName</span> =&gt; <span class="php-var">$childNodeConfiguration</span>) {
 </span><span id="507" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$childNodeConfiguration</span>[<span class="php-quote">'type'</span>])) {
 </span><span id="508" class="l">                <span class="php-var">$autoCreatedChildNodes</span>[Utility::renderValidNodeName(<span class="php-var">$childNodeName</span>)] = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType(<span class="php-var">$childNodeConfiguration</span>[<span class="php-quote">'type'</span>]);
@@ -1350,7 +1350,7 @@
 </span></span><span id="524" class="l"><span class="php-comment">     */</span>
 </span><span id="525" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> allowsChildNodeType(NodeType <span class="php-var">$nodeType</span>)
 </span><span id="526" class="l">    {
-</span><span id="527" class="l">        <span class="php-var">$constraints</span> = <span class="php-var">$this</span>-&gt;getConfiguration(<span class="php-quote">'constraints.nodeTypes'</span>) ?: <span class="php-keyword1">array</span>();
+</span><span id="527" class="l">        <span class="php-var">$constraints</span> = <span class="php-var">$this</span>-&gt;getConfiguration(<span class="php-quote">'constraints.nodeTypes'</span>) ?: [];
 </span><span id="528" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;isNodeTypeAllowedByConstraints(<span class="php-var">$nodeType</span>, <span class="php-var">$constraints</span>);
 </span><span id="529" class="l">    }
 </span><span id="530" class="l">
@@ -1371,13 +1371,13 @@
 </span><span id="545" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$autoCreatedChildNodes</span>[<span class="php-var">$childNodeName</span>])) {
 </span><span id="546" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-quote">'The method &quot;allowsGrandchildNodeType&quot; can only be used on auto-created childNodes, given $childNodeName &quot;'</span> . <span class="php-var">$childNodeName</span> . <span class="php-quote">'&quot; is not auto-created.'</span>, <span class="php-num">1403858395</span>);
 </span><span id="547" class="l">        }
-</span><span id="548" class="l">        <span class="php-var">$constraints</span> = <span class="php-var">$autoCreatedChildNodes</span>[<span class="php-var">$childNodeName</span>]-&gt;getConfiguration(<span class="php-quote">'constraints.nodeTypes'</span>) ?: <span class="php-keyword1">array</span>();
+</span><span id="548" class="l">        <span class="php-var">$constraints</span> = <span class="php-var">$autoCreatedChildNodes</span>[<span class="php-var">$childNodeName</span>]-&gt;getConfiguration(<span class="php-quote">'constraints.nodeTypes'</span>) ?: [];
 </span><span id="549" class="l">
 </span><span id="550" class="l">        <span class="php-var">$childNodeConfiguration</span> = [];
 </span><span id="551" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;getConfiguration(<span class="php-quote">'childNodes'</span>) <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$configuration</span>) {
 </span><span id="552" class="l">            <span class="php-var">$childNodeConfiguration</span>[Utility::renderValidNodeName(<span class="php-var">$name</span>)] = <span class="php-var">$configuration</span>;
 </span><span id="553" class="l">        }
-</span><span id="554" class="l">        <span class="php-var">$childNodeConstraintConfiguration</span> = ObjectAccess::getPropertyPath(<span class="php-var">$childNodeConfiguration</span>, <span class="php-var">$childNodeName</span> . <span class="php-quote">'.constraints.nodeTypes'</span>) ?: <span class="php-keyword1">array</span>();
+</span><span id="554" class="l">        <span class="php-var">$childNodeConstraintConfiguration</span> = ObjectAccess::getPropertyPath(<span class="php-var">$childNodeConfiguration</span>, <span class="php-var">$childNodeName</span> . <span class="php-quote">'.constraints.nodeTypes'</span>) ?: [];
 </span><span id="555" class="l">
 </span><span id="556" class="l">        <span class="php-var">$constraints</span> = Arrays::arrayMergeRecursiveOverrule(<span class="php-var">$constraints</span>, <span class="php-var">$childNodeConstraintConfiguration</span>);
 </span><span id="557" class="l">
@@ -1425,7 +1425,7 @@
 </span></span><span id="599" class="l"><span class="php-comment">     */</span>
 </span><span id="600" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> isNodeTypeAllowedByDirectConstraints(NodeType <span class="php-var">$nodeType</span>, <span class="php-keyword1">array</span> <span class="php-var">$constraints</span>)
 </span><span id="601" class="l">    {
-</span><span id="602" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$constraints</span> === <span class="php-keyword1">array</span>()) {
+</span><span id="602" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$constraints</span> === []) {
 </span><span id="603" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
 </span><span id="604" class="l">        }
 </span><span id="605" class="l">

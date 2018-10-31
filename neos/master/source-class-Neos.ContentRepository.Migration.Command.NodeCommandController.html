@@ -933,13 +933,13 @@
 </span><span id="121" class="l">        }
 </span><span id="122" class="l">
 </span><span id="123" class="l">        <span class="php-var">$appliedMigrations</span> = <span class="php-var">$this</span>-&gt;migrationStatusRepository-&gt;findAll();
-</span><span id="124" class="l">        <span class="php-var">$appliedMigrationsDictionary</span> = <span class="php-keyword1">array</span>();
+</span><span id="124" class="l">        <span class="php-var">$appliedMigrationsDictionary</span> = [];
 </span><span id="125" class="l">        <span class="php-comment">/** @var $appliedMigration MigrationStatus */</span>
 </span><span id="126" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$appliedMigrations</span> <span class="php-keyword1">as</span> <span class="php-var">$appliedMigration</span>) {
 </span><span id="127" class="l">            <span class="php-var">$appliedMigrationsDictionary</span>[<span class="php-var">$appliedMigration</span>-&gt;getVersion()][] = <span class="php-var">$appliedMigration</span>;
 </span><span id="128" class="l">        }
 </span><span id="129" class="l">
-</span><span id="130" class="l">        <span class="php-var">$tableRows</span> = <span class="php-keyword1">array</span>();
+</span><span id="130" class="l">        <span class="php-var">$tableRows</span> = [];
 </span><span id="131" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$availableMigrations</span> <span class="php-keyword1">as</span> <span class="php-var">$version</span> =&gt; <span class="php-var">$migration</span>) {
 </span><span id="132" class="l">            <span class="php-var">$migrationUpConfigurationComments</span> = <span class="php-var">$this</span>-&gt;migrationFactory-&gt;getMigrationForVersion(<span class="php-var">$version</span>)-&gt;getUpConfiguration()-&gt;getComments();
 </span><span id="133" class="l">
@@ -950,17 +950,17 @@
 </span><span id="138" class="l">                }
 </span><span id="139" class="l">            }
 </span><span id="140" class="l">
-</span><span id="141" class="l">            <span class="php-var">$tableRows</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="141" class="l">            <span class="php-var">$tableRows</span>[] = [
 </span><span id="142" class="l">                <span class="php-var">$version</span>,
 </span><span id="143" class="l">                <span class="php-var">$migration</span>[<span class="php-quote">'formattedVersionNumber'</span>],
 </span><span id="144" class="l">                <span class="php-var">$migration</span>[<span class="php-quote">'package'</span>]-&gt;getPackageKey(),
 </span><span id="145" class="l">                <span class="php-keyword2">wordwrap</span>(<span class="php-var">$migrationUpConfigurationComments</span>, <span class="php-num">60</span>)
-</span><span id="146" class="l">            );
+</span><span id="146" class="l">            ];
 </span><span id="147" class="l">        }
 </span><span id="148" class="l">
 </span><span id="149" class="l">        <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;Available migrations&lt;/b&gt;'</span>);
 </span><span id="150" class="l">        <span class="php-var">$this</span>-&gt;outputLine();
-</span><span id="151" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputTable(<span class="php-var">$tableRows</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'Version'</span>, <span class="php-quote">'Date'</span>, <span class="php-quote">'Package'</span>, <span class="php-quote">'Comments'</span>));
+</span><span id="151" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputTable(<span class="php-var">$tableRows</span>, [<span class="php-quote">'Version'</span>, <span class="php-quote">'Date'</span>, <span class="php-quote">'Package'</span>, <span class="php-quote">'Comments'</span>]);
 </span><span id="152" class="l">    }
 </span><span id="153" class="l">
 </span><span id="154" class="l">    <span class="php-comment">/**
@@ -974,13 +974,13 @@
 </span><span id="162" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$migrationConfiguration</span>-&gt;hasComments()) {
 </span><span id="163" class="l">            <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="164" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;Comments&lt;/b&gt;'</span>);
-</span><span id="165" class="l">            <span class="php-var">$this</span>-&gt;outputFormatted(<span class="php-var">$migrationConfiguration</span>-&gt;getComments(), <span class="php-keyword1">array</span>(), <span class="php-num">2</span>);
+</span><span id="165" class="l">            <span class="php-var">$this</span>-&gt;outputFormatted(<span class="php-var">$migrationConfiguration</span>-&gt;getComments(), [], <span class="php-num">2</span>);
 </span><span id="166" class="l">        }
 </span><span id="167" class="l">
 </span><span id="168" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$migrationConfiguration</span>-&gt;hasWarnings()) {
 </span><span id="169" class="l">            <span class="php-var">$this</span>-&gt;outputLine();
 </span><span id="170" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;&lt;u&gt;Warnings&lt;/u&gt;&lt;/b&gt;'</span>);
-</span><span id="171" class="l">            <span class="php-var">$this</span>-&gt;outputFormatted(<span class="php-var">$migrationConfiguration</span>-&gt;getWarnings(), <span class="php-keyword1">array</span>(), <span class="php-num">2</span>);
+</span><span id="171" class="l">            <span class="php-var">$this</span>-&gt;outputFormatted(<span class="php-var">$migrationConfiguration</span>-&gt;getWarnings(), [], <span class="php-num">2</span>);
 </span><span id="172" class="l">        }
 </span><span id="173" class="l">    }
 </span><span id="174" class="l">
@@ -994,7 +994,7 @@
 </span><span id="182" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$migrationA</span>-&gt;getApplicationTimeStamp() &gt; <span class="php-var">$migrationB</span>-&gt;getApplicationTimeStamp();
 </span><span id="183" class="l">        });
 </span><span id="184" class="l">
-</span><span id="185" class="l">        <span class="php-var">$applied</span> = <span class="php-keyword1">array</span>();
+</span><span id="185" class="l">        <span class="php-var">$applied</span> = [];
 </span><span id="186" class="l">        <span class="php-comment">/** @var MigrationStatus $migrationStatus */</span>
 </span><span id="187" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$migrationsInVersion</span> <span class="php-keyword1">as</span> <span class="php-var">$migrationStatus</span>) {
 </span><span id="188" class="l">            <span class="php-var">$applied</span>[] = <span class="php-keyword2">sprintf</span>(

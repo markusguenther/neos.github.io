@@ -886,8 +886,8 @@
 </span></span><span id="57" class="l"><span class="php-comment">     */</span>
 </span><span id="58" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> evaluate(FlowQuery <span class="php-var">$flowQuery</span>, <span class="php-keyword1">array</span> <span class="php-var">$arguments</span>)
 </span><span id="59" class="l">    {
-</span><span id="60" class="l">        <span class="php-var">$output</span> = <span class="php-keyword1">array</span>();
-</span><span id="61" class="l">        <span class="php-var">$outputNodePaths</span> = <span class="php-keyword1">array</span>();
+</span><span id="60" class="l">        <span class="php-var">$output</span> = [];
+</span><span id="61" class="l">        <span class="php-var">$outputNodePaths</span> = [];
 </span><span id="62" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$arguments</span>[<span class="php-num">0</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$arguments</span>[<span class="php-num">0</span>])) {
 </span><span id="63" class="l">            <span class="php-var">$parsedFilter</span> = FizzleParser::parseFilterGroup(<span class="php-var">$arguments</span>[<span class="php-num">0</span>]);
 </span><span id="64" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;earlyOptimizationOfFilters(<span class="php-var">$flowQuery</span>, <span class="php-var">$parsedFilter</span>)) {
@@ -924,11 +924,11 @@
 </span><span id="95" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> earlyOptimizationOfFilters(FlowQuery <span class="php-var">$flowQuery</span>, <span class="php-keyword1">array</span> <span class="php-var">$parsedFilter</span>)
 </span><span id="96" class="l">    {
 </span><span id="97" class="l">        <span class="php-var">$optimized</span> = <span class="php-keyword1">false</span>;
-</span><span id="98" class="l">        <span class="php-var">$output</span> = <span class="php-keyword1">array</span>();
-</span><span id="99" class="l">        <span class="php-var">$outputNodePaths</span> = <span class="php-keyword1">array</span>();
+</span><span id="98" class="l">        <span class="php-var">$output</span> = [];
+</span><span id="99" class="l">        <span class="php-var">$outputNodePaths</span> = [];
 </span><span id="100" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$parsedFilter</span>[<span class="php-quote">'Filters'</span>] <span class="php-keyword1">as</span> <span class="php-var">$filter</span>) {
-</span><span id="101" class="l">            <span class="php-var">$instanceOfFilters</span> = <span class="php-keyword1">array</span>();
-</span><span id="102" class="l">            <span class="php-var">$attributeFilters</span> = <span class="php-keyword1">array</span>();
+</span><span id="101" class="l">            <span class="php-var">$instanceOfFilters</span> = [];
+</span><span id="102" class="l">            <span class="php-var">$attributeFilters</span> = [];
 </span><span id="103" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$filter</span>[<span class="php-quote">'AttributeFilters'</span>])) {
 </span><span id="104" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$filter</span>[<span class="php-quote">'AttributeFilters'</span>] <span class="php-keyword1">as</span> <span class="php-var">$attributeFilter</span>) {
 </span><span id="105" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$attributeFilter</span>[<span class="php-quote">'Operator'</span>] === <span class="php-quote">'instanceof'</span> &amp;&amp; <span class="php-var">$attributeFilter</span>[<span class="php-quote">'Identifier'</span>] === <span class="php-keyword1">null</span>) {
@@ -942,8 +942,8 @@
 </span><span id="113" class="l">            <span class="php-comment">// Only apply optimization if there's a property name filter or a instanceof filter or another filter already did optimization</span>
 </span><span id="114" class="l">            <span class="php-keyword1">if</span> ((<span class="php-keyword1">isset</span>(<span class="php-var">$filter</span>[<span class="php-quote">'PropertyNameFilter'</span>]) || <span class="php-keyword1">isset</span>(<span class="php-var">$filter</span>[<span class="php-quote">'PathFilter'</span>])) || <span class="php-keyword2">count</span>(<span class="php-var">$instanceOfFilters</span>) &gt; <span class="php-num">0</span> || <span class="php-var">$optimized</span> === <span class="php-keyword1">true</span>) {
 </span><span id="115" class="l">                <span class="php-var">$optimized</span> = <span class="php-keyword1">true</span>;
-</span><span id="116" class="l">                <span class="php-var">$filteredOutput</span> = <span class="php-keyword1">array</span>();
-</span><span id="117" class="l">                <span class="php-var">$filteredOutputNodePaths</span> = <span class="php-keyword1">array</span>();
+</span><span id="116" class="l">                <span class="php-var">$filteredOutput</span> = [];
+</span><span id="117" class="l">                <span class="php-var">$filteredOutputNodePaths</span> = [];
 </span><span id="118" class="l">                <span class="php-comment">// Optimize property name filter if present</span>
 </span><span id="119" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$filter</span>[<span class="php-quote">'PropertyNameFilter'</span>]) || <span class="php-keyword1">isset</span>(<span class="php-var">$filter</span>[<span class="php-quote">'PathFilter'</span>])) {
 </span><span id="120" class="l">                    <span class="php-var">$nodePath</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$filter</span>[<span class="php-quote">'PropertyNameFilter'</span>]) ? <span class="php-var">$filter</span>[<span class="php-quote">'PropertyNameFilter'</span>] : <span class="php-var">$filter</span>[<span class="php-quote">'PathFilter'</span>];
@@ -978,7 +978,7 @@
 </span><span id="149" class="l">                        <span class="php-keyword1">return</span> <span class="php-var">$filters</span> . <span class="php-var">$attributeFilter</span>[<span class="php-quote">'text'</span>];
 </span><span id="150" class="l">                    });
 </span><span id="151" class="l">                    <span class="php-var">$filteredFlowQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-var">$filteredOutput</span>);
-</span><span id="152" class="l">                    <span class="php-var">$filteredFlowQuery</span>-&gt;pushOperation(<span class="php-quote">'filter'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$attributeFilters</span>));
+</span><span id="152" class="l">                    <span class="php-var">$filteredFlowQuery</span>-&gt;pushOperation(<span class="php-quote">'filter'</span>, [<span class="php-var">$attributeFilters</span>]);
 </span><span id="153" class="l">                    <span class="php-var">$filteredOutput</span> = <span class="php-var">$filteredFlowQuery</span>-&gt;get();
 </span><span id="154" class="l">                }
 </span><span id="155" class="l">

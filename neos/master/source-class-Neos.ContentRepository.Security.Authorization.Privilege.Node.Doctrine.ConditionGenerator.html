@@ -895,7 +895,7 @@
 </span><span id="83" class="l">            <span class="php-var">$nodePath</span> = <span class="php-keyword2">rtrim</span>(<span class="php-var">$nodePathOrIdentifier</span>, <span class="php-quote">'/'</span>);
 </span><span id="84" class="l">        }
 </span><span id="85" class="l">
-</span><span id="86" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> DisjunctionGenerator(<span class="php-keyword1">array</span>(<span class="php-var">$propertyConditionGenerator1</span>-&gt;like(<span class="php-var">$nodePath</span> . <span class="php-quote">'/%'</span>), <span class="php-var">$propertyConditionGenerator2</span>-&gt;equals(<span class="php-var">$nodePath</span>)));
+</span><span id="86" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> DisjunctionGenerator([<span class="php-var">$propertyConditionGenerator1</span>-&gt;like(<span class="php-var">$nodePath</span> . <span class="php-quote">'/%'</span>), <span class="php-var">$propertyConditionGenerator2</span>-&gt;equals(<span class="php-var">$nodePath</span>)]);
 </span><span id="87" class="l">    }
 </span><span id="88" class="l">
 </span><span id="89" class="l">    <span class="php-comment">/**
@@ -907,12 +907,12 @@
 </span><span id="95" class="l">        <span class="php-var">$propertyConditionGenerator</span> = <span class="php-keyword1">new</span> PropertyConditionGenerator(<span class="php-quote">'nodeType'</span>);
 </span><span id="96" class="l">        <span class="php-var">$nodeTypes</span> = <span class="php-var">$propertyConditionGenerator</span>-&gt;getValueForOperand(<span class="php-var">$nodeTypes</span>);
 </span><span id="97" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$nodeTypes</span>)) {
-</span><span id="98" class="l">            <span class="php-var">$nodeTypes</span> = <span class="php-keyword1">array</span>(<span class="php-var">$nodeTypes</span>);
+</span><span id="98" class="l">            <span class="php-var">$nodeTypes</span> = [<span class="php-var">$nodeTypes</span>];
 </span><span id="99" class="l">        }
-</span><span id="100" class="l">        <span class="php-var">$expandedNodeTypeNames</span> = <span class="php-keyword1">array</span>();
+</span><span id="100" class="l">        <span class="php-var">$expandedNodeTypeNames</span> = [];
 </span><span id="101" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeTypeName</span>) {
 </span><span id="102" class="l">            <span class="php-var">$subNodeTypes</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-var">$nodeTypeName</span>, <span class="php-keyword1">false</span>);
-</span><span id="103" class="l">            <span class="php-var">$expandedNodeTypeNames</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$expandedNodeTypeNames</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeTypeName</span>), <span class="php-keyword2">array_keys</span>(<span class="php-var">$subNodeTypes</span>));
+</span><span id="103" class="l">            <span class="php-var">$expandedNodeTypeNames</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$expandedNodeTypeNames</span>, [<span class="php-var">$nodeTypeName</span>], <span class="php-keyword2">array_keys</span>(<span class="php-var">$subNodeTypes</span>));
 </span><span id="104" class="l">        }
 </span><span id="105" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$propertyConditionGenerator</span>-&gt;in(<span class="php-keyword2">array_unique</span>(<span class="php-var">$expandedNodeTypeNames</span>));
 </span><span id="106" class="l">    }
@@ -926,7 +926,7 @@
 </span><span id="114" class="l">        <span class="php-var">$propertyConditionGenerator</span> = <span class="php-keyword1">new</span> PropertyConditionGenerator(<span class="php-quote">'workspace'</span>);
 </span><span id="115" class="l">        <span class="php-var">$workspaceNames</span> = <span class="php-var">$propertyConditionGenerator</span>-&gt;getValueForOperand(<span class="php-var">$workspaceNames</span>);
 </span><span id="116" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$workspaceNames</span>)) {
-</span><span id="117" class="l">            <span class="php-var">$workspaceNames</span> = <span class="php-keyword1">array</span>(<span class="php-var">$workspaceNames</span>);
+</span><span id="117" class="l">            <span class="php-var">$workspaceNames</span> = [<span class="php-var">$workspaceNames</span>];
 </span><span id="118" class="l">        }
 </span><span id="119" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$propertyConditionGenerator</span>-&gt;in(<span class="php-var">$workspaceNames</span>);
 </span><span id="120" class="l">    }

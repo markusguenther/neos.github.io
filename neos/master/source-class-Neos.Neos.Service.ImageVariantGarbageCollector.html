@@ -884,7 +884,7 @@
 </span><span id="61" class="l">            <span class="php-keyword1">return</span>;
 </span><span id="62" class="l">        }
 </span><span id="63" class="l">        <span class="php-var">$identifier</span> = <span class="php-var">$this</span>-&gt;persistenceManager-&gt;getIdentifierByObject(<span class="php-var">$oldValue</span>);
-</span><span id="64" class="l">        <span class="php-var">$results</span> = <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findNodesByRelatedEntities(<span class="php-keyword1">array</span>(ImageVariant::<span class="php-keyword1">class</span> =&gt; [<span class="php-var">$identifier</span>]));
+</span><span id="64" class="l">        <span class="php-var">$results</span> = <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findNodesByRelatedEntities([ImageVariant::<span class="php-keyword1">class</span> =&gt; [<span class="php-var">$identifier</span>]]);
 </span><span id="65" class="l">
 </span><span id="66" class="l">        <span class="php-comment">// This case shouldn't happen as the query will usually find at least the node that triggered this call, still if there is no relation we can remove the ImageVariant.</span>
 </span><span id="67" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$results</span> === []) {

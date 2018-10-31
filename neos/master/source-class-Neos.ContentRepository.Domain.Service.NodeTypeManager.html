@@ -858,14 +858,14 @@
 </span></span><span id="33" class="l"><span class="php-comment">     *
 </span></span><span id="34" class="l"><span class="php-comment">     * @var array
 </span></span><span id="35" class="l"><span class="php-comment">     */</span>
-</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$cachedNodeTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$cachedNodeTypes</span> = [];
 </span><span id="37" class="l">
 </span><span id="38" class="l">    <span class="php-comment">/**
 </span></span><span id="39" class="l"><span class="php-comment">     * Node types, indexed by supertype (also including abstract node types)
 </span></span><span id="40" class="l"><span class="php-comment">     *
 </span></span><span id="41" class="l"><span class="php-comment">     * @var array
 </span></span><span id="42" class="l"><span class="php-comment">     */</span>
-</span><span id="43" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$cachedSubNodeTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="43" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$cachedSubNodeTypes</span> = [];
 </span><span id="44" class="l">
 </span><span id="45" class="l">    <span class="php-comment">/**
 </span></span><span id="46" class="l"><span class="php-comment">     * @Flow\Inject
@@ -899,7 +899,7 @@
 </span></span><span id="74" class="l"><span class="php-comment">     */</span>
 </span><span id="75" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getNodeTypes(<span class="php-var">$includeAbstractNodeTypes</span> = <span class="php-keyword1">true</span>)
 </span><span id="76" class="l">    {
-</span><span id="77" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === <span class="php-keyword1">array</span>()) {
+</span><span id="77" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === []) {
 </span><span id="78" class="l">            <span class="php-var">$this</span>-&gt;loadNodeTypes();
 </span><span id="79" class="l">        }
 </span><span id="80" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$includeAbstractNodeTypes</span>) {
@@ -924,7 +924,7 @@
 </span></span><span id="99" class="l"><span class="php-comment">     */</span>
 </span><span id="100" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getSubNodeTypes(<span class="php-var">$superTypeName</span>, <span class="php-var">$includeAbstractNodeTypes</span> = <span class="php-keyword1">true</span>)
 </span><span id="101" class="l">    {
-</span><span id="102" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === <span class="php-keyword1">array</span>()) {
+</span><span id="102" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === []) {
 </span><span id="103" class="l">            <span class="php-var">$this</span>-&gt;loadNodeTypes();
 </span><span id="104" class="l">        }
 </span><span id="105" class="l">
@@ -958,7 +958,7 @@
 </span></span><span id="133" class="l"><span class="php-comment">     */</span>
 </span><span id="134" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getNodeType(<span class="php-var">$nodeTypeName</span>)
 </span><span id="135" class="l">    {
-</span><span id="136" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === <span class="php-keyword1">array</span>()) {
+</span><span id="136" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === []) {
 </span><span id="137" class="l">            <span class="php-var">$this</span>-&gt;loadNodeTypes();
 </span><span id="138" class="l">        }
 </span><span id="139" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;cachedNodeTypes[<span class="php-var">$nodeTypeName</span>])) {
@@ -984,7 +984,7 @@
 </span></span><span id="159" class="l"><span class="php-comment">     */</span>
 </span><span id="160" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> hasNodeType(<span class="php-var">$nodeTypeName</span>)
 </span><span id="161" class="l">    {
-</span><span id="162" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === <span class="php-keyword1">array</span>()) {
+</span><span id="162" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;cachedNodeTypes === []) {
 </span><span id="163" class="l">            <span class="php-var">$this</span>-&gt;loadNodeTypes();
 </span><span id="164" class="l">        }
 </span><span id="165" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;cachedNodeTypes[<span class="php-var">$nodeTypeName</span>]);
@@ -1042,7 +1042,7 @@
 </span></span><span id="217" class="l"><span class="php-comment">     */</span>
 </span><span id="218" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> overrideNodeTypes(<span class="php-keyword1">array</span> <span class="php-var">$completeNodeTypeConfiguration</span>)
 </span><span id="219" class="l">    {
-</span><span id="220" class="l">        <span class="php-var">$this</span>-&gt;cachedNodeTypes = <span class="php-keyword1">array</span>();
+</span><span id="220" class="l">        <span class="php-var">$this</span>-&gt;cachedNodeTypes = [];
 </span><span id="221" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_keys</span>(<span class="php-var">$completeNodeTypeConfiguration</span>) <span class="php-keyword1">as</span> <span class="php-var">$nodeTypeName</span>) {
 </span><span id="222" class="l">            <span class="php-var">$this</span>-&gt;loadNodeType(<span class="php-var">$nodeTypeName</span>, <span class="php-var">$completeNodeTypeConfiguration</span>);
 </span><span id="223" class="l">        }

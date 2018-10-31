@@ -855,7 +855,7 @@
 </span></span><span id="43" class="l"><span class="php-comment">     */</span>
 </span><span id="44" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> addAttributes(<span class="php-var">$html</span>, <span class="php-keyword1">array</span> <span class="php-var">$attributes</span>, <span class="php-var">$fallbackTagName</span> = <span class="php-quote">'div'</span>, <span class="php-keyword1">array</span> <span class="php-var">$exclusiveAttributes</span> = <span class="php-keyword1">null</span>)
 </span><span id="45" class="l">    {
-</span><span id="46" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$attributes</span> === <span class="php-keyword1">array</span>()) {
+</span><span id="46" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$attributes</span> === []) {
 </span><span id="47" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$html</span>;
 </span><span id="48" class="l">        }
 </span><span id="49" class="l">        <span class="php-var">$rootElement</span> = <span class="php-var">$this</span>-&gt;getHtmlRootElement(<span class="php-var">$html</span>);
@@ -911,14 +911,14 @@
 </span><span id="99" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$element</span>-&gt;attributes <span class="php-keyword1">as</span> <span class="php-var">$attribute</span>) {
 </span><span id="100" class="l">            <span class="php-var">$oldAttributeValue</span> = <span class="php-var">$attribute</span>-&gt;hasChildNodes() ? <span class="php-var">$attribute</span>-&gt;value : <span class="php-keyword1">null</span>;
 </span><span id="101" class="l">            <span class="php-var">$newAttributeValue</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$newAttributes</span>[<span class="php-var">$attribute</span>-&gt;name]) ? <span class="php-var">$newAttributes</span>[<span class="php-var">$attribute</span>-&gt;name] : <span class="php-keyword1">null</span>;
-</span><span id="102" class="l">            <span class="php-var">$mergedAttributes</span> = <span class="php-keyword1">array</span>();
+</span><span id="102" class="l">            <span class="php-var">$mergedAttributes</span> = [];
 </span><span id="103" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$newAttributeValue</span> !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-var">$newAttributeValue</span> !== <span class="php-var">$oldAttributeValue</span>) {
 </span><span id="104" class="l">                <span class="php-var">$mergedAttributes</span>[] = <span class="php-var">$newAttributeValue</span>;
 </span><span id="105" class="l">            }
 </span><span id="106" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$oldAttributeValue</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="107" class="l">                <span class="php-var">$mergedAttributes</span>[] = <span class="php-var">$oldAttributeValue</span>;
 </span><span id="108" class="l">            }
-</span><span id="109" class="l">            <span class="php-var">$newAttributes</span>[<span class="php-var">$attribute</span>-&gt;name] = <span class="php-var">$mergedAttributes</span> !== <span class="php-keyword1">array</span>() ? <span class="php-keyword2">implode</span>(<span class="php-quote">' '</span>, <span class="php-var">$mergedAttributes</span>) : <span class="php-keyword1">null</span>;
+</span><span id="109" class="l">            <span class="php-var">$newAttributes</span>[<span class="php-var">$attribute</span>-&gt;name] = <span class="php-var">$mergedAttributes</span> !== [] ? <span class="php-keyword2">implode</span>(<span class="php-quote">' '</span>, <span class="php-var">$mergedAttributes</span>) : <span class="php-keyword1">null</span>;
 </span><span id="110" class="l">        }
 </span><span id="111" class="l">    }
 </span><span id="112" class="l">

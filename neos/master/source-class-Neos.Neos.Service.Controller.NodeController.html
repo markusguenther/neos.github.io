@@ -860,18 +860,18 @@
 </span><span id="44" class="l">    <span class="php-comment">/**
 </span></span><span id="45" class="l"><span class="php-comment">     * @var array
 </span></span><span id="46" class="l"><span class="php-comment">     */</span>
-</span><span id="47" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$viewFormatToObjectNameMap</span> = <span class="php-keyword1">array</span>(
+</span><span id="47" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$viewFormatToObjectNameMap</span> = [
 </span><span id="48" class="l">        <span class="php-quote">'html'</span> =&gt; NodeView::<span class="php-keyword1">class</span>,
 </span><span id="49" class="l">        <span class="php-quote">'json'</span> =&gt; NodeView::<span class="php-keyword1">class</span>
-</span><span id="50" class="l">    );
+</span><span id="50" class="l">    ];
 </span><span id="51" class="l">
 </span><span id="52" class="l">    <span class="php-comment">/**
 </span></span><span id="53" class="l"><span class="php-comment">     * @var array
 </span></span><span id="54" class="l"><span class="php-comment">     */</span>
-</span><span id="55" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$supportedMediaTypes</span> = <span class="php-keyword1">array</span>(
+</span><span id="55" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$supportedMediaTypes</span> = [
 </span><span id="56" class="l">        <span class="php-quote">'text/html'</span>,
 </span><span id="57" class="l">        <span class="php-quote">'application/json'</span>
-</span><span id="58" class="l">    );
+</span><span id="58" class="l">    ];
 </span><span id="59" class="l">
 </span><span id="60" class="l">    <span class="php-comment">/**
 </span></span><span id="61" class="l"><span class="php-comment">     * @Flow\Inject
@@ -926,7 +926,7 @@
 </span><span id="110" class="l">            <span class="php-var">$this</span>-&gt;arguments-&gt;getArgument(<span class="php-quote">'referenceNode'</span>)-&gt;getPropertyMappingConfiguration()-&gt;setTypeConverterOption(NodeConverter::<span class="php-keyword1">class</span>, NodeConverter::REMOVED_CONTENT_SHOWN, <span class="php-keyword1">true</span>);
 </span><span id="111" class="l">        }
 </span><span id="112" class="l">        <span class="php-var">$this</span>-&gt;uriBuilder-&gt;setRequest(<span class="php-var">$this</span>-&gt;request-&gt;getMainRequest());
-</span><span id="113" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$this</span>-&gt;request-&gt;getControllerActionName(), <span class="php-keyword1">array</span>(<span class="php-quote">'update'</span>, <span class="php-quote">'updateAndRender'</span>), <span class="php-keyword1">true</span>)) {
+</span><span id="113" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$this</span>-&gt;request-&gt;getControllerActionName(), [<span class="php-quote">'update'</span>, <span class="php-quote">'updateAndRender'</span>], <span class="php-keyword1">true</span>)) {
 </span><span id="114" class="l">            <span class="php-comment">// Set PropertyMappingConfiguration for updating the node (and attached objects)</span>
 </span><span id="115" class="l">            <span class="php-var">$propertyMappingConfiguration</span> = <span class="php-var">$this</span>-&gt;arguments-&gt;getArgument(<span class="php-quote">'node'</span>)-&gt;getPropertyMappingConfiguration();
 </span><span id="116" class="l">            <span class="php-var">$propertyMappingConfiguration</span>-&gt;allowOverrideTargetType();
@@ -965,12 +965,12 @@
 </span></span><span id="149" class="l"><span class="php-comment">     */</span>
 </span><span id="150" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> filterChildNodesForTreeAction(Node <span class="php-var">$node</span>, <span class="php-var">$term</span>, <span class="php-var">$nodeType</span>)
 </span><span id="151" class="l">    {
-</span><span id="152" class="l">        <span class="php-var">$nodeTypes</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$nodeType</span>) &gt; <span class="php-num">0</span> ? <span class="php-keyword1">array</span>(<span class="php-var">$nodeType</span>) : <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-quote">'Neos.Neos:Document'</span>, <span class="php-keyword1">false</span>));
+</span><span id="152" class="l">        <span class="php-var">$nodeTypes</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$nodeType</span>) &gt; <span class="php-num">0</span> ? [<span class="php-var">$nodeType</span>] : <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-quote">'Neos.Neos:Document'</span>, <span class="php-keyword1">false</span>));
 </span><span id="153" class="l">        <span class="php-var">$context</span> = <span class="php-var">$node</span>-&gt;getContext();
 </span><span id="154" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$term</span> !== <span class="php-quote">''</span>) {
 </span><span id="155" class="l">            <span class="php-var">$nodes</span> = <span class="php-var">$this</span>-&gt;nodeSearchService-&gt;findByProperties(<span class="php-var">$term</span>, <span class="php-var">$nodeTypes</span>, <span class="php-var">$context</span>, <span class="php-var">$node</span>);
 </span><span id="156" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="157" class="l">            <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="157" class="l">            <span class="php-var">$nodes</span> = [];
 </span><span id="158" class="l">            <span class="php-var">$nodeDataRecords</span> = <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findByParentAndNodeTypeRecursively(<span class="php-var">$node</span>-&gt;getPath(), <span class="php-keyword2">implode</span>(<span class="php-quote">','</span>, <span class="php-var">$nodeTypes</span>), <span class="php-var">$context</span>-&gt;getWorkspace(), <span class="php-var">$context</span>-&gt;getDimensions());
 </span><span id="159" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeDataRecords</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeData</span>) {
 </span><span id="160" class="l">                <span class="php-var">$matchedNode</span> = <span class="php-var">$this</span>-&gt;nodeFactory-&gt;createFromNodeData(<span class="php-var">$nodeData</span>, <span class="php-var">$context</span>);
@@ -1004,8 +1004,8 @@
 </span><span id="188" class="l">            <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
 </span><span id="189" class="l">        }
 </span><span id="190" class="l">
-</span><span id="191" class="l">        <span class="php-var">$nextUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$newNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
-</span><span id="192" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$nextUri</span>), <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="191" class="l">        <span class="php-var">$nextUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$newNode</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="192" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; [<span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$nextUri</span>], <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="193" class="l">    }
 </span><span id="194" class="l">
 </span><span id="195" class="l">    <span class="php-comment">/**
@@ -1057,11 +1057,11 @@
 </span><span id="241" class="l">            <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
 </span><span id="242" class="l">        }
 </span><span id="243" class="l">
-</span><span id="244" class="l">        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'newNodePath'</span> =&gt; <span class="php-var">$node</span>-&gt;getContextPath());
+</span><span id="244" class="l">        <span class="php-var">$data</span> = [<span class="php-quote">'newNodePath'</span> =&gt; <span class="php-var">$node</span>-&gt;getContextPath()];
 </span><span id="245" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getNodeType()-&gt;isOfType(<span class="php-quote">'Neos.Neos:Document'</span>)) {
-</span><span id="246" class="l">            <span class="php-var">$data</span>[<span class="php-quote">'nextUri'</span>] = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="246" class="l">            <span class="php-var">$data</span>[<span class="php-quote">'nextUri'</span>] = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="247" class="l">        }
-</span><span id="248" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$data</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="248" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$data</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="249" class="l">    }
 </span><span id="250" class="l">
 </span><span id="251" class="l">    <span class="php-comment">/**
@@ -1100,19 +1100,19 @@
 </span><span id="284" class="l">            <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
 </span><span id="285" class="l">        }
 </span><span id="286" class="l">
-</span><span id="287" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$copiedNode</span>));
+</span><span id="287" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$copiedNode</span>]);
 </span><span id="288" class="l">        <span class="php-var">$closestDocumentNode</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:Document]'</span>)-&gt;get(<span class="php-num">0</span>);
 </span><span id="289" class="l">
-</span><span id="290" class="l">        <span class="php-var">$requestData</span> = <span class="php-keyword1">array</span>(
-</span><span id="291" class="l">            <span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>),
+</span><span id="290" class="l">        <span class="php-var">$requestData</span> = [
+</span><span id="291" class="l">            <span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>),
 </span><span id="292" class="l">            <span class="php-quote">'newNodePath'</span> =&gt; <span class="php-var">$copiedNode</span>-&gt;getContextPath()
-</span><span id="293" class="l">        );
+</span><span id="293" class="l">        ];
 </span><span id="294" class="l">
 </span><span id="295" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getNodeType()-&gt;isOfType(<span class="php-quote">'Neos.Neos:Document'</span>)) {
-</span><span id="296" class="l">            <span class="php-var">$requestData</span>[<span class="php-quote">'nodeUri'</span>] = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$copiedNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="296" class="l">            <span class="php-var">$requestData</span>[<span class="php-quote">'nodeUri'</span>] = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$copiedNode</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="297" class="l">        }
 </span><span id="298" class="l">
-</span><span id="299" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$requestData</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="299" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$requestData</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="300" class="l">    }
 </span><span id="301" class="l">
 </span><span id="302" class="l">    <span class="php-comment">/**
@@ -1153,17 +1153,17 @@
 </span><span id="337" class="l">            <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
 </span><span id="338" class="l">        }
 </span><span id="339" class="l">
-</span><span id="340" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$node</span>));
+</span><span id="340" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$node</span>]);
 </span><span id="341" class="l">        <span class="php-var">$closestDocumentNode</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:Document]'</span>)-&gt;get(<span class="php-num">0</span>);
-</span><span id="342" class="l">        <span class="php-var">$nextUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
-</span><span id="343" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(
-</span><span id="344" class="l">            <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="342" class="l">        <span class="php-var">$nextUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="343" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [
+</span><span id="344" class="l">            <span class="php-quote">'data'</span> =&gt; [
 </span><span id="345" class="l">                <span class="php-quote">'workspaceNameOfNode'</span> =&gt; <span class="php-var">$node</span>-&gt;getWorkspace()-&gt;getName(),
 </span><span id="346" class="l">                <span class="php-quote">'labelOfNode'</span> =&gt; <span class="php-var">$node</span>-&gt;getLabel(),
 </span><span id="347" class="l">                <span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$nextUri</span>
-</span><span id="348" class="l">            ),
+</span><span id="348" class="l">            ],
 </span><span id="349" class="l">            <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>
-</span><span id="350" class="l">        ));
+</span><span id="350" class="l">        ]);
 </span><span id="351" class="l">    }
 </span><span id="352" class="l">
 </span><span id="353" class="l">    <span class="php-comment">/**
@@ -1193,12 +1193,12 @@
 </span><span id="377" class="l">            <span class="php-var">$this</span>-&gt;persistenceManager-&gt;persistAll();
 </span><span id="378" class="l">        }
 </span><span id="379" class="l">
-</span><span id="380" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$node</span>));
+</span><span id="380" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$node</span>]);
 </span><span id="381" class="l">        <span class="php-var">$node</span>-&gt;remove();
 </span><span id="382" class="l">        <span class="php-var">$closestDocumentNode</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:Document]'</span>)-&gt;get(<span class="php-num">0</span>);
-</span><span id="383" class="l">        <span class="php-var">$nextUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="383" class="l">        <span class="php-var">$nextUri</span> = <span class="php-var">$this</span>-&gt;uriBuilder-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$closestDocumentNode</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="384" class="l">
-</span><span id="385" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$nextUri</span>), <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="385" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; [<span class="php-quote">'nextUri'</span> =&gt; <span class="php-var">$nextUri</span>], <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="386" class="l">    }
 </span><span id="387" class="l">
 </span><span id="388" class="l">    <span class="php-comment">/**
@@ -1210,7 +1210,7 @@
 </span></span><span id="394" class="l"><span class="php-comment">     */</span>
 </span><span id="395" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> redirectToRenderNode(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$fusionPath</span>)
 </span><span id="396" class="l">    {
-</span><span id="397" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$node</span>));
+</span><span id="397" class="l">        <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$node</span>]);
 </span><span id="398" class="l">        <span class="php-var">$closestContentCollection</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:ContentCollection]'</span>)-&gt;get(<span class="php-num">0</span>);
 </span><span id="399" class="l">        <span class="php-var">$closestDocumentNode</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:Document]'</span>)-&gt;get(<span class="php-num">0</span>);
 </span><span id="400" class="l">
@@ -1231,12 +1231,12 @@
 </span></span><span id="415" class="l"><span class="php-comment">     */</span>
 </span><span id="416" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> processNodeForEditorPlugins(NodeInterface <span class="php-var">$node</span>)
 </span><span id="417" class="l">    {
-</span><span id="418" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="418" class="l">        <span class="php-keyword1">return</span> [
 </span><span id="419" class="l">            <span class="php-quote">'id'</span> =&gt; <span class="php-var">$node</span>-&gt;getPath(),
 </span><span id="420" class="l">            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$node</span>-&gt;getLabel(),
-</span><span id="421" class="l">            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$this</span>-&gt;uriBuilder-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>),
+</span><span id="421" class="l">            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$this</span>-&gt;uriBuilder-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>),
 </span><span id="422" class="l">            <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'neos/internal-link'</span>
-</span><span id="423" class="l">        );
+</span><span id="423" class="l">        ];
 </span><span id="424" class="l">    }
 </span><span id="425" class="l">
 </span><span id="426" class="l">    <span class="php-comment">/**
@@ -1247,9 +1247,9 @@
 </span></span><span id="431" class="l"><span class="php-comment">     */</span>
 </span><span id="432" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createContext(<span class="php-var">$workspaceName</span>)
 </span><span id="433" class="l">    {
-</span><span id="434" class="l">        <span class="php-var">$contextProperties</span> = <span class="php-keyword1">array</span>(
+</span><span id="434" class="l">        <span class="php-var">$contextProperties</span> = [
 </span><span id="435" class="l">            <span class="php-quote">'workspaceName'</span> =&gt; <span class="php-var">$workspaceName</span>
-</span><span id="436" class="l">        );
+</span><span id="436" class="l">        ];
 </span><span id="437" class="l">
 </span><span id="438" class="l">        <span class="php-var">$currentDomain</span> = <span class="php-var">$this</span>-&gt;domainRepository-&gt;findOneByActiveRequest();
 </span><span id="439" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$currentDomain</span> !== <span class="php-keyword1">null</span>) {

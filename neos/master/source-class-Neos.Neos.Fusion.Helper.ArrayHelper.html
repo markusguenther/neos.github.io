@@ -897,7 +897,7 @@
 </span></span><span id="82" class="l"><span class="php-comment">     */</span>
 </span><span id="83" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> groupBy(<span class="php-var">$set</span>, <span class="php-var">$groupingKey</span>)
 </span><span id="84" class="l">    {
-</span><span id="85" class="l">        <span class="php-var">$result</span> = <span class="php-keyword1">array</span>();
+</span><span id="85" class="l">        <span class="php-var">$result</span> = [];
 </span><span id="86" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$set</span> <span class="php-keyword1">as</span> <span class="php-var">$element</span>) {
 </span><span id="87" class="l">            <span class="php-var">$result</span>[ObjectAccess::getPropertyPath(<span class="php-var">$element</span>, <span class="php-var">$groupingKey</span>)][] = <span class="php-var">$element</span>;
 </span><span id="88" class="l">        }

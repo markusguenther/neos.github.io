@@ -890,15 +890,15 @@
 </span><span id="61" class="l">    {
 </span><span id="62" class="l">        <span class="php-var">$subject</span> = <span class="php-var">$arguments</span>[<span class="php-num">0</span>];
 </span><span id="63" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$subject</span>) || <span class="php-keyword1">empty</span>(<span class="php-var">$subject</span>)) {
-</span><span id="64" class="l">            <span class="php-var">$flowQuery</span>-&gt;setContext(<span class="php-keyword1">array</span>());
+</span><span id="64" class="l">            <span class="php-var">$flowQuery</span>-&gt;setContext([]);
 </span><span id="65" class="l">            <span class="php-keyword1">return</span>;
 </span><span id="66" class="l">        }
 </span><span id="67" class="l">
-</span><span id="68" class="l">        <span class="php-var">$filteredContext</span> = <span class="php-keyword1">array</span>();
+</span><span id="68" class="l">        <span class="php-var">$filteredContext</span> = [];
 </span><span id="69" class="l">        <span class="php-var">$context</span> = <span class="php-var">$flowQuery</span>-&gt;getContext();
 </span><span id="70" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$subject</span>)) {
 </span><span id="71" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$context</span> <span class="php-keyword1">as</span> <span class="php-var">$contextElement</span>) {
-</span><span id="72" class="l">                <span class="php-var">$contextElementQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$contextElement</span>));
+</span><span id="72" class="l">                <span class="php-var">$contextElementQuery</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$contextElement</span>]);
 </span><span id="73" class="l">                <span class="php-var">$contextElementQuery</span>-&gt;pushOperation(<span class="php-quote">'children'</span>, <span class="php-var">$arguments</span>);
 </span><span id="74" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$contextElementQuery</span>-&gt;<span class="php-keyword2">count</span>() &gt; <span class="php-num">0</span>) {
 </span><span id="75" class="l">                    <span class="php-var">$filteredContext</span>[] = <span class="php-var">$contextElement</span>;
@@ -910,7 +910,7 @@
 </span><span id="81" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-var">$subject</span> <span class="php-keyword1">instanceof</span> \Traversable) {
 </span><span id="82" class="l">                <span class="php-var">$elements</span> = <span class="php-keyword2">iterator_to_array</span>(<span class="php-var">$subject</span>);
 </span><span id="83" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$subject</span>)) {
-</span><span id="84" class="l">                <span class="php-var">$elements</span> = <span class="php-keyword1">array</span>(<span class="php-var">$subject</span>);
+</span><span id="84" class="l">                <span class="php-var">$elements</span> = [<span class="php-var">$subject</span>];
 </span><span id="85" class="l">            } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$subject</span>)) {
 </span><span id="86" class="l">                <span class="php-var">$elements</span> = <span class="php-var">$subject</span>;
 </span><span id="87" class="l">            } <span class="php-keyword1">else</span> {
@@ -918,9 +918,9 @@
 </span><span id="89" class="l">            }
 </span><span id="90" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$elements</span> <span class="php-keyword1">as</span> <span class="php-var">$element</span>) {
 </span><span id="91" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$element</span> <span class="php-keyword1">instanceof</span> NodeInterface) {
-</span><span id="92" class="l">                    <span class="php-var">$parentsQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$element</span>));
+</span><span id="92" class="l">                    <span class="php-var">$parentsQuery</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$element</span>]);
 </span><span id="93" class="l">                    <span class="php-comment">/** @var NodeInterface $parent */</span>
-</span><span id="94" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$parentsQuery</span>-&gt;parents(<span class="php-keyword1">array</span>())-&gt;get() <span class="php-keyword1">as</span> <span class="php-var">$parent</span>) {
+</span><span id="94" class="l">                    <span class="php-keyword1">foreach</span> (<span class="php-var">$parentsQuery</span>-&gt;parents([])-&gt;get() <span class="php-keyword1">as</span> <span class="php-var">$parent</span>) {
 </span><span id="95" class="l">                        <span class="php-comment">/** @var NodeInterface $contextElement */</span>
 </span><span id="96" class="l">                        <span class="php-keyword1">foreach</span> (<span class="php-var">$context</span> <span class="php-keyword1">as</span> <span class="php-var">$contextElement</span>) {
 </span><span id="97" class="l">                            <span class="php-keyword1">if</span> (<span class="php-var">$contextElement</span>-&gt;getIdentifier() === <span class="php-var">$parent</span>-&gt;getIdentifier()) {

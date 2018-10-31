@@ -836,9 +836,9 @@
 </span><span id="22" class="l">    <span class="php-comment">/**
 </span></span><span id="23" class="l"><span class="php-comment">     * @var array Array of the default options that apply to this renderer.
 </span></span><span id="24" class="l"><span class="php-comment">     */</span>
-</span><span id="25" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$defaultOptions</span> = <span class="php-keyword1">array</span>(
+</span><span id="25" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$defaultOptions</span> = [
 </span><span id="26" class="l">        <span class="php-quote">'tabSize'</span> =&gt; <span class="php-num">4</span>
-</span><span id="27" class="l">    );
+</span><span id="27" class="l">    ];
 </span><span id="28" class="l">
 </span><span id="29" class="l">    <span class="php-comment">/**
 </span></span><span id="30" class="l"><span class="php-comment">     * Render and return an array structure suitable for generating HTML
@@ -855,10 +855,10 @@
 </span><span id="41" class="l">        <span class="php-var">$a</span> = <span class="php-var">$this</span>-&gt;diff-&gt;getA();
 </span><span id="42" class="l">        <span class="php-var">$b</span> = <span class="php-var">$this</span>-&gt;diff-&gt;getB();
 </span><span id="43" class="l">
-</span><span id="44" class="l">        <span class="php-var">$changes</span> = <span class="php-keyword1">array</span>();
+</span><span id="44" class="l">        <span class="php-var">$changes</span> = [];
 </span><span id="45" class="l">        <span class="php-var">$opCodes</span> = <span class="php-var">$this</span>-&gt;diff-&gt;getGroupedOpcodes();
 </span><span id="46" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$opCodes</span> <span class="php-keyword1">as</span> <span class="php-var">$group</span>) {
-</span><span id="47" class="l">            <span class="php-var">$blocks</span> = <span class="php-keyword1">array</span>();
+</span><span id="47" class="l">            <span class="php-var">$blocks</span> = [];
 </span><span id="48" class="l">            <span class="php-var">$lastTag</span> = <span class="php-keyword1">null</span>;
 </span><span id="49" class="l">            <span class="php-var">$lastBlock</span> = <span class="php-num">0</span>;
 </span><span id="50" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$group</span> <span class="php-keyword1">as</span> <span class="php-var">$code</span>) {
@@ -884,17 +884,17 @@
 </span><span id="70" class="l">                }
 </span><span id="71" class="l">
 </span><span id="72" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$tag</span> != <span class="php-var">$lastTag</span>) {
-</span><span id="73" class="l">                    <span class="php-var">$blocks</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="73" class="l">                    <span class="php-var">$blocks</span>[] = [
 </span><span id="74" class="l">                        <span class="php-quote">'tag'</span> =&gt; <span class="php-var">$tag</span>,
-</span><span id="75" class="l">                        <span class="php-quote">'base'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="75" class="l">                        <span class="php-quote">'base'</span> =&gt; [
 </span><span id="76" class="l">                            <span class="php-quote">'offset'</span> =&gt; <span class="php-var">$i1</span>,
-</span><span id="77" class="l">                            <span class="php-quote">'lines'</span> =&gt; <span class="php-keyword1">array</span>()
-</span><span id="78" class="l">                        ),
-</span><span id="79" class="l">                        <span class="php-quote">'changed'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="77" class="l">                            <span class="php-quote">'lines'</span> =&gt; []
+</span><span id="78" class="l">                        ],
+</span><span id="79" class="l">                        <span class="php-quote">'changed'</span> =&gt; [
 </span><span id="80" class="l">                            <span class="php-quote">'offset'</span> =&gt; <span class="php-var">$j1</span>,
-</span><span id="81" class="l">                            <span class="php-quote">'lines'</span> =&gt; <span class="php-keyword1">array</span>()
-</span><span id="82" class="l">                        )
-</span><span id="83" class="l">                    );
+</span><span id="81" class="l">                            <span class="php-quote">'lines'</span> =&gt; []
+</span><span id="82" class="l">                        ]
+</span><span id="83" class="l">                    ];
 </span><span id="84" class="l">                    <span class="php-var">$lastBlock</span> = <span class="php-keyword2">count</span>(<span class="php-var">$blocks</span>) - <span class="php-num">1</span>;
 </span><span id="85" class="l">                }
 </span><span id="86" class="l">
@@ -909,14 +909,14 @@
 </span><span id="95" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$tag</span> == <span class="php-quote">'replace'</span> || <span class="php-var">$tag</span> == <span class="php-quote">'delete'</span>) {
 </span><span id="96" class="l">                        <span class="php-var">$lines</span> = <span class="php-keyword2">array_slice</span>(<span class="php-var">$a</span>, <span class="php-var">$i1</span>, (<span class="php-var">$i2</span> - <span class="php-var">$i1</span>));
 </span><span id="97" class="l">                        <span class="php-var">$lines</span> = <span class="php-var">$this</span>-&gt;formatLines(<span class="php-var">$lines</span>);
-</span><span id="98" class="l">                        <span class="php-var">$lines</span> = <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">&quot;\0&quot;</span>, <span class="php-quote">&quot;\1&quot;</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'&lt;del&gt;'</span>, <span class="php-quote">'&lt;/del&gt;'</span>), <span class="php-var">$lines</span>);
+</span><span id="98" class="l">                        <span class="php-var">$lines</span> = <span class="php-keyword2">str_replace</span>([<span class="php-quote">&quot;\0&quot;</span>, <span class="php-quote">&quot;\1&quot;</span>], [<span class="php-quote">'&lt;del&gt;'</span>, <span class="php-quote">'&lt;/del&gt;'</span>], <span class="php-var">$lines</span>);
 </span><span id="99" class="l">                        <span class="php-var">$blocks</span>[<span class="php-var">$lastBlock</span>][<span class="php-quote">'base'</span>][<span class="php-quote">'lines'</span>] += <span class="php-var">$lines</span>;
 </span><span id="100" class="l">                    }
 </span><span id="101" class="l">
 </span><span id="102" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$tag</span> == <span class="php-quote">'replace'</span> || <span class="php-var">$tag</span> == <span class="php-quote">'insert'</span>) {
 </span><span id="103" class="l">                        <span class="php-var">$lines</span> = <span class="php-keyword2">array_slice</span>(<span class="php-var">$b</span>, <span class="php-var">$j1</span>, (<span class="php-var">$j2</span> - <span class="php-var">$j1</span>));
 </span><span id="104" class="l">                        <span class="php-var">$lines</span> = <span class="php-var">$this</span>-&gt;formatLines(<span class="php-var">$lines</span>);
-</span><span id="105" class="l">                        <span class="php-var">$lines</span> = <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">&quot;\0&quot;</span>, <span class="php-quote">&quot;\1&quot;</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'&lt;ins&gt;'</span>, <span class="php-quote">'&lt;/ins&gt;'</span>), <span class="php-var">$lines</span>);
+</span><span id="105" class="l">                        <span class="php-var">$lines</span> = <span class="php-keyword2">str_replace</span>([<span class="php-quote">&quot;\0&quot;</span>, <span class="php-quote">&quot;\1&quot;</span>], [<span class="php-quote">'&lt;ins&gt;'</span>, <span class="php-quote">'&lt;/ins&gt;'</span>], <span class="php-var">$lines</span>);
 </span><span id="106" class="l">                        <span class="php-var">$blocks</span>[<span class="php-var">$lastBlock</span>][<span class="php-quote">'changed'</span>][<span class="php-quote">'lines'</span>] += <span class="php-var">$lines</span>;
 </span><span id="107" class="l">                    }
 </span><span id="108" class="l">                }
@@ -946,10 +946,10 @@
 </span><span id="132" class="l">        <span class="php-keyword1">while</span> (-<span class="php-var">$end</span> &lt;= <span class="php-var">$limit</span> &amp;&amp; <span class="php-keyword2">substr</span>(<span class="php-var">$fromLine</span>, <span class="php-var">$end</span>, <span class="php-num">1</span>) == <span class="php-keyword2">substr</span>(<span class="php-var">$toLine</span>, <span class="php-var">$end</span>, <span class="php-num">1</span>)) {
 </span><span id="133" class="l">            --<span class="php-var">$end</span>;
 </span><span id="134" class="l">        }
-</span><span id="135" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="135" class="l">        <span class="php-keyword1">return</span> [
 </span><span id="136" class="l">            <span class="php-var">$start</span>,
 </span><span id="137" class="l">            <span class="php-var">$end</span> + <span class="php-num">1</span>
-</span><span id="138" class="l">        );
+</span><span id="138" class="l">        ];
 </span><span id="139" class="l">    }
 </span><span id="140" class="l">
 </span><span id="141" class="l">    <span class="php-comment">/**
@@ -962,8 +962,8 @@
 </span></span><span id="148" class="l"><span class="php-comment">     */</span>
 </span><span id="149" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> formatLines(<span class="php-keyword1">array</span> <span class="php-var">$lines</span>)
 </span><span id="150" class="l">    {
-</span><span id="151" class="l">        <span class="php-var">$lines</span> = <span class="php-keyword2">array_map</span>(<span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'ExpandTabs'</span>), <span class="php-var">$lines</span>);
-</span><span id="152" class="l">        <span class="php-var">$lines</span> = <span class="php-keyword2">array_map</span>(<span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'HtmlSafe'</span>), <span class="php-var">$lines</span>);
+</span><span id="151" class="l">        <span class="php-var">$lines</span> = <span class="php-keyword2">array_map</span>([<span class="php-var">$this</span>, <span class="php-quote">'ExpandTabs'</span>], <span class="php-var">$lines</span>);
+</span><span id="152" class="l">        <span class="php-var">$lines</span> = <span class="php-keyword2">array_map</span>([<span class="php-var">$this</span>, <span class="php-quote">'HtmlSafe'</span>], <span class="php-var">$lines</span>);
 </span><span id="153" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$lines</span> <span class="php-keyword1">as</span> &amp;<span class="php-var">$line</span>) {
 </span><span id="154" class="l">            <span class="php-var">$line</span> = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'# ( +)|^ #'</span>, <span class="php-keyword1">function</span> (<span class="php-keyword1">array</span> <span class="php-var">$matches</span>) {
 </span><span id="155" class="l">                <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">1</span>]) ? <span class="php-var">$matches</span>[<span class="php-num">1</span>] : <span class="php-quote">''</span>);

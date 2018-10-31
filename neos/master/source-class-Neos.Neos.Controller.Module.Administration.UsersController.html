@@ -889,7 +889,7 @@
 </span><span id="73" class="l">            <span class="php-var">$propertyMappingConfigurationForPrimaryAccount</span> = <span class="php-var">$propertyMappingConfigurationForUser</span>-&gt;forProperty(<span class="php-quote">'user.primaryAccount'</span>);
 </span><span id="74" class="l">            <span class="php-var">$propertyMappingConfigurationForPrimaryAccount</span>-&gt;setTypeConverterOption(PersistentObjectConverter::<span class="php-keyword1">class</span>, PersistentObjectConverter::CONFIGURATION_TARGET_TYPE, Account::<span class="php-keyword1">class</span>);
 </span><span id="75" class="l">            <span class="php-comment">/** @var PropertyMappingConfiguration $propertyMappingConfiguration */</span>
-</span><span id="76" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-keyword1">array</span>(<span class="php-var">$propertyMappingConfigurationForUser</span>, <span class="php-var">$propertyMappingConfigurationForUserName</span>, <span class="php-var">$propertyMappingConfigurationForPrimaryAccount</span>) <span class="php-keyword1">as</span> <span class="php-var">$propertyMappingConfiguration</span>) {
+</span><span id="76" class="l">            <span class="php-keyword1">foreach</span> ([<span class="php-var">$propertyMappingConfigurationForUser</span>, <span class="php-var">$propertyMappingConfigurationForUserName</span>, <span class="php-var">$propertyMappingConfigurationForPrimaryAccount</span>] <span class="php-keyword1">as</span> <span class="php-var">$propertyMappingConfiguration</span>) {
 </span><span id="77" class="l">                <span class="php-var">$propertyMappingConfiguration</span>-&gt;setTypeConverterOption(PersistentObjectConverter::<span class="php-keyword1">class</span>, PersistentObjectConverter::CONFIGURATION_CREATION_ALLOWED, <span class="php-keyword1">true</span>);
 </span><span id="78" class="l">                <span class="php-var">$propertyMappingConfiguration</span>-&gt;setTypeConverterOption(PersistentObjectConverter::<span class="php-keyword1">class</span>, PersistentObjectConverter::CONFIGURATION_MODIFICATION_ALLOWED, <span class="php-keyword1">true</span>);
 </span><span id="79" class="l">            }
@@ -904,10 +904,10 @@
 </span></span><span id="88" class="l"><span class="php-comment">     */</span>
 </span><span id="89" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> indexAction()
 </span><span id="90" class="l">    {
-</span><span id="91" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="91" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="92" class="l">            <span class="php-quote">'currentUser'</span> =&gt; <span class="php-var">$this</span>-&gt;currentUser,
 </span><span id="93" class="l">            <span class="php-quote">'users'</span> =&gt; <span class="php-var">$this</span>-&gt;userService-&gt;getUsers()
-</span><span id="94" class="l">        ));
+</span><span id="94" class="l">        ]);
 </span><span id="95" class="l">    }
 </span><span id="96" class="l">
 </span><span id="97" class="l">    <span class="php-comment">/**
@@ -918,10 +918,10 @@
 </span></span><span id="102" class="l"><span class="php-comment">     */</span>
 </span><span id="103" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> showAction(User <span class="php-var">$user</span>)
 </span><span id="104" class="l">    {
-</span><span id="105" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="105" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="106" class="l">            <span class="php-quote">'currentUser'</span> =&gt; <span class="php-var">$this</span>-&gt;currentUser,
 </span><span id="107" class="l">            <span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>
-</span><span id="108" class="l">        ));
+</span><span id="108" class="l">        ]);
 </span><span id="109" class="l">    }
 </span><span id="110" class="l">
 </span><span id="111" class="l">    <span class="php-comment">/**
@@ -932,12 +932,12 @@
 </span></span><span id="116" class="l"><span class="php-comment">     */</span>
 </span><span id="117" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> newAction(User <span class="php-var">$user</span> = <span class="php-keyword1">null</span>)
 </span><span id="118" class="l">    {
-</span><span id="119" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="119" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="120" class="l">            <span class="php-quote">'currentUser'</span> =&gt; <span class="php-var">$this</span>-&gt;currentUser,
 </span><span id="121" class="l">            <span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>,
 </span><span id="122" class="l">            <span class="php-quote">'roles'</span> =&gt; <span class="php-var">$this</span>-&gt;policyService-&gt;getRoles(),
 </span><span id="123" class="l">            <span class="php-quote">'providers'</span> =&gt; <span class="php-var">$this</span>-&gt;getAuthenticationProviders()
-</span><span id="124" class="l">        ));
+</span><span id="124" class="l">        ]);
 </span><span id="125" class="l">    }
 </span><span id="126" class="l">
 </span><span id="127" class="l">    <span class="php-comment">/**
@@ -956,7 +956,7 @@
 </span><span id="140" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createAction(<span class="php-var">$username</span>, <span class="php-keyword1">array</span> <span class="php-var">$password</span>, User <span class="php-var">$user</span>, <span class="php-keyword1">array</span> <span class="php-var">$roleIdentifiers</span>, <span class="php-var">$authenticationProviderName</span> = <span class="php-keyword1">null</span>)
 </span><span id="141" class="l">    {
 </span><span id="142" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;addUser(<span class="php-var">$username</span>, <span class="php-var">$password</span>[<span class="php-num">0</span>], <span class="php-var">$user</span>, <span class="php-var">$roleIdentifiers</span>, <span class="php-var">$authenticationProviderName</span>);
-</span><span id="143" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The user &quot;%s&quot; has been created.'</span>, <span class="php-quote">'User created'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$username</span>)), <span class="php-num">1416225561</span>);
+</span><span id="143" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The user &quot;%s&quot; has been created.'</span>, <span class="php-quote">'User created'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$username</span>)], <span class="php-num">1416225561</span>);
 </span><span id="144" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="145" class="l">    }
 </span><span id="146" class="l">
@@ -970,10 +970,10 @@
 </span><span id="154" class="l">    {
 </span><span id="155" class="l">        <span class="php-var">$this</span>-&gt;assignElectronicAddressOptions();
 </span><span id="156" class="l">
-</span><span id="157" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="157" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="158" class="l">            <span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>,
 </span><span id="159" class="l">            <span class="php-quote">'availableRoles'</span> =&gt; <span class="php-var">$this</span>-&gt;policyService-&gt;getRoles()
-</span><span id="160" class="l">        ));
+</span><span id="160" class="l">        ]);
 </span><span id="161" class="l">    }
 </span><span id="162" class="l">
 </span><span id="163" class="l">    <span class="php-comment">/**
@@ -985,7 +985,7 @@
 </span><span id="169" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateAction(User <span class="php-var">$user</span>)
 </span><span id="170" class="l">    {
 </span><span id="171" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;updateUser(<span class="php-var">$user</span>);
-</span><span id="172" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The user &quot;%s&quot; has been updated.'</span>, <span class="php-quote">'User updated'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-var">$user</span>-&gt;getName()-&gt;getFullName()), <span class="php-num">1412374498</span>);
+</span><span id="172" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The user &quot;%s&quot; has been updated.'</span>, <span class="php-quote">'User updated'</span>, Message::SEVERITY_OK, [<span class="php-var">$user</span>-&gt;getName()-&gt;getFullName()], <span class="php-num">1412374498</span>);
 </span><span id="173" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="174" class="l">    }
 </span><span id="175" class="l">
@@ -998,11 +998,11 @@
 </span><span id="182" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> deleteAction(User <span class="php-var">$user</span>)
 </span><span id="183" class="l">    {
 </span><span id="184" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$user</span> === <span class="php-var">$this</span>-&gt;currentUser) {
-</span><span id="185" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'You can not delete the currently logged in user'</span>, <span class="php-quote">'Current user can\'t be deleted'</span>, Message::SEVERITY_WARNING, <span class="php-keyword1">array</span>(), <span class="php-num">1412374546</span>);
+</span><span id="185" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'You can not delete the currently logged in user'</span>, <span class="php-quote">'Current user can\'t be deleted'</span>, Message::SEVERITY_WARNING, [], <span class="php-num">1412374546</span>);
 </span><span id="186" class="l">            <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="187" class="l">        }
 </span><span id="188" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;deleteUser(<span class="php-var">$user</span>);
-</span><span id="189" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The user &quot;%s&quot; has been deleted.'</span>, <span class="php-quote">'User deleted'</span>, Message::SEVERITY_NOTICE, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$user</span>-&gt;getName()-&gt;getFullName())), <span class="php-num">1412374546</span>);
+</span><span id="189" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The user &quot;%s&quot; has been deleted.'</span>, <span class="php-quote">'User deleted'</span>, Message::SEVERITY_NOTICE, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$user</span>-&gt;getName()-&gt;getFullName())], <span class="php-num">1412374546</span>);
 </span><span id="190" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="191" class="l">    }
 </span><span id="192" class="l">
@@ -1014,11 +1014,11 @@
 </span></span><span id="198" class="l"><span class="php-comment">     */</span>
 </span><span id="199" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> editAccountAction(Account <span class="php-var">$account</span>)
 </span><span id="200" class="l">    {
-</span><span id="201" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="201" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="202" class="l">            <span class="php-quote">'account'</span> =&gt; <span class="php-var">$account</span>,
 </span><span id="203" class="l">            <span class="php-quote">'user'</span> =&gt; <span class="php-var">$this</span>-&gt;userService-&gt;getUser(<span class="php-var">$account</span>-&gt;getAccountIdentifier(), <span class="php-var">$account</span>-&gt;getAuthenticationProviderName()),
 </span><span id="204" class="l">            <span class="php-quote">'availableRoles'</span> =&gt; <span class="php-var">$this</span>-&gt;policyService-&gt;getRoles()
-</span><span id="205" class="l">        ));
+</span><span id="205" class="l">        ]);
 </span><span id="206" class="l">    }
 </span><span id="207" class="l">
 </span><span id="208" class="l">    <span class="php-comment">/**
@@ -1030,17 +1030,17 @@
 </span></span><span id="214" class="l"><span class="php-comment">     * @Flow\Validate(argumentName=&quot;password&quot;, type=&quot;\Neos\Neos\Validation\Validator\PasswordValidator&quot;, options={ &quot;allowEmpty&quot;=1, &quot;minimum&quot;=1, &quot;maximum&quot;=255 })
 </span></span><span id="215" class="l"><span class="php-comment">     * @return void
 </span></span><span id="216" class="l"><span class="php-comment">     */</span>
-</span><span id="217" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateAccountAction(Account <span class="php-var">$account</span>, <span class="php-keyword1">array</span> <span class="php-var">$roleIdentifiers</span>, <span class="php-keyword1">array</span> <span class="php-var">$password</span> = <span class="php-keyword1">array</span>())
+</span><span id="217" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateAccountAction(Account <span class="php-var">$account</span>, <span class="php-keyword1">array</span> <span class="php-var">$roleIdentifiers</span>, <span class="php-keyword1">array</span> <span class="php-var">$password</span> = [])
 </span><span id="218" class="l">    {
 </span><span id="219" class="l">        <span class="php-var">$user</span> = <span class="php-var">$this</span>-&gt;userService-&gt;getUser(<span class="php-var">$account</span>-&gt;getAccountIdentifier(), <span class="php-var">$account</span>-&gt;getAuthenticationProviderName());
 </span><span id="220" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$user</span> === <span class="php-var">$this</span>-&gt;currentUser) {
-</span><span id="221" class="l">            <span class="php-var">$roles</span> = <span class="php-keyword1">array</span>();
+</span><span id="221" class="l">            <span class="php-var">$roles</span> = [];
 </span><span id="222" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$roleIdentifiers</span> <span class="php-keyword1">as</span> <span class="php-var">$roleIdentifier</span>) {
 </span><span id="223" class="l">                <span class="php-var">$roles</span>[<span class="php-var">$roleIdentifier</span>] = <span class="php-var">$this</span>-&gt;policyService-&gt;getRole(<span class="php-var">$roleIdentifier</span>);
 </span><span id="224" class="l">            }
 </span><span id="225" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;privilegeManager-&gt;isPrivilegeTargetGrantedForRoles(<span class="php-var">$roles</span>, <span class="php-quote">'Neos.Neos:Backend.Module.Administration.Users'</span>)) {
-</span><span id="226" class="l">                <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'With the selected roles the currently logged in user wouldn\'t have access to this module any longer. Please adjust the assigned roles!'</span>, <span class="php-quote">'Don\'t lock yourself out'</span>, Message::SEVERITY_WARNING, <span class="php-keyword1">array</span>(), <span class="php-num">1416501197</span>);
-</span><span id="227" class="l">                <span class="php-var">$this</span>-&gt;forward(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'user'</span> =&gt; <span class="php-var">$this</span>-&gt;currentUser));
+</span><span id="226" class="l">                <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'With the selected roles the currently logged in user wouldn\'t have access to this module any longer. Please adjust the assigned roles!'</span>, <span class="php-quote">'Don\'t lock yourself out'</span>, Message::SEVERITY_WARNING, [], <span class="php-num">1416501197</span>);
+</span><span id="227" class="l">                <span class="php-var">$this</span>-&gt;forward(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'user'</span> =&gt; <span class="php-var">$this</span>-&gt;currentUser]);
 </span><span id="228" class="l">            }
 </span><span id="229" class="l">        }
 </span><span id="230" class="l">        <span class="php-var">$password</span> = <span class="php-keyword2">array_shift</span>(<span class="php-var">$password</span>);
@@ -1050,7 +1050,7 @@
 </span><span id="234" class="l">
 </span><span id="235" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;setRolesForAccount(<span class="php-var">$account</span>, <span class="php-var">$roleIdentifiers</span>);
 </span><span id="236" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The account has been updated.'</span>, <span class="php-quote">'Account updated'</span>, Message::SEVERITY_OK);
-</span><span id="237" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>));
+</span><span id="237" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>]);
 </span><span id="238" class="l">    }
 </span><span id="239" class="l">
 </span><span id="240" class="l">    <span class="php-comment">/**
@@ -1079,8 +1079,8 @@
 </span><span id="263" class="l">        <span class="php-var">$user</span>-&gt;addElectronicAddress(<span class="php-var">$electronicAddress</span>);
 </span><span id="264" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;updateUser(<span class="php-var">$user</span>);
 </span><span id="265" class="l">
-</span><span id="266" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'An electronic address &quot;%s&quot; (%s) has been added.'</span>, <span class="php-quote">'Electronic address added'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;getIdentifier()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;<span class="php-keyword2">getType</span>())), <span class="php-num">1412374814</span>);
-</span><span id="267" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>));
+</span><span id="266" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'An electronic address &quot;%s&quot; (%s) has been added.'</span>, <span class="php-quote">'Electronic address added'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;getIdentifier()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;<span class="php-keyword2">getType</span>())], <span class="php-num">1412374814</span>);
+</span><span id="267" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>]);
 </span><span id="268" class="l">    }
 </span><span id="269" class="l">
 </span><span id="270" class="l">    <span class="php-comment">/**
@@ -1095,8 +1095,8 @@
 </span><span id="279" class="l">        <span class="php-var">$user</span>-&gt;removeElectronicAddress(<span class="php-var">$electronicAddress</span>);
 </span><span id="280" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;updateUser(<span class="php-var">$user</span>);
 </span><span id="281" class="l">
-</span><span id="282" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The electronic address &quot;%s&quot; (%s) has been deleted for &quot;%s&quot;.'</span>, <span class="php-quote">'Electronic address removed'</span>, Message::SEVERITY_NOTICE, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;getIdentifier()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;<span class="php-keyword2">getType</span>()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$user</span>-&gt;getName())), <span class="php-num">1412374678</span>);
-</span><span id="283" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>));
+</span><span id="282" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The electronic address &quot;%s&quot; (%s) has been deleted for &quot;%s&quot;.'</span>, <span class="php-quote">'Electronic address removed'</span>, Message::SEVERITY_NOTICE, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;getIdentifier()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$electronicAddress</span>-&gt;<span class="php-keyword2">getType</span>()), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$user</span>-&gt;getName())], <span class="php-num">1412374678</span>);
+</span><span id="283" class="l">        <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'user'</span> =&gt; <span class="php-var">$user</span>]);
 </span><span id="284" class="l">    }
 </span><span id="285" class="l">
 </span><span id="286" class="l">    <span class="php-comment">/**
@@ -1105,20 +1105,20 @@
 </span><span id="289" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> assignElectronicAddressOptions()
 </span><span id="290" class="l">    {
 </span><span id="291" class="l">        <span class="php-var">$electronicAddress</span> = <span class="php-keyword1">new</span> ElectronicAddress();
-</span><span id="292" class="l">        <span class="php-var">$electronicAddressTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="292" class="l">        <span class="php-var">$electronicAddressTypes</span> = [];
 </span><span id="293" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$electronicAddress</span>-&gt;getAvailableElectronicAddressTypes() <span class="php-keyword1">as</span> <span class="php-var">$type</span>) {
 </span><span id="294" class="l">            <span class="php-var">$electronicAddressTypes</span>[<span class="php-var">$type</span>] = <span class="php-var">$type</span>;
 </span><span id="295" class="l">        }
-</span><span id="296" class="l">        <span class="php-var">$electronicAddressUsageTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="296" class="l">        <span class="php-var">$electronicAddressUsageTypes</span> = [];
 </span><span id="297" class="l">        <span class="php-var">$translationHelper</span> = <span class="php-keyword1">new</span> TranslationHelper();
 </span><span id="298" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$electronicAddress</span>-&gt;getAvailableUsageTypes() <span class="php-keyword1">as</span> <span class="php-var">$type</span>) {
 </span><span id="299" class="l">            <span class="php-var">$electronicAddressUsageTypes</span>[<span class="php-var">$type</span>] = <span class="php-var">$translationHelper</span>-&gt;translate(<span class="php-quote">'users.electronicAddress.usage.type.'</span> . <span class="php-var">$type</span>, <span class="php-var">$type</span>, [], <span class="php-quote">'Modules'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="300" class="l">        }
 </span><span id="301" class="l">        <span class="php-keyword2">array_unshift</span>(<span class="php-var">$electronicAddressUsageTypes</span>, <span class="php-quote">''</span>);
-</span><span id="302" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="302" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="303" class="l">            <span class="php-quote">'electronicAddressTypes'</span> =&gt; <span class="php-var">$electronicAddressTypes</span>,
 </span><span id="304" class="l">            <span class="php-quote">'electronicAddressUsageTypes'</span> =&gt; <span class="php-var">$electronicAddressUsageTypes</span>
-</span><span id="305" class="l">        ));
+</span><span id="305" class="l">        ]);
 </span><span id="306" class="l">    }
 </span><span id="307" class="l">
 </span><span id="308" class="l">    <span class="php-comment">/**

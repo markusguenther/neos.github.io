@@ -890,14 +890,14 @@
 </span><span id="61" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> FlowQueryException(<span class="php-quote">'closest() requires a filter argument'</span>, <span class="php-num">1332492263</span>);
 </span><span id="62" class="l">        }
 </span><span id="63" class="l">
-</span><span id="64" class="l">        <span class="php-var">$output</span> = <span class="php-keyword1">array</span>();
+</span><span id="64" class="l">        <span class="php-var">$output</span> = [];
 </span><span id="65" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$flowQuery</span>-&gt;getContext() <span class="php-keyword1">as</span> <span class="php-var">$contextNode</span>) {
-</span><span id="66" class="l">            <span class="php-var">$contextNodeQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$contextNode</span>));
-</span><span id="67" class="l">            <span class="php-var">$contextNodeQuery</span>-&gt;pushOperation(<span class="php-quote">'first'</span>, <span class="php-keyword1">array</span>());
+</span><span id="66" class="l">            <span class="php-var">$contextNodeQuery</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$contextNode</span>]);
+</span><span id="67" class="l">            <span class="php-var">$contextNodeQuery</span>-&gt;pushOperation(<span class="php-quote">'first'</span>, []);
 </span><span id="68" class="l">            <span class="php-var">$contextNodeQuery</span>-&gt;pushOperation(<span class="php-quote">'filter'</span>, <span class="php-var">$arguments</span>);
 </span><span id="69" class="l">
-</span><span id="70" class="l">            <span class="php-var">$parentsQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$contextNode</span>));
-</span><span id="71" class="l">            <span class="php-var">$contextNodeQuery</span>-&gt;pushOperation(<span class="php-quote">'add'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$parentsQuery</span>-&gt;parents(<span class="php-var">$arguments</span>[<span class="php-num">0</span>])-&gt;get()));
+</span><span id="70" class="l">            <span class="php-var">$parentsQuery</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$contextNode</span>]);
+</span><span id="71" class="l">            <span class="php-var">$contextNodeQuery</span>-&gt;pushOperation(<span class="php-quote">'add'</span>, [<span class="php-var">$parentsQuery</span>-&gt;parents(<span class="php-var">$arguments</span>[<span class="php-num">0</span>])-&gt;get()]);
 </span><span id="72" class="l">
 </span><span id="73" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$contextNodeQuery</span> <span class="php-keyword1">as</span> <span class="php-var">$result</span>) {
 </span><span id="74" class="l">                <span class="php-var">$output</span>[<span class="php-var">$result</span>-&gt;getPath()] = <span class="php-var">$result</span>;

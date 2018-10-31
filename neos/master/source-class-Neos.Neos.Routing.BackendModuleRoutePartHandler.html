@@ -877,11 +877,11 @@
 </span><span id="57" class="l">        <span class="php-var">$segments</span> = Arrays::trimExplode(<span class="php-quote">'/'</span>, <span class="php-var">$value</span>);
 </span><span id="58" class="l">
 </span><span id="59" class="l">        <span class="php-var">$currentModuleBase</span> = <span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'modules'</span>];
-</span><span id="60" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$segments</span> === <span class="php-keyword1">array</span>() || !<span class="php-keyword1">isset</span>(<span class="php-var">$currentModuleBase</span>[<span class="php-var">$segments</span>[<span class="php-num">0</span>]])) {
+</span><span id="60" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$segments</span> === [] || !<span class="php-keyword1">isset</span>(<span class="php-var">$currentModuleBase</span>[<span class="php-var">$segments</span>[<span class="php-num">0</span>]])) {
 </span><span id="61" class="l">            <span class="php-keyword1">return</span> self::MATCHRESULT_NOSUCHMODULE;
 </span><span id="62" class="l">        }
 </span><span id="63" class="l">
-</span><span id="64" class="l">        <span class="php-var">$modulePath</span> = <span class="php-keyword1">array</span>();
+</span><span id="64" class="l">        <span class="php-var">$modulePath</span> = [];
 </span><span id="65" class="l">        <span class="php-var">$level</span> = <span class="php-num">0</span>;
 </span><span id="66" class="l">        <span class="php-var">$moduleConfiguration</span> = <span class="php-keyword1">null</span>;
 </span><span id="67" class="l">        <span class="php-var">$moduleController</span> = <span class="php-keyword1">null</span>;
@@ -900,7 +900,7 @@
 </span><span id="80" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'submodules'</span>])) {
 </span><span id="81" class="l">                    <span class="php-var">$currentModuleBase</span> = <span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'submodules'</span>];
 </span><span id="82" class="l">                } <span class="php-keyword1">else</span> {
-</span><span id="83" class="l">                    <span class="php-var">$currentModuleBase</span> = <span class="php-keyword1">array</span>();
+</span><span id="83" class="l">                    <span class="php-var">$currentModuleBase</span> = [];
 </span><span id="84" class="l">                }
 </span><span id="85" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="86" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$level</span> === <span class="php-keyword2">count</span>(<span class="php-var">$segments</span>) - <span class="php-num">1</span>) {
@@ -919,11 +919,11 @@
 </span><span id="99" class="l">            <span class="php-keyword1">return</span> self::MATCHRESULT_NOCONTROLLER;
 </span><span id="100" class="l">        }
 </span><span id="101" class="l">
-</span><span id="102" class="l">        <span class="php-var">$this</span>-&gt;value = <span class="php-keyword1">array</span>(
+</span><span id="102" class="l">        <span class="php-var">$this</span>-&gt;value = [
 </span><span id="103" class="l">            <span class="php-quote">'module'</span> =&gt; <span class="php-keyword2">implode</span>(<span class="php-quote">'/'</span>, <span class="php-var">$modulePath</span>),
 </span><span id="104" class="l">            <span class="php-quote">'controller'</span> =&gt; <span class="php-var">$moduleController</span>,
 </span><span id="105" class="l">            <span class="php-quote">'action'</span> =&gt; <span class="php-var">$moduleAction</span>
-</span><span id="106" class="l">        );
+</span><span id="106" class="l">        ];
 </span><span id="107" class="l">
 </span><span id="108" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$format</span> !== <span class="php-quote">''</span>) {
 </span><span id="109" class="l">            <span class="php-var">$this</span>-&gt;value[<span class="php-quote">'format'</span>] = <span class="php-var">$format</span>;

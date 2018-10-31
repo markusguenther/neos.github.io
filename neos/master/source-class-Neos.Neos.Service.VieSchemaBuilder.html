@@ -857,12 +857,12 @@
 </span><span id="34" class="l">    <span class="php-comment">/**
 </span></span><span id="35" class="l"><span class="php-comment">     * @var array
 </span></span><span id="36" class="l"><span class="php-comment">     */</span>
-</span><span id="37" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$properties</span> = <span class="php-keyword1">array</span>();
+</span><span id="37" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$properties</span> = [];
 </span><span id="38" class="l">
 </span><span id="39" class="l">    <span class="php-comment">/**
 </span></span><span id="40" class="l"><span class="php-comment">     * @var array
 </span></span><span id="41" class="l"><span class="php-comment">     */</span>
-</span><span id="42" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$types</span> = <span class="php-keyword1">array</span>();
+</span><span id="42" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$types</span> = [];
 </span><span id="43" class="l">
 </span><span id="44" class="l">    <span class="php-comment">/**
 </span></span><span id="45" class="l"><span class="php-comment">     * @var object
@@ -872,7 +872,7 @@
 </span><span id="49" class="l">    <span class="php-comment">/**
 </span></span><span id="50" class="l"><span class="php-comment">     * @var array
 </span></span><span id="51" class="l"><span class="php-comment">     */</span>
-</span><span id="52" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$superTypeConfiguration</span> = <span class="php-keyword1">array</span>();
+</span><span id="52" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$superTypeConfiguration</span> = [];
 </span><span id="53" class="l">
 </span><span id="54" class="l">    <span class="php-comment">/**
 </span></span><span id="55" class="l"><span class="php-comment">     * Converts the nodes types to a fully structured array
@@ -916,15 +916,15 @@
 </span><span id="93" class="l">        <span class="php-comment">// Convert the Neos.Neos:ContentCollection element to support content-collection</span>
 </span><span id="94" class="l">        <span class="php-comment">// TODO Move to node type definition</span>
 </span><span id="95" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;types[<span class="php-quote">'typo3:Neos.Neos:ContentCollection'</span>])) {
-</span><span id="96" class="l">            <span class="php-var">$this</span>-&gt;addProperty(<span class="php-quote">'typo3:Neos.Neos:ContentCollection'</span>, <span class="php-quote">'typo3:content-collection'</span>, <span class="php-keyword1">array</span>());
+</span><span id="96" class="l">            <span class="php-var">$this</span>-&gt;addProperty(<span class="php-quote">'typo3:Neos.Neos:ContentCollection'</span>, <span class="php-quote">'typo3:content-collection'</span>, []);
 </span><span id="97" class="l">            <span class="php-var">$this</span>-&gt;types[<span class="php-quote">'typo3:Neos.Neos:ContentCollection'</span>]-&gt;specific_properties[] = <span class="php-quote">'typo3:content-collection'</span>;
 </span><span id="98" class="l">            <span class="php-var">$this</span>-&gt;properties[<span class="php-quote">'typo3:content-collection'</span>]-&gt;ranges = <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;types);
 </span><span id="99" class="l">        }
 </span><span id="100" class="l">
-</span><span id="101" class="l">        <span class="php-var">$this</span>-&gt;configuration = (object) <span class="php-keyword1">array</span>(
+</span><span id="101" class="l">        <span class="php-var">$this</span>-&gt;configuration = (object) [
 </span><span id="102" class="l">            <span class="php-quote">'types'</span> =&gt; (object) <span class="php-var">$this</span>-&gt;types,
 </span><span id="103" class="l">            <span class="php-quote">'properties'</span> =&gt; (object) <span class="php-var">$this</span>-&gt;properties,
-</span><span id="104" class="l">        );
+</span><span id="104" class="l">        ];
 </span><span id="105" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;configuration;
 </span><span id="106" class="l">    }
 </span><span id="107" class="l">
@@ -936,13 +936,13 @@
 </span><span id="113" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> readNodeTypeConfiguration(<span class="php-var">$nodeTypeName</span>, NodeType <span class="php-var">$nodeType</span>)
 </span><span id="114" class="l">    {
 </span><span id="115" class="l">        <span class="php-var">$nodeTypeConfiguration</span> = <span class="php-var">$nodeType</span>-&gt;getFullConfiguration();
-</span><span id="116" class="l">        <span class="php-var">$this</span>-&gt;superTypeConfiguration[<span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>] = <span class="php-keyword1">array</span>();
+</span><span id="116" class="l">        <span class="php-var">$this</span>-&gt;superTypeConfiguration[<span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>] = [];
 </span><span id="117" class="l">        <span class="php-comment">/** @var NodeType $superType */</span>
 </span><span id="118" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeType</span>-&gt;getDeclaredSuperTypes() <span class="php-keyword1">as</span> <span class="php-var">$superType</span>) {
 </span><span id="119" class="l">            <span class="php-var">$this</span>-&gt;superTypeConfiguration[<span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>][] = <span class="php-quote">'typo3:'</span> . <span class="php-var">$superType</span>-&gt;getName();
 </span><span id="120" class="l">        }
 </span><span id="121" class="l">
-</span><span id="122" class="l">        <span class="php-var">$nodeTypeProperties</span> = <span class="php-keyword1">array</span>();
+</span><span id="122" class="l">        <span class="php-var">$nodeTypeProperties</span> = [];
 </span><span id="123" class="l">
 </span><span id="124" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$nodeTypeConfiguration</span>[<span class="php-quote">'properties'</span>])) {
 </span><span id="125" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypeConfiguration</span>[<span class="php-quote">'properties'</span>] <span class="php-keyword1">as</span> <span class="php-var">$property</span> =&gt; <span class="php-var">$propertyConfiguration</span>) {
@@ -952,8 +952,8 @@
 </span><span id="129" class="l">            }
 </span><span id="130" class="l">        }
 </span><span id="131" class="l">
-</span><span id="132" class="l">        <span class="php-var">$metadata</span> = <span class="php-keyword1">array</span>();
-</span><span id="133" class="l">        <span class="php-var">$metaDataPropertyIndexes</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'ui'</span>);
+</span><span id="132" class="l">        <span class="php-var">$metadata</span> = [];
+</span><span id="133" class="l">        <span class="php-var">$metaDataPropertyIndexes</span> = [<span class="php-quote">'ui'</span>];
 </span><span id="134" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$metaDataPropertyIndexes</span> <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span>) {
 </span><span id="135" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$nodeTypeConfiguration</span>[<span class="php-var">$propertyName</span>])) {
 </span><span id="136" class="l">                <span class="php-var">$metadata</span>[<span class="php-var">$propertyName</span>] = <span class="php-var">$nodeTypeConfiguration</span>[<span class="php-var">$propertyName</span>];
@@ -963,19 +963,19 @@
 </span><span id="140" class="l">            <span class="php-var">$metadata</span>[<span class="php-quote">'abstract'</span>] = <span class="php-keyword1">true</span>;
 </span><span id="141" class="l">        }
 </span><span id="142" class="l">
-</span><span id="143" class="l">        <span class="php-var">$this</span>-&gt;types[<span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>] = (object) <span class="php-keyword1">array</span>(
+</span><span id="143" class="l">        <span class="php-var">$this</span>-&gt;types[<span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>] = (object) [
 </span><span id="144" class="l">            <span class="php-quote">'label'</span> =&gt; <span class="php-var">$nodeType</span>-&gt;getLabel() ?: <span class="php-var">$nodeTypeName</span>,
 </span><span id="145" class="l">            <span class="php-quote">'id'</span> =&gt; <span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>,
-</span><span id="146" class="l">            <span class="php-quote">'properties'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="146" class="l">            <span class="php-quote">'properties'</span> =&gt; [],
 </span><span id="147" class="l">            <span class="php-quote">'specific_properties'</span> =&gt; <span class="php-var">$nodeTypeProperties</span>,
-</span><span id="148" class="l">            <span class="php-quote">'subtypes'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="148" class="l">            <span class="php-quote">'subtypes'</span> =&gt; [],
 </span><span id="149" class="l">            <span class="php-quote">'metadata'</span> =&gt; (object)<span class="php-var">$metadata</span>,
 </span><span id="150" class="l">            <span class="php-quote">'supertypes'</span> =&gt; <span class="php-var">$this</span>-&gt;superTypeConfiguration[<span class="php-quote">'typo3:'</span> . <span class="php-var">$nodeTypeName</span>],
 </span><span id="151" class="l">            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">'http://www.typo3.org/ns/2012/Flow/Packages/Neos/Content/'</span>,
-</span><span id="152" class="l">            <span class="php-quote">'ancestors'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="152" class="l">            <span class="php-quote">'ancestors'</span> =&gt; [],
 </span><span id="153" class="l">            <span class="php-quote">'comment'</span> =&gt; <span class="php-quote">''</span>,
 </span><span id="154" class="l">            <span class="php-quote">'comment_plain'</span> =&gt; <span class="php-quote">''</span>
-</span><span id="155" class="l">        );
+</span><span id="155" class="l">        ];
 </span><span id="156" class="l">    }
 </span><span id="157" class="l">
 </span><span id="158" class="l">    <span class="php-comment">/**
@@ -992,16 +992,16 @@
 </span><span id="169" class="l">            <span class="php-var">$this</span>-&gt;properties[<span class="php-var">$propertyName</span>]-&gt;domains[] = <span class="php-var">$nodeType</span>;
 </span><span id="170" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="171" class="l">            <span class="php-var">$propertyLabel</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'ui'</span>][<span class="php-quote">'label'</span>]) ? <span class="php-var">$propertyConfiguration</span>[<span class="php-quote">'ui'</span>][<span class="php-quote">'label'</span>] : <span class="php-var">$propertyName</span>;
-</span><span id="172" class="l">            <span class="php-var">$this</span>-&gt;properties[<span class="php-var">$propertyName</span>] = (object) <span class="php-keyword1">array</span>(
+</span><span id="172" class="l">            <span class="php-var">$this</span>-&gt;properties[<span class="php-var">$propertyName</span>] = (object) [
 </span><span id="173" class="l">                <span class="php-quote">'comment'</span> =&gt; <span class="php-var">$propertyLabel</span>,
 </span><span id="174" class="l">                <span class="php-quote">'comment_plain'</span> =&gt; <span class="php-var">$propertyLabel</span>,
-</span><span id="175" class="l">                <span class="php-quote">'domains'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$nodeType</span>),
+</span><span id="175" class="l">                <span class="php-quote">'domains'</span> =&gt; [<span class="php-var">$nodeType</span>],
 </span><span id="176" class="l">                <span class="php-quote">'id'</span> =&gt; <span class="php-var">$propertyName</span>,
 </span><span id="177" class="l">                <span class="php-quote">'label'</span> =&gt; <span class="php-var">$propertyName</span>,
-</span><span id="178" class="l">                <span class="php-quote">'ranges'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="178" class="l">                <span class="php-quote">'ranges'</span> =&gt; [],
 </span><span id="179" class="l">                <span class="php-quote">'min'</span> =&gt; <span class="php-num">0</span>,
 </span><span id="180" class="l">                <span class="php-quote">'max'</span> =&gt; -<span class="php-num">1</span>
-</span><span id="181" class="l">            );
+</span><span id="181" class="l">            ];
 </span><span id="182" class="l">        }
 </span><span id="183" class="l">    }
 </span><span id="184" class="l">
@@ -1028,7 +1028,7 @@
 </span></span><span id="205" class="l"><span class="php-comment">     */</span>
 </span><span id="206" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getAllSubtypes(<span class="php-var">$type</span>)
 </span><span id="207" class="l">    {
-</span><span id="208" class="l">        <span class="php-var">$subTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="208" class="l">        <span class="php-var">$subTypes</span> = [];
 </span><span id="209" class="l">
 </span><span id="210" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;superTypeConfiguration <span class="php-keyword1">as</span> <span class="php-var">$nodeType</span> =&gt; <span class="php-var">$superTypes</span>) {
 </span><span id="211" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$type</span>, <span class="php-var">$superTypes</span>)) {
@@ -1057,7 +1057,7 @@
 </span><span id="234" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getAllAncestors(<span class="php-var">$type</span>)
 </span><span id="235" class="l">    {
 </span><span id="236" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;superTypeConfiguration[<span class="php-var">$type</span>])) {
-</span><span id="237" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="237" class="l">            <span class="php-keyword1">return</span> [];
 </span><span id="238" class="l">        }
 </span><span id="239" class="l">        <span class="php-var">$ancestors</span> = <span class="php-var">$this</span>-&gt;superTypeConfiguration[<span class="php-var">$type</span>];
 </span><span id="240" class="l">

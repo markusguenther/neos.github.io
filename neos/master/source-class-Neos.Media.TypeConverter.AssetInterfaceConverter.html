@@ -867,7 +867,7 @@
 </span><span id="48" class="l">    <span class="php-comment">/**
 </span></span><span id="49" class="l"><span class="php-comment">     * @var array
 </span></span><span id="50" class="l"><span class="php-comment">     */</span>
-</span><span id="51" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$sourceTypes</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'string'</span>, <span class="php-quote">'array'</span>);
+</span><span id="51" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$sourceTypes</span> = [<span class="php-quote">'string'</span>, <span class="php-quote">'array'</span>];
 </span><span id="52" class="l">
 </span><span id="53" class="l">    <span class="php-comment">/**
 </span></span><span id="54" class="l"><span class="php-comment">     * @var string
@@ -915,7 +915,7 @@
 </span></span><span id="96" class="l"><span class="php-comment">     *
 </span></span><span id="97" class="l"><span class="php-comment">     * @var array
 </span></span><span id="98" class="l"><span class="php-comment">     */</span>
-</span><span id="99" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$resourcesAlreadyConvertedToAssets</span> = <span class="php-keyword1">array</span>();
+</span><span id="99" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$resourcesAlreadyConvertedToAssets</span> = [];
 </span><span id="100" class="l">
 </span><span id="101" class="l">    <span class="php-comment">/**
 </span></span><span id="102" class="l"><span class="php-comment">     * If $source has an identity, we have a persisted Image, and therefore
@@ -947,7 +947,7 @@
 </span><span id="128" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getSourceChildPropertiesToBeConverted(<span class="php-var">$source</span>)
 </span><span id="129" class="l">    {
 </span><span id="130" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$source</span>)) {
-</span><span id="131" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="131" class="l">            <span class="php-keyword1">return</span> [];
 </span><span id="132" class="l">        }
 </span><span id="133" class="l">        <span class="php-keyword1">return</span> parent::getSourceChildPropertiesToBeConverted(<span class="php-var">$source</span>);
 </span><span id="134" class="l">    }
@@ -1017,11 +1017,11 @@
 </span></span><span id="198" class="l"><span class="php-comment">     * @return Error|AssetInterface The converted Asset, a Validation Error or NULL
 </span></span><span id="199" class="l"><span class="php-comment">     * @throws InvalidTargetException
 </span></span><span id="200" class="l"><span class="php-comment">     */</span>
-</span><span id="201" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = <span class="php-keyword1">array</span>(), PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>)
+</span><span id="201" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = [], PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>)
 </span><span id="202" class="l">    {
 </span><span id="203" class="l">        <span class="php-var">$object</span> = <span class="php-keyword1">null</span>;
 </span><span id="204" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$source</span>) &amp;&amp; <span class="php-var">$source</span> !== <span class="php-quote">''</span>) {
-</span><span id="205" class="l">            <span class="php-var">$source</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'__identity'</span> =&gt; <span class="php-var">$source</span>);
+</span><span id="205" class="l">            <span class="php-var">$source</span> = [<span class="php-quote">'__identity'</span> =&gt; <span class="php-var">$source</span>];
 </span><span id="206" class="l">        }
 </span><span id="207" class="l">
 </span><span id="208" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$convertedChildProperties</span>[<span class="php-quote">'resource'</span>]) &amp;&amp; <span class="php-var">$convertedChildProperties</span>[<span class="php-quote">'resource'</span>] <span class="php-keyword1">instanceof</span> PersistentResource) {
@@ -1123,7 +1123,7 @@
 </span></span><span id="304" class="l"><span class="php-comment">     * @param array $source the original source properties for this type converter.
 </span></span><span id="305" class="l"><span class="php-comment">     * @return string Class name of the media model to use for the given resource
 </span></span><span id="306" class="l"><span class="php-comment">     */</span>
-</span><span id="307" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> applyModelMappingStrategy(<span class="php-var">$originalTargetType</span>, PersistentResource <span class="php-var">$resource</span>, <span class="php-keyword1">array</span> <span class="php-var">$source</span> = <span class="php-keyword1">array</span>())
+</span><span id="307" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> applyModelMappingStrategy(<span class="php-var">$originalTargetType</span>, PersistentResource <span class="php-var">$resource</span>, <span class="php-keyword1">array</span> <span class="php-var">$source</span> = [])
 </span><span id="308" class="l">    {
 </span><span id="309" class="l">        <span class="php-var">$finalTargetType</span> = <span class="php-var">$originalTargetType</span>;
 </span><span id="310" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'__type'</span>])) {

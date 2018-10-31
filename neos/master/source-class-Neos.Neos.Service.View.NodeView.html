@@ -873,19 +873,19 @@
 </span></span><span id="61" class="l"><span class="php-comment">     * @param array $propertyNames Optional list of property names to include in the JSON output
 </span></span><span id="62" class="l"><span class="php-comment">     * @return void
 </span></span><span id="63" class="l"><span class="php-comment">     */</span>
-</span><span id="64" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> assignNode(NodeInterface <span class="php-var">$node</span>, <span class="php-keyword1">array</span> <span class="php-var">$propertyNames</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'name'</span>, <span class="php-quote">'path'</span>, <span class="php-quote">'identifier'</span>, <span class="php-quote">'properties'</span>, <span class="php-quote">'nodeType'</span>))
+</span><span id="64" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> assignNode(NodeInterface <span class="php-var">$node</span>, <span class="php-keyword1">array</span> <span class="php-var">$propertyNames</span> = [<span class="php-quote">'name'</span>, <span class="php-quote">'path'</span>, <span class="php-quote">'identifier'</span>, <span class="php-quote">'properties'</span>, <span class="php-quote">'nodeType'</span>])
 </span><span id="65" class="l">    {
 </span><span id="66" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration(
-</span><span id="67" class="l">            <span class="php-keyword1">array</span>(
-</span><span id="68" class="l">                <span class="php-quote">'value'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="69" class="l">                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="70" class="l">                        <span class="php-quote">'_only'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'name'</span>, <span class="php-quote">'path'</span>, <span class="php-quote">'identifier'</span>, <span class="php-quote">'properties'</span>, <span class="php-quote">'nodeType'</span>),
-</span><span id="71" class="l">                        <span class="php-quote">'_descend'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'properties'</span> =&gt; <span class="php-var">$propertyNames</span>)
-</span><span id="72" class="l">                    )
-</span><span id="73" class="l">                )
-</span><span id="74" class="l">            )
+</span><span id="67" class="l">            [
+</span><span id="68" class="l">                <span class="php-quote">'value'</span> =&gt; [
+</span><span id="69" class="l">                    <span class="php-quote">'data'</span> =&gt; [
+</span><span id="70" class="l">                        <span class="php-quote">'_only'</span> =&gt; [<span class="php-quote">'name'</span>, <span class="php-quote">'path'</span>, <span class="php-quote">'identifier'</span>, <span class="php-quote">'properties'</span>, <span class="php-quote">'nodeType'</span>],
+</span><span id="71" class="l">                        <span class="php-quote">'_descend'</span> =&gt; [<span class="php-quote">'properties'</span> =&gt; <span class="php-var">$propertyNames</span>]
+</span><span id="72" class="l">                    ]
+</span><span id="73" class="l">                ]
+</span><span id="74" class="l">            ]
 </span><span id="75" class="l">        );
-</span><span id="76" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$node</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="76" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$node</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="77" class="l">    }
 </span><span id="78" class="l">
 </span><span id="79" class="l">    <span class="php-comment">/**
@@ -893,23 +893,23 @@
 </span></span><span id="81" class="l"><span class="php-comment">     */</span>
 </span><span id="82" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> assignNodes(<span class="php-keyword1">array</span> <span class="php-var">$nodes</span>)
 </span><span id="83" class="l">    {
-</span><span id="84" class="l">        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>();
+</span><span id="84" class="l">        <span class="php-var">$data</span> = [];
 </span><span id="85" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
 </span><span id="86" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getPath() !== <span class="php-quote">'/'</span>) {
-</span><span id="87" class="l">                <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$node</span>));
+</span><span id="87" class="l">                <span class="php-var">$q</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$node</span>]);
 </span><span id="88" class="l">                <span class="php-var">$closestDocumentNode</span> = <span class="php-var">$q</span>-&gt;closest(<span class="php-quote">'[instanceof Neos.Neos:Document]'</span>)-&gt;get(<span class="php-num">0</span>);
 </span><span id="89" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$closestDocumentNode</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="90" class="l">                    <span class="php-var">$data</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="90" class="l">                    <span class="php-var">$data</span>[] = [
 </span><span id="91" class="l">                        <span class="php-quote">'nodeContextPath'</span> =&gt; <span class="php-var">$node</span>-&gt;getContextPath(),
 </span><span id="92" class="l">                        <span class="php-quote">'documentNodeContextPath'</span> =&gt; <span class="php-var">$closestDocumentNode</span>-&gt;getContextPath(),
-</span><span id="93" class="l">                    );
+</span><span id="93" class="l">                    ];
 </span><span id="94" class="l">                } <span class="php-keyword1">else</span> {
 </span><span id="95" class="l">                    <span class="php-var">$this</span>-&gt;systemLogger-&gt;<span class="php-keyword2">log</span>(<span class="php-quote">'You have a node that is no longer connected to a parent. Path: '</span> . <span class="php-var">$node</span>-&gt;getPath() . <span class="php-quote">' (Identifier: '</span> . <span class="php-var">$node</span>-&gt;getIdentifier() . <span class="php-quote">')'</span>);
 </span><span id="96" class="l">                }
 </span><span id="97" class="l">            }
 </span><span id="98" class="l">        }
 </span><span id="99" class="l">
-</span><span id="100" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$data</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="100" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$data</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="101" class="l">    }
 </span><span id="102" class="l">
 </span><span id="103" class="l">    <span class="php-comment">/**
@@ -925,13 +925,13 @@
 </span><span id="113" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> assignChildNodes(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$nodeTypeFilter</span>, <span class="php-var">$outputStyle</span> = self::STYLE_LIST, <span class="php-var">$depth</span> = <span class="php-num">0</span>, NodeInterface <span class="php-var">$untilNode</span> = <span class="php-keyword1">null</span>)
 </span><span id="114" class="l">    {
 </span><span id="115" class="l">        <span class="php-var">$this</span>-&gt;outputStyle = <span class="php-var">$outputStyle</span>;
-</span><span id="116" class="l">        <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="116" class="l">        <span class="php-var">$nodes</span> = [];
 </span><span id="117" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;privilegeManager-&gt;isGranted(NodeTreePrivilege::<span class="php-keyword1">class</span>, <span class="php-keyword1">new</span> NodePrivilegeSubject(<span class="php-var">$node</span>))) {
 </span><span id="118" class="l">            <span class="php-var">$this</span>-&gt;collectChildNodeData(<span class="php-var">$nodes</span>, <span class="php-var">$node</span>, (<span class="php-var">$nodeTypeFilter</span> === <span class="php-quote">''</span> ? <span class="php-keyword1">null</span> : <span class="php-var">$nodeTypeFilter</span>), <span class="php-var">$depth</span>, <span class="php-var">$untilNode</span>);
 </span><span id="119" class="l">        }
-</span><span id="120" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration(<span class="php-keyword1">array</span>(<span class="php-quote">'value'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'_descendAll'</span> =&gt; <span class="php-keyword1">array</span>()))));
+</span><span id="120" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration([<span class="php-quote">'value'</span> =&gt; [<span class="php-quote">'data'</span> =&gt; [<span class="php-quote">'_descendAll'</span> =&gt; []]]]);
 </span><span id="121" class="l">
-</span><span id="122" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$nodes</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="122" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$nodes</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="123" class="l">    }
 </span><span id="124" class="l">
 </span><span id="125" class="l">    <span class="php-comment">/**
@@ -946,15 +946,15 @@
 </span><span id="134" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> assignNodeAndChildNodes(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$nodeTypeFilter</span> = <span class="php-quote">''</span>, <span class="php-var">$depth</span> = <span class="php-num">0</span>, NodeInterface <span class="php-var">$untilNode</span> = <span class="php-keyword1">null</span>)
 </span><span id="135" class="l">    {
 </span><span id="136" class="l">        <span class="php-var">$this</span>-&gt;outputStyle = self::STYLE_TREE;
-</span><span id="137" class="l">        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>();
+</span><span id="137" class="l">        <span class="php-var">$data</span> = [];
 </span><span id="138" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;privilegeManager-&gt;isGranted(NodeTreePrivilege::<span class="php-keyword1">class</span>, <span class="php-keyword1">new</span> NodePrivilegeSubject(<span class="php-var">$node</span>))) {
-</span><span id="139" class="l">            <span class="php-var">$childNodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="139" class="l">            <span class="php-var">$childNodes</span> = [];
 </span><span id="140" class="l">            <span class="php-var">$this</span>-&gt;collectChildNodeData(<span class="php-var">$childNodes</span>, <span class="php-var">$node</span>, (<span class="php-var">$nodeTypeFilter</span> === <span class="php-quote">''</span> ? <span class="php-keyword1">null</span> : <span class="php-var">$nodeTypeFilter</span>), <span class="php-var">$depth</span>, <span class="php-var">$untilNode</span>);
-</span><span id="141" class="l">            <span class="php-var">$data</span> = <span class="php-var">$this</span>-&gt;collectTreeNodeData(<span class="php-var">$node</span>, <span class="php-keyword1">true</span>, <span class="php-var">$childNodes</span>, <span class="php-var">$childNodes</span> !== <span class="php-keyword1">array</span>());
+</span><span id="141" class="l">            <span class="php-var">$data</span> = <span class="php-var">$this</span>-&gt;collectTreeNodeData(<span class="php-var">$node</span>, <span class="php-keyword1">true</span>, <span class="php-var">$childNodes</span>, <span class="php-var">$childNodes</span> !== []);
 </span><span id="142" class="l">        }
-</span><span id="143" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration(<span class="php-keyword1">array</span>(<span class="php-quote">'value'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'_descendAll'</span> =&gt; <span class="php-keyword1">array</span>()))));
+</span><span id="143" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration([<span class="php-quote">'value'</span> =&gt; [<span class="php-quote">'data'</span> =&gt; [<span class="php-quote">'_descendAll'</span> =&gt; []]]]);
 </span><span id="144" class="l">
-</span><span id="145" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$data</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="145" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$data</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="146" class="l">    }
 </span><span id="147" class="l">
 </span><span id="148" class="l">    <span class="php-comment">/**
@@ -969,9 +969,9 @@
 </span><span id="157" class="l">    {
 </span><span id="158" class="l">        <span class="php-var">$this</span>-&gt;outputStyle = <span class="php-var">$outputStyle</span>;
 </span><span id="159" class="l">        <span class="php-var">$nodes</span> = <span class="php-var">$this</span>-&gt;collectParentNodeData(<span class="php-var">$node</span>, <span class="php-var">$matchedNodes</span>);
-</span><span id="160" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration(<span class="php-keyword1">array</span>(<span class="php-quote">'value'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'_descendAll'</span> =&gt; <span class="php-keyword1">array</span>()))));
+</span><span id="160" class="l">        <span class="php-var">$this</span>-&gt;setConfiguration([<span class="php-quote">'value'</span> =&gt; [<span class="php-quote">'data'</span> =&gt; [<span class="php-quote">'_descendAll'</span> =&gt; []]]]);
 </span><span id="161" class="l">
-</span><span id="162" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'data'</span> =&gt; <span class="php-var">$nodes</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="162" class="l">        <span class="php-var">$this</span>-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'data'</span> =&gt; <span class="php-var">$nodes</span>, <span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="163" class="l">    }
 </span><span id="164" class="l">
 </span><span id="165" class="l">    <span class="php-comment">/**
@@ -1014,7 +1014,7 @@
 </span><span id="202" class="l">                    }
 </span><span id="203" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="204" class="l">                <span class="php-keyword1">case</span> self::STYLE_TREE:
-</span><span id="205" class="l">                    <span class="php-var">$children</span> = <span class="php-keyword1">array</span>();
+</span><span id="205" class="l">                    <span class="php-var">$children</span> = [];
 </span><span id="206" class="l">                    <span class="php-var">$hasChildNodes</span> = <span class="php-var">$childNode</span>-&gt;hasChildNodes(<span class="php-var">$nodeTypeFilter</span>) === <span class="php-keyword1">true</span>;
 </span><span id="207" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$expand</span> &amp;&amp; <span class="php-var">$hasChildNodes</span>) {
 </span><span id="208" class="l">                        <span class="php-var">$this</span>-&gt;collectChildNodeData(<span class="php-var">$children</span>, <span class="php-var">$childNode</span>, <span class="php-var">$nodeTypeFilter</span>, <span class="php-var">$depth</span>, <span class="php-var">$untilNode</span>, (<span class="php-var">$recursionPointer</span> + <span class="php-num">1</span>));
@@ -1031,7 +1031,7 @@
 </span></span><span id="219" class="l"><span class="php-comment">     */</span>
 </span><span id="220" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> collectParentNodeData(NodeInterface <span class="php-var">$rootNode</span>, <span class="php-keyword1">array</span> <span class="php-var">$nodes</span>)
 </span><span id="221" class="l">    {
-</span><span id="222" class="l">        <span class="php-var">$nodeCollection</span> = <span class="php-keyword1">array</span>();
+</span><span id="222" class="l">        <span class="php-var">$nodeCollection</span> = [];
 </span><span id="223" class="l">
 </span><span id="224" class="l">        <span class="php-var">$addNode</span> = <span class="php-keyword1">function</span> (<span class="php-var">$node</span>, <span class="php-var">$matched</span>) <span class="php-keyword1">use</span> (<span class="php-var">$rootNode</span>, &amp;<span class="php-var">$nodeCollection</span>) {
 </span><span id="225" class="l">            <span class="php-comment">/** @var NodeInterface $node */</span>
@@ -1062,16 +1062,16 @@
 </span><span id="250" class="l">            }
 </span><span id="251" class="l">        }
 </span><span id="252" class="l">
-</span><span id="253" class="l">        <span class="php-var">$treeNodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="253" class="l">        <span class="php-var">$treeNodes</span> = [];
 </span><span id="254" class="l">        <span class="php-var">$self</span> = <span class="php-var">$this</span>;
 </span><span id="255" class="l">        <span class="php-var">$collectTreeNodeData</span> = <span class="php-keyword1">function</span> (&amp;<span class="php-var">$treeNodes</span>, <span class="php-var">$node</span>) <span class="php-keyword1">use</span> (&amp;<span class="php-var">$collectTreeNodeData</span>, <span class="php-var">$self</span>) {
-</span><span id="256" class="l">            <span class="php-var">$children</span> = <span class="php-keyword1">array</span>();
+</span><span id="256" class="l">            <span class="php-var">$children</span> = [];
 </span><span id="257" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$node</span>[<span class="php-quote">'children'</span>])) {
 </span><span id="258" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$node</span>[<span class="php-quote">'children'</span>] <span class="php-keyword1">as</span> <span class="php-var">$childNode</span>) {
 </span><span id="259" class="l">                    <span class="php-var">$collectTreeNodeData</span>(<span class="php-var">$children</span>, <span class="php-var">$childNode</span>);
 </span><span id="260" class="l">                }
 </span><span id="261" class="l">            }
-</span><span id="262" class="l">            <span class="php-var">$treeNodes</span>[] = <span class="php-var">$self</span>-&gt;collectTreeNodeData(<span class="php-var">$node</span>[<span class="php-quote">'node'</span>], <span class="php-keyword1">true</span>, <span class="php-var">$children</span>, <span class="php-var">$children</span> !== <span class="php-keyword1">array</span>(), <span class="php-keyword1">isset</span>(<span class="php-var">$node</span>[<span class="php-quote">'matched'</span>]));
+</span><span id="262" class="l">            <span class="php-var">$treeNodes</span>[] = <span class="php-var">$self</span>-&gt;collectTreeNodeData(<span class="php-var">$node</span>[<span class="php-quote">'node'</span>], <span class="php-keyword1">true</span>, <span class="php-var">$children</span>, <span class="php-var">$children</span> !== [], <span class="php-keyword1">isset</span>(<span class="php-var">$node</span>[<span class="php-quote">'matched'</span>]));
 </span><span id="263" class="l">        };
 </span><span id="264" class="l">
 </span><span id="265" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeCollection</span> <span class="php-keyword1">as</span> <span class="php-var">$firstLevelNode</span>) {
@@ -1089,7 +1089,7 @@
 </span></span><span id="277" class="l"><span class="php-comment">     * @param boolean $matched
 </span></span><span id="278" class="l"><span class="php-comment">     * @return array
 </span></span><span id="279" class="l"><span class="php-comment">     */</span>
-</span><span id="280" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> collectTreeNodeData(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$expand</span> = <span class="php-keyword1">true</span>, <span class="php-keyword1">array</span> <span class="php-var">$children</span> = <span class="php-keyword1">array</span>(), <span class="php-var">$hasChildNodes</span> = <span class="php-keyword1">false</span>, <span class="php-var">$matched</span> = <span class="php-keyword1">false</span>)
+</span><span id="280" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> collectTreeNodeData(NodeInterface <span class="php-var">$node</span>, <span class="php-var">$expand</span> = <span class="php-keyword1">true</span>, <span class="php-keyword1">array</span> <span class="php-var">$children</span> = [], <span class="php-var">$hasChildNodes</span> = <span class="php-keyword1">false</span>, <span class="php-var">$matched</span> = <span class="php-keyword1">false</span>)
 </span><span id="281" class="l">    {
 </span><span id="282" class="l">        <span class="php-var">$isTimedPage</span> = <span class="php-keyword1">false</span>;
 </span><span id="283" class="l">        <span class="php-var">$now</span> = <span class="php-keyword1">new</span> \DateTime();
@@ -1104,7 +1104,7 @@
 </span><span id="292" class="l">            <span class="php-var">$isTimedPage</span> = <span class="php-keyword1">true</span>;
 </span><span id="293" class="l">        }
 </span><span id="294" class="l">
-</span><span id="295" class="l">        <span class="php-var">$classes</span> = <span class="php-keyword1">array</span>();
+</span><span id="295" class="l">        <span class="php-var">$classes</span> = [];
 </span><span id="296" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$isTimedPage</span> === <span class="php-keyword1">true</span> &amp;&amp; <span class="php-var">$node</span>-&gt;isHidden() === <span class="php-keyword1">false</span>) {
 </span><span id="297" class="l">            <span class="php-keyword2">array_push</span>(<span class="php-var">$classes</span>, <span class="php-quote">'neos-timedVisibility'</span>);
 </span><span id="298" class="l">        }
@@ -1122,13 +1122,13 @@
 </span><span id="310" class="l">        <span class="php-var">$nodeType</span> = <span class="php-var">$node</span>-&gt;getNodeType();
 </span><span id="311" class="l">        <span class="php-var">$nodeTypeConfiguration</span> = <span class="php-var">$nodeType</span>-&gt;getFullConfiguration();
 </span><span id="312" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;getNodeType()-&gt;isOfType(<span class="php-quote">'Neos.Neos:Document'</span>)) {
-</span><span id="313" class="l">            <span class="php-var">$uriForNode</span> = <span class="php-var">$uriBuilder</span>-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>), <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="313" class="l">            <span class="php-var">$uriForNode</span> = <span class="php-var">$uriBuilder</span>-&gt;<span class="php-keyword2">reset</span>()-&gt;setFormat(<span class="php-quote">'html'</span>)-&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)-&gt;uriFor(<span class="php-quote">'show'</span>, [<span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>], <span class="php-quote">'Frontend\Node'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="314" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="315" class="l">            <span class="php-var">$uriForNode</span> = <span class="php-quote">'#'</span>;
 </span><span id="316" class="l">        }
 </span><span id="317" class="l">        <span class="php-var">$label</span> = <span class="php-var">$node</span>-&gt;getLabel();
 </span><span id="318" class="l">        <span class="php-var">$nodeTypeLabel</span> = <span class="php-var">$node</span>-&gt;getNodeType()-&gt;getLabel();
-</span><span id="319" class="l">        <span class="php-var">$treeNode</span> = <span class="php-keyword1">array</span>(
+</span><span id="319" class="l">        <span class="php-var">$treeNode</span> = [
 </span><span id="320" class="l">            <span class="php-quote">'key'</span> =&gt; <span class="php-var">$node</span>-&gt;getContextPath(),
 </span><span id="321" class="l">            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$label</span>,
 </span><span id="322" class="l">            <span class="php-quote">'fullTitle'</span> =&gt; <span class="php-var">$node</span>-&gt;getProperty(<span class="php-quote">'title'</span>),
@@ -1144,7 +1144,7 @@
 </span><span id="332" class="l">            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$node</span>-&gt;getName(),
 </span><span id="333" class="l">            <span class="php-quote">'iconClass'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$nodeTypeConfiguration</span>[<span class="php-quote">'ui'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$nodeTypeConfiguration</span>[<span class="php-quote">'ui'</span>][<span class="php-quote">'icon'</span>]) ? <span class="php-var">$nodeTypeConfiguration</span>[<span class="php-quote">'ui'</span>][<span class="php-quote">'icon'</span>] : <span class="php-quote">''</span>,
 </span><span id="334" class="l">            <span class="php-quote">'isHidden'</span> =&gt; <span class="php-var">$node</span>-&gt;isHidden()
-</span><span id="335" class="l">        );
+</span><span id="335" class="l">        ];
 </span><span id="336" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$hasChildNodes</span>) {
 </span><span id="337" class="l">            <span class="php-var">$treeNode</span>[<span class="php-quote">'children'</span>] = <span class="php-var">$children</span>;
 </span><span id="338" class="l">        }

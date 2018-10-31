@@ -938,26 +938,26 @@
 </span></span><span id="122" class="l"><span class="php-comment">     */</span>
 </span><span id="123" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> indexAction()
 </span><span id="124" class="l">    {
-</span><span id="125" class="l">        <span class="php-var">$sitePackagesAndSites</span> = <span class="php-keyword1">array</span>();
+</span><span id="125" class="l">        <span class="php-var">$sitePackagesAndSites</span> = [];
 </span><span id="126" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getFilteredPackages(<span class="php-quote">'available'</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'neos-site'</span>) <span class="php-keyword1">as</span> <span class="php-var">$sitePackageKey</span> =&gt; <span class="php-var">$sitePackage</span>) {
 </span><span id="127" class="l">            <span class="php-comment">/** @var PackageInterface $sitePackage */</span>
-</span><span id="128" class="l">            <span class="php-var">$sitePackagesAndSites</span>[<span class="php-keyword2">strtolower</span>(<span class="php-keyword2">str_replace</span>(<span class="php-quote">'.'</span>, <span class="php-quote">'_'</span>, <span class="php-var">$sitePackageKey</span>))] = <span class="php-keyword1">array</span>(<span class="php-quote">'package'</span> =&gt; <span class="php-var">$sitePackage</span>, <span class="php-quote">'packageKey'</span> =&gt; <span class="php-var">$sitePackage</span>-&gt;getPackageKey());
+</span><span id="128" class="l">            <span class="php-var">$sitePackagesAndSites</span>[<span class="php-keyword2">strtolower</span>(<span class="php-keyword2">str_replace</span>(<span class="php-quote">'.'</span>, <span class="php-quote">'_'</span>, <span class="php-var">$sitePackageKey</span>))] = [<span class="php-quote">'package'</span> =&gt; <span class="php-var">$sitePackage</span>, <span class="php-quote">'packageKey'</span> =&gt; <span class="php-var">$sitePackage</span>-&gt;getPackageKey()];
 </span><span id="129" class="l">        }
 </span><span id="130" class="l">        <span class="php-var">$sites</span> = <span class="php-var">$this</span>-&gt;siteRepository-&gt;findAll();
 </span><span id="131" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$sites</span> <span class="php-keyword1">as</span> <span class="php-var">$site</span>) {
 </span><span id="132" class="l">            <span class="php-var">$siteResourcePackageKey</span> = <span class="php-keyword2">strtolower</span>(<span class="php-keyword2">str_replace</span>(<span class="php-quote">'.'</span>, <span class="php-quote">'_'</span>, <span class="php-var">$site</span>-&gt;getSiteResourcesPackageKey()));
 </span><span id="133" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>])) {
-</span><span id="134" class="l">                <span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>] = <span class="php-keyword1">array</span>(<span class="php-quote">'packageKey'</span> =&gt; <span class="php-var">$site</span>-&gt;getSiteResourcesPackageKey());
+</span><span id="134" class="l">                <span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>] = [<span class="php-quote">'packageKey'</span> =&gt; <span class="php-var">$site</span>-&gt;getSiteResourcesPackageKey()];
 </span><span id="135" class="l">            }
 </span><span id="136" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>][<span class="php-quote">'sites'</span>])) {
-</span><span id="137" class="l">                <span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>][<span class="php-quote">'sites'</span>] = <span class="php-keyword1">array</span>();
+</span><span id="137" class="l">                <span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>][<span class="php-quote">'sites'</span>] = [];
 </span><span id="138" class="l">            }
 </span><span id="139" class="l">            <span class="php-var">$sitePackagesAndSites</span>[<span class="php-var">$siteResourcePackageKey</span>][<span class="php-quote">'sites'</span>][] = <span class="php-var">$site</span>;
 </span><span id="140" class="l">        }
-</span><span id="141" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="141" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="142" class="l">            <span class="php-quote">'sitePackagesAndSites'</span> =&gt; <span class="php-var">$sitePackagesAndSites</span>,
 </span><span id="143" class="l">            <span class="php-quote">'multipleSites'</span> =&gt; <span class="php-keyword2">count</span>(<span class="php-var">$sites</span>) &gt; <span class="php-num">1</span>
-</span><span id="144" class="l">        ));
+</span><span id="144" class="l">        ]);
 </span><span id="145" class="l">    }
 </span><span id="146" class="l">
 </span><span id="147" class="l">    <span class="php-comment">/**
@@ -972,15 +972,15 @@
 </span><span id="156" class="l">        <span class="php-keyword1">try</span> {
 </span><span id="157" class="l">            <span class="php-var">$sitePackage</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$site</span>-&gt;getSiteResourcesPackageKey());
 </span><span id="158" class="l">        } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
-</span><span id="159" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site package with key &quot;%s&quot; was not found.'</span>, <span class="php-quote">'Site package not found'</span>, Message::SEVERITY_ERROR, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getSiteResourcesPackageKey())));
+</span><span id="159" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site package with key &quot;%s&quot; was not found.'</span>, <span class="php-quote">'Site package not found'</span>, Message::SEVERITY_ERROR, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getSiteResourcesPackageKey())]);
 </span><span id="160" class="l">        }
 </span><span id="161" class="l">
-</span><span id="162" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="162" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="163" class="l">            <span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>,
-</span><span id="164" class="l">            <span class="php-quote">'sitePackage'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$sitePackage</span>) ? <span class="php-var">$sitePackage</span> : <span class="php-keyword1">array</span>(),
+</span><span id="164" class="l">            <span class="php-quote">'sitePackage'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$sitePackage</span>) ? <span class="php-var">$sitePackage</span> : [],
 </span><span id="165" class="l">            <span class="php-quote">'domains'</span> =&gt; <span class="php-var">$this</span>-&gt;domainRepository-&gt;findBySite(<span class="php-var">$site</span>),
 </span><span id="166" class="l">            <span class="php-quote">'assetCollections'</span> =&gt; <span class="php-var">$this</span>-&gt;assetCollectionRepository-&gt;findAll()
-</span><span id="167" class="l">        ));
+</span><span id="167" class="l">        ]);
 </span><span id="168" class="l">    }
 </span><span id="169" class="l">
 </span><span id="170" class="l">    <span class="php-comment">/**
@@ -1010,7 +1010,7 @@
 </span><span id="194" class="l">            <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;persistEntities();
 </span><span id="195" class="l">        }
 </span><span id="196" class="l">        <span class="php-var">$this</span>-&gt;siteRepository-&gt;update(<span class="php-var">$site</span>);
-</span><span id="197" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been updated.'</span>, <span class="php-quote">'Update'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())), <span class="php-num">1412371798</span>);
+</span><span id="197" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been updated.'</span>, <span class="php-quote">'Update'</span>, <span class="php-keyword1">null</span>, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())], <span class="php-num">1412371798</span>);
 </span><span id="198" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'index'</span>);
 </span><span id="199" class="l">    }
 </span><span id="200" class="l">
@@ -1025,12 +1025,12 @@
 </span><span id="209" class="l">    {
 </span><span id="210" class="l">        <span class="php-var">$sitePackages</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getFilteredPackages(<span class="php-quote">'available'</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'neos-site'</span>);
 </span><span id="211" class="l">        <span class="php-var">$documentNodeTypes</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-quote">'Neos.Neos:Document'</span>, <span class="php-keyword1">false</span>);
-</span><span id="212" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="212" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="213" class="l">            <span class="php-quote">'sitePackages'</span> =&gt; <span class="php-var">$sitePackages</span>,
 </span><span id="214" class="l">            <span class="php-quote">'documentNodeTypes'</span> =&gt; <span class="php-var">$documentNodeTypes</span>,
 </span><span id="215" class="l">            <span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>,
 </span><span id="216" class="l">            <span class="php-quote">'generatorServiceIsAvailable'</span> =&gt; <span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-quote">'Neos.SiteKickstarter'</span>)
-</span><span id="217" class="l">        ));
+</span><span id="217" class="l">        ]);
 </span><span id="218" class="l">    }
 </span><span id="219" class="l">
 </span><span id="220" class="l">    <span class="php-comment">/**
@@ -1044,12 +1044,12 @@
 </span><span id="228" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createSitePackageAction(<span class="php-var">$packageKey</span>, <span class="php-var">$siteName</span>)
 </span><span id="229" class="l">    {
 </span><span id="230" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-quote">'Neos.SiteKickstarter'</span>) === <span class="php-keyword1">false</span>) {
-</span><span id="231" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The package &quot;%s&quot; is required to create new site packages.'</span>, <span class="php-quote">'Missing Package'</span>, Message::SEVERITY_ERROR, <span class="php-keyword1">array</span>(<span class="php-quote">'Neos.SiteKickstarter'</span>), <span class="php-num">1475736232</span>);
+</span><span id="231" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The package &quot;%s&quot; is required to create new site packages.'</span>, <span class="php-quote">'Missing Package'</span>, Message::SEVERITY_ERROR, [<span class="php-quote">'Neos.SiteKickstarter'</span>], <span class="php-num">1475736232</span>);
 </span><span id="232" class="l">            <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="233" class="l">        }
 </span><span id="234" class="l">
 </span><span id="235" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;isPackageAvailable(<span class="php-var">$packageKey</span>)) {
-</span><span id="236" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The package key &quot;%s&quot; already exists.'</span>, <span class="php-quote">'Invalid package key'</span>, Message::SEVERITY_ERROR, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$packageKey</span>)), <span class="php-num">1412372021</span>);
+</span><span id="236" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The package key &quot;%s&quot; already exists.'</span>, <span class="php-quote">'Invalid package key'</span>, Message::SEVERITY_ERROR, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$packageKey</span>)], <span class="php-num">1412372021</span>);
 </span><span id="237" class="l">            <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="238" class="l">        }
 </span><span id="239" class="l">
@@ -1071,10 +1071,10 @@
 </span><span id="255" class="l">    {
 </span><span id="256" class="l">        <span class="php-keyword1">try</span> {
 </span><span id="257" class="l">            <span class="php-var">$this</span>-&gt;siteImportService-&gt;importFromPackage(<span class="php-var">$packageKey</span>);
-</span><span id="258" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site has been imported.'</span>, <span class="php-quote">''</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(), <span class="php-num">1412372266</span>);
+</span><span id="258" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site has been imported.'</span>, <span class="php-quote">''</span>, <span class="php-keyword1">null</span>, [], <span class="php-num">1412372266</span>);
 </span><span id="259" class="l">        } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$exception</span>) {
 </span><span id="260" class="l">            <span class="php-var">$this</span>-&gt;systemLogger-&gt;logException(<span class="php-var">$exception</span>);
-</span><span id="261" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: During the import of the &quot;Sites.xml&quot; from the package &quot;%s&quot; an exception occurred: %s'</span>, <span class="php-quote">'Import error'</span>, Message::SEVERITY_ERROR, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$packageKey</span>), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$exception</span>-&gt;getMessage())), <span class="php-num">1412372375</span>);
+</span><span id="261" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Error: During the import of the &quot;Sites.xml&quot; from the package &quot;%s&quot; an exception occurred: %s'</span>, <span class="php-quote">'Import error'</span>, Message::SEVERITY_ERROR, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$packageKey</span>), <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$exception</span>-&gt;getMessage())], <span class="php-num">1412372375</span>);
 </span><span id="262" class="l">        }
 </span><span id="263" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'index'</span>);
 </span><span id="264" class="l">    }
@@ -1141,7 +1141,7 @@
 </span><span id="325" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> deleteSiteAction(Site <span class="php-var">$site</span>)
 </span><span id="326" class="l">    {
 </span><span id="327" class="l">        <span class="php-var">$this</span>-&gt;siteService-&gt;pruneSite(<span class="php-var">$site</span>);
-</span><span id="328" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been deleted.'</span>, <span class="php-quote">'Site deleted'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())), <span class="php-num">1412372689</span>);
+</span><span id="328" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been deleted.'</span>, <span class="php-quote">'Site deleted'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())], <span class="php-num">1412372689</span>);
 </span><span id="329" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'index'</span>);
 </span><span id="330" class="l">    }
 </span><span id="331" class="l">
@@ -1155,7 +1155,7 @@
 </span><span id="339" class="l">    {
 </span><span id="340" class="l">        <span class="php-var">$site</span>-&gt;setState(<span class="php-var">$site</span>::STATE_ONLINE);
 </span><span id="341" class="l">        <span class="php-var">$this</span>-&gt;siteRepository-&gt;update(<span class="php-var">$site</span>);
-</span><span id="342" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been activated.'</span>, <span class="php-quote">'Site activated'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())), <span class="php-num">1412372881</span>);
+</span><span id="342" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been activated.'</span>, <span class="php-quote">'Site activated'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())], <span class="php-num">1412372881</span>);
 </span><span id="343" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'index'</span>);
 </span><span id="344" class="l">    }
 </span><span id="345" class="l">
@@ -1169,7 +1169,7 @@
 </span><span id="353" class="l">    {
 </span><span id="354" class="l">        <span class="php-var">$site</span>-&gt;setState(<span class="php-var">$site</span>::STATE_OFFLINE);
 </span><span id="355" class="l">        <span class="php-var">$this</span>-&gt;siteRepository-&gt;update(<span class="php-var">$site</span>);
-</span><span id="356" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been deactivated.'</span>, <span class="php-quote">'Site deactivated'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())), <span class="php-num">1412372975</span>);
+</span><span id="356" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The site &quot;%s&quot; has been deactivated.'</span>, <span class="php-quote">'Site deactivated'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$site</span>-&gt;getName())], <span class="php-num">1412372975</span>);
 </span><span id="357" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'index'</span>);
 </span><span id="358" class="l">    }
 </span><span id="359" class="l">
@@ -1195,8 +1195,8 @@
 </span><span id="379" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateDomainAction(Domain <span class="php-var">$domain</span>)
 </span><span id="380" class="l">    {
 </span><span id="381" class="l">        <span class="php-var">$this</span>-&gt;domainRepository-&gt;update(<span class="php-var">$domain</span>);
-</span><span id="382" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been updated.'</span>, <span class="php-quote">'Domain updated'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)), <span class="php-num">1412373069</span>);
-</span><span id="383" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()));
+</span><span id="382" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been updated.'</span>, <span class="php-quote">'Domain updated'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)], <span class="php-num">1412373069</span>);
+</span><span id="383" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()]);
 </span><span id="384" class="l">    }
 </span><span id="385" class="l">
 </span><span id="386" class="l">    <span class="php-comment">/**
@@ -1209,11 +1209,11 @@
 </span></span><span id="393" class="l"><span class="php-comment">     */</span>
 </span><span id="394" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> newDomainAction(Domain <span class="php-var">$domain</span> = <span class="php-keyword1">null</span>, Site <span class="php-var">$site</span> = <span class="php-keyword1">null</span>)
 </span><span id="395" class="l">    {
-</span><span id="396" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="396" class="l">        <span class="php-var">$this</span>-&gt;view-&gt;assignMultiple([
 </span><span id="397" class="l">            <span class="php-quote">'domain'</span> =&gt; <span class="php-var">$domain</span>,
 </span><span id="398" class="l">            <span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>,
 </span><span id="399" class="l">            <span class="php-quote">'schemes'</span> =&gt; [<span class="php-keyword1">null</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">'http'</span> =&gt; <span class="php-quote">'HTTP'</span>, <span class="php-quote">'https'</span> =&gt; <span class="php-quote">'HTTPS'</span>]
-</span><span id="400" class="l">        ));
+</span><span id="400" class="l">        ]);
 </span><span id="401" class="l">    }
 </span><span id="402" class="l">
 </span><span id="403" class="l">    <span class="php-comment">/**
@@ -1226,8 +1226,8 @@
 </span><span id="410" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createDomainAction(Domain <span class="php-var">$domain</span>)
 </span><span id="411" class="l">    {
 </span><span id="412" class="l">        <span class="php-var">$this</span>-&gt;domainRepository-&gt;add(<span class="php-var">$domain</span>);
-</span><span id="413" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been created.'</span>, <span class="php-quote">'Domain created'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)), <span class="php-num">1412373192</span>);
-</span><span id="414" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()));
+</span><span id="413" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been created.'</span>, <span class="php-quote">'Domain created'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)], <span class="php-num">1412373192</span>);
+</span><span id="414" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()]);
 </span><span id="415" class="l">    }
 </span><span id="416" class="l">
 </span><span id="417" class="l">    <span class="php-comment">/**
@@ -1245,8 +1245,8 @@
 </span><span id="429" class="l">            <span class="php-var">$this</span>-&gt;siteRepository-&gt;update(<span class="php-var">$site</span>);
 </span><span id="430" class="l">        }
 </span><span id="431" class="l">        <span class="php-var">$this</span>-&gt;domainRepository-&gt;remove(<span class="php-var">$domain</span>);
-</span><span id="432" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been deleted.'</span>, <span class="php-quote">'Domain deleted'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)), <span class="php-num">1412373310</span>);
-</span><span id="433" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>));
+</span><span id="432" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been deleted.'</span>, <span class="php-quote">'Domain deleted'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)], <span class="php-num">1412373310</span>);
+</span><span id="433" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>]);
 </span><span id="434" class="l">    }
 </span><span id="435" class="l">
 </span><span id="436" class="l">    <span class="php-comment">/**
@@ -1260,8 +1260,8 @@
 </span><span id="444" class="l">    {
 </span><span id="445" class="l">        <span class="php-var">$domain</span>-&gt;setActive(<span class="php-keyword1">true</span>);
 </span><span id="446" class="l">        <span class="php-var">$this</span>-&gt;domainRepository-&gt;update(<span class="php-var">$domain</span>);
-</span><span id="447" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been activated.'</span>, <span class="php-quote">'Domain activated'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)), <span class="php-num">1412373539</span>);
-</span><span id="448" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()));
+</span><span id="447" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been activated.'</span>, <span class="php-quote">'Domain activated'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)], <span class="php-num">1412373539</span>);
+</span><span id="448" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()]);
 </span><span id="449" class="l">    }
 </span><span id="450" class="l">
 </span><span id="451" class="l">    <span class="php-comment">/**
@@ -1275,8 +1275,8 @@
 </span><span id="459" class="l">    {
 </span><span id="460" class="l">        <span class="php-var">$domain</span>-&gt;setActive(<span class="php-keyword1">false</span>);
 </span><span id="461" class="l">        <span class="php-var">$this</span>-&gt;domainRepository-&gt;update(<span class="php-var">$domain</span>);
-</span><span id="462" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been deactivated.'</span>, <span class="php-quote">'Domain deactivated'</span>, Message::SEVERITY_OK, <span class="php-keyword1">array</span>(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)), <span class="php-num">1412373425</span>);
-</span><span id="463" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()));
+</span><span id="462" class="l">        <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The domain &quot;%s&quot; has been deactivated.'</span>, <span class="php-quote">'Domain deactivated'</span>, Message::SEVERITY_OK, [<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$domain</span>)], <span class="php-num">1412373425</span>);
+</span><span id="463" class="l">        <span class="php-var">$this</span>-&gt;unsetLastVisitedNodeAndRedirect(<span class="php-quote">'edit'</span>, <span class="php-keyword1">null</span>, <span class="php-keyword1">null</span>, [<span class="php-quote">'site'</span> =&gt; <span class="php-var">$domain</span>-&gt;getSite()]);
 </span><span id="464" class="l">    }
 </span><span id="465" class="l">
 </span><span id="466" class="l">    <span class="php-comment">/**

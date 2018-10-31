@@ -845,7 +845,7 @@
 </span><span id="33" class="l">    <span class="php-comment">/**
 </span></span><span id="34" class="l"><span class="php-comment">     * @var array&lt;\Neos\ContentRepository\Domain\Model\Node&gt;
 </span></span><span id="35" class="l"><span class="php-comment">     */</span>
-</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodes</span> = [];
 </span><span id="37" class="l">
 </span><span id="38" class="l">    <span class="php-comment">/**
 </span></span><span id="39" class="l"><span class="php-comment">     * @Flow\Inject
@@ -953,13 +953,13 @@
 </span></span><span id="141" class="l"><span class="php-comment">     */</span>
 </span><span id="142" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> createContextMatchingNodeData(NodeData <span class="php-var">$nodeData</span>)
 </span><span id="143" class="l">    {
-</span><span id="144" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;contextFactory-&gt;create(<span class="php-keyword1">array</span>(
+</span><span id="144" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;contextFactory-&gt;create([
 </span><span id="145" class="l">            <span class="php-quote">'workspaceName'</span> =&gt; <span class="php-var">$nodeData</span>-&gt;getWorkspace()-&gt;getName(),
 </span><span id="146" class="l">            <span class="php-quote">'invisibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="147" class="l">            <span class="php-quote">'inaccessibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="148" class="l">            <span class="php-quote">'removedContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="149" class="l">            <span class="php-quote">'dimensions'</span> =&gt; <span class="php-var">$nodeData</span>-&gt;getDimensionValues()
-</span><span id="150" class="l">        ));
+</span><span id="150" class="l">        ]);
 </span><span id="151" class="l">    }
 </span><span id="152" class="l">
 </span><span id="153" class="l">    <span class="php-comment">/**
@@ -969,7 +969,7 @@
 </span></span><span id="157" class="l"><span class="php-comment">     */</span>
 </span><span id="158" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">reset</span>()
 </span><span id="159" class="l">    {
-</span><span id="160" class="l">        <span class="php-var">$this</span>-&gt;nodes = <span class="php-keyword1">array</span>();
+</span><span id="160" class="l">        <span class="php-var">$this</span>-&gt;nodes = [];
 </span><span id="161" class="l">    }
 </span><span id="162" class="l">}
 </span><span id="163" class="l"></span></code></pre>

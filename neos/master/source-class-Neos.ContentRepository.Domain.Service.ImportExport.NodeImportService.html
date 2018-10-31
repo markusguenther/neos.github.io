@@ -887,12 +887,12 @@
 </span><span id="73" class="l">    <span class="php-comment">/**
 </span></span><span id="74" class="l"><span class="php-comment">     * @var array
 </span></span><span id="75" class="l"><span class="php-comment">     */</span>
-</span><span id="76" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodeDataStack</span> = <span class="php-keyword1">array</span>();
+</span><span id="76" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodeDataStack</span> = [];
 </span><span id="77" class="l">
 </span><span id="78" class="l">    <span class="php-comment">/**
 </span></span><span id="79" class="l"><span class="php-comment">     * @var array
 </span></span><span id="80" class="l"><span class="php-comment">     */</span>
-</span><span id="81" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodeIdentifierStack</span> = <span class="php-keyword1">array</span>();
+</span><span id="81" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodeIdentifierStack</span> = [];
 </span><span id="82" class="l">
 </span><span id="83" class="l">    <span class="php-comment">/**
 </span></span><span id="84" class="l"><span class="php-comment">     * @var array
@@ -909,46 +909,46 @@
 </span></span><span id="95" class="l"><span class="php-comment">     *
 </span></span><span id="96" class="l"><span class="php-comment">     * @var array
 </span></span><span id="97" class="l"><span class="php-comment">     */</span>
-</span><span id="98" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodeDataPropertyNames</span> = <span class="php-keyword1">array</span>(
-</span><span id="99" class="l">        <span class="php-quote">'Persistence_Object_Identifier'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="100" class="l">        <span class="php-quote">'identifier'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="101" class="l">        <span class="php-quote">'nodeType'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="102" class="l">        <span class="php-quote">'workspace'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="103" class="l">        <span class="php-quote">'sortingIndex'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="104" class="l">        <span class="php-quote">'version'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="105" class="l">        <span class="php-quote">'removed'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="98" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$nodeDataPropertyNames</span> = [
+</span><span id="99" class="l">        <span class="php-quote">'Persistence_Object_Identifier'</span> =&gt; [],
+</span><span id="100" class="l">        <span class="php-quote">'identifier'</span> =&gt; [],
+</span><span id="101" class="l">        <span class="php-quote">'nodeType'</span> =&gt; [],
+</span><span id="102" class="l">        <span class="php-quote">'workspace'</span> =&gt; [],
+</span><span id="103" class="l">        <span class="php-quote">'sortingIndex'</span> =&gt; [],
+</span><span id="104" class="l">        <span class="php-quote">'version'</span> =&gt; [],
+</span><span id="105" class="l">        <span class="php-quote">'removed'</span> =&gt; [
 </span><span id="106" class="l">            <span class="php-quote">'columnType'</span> =&gt; \PDO::PARAM_BOOL
-</span><span id="107" class="l">        ),
-</span><span id="108" class="l">        <span class="php-quote">'hidden'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="107" class="l">        ],
+</span><span id="108" class="l">        <span class="php-quote">'hidden'</span> =&gt; [
 </span><span id="109" class="l">            <span class="php-quote">'columnType'</span> =&gt; \PDO::PARAM_BOOL
-</span><span id="110" class="l">        ),
-</span><span id="111" class="l">        <span class="php-quote">'hiddenInIndex'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="110" class="l">        ],
+</span><span id="111" class="l">        <span class="php-quote">'hiddenInIndex'</span> =&gt; [
 </span><span id="112" class="l">            <span class="php-quote">'columnType'</span> =&gt; \PDO::PARAM_BOOL
-</span><span id="113" class="l">        ),
-</span><span id="114" class="l">        <span class="php-quote">'path'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="115" class="l">        <span class="php-quote">'pathHash'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="116" class="l">        <span class="php-quote">'parentPath'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="117" class="l">        <span class="php-quote">'parentPathHash'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="118" class="l">        <span class="php-quote">'dimensionsHash'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="119" class="l">        <span class="php-quote">'dimensionValues'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="120" class="l">        <span class="php-quote">'properties'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="121" class="l">        <span class="php-quote">'hiddenBeforeDateTime'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="113" class="l">        ],
+</span><span id="114" class="l">        <span class="php-quote">'path'</span> =&gt; [],
+</span><span id="115" class="l">        <span class="php-quote">'pathHash'</span> =&gt; [],
+</span><span id="116" class="l">        <span class="php-quote">'parentPath'</span> =&gt; [],
+</span><span id="117" class="l">        <span class="php-quote">'parentPathHash'</span> =&gt; [],
+</span><span id="118" class="l">        <span class="php-quote">'dimensionsHash'</span> =&gt; [],
+</span><span id="119" class="l">        <span class="php-quote">'dimensionValues'</span> =&gt; [],
+</span><span id="120" class="l">        <span class="php-quote">'properties'</span> =&gt; [],
+</span><span id="121" class="l">        <span class="php-quote">'hiddenBeforeDateTime'</span> =&gt; [
 </span><span id="122" class="l">            <span class="php-quote">'columnType'</span> =&gt; Type::DATETIME
-</span><span id="123" class="l">        ),
-</span><span id="124" class="l">        <span class="php-quote">'hiddenAfterDateTime'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="123" class="l">        ],
+</span><span id="124" class="l">        <span class="php-quote">'hiddenAfterDateTime'</span> =&gt; [
 </span><span id="125" class="l">            <span class="php-quote">'columnType'</span> =&gt; Type::DATETIME
-</span><span id="126" class="l">        ),
-</span><span id="127" class="l">        <span class="php-quote">'creationDateTime'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="126" class="l">        ],
+</span><span id="127" class="l">        <span class="php-quote">'creationDateTime'</span> =&gt; [
 </span><span id="128" class="l">            <span class="php-quote">'columnType'</span> =&gt; Type::DATETIME
-</span><span id="129" class="l">        ),
-</span><span id="130" class="l">        <span class="php-quote">'lastModificationDateTime'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="129" class="l">        ],
+</span><span id="130" class="l">        <span class="php-quote">'lastModificationDateTime'</span> =&gt; [
 </span><span id="131" class="l">            <span class="php-quote">'columnType'</span> =&gt; Type::DATETIME
-</span><span id="132" class="l">        ),
-</span><span id="133" class="l">        <span class="php-quote">'lastPublicationDateTime'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="132" class="l">        ],
+</span><span id="133" class="l">        <span class="php-quote">'lastPublicationDateTime'</span> =&gt; [
 </span><span id="134" class="l">            <span class="php-quote">'columnType'</span> =&gt; Type::DATETIME
-</span><span id="135" class="l">        ),
-</span><span id="136" class="l">        <span class="php-quote">'accessRoles'</span> =&gt; <span class="php-keyword1">array</span>()
-</span><span id="137" class="l">    );
+</span><span id="135" class="l">        ],
+</span><span id="136" class="l">        <span class="php-quote">'accessRoles'</span> =&gt; []
+</span><span id="137" class="l">    ];
 </span><span id="138" class="l">
 </span><span id="139" class="l">    <span class="php-comment">/**
 </span></span><span id="140" class="l"><span class="php-comment">     * Imports the sub-tree from the xml reader into the given target path.
@@ -1096,7 +1096,7 @@
 </span><span id="282" class="l">
 </span><span id="283" class="l">                <span class="php-var">$now</span> = <span class="php-keyword1">new</span> Now();
 </span><span id="284" class="l">                <span class="php-var">$currentNodeIdentifier</span> = <span class="php-var">$this</span>-&gt;nodeIdentifierStack[<span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;nodeIdentifierStack) - <span class="php-num">1</span>];
-</span><span id="285" class="l">                <span class="php-var">$this</span>-&gt;nodeDataStack[] = <span class="php-keyword1">array</span>(
+</span><span id="285" class="l">                <span class="php-var">$this</span>-&gt;nodeDataStack[] = [
 </span><span id="286" class="l">                    <span class="php-quote">'Persistence_Object_Identifier'</span> =&gt; Algorithms::generateUUID(),
 </span><span id="287" class="l">                    <span class="php-quote">'identifier'</span> =&gt; <span class="php-var">$currentNodeIdentifier</span>,
 </span><span id="288" class="l">                    <span class="php-quote">'nodeType'</span> =&gt; <span class="php-var">$xmlReader</span>-&gt;getAttribute(<span class="php-quote">'nodeType'</span>),
@@ -1110,12 +1110,12 @@
 </span><span id="296" class="l">                    <span class="php-quote">'pathHash'</span> =&gt; <span class="php-keyword2">md5</span>(<span class="php-var">$path</span>),
 </span><span id="297" class="l">                    <span class="php-quote">'parentPath'</span> =&gt; <span class="php-var">$parentPath</span>,
 </span><span id="298" class="l">                    <span class="php-quote">'parentPathHash'</span> =&gt; <span class="php-keyword2">md5</span>(<span class="php-var">$parentPath</span>),
-</span><span id="299" class="l">                    <span class="php-quote">'properties'</span> =&gt; <span class="php-keyword1">array</span>(),
-</span><span id="300" class="l">                    <span class="php-quote">'accessRoles'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="299" class="l">                    <span class="php-quote">'properties'</span> =&gt; [],
+</span><span id="300" class="l">                    <span class="php-quote">'accessRoles'</span> =&gt; [],
 </span><span id="301" class="l">                    <span class="php-quote">'creationDateTime'</span> =&gt; <span class="php-var">$now</span>,
 </span><span id="302" class="l">                    <span class="php-quote">'lastModificationDateTime'</span> =&gt; <span class="php-var">$now</span>,
-</span><span id="303" class="l">                    <span class="php-quote">'dimensionValues'</span> =&gt; <span class="php-keyword1">array</span>() <span class="php-comment">// is post-processed before save in END_ELEMENT-case</span>
-</span><span id="304" class="l">                );
+</span><span id="303" class="l">                    <span class="php-quote">'dimensionValues'</span> =&gt; [] <span class="php-comment">// is post-processed before save in END_ELEMENT-case</span>
+</span><span id="304" class="l">                ];
 </span><span id="305" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="306" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'dimensions'</span>:
 </span><span id="307" class="l">                <span class="php-var">$this</span>-&gt;nodeDataStack[<span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;nodeDataStack) - <span class="php-num">1</span>][<span class="php-quote">'dimensionValues'</span>] = <span class="php-var">$this</span>-&gt;parseDimensionsElement(<span class="php-var">$xmlReader</span>);
@@ -1152,7 +1152,7 @@
 </span></span><span id="338" class="l"><span class="php-comment">     */</span>
 </span><span id="339" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> parseDimensionsElement(\XMLReader <span class="php-var">$reader</span>)
 </span><span id="340" class="l">    {
-</span><span id="341" class="l">        <span class="php-var">$dimensions</span> = <span class="php-keyword1">array</span>();
+</span><span id="341" class="l">        <span class="php-var">$dimensions</span> = [];
 </span><span id="342" class="l">        <span class="php-var">$currentDimension</span> = <span class="php-keyword1">null</span>;
 </span><span id="343" class="l">
 </span><span id="344" class="l">        <span class="php-keyword1">while</span> (<span class="php-var">$reader</span>-&gt;read()) {
@@ -1185,7 +1185,7 @@
 </span></span><span id="371" class="l"><span class="php-comment">     */</span>
 </span><span id="372" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> parseArrayElements(\XMLReader <span class="php-var">$reader</span>, <span class="php-var">$elementName</span>, <span class="php-var">$currentNodeIdentifier</span>)
 </span><span id="373" class="l">    {
-</span><span id="374" class="l">        <span class="php-var">$values</span> = <span class="php-keyword1">array</span>();
+</span><span id="374" class="l">        <span class="php-var">$values</span> = [];
 </span><span id="375" class="l">        <span class="php-var">$depth</span> = <span class="php-num">0</span>;
 </span><span id="376" class="l">
 </span><span id="377" class="l">        <span class="php-comment">// The following silences static code analysis warnings about undefined variables.</span>
@@ -1229,7 +1229,7 @@
 </span></span><span id="415" class="l"><span class="php-comment">     */</span>
 </span><span id="416" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> parsePropertiesElement(\XMLReader <span class="php-var">$reader</span>, <span class="php-var">$currentNodeIdentifier</span>)
 </span><span id="417" class="l">    {
-</span><span id="418" class="l">        <span class="php-var">$properties</span> = <span class="php-keyword1">array</span>();
+</span><span id="418" class="l">        <span class="php-var">$properties</span> = [];
 </span><span id="419" class="l">        <span class="php-var">$currentProperty</span> = <span class="php-keyword1">null</span>;
 </span><span id="420" class="l">        <span class="php-var">$currentType</span> = <span class="php-keyword1">null</span>;
 </span><span id="421" class="l">        <span class="php-var">$currentEncoding</span> = <span class="php-keyword1">null</span>;
@@ -1248,7 +1248,7 @@
 </span><span id="434" class="l">                    <span class="php-keyword1">if</span> (<span class="php-var">$reader</span>-&gt;isEmptyElement) {
 </span><span id="435" class="l">                        <span class="php-keyword1">switch</span> (<span class="php-var">$currentType</span>) {
 </span><span id="436" class="l">                            <span class="php-keyword1">case</span> <span class="php-quote">'array'</span>:
-</span><span id="437" class="l">                                <span class="php-var">$properties</span>[<span class="php-var">$currentProperty</span>] = <span class="php-keyword1">array</span>();
+</span><span id="437" class="l">                                <span class="php-var">$properties</span>[<span class="php-var">$currentProperty</span>] = [];
 </span><span id="438" class="l">                                <span class="php-keyword1">break</span>;
 </span><span id="439" class="l">                            <span class="php-keyword1">case</span> <span class="php-quote">'string'</span>:
 </span><span id="440" class="l">                                <span class="php-var">$properties</span>[<span class="php-var">$currentProperty</span>] = <span class="php-quote">''</span>;
@@ -1339,7 +1339,7 @@
 </span><span id="525" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> persistEntities(<span class="php-var">$propertyValue</span>)
 </span><span id="526" class="l">    {
 </span><span id="527" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$propertyValue</span> <span class="php-keyword1">instanceof</span> \Iterator &amp;&amp; !<span class="php-keyword2">is_array</span>(<span class="php-var">$propertyValue</span>)) {
-</span><span id="528" class="l">            <span class="php-var">$propertyValue</span> = <span class="php-keyword1">array</span>(<span class="php-var">$propertyValue</span>);
+</span><span id="528" class="l">            <span class="php-var">$propertyValue</span> = [<span class="php-var">$propertyValue</span>];
 </span><span id="529" class="l">        }
 </span><span id="530" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$propertyValue</span> <span class="php-keyword1">as</span> <span class="php-var">$possibleEntity</span>) {
 </span><span id="531" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$possibleEntity</span>) &amp;&amp; <span class="php-var">$possibleEntity</span> <span class="php-keyword1">instanceof</span> PersistenceMagicInterface) {
@@ -1468,11 +1468,11 @@
 </span><span id="654" class="l">            . <span class="php-quote">'   AND workspace = :workspace'</span>
 </span><span id="655" class="l">            . <span class="php-quote">'   AND dimensionshash = :dimensionsHash'</span>
 </span><span id="656" class="l">            . <span class="php-quote">' )'</span>,
-</span><span id="657" class="l">        <span class="php-keyword1">array</span>(
+</span><span id="657" class="l">        [
 </span><span id="658" class="l">            <span class="php-quote">'identifier'</span> =&gt; <span class="php-var">$nodeData</span>[<span class="php-quote">'identifier'</span>],
 </span><span id="659" class="l">            <span class="php-quote">'workspace'</span> =&gt; <span class="php-var">$nodeData</span>[<span class="php-quote">'workspace'</span>],
 </span><span id="660" class="l">            <span class="php-quote">'dimensionsHash'</span> =&gt; <span class="php-var">$nodeData</span>[<span class="php-quote">'dimensionsHash'</span>]
-</span><span id="661" class="l">        ));
+</span><span id="661" class="l">        ]);
 </span><span id="662" class="l">
 </span><span id="663" class="l">        <span class="php-comment">/** @var \Doctrine\ORM\QueryBuilder $queryBuilder */</span>
 </span><span id="664" class="l">        <span class="php-var">$queryBuilder</span> = <span class="php-var">$this</span>-&gt;entityManager-&gt;createQueryBuilder();
@@ -1490,9 +1490,9 @@
 </span><span id="676" class="l">        <span class="php-comment">// insert new data</span>
 </span><span id="677" class="l">        <span class="php-comment">// we need to use executeUpdate to execute the INSERT -- else the data types are not taken into account.</span>
 </span><span id="678" class="l">        <span class="php-comment">// That's why we build a DQL INSERT statement which is then executed.</span>
-</span><span id="679" class="l">        <span class="php-var">$queryParts</span> = <span class="php-keyword1">array</span>();
-</span><span id="680" class="l">        <span class="php-var">$queryArguments</span> = <span class="php-keyword1">array</span>();
-</span><span id="681" class="l">        <span class="php-var">$queryTypes</span> = <span class="php-keyword1">array</span>();
+</span><span id="679" class="l">        <span class="php-var">$queryParts</span> = [];
+</span><span id="680" class="l">        <span class="php-var">$queryArguments</span> = [];
+</span><span id="681" class="l">        <span class="php-var">$queryTypes</span> = [];
 </span><span id="682" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;nodeDataPropertyNames <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; <span class="php-var">$propertyConfig</span>) {
 </span><span id="683" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$nodeData</span>[<span class="php-var">$propertyName</span>])) {
 </span><span id="684" class="l">                <span class="php-var">$queryParts</span>[<span class="php-var">$propertyName</span>] = <span class="php-quote">':'</span> . <span class="php-var">$propertyName</span>;
@@ -1506,12 +1506,12 @@
 </span><span id="692" class="l">
 </span><span id="693" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$dimensionValues</span> <span class="php-keyword1">as</span> <span class="php-var">$dimension</span> =&gt; <span class="php-var">$values</span>) {
 </span><span id="694" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$values</span> <span class="php-keyword1">as</span> <span class="php-var">$value</span>) {
-</span><span id="695" class="l">                <span class="php-var">$nodeDimension</span> = <span class="php-keyword1">array</span>(
+</span><span id="695" class="l">                <span class="php-var">$nodeDimension</span> = [
 </span><span id="696" class="l">                    <span class="php-quote">'persistence_object_identifier'</span> =&gt; Algorithms::generateUUID(),
 </span><span id="697" class="l">                    <span class="php-quote">'nodedata'</span> =&gt; <span class="php-var">$nodeData</span>[<span class="php-quote">'Persistence_Object_Identifier'</span>],
 </span><span id="698" class="l">                    <span class="php-quote">'name'</span> =&gt; <span class="php-var">$dimension</span>,
 </span><span id="699" class="l">                    <span class="php-quote">'value'</span> =&gt; <span class="php-var">$value</span>
-</span><span id="700" class="l">                );
+</span><span id="700" class="l">                ];
 </span><span id="701" class="l">                <span class="php-var">$connection</span>-&gt;insert(<span class="php-quote">'neos_contentrepository_domain_model_nodedimension'</span>, <span class="php-var">$nodeDimension</span>);
 </span><span id="702" class="l">            }
 </span><span id="703" class="l">        }

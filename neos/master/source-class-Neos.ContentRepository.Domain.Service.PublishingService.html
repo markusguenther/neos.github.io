@@ -894,11 +894,11 @@
 </span><span id="69" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getUnpublishedNodes(Workspace <span class="php-var">$workspace</span>)
 </span><span id="70" class="l">    {
 </span><span id="71" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$workspace</span>-&gt;getBaseWorkspace() === <span class="php-keyword1">null</span>) {
-</span><span id="72" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="72" class="l">            <span class="php-keyword1">return</span> [];
 </span><span id="73" class="l">        }
 </span><span id="74" class="l">
 </span><span id="75" class="l">        <span class="php-var">$nodeData</span> = <span class="php-var">$this</span>-&gt;nodeDataRepository-&gt;findByWorkspace(<span class="php-var">$workspace</span>);
-</span><span id="76" class="l">        <span class="php-var">$unpublishedNodes</span> = <span class="php-keyword1">array</span>();
+</span><span id="76" class="l">        <span class="php-var">$unpublishedNodes</span> = [];
 </span><span id="77" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeData</span> <span class="php-keyword1">as</span> <span class="php-var">$singleNodeData</span>) {
 </span><span id="78" class="l">            <span class="php-comment">/** @var NodeData $singleNodeData */</span>
 </span><span id="79" class="l">            <span class="php-comment">// Skip the root entry from the workspace as it can't be published</span>
@@ -1112,20 +1112,20 @@
 </span></span><span id="287" class="l"><span class="php-comment">     * @param array $contextProperties Additional pre-defined context properties
 </span></span><span id="288" class="l"><span class="php-comment">     * @return Context
 </span></span><span id="289" class="l"><span class="php-comment">     */</span>
-</span><span id="290" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createContext(Workspace <span class="php-var">$workspace</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensionValues</span>, <span class="php-keyword1">array</span> <span class="php-var">$contextProperties</span> = <span class="php-keyword1">array</span>())
+</span><span id="290" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createContext(Workspace <span class="php-var">$workspace</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensionValues</span>, <span class="php-keyword1">array</span> <span class="php-var">$contextProperties</span> = [])
 </span><span id="291" class="l">    {
 </span><span id="292" class="l">        <span class="php-var">$presetsMatchingDimensionValues</span> = <span class="php-var">$this</span>-&gt;contentDimensionPresetSource-&gt;findPresetsByTargetValues(<span class="php-var">$dimensionValues</span>);
 </span><span id="293" class="l">        <span class="php-var">$dimensions</span> = <span class="php-keyword2">array_map</span>(<span class="php-keyword1">function</span> (<span class="php-var">$preset</span>) {
 </span><span id="294" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$preset</span>[<span class="php-quote">'values'</span>];
 </span><span id="295" class="l">        }, <span class="php-var">$presetsMatchingDimensionValues</span>);
 </span><span id="296" class="l">
-</span><span id="297" class="l">        <span class="php-var">$contextProperties</span> += <span class="php-keyword1">array</span>(
+</span><span id="297" class="l">        <span class="php-var">$contextProperties</span> += [
 </span><span id="298" class="l">            <span class="php-quote">'workspaceName'</span> =&gt; <span class="php-var">$workspace</span>-&gt;getName(),
 </span><span id="299" class="l">            <span class="php-quote">'inaccessibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="300" class="l">            <span class="php-quote">'invisibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="301" class="l">            <span class="php-quote">'removedContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="302" class="l">            <span class="php-quote">'dimensions'</span> =&gt; <span class="php-var">$dimensions</span>
-</span><span id="303" class="l">        );
+</span><span id="303" class="l">        ];
 </span><span id="304" class="l">
 </span><span id="305" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;contextFactory-&gt;create(<span class="php-var">$contextProperties</span>);
 </span><span id="306" class="l">    }

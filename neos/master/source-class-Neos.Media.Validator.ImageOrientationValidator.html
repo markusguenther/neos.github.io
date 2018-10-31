@@ -846,9 +846,9 @@
 </span><span id="32" class="l">    <span class="php-comment">/**
 </span></span><span id="33" class="l"><span class="php-comment">     * @var array
 </span></span><span id="34" class="l"><span class="php-comment">     */</span>
-</span><span id="35" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$supportedOptions</span> = <span class="php-keyword1">array</span>(
-</span><span id="36" class="l">        <span class="php-quote">'allowedOrientations'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-keyword1">array</span>(), <span class="php-quote">'Array of image orientations, one or two out of \'square\', \'landcape\' or \'portrait\''</span>, <span class="php-quote">'array'</span>, <span class="php-keyword1">true</span>)
-</span><span id="37" class="l">    );
+</span><span id="35" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$supportedOptions</span> = [
+</span><span id="36" class="l">        <span class="php-quote">'allowedOrientations'</span> =&gt; [[], <span class="php-quote">'Array of image orientations, one or two out of \'square\', \'landcape\' or \'portrait\''</span>, <span class="php-quote">'array'</span>, <span class="php-keyword1">true</span>]
+</span><span id="37" class="l">    ];
 </span><span id="38" class="l">
 </span><span id="39" class="l">    <span class="php-comment">/**
 </span></span><span id="40" class="l"><span class="php-comment">     * The given $value is valid if it is an \Neos\Media\Domain\Model\ImageInterface of the
@@ -870,9 +870,9 @@
 </span><span id="56" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>]) === <span class="php-num">1</span>) {
 </span><span id="57" class="l">                <span class="php-keyword2">reset</span>(<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>]);
 </span><span id="58" class="l">                <span class="php-var">$allowedOrientation</span> = <span class="php-keyword2">current</span>(<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>]);
-</span><span id="59" class="l">                <span class="php-var">$this</span>-&gt;addError(<span class="php-quote">'The image orientation must be &quot;%s&quot;.'</span>, <span class="php-num">1328029406</span>, <span class="php-keyword1">array</span>(<span class="php-var">$allowedOrientation</span>));
+</span><span id="59" class="l">                <span class="php-var">$this</span>-&gt;addError(<span class="php-quote">'The image orientation must be &quot;%s&quot;.'</span>, <span class="php-num">1328029406</span>, [<span class="php-var">$allowedOrientation</span>]);
 </span><span id="60" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="61" class="l">                <span class="php-var">$this</span>-&gt;addError(<span class="php-quote">'The image orientation &quot;%s&quot; is not allowed.'</span>, <span class="php-num">1328029362</span>, <span class="php-keyword1">array</span>(<span class="php-var">$image</span>-&gt;getOrientation()));
+</span><span id="61" class="l">                <span class="php-var">$this</span>-&gt;addError(<span class="php-quote">'The image orientation &quot;%s&quot; is not allowed.'</span>, <span class="php-num">1328029362</span>, [<span class="php-var">$image</span>-&gt;getOrientation()]);
 </span><span id="62" class="l">            }
 </span><span id="63" class="l">        }
 </span><span id="64" class="l">    }
@@ -885,7 +885,7 @@
 </span><span id="71" class="l">    {
 </span><span id="72" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>])) {
 </span><span id="73" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidValidationOptionsException(<span class="php-quote">'The option &quot;allowedOrientations&quot; was not specified.'</span>, <span class="php-num">1328028795</span>);
-</span><span id="74" class="l">        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>]) || <span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>] === <span class="php-keyword1">array</span>()) {
+</span><span id="74" class="l">        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>]) || <span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>] === []) {
 </span><span id="75" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> InvalidValidationOptionsException(<span class="php-quote">'The option &quot;allowedOrientations&quot; must be an array with at least one element of &quot;square&quot;, &quot;portrait&quot; or &quot;landscape&quot;.'</span>, <span class="php-num">1328028798</span>);
 </span><span id="76" class="l">        }
 </span><span id="77" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'allowedOrientations'</span>] <span class="php-keyword1">as</span> <span class="php-var">$orientation</span>) {

@@ -898,7 +898,7 @@ ContentDimensionPresetSourceInterface::getAllPresets() for a format description.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.ContentDimensionsController.html#65-99" title="Go to source code">showAction</a>( <span>string <var>$dimensionName</var></span>, <span>array <var>$chosenDimensionPresets</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.ContentDimensionsController.html#65-99" title="Go to source code">showAction</a>( <span>string <var>$dimensionName</var></span>, <span>array <var>$chosenDimensionPresets</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Returns only presets of the dimension specified by $dimensionName. But even though only one dimension is returned,
@@ -976,10 +976,10 @@ exists and $dimensionName is "language. This method will now display a list of d
 			<td class="value">
 				<div>
 					<a href="#$viewFormatToObjectNameMap" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-quote">'html'</span> =&gt; TemplateView::<span class="php-keyword1">class</span>,
     <span class="php-quote">'json'</span> =&gt; JsonView::<span class="php-keyword1">class</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>
@@ -1004,10 +1004,10 @@ exists and $dimensionName is "language. This method will now display a list of d
 			<td class="value">
 				<div>
 					<a href="#$supportedMediaTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-quote">'text/html'</span>,
     <span class="php-quote">'application/json'</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>

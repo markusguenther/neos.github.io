@@ -998,7 +998,7 @@
 </span></span><span id="182" class="l"><span class="php-comment">     */</span>
 </span><span id="183" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createMissingSitesNode(<span class="php-var">$workspaceName</span>, <span class="php-var">$dryRun</span>)
 </span><span id="184" class="l">    {
-</span><span id="185" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for &quot;%s&quot; node ...'</span>, <span class="php-keyword1">array</span>(SiteService::SITES_ROOT_PATH));
+</span><span id="185" class="l">        <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for &quot;%s&quot; node ...'</span>, [SiteService::SITES_ROOT_PATH]);
 </span><span id="186" class="l">        <span class="php-var">$rootNode</span> = <span class="php-var">$this</span>-&gt;contextFactory-&gt;create()-&gt;getRootNode();
 </span><span id="187" class="l">        <span class="php-comment">// We fetch the workspace to be sure it's known to the persistence manager and persist all</span>
 </span><span id="188" class="l">        <span class="php-comment">// so the workspace and site node are persisted before we import any nodes to it.</span>
@@ -1045,7 +1045,7 @@
 </span><span id="229" class="l">            <span class="php-var">$flowQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-var">$baseContextSiteNodes</span>);
 </span><span id="230" class="l">            <span class="php-var">$siteNodes</span> = <span class="php-var">$flowQuery</span>-&gt;context([<span class="php-quote">'dimensions'</span> =&gt; <span class="php-var">$dimensionCombination</span>, <span class="php-quote">'targetDimensions'</span> =&gt; []])-&gt;get();
 </span><span id="231" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$siteNodes</span>) &gt; <span class="php-num">0</span>) {
-</span><span id="232" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for nodes with missing URI path segment in dimension &quot;%s&quot;'</span>, <span class="php-keyword1">array</span>(<span class="php-keyword2">trim</span>(NodePaths::generateContextPath(<span class="php-quote">''</span>, <span class="php-quote">''</span>, <span class="php-var">$dimensionCombination</span>), <span class="php-quote">'@;'</span>)));
+</span><span id="232" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Checking for nodes with missing URI path segment in dimension &quot;%s&quot;'</span>, [<span class="php-keyword2">trim</span>(NodePaths::generateContextPath(<span class="php-quote">''</span>, <span class="php-quote">''</span>, <span class="php-var">$dimensionCombination</span>), <span class="php-quote">'@;'</span>)]);
 </span><span id="233" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$siteNodes</span> <span class="php-keyword1">as</span> <span class="php-var">$siteNode</span>) {
 </span><span id="234" class="l">                    <span class="php-var">$this</span>-&gt;generateUriPathSegmentsForNode(<span class="php-var">$siteNode</span>, <span class="php-var">$dryRun</span>);
 </span><span id="235" class="l">                }
@@ -1070,9 +1070,9 @@
 </span><span id="254" class="l">            <span class="php-var">$uriPathSegment</span> = <span class="php-var">$this</span>-&gt;nodeUriPathSegmentGenerator-&gt;generateUriPathSegment(<span class="php-var">$node</span>);
 </span><span id="255" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$dryRun</span> === <span class="php-keyword1">false</span>) {
 </span><span id="256" class="l">                <span class="php-var">$node</span>-&gt;setProperty(<span class="php-quote">'uriPathSegment'</span>, <span class="php-var">$uriPathSegment</span>);
-</span><span id="257" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Added missing URI path segment for &quot;%s&quot; (%s) =&gt; %s'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$name</span>, <span class="php-var">$uriPathSegment</span>));
+</span><span id="257" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Added missing URI path segment for &quot;%s&quot; (%s) =&gt; %s'</span>, [<span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$name</span>, <span class="php-var">$uriPathSegment</span>]);
 </span><span id="258" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="259" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found missing URI path segment for &quot;%s&quot; (%s) =&gt; %s'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$name</span>, <span class="php-var">$uriPathSegment</span>));
+</span><span id="259" class="l">                <span class="php-var">$this</span>-&gt;output-&gt;outputLine(<span class="php-quote">'Found missing URI path segment for &quot;%s&quot; (%s) =&gt; %s'</span>, [<span class="php-var">$node</span>-&gt;getPath(), <span class="php-var">$name</span>, <span class="php-var">$uriPathSegment</span>]);
 </span><span id="260" class="l">            }
 </span><span id="261" class="l">        }
 </span><span id="262" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$node</span>-&gt;getChildNodes(<span class="php-quote">'Neos.Neos:Document'</span>) <span class="php-keyword1">as</span> <span class="php-var">$childNode</span>) {
@@ -1131,12 +1131,12 @@
 </span></span><span id="315" class="l"><span class="php-comment">     */</span>
 </span><span id="316" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> createContext(<span class="php-var">$workspaceName</span>, <span class="php-keyword1">array</span> <span class="php-var">$dimensions</span>)
 </span><span id="317" class="l">    {
-</span><span id="318" class="l">        <span class="php-var">$contextProperties</span> = <span class="php-keyword1">array</span>(
+</span><span id="318" class="l">        <span class="php-var">$contextProperties</span> = [
 </span><span id="319" class="l">            <span class="php-quote">'workspaceName'</span> =&gt; <span class="php-var">$workspaceName</span>,
 </span><span id="320" class="l">            <span class="php-quote">'dimensions'</span> =&gt; <span class="php-var">$dimensions</span>,
 </span><span id="321" class="l">            <span class="php-quote">'invisibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="322" class="l">            <span class="php-quote">'inaccessibleContentShown'</span> =&gt; <span class="php-keyword1">true</span>
-</span><span id="323" class="l">        );
+</span><span id="323" class="l">        ];
 </span><span id="324" class="l">
 </span><span id="325" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;contextFactory-&gt;create(<span class="php-var">$contextProperties</span>);
 </span><span id="326" class="l">    }

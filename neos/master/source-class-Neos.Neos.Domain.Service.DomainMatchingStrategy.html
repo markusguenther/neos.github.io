@@ -867,8 +867,8 @@
 </span></span><span id="35" class="l"><span class="php-comment">     */</span>
 </span><span id="36" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getSortedMatches(<span class="php-var">$hostnameToMatch</span>, <span class="php-keyword1">array</span> <span class="php-var">$domains</span>)
 </span><span id="37" class="l">    {
-</span><span id="38" class="l">        <span class="php-var">$matchingDomains</span> = <span class="php-keyword1">array</span>();
-</span><span id="39" class="l">        <span class="php-var">$matchQualities</span> = <span class="php-keyword1">array</span>();
+</span><span id="38" class="l">        <span class="php-var">$matchingDomains</span> = [];
+</span><span id="39" class="l">        <span class="php-var">$matchQualities</span> = [];
 </span><span id="40" class="l">        <span class="php-var">$hostnameToMatchPartsReverse</span> = <span class="php-keyword2">array_reverse</span>(<span class="php-keyword2">explode</span>(<span class="php-quote">'.'</span>, <span class="php-var">$hostnameToMatch</span>));
 </span><span id="41" class="l">
 </span><span id="42" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$domains</span> <span class="php-keyword1">as</span> <span class="php-var">$domain</span>) {

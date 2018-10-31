@@ -919,7 +919,7 @@
 </span></span><span id="100" class="l"><span class="php-comment">     */</span>
 </span><span id="101" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> formatFusionPath(<span class="php-var">$fusionPath</span>)
 </span><span id="102" class="l">    {
-</span><span id="103" class="l">        <span class="php-var">$pathSegments</span> = <span class="php-keyword1">array</span>();
+</span><span id="103" class="l">        <span class="php-var">$pathSegments</span> = [];
 </span><span id="104" class="l">        <span class="php-var">$spacer</span> = <span class="php-quote">''</span>;
 </span><span id="105" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">explode</span>(<span class="php-quote">'/'</span>, <span class="php-var">$fusionPath</span>) <span class="php-keyword1">as</span> <span class="php-var">$segment</span>) {
 </span><span id="106" class="l">            <span class="php-var">$pathSegments</span>[] = <span class="php-var">$spacer</span> . <span class="php-var">$segment</span> . <span class="php-quote">'/'</span>;

@@ -895,11 +895,11 @@
 </span><span id="82" class="l">            <span class="php-var">$fluidView</span>-&gt;assign(<span class="php-quote">'metaData'</span>, <span class="php-var">$this</span>-&gt;contentElementWrappingService-&gt;wrapCurrentDocumentMetadata(<span class="php-var">$documentNode</span>, <span class="php-quote">'&lt;div id=&quot;neos-document-metadata&quot;&gt;&lt;/div&gt;'</span>, <span class="php-var">$fusionPath</span>));
 </span><span id="83" class="l">        }
 </span><span id="84" class="l">
-</span><span id="85" class="l">        <span class="php-var">$fluidView</span>-&gt;assignMultiple(<span class="php-keyword1">array</span>(
+</span><span id="85" class="l">        <span class="php-var">$fluidView</span>-&gt;assignMultiple([
 </span><span id="86" class="l">            <span class="php-quote">'isBackend'</span> =&gt; <span class="php-var">$isBackend</span>,
 </span><span id="87" class="l">            <span class="php-quote">'message'</span> =&gt; <span class="php-var">$output</span>,
 </span><span id="88" class="l">            <span class="php-quote">'node'</span> =&gt; <span class="php-var">$node</span>
-</span><span id="89" class="l">        ));
+</span><span id="89" class="l">        ]);
 </span><span id="90" class="l">
 </span><span id="91" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;wrapHttpResponse(<span class="php-var">$exception</span>, <span class="php-var">$fluidView</span>-&gt;render());
 </span><span id="92" class="l">    }

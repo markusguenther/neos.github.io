@@ -934,7 +934,7 @@
 </span><span id="122" class="l">    {
 </span><span id="123" class="l">        <span class="php-var">$templatePathAndFilename</span> = <span class="php-quote">'resource://Neos.SiteKickstarter/Private/Generator/Fusion/NodeTypes/Pages/Page.fusion'</span>;
 </span><span id="124" class="l">
-</span><span id="125" class="l">        <span class="php-var">$contextVariables</span> = <span class="php-keyword1">array</span>();
+</span><span id="125" class="l">        <span class="php-var">$contextVariables</span> = [];
 </span><span id="126" class="l">        <span class="php-var">$contextVariables</span>[<span class="php-quote">'packageKey'</span>] = <span class="php-var">$packageKey</span>;
 </span><span id="127" class="l">        <span class="php-var">$contextVariables</span>[<span class="php-quote">'siteName'</span>] = <span class="php-var">$siteName</span>;
 </span><span id="128" class="l">        <span class="php-var">$packageKeyDomainPart</span> = <span class="php-keyword2">substr</span>(<span class="php-keyword2">strrchr</span>(<span class="php-var">$packageKey</span>, <span class="php-quote">'.'</span>), <span class="php-num">1</span>) ?: <span class="php-var">$packageKey</span>;
@@ -1009,10 +1009,10 @@
 </span><span id="197" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> generateAdditionalFolders(<span class="php-var">$packageKey</span>)
 </span><span id="198" class="l">    {
 </span><span id="199" class="l">        <span class="php-var">$resourcesPath</span> = <span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-var">$packageKey</span>)-&gt;getResourcesPath();
-</span><span id="200" class="l">        <span class="php-var">$publicResourcesPath</span> = Files::concatenatePaths(<span class="php-keyword1">array</span>(<span class="php-var">$resourcesPath</span>, <span class="php-quote">'Public'</span>));
+</span><span id="200" class="l">        <span class="php-var">$publicResourcesPath</span> = Files::concatenatePaths([<span class="php-var">$resourcesPath</span>, <span class="php-quote">'Public'</span>]);
 </span><span id="201" class="l">
-</span><span id="202" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword1">array</span>(<span class="php-quote">'Images'</span>, <span class="php-quote">'JavaScript'</span>, <span class="php-quote">'Styles'</span>) <span class="php-keyword1">as</span> <span class="php-var">$publicResourceFolder</span>) {
-</span><span id="203" class="l">            Files::createDirectoryRecursively(Files::concatenatePaths(<span class="php-keyword1">array</span>(<span class="php-var">$publicResourcesPath</span>, <span class="php-var">$publicResourceFolder</span>)));
+</span><span id="202" class="l">        <span class="php-keyword1">foreach</span> ([<span class="php-quote">'Images'</span>, <span class="php-quote">'JavaScript'</span>, <span class="php-quote">'Styles'</span>] <span class="php-keyword1">as</span> <span class="php-var">$publicResourceFolder</span>) {
+</span><span id="203" class="l">            Files::createDirectoryRecursively(Files::concatenatePaths([<span class="php-var">$publicResourcesPath</span>, <span class="php-var">$publicResourceFolder</span>]));
 </span><span id="204" class="l">        }
 </span><span id="205" class="l">    }
 </span><span id="206" class="l">}

@@ -891,7 +891,7 @@
 </span><span id="76" class="l">        <span class="php-var">$formElement</span>-&gt;setProperty(<span class="php-quote">'elementClassAttribute'</span>, <span class="php-quote">'alert alert-primary'</span>);
 </span><span id="77" class="l">
 </span><span id="78" class="l">        <span class="php-var">$foundImageHandler</span> = <span class="php-keyword1">false</span>;
-</span><span id="79" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword1">array</span>(<span class="php-quote">'gd'</span>, <span class="php-quote">'gmagick'</span>, <span class="php-quote">'imagick'</span>) <span class="php-keyword1">as</span> <span class="php-var">$extensionName</span>) {
+</span><span id="79" class="l">        <span class="php-keyword1">foreach</span> ([<span class="php-quote">'gd'</span>, <span class="php-quote">'gmagick'</span>, <span class="php-quote">'imagick'</span>] <span class="php-keyword1">as</span> <span class="php-var">$extensionName</span>) {
 </span><span id="80" class="l">            <span class="php-var">$formElement</span> = <span class="php-var">$imageSection</span>-&gt;createElement(<span class="php-var">$extensionName</span>, <span class="php-quote">'Neos.Form:StaticText'</span>);
 </span><span id="81" class="l">
 </span><span id="82" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">extension_loaded</span>(<span class="php-var">$extensionName</span>)) {
@@ -929,12 +929,12 @@
 </span></span><span id="114" class="l"><span class="php-comment">     */</span>
 </span><span id="115" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> findUnsupportedImageFormats(<span class="php-var">$driver</span>)
 </span><span id="116" class="l">    {
-</span><span id="117" class="l">        <span class="php-var">$this</span>-&gt;imagineFactory-&gt;injectSettings(<span class="php-keyword1">array</span>(<span class="php-quote">'driver'</span> =&gt; <span class="php-keyword2">ucfirst</span>(<span class="php-var">$driver</span>)));
+</span><span id="117" class="l">        <span class="php-var">$this</span>-&gt;imagineFactory-&gt;injectSettings([<span class="php-quote">'driver'</span> =&gt; <span class="php-keyword2">ucfirst</span>(<span class="php-var">$driver</span>)]);
 </span><span id="118" class="l">        <span class="php-var">$imagine</span> = <span class="php-var">$this</span>-&gt;imagineFactory-&gt;create();
-</span><span id="119" class="l">        <span class="php-var">$unsupportedFormats</span> = <span class="php-keyword1">array</span>();
+</span><span id="119" class="l">        <span class="php-var">$unsupportedFormats</span> = [];
 </span><span id="120" class="l">
-</span><span id="121" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword1">array</span>(<span class="php-quote">'jpg'</span>, <span class="php-quote">'gif'</span>, <span class="php-quote">'png'</span>) <span class="php-keyword1">as</span> <span class="php-var">$imageFormat</span>) {
-</span><span id="122" class="l">            <span class="php-var">$imagePath</span> = Files::concatenatePaths(<span class="php-keyword1">array</span>(<span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-quote">'Neos.Neos'</span>)-&gt;getResourcesPath(), <span class="php-quote">'Private/Installer/TestImages/Test.'</span> . <span class="php-var">$imageFormat</span>));
+</span><span id="121" class="l">        <span class="php-keyword1">foreach</span> ([<span class="php-quote">'jpg'</span>, <span class="php-quote">'gif'</span>, <span class="php-quote">'png'</span>] <span class="php-keyword1">as</span> <span class="php-var">$imageFormat</span>) {
+</span><span id="122" class="l">            <span class="php-var">$imagePath</span> = Files::concatenatePaths([<span class="php-var">$this</span>-&gt;packageManager-&gt;getPackage(<span class="php-quote">'Neos.Neos'</span>)-&gt;getResourcesPath(), <span class="php-quote">'Private/Installer/TestImages/Test.'</span> . <span class="php-var">$imageFormat</span>]);
 </span><span id="123" class="l">
 </span><span id="124" class="l">            <span class="php-keyword1">try</span> {
 </span><span id="125" class="l">                <span class="php-var">$imagine</span>-&gt;open(<span class="php-var">$imagePath</span>);

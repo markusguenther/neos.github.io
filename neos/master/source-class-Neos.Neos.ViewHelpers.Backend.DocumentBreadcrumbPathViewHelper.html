@@ -859,7 +859,7 @@
 </span><span id="33" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> render(NodeInterface <span class="php-var">$node</span>)
 </span><span id="34" class="l">    {
 </span><span id="35" class="l">        <span class="php-var">$documentNodes</span> = [];
-</span><span id="36" class="l">        <span class="php-var">$flowQuery</span> = <span class="php-keyword1">new</span> FlowQuery(<span class="php-keyword1">array</span>(<span class="php-var">$node</span>));
+</span><span id="36" class="l">        <span class="php-var">$flowQuery</span> = <span class="php-keyword1">new</span> FlowQuery([<span class="php-var">$node</span>]);
 </span><span id="37" class="l">        <span class="php-var">$nodes</span> = <span class="php-keyword2">array_reverse</span>(<span class="php-var">$flowQuery</span>-&gt;parents(<span class="php-quote">'[instanceof Neos.Neos:Document]'</span>)-&gt;get());
 </span><span id="38" class="l">        <span class="php-comment">/** @var NodeInterface $node */</span>
 </span><span id="39" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$documentNode</span>) {

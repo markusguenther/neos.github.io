@@ -929,18 +929,18 @@
 </span></span><span id="109" class="l"><span class="php-comment">     */</span>
 </span><span id="110" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> resize(Thumbnail <span class="php-var">$thumbnail</span>, PersistentResource <span class="php-var">$resource</span>)
 </span><span id="111" class="l">    {
-</span><span id="112" class="l">        <span class="php-var">$adjustments</span> = <span class="php-keyword1">array</span>(
+</span><span id="112" class="l">        <span class="php-var">$adjustments</span> = [
 </span><span id="113" class="l">            <span class="php-keyword1">new</span> ResizeImageAdjustment(
-</span><span id="114" class="l">                <span class="php-keyword1">array</span>(
+</span><span id="114" class="l">                [
 </span><span id="115" class="l">                    <span class="php-quote">'width'</span> =&gt; <span class="php-var">$thumbnail</span>-&gt;getConfigurationValue(<span class="php-quote">'width'</span>),
 </span><span id="116" class="l">                    <span class="php-quote">'maximumWidth'</span> =&gt; <span class="php-var">$thumbnail</span>-&gt;getConfigurationValue(<span class="php-quote">'maximumWidth'</span>),
 </span><span id="117" class="l">                    <span class="php-quote">'height'</span> =&gt; <span class="php-var">$thumbnail</span>-&gt;getConfigurationValue(<span class="php-quote">'height'</span>),
 </span><span id="118" class="l">                    <span class="php-quote">'maximumHeight'</span> =&gt; <span class="php-var">$thumbnail</span>-&gt;getConfigurationValue(<span class="php-quote">'maximumHeight'</span>),
 </span><span id="119" class="l">                    <span class="php-quote">'ratioMode'</span> =&gt; <span class="php-var">$thumbnail</span>-&gt;getConfigurationValue(<span class="php-quote">'ratioMode'</span>),
 </span><span id="120" class="l">                    <span class="php-quote">'allowUpScaling'</span> =&gt; <span class="php-var">$thumbnail</span>-&gt;getConfigurationValue(<span class="php-quote">'allowUpScaling'</span>),
-</span><span id="121" class="l">                )
+</span><span id="121" class="l">                ]
 </span><span id="122" class="l">            )
-</span><span id="123" class="l">        );
+</span><span id="123" class="l">        ];
 </span><span id="124" class="l">
 </span><span id="125" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;imageService-&gt;processImage(<span class="php-var">$resource</span>, <span class="php-var">$adjustments</span>);
 </span><span id="126" class="l">    }

@@ -949,7 +949,7 @@
 </span><span id="125" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
 </span><span id="126" class="l">        }
 </span><span id="127" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$nodeTypes</span>)) {
-</span><span id="128" class="l">            <span class="php-var">$nodeTypes</span> = <span class="php-keyword1">array</span>(<span class="php-var">$nodeTypes</span>);
+</span><span id="128" class="l">            <span class="php-var">$nodeTypes</span> = [<span class="php-var">$nodeTypes</span>];
 </span><span id="129" class="l">        }
 </span><span id="130" class="l">
 </span><span id="131" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeType</span>) {
@@ -1010,7 +1010,7 @@
 </span><span id="186" class="l">        <span class="php-var">$presetIdentifier</span> = <span class="php-var">$preset</span>[<span class="php-quote">'identifier'</span>];
 </span><span id="187" class="l">
 </span><span id="188" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$presets</span>)) {
-</span><span id="189" class="l">            <span class="php-var">$presets</span> = <span class="php-keyword1">array</span>(<span class="php-var">$presets</span>);
+</span><span id="189" class="l">            <span class="php-var">$presets</span> = [<span class="php-var">$presets</span>];
 </span><span id="190" class="l">        }
 </span><span id="191" class="l">
 </span><span id="192" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>(<span class="php-var">$presetIdentifier</span>, <span class="php-var">$presets</span>);

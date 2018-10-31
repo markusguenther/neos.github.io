@@ -913,13 +913,13 @@
 </span></span><span id="81" class="l"><span class="php-comment">     *
 </span></span><span id="82" class="l"><span class="php-comment">     * @var array
 </span></span><span id="83" class="l"><span class="php-comment">     */</span>
-</span><span id="84" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$appendFusionIncludes</span> = <span class="php-keyword1">array</span>();
+</span><span id="84" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$appendFusionIncludes</span> = [];
 </span><span id="85" class="l">
 </span><span id="86" class="l">    <span class="php-comment">/**
 </span></span><span id="87" class="l"><span class="php-comment">     * @Flow\InjectConfiguration(&quot;fusion.autoInclude&quot;)
 </span></span><span id="88" class="l"><span class="php-comment">     * @var array
 </span></span><span id="89" class="l"><span class="php-comment">     */</span>
-</span><span id="90" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$autoIncludeConfiguration</span> = <span class="php-keyword1">array</span>();
+</span><span id="90" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$autoIncludeConfiguration</span> = [];
 </span><span id="91" class="l">
 </span><span id="92" class="l">    <span class="php-comment">/**
 </span></span><span id="93" class="l"><span class="php-comment">     * @Flow\Inject
@@ -1054,7 +1054,7 @@
 </span></span><span id="222" class="l"><span class="php-comment">     */</span>
 </span><span id="223" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> prepareAutoIncludeFusion()
 </span><span id="224" class="l">    {
-</span><span id="225" class="l">        <span class="php-var">$autoIncludeFusion</span> = <span class="php-keyword1">array</span>();
+</span><span id="225" class="l">        <span class="php-var">$autoIncludeFusion</span> = [];
 </span><span id="226" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;packageManager-&gt;getAvailablePackages()) <span class="php-keyword1">as</span> <span class="php-var">$packageKey</span>) {
 </span><span id="227" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;autoIncludeConfiguration[<span class="php-var">$packageKey</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;autoIncludeConfiguration[<span class="php-var">$packageKey</span>] === <span class="php-keyword1">true</span>) {
 </span><span id="228" class="l">                <span class="php-var">$autoIncludeFusionFile</span> = <span class="php-keyword2">sprintf</span>(<span class="php-var">$this</span>-&gt;autoIncludeFusionPattern, <span class="php-var">$packageKey</span>);

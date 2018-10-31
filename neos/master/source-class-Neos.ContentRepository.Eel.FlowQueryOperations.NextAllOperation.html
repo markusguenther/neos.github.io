@@ -885,8 +885,8 @@
 </span></span><span id="56" class="l"><span class="php-comment">     */</span>
 </span><span id="57" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> evaluate(FlowQuery <span class="php-var">$flowQuery</span>, <span class="php-keyword1">array</span> <span class="php-var">$arguments</span>)
 </span><span id="58" class="l">    {
-</span><span id="59" class="l">        <span class="php-var">$output</span> = <span class="php-keyword1">array</span>();
-</span><span id="60" class="l">        <span class="php-var">$outputNodePaths</span> = <span class="php-keyword1">array</span>();
+</span><span id="59" class="l">        <span class="php-var">$output</span> = [];
+</span><span id="60" class="l">        <span class="php-var">$outputNodePaths</span> = [];
 </span><span id="61" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$flowQuery</span>-&gt;getContext() <span class="php-keyword1">as</span> <span class="php-var">$contextNode</span>) {
 </span><span id="62" class="l">            <span class="php-var">$nextNodes</span> = <span class="php-var">$this</span>-&gt;getNextForNode(<span class="php-var">$contextNode</span>);
 </span><span id="63" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$nextNodes</span>)) {

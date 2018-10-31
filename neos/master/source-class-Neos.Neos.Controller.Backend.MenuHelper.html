@@ -888,7 +888,7 @@
 </span><span id="70" class="l">        <span class="php-var">$requestUriHost</span> = <span class="php-var">$controllerContext</span>-&gt;getRequest()-&gt;getHttpRequest()-&gt;getUri()-&gt;getHost();
 </span><span id="71" class="l">
 </span><span id="72" class="l">        <span class="php-var">$domainsFound</span> = <span class="php-keyword1">false</span>;
-</span><span id="73" class="l">        <span class="php-var">$sites</span> = <span class="php-keyword1">array</span>();
+</span><span id="73" class="l">        <span class="php-var">$sites</span> = [];
 </span><span id="74" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;siteRepository-&gt;findOnline() <span class="php-keyword1">as</span> <span class="php-var">$site</span>) {
 </span><span id="75" class="l">            <span class="php-var">$uri</span> = <span class="php-keyword1">null</span>;
 </span><span id="76" class="l">            <span class="php-var">$active</span> = <span class="php-keyword1">false</span>;
@@ -902,28 +902,28 @@
 </span><span id="84" class="l">                    <span class="php-var">$uri</span> = <span class="php-var">$controllerContext</span>-&gt;getUriBuilder()
 </span><span id="85" class="l">                        -&gt;<span class="php-keyword2">reset</span>()
 </span><span id="86" class="l">                        -&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)
-</span><span id="87" class="l">                        -&gt;uriFor(<span class="php-quote">'index'</span>, <span class="php-keyword1">array</span>(), <span class="php-quote">'Backend\Backend'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="87" class="l">                        -&gt;uriFor(<span class="php-quote">'index'</span>, [], <span class="php-quote">'Backend\Backend'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="88" class="l">                } <span class="php-keyword1">else</span> {
 </span><span id="89" class="l">                    <span class="php-var">$uri</span> = <span class="php-var">$controllerContext</span>-&gt;getUriBuilder()
 </span><span id="90" class="l">                        -&gt;<span class="php-keyword2">reset</span>()
-</span><span id="91" class="l">                        -&gt;uriFor(<span class="php-quote">'switchSite'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>), <span class="php-quote">'Backend\Backend'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="91" class="l">                        -&gt;uriFor(<span class="php-quote">'switchSite'</span>, [<span class="php-quote">'site'</span> =&gt; <span class="php-var">$site</span>], <span class="php-quote">'Backend\Backend'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="92" class="l">                }
 </span><span id="93" class="l">                <span class="php-var">$domainsFound</span> = <span class="php-keyword1">true</span>;
 </span><span id="94" class="l">            }
 </span><span id="95" class="l">
-</span><span id="96" class="l">            <span class="php-var">$sites</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="96" class="l">            <span class="php-var">$sites</span>[] = [
 </span><span id="97" class="l">                <span class="php-quote">'name'</span> =&gt; <span class="php-var">$site</span>-&gt;getName(),
 </span><span id="98" class="l">                <span class="php-quote">'nodeName'</span> =&gt; <span class="php-var">$site</span>-&gt;getNodeName(),
 </span><span id="99" class="l">                <span class="php-quote">'uri'</span> =&gt; <span class="php-var">$uri</span>,
 </span><span id="100" class="l">                <span class="php-quote">'active'</span> =&gt; <span class="php-var">$active</span>
-</span><span id="101" class="l">            );
+</span><span id="101" class="l">            ];
 </span><span id="102" class="l">        }
 </span><span id="103" class="l">
 </span><span id="104" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$domainsFound</span> === <span class="php-keyword1">false</span>) {
 </span><span id="105" class="l">            <span class="php-var">$uri</span> = <span class="php-var">$controllerContext</span>-&gt;getUriBuilder()
 </span><span id="106" class="l">                -&gt;<span class="php-keyword2">reset</span>()
 </span><span id="107" class="l">                -&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)
-</span><span id="108" class="l">                -&gt;uriFor(<span class="php-quote">'index'</span>, <span class="php-keyword1">array</span>(), <span class="php-quote">'Backend\Backend'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="108" class="l">                -&gt;uriFor(<span class="php-quote">'index'</span>, [], <span class="php-quote">'Backend\Backend'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="109" class="l">            <span class="php-var">$sites</span>[<span class="php-num">0</span>][<span class="php-quote">'uri'</span>] = <span class="php-var">$uri</span>;
 </span><span id="110" class="l">        }
 </span><span id="111" class="l">
@@ -936,7 +936,7 @@
 </span></span><span id="118" class="l"><span class="php-comment">     */</span>
 </span><span id="119" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> buildModuleList(ControllerContext <span class="php-var">$controllerContext</span>)
 </span><span id="120" class="l">    {
-</span><span id="121" class="l">        <span class="php-var">$modules</span> = <span class="php-keyword1">array</span>();
+</span><span id="121" class="l">        <span class="php-var">$modules</span> = [];
 </span><span id="122" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'modules'</span>] <span class="php-keyword1">as</span> <span class="php-var">$moduleName</span> =&gt; <span class="php-var">$moduleConfiguration</span>) {
 </span><span id="123" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isModuleEnabled(<span class="php-var">$moduleName</span>)) {
 </span><span id="124" class="l">                <span class="php-keyword1">continue</span>;
@@ -948,7 +948,7 @@
 </span><span id="130" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'privilegeTarget'</span>]) &amp;&amp; !<span class="php-var">$this</span>-&gt;privilegeManager-&gt;isPrivilegeTargetGranted(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'privilegeTarget'</span>])) {
 </span><span id="131" class="l">                <span class="php-keyword1">continue</span>;
 </span><span id="132" class="l">            }
-</span><span id="133" class="l">            <span class="php-var">$submodules</span> = <span class="php-keyword1">array</span>();
+</span><span id="133" class="l">            <span class="php-var">$submodules</span> = [];
 </span><span id="134" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'submodules'</span>])) {
 </span><span id="135" class="l">                <span class="php-keyword1">foreach</span> (<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'submodules'</span>] <span class="php-keyword1">as</span> <span class="php-var">$submoduleName</span> =&gt; <span class="php-var">$submoduleConfiguration</span>) {
 </span><span id="136" class="l">                    <span class="php-var">$modulePath</span> = <span class="php-var">$moduleName</span> . <span class="php-quote">'/'</span> . <span class="php-var">$submoduleName</span>;
@@ -967,7 +967,7 @@
 </span><span id="149" class="l">            }
 </span><span id="150" class="l">            <span class="php-var">$modules</span>[] = <span class="php-keyword2">array_merge</span>(
 </span><span id="151" class="l">                <span class="php-var">$this</span>-&gt;collectModuleData(<span class="php-var">$controllerContext</span>, <span class="php-var">$moduleName</span>, <span class="php-var">$moduleConfiguration</span>, <span class="php-var">$moduleName</span>),
-</span><span id="152" class="l">                <span class="php-keyword1">array</span>(<span class="php-quote">'group'</span> =&gt; <span class="php-var">$moduleName</span>, <span class="php-quote">'submodules'</span> =&gt; <span class="php-var">$submodules</span>)
+</span><span id="152" class="l">                [<span class="php-quote">'group'</span> =&gt; <span class="php-var">$moduleName</span>, <span class="php-quote">'submodules'</span> =&gt; <span class="php-var">$submodules</span>]
 </span><span id="153" class="l">            );
 </span><span id="154" class="l">        }
 </span><span id="155" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$modules</span>;
@@ -1005,10 +1005,10 @@
 </span><span id="187" class="l">        <span class="php-var">$moduleUri</span> = <span class="php-var">$controllerContext</span>-&gt;getUriBuilder()
 </span><span id="188" class="l">            -&gt;<span class="php-keyword2">reset</span>()
 </span><span id="189" class="l">            -&gt;setCreateAbsoluteUri(<span class="php-keyword1">true</span>)
-</span><span id="190" class="l">            -&gt;uriFor(<span class="php-quote">'index'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'module'</span> =&gt; <span class="php-var">$modulePath</span>), <span class="php-quote">'Backend\Module'</span>, <span class="php-quote">'Neos.Neos'</span>);
+</span><span id="190" class="l">            -&gt;uriFor(<span class="php-quote">'index'</span>, [<span class="php-quote">'module'</span> =&gt; <span class="php-var">$modulePath</span>], <span class="php-quote">'Backend\Module'</span>, <span class="php-quote">'Neos.Neos'</span>);
 </span><span id="191" class="l">
 </span><span id="192" class="l">        <span class="php-var">$icon</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'icon'</span>]) ? <span class="php-var">$this</span>-&gt;iconMapper-&gt;convert(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'icon'</span>]) : <span class="php-quote">''</span>;
-</span><span id="193" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="193" class="l">        <span class="php-keyword1">return</span> [
 </span><span id="194" class="l">            <span class="php-quote">'module'</span> =&gt; <span class="php-var">$module</span>,
 </span><span id="195" class="l">            <span class="php-quote">'modulePath'</span> =&gt; <span class="php-var">$modulePath</span>,
 </span><span id="196" class="l">            <span class="php-quote">'uri'</span> =&gt; <span class="php-var">$moduleUri</span>,
@@ -1016,7 +1016,7 @@
 </span><span id="198" class="l">            <span class="php-quote">'description'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'description'</span>]) ? <span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'description'</span>] : <span class="php-quote">''</span>,
 </span><span id="199" class="l">            <span class="php-quote">'icon'</span> =&gt; <span class="php-var">$icon</span>,
 </span><span id="200" class="l">            <span class="php-quote">'hideInMenu'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'hideInMenu'</span>]) ? (boolean)<span class="php-var">$moduleConfiguration</span>[<span class="php-quote">'hideInMenu'</span>] : <span class="php-keyword1">false</span>
-</span><span id="201" class="l">        );
+</span><span id="201" class="l">        ];
 </span><span id="202" class="l">    }
 </span><span id="203" class="l">}
 </span><span id="204" class="l"></span></code></pre>

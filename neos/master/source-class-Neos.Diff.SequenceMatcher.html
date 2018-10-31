@@ -992,9 +992,9 @@
 </span><span id="179" class="l">                    <span class="php-var">$this</span>-&gt;b2j[<span class="php-var">$char</span>][] = <span class="php-var">$i</span>;
 </span><span id="180" class="l">                }
 </span><span id="181" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="182" class="l">                <span class="php-var">$this</span>-&gt;b2j[<span class="php-var">$char</span>] = <span class="php-keyword1">array</span>(
+</span><span id="182" class="l">                <span class="php-var">$this</span>-&gt;b2j[<span class="php-var">$char</span>] = [
 </span><span id="183" class="l">                    <span class="php-var">$i</span>
-</span><span id="184" class="l">                );
+</span><span id="184" class="l">                ];
 </span><span id="185" class="l">            }
 </span><span id="186" class="l">        }
 </span><span id="187" class="l">
@@ -1118,11 +1118,11 @@
 </span><span id="305" class="l">            ++<span class="php-var">$bestSize</span>;
 </span><span id="306" class="l">        }
 </span><span id="307" class="l">
-</span><span id="308" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="308" class="l">        <span class="php-keyword1">return</span> [
 </span><span id="309" class="l">            <span class="php-var">$bestI</span>,
 </span><span id="310" class="l">            <span class="php-var">$bestJ</span>,
 </span><span id="311" class="l">            <span class="php-var">$bestSize</span>
-</span><span id="312" class="l">        );
+</span><span id="312" class="l">        ];
 </span><span id="313" class="l">    }
 </span><span id="314" class="l">
 </span><span id="315" class="l">    <span class="php-comment">/**
@@ -1138,7 +1138,7 @@
 </span><span id="325" class="l">        <span class="php-var">$lineB</span> = <span class="php-var">$this</span>-&gt;b[<span class="php-var">$bIndex</span>];
 </span><span id="326" class="l">
 </span><span id="327" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;options[<span class="php-quote">'ignoreWhitespace'</span>]) {
-</span><span id="328" class="l">            <span class="php-var">$replace</span> = <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\t&quot;</span>, <span class="php-quote">' '</span>);
+</span><span id="328" class="l">            <span class="php-var">$replace</span> = [<span class="php-quote">&quot;\t&quot;</span>, <span class="php-quote">' '</span>];
 </span><span id="329" class="l">            <span class="php-var">$lineA</span> = <span class="php-keyword2">str_replace</span>(<span class="php-var">$replace</span>, <span class="php-quote">''</span>, <span class="php-var">$lineA</span>);
 </span><span id="330" class="l">            <span class="php-var">$lineB</span> = <span class="php-keyword2">str_replace</span>(<span class="php-var">$replace</span>, <span class="php-quote">''</span>, <span class="php-var">$lineB</span>);
 </span><span id="331" class="l">        }
@@ -1174,14 +1174,14 @@
 </span><span id="361" class="l">        <span class="php-var">$aLength</span> = <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;a);
 </span><span id="362" class="l">        <span class="php-var">$bLength</span> = <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;b);
 </span><span id="363" class="l">
-</span><span id="364" class="l">        <span class="php-var">$queue</span> = <span class="php-keyword1">array</span>(
-</span><span id="365" class="l">            <span class="php-keyword1">array</span>(
+</span><span id="364" class="l">        <span class="php-var">$queue</span> = [
+</span><span id="365" class="l">            [
 </span><span id="366" class="l">                <span class="php-num">0</span>,
 </span><span id="367" class="l">                <span class="php-var">$aLength</span>,
 </span><span id="368" class="l">                <span class="php-num">0</span>,
 </span><span id="369" class="l">                <span class="php-var">$bLength</span>
-</span><span id="370" class="l">            )
-</span><span id="371" class="l">        );
+</span><span id="370" class="l">            ]
+</span><span id="371" class="l">        ];
 </span><span id="372" class="l">
 </span><span id="373" class="l">        <span class="php-var">$matchingBlocks</span> = [];
 </span><span id="374" class="l">        <span class="php-keyword1">while</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$queue</span>)) {
@@ -1191,26 +1191,26 @@
 </span><span id="378" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$k</span>) {
 </span><span id="379" class="l">                <span class="php-var">$matchingBlocks</span>[] = <span class="php-var">$x</span>;
 </span><span id="380" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$alo</span> &lt; <span class="php-var">$i</span> &amp;&amp; <span class="php-var">$blo</span> &lt; <span class="php-var">$j</span>) {
-</span><span id="381" class="l">                    <span class="php-var">$queue</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="381" class="l">                    <span class="php-var">$queue</span>[] = [
 </span><span id="382" class="l">                        <span class="php-var">$alo</span>,
 </span><span id="383" class="l">                        <span class="php-var">$i</span>,
 </span><span id="384" class="l">                        <span class="php-var">$blo</span>,
 </span><span id="385" class="l">                        <span class="php-var">$j</span>
-</span><span id="386" class="l">                    );
+</span><span id="386" class="l">                    ];
 </span><span id="387" class="l">                }
 </span><span id="388" class="l">
 </span><span id="389" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$i</span> + <span class="php-var">$k</span> &lt; <span class="php-var">$ahi</span> &amp;&amp; <span class="php-var">$j</span> + <span class="php-var">$k</span> &lt; <span class="php-var">$bhi</span>) {
-</span><span id="390" class="l">                    <span class="php-var">$queue</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="390" class="l">                    <span class="php-var">$queue</span>[] = [
 </span><span id="391" class="l">                        <span class="php-var">$i</span> + <span class="php-var">$k</span>,
 </span><span id="392" class="l">                        <span class="php-var">$ahi</span>,
 </span><span id="393" class="l">                        <span class="php-var">$j</span> + <span class="php-var">$k</span>,
 </span><span id="394" class="l">                        <span class="php-var">$bhi</span>
-</span><span id="395" class="l">                    );
+</span><span id="395" class="l">                    ];
 </span><span id="396" class="l">                }
 </span><span id="397" class="l">            }
 </span><span id="398" class="l">        }
 </span><span id="399" class="l">
-</span><span id="400" class="l">        <span class="php-keyword2">usort</span>(<span class="php-var">$matchingBlocks</span>, <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'tupleSort'</span>));
+</span><span id="400" class="l">        <span class="php-keyword2">usort</span>(<span class="php-var">$matchingBlocks</span>, [<span class="php-var">$this</span>, <span class="php-quote">'tupleSort'</span>]);
 </span><span id="401" class="l">
 </span><span id="402" class="l">        <span class="php-var">$i1</span> = <span class="php-num">0</span>;
 </span><span id="403" class="l">        <span class="php-var">$j1</span> = <span class="php-num">0</span>;
@@ -1222,11 +1222,11 @@
 </span><span id="409" class="l">                <span class="php-var">$k1</span> += <span class="php-var">$k2</span>;
 </span><span id="410" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="411" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$k1</span>) {
-</span><span id="412" class="l">                    <span class="php-var">$nonAdjacent</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="412" class="l">                    <span class="php-var">$nonAdjacent</span>[] = [
 </span><span id="413" class="l">                        <span class="php-var">$i1</span>,
 </span><span id="414" class="l">                        <span class="php-var">$j1</span>,
 </span><span id="415" class="l">                        <span class="php-var">$k1</span>
-</span><span id="416" class="l">                    );
+</span><span id="416" class="l">                    ];
 </span><span id="417" class="l">                }
 </span><span id="418" class="l">
 </span><span id="419" class="l">                <span class="php-var">$i1</span> = <span class="php-var">$i2</span>;
@@ -1236,18 +1236,18 @@
 </span><span id="423" class="l">        }
 </span><span id="424" class="l">
 </span><span id="425" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$k1</span>) {
-</span><span id="426" class="l">            <span class="php-var">$nonAdjacent</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="426" class="l">            <span class="php-var">$nonAdjacent</span>[] = [
 </span><span id="427" class="l">                <span class="php-var">$i1</span>,
 </span><span id="428" class="l">                <span class="php-var">$j1</span>,
 </span><span id="429" class="l">                <span class="php-var">$k1</span>
-</span><span id="430" class="l">            );
+</span><span id="430" class="l">            ];
 </span><span id="431" class="l">        }
 </span><span id="432" class="l">
-</span><span id="433" class="l">        <span class="php-var">$nonAdjacent</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="433" class="l">        <span class="php-var">$nonAdjacent</span>[] = [
 </span><span id="434" class="l">            <span class="php-var">$aLength</span>,
 </span><span id="435" class="l">            <span class="php-var">$bLength</span>,
 </span><span id="436" class="l">            <span class="php-num">0</span>
-</span><span id="437" class="l">        );
+</span><span id="437" class="l">        ];
 </span><span id="438" class="l">
 </span><span id="439" class="l">        <span class="php-var">$this</span>-&gt;matchingBlocks = <span class="php-var">$nonAdjacent</span>;
 </span><span id="440" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;matchingBlocks;
@@ -1302,26 +1302,26 @@
 </span><span id="489" class="l">            }
 </span><span id="490" class="l">
 </span><span id="491" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$tag</span>) {
-</span><span id="492" class="l">                <span class="php-var">$this</span>-&gt;opCodes[] = <span class="php-keyword1">array</span>(
+</span><span id="492" class="l">                <span class="php-var">$this</span>-&gt;opCodes[] = [
 </span><span id="493" class="l">                    <span class="php-var">$tag</span>,
 </span><span id="494" class="l">                    <span class="php-var">$i</span>,
 </span><span id="495" class="l">                    <span class="php-var">$ai</span>,
 </span><span id="496" class="l">                    <span class="php-var">$j</span>,
 </span><span id="497" class="l">                    <span class="php-var">$bj</span>
-</span><span id="498" class="l">                );
+</span><span id="498" class="l">                ];
 </span><span id="499" class="l">            }
 </span><span id="500" class="l">
 </span><span id="501" class="l">            <span class="php-var">$i</span> = <span class="php-var">$ai</span> + <span class="php-var">$size</span>;
 </span><span id="502" class="l">            <span class="php-var">$j</span> = <span class="php-var">$bj</span> + <span class="php-var">$size</span>;
 </span><span id="503" class="l">
 </span><span id="504" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$size</span>) {
-</span><span id="505" class="l">                <span class="php-var">$this</span>-&gt;opCodes[] = <span class="php-keyword1">array</span>(
+</span><span id="505" class="l">                <span class="php-var">$this</span>-&gt;opCodes[] = [
 </span><span id="506" class="l">                    <span class="php-quote">'equal'</span>,
 </span><span id="507" class="l">                    <span class="php-var">$ai</span>,
 </span><span id="508" class="l">                    <span class="php-var">$i</span>,
 </span><span id="509" class="l">                    <span class="php-var">$bj</span>,
 </span><span id="510" class="l">                    <span class="php-var">$j</span>
-</span><span id="511" class="l">                );
+</span><span id="511" class="l">                ];
 </span><span id="512" class="l">            }
 </span><span id="513" class="l">        }
 </span><span id="514" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;opCodes;
@@ -1345,37 +1345,37 @@
 </span><span id="532" class="l">    {
 </span><span id="533" class="l">        <span class="php-var">$opCodes</span> = <span class="php-var">$this</span>-&gt;getOpCodes();
 </span><span id="534" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$opCodes</span>)) {
-</span><span id="535" class="l">            <span class="php-var">$opCodes</span> = <span class="php-keyword1">array</span>(
-</span><span id="536" class="l">                <span class="php-keyword1">array</span>(
+</span><span id="535" class="l">            <span class="php-var">$opCodes</span> = [
+</span><span id="536" class="l">                [
 </span><span id="537" class="l">                    <span class="php-quote">'equal'</span>,
 </span><span id="538" class="l">                    <span class="php-num">0</span>,
 </span><span id="539" class="l">                    <span class="php-num">1</span>,
 </span><span id="540" class="l">                    <span class="php-num">0</span>,
 </span><span id="541" class="l">                    <span class="php-num">1</span>
-</span><span id="542" class="l">                )
-</span><span id="543" class="l">            );
+</span><span id="542" class="l">                ]
+</span><span id="543" class="l">            ];
 </span><span id="544" class="l">        }
 </span><span id="545" class="l">
 </span><span id="546" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">0</span>] == <span class="php-quote">'equal'</span>) {
-</span><span id="547" class="l">            <span class="php-var">$opCodes</span>[<span class="php-num">0</span>] = <span class="php-keyword1">array</span>(
+</span><span id="547" class="l">            <span class="php-var">$opCodes</span>[<span class="php-num">0</span>] = [
 </span><span id="548" class="l">                <span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">0</span>],
 </span><span id="549" class="l">                <span class="php-keyword2">max</span>(<span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">1</span>], <span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">2</span>] - <span class="php-var">$context</span>),
 </span><span id="550" class="l">                <span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">2</span>],
 </span><span id="551" class="l">                <span class="php-keyword2">max</span>(<span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">3</span>], <span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">4</span>] - <span class="php-var">$context</span>),
 </span><span id="552" class="l">                <span class="php-var">$opCodes</span>[<span class="php-num">0</span>][<span class="php-num">4</span>]
-</span><span id="553" class="l">            );
+</span><span id="553" class="l">            ];
 </span><span id="554" class="l">        }
 </span><span id="555" class="l">
 </span><span id="556" class="l">        <span class="php-var">$lastItem</span> = <span class="php-keyword2">count</span>(<span class="php-var">$opCodes</span>) - <span class="php-num">1</span>;
 </span><span id="557" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$opCodes</span>[<span class="php-var">$lastItem</span>][<span class="php-num">0</span>] == <span class="php-quote">'equal'</span>) {
 </span><span id="558" class="l">            <span class="php-keyword1">list</span>(<span class="php-var">$tag</span>, <span class="php-var">$i1</span>, <span class="php-var">$i2</span>, <span class="php-var">$j1</span>, <span class="php-var">$j2</span>) = <span class="php-var">$opCodes</span>[<span class="php-var">$lastItem</span>];
-</span><span id="559" class="l">            <span class="php-var">$opCodes</span>[<span class="php-var">$lastItem</span>] = <span class="php-keyword1">array</span>(
+</span><span id="559" class="l">            <span class="php-var">$opCodes</span>[<span class="php-var">$lastItem</span>] = [
 </span><span id="560" class="l">                <span class="php-var">$tag</span>,
 </span><span id="561" class="l">                <span class="php-var">$i1</span>,
 </span><span id="562" class="l">                <span class="php-keyword2">min</span>(<span class="php-var">$i2</span>, <span class="php-var">$i1</span> + <span class="php-var">$context</span>),
 </span><span id="563" class="l">                <span class="php-var">$j1</span>,
 </span><span id="564" class="l">                <span class="php-keyword2">min</span>(<span class="php-var">$j2</span>, <span class="php-var">$j1</span> + <span class="php-var">$context</span>)
-</span><span id="565" class="l">            );
+</span><span id="565" class="l">            ];
 </span><span id="566" class="l">        }
 </span><span id="567" class="l">
 </span><span id="568" class="l">        <span class="php-var">$maxRange</span> = <span class="php-var">$context</span> * <span class="php-num">2</span>;
@@ -1384,25 +1384,25 @@
 </span><span id="571" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$opCodes</span> <span class="php-keyword1">as</span> <span class="php-var">$code</span>) {
 </span><span id="572" class="l">            <span class="php-keyword1">list</span>(<span class="php-var">$tag</span>, <span class="php-var">$i1</span>, <span class="php-var">$i2</span>, <span class="php-var">$j1</span>, <span class="php-var">$j2</span>) = <span class="php-var">$code</span>;
 </span><span id="573" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$tag</span> == <span class="php-quote">'equal'</span> &amp;&amp; <span class="php-var">$i2</span> - <span class="php-var">$i1</span> &gt; <span class="php-var">$maxRange</span>) {
-</span><span id="574" class="l">                <span class="php-var">$group</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="574" class="l">                <span class="php-var">$group</span>[] = [
 </span><span id="575" class="l">                    <span class="php-var">$tag</span>,
 </span><span id="576" class="l">                    <span class="php-var">$i1</span>,
 </span><span id="577" class="l">                    <span class="php-keyword2">min</span>(<span class="php-var">$i2</span>, <span class="php-var">$i1</span> + <span class="php-var">$context</span>),
 </span><span id="578" class="l">                    <span class="php-var">$j1</span>,
 </span><span id="579" class="l">                    <span class="php-keyword2">min</span>(<span class="php-var">$j2</span>, <span class="php-var">$j1</span> + <span class="php-var">$context</span>)
-</span><span id="580" class="l">                );
+</span><span id="580" class="l">                ];
 </span><span id="581" class="l">                <span class="php-var">$groups</span>[] = <span class="php-var">$group</span>;
 </span><span id="582" class="l">                <span class="php-var">$group</span> = [];
 </span><span id="583" class="l">                <span class="php-var">$i1</span> = <span class="php-keyword2">max</span>(<span class="php-var">$i1</span>, <span class="php-var">$i2</span> - <span class="php-var">$context</span>);
 </span><span id="584" class="l">                <span class="php-var">$j1</span> = <span class="php-keyword2">max</span>(<span class="php-var">$j1</span>, <span class="php-var">$j2</span> - <span class="php-var">$context</span>);
 </span><span id="585" class="l">            }
-</span><span id="586" class="l">            <span class="php-var">$group</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="586" class="l">            <span class="php-var">$group</span>[] = [
 </span><span id="587" class="l">                <span class="php-var">$tag</span>,
 </span><span id="588" class="l">                <span class="php-var">$i1</span>,
 </span><span id="589" class="l">                <span class="php-var">$i2</span>,
 </span><span id="590" class="l">                <span class="php-var">$j1</span>,
 </span><span id="591" class="l">                <span class="php-var">$j2</span>
-</span><span id="592" class="l">            );
+</span><span id="592" class="l">            ];
 </span><span id="593" class="l">        }
 </span><span id="594" class="l">
 </span><span id="595" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$group</span>) &amp;&amp; !(<span class="php-keyword2">count</span>(<span class="php-var">$group</span>) == <span class="php-num">1</span> &amp;&amp; <span class="php-var">$group</span>[<span class="php-num">0</span>][<span class="php-num">0</span>] == <span class="php-quote">'equal'</span>)) {
@@ -1428,7 +1428,7 @@
 </span></span><span id="615" class="l"><span class="php-comment">     */</span>
 </span><span id="616" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> ratio()
 </span><span id="617" class="l">    {
-</span><span id="618" class="l">        <span class="php-var">$matches</span> = <span class="php-keyword2">array_reduce</span>(<span class="php-var">$this</span>-&gt;getMatchingBlocks(), <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'ratioReduce'</span>), <span class="php-num">0</span>);
+</span><span id="618" class="l">        <span class="php-var">$matches</span> = <span class="php-keyword2">array_reduce</span>(<span class="php-var">$this</span>-&gt;getMatchingBlocks(), [<span class="php-var">$this</span>, <span class="php-quote">'ratioReduce'</span>], <span class="php-num">0</span>);
 </span><span id="619" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;calculateRatio(<span class="php-var">$matches</span>, <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;a) + <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;b));
 </span><span id="620" class="l">    }
 </span><span id="621" class="l">

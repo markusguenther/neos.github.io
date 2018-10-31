@@ -851,7 +851,7 @@
 </span><span id="32" class="l">    <span class="php-comment">/**
 </span></span><span id="33" class="l"><span class="php-comment">     * @var array
 </span></span><span id="34" class="l"><span class="php-comment">     */</span>
-</span><span id="35" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$sourceTypes</span> = <span class="php-keyword1">array</span>(ImageInterface::<span class="php-keyword1">class</span>);
+</span><span id="35" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$sourceTypes</span> = [ImageInterface::<span class="php-keyword1">class</span>];
 </span><span id="36" class="l">
 </span><span id="37" class="l">    <span class="php-comment">/**
 </span></span><span id="38" class="l"><span class="php-comment">     * @var string
@@ -890,7 +890,7 @@
 </span></span><span id="71" class="l"><span class="php-comment">     */</span>
 </span><span id="72" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getSourceChildPropertiesToBeConverted(<span class="php-var">$source</span>)
 </span><span id="73" class="l">    {
-</span><span id="74" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="74" class="l">        <span class="php-keyword1">return</span> [];
 </span><span id="75" class="l">    }
 </span><span id="76" class="l">
 </span><span id="77" class="l">    <span class="php-comment">/**
@@ -902,22 +902,22 @@
 </span></span><span id="83" class="l"><span class="php-comment">     * @param PropertyMappingConfigurationInterface $configuration
 </span></span><span id="84" class="l"><span class="php-comment">     * @return string|Error The converted Image, a Validation Error or NULL
 </span></span><span id="85" class="l"><span class="php-comment">     */</span>
-</span><span id="86" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = <span class="php-keyword1">array</span>(), PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>)
+</span><span id="86" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> convertFrom(<span class="php-var">$source</span>, <span class="php-var">$targetType</span>, <span class="php-keyword1">array</span> <span class="php-var">$convertedChildProperties</span> = [], PropertyMappingConfigurationInterface <span class="php-var">$configuration</span> = <span class="php-keyword1">null</span>)
 </span><span id="87" class="l">    {
-</span><span id="88" class="l">        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>(
+</span><span id="88" class="l">        <span class="php-var">$data</span> = [
 </span><span id="89" class="l">            <span class="php-quote">'__identity'</span> =&gt; <span class="php-var">$this</span>-&gt;persistenceManager-&gt;getIdentifierByObject(<span class="php-var">$source</span>),
 </span><span id="90" class="l">            <span class="php-quote">'__type'</span> =&gt; TypeHandling::getTypeForValue(<span class="php-var">$source</span>)
-</span><span id="91" class="l">        );
+</span><span id="91" class="l">        ];
 </span><span id="92" class="l">
 </span><span id="93" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$source</span> <span class="php-keyword1">instanceof</span> ImageVariant) {
 </span><span id="94" class="l">            <span class="php-var">$data</span>[<span class="php-quote">'originalAsset'</span>] = [
 </span><span id="95" class="l">                <span class="php-quote">'__identity'</span> =&gt; <span class="php-var">$this</span>-&gt;persistenceManager-&gt;getIdentifierByObject(<span class="php-var">$source</span>-&gt;getOriginalAsset()),
 </span><span id="96" class="l">            ];
 </span><span id="97" class="l">
-</span><span id="98" class="l">            <span class="php-var">$adjustments</span> = <span class="php-keyword1">array</span>();
+</span><span id="98" class="l">            <span class="php-var">$adjustments</span> = [];
 </span><span id="99" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$source</span>-&gt;getAdjustments() <span class="php-keyword1">as</span> <span class="php-var">$adjustment</span>) {
 </span><span id="100" class="l">                <span class="php-var">$index</span> = TypeHandling::getTypeForValue(<span class="php-var">$adjustment</span>);
-</span><span id="101" class="l">                <span class="php-var">$adjustments</span>[<span class="php-var">$index</span>] = <span class="php-keyword1">array</span>();
+</span><span id="101" class="l">                <span class="php-var">$adjustments</span>[<span class="php-var">$index</span>] = [];
 </span><span id="102" class="l">                <span class="php-keyword1">foreach</span> (ObjectAccess::getGettableProperties(<span class="php-var">$adjustment</span>) <span class="php-keyword1">as</span> <span class="php-var">$propertyName</span> =&gt; <span class="php-var">$propertyValue</span>) {
 </span><span id="103" class="l">                    <span class="php-var">$adjustments</span>[<span class="php-var">$index</span>][<span class="php-var">$propertyName</span>] = <span class="php-var">$propertyValue</span>;
 </span><span id="104" class="l">                }

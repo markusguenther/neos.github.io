@@ -904,7 +904,7 @@
 </span><span id="75" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> FlowQueryException(<span class="php-quote">'context() requires an array argument of context properties'</span>, <span class="php-num">1398030427</span>);
 </span><span id="76" class="l">        }
 </span><span id="77" class="l">
-</span><span id="78" class="l">        <span class="php-var">$output</span> = <span class="php-keyword1">array</span>();
+</span><span id="78" class="l">        <span class="php-var">$output</span> = [];
 </span><span id="79" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$flowQuery</span>-&gt;getContext() <span class="php-keyword1">as</span> <span class="php-var">$contextNode</span>) {
 </span><span id="80" class="l">            <span class="php-var">$contextProperties</span> = <span class="php-var">$contextNode</span>-&gt;getContext()-&gt;getProperties();
 </span><span id="81" class="l">            <span class="php-var">$modifiedContext</span> = <span class="php-var">$this</span>-&gt;contextFactory-&gt;create(<span class="php-keyword2">array_merge</span>(<span class="php-var">$contextProperties</span>, <span class="php-var">$arguments</span>[<span class="php-num">0</span>]));

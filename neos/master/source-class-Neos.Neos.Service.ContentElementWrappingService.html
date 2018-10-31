@@ -899,7 +899,7 @@
 </span><span id="76" class="l">        <span class="php-var">$attributes</span> = <span class="php-var">$this</span>-&gt;addNodePropertyAttributes(<span class="php-var">$attributes</span>, <span class="php-var">$node</span>);
 </span><span id="77" class="l">        <span class="php-var">$attributes</span> = <span class="php-var">$this</span>-&gt;addCssClasses(<span class="php-var">$attributes</span>, <span class="php-var">$node</span>, <span class="php-var">$this</span>-&gt;collectEditingClassNames(<span class="php-var">$node</span>));
 </span><span id="78" class="l">
-</span><span id="79" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;htmlAugmenter-&gt;addAttributes(<span class="php-var">$content</span>, <span class="php-var">$attributes</span>, <span class="php-quote">'div'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'typeof'</span>));
+</span><span id="79" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;htmlAugmenter-&gt;addAttributes(<span class="php-var">$content</span>, <span class="php-var">$attributes</span>, <span class="php-quote">'div'</span>, [<span class="php-quote">'typeof'</span>]);
 </span><span id="80" class="l">    }
 </span><span id="81" class="l">
 </span><span id="82" class="l">    <span class="php-comment">/**

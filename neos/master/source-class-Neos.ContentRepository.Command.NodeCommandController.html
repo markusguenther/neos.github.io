@@ -864,7 +864,7 @@
 </span><span id="47" class="l">    <span class="php-comment">/**
 </span></span><span id="48" class="l"><span class="php-comment">     * @var array
 </span></span><span id="49" class="l"><span class="php-comment">     */</span>
-</span><span id="50" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$pluginConfigurations</span> = <span class="php-keyword1">array</span>();
+</span><span id="50" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$pluginConfigurations</span> = [];
 </span><span id="51" class="l">
 </span><span id="52" class="l">    <span class="php-comment">/**
 </span></span><span id="53" class="l"><span class="php-comment">     * Repair inconsistent nodes
@@ -902,7 +902,7 @@
 </span><span id="85" class="l">        <span class="php-var">$this</span>-&gt;pluginConfigurations = self::detectPlugins(<span class="php-var">$this</span>-&gt;objectManager);
 </span><span id="86" class="l">
 </span><span id="87" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;workspaceRepository-&gt;countByName(<span class="php-var">$workspace</span>) === <span class="php-num">0</span>) {
-</span><span id="88" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Workspace &quot;%s&quot; does not exist'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$workspace</span>));
+</span><span id="88" class="l">            <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Workspace &quot;%s&quot; does not exist'</span>, [<span class="php-var">$workspace</span>]);
 </span><span id="89" class="l">            <span class="php-keyword1">exit</span>(<span class="php-num">1</span>);
 </span><span id="90" class="l">        }
 </span><span id="91" class="l">
@@ -910,7 +910,7 @@
 </span><span id="93" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;hasNodeType(<span class="php-var">$nodeType</span>)) {
 </span><span id="94" class="l">                <span class="php-var">$nodeType</span> = <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType(<span class="php-var">$nodeType</span>);
 </span><span id="95" class="l">            } <span class="php-keyword1">else</span> {
-</span><span id="96" class="l">                <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$nodeType</span>));
+</span><span id="96" class="l">                <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'Node type &quot;%s&quot; does not exist'</span>, [<span class="php-var">$nodeType</span>]);
 </span><span id="97" class="l">                <span class="php-keyword1">exit</span>(<span class="php-num">1</span>);
 </span><span id="98" class="l">            }
 </span><span id="99" class="l">        }
@@ -974,12 +974,12 @@
 </span></span><span id="157" class="l"><span class="php-comment">     */</span>
 </span><span id="158" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> detectPlugins(ObjectManagerInterface <span class="php-var">$objectManager</span>)
 </span><span id="159" class="l">    {
-</span><span id="160" class="l">        <span class="php-var">$pluginConfigurations</span> = <span class="php-keyword1">array</span>();
+</span><span id="160" class="l">        <span class="php-var">$pluginConfigurations</span> = [];
 </span><span id="161" class="l">        <span class="php-var">$classNames</span> = <span class="php-var">$objectManager</span>-&gt;get(ReflectionService::<span class="php-keyword1">class</span>)-&gt;getAllImplementationClassNamesForInterface(NodeCommandControllerPluginInterface::<span class="php-keyword1">class</span>);
 </span><span id="162" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$classNames</span> <span class="php-keyword1">as</span> <span class="php-var">$className</span>) {
-</span><span id="163" class="l">            <span class="php-var">$pluginConfigurations</span>[<span class="php-var">$className</span>] = <span class="php-keyword1">array</span>(
+</span><span id="163" class="l">            <span class="php-var">$pluginConfigurations</span>[<span class="php-var">$className</span>] = [
 </span><span id="164" class="l">                <span class="php-quote">'object'</span> =&gt; <span class="php-var">$objectManager</span>-&gt;get(<span class="php-var">$objectManager</span>-&gt;getObjectNameByClassName(<span class="php-var">$className</span>))
-</span><span id="165" class="l">            );
+</span><span id="165" class="l">            ];
 </span><span id="166" class="l">        }
 </span><span id="167" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$pluginConfigurations</span>;
 </span><span id="168" class="l">    }

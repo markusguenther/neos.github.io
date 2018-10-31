@@ -860,9 +860,9 @@
 </span><span id="47" class="l">                            <span class="php-keyword1">continue</span>;
 </span><span id="48" class="l">                        }
 </span><span id="49" class="l">
-</span><span id="50" class="l">                        <span class="php-var">$fusionPaths</span> = <span class="php-keyword1">array</span>(
+</span><span id="50" class="l">                        <span class="php-var">$fusionPaths</span> = [
 </span><span id="51" class="l">                            <span class="php-var">$package</span>-&gt;getResourcesPath() . <span class="php-quote">'Private/Fusion'</span>
-</span><span id="52" class="l">                        );
+</span><span id="52" class="l">                        ];
 </span><span id="53" class="l">                        <span class="php-keyword1">foreach</span> (<span class="php-var">$fusionPaths</span> <span class="php-keyword1">as</span> <span class="php-var">$fusionPath</span>) {
 </span><span id="54" class="l">                            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$fusionPath</span>)) {
 </span><span id="55" class="l">                                <span class="php-var">$fusionFileMonitor</span>-&gt;monitorDirectory(<span class="php-var">$fusionPath</span>);

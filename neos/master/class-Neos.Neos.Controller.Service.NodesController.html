@@ -871,7 +871,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#83-119" title="Go to source code">indexAction</a>( <span>string <var>$searchTerm</var> = <span class="php-quote">''</span></span>, <span>array <var>$nodeIdentifiers</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$nodeTypes</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'Neos.Neos:Document'</span>)</span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$contextNode</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#83-119" title="Go to source code">indexAction</a>( <span>string <var>$searchTerm</var> = <span class="php-quote">''</span></span>, <span>array <var>$nodeIdentifiers</var> = []</span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span>, <span>array <var>$nodeTypes</var> = [<span class="php-quote">'Neos.Neos:Document'</span>]</span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$contextNode</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Shows a list of nodes</p>
@@ -919,7 +919,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#121-151" title="Go to source code">showAction</a>( <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#121-151" title="Go to source code">showAction</a>( <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Shows a specific node</p>
@@ -961,7 +961,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#153-191" title="Go to source code">createAction</a>( <span>string <var>$mode</var></span>, <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$sourceDimensions</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#153-191" title="Go to source code">createAction</a>( <span>string <var>$mode</var></span>, <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span>, <span>array <var>$sourceDimensions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Create a new node from an existing one</p>
@@ -1238,10 +1238,10 @@ Neos\Flow\Mvc\Controller\ActionController
 			<td class="value">
 				<div>
 					<a href="#$viewFormatToObjectNameMap" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-quote">'html'</span> =&gt; TemplateView::<span class="php-keyword1">class</span>,
     <span class="php-quote">'json'</span> =&gt; NodeJsonView::<span class="php-keyword1">class</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>
@@ -1270,10 +1270,10 @@ Neos\Flow\Mvc\Controller\ActionController
 			<td class="value">
 				<div>
 					<a href="#$supportedMediaTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(
+					<code>[
     <span class="php-quote">'text/html'</span>,
     <span class="php-quote">'application/json'</span>
-)</code>
+]</code>
 				</div>
 			</td>
 		</tr>

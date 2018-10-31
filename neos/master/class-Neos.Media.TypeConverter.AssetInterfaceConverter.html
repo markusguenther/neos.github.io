@@ -1056,7 +1056,7 @@ this type converter should withdraw and let the PersistedObjectConverter kick in
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertFrom">#</a>
-			<code><a href="source-class-Neos.Media.TypeConverter.AssetInterfaceConverter.html#191-240" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = <span class="php-keyword1">array</span>()</span>, <span>Neos\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.TypeConverter.AssetInterfaceConverter.html#191-240" title="Go to source code">convertFrom</a>( <span>mixed <var>$source</var></span>, <span>string <var>$targetType</var></span>, <span>array <var>$convertedChildProperties</var> = []</span>, <span>Neos\Flow\Property\PropertyMappingConfigurationInterface <var>$configuration</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Convert an object from $source to an \Neos\Media\Domain\Model\AssetInterface implementation</p>
@@ -1243,7 +1243,7 @@ default value in the constructor signature.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_applyModelMappingStrategy">#</a>
-			<code><a href="source-class-Neos.Media.TypeConverter.AssetInterfaceConverter.html#298-315" title="Go to source code">applyModelMappingStrategy</a>( <span>string <var>$originalTargetType</var></span>, <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span>array <var>$source</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Neos.Media.TypeConverter.AssetInterfaceConverter.html#298-315" title="Go to source code">applyModelMappingStrategy</a>( <span>string <var>$originalTargetType</var></span>, <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span>array <var>$source</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Applies the model mapping strategy for a converted resource to determine the final target type.
@@ -1343,7 +1343,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			<td class="value">
 				<div>
 					<a href="#$sourceTypes" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>(<span class="php-quote">'string'</span>, <span class="php-quote">'array'</span>)</code>
+					<code>[<span class="php-quote">'string'</span>, <span class="php-quote">'array'</span>]</code>
 				</div>
 			</td>
 		</tr>
@@ -1555,7 +1555,7 @@ The strategy is NOT applied if $source['__type'] is set (overriding was allowed 
 			<td class="value">
 				<div>
 					<a href="#$resourcesAlreadyConvertedToAssets" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
+					<code>[]</code>
 				</div>
 			</td>
 		</tr>

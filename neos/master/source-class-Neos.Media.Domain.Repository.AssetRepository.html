@@ -862,7 +862,7 @@
 </span><span id="42" class="l">    <span class="php-comment">/**
 </span></span><span id="43" class="l"><span class="php-comment">     * @var array
 </span></span><span id="44" class="l"><span class="php-comment">     */</span>
-</span><span id="45" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$defaultOrderings</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'lastModified'</span> =&gt; QueryInterface::ORDER_DESCENDING);
+</span><span id="45" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$defaultOrderings</span> = [<span class="php-quote">'lastModified'</span> =&gt; QueryInterface::ORDER_DESCENDING];
 </span><span id="46" class="l">
 </span><span id="47" class="l">    <span class="php-comment">/**
 </span></span><span id="48" class="l"><span class="php-comment">     * @Flow\Inject
@@ -878,15 +878,15 @@
 </span></span><span id="58" class="l"><span class="php-comment">     * @param AssetCollection $assetCollection*
 </span></span><span id="59" class="l"><span class="php-comment">     * @return QueryResultInterface
 </span></span><span id="60" class="l"><span class="php-comment">     */</span>
-</span><span id="61" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> findBySearchTermOrTags(<span class="php-var">$searchTerm</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = <span class="php-keyword1">array</span>(), AssetCollection <span class="php-var">$assetCollection</span> = <span class="php-keyword1">null</span>)
+</span><span id="61" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> findBySearchTermOrTags(<span class="php-var">$searchTerm</span>, <span class="php-keyword1">array</span> <span class="php-var">$tags</span> = [], AssetCollection <span class="php-var">$assetCollection</span> = <span class="php-keyword1">null</span>)
 </span><span id="62" class="l">    {
 </span><span id="63" class="l">        <span class="php-var">$query</span> = <span class="php-var">$this</span>-&gt;createQuery();
 </span><span id="64" class="l">
-</span><span id="65" class="l">        <span class="php-var">$constraints</span> = <span class="php-keyword1">array</span>(
+</span><span id="65" class="l">        <span class="php-var">$constraints</span> = [
 </span><span id="66" class="l">            <span class="php-var">$query</span>-&gt;like(<span class="php-quote">'title'</span>, <span class="php-quote">'%'</span> . <span class="php-var">$searchTerm</span> . <span class="php-quote">'%'</span>),
 </span><span id="67" class="l">            <span class="php-var">$query</span>-&gt;like(<span class="php-quote">'resource.filename'</span>, <span class="php-quote">'%'</span> . <span class="php-var">$searchTerm</span> . <span class="php-quote">'%'</span>),
 </span><span id="68" class="l">            <span class="php-var">$query</span>-&gt;like(<span class="php-quote">'caption'</span>, <span class="php-quote">'%'</span> . <span class="php-var">$searchTerm</span> . <span class="php-quote">'%'</span>)
-</span><span id="69" class="l">        );
+</span><span id="69" class="l">        ];
 </span><span id="70" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$tags</span> <span class="php-keyword1">as</span> <span class="php-var">$tag</span>) {
 </span><span id="71" class="l">            <span class="php-var">$constraints</span>[] = <span class="php-var">$query</span>-&gt;contains(<span class="php-quote">'tags'</span>, <span class="php-var">$tag</span>);
 </span><span id="72" class="l">        }

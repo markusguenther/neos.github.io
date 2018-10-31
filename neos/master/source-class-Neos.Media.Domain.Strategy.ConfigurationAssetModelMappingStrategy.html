@@ -864,7 +864,7 @@
 </span></span><span id="45" class="l"><span class="php-comment">     * @param array $additionalProperties Optional properties that can be taken into account for deciding the model class. what you get here can depend on the caller, so you should always fallback to something based on the resource.
 </span></span><span id="46" class="l"><span class="php-comment">     * @return string
 </span></span><span id="47" class="l"><span class="php-comment">     */</span>
-</span><span id="48" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> map(PersistentResource <span class="php-var">$resource</span>, <span class="php-keyword1">array</span> <span class="php-var">$additionalProperties</span> = <span class="php-keyword1">array</span>())
+</span><span id="48" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> map(PersistentResource <span class="php-var">$resource</span>, <span class="php-keyword1">array</span> <span class="php-var">$additionalProperties</span> = [])
 </span><span id="49" class="l">    {
 </span><span id="50" class="l">        <span class="php-var">$mediaType</span> = MediaTypes::getMediaTypeFromFilename(<span class="php-var">$resource</span>-&gt;getFilename());
 </span><span id="51" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'patterns'</span>] <span class="php-keyword1">as</span> <span class="php-var">$pattern</span> =&gt; <span class="php-var">$mappingInformation</span>) {

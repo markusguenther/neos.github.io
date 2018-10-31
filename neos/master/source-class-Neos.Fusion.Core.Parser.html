@@ -1018,7 +1018,7 @@
 </span></span><span id="199" class="l"><span class="php-comment">     *
 </span></span><span id="200" class="l"><span class="php-comment">     * @var array
 </span></span><span id="201" class="l"><span class="php-comment">     */</span>
-</span><span id="202" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$reservedParseTreeKeys</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'__meta'</span>, <span class="php-quote">'__prototypes'</span>, <span class="php-quote">'__prototypeObjectName'</span>, <span class="php-quote">'__prototypeChain'</span>, <span class="php-quote">'__value'</span>, <span class="php-quote">'__objectType'</span>, <span class="php-quote">'__eelExpression'</span>);
+</span><span id="202" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$reservedParseTreeKeys</span> = [<span class="php-quote">'__meta'</span>, <span class="php-quote">'__prototypes'</span>, <span class="php-quote">'__prototypeObjectName'</span>, <span class="php-quote">'__prototypeChain'</span>, <span class="php-quote">'__value'</span>, <span class="php-quote">'__objectType'</span>, <span class="php-quote">'__eelExpression'</span>];
 </span><span id="203" class="l">
 </span><span id="204" class="l">    <span class="php-comment">/**
 </span></span><span id="205" class="l"><span class="php-comment">     * @Flow\Inject
@@ -1036,7 +1036,7 @@
 </span></span><span id="217" class="l"><span class="php-comment">     * The Fusion object tree, created by this parser.
 </span></span><span id="218" class="l"><span class="php-comment">     * @var array
 </span></span><span id="219" class="l"><span class="php-comment">     */</span>
-</span><span id="220" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$objectTree</span> = <span class="php-keyword1">array</span>();
+</span><span id="220" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$objectTree</span> = [];
 </span><span id="221" class="l">
 </span><span id="222" class="l">    <span class="php-comment">/**
 </span></span><span id="223" class="l"><span class="php-comment">     * The line number which is currently processed
@@ -1048,13 +1048,13 @@
 </span></span><span id="229" class="l"><span class="php-comment">     * An array of strings of the source code which has
 </span></span><span id="230" class="l"><span class="php-comment">     * @var array
 </span></span><span id="231" class="l"><span class="php-comment">     */</span>
-</span><span id="232" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$currentSourceCodeLines</span> = <span class="php-keyword1">array</span>();
+</span><span id="232" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$currentSourceCodeLines</span> = [];
 </span><span id="233" class="l">
 </span><span id="234" class="l">    <span class="php-comment">/**
 </span></span><span id="235" class="l"><span class="php-comment">     * The current object path context as defined by confinements.
 </span></span><span id="236" class="l"><span class="php-comment">     * @var array
 </span></span><span id="237" class="l"><span class="php-comment">     */</span>
-</span><span id="238" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$currentObjectPathStack</span> = <span class="php-keyword1">array</span>();
+</span><span id="238" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$currentObjectPathStack</span> = [];
 </span><span id="239" class="l">
 </span><span id="240" class="l">    <span class="php-comment">/**
 </span></span><span id="241" class="l"><span class="php-comment">     * Determines if a block comment is currently active or not.
@@ -1079,9 +1079,9 @@
 </span></span><span id="260" class="l"><span class="php-comment">     * These namespaces are _not_ used for resolution of processor class names.
 </span></span><span id="261" class="l"><span class="php-comment">     * @var array
 </span></span><span id="262" class="l"><span class="php-comment">     */</span>
-</span><span id="263" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$objectTypeNamespaces</span> = <span class="php-keyword1">array</span>(
+</span><span id="263" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$objectTypeNamespaces</span> = [
 </span><span id="264" class="l">        <span class="php-quote">'default'</span> =&gt; <span class="php-quote">'Neos.Fusion'</span>
-</span><span id="265" class="l">    );
+</span><span id="265" class="l">    ];
 </span><span id="266" class="l">
 </span><span id="267" class="l">    <span class="php-comment">/**
 </span></span><span id="268" class="l"><span class="php-comment">     * Parses the given Fusion source code and returns an object tree
@@ -1095,7 +1095,7 @@
 </span></span><span id="276" class="l"><span class="php-comment">     * @throws Fusion\Exception
 </span></span><span id="277" class="l"><span class="php-comment">     * @api
 </span></span><span id="278" class="l"><span class="php-comment">     */</span>
-</span><span id="279" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parse(<span class="php-var">$sourceCode</span>, <span class="php-var">$contextPathAndFilename</span> = <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span> <span class="php-var">$objectTreeUntilNow</span> = <span class="php-keyword1">array</span>(), <span class="php-var">$buildPrototypeHierarchy</span> = <span class="php-keyword1">true</span>)
+</span><span id="279" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> parse(<span class="php-var">$sourceCode</span>, <span class="php-var">$contextPathAndFilename</span> = <span class="php-keyword1">null</span>, <span class="php-keyword1">array</span> <span class="php-var">$objectTreeUntilNow</span> = [], <span class="php-var">$buildPrototypeHierarchy</span> = <span class="php-keyword1">true</span>)
 </span><span id="280" class="l">    {
 </span><span id="281" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_string</span>(<span class="php-var">$sourceCode</span>)) {
 </span><span id="282" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Fusion\Exception(<span class="php-quote">'Cannot parse Fusion - $sourceCode must be of type string!'</span>, <span class="php-num">1180203775</span>);
@@ -1154,10 +1154,10 @@
 </span><span id="335" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> initialize()
 </span><span id="336" class="l">    {
 </span><span id="337" class="l">        <span class="php-var">$this</span>-&gt;currentLineNumber = <span class="php-num">1</span>;
-</span><span id="338" class="l">        <span class="php-var">$this</span>-&gt;currentObjectPathStack = <span class="php-keyword1">array</span>();
-</span><span id="339" class="l">        <span class="php-var">$this</span>-&gt;currentSourceCodeLines = <span class="php-keyword1">array</span>();
+</span><span id="338" class="l">        <span class="php-var">$this</span>-&gt;currentObjectPathStack = [];
+</span><span id="339" class="l">        <span class="php-var">$this</span>-&gt;currentSourceCodeLines = [];
 </span><span id="340" class="l">        <span class="php-var">$this</span>-&gt;currentBlockCommentState = <span class="php-keyword1">false</span>;
-</span><span id="341" class="l">        <span class="php-var">$this</span>-&gt;objectTree = <span class="php-keyword1">array</span>();
+</span><span id="341" class="l">        <span class="php-var">$this</span>-&gt;objectTree = [];
 </span><span id="342" class="l">    }
 </span><span id="343" class="l">
 </span><span id="344" class="l">    <span class="php-comment">/**
@@ -1475,7 +1475,7 @@
 </span><span id="656" class="l">                <span class="php-var">$objectPath</span> = <span class="php-var">$this</span>-&gt;getCurrentObjectPathPrefix() . <span class="php-keyword2">substr</span>(<span class="php-var">$objectPath</span>, <span class="php-num">1</span>);
 </span><span id="657" class="l">            }
 </span><span id="658" class="l">
-</span><span id="659" class="l">            <span class="php-var">$objectPathArray</span> = <span class="php-keyword1">array</span>();
+</span><span id="659" class="l">            <span class="php-var">$objectPathArray</span> = [];
 </span><span id="660" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-keyword2">preg_split</span>(self::SPLIT_PATTERN_OBJECTPATH, <span class="php-var">$objectPath</span>) <span class="php-keyword1">as</span> <span class="php-var">$objectPathSegment</span>) {
 </span><span id="661" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$objectPathSegment</span>[<span class="php-num">0</span>] === <span class="php-quote">'@'</span>) {
 </span><span id="662" class="l">                    <span class="php-var">$objectPathArray</span>[] = <span class="php-quote">'__meta'</span>;
@@ -1528,11 +1528,11 @@
 </span><span id="709" class="l">            <span class="php-var">$processedValue</span> = <span class="php-keyword2">floatval</span>(<span class="php-var">$unparsedValue</span>);
 </span><span id="710" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">preg_match</span>(Package::EelExpressionRecognizer, <span class="php-var">$unparsedValue</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
 </span><span id="711" class="l">            <span class="php-comment">// Single-line Eel Expressions</span>
-</span><span id="712" class="l">            <span class="php-var">$processedValue</span> = <span class="php-keyword1">array</span>(
+</span><span id="712" class="l">            <span class="php-var">$processedValue</span> = [
 </span><span id="713" class="l">                <span class="php-quote">'__eelExpression'</span> =&gt; <span class="php-var">$matches</span>[<span class="php-num">1</span>],
 </span><span id="714" class="l">                <span class="php-quote">'__value'</span> =&gt; <span class="php-keyword1">null</span>,
 </span><span id="715" class="l">                <span class="php-quote">'__objectType'</span> =&gt; <span class="php-keyword1">null</span>
-</span><span id="716" class="l">            );
+</span><span id="716" class="l">            ];
 </span><span id="717" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">preg_match</span>(self::SPLIT_PATTERN_VALUELITERAL, <span class="php-var">$unparsedValue</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
 </span><span id="718" class="l">            <span class="php-var">$processedValue</span> = <span class="php-keyword2">stripslashes</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">2</span>]) ? <span class="php-var">$matches</span>[<span class="php-num">2</span>] : <span class="php-var">$matches</span>[<span class="php-num">1</span>]);
 </span><span id="719" class="l">        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">preg_match</span>(self::SPLIT_PATTERN_VALUEMULTILINELITERAL, <span class="php-var">$unparsedValue</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
@@ -1556,11 +1556,11 @@
 </span><span id="737" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="738" class="l">                <span class="php-var">$objectTypeNamespace</span> = (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;objectTypeNamespaces[<span class="php-var">$matches</span>[<span class="php-quote">'namespace'</span>]])) ? <span class="php-var">$this</span>-&gt;objectTypeNamespaces[<span class="php-var">$matches</span>[<span class="php-quote">'namespace'</span>]] : <span class="php-var">$matches</span>[<span class="php-quote">'namespace'</span>];
 </span><span id="739" class="l">            }
-</span><span id="740" class="l">            <span class="php-var">$processedValue</span> = <span class="php-keyword1">array</span>(
+</span><span id="740" class="l">            <span class="php-var">$processedValue</span> = [
 </span><span id="741" class="l">                <span class="php-quote">'__objectType'</span> =&gt; <span class="php-var">$objectTypeNamespace</span> . <span class="php-quote">':'</span> . <span class="php-var">$matches</span>[<span class="php-quote">'unqualifiedType'</span>],
 </span><span id="742" class="l">                <span class="php-quote">'__value'</span> =&gt; <span class="php-keyword1">null</span>,
 </span><span id="743" class="l">                <span class="php-quote">'__eelExpression'</span> =&gt; <span class="php-keyword1">null</span>
-</span><span id="744" class="l">            );
+</span><span id="744" class="l">            ];
 </span><span id="745" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="746" class="l">            <span class="php-comment">// Trying to match multiline Eel expressions</span>
 </span><span id="747" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$unparsedValue</span>, <span class="php-quote">'${'</span>) === <span class="php-num">0</span>) {
@@ -1571,10 +1571,10 @@
 </span><span id="752" class="l">
 </span><span id="753" class="l">                    <span class="php-keyword1">if</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$line</span>, -<span class="php-num">1</span>) === <span class="php-quote">'}'</span>) {
 </span><span id="754" class="l">                        <span class="php-comment">// potential end-of-eel-expression marker</span>
-</span><span id="755" class="l">                        <span class="php-var">$matches</span> = <span class="php-keyword1">array</span>();
+</span><span id="755" class="l">                        <span class="php-var">$matches</span> = [];
 </span><span id="756" class="l">                        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(Package::EelExpressionRecognizer, <span class="php-var">$eelExpressionSoFar</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
 </span><span id="757" class="l">                            <span class="php-comment">// Single-line Eel Expressions</span>
-</span><span id="758" class="l">                            <span class="php-var">$processedValue</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'__eelExpression'</span> =&gt; <span class="php-keyword2">str_replace</span>(<span class="php-keyword2">chr</span>(<span class="php-num">10</span>), <span class="php-quote">''</span>, <span class="php-var">$matches</span>[<span class="php-num">1</span>]), <span class="php-quote">'__value'</span> =&gt; <span class="php-keyword1">null</span>, <span class="php-quote">'__objectType'</span> =&gt; <span class="php-keyword1">null</span>);
+</span><span id="758" class="l">                            <span class="php-var">$processedValue</span> = [<span class="php-quote">'__eelExpression'</span> =&gt; <span class="php-keyword2">str_replace</span>(<span class="php-keyword2">chr</span>(<span class="php-num">10</span>), <span class="php-quote">''</span>, <span class="php-var">$matches</span>[<span class="php-num">1</span>]), <span class="php-quote">'__value'</span> =&gt; <span class="php-keyword1">null</span>, <span class="php-quote">'__objectType'</span> =&gt; <span class="php-keyword1">null</span>];
 </span><span id="759" class="l">                            <span class="php-keyword1">break</span>;
 </span><span id="760" class="l">                        }
 </span><span id="761" class="l">                    }
@@ -1592,7 +1592,7 @@
 </span><span id="773" class="l">                <span class="php-keyword1">while</span> (<span class="php-keyword1">true</span>) {
 </span><span id="774" class="l">                    <span class="php-keyword1">if</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$dslExpressionSoFar</span>, -<span class="php-num">1</span>) === <span class="php-quote">'`'</span>) {
 </span><span id="775" class="l">                        <span class="php-comment">// potential end-of-dsl-expression marker</span>
-</span><span id="776" class="l">                        <span class="php-var">$matches</span> = <span class="php-keyword1">array</span>();
+</span><span id="776" class="l">                        <span class="php-var">$matches</span> = [];
 </span><span id="777" class="l">                        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(self::SPLIT_PATTERN_DSL_EXPRESSION, <span class="php-var">$dslExpressionSoFar</span>, <span class="php-var">$matches</span>) === <span class="php-num">1</span>) {
 </span><span id="778" class="l">                            <span class="php-var">$processedValue</span> = <span class="php-var">$this</span>-&gt;invokeAndParseDsl(<span class="php-var">$matches</span>[<span class="php-quote">'identifier'</span>], <span class="php-var">$matches</span>[<span class="php-quote">'code'</span>]);
 </span><span id="779" class="l">                            <span class="php-keyword1">break</span>;
@@ -1672,13 +1672,13 @@
 </span><span id="853" class="l">            <span class="php-comment">// we still need to traverse further down</span>
 </span><span id="854" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>]) &amp;&amp; !<span class="php-keyword2">is_array</span>(<span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>])) {
 </span><span id="855" class="l">                <span class="php-comment">// the element one-level-down is already defined, but it is NOT an array. So we need to convert the simple type to __value</span>
-</span><span id="856" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = <span class="php-keyword1">array</span>(
+</span><span id="856" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = [
 </span><span id="857" class="l">                    <span class="php-quote">'__value'</span> =&gt; <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>],
 </span><span id="858" class="l">                    <span class="php-quote">'__eelExpression'</span> =&gt; <span class="php-keyword1">null</span>,
 </span><span id="859" class="l">                    <span class="php-quote">'__objectType'</span> =&gt; <span class="php-keyword1">null</span>
-</span><span id="860" class="l">                );
+</span><span id="860" class="l">                ];
 </span><span id="861" class="l">            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>])) {
-</span><span id="862" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = <span class="php-keyword1">array</span>();
+</span><span id="862" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = [];
 </span><span id="863" class="l">            }
 </span><span id="864" class="l">
 </span><span id="865" class="l">            <span class="php-var">$this</span>-&gt;setValueInObjectTree(<span class="php-var">$objectPathArray</span>, <span class="php-var">$value</span>, <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>]);
@@ -1706,7 +1706,7 @@
 </span><span id="887" class="l">                <span class="php-var">$currentKey</span> = (int)<span class="php-var">$currentKey</span>;
 </span><span id="888" class="l">            }
 </span><span id="889" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>])) {
-</span><span id="890" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = <span class="php-keyword1">array</span>();
+</span><span id="890" class="l">                <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>] = [];
 </span><span id="891" class="l">            }
 </span><span id="892" class="l">            <span class="php-var">$value</span> = &amp;<span class="php-var">$this</span>-&gt;getValueFromObjectTree(<span class="php-var">$objectPathArray</span>, <span class="php-var">$objectTree</span>[<span class="php-var">$currentKey</span>]);
 </span><span id="893" class="l">        } <span class="php-keyword1">else</span> {
@@ -1740,7 +1740,7 @@
 </span><span id="921" class="l">        }
 </span><span id="922" class="l">
 </span><span id="923" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;objectTree[<span class="php-quote">'__prototypes'</span>] <span class="php-keyword1">as</span> <span class="php-var">$prototypeName</span> =&gt; <span class="php-var">$prototypeConfiguration</span>) {
-</span><span id="924" class="l">            <span class="php-var">$prototypeInheritanceHierarchy</span> = <span class="php-keyword1">array</span>();
+</span><span id="924" class="l">            <span class="php-var">$prototypeInheritanceHierarchy</span> = [];
 </span><span id="925" class="l">            <span class="php-var">$currentPrototypeName</span> = <span class="php-var">$prototypeName</span>;
 </span><span id="926" class="l">            <span class="php-keyword1">while</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;objectTree[<span class="php-quote">'__prototypes'</span>][<span class="php-var">$currentPrototypeName</span>][<span class="php-quote">'__prototypeObjectName'</span>])) {
 </span><span id="927" class="l">                <span class="php-var">$currentPrototypeName</span> = <span class="php-var">$this</span>-&gt;objectTree[<span class="php-quote">'__prototypes'</span>][<span class="php-var">$currentPrototypeName</span>][<span class="php-quote">'__prototypeObjectName'</span>];

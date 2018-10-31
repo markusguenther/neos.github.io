@@ -879,7 +879,7 @@
 </span></span><span id="53" class="l"><span class="php-comment">     */</span>
 </span><span id="54" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> render(<span class="php-var">$format</span> = <span class="php-quote">'initials'</span>)
 </span><span id="55" class="l">    {
-</span><span id="56" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$format</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'fullFirstName'</span>, <span class="php-quote">'initials'</span>, <span class="php-quote">'fullName'</span>))) {
+</span><span id="56" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$format</span>, [<span class="php-quote">'fullFirstName'</span>, <span class="php-quote">'initials'</span>, <span class="php-quote">'fullName'</span>])) {
 </span><span id="57" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Format &quot;%s&quot; given to backend.userInitials(), only supporting &quot;fullFirstName&quot;, &quot;initials&quot; and &quot;fullName&quot;.'</span>, <span class="php-var">$format</span>), <span class="php-num">1415705861</span>);
 </span><span id="58" class="l">        }
 </span><span id="59" class="l">

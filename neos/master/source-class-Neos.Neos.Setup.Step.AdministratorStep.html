@@ -884,12 +884,12 @@
 </span><span id="69" class="l">        <span class="php-var">$firstName</span> = <span class="php-var">$personalSection</span>-&gt;createElement(<span class="php-quote">'firstName'</span>, <span class="php-quote">'Neos.Form:SingleLineText'</span>);
 </span><span id="70" class="l">        <span class="php-var">$firstName</span>-&gt;setLabel(<span class="php-quote">'First name'</span>);
 </span><span id="71" class="l">        <span class="php-var">$firstName</span>-&gt;addValidator(<span class="php-keyword1">new</span> NotEmptyValidator());
-</span><span id="72" class="l">        <span class="php-var">$firstName</span>-&gt;addValidator(<span class="php-keyword1">new</span> StringLengthValidator(<span class="php-keyword1">array</span>(<span class="php-quote">'minimum'</span> =&gt; <span class="php-num">1</span>, <span class="php-quote">'maximum'</span> =&gt; <span class="php-num">255</span>)));
+</span><span id="72" class="l">        <span class="php-var">$firstName</span>-&gt;addValidator(<span class="php-keyword1">new</span> StringLengthValidator([<span class="php-quote">'minimum'</span> =&gt; <span class="php-num">1</span>, <span class="php-quote">'maximum'</span> =&gt; <span class="php-num">255</span>]));
 </span><span id="73" class="l">
 </span><span id="74" class="l">        <span class="php-var">$lastName</span> = <span class="php-var">$personalSection</span>-&gt;createElement(<span class="php-quote">'lastName'</span>, <span class="php-quote">'Neos.Form:SingleLineText'</span>);
 </span><span id="75" class="l">        <span class="php-var">$lastName</span>-&gt;setLabel(<span class="php-quote">'Last name'</span>);
 </span><span id="76" class="l">        <span class="php-var">$lastName</span>-&gt;addValidator(<span class="php-keyword1">new</span> NotEmptyValidator());
-</span><span id="77" class="l">        <span class="php-var">$lastName</span>-&gt;addValidator(<span class="php-keyword1">new</span> StringLengthValidator(<span class="php-keyword1">array</span>(<span class="php-quote">'minimum'</span> =&gt; <span class="php-num">1</span>, <span class="php-quote">'maximum'</span> =&gt; <span class="php-num">255</span>)));
+</span><span id="77" class="l">        <span class="php-var">$lastName</span>-&gt;addValidator(<span class="php-keyword1">new</span> StringLengthValidator([<span class="php-quote">'minimum'</span> =&gt; <span class="php-num">1</span>, <span class="php-quote">'maximum'</span> =&gt; <span class="php-num">255</span>]));
 </span><span id="78" class="l">
 </span><span id="79" class="l">        <span class="php-var">$credentialsSection</span> = <span class="php-var">$page1</span>-&gt;createElement(<span class="php-quote">'credentialsSection'</span>, <span class="php-quote">'Neos.Form:Section'</span>);
 </span><span id="80" class="l">        <span class="php-var">$credentialsSection</span>-&gt;setLabel(<span class="php-quote">'Credentials'</span>);
@@ -901,7 +901,7 @@
 </span><span id="86" class="l">
 </span><span id="87" class="l">        <span class="php-var">$password</span> = <span class="php-var">$credentialsSection</span>-&gt;createElement(<span class="php-quote">'password'</span>, <span class="php-quote">'Neos.Form:PasswordWithConfirmation'</span>);
 </span><span id="88" class="l">        <span class="php-var">$password</span>-&gt;addValidator(<span class="php-keyword1">new</span> NotEmptyValidator());
-</span><span id="89" class="l">        <span class="php-var">$password</span>-&gt;addValidator(<span class="php-keyword1">new</span> StringLengthValidator(<span class="php-keyword1">array</span>(<span class="php-quote">'minimum'</span> =&gt; <span class="php-num">6</span>, <span class="php-quote">'maximum'</span> =&gt; <span class="php-num">255</span>)));
+</span><span id="89" class="l">        <span class="php-var">$password</span>-&gt;addValidator(<span class="php-keyword1">new</span> StringLengthValidator([<span class="php-quote">'minimum'</span> =&gt; <span class="php-num">6</span>, <span class="php-quote">'maximum'</span> =&gt; <span class="php-num">255</span>]));
 </span><span id="90" class="l">        <span class="php-var">$password</span>-&gt;setLabel(<span class="php-quote">'Password'</span>);
 </span><span id="91" class="l">        <span class="php-var">$password</span>-&gt;setProperty(<span class="php-quote">'passwordDescription'</span>, <span class="php-quote">'At least 6 characters'</span>);
 </span><span id="92" class="l">
@@ -916,7 +916,7 @@
 </span></span><span id="101" class="l"><span class="php-comment">     */</span>
 </span><span id="102" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> postProcessFormValues(<span class="php-keyword1">array</span> <span class="php-var">$formValues</span>)
 </span><span id="103" class="l">    {
-</span><span id="104" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;createUser(<span class="php-var">$formValues</span>[<span class="php-quote">'username'</span>], <span class="php-var">$formValues</span>[<span class="php-quote">'password'</span>], <span class="php-var">$formValues</span>[<span class="php-quote">'firstName'</span>], <span class="php-var">$formValues</span>[<span class="php-quote">'lastName'</span>], <span class="php-keyword1">array</span>(<span class="php-quote">'Neos.Neos:Administrator'</span>));
+</span><span id="104" class="l">        <span class="php-var">$this</span>-&gt;userService-&gt;createUser(<span class="php-var">$formValues</span>[<span class="php-quote">'username'</span>], <span class="php-var">$formValues</span>[<span class="php-quote">'password'</span>], <span class="php-var">$formValues</span>[<span class="php-quote">'firstName'</span>], <span class="php-var">$formValues</span>[<span class="php-quote">'lastName'</span>], [<span class="php-quote">'Neos.Neos:Administrator'</span>]);
 </span><span id="105" class="l">    }
 </span><span id="106" class="l">}
 </span><span id="107" class="l"></span></code></pre>

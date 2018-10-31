@@ -972,7 +972,7 @@
 </span><span id="151" class="l">    {
 </span><span id="152" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;currentNodeRootline === <span class="php-keyword1">null</span>) {
 </span><span id="153" class="l">            <span class="php-var">$nodeRootline</span> = <span class="php-var">$this</span>-&gt;currentNode-&gt;getContext()-&gt;getNodesOnPath(<span class="php-var">$this</span>-&gt;currentNode-&gt;getContext()-&gt;getCurrentSiteNode()-&gt;getPath(), <span class="php-var">$this</span>-&gt;currentNode-&gt;getPath());
-</span><span id="154" class="l">            <span class="php-var">$this</span>-&gt;currentNodeRootline = <span class="php-keyword1">array</span>();
+</span><span id="154" class="l">            <span class="php-var">$this</span>-&gt;currentNodeRootline = [];
 </span><span id="155" class="l">
 </span><span id="156" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeRootline</span> <span class="php-keyword1">as</span> <span class="php-var">$rootlineElement</span>) {
 </span><span id="157" class="l">                <span class="php-var">$this</span>-&gt;currentNodeRootline[<span class="php-var">$this</span>-&gt;getNodeLevelInSite(<span class="php-var">$rootlineElement</span>)] = <span class="php-var">$rootlineElement</span>;

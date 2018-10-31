@@ -909,9 +909,9 @@
 </span><span id="82" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> execute(NodeData <span class="php-var">$nodeData</span>)
 </span><span id="83" class="l">    {
 </span><span id="84" class="l">        <span class="php-var">$dimensions</span> = <span class="php-var">$nodeData</span>-&gt;getDimensions();
-</span><span id="85" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$dimensions</span> !== <span class="php-keyword1">array</span>()) {
+</span><span id="85" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$dimensions</span> !== []) {
 </span><span id="86" class="l">            <span class="php-var">$hasChanges</span> = <span class="php-keyword1">false</span>;
-</span><span id="87" class="l">            <span class="php-var">$newDimensions</span>  = <span class="php-keyword1">array</span>();
+</span><span id="87" class="l">            <span class="php-var">$newDimensions</span>  = [];
 </span><span id="88" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$dimensions</span> <span class="php-keyword1">as</span> <span class="php-var">$dimension</span>) {
 </span><span id="89" class="l">                <span class="php-comment">/** @var NodeDimension $dimension */</span>
 </span><span id="90" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$dimension</span>-&gt;getName() === <span class="php-var">$this</span>-&gt;oldDimensionName) {

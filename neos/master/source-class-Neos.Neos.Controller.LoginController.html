@@ -895,18 +895,18 @@
 </span><span id="77" class="l">    <span class="php-comment">/**
 </span></span><span id="78" class="l"><span class="php-comment">     * @var array
 </span></span><span id="79" class="l"><span class="php-comment">     */</span>
-</span><span id="80" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$viewFormatToObjectNameMap</span> = <span class="php-keyword1">array</span>(
+</span><span id="80" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$viewFormatToObjectNameMap</span> = [
 </span><span id="81" class="l">        <span class="php-quote">'html'</span> =&gt; TemplateView::<span class="php-keyword1">class</span>,
 </span><span id="82" class="l">        <span class="php-quote">'json'</span> =&gt; JsonView::<span class="php-keyword1">class</span>
-</span><span id="83" class="l">    );
+</span><span id="83" class="l">    ];
 </span><span id="84" class="l">
 </span><span id="85" class="l">    <span class="php-comment">/**
 </span></span><span id="86" class="l"><span class="php-comment">     * @var array
 </span></span><span id="87" class="l"><span class="php-comment">     */</span>
-</span><span id="88" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$supportedMediaTypes</span> = <span class="php-keyword1">array</span>(
+</span><span id="88" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$supportedMediaTypes</span> = [
 </span><span id="89" class="l">        <span class="php-quote">'text/html'</span>,
 </span><span id="90" class="l">        <span class="php-quote">'application/json'</span>
-</span><span id="91" class="l">    );
+</span><span id="91" class="l">    ];
 </span><span id="92" class="l">
 </span><span id="93" class="l">    <span class="php-comment">/**
 </span></span><span id="94" class="l"><span class="php-comment">     * @return void
@@ -986,9 +986,9 @@
 </span><span id="168" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> onAuthenticationFailure(AuthenticationRequiredException <span class="php-var">$exception</span> = <span class="php-keyword1">null</span>)
 </span><span id="169" class="l">    {
 </span><span id="170" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;view <span class="php-keyword1">instanceof</span> JsonView) {
-</span><span id="171" class="l">            <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">false</span>));
+</span><span id="171" class="l">            <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">false</span>]);
 </span><span id="172" class="l">        } <span class="php-keyword1">else</span> {
-</span><span id="173" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The entered username or password was wrong'</span>, <span class="php-quote">'Wrong credentials'</span>, Message::SEVERITY_ERROR, <span class="php-keyword1">array</span>(), (<span class="php-var">$exception</span> === <span class="php-keyword1">null</span> ? <span class="php-num">1347016771</span> : <span class="php-var">$exception</span>-&gt;getCode()));
+</span><span id="173" class="l">            <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'The entered username or password was wrong'</span>, <span class="php-quote">'Wrong credentials'</span>, Message::SEVERITY_ERROR, [], (<span class="php-var">$exception</span> === <span class="php-keyword1">null</span> ? <span class="php-num">1347016771</span> : <span class="php-var">$exception</span>-&gt;getCode()));
 </span><span id="174" class="l">        }
 </span><span id="175" class="l">    }
 </span><span id="176" class="l">
@@ -1001,7 +1001,7 @@
 </span><span id="183" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> onAuthenticationSuccess(ActionRequest <span class="php-var">$originalRequest</span> = <span class="php-keyword1">null</span>)
 </span><span id="184" class="l">    {
 </span><span id="185" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;view <span class="php-keyword1">instanceof</span> JsonView) {
-</span><span id="186" class="l">            <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'success'</span> =&gt; <span class="php-var">$this</span>-&gt;authenticationManager-&gt;isAuthenticated(), <span class="php-quote">'csrfToken'</span> =&gt; <span class="php-var">$this</span>-&gt;securityContext-&gt;getCsrfProtectionToken()));
+</span><span id="186" class="l">            <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'success'</span> =&gt; <span class="php-var">$this</span>-&gt;authenticationManager-&gt;isAuthenticated(), <span class="php-quote">'csrfToken'</span> =&gt; <span class="php-var">$this</span>-&gt;securityContext-&gt;getCsrfProtectionToken()]);
 </span><span id="187" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="188" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;request-&gt;hasArgument(<span class="php-quote">'lastVisitedNode'</span>) &amp;&amp; <span class="php-keyword2">strlen</span>(<span class="php-var">$this</span>-&gt;request-&gt;getArgument(<span class="php-quote">'lastVisitedNode'</span>)) &gt; <span class="php-num">0</span>) {
 </span><span id="189" class="l">                <span class="php-var">$this</span>-&gt;session-&gt;putData(<span class="php-quote">'lastVisitedNode'</span>, <span class="php-var">$this</span>-&gt;request-&gt;getArgument(<span class="php-quote">'lastVisitedNode'</span>));
@@ -1030,13 +1030,13 @@
 </span><span id="212" class="l">        parent::logoutAction();
 </span><span id="213" class="l">        <span class="php-keyword1">switch</span> (<span class="php-var">$this</span>-&gt;request-&gt;getFormat()) {
 </span><span id="214" class="l">            <span class="php-keyword1">case</span> <span class="php-quote">'json'</span>:
-</span><span id="215" class="l">                <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>));
+</span><span id="215" class="l">                <span class="php-var">$this</span>-&gt;view-&gt;assign(<span class="php-quote">'value'</span>, [<span class="php-quote">'success'</span> =&gt; <span class="php-keyword1">true</span>]);
 </span><span id="216" class="l">            <span class="php-keyword1">break</span>;
 </span><span id="217" class="l">            <span class="php-keyword1">default</span>:
 </span><span id="218" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$possibleRedirectionUri</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="219" class="l">                    <span class="php-var">$this</span>-&gt;redirectToUri(<span class="php-var">$possibleRedirectionUri</span>);
 </span><span id="220" class="l">                }
-</span><span id="221" class="l">                <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Successfully logged out'</span>, <span class="php-quote">'Logged out'</span>, Message::SEVERITY_NOTICE, <span class="php-keyword1">array</span>(), <span class="php-num">1318421560</span>);
+</span><span id="221" class="l">                <span class="php-var">$this</span>-&gt;addFlashMessage(<span class="php-quote">'Successfully logged out'</span>, <span class="php-quote">'Logged out'</span>, Message::SEVERITY_NOTICE, [], <span class="php-num">1318421560</span>);
 </span><span id="222" class="l">                <span class="php-var">$this</span>-&gt;redirect(<span class="php-quote">'index'</span>);
 </span><span id="223" class="l">        }
 </span><span id="224" class="l">    }

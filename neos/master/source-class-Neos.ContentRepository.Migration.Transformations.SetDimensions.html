@@ -860,7 +860,7 @@
 </span></span><span id="33" class="l"><span class="php-comment">     *
 </span></span><span id="34" class="l"><span class="php-comment">     * @var array
 </span></span><span id="35" class="l"><span class="php-comment">     */</span>
-</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$dimensionValues</span> = <span class="php-keyword1">array</span>();
+</span><span id="36" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$dimensionValues</span> = [];
 </span><span id="37" class="l">
 </span><span id="38" class="l">    <span class="php-comment">/**
 </span></span><span id="39" class="l"><span class="php-comment">     * Sets the default dimension values for all dimensions that were not given.
@@ -893,7 +893,7 @@
 </span></span><span id="66" class="l"><span class="php-comment">     */</span>
 </span><span id="67" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> execute(NodeData <span class="php-var">$node</span>)
 </span><span id="68" class="l">    {
-</span><span id="69" class="l">        <span class="php-var">$dimensions</span> = <span class="php-keyword1">array</span>();
+</span><span id="69" class="l">        <span class="php-var">$dimensions</span> = [];
 </span><span id="70" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;dimensionValues <span class="php-keyword1">as</span> <span class="php-var">$dimensionName</span> =&gt; <span class="php-var">$dimensionConfiguration</span>) {
 </span><span id="71" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$dimensionConfiguration</span> <span class="php-keyword1">as</span> <span class="php-var">$dimensionValues</span>) {
 </span><span id="72" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$dimensionValues</span>)) {

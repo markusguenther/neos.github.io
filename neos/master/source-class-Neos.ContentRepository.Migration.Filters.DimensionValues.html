@@ -851,7 +851,7 @@
 </span></span><span id="31" class="l"><span class="php-comment">     *
 </span></span><span id="32" class="l"><span class="php-comment">     * @var array
 </span></span><span id="33" class="l"><span class="php-comment">     */</span>
-</span><span id="34" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$dimensionValues</span> = <span class="php-keyword1">array</span>();
+</span><span id="34" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$dimensionValues</span> = [];
 </span><span id="35" class="l">
 </span><span id="36" class="l">    <span class="php-comment">/**
 </span></span><span id="37" class="l"><span class="php-comment">     * Overrides the given dimensionValues with dimension defaults.
@@ -887,7 +887,7 @@
 </span><span id="67" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;filterForDefaultDimensionValues === <span class="php-keyword1">true</span>) {
 </span><span id="68" class="l">            <span class="php-var">$configuredDimensions</span> = <span class="php-var">$this</span>-&gt;contentDimensionRepository-&gt;findAll();
 </span><span id="69" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$configuredDimensions</span> <span class="php-keyword1">as</span> <span class="php-var">$dimension</span>) {
-</span><span id="70" class="l">                <span class="php-var">$this</span>-&gt;dimensionValues[<span class="php-var">$dimension</span>-&gt;getIdentifier()] = <span class="php-keyword1">array</span>(<span class="php-var">$dimension</span>-&gt;getDefault());
+</span><span id="70" class="l">                <span class="php-var">$this</span>-&gt;dimensionValues[<span class="php-var">$dimension</span>-&gt;getIdentifier()] = [<span class="php-var">$dimension</span>-&gt;getDefault()];
 </span><span id="71" class="l">            }
 </span><span id="72" class="l">        }
 </span><span id="73" class="l">
