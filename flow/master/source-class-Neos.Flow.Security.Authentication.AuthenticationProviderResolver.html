@@ -904,14 +904,14 @@
 </span></span><span id="46" class="l"><span class="php-comment">     */</span>
 </span><span id="47" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> resolveProviderClass(<span class="php-var">$providerName</span>)
 </span><span id="48" class="l">    {
-</span><span id="49" class="l">        <span class="php-var">$resolvedObjectName</span> = <span class="php-var">$this</span>-&gt;objectManager-&gt;getCaseSensitiveObjectName(<span class="php-var">$providerName</span>);
-</span><span id="50" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$resolvedObjectName</span> !== <span class="php-keyword1">false</span>) {
-</span><span id="51" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$resolvedObjectName</span>;
+</span><span id="49" class="l">        <span class="php-var">$className</span> = <span class="php-var">$this</span>-&gt;objectManager-&gt;getClassNameByObjectName(<span class="php-var">$providerName</span>);
+</span><span id="50" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$className</span> !== <span class="php-keyword1">false</span>) {
+</span><span id="51" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$className</span>;
 </span><span id="52" class="l">        }
 </span><span id="53" class="l">
-</span><span id="54" class="l">        <span class="php-var">$resolvedObjectName</span> = <span class="php-var">$this</span>-&gt;objectManager-&gt;getCaseSensitiveObjectName(<span class="php-quote">'Neos\Flow\Security\Authentication\Provider\\'</span> . <span class="php-var">$providerName</span>);
-</span><span id="55" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$resolvedObjectName</span> !== <span class="php-keyword1">false</span>) {
-</span><span id="56" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$resolvedObjectName</span>;
+</span><span id="54" class="l">        <span class="php-var">$className</span> = <span class="php-var">$this</span>-&gt;objectManager-&gt;getClassNameByObjectName(<span class="php-quote">'Neos\Flow\Security\Authentication\Provider\\'</span> . <span class="php-var">$providerName</span>);
+</span><span id="55" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$className</span> !== <span class="php-keyword1">false</span>) {
+</span><span id="56" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$className</span>;
 </span><span id="57" class="l">        }
 </span><span id="58" class="l">
 </span><span id="59" class="l">        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> NoAuthenticationProviderFoundException(<span class="php-quote">'An authentication provider with the name &quot;'</span> . <span class="php-var">$providerName</span> . <span class="php-quote">'&quot; could not be resolved.'</span>, <span class="php-num">1217154134</span>);
@@ -926,6 +926,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?cce1528a7f18bae5723ee60c5b54d983cee0a11f"></script>
+<script src="elementlist.js?799cac98c164b97829e702239d4f2c5a164468fd"></script>
 </body>
 </html>
