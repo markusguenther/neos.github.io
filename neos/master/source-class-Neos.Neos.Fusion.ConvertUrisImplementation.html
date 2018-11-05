@@ -965,7 +965,7 @@
 </span><span id="144" class="l">        <span class="php-var">$controllerContext</span> = <span class="php-var">$this</span>-&gt;runtime-&gt;getControllerContext();
 </span><span id="145" class="l">        <span class="php-var">$host</span> = <span class="php-var">$controllerContext</span>-&gt;getRequest()-&gt;getHttpRequest()-&gt;getUri()-&gt;getHost();
 </span><span id="146" class="l">        <span class="php-var">$processedContent</span> = <span class="php-keyword2">preg_replace_callback</span>(
-</span><span id="147" class="l">            <span class="php-quote">'~&lt;a.*?href=&quot;(.*?)&quot;.*?&gt;~i'</span>,
+</span><span id="147" class="l">            <span class="php-quote">'~&lt;a .*?href=&quot;(.*?)&quot;.*?&gt;~i'</span>,
 </span><span id="148" class="l">            <span class="php-keyword1">function</span> (<span class="php-var">$matches</span>) <span class="php-keyword1">use</span> (<span class="php-var">$externalLinkTarget</span>, <span class="php-var">$resourceLinkTarget</span>, <span class="php-var">$host</span>, <span class="php-var">$noOpenerString</span>) {
 </span><span id="149" class="l">                <span class="php-keyword1">list</span>(<span class="php-var">$linkText</span>, <span class="php-var">$linkHref</span>) = <span class="php-var">$matches</span>;
 </span><span id="150" class="l">                <span class="php-var">$uriHost</span> = <span class="php-keyword2">parse_url</span>(<span class="php-var">$linkHref</span>, PHP_URL_HOST);
