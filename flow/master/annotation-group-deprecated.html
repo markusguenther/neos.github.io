@@ -1102,7 +1102,6 @@
 				<li><a href="class-Neos.Flow.Security.AccountFactory.html">Neos\Flow\Security\AccountFactory</a></li>
 				<li><a href="class-Neos.Flow.Security.AccountRepository.html">Neos\Flow\Security\AccountRepository</a></li>
 				<li><a href="class-Neos.Flow.Security.Aspect.PolicyEnforcementAspect.html">Neos\Flow\Security\Aspect\PolicyEnforcementAspect</a></li>
-				<li><a href="class-Neos.Flow.Security.Authentication.AuthenticationProviderManager.html">Neos\Flow\Security\Authentication\AuthenticationProviderManager</a></li>
 				<li><a href="class-Neos.Flow.Security.Authentication.AuthenticationProviderResolver.html">Neos\Flow\Security\Authentication\AuthenticationProviderResolver</a></li>
 				<li><a href="class-Neos.Flow.Security.Authentication.Controller.AbstractAuthenticationController.html">Neos\Flow\Security\Authentication\Controller\AbstractAuthenticationController</a></li>
 				<li><a href="class-Neos.Flow.Security.Authentication.EntryPoint.AbstractEntryPoint.html">Neos\Flow\Security\Authentication\EntryPoint\AbstractEntryPoint</a></li>
@@ -1141,7 +1140,6 @@
 				<li><a href="class-Neos.Flow.Security.Authorization.RequestFilter.html">Neos\Flow\Security\Authorization\RequestFilter</a></li>
 				<li><a href="class-Neos.Flow.Security.Authorization.TestingPrivilegeManager.html">Neos\Flow\Security\Authorization\TestingPrivilegeManager</a></li>
 				<li><a href="class-Neos.Flow.Security.Channel.HttpsInterceptor.html">Neos\Flow\Security\Channel\HttpsInterceptor</a></li>
-				<li><a href="class-Neos.Flow.Security.Context.html">Neos\Flow\Security\Context</a></li>
 				<li><a href="class-Neos.Flow.Security.Cryptography.Algorithms.html">Neos\Flow\Security\Cryptography\Algorithms</a></li>
 				<li><a href="class-Neos.Flow.Security.Cryptography.BCryptHashingStrategy.html">Neos\Flow\Security\Cryptography\BCryptHashingStrategy</a></li>
 				<li><a href="class-Neos.Flow.Security.Cryptography.FileBasedSimpleKeyService.html">Neos\Flow\Security\Cryptography\FileBasedSimpleKeyService</a></li>
@@ -1308,6 +1306,8 @@
 				<li><a href="class-Neos.Flow.Cli.DescriptionAwareCommandControllerInterface.html">Neos\Flow\Cli\DescriptionAwareCommandControllerInterface</a></li>
 				<li><a href="class-Neos.Flow.Core.RequestHandlerInterface.html">Neos\Flow\Core\RequestHandlerInterface</a></li>
 				<li><a href="class-Neos.Flow.Error.ExceptionHandlerInterface.html">Neos\Flow\Error\ExceptionHandlerInterface</a></li>
+				<li><a href="class-Neos.Flow.Error.WithHttpStatusInterface.html">Neos\Flow\Error\WithHttpStatusInterface</a></li>
+				<li><a href="class-Neos.Flow.Error.WithReferenceCodeInterface.html">Neos\Flow\Error\WithReferenceCodeInterface</a></li>
 				<li><a href="class-Neos.Flow.Http.Client.RequestEngineInterface.html">Neos\Flow\Http\Client\RequestEngineInterface</a></li>
 				<li><a href="class-Neos.Flow.Http.Component.ComponentInterface.html">Neos\Flow\Http\Component\ComponentInterface</a></li>
 				<li><a href="class-Neos.Flow.Http.HttpRequestHandlerInterface.html">Neos\Flow\Http\HttpRequestHandlerInterface</a></li>
@@ -2293,6 +2293,27 @@ TODO: Make private after deprecation period</p><br>
 						<td class="name"><code><a href="class-Neos.Flow.Log.LoggerInterface.html#_logException">logException()</a></code></td>
 						<td>
 										This functionality is separated to the \Neos\Flow\Log\ThrowableStorageInterface in Flow. Change your code to use <code>logThrowable</code>.<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html">Neos\Flow\Security\Authentication\AuthenticationManagerInterface</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html#_getTokens">getTokens()</a></code></td>
+						<td>
+										Use the TokenAndProviderFactory<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html">Neos\Flow\Security\Authentication\AuthenticationManagerInterface</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html#_getProviders">getProviders()</a></code></td>
+						<td>
+										Use the TokenAndProviderFactory<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html">Neos\Flow\Security\Authentication\AuthenticationManagerInterface</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html#_setSecurityContext">setSecurityContext()</a></code></td>
+						<td>
+										Just get it injected<br>
 						</td>
 					</tr>
 				</table>
