@@ -669,10 +669,6 @@
 						<a href="namespace-Neos.Neos.Service.Mapping.html">
 							Mapping						</a>
 							</li>
-					<li>
-						<a href="namespace-Neos.Neos.Service.View.html">
-							View						</a>
-							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.Neos.Setup.html">
@@ -832,7 +828,7 @@
 </span></span><span id="12" class="l"><span class="php-comment"> */</span>
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
-</span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Flow\<span class="php-keyword2">Log</span>\SystemLoggerInterface;
+</span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Flow\<span class="php-keyword2">Log</span>\PsrSystemLoggerInterface;
 </span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Routing\DynamicRoutePart;
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Security\Context;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Neos\Domain\Repository\DomainRepository;
@@ -855,7 +851,7 @@
 </span><span id="35" class="l">
 </span><span id="36" class="l">    <span class="php-comment">/**
 </span></span><span id="37" class="l"><span class="php-comment">     * @Flow\Inject
-</span></span><span id="38" class="l"><span class="php-comment">     * @var SystemLoggerInterface
+</span></span><span id="38" class="l"><span class="php-comment">     * @var PsrSystemLoggerInterface
 </span></span><span id="39" class="l"><span class="php-comment">     */</span>
 </span><span id="40" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$systemLogger</span>;
 </span><span id="41" class="l">
@@ -948,7 +944,7 @@
 </span><span id="128" class="l">                <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;convertRequestPathToNode(<span class="php-var">$requestPath</span>);
 </span><span id="129" class="l">            });
 </span><span id="130" class="l">        } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$exception</span>) {
-</span><span id="131" class="l">            <span class="php-var">$this</span>-&gt;systemLogger-&gt;<span class="php-keyword2">log</span>(<span class="php-quote">'FrontendNodeRoutePartHandler matchValue(): '</span> . <span class="php-var">$exception</span>-&gt;getMessage(), LOG_DEBUG);
+</span><span id="131" class="l">            <span class="php-var">$this</span>-&gt;systemLogger-&gt;debug(<span class="php-quote">'FrontendNodeRoutePartHandler matchValue(): '</span> . <span class="php-var">$exception</span>-&gt;getMessage());
 </span><span id="132" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$requestPath</span> === <span class="php-quote">''</span>) {
 </span><span id="133" class="l">                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\NoHomepageException(<span class="php-quote">'Homepage could not be loaded. Probably you haven\'t imported a site yet'</span>, <span class="php-num">1346950755</span>, <span class="php-var">$exception</span>);
 </span><span id="134" class="l">            }
@@ -1457,6 +1453,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?c99bb8476f4fa885ba22e1daefa628433156b9a0"></script>
+<script src="elementlist.js?330bbfa536568e2c304e8e171703ed1a626f62ad"></script>
 </body>
 </html>
