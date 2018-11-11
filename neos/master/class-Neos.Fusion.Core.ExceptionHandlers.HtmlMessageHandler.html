@@ -846,7 +846,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Fusion.html">Fusion</a>\<a href="namespace-Neos.Fusion.Core.html">Core</a>\<a href="namespace-Neos.Fusion.Core.ExceptionHandlers.html">ExceptionHandlers</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#17-111" title="Go to source code">Neos.Fusion/Classes/Core/ExceptionHandlers/HtmlMessageHandler.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#18-133" title="Go to source code">Neos.Fusion/Classes/Core/ExceptionHandlers/HtmlMessageHandler.php</a>
 		<br>
 	</div>
 
@@ -855,6 +855,74 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#40-46" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectThrowableStorage" id="_injectThrowableStorage">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectThrowableStorage">#</a>
+			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#48-54" title="Go to source code">injectThrowableStorage</a>( <span>Neos\Flow\Log\ThrowableStorageInterface <var>$throwableStorage</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$throwableStorage</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
@@ -866,7 +934,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#35-41" title="Go to source code">__construct</a>( <span>Neos\Fusion\Core\ExceptionHandlers\bool <var>$renderTechnicalDetails</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#56-62" title="Go to source code">__construct</a>( <span>Neos\Fusion\Core\ExceptionHandlers\bool <var>$renderTechnicalDetails</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				
@@ -900,7 +968,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handle">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#43-71" title="Go to source code">handle</a>( <span>string <var>$fusionPath</var></span>, <span>Exception <var>$exception</var></span>, <span>integer <var>$referenceCode</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#64-93" title="Go to source code">handle</a>( <span>string <var>$fusionPath</var></span>, <span>Exception <var>$exception</var></span>, <span>integer <var>$referenceCode</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders the exception in HTML for display</p>
@@ -942,7 +1010,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatErrorCodeMessage">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#73-83" title="Go to source code">formatErrorCodeMessage</a>( <span>integer <var>$referenceCode</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#95-105" title="Go to source code">formatErrorCodeMessage</a>( <span>integer <var>$referenceCode</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders a message depicting the user where to find further information
@@ -982,7 +1050,7 @@ for the given reference code.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatFusionPath">#</a>
-			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#85-110" title="Go to source code">formatFusionPath</a>( <span>string <var>$fusionPath</var></span> )</code>
+			<code><a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#107-132" title="Go to source code">formatFusionPath</a>( <span>string <var>$fusionPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Renders an indented multi-line stack-trace for the given Fusion path.</p>
@@ -1047,14 +1115,14 @@ for the given reference code.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
-				protected  
-				Neos\Flow\Log\SystemLoggerInterface
+				private  
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#22-26" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#23-26" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1063,14 +1131,36 @@ for the given reference code.</p>
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="throwableStorage" id="$throwableStorage">
+			<td class="attributes"><code>
+				private  
+				Neos\Flow\Log\ThrowableStorageInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#28-31" title="Go to source code"><var>$throwableStorage</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$throwableStorage" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1082,7 +1172,7 @@ for the given reference code.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#28-33" title="Go to source code"><var>$renderTechnicalDetails</var></a>
+					<a href="source-class-Neos.Fusion.Core.ExceptionHandlers.HtmlMessageHandler.html#33-38" title="Go to source code"><var>$renderTechnicalDetails</var></a>
 
 				<div class="description short">
 					<p>Whether or not to render technical details (i.e. the Fusion stacktrace) in the exception message</p>
@@ -1122,6 +1212,6 @@ for the given reference code.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?a401af029cd8cdb8df596615bb7564db9a7ea83c"></script>
+<script src="elementlist.js?8b8f9861156e41547e436b6b349680f837388189"></script>
 </body>
 </html>

@@ -830,7 +830,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#26-256" title="Go to source code">Neos.Neos/Classes/Service/Mapping/NodePropertyConverterService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#28-280" title="Go to source code">Neos.Neos/Classes/Service/Mapping/NodePropertyConverterService.php</a>
 		<br>
 	</div>
 
@@ -839,6 +839,74 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#69-75" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectThrowableStorage" id="_injectThrowableStorage">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectThrowableStorage">#</a>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#77-83" title="Go to source code">injectThrowableStorage</a>( <span>Neos\Flow\Log\ThrowableStorageInterface <var>$throwableStorage</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$throwableStorage</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getProperty" id="_getProperty">
 
 			<td class="attributes"><code>
@@ -850,7 +918,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperty">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#63-99" title="Go to source code">getProperty</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#85-123" title="Go to source code">getProperty</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a single property reduced to a simple type (no objects) representation</p>
@@ -890,7 +958,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertiesJson">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#101-110" title="Go to source code">getPropertiesJson</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#125-134" title="Go to source code">getPropertiesJson</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Get all properties as JSON encoded string representation</p>
@@ -928,7 +996,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertiesArray">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#112-131" title="Go to source code">getPropertiesArray</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#136-155" title="Go to source code">getPropertiesArray</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Get all properties reduced to simple type (no objects) representations in an array</p>
@@ -966,7 +1034,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertValue">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#133-167" title="Go to source code">convertValue</a>( <span>mixed <var>$propertyValue</var></span>, <span>string <var>$dataType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#157-191" title="Go to source code">convertValue</a>( <span>mixed <var>$propertyValue</var></span>, <span>string <var>$dataType</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert the given value to a simple type or an array of simple types.</p>
@@ -1010,7 +1078,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultValueForProperty">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#169-186" title="Go to source code">getDefaultValueForProperty</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#193-210" title="Go to source code">getDefaultValueForProperty</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Tries to find a default value for the given property trying:
@@ -1054,7 +1122,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createConfiguration">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#188-220" title="Go to source code">createConfiguration</a>( <span>string <var>$dataType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#212-244" title="Go to source code">createConfiguration</a>( <span>string <var>$dataType</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a property mapping configuration for the given dataType to convert a Node property value from the given dataType to a simple type.</p>
@@ -1092,7 +1160,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setTypeConverterForType">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#222-238" title="Go to source code">setTypeConverterForType</a>( <span>Neos\Flow\Property\PropertyMappingConfiguration <var>$propertyMappingConfiguration</var></span>, <span>string <var>$dataType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#246-262" title="Go to source code">setTypeConverterForType</a>( <span>Neos\Flow\Property\PropertyMappingConfiguration <var>$propertyMappingConfiguration</var></span>, <span>string <var>$dataType</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1132,7 +1200,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setTypeConverterOptionsForType">#</a>
-			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#240-255" title="Go to source code">setTypeConverterOptionsForType</a>( <span>Neos\Flow\Property\PropertyMappingConfiguration <var>$propertyMappingConfiguration</var></span>, <span>string <var>$typeConverterClass</var></span>, <span>string <var>$dataType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#264-279" title="Go to source code">setTypeConverterOptionsForType</a>( <span>Neos\Flow\Property\PropertyMappingConfiguration <var>$propertyMappingConfiguration</var></span>, <span>string <var>$typeConverterClass</var></span>, <span>string <var>$dataType</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1182,7 +1250,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#33-37" title="Go to source code"><var>$typesConfiguration</var></a>
+					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#35-39" title="Go to source code"><var>$typesConfiguration</var></a>
 
 				<div class="description short">
 					
@@ -1211,7 +1279,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#39-43" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#41-45" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1239,7 +1307,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#45-49" title="Go to source code"><var>$propertyMapper</var></a>
+					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#47-51" title="Go to source code"><var>$propertyMapper</var></a>
 
 				<div class="description short">
 					
@@ -1267,7 +1335,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#51-55" title="Go to source code"><var>$generatedPropertyMappingConfigurations</var></a>
+					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#53-57" title="Go to source code"><var>$generatedPropertyMappingConfigurations</var></a>
 
 				<div class="description short">
 					
@@ -1288,14 +1356,14 @@
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
+		<tr data-order="logger" id="$logger">
 			<td class="attributes"><code>
-				protected  
-				Neos\Flow\Log\SystemLoggerInterface
+				private  
+				Psr\Log\LoggerInterface
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#57-61" title="Go to source code"><var>$systemLogger</var></a>
+					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#59-62" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1304,14 +1372,36 @@
 				<div class="description detailed hidden">
 					
 
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
+					<a href="#$logger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="throwableStorage" id="$throwableStorage">
+			<td class="attributes"><code>
+				private  
+				Neos\Flow\Log\ThrowableStorageInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Service.Mapping.NodePropertyConverterService.html#64-67" title="Go to source code"><var>$throwableStorage</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$throwableStorage" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1332,6 +1422,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?a401af029cd8cdb8df596615bb7564db9a7ea83c"></script>
+<script src="elementlist.js?8b8f9861156e41547e436b6b349680f837388189"></script>
 </body>
 </html>

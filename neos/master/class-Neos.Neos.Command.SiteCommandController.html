@@ -844,7 +844,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Command.SiteCommandController.html#29-399" title="Go to source code">Neos.Neos/Classes/Command/SiteCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Command.SiteCommandController.html#31-423" title="Go to source code">Neos.Neos/Classes/Command/SiteCommandController.php</a>
 		<br>
 	</div>
 
@@ -853,6 +853,74 @@ Neos\Flow\Cli\CommandController
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="injectLogger" id="_injectLogger">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectLogger">#</a>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#102-108" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$logger</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectThrowableStorage" id="_injectThrowableStorage">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectThrowableStorage">#</a>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#110-116" title="Go to source code">injectThrowableStorage</a>( <span>Neos\Flow\Log\ThrowableStorageInterface <var>$throwableStorage</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$throwableStorage</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="createCommand" id="_createCommand">
 
 			<td class="attributes"><code>
@@ -864,7 +932,7 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#96-165" title="Go to source code">createCommand</a>( <span>string <var>$name</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$nodeType</var> = <span class="php-quote">'Neos.NodeTypes:Page'</span></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$inactive</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#118-187" title="Go to source code">createCommand</a>( <span>string <var>$name</var></span>, <span>string <var>$packageKey</var></span>, <span>string <var>$nodeType</var> = <span class="php-quote">'Neos.NodeTypes:Page'</span></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$inactive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new site</p>
@@ -917,7 +985,7 @@ If a node name is given it has to be unique for the setup.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_importCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#167-217" title="Go to source code">importCommand</a>( <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#189-241" title="Go to source code">importCommand</a>( <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Import sites content</p>
@@ -962,7 +1030,7 @@ directory of the given package (Resources/Private/Content/Sites.xml).</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_exportCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#219-270" title="Go to source code">exportCommand</a>( <span>string <var>$siteNode</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$tidy</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#243-294" title="Go to source code">exportCommand</a>( <span>string <var>$siteNode</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$tidy</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$packageKey</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Export sites content (e.g. site:export --package-key "Neos.Demo")</p>
@@ -1015,7 +1083,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pruneCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#272-291" title="Go to source code">pruneCommand</a>( <span>string <var>$siteNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#296-315" title="Go to source code">pruneCommand</a>( <span>string <var>$siteNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove site with content and related data (with globbing)</p>
@@ -1051,7 +1119,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#293-338" title="Go to source code">listCommand</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#317-362" title="Go to source code">listCommand</a>( )</code>
 
 			<div class="description short">
 				<p>List available sites</p>
@@ -1080,7 +1148,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#340-360" title="Go to source code">activateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#364-384" title="Go to source code">activateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Activate a site (with globbing)</p>
@@ -1116,7 +1184,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivateCommand">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#362-382" title="Go to source code">deactivateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#386-406" title="Go to source code">deactivateCommand</a>( <span>string <var>$siteNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Deactivate a site (with globbing)</p>
@@ -1152,7 +1220,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findSitesByNodeNamePattern">#</a>
-			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#384-398" title="Go to source code">findSitesByNodeNamePattern</a>( <span>string <var>$siteNodePattern</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Command.SiteCommandController.html#408-422" title="Go to source code">findSitesByNodeNamePattern</a>( <span>string <var>$siteNodePattern</var></span> )</code>
 
 			<div class="description short">
 				<p>Find all sites the match the given site-node-name-pattern with support for globbing</p>
@@ -1202,7 +1270,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#36-40" title="Go to source code"><var>$siteImportService</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#38-42" title="Go to source code"><var>$siteImportService</var></a>
 
 				<div class="description short">
 					
@@ -1230,7 +1298,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#42-46" title="Go to source code"><var>$siteExportService</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#44-48" title="Go to source code"><var>$siteExportService</var></a>
 
 				<div class="description short">
 					
@@ -1258,7 +1326,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#48-52" title="Go to source code"><var>$siteRepository</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#50-54" title="Go to source code"><var>$siteRepository</var></a>
 
 				<div class="description short">
 					
@@ -1286,7 +1354,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#54-58" title="Go to source code"><var>$siteService</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#56-60" title="Go to source code"><var>$siteService</var></a>
 
 				<div class="description short">
 					
@@ -1314,7 +1382,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#60-64" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#62-66" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1335,34 +1403,6 @@ assets will be embedded into the XML in base64 encoded form.</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="systemLogger" id="$systemLogger">
-			<td class="attributes"><code>
-				protected  
-				Neos\Flow\Log\SystemLoggerInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#66-70" title="Go to source code"><var>$systemLogger</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$systemLogger" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="nodeContextFactory" id="$nodeContextFactory">
 			<td class="attributes"><code>
 				protected  
@@ -1370,7 +1410,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#72-76" title="Go to source code"><var>$nodeContextFactory</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#68-72" title="Go to source code"><var>$nodeContextFactory</var></a>
 
 				<div class="description short">
 					
@@ -1398,7 +1438,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#78-82" title="Go to source code"><var>$nodeTypeManager</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#74-78" title="Go to source code"><var>$nodeTypeManager</var></a>
 
 				<div class="description short">
 					
@@ -1426,7 +1466,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#84-88" title="Go to source code"><var>$nodeService</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#80-84" title="Go to source code"><var>$nodeService</var></a>
 
 				<div class="description short">
 					
@@ -1454,7 +1494,7 @@ assets will be embedded into the XML in base64 encoded form.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#90-94" title="Go to source code"><var>$persistenceManager</var></a>
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#86-90" title="Go to source code"><var>$persistenceManager</var></a>
 
 				<div class="description short">
 					
@@ -1475,6 +1515,56 @@ assets will be embedded into the XML in base64 encoded form.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="logger" id="$logger">
+			<td class="attributes"><code>
+				private  
+				Psr\Log\LoggerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#92-95" title="Go to source code"><var>$logger</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$logger" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="throwableStorage" id="$throwableStorage">
+			<td class="attributes"><code>
+				private  
+				Neos\Flow\Log\ThrowableStorageInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Command.SiteCommandController.html#97-100" title="Go to source code"><var>$throwableStorage</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$throwableStorage" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -1491,6 +1581,6 @@ assets will be embedded into the XML in base64 encoded form.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?a401af029cd8cdb8df596615bb7564db9a7ea83c"></script>
+<script src="elementlist.js?8b8f9861156e41547e436b6b349680f837388189"></script>
 </body>
 </html>
