@@ -844,7 +844,7 @@ should be defined in a NodeTypes.yaml file.</p>
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#24-690" title="Go to source code">Neos.ContentRepository/Classes/Domain/Model/NodeType.php</a>
+			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#24-705" title="Go to source code">Neos.ContentRepository/Classes/Domain/Model/NodeType.php</a>
 		<br>
 	</div>
 
@@ -1256,7 +1256,7 @@ of this node type.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isOfType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#309-324" title="Go to source code">isOfType</a>( <span>string <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#309-339" title="Go to source code">isOfType</a>( <span>string <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>If this node type or any of the direct or indirect super types
@@ -1266,6 +1266,19 @@ has the given name.</p>
 			<div class="description detailed hidden">
 				<p>If this node type or any of the direct or indirect super types
 has the given name.</p>
+
+<p>Note: A supertype that is set to false after having been assigned, is still
+returning true here. Fixing that potentially breaks sites in non-obvious ways,
+so we did not fix that. See these links for details:</p>
+
+<ul>
+<li>https://github.com/neos/neos-development-collection/issues/1983</li>
+<li>https://github.com/neos/neos-development-collection/pull/2139</li>
+<li>https://github.com/neos/neos-development-collection/pull/2145</li>
+<li>https://github.com/neos/neos-development-collection/pull/2217</li>
+<li>https://github.com/neos/neos-development-collection/pull/2265</li>
+<li>https://discuss.neos.io/t/breaking-bugfixes/3882</li>
+</ul>
 
 
 					<h4>Parameters</h4>
@@ -1299,7 +1312,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLocalConfiguration">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#326-336" title="Go to source code">getLocalConfiguration</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#341-351" title="Go to source code">getLocalConfiguration</a>( )</code>
 
 			<div class="description short">
 				<p>Get the local configuration of the node type. Should only be used internally.</p>
@@ -1334,7 +1347,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFullConfiguration">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#338-349" title="Go to source code">getFullConfiguration</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#353-364" title="Go to source code">getFullConfiguration</a>( )</code>
 
 			<div class="description short">
 				<p>Get the full configuration of the node type. Should only be used internally.</p>
@@ -1369,7 +1382,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasConfiguration">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#351-361" title="Go to source code">hasConfiguration</a>( <span>string <var>$configurationPath</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#366-376" title="Go to source code">hasConfiguration</a>( <span>string <var>$configurationPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the configuration of this node type contains a setting for the given $configurationPath</p>
@@ -1410,7 +1423,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfiguration">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#363-374" title="Go to source code">getConfiguration</a>( <span>string <var>$configurationPath</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#378-389" title="Go to source code">getConfiguration</a>( <span>string <var>$configurationPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the configuration option with the specified $configurationPath or NULL if it does not exist</p>
@@ -1451,7 +1464,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLabel">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#376-386" title="Go to source code">getLabel</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#391-401" title="Go to source code">getLabel</a>( )</code>
 
 			<div class="description short">
 				<p>Get the human-readable label of this node type</p>
@@ -1487,7 +1500,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOptions">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#388-398" title="Go to source code">getOptions</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#403-413" title="Go to source code">getOptions</a>( )</code>
 
 			<div class="description short">
 				<p>Get additional options (if specified)</p>
@@ -1523,7 +1536,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeLabelGenerator">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#400-423" title="Go to source code">getNodeLabelGenerator</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#415-438" title="Go to source code">getNodeLabelGenerator</a>( )</code>
 
 			<div class="description short">
 				<p>Return the node label generator class for the given node</p>
@@ -1556,7 +1569,7 @@ has the given name.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperties">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#425-437" title="Go to source code">getProperties</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#440-452" title="Go to source code">getProperties</a>( )</code>
 
 			<div class="description short">
 				<p>Return the array with the defined properties. The key is the property name,
@@ -1596,7 +1609,7 @@ property configuration looks like.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#439-451" title="Go to source code">getPropertyType</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#454-466" title="Go to source code">getPropertyType</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the configured type of the specified property</p>
@@ -1634,7 +1647,7 @@ property configuration looks like.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefaultValuesForProperties">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#453-483" title="Go to source code">getDefaultValuesForProperties</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#468-498" title="Go to source code">getDefaultValuesForProperties</a>( )</code>
 
 			<div class="description short">
 				<p>Return an array with the defined default values for each property, if any.</p>
@@ -1672,7 +1685,7 @@ property configuration looks like.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAutoCreatedChildNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#485-506" title="Go to source code">getAutoCreatedChildNodes</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#500-521" title="Go to source code">getAutoCreatedChildNodes</a>( )</code>
 
 			<div class="description short">
 				<p>Return an array with child nodes which should be automatically created</p>
@@ -1708,7 +1721,7 @@ property configuration looks like.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsChildNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#508-522" title="Go to source code">allowsChildNodeType</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#523-537" title="Go to source code">allowsChildNodeType</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given NodeType is acceptable as sub-node with the configured constraints,
@@ -1752,7 +1765,7 @@ the correct result if called on NON-AUTO-CREATED nodes!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_allowsGrandchildNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#524-552" title="Go to source code">allowsGrandchildNodeType</a>( <span>string <var>$childNodeName</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#539-567" title="Go to source code">allowsGrandchildNodeType</a>( <span>string <var>$childNodeName</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given $nodeType is allowed as a childNode of the given $childNodeName
@@ -1800,7 +1813,7 @@ the correct result if called on NON-AUTO-CREATED nodes!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeTypeAllowedByConstraints">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#554-586" title="Go to source code">isNodeTypeAllowedByConstraints</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>array <var>$constraints</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#569-601" title="Go to source code">isNodeTypeAllowedByConstraints</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>array <var>$constraints</var></span> )</code>
 
 			<div class="description short">
 				<p>Internal method to check whether the passed-in $nodeType is allowed by the $constraints array.</p>
@@ -1848,7 +1861,7 @@ it will also take affect on the inherited node types. The closest constrained su
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeTypeAllowedByDirectConstraints">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#588-608" title="Go to source code">isNodeTypeAllowedByDirectConstraints</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>array <var>$constraints</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#603-623" title="Go to source code">isNodeTypeAllowedByDirectConstraints</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>array <var>$constraints</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1888,7 +1901,7 @@ it will also take affect on the inherited node types. The closest constrained su
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeTypeAllowedByInheritanceConstraints">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#610-650" title="Go to source code">isNodeTypeAllowedByInheritanceConstraints</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>array <var>$constraints</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#625-665" title="Go to source code">isNodeTypeAllowedByInheritanceConstraints</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>array <var>$constraints</var></span> )</code>
 
 			<div class="description short">
 				<p>This method loops over the constraints and finds node types that the given node type inherits from. For all
@@ -1934,7 +1947,7 @@ the distance to choose which one wins (lowest). If no result is found the node t
 
 			<td class="name"><div>
 			<a class="anchor" href="#_traverseSuperTypes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#652-678" title="Go to source code">traverseSuperTypes</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$currentNodeType</var></span>, <span>string <var>$constraintNodeTypeName</var></span>, <span>integer <var>$distance</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#667-693" title="Go to source code">traverseSuperTypes</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$currentNodeType</var></span>, <span>string <var>$constraintNodeTypeName</var></span>, <span>integer <var>$distance</var></span> )</code>
 
 			<div class="description short">
 				<p>This method traverses the given node type to find the first super type that matches the constraint node type.
@@ -1982,7 +1995,7 @@ that such hierarchies should be avoided.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#680-689" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeType.html#695-704" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Alias for getName().</p>
