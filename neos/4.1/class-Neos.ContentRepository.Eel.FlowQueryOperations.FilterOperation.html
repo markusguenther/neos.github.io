@@ -842,6 +842,19 @@ work on node types instead of PHP object types, so that::</p>
 <p>will in fact use <code>isOfType()</code> on the <code>NodeType</code> of context elements to
 filter. This filter allow also to filter the current context by a given
 node. Anything else remains unchanged.</p>
+
+<p>Note: A supertype that is set to false after having been assigned, is still
+returning true here. Fixing that potentially breaks sites in non-obvious ways,
+so we did not fix that. See these links for details:</p>
+
+<ul>
+<li>https://github.com/neos/neos-development-collection/issues/1983</li>
+<li>https://github.com/neos/neos-development-collection/pull/2139</li>
+<li>https://github.com/neos/neos-development-collection/pull/2145</li>
+<li>https://github.com/neos/neos-development-collection/pull/2217</li>
+<li>https://github.com/neos/neos-development-collection/pull/2265</li>
+<li>https://discuss.neos.io/t/breaking-bugfixes/3882</li>
+</ul>
 	</div>
 
 	<dl class="tree well">
@@ -871,7 +884,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.ContentRepository.html">ContentRepository</a>\<a href="namespace-Neos.ContentRepository.Eel.html">Eel</a>\<a href="namespace-Neos.ContentRepository.Eel.FlowQueryOperations.html">FlowQueryOperations</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#20-146" title="Go to source code">Neos.ContentRepository/Classes/Eel/FlowQueryOperations/FilterOperation.php</a>
+			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#19-156" title="Go to source code">Neos.ContentRepository/Classes/Eel/FlowQueryOperations/FilterOperation.php</a>
 		<br>
 	</div>
 
@@ -891,7 +904,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canEvaluate">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#43-52" title="Go to source code">canEvaluate</a>( <span>array <var>$context</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#53-62" title="Go to source code">canEvaluate</a>( <span>array <var>$context</var></span> )</code>
 
 			<div class="description short">
 				
@@ -929,7 +942,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#54-80" title="Go to source code">evaluate</a>( <span>Neos\Eel\FlowQuery\FlowQuery <var>$flowQuery</var></span>, <span>array <var>$arguments</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#64-90" title="Go to source code">evaluate</a>( <span>Neos\Eel\FlowQuery\FlowQuery <var>$flowQuery</var></span>, <span>array <var>$arguments</var></span> )</code>
 
 			<div class="description short">
 				
@@ -965,7 +978,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesPropertyNameFilter">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#82-92" title="Go to source code">matchesPropertyNameFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyNameFilter</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#92-102" title="Go to source code">matchesPropertyNameFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyNameFilter</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1005,7 +1018,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_matchesIdentifierFilter">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#94-104" title="Go to source code">matchesIdentifierFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#104-114" title="Go to source code">matchesIdentifierFilter</a>( <span>object <var>$element</var></span>, <span>string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1045,7 +1058,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyPath">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#106-120" title="Go to source code">getPropertyPath</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyPath</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#116-130" title="Go to source code">getPropertyPath</a>( <span>object <var>$element</var></span>, <span>string <var>$propertyPath</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1085,7 +1098,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluateOperator">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#122-145" title="Go to source code">evaluateOperator</a>( <span>mixed <var>$value</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$operand</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#132-155" title="Go to source code">evaluateOperator</a>( <span>mixed <var>$value</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$operand</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1139,7 +1152,7 @@ Neos\Eel\FlowQuery\Operations\Object\FilterOperation
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#36-41" title="Go to source code"><var>$priority</var></a>
+					<a href="source-class-Neos.ContentRepository.Eel.FlowQueryOperations.FilterOperation.html#46-51" title="Go to source code"><var>$priority</var></a>
 
 				<div class="description short">
 					
