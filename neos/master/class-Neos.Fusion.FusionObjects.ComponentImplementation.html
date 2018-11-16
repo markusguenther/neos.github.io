@@ -902,7 +902,7 @@ afterwards the <code>renderer</code> is evaluated</p>
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#15-61" title="Go to source code">Neos.Fusion/Classes/FusionObjects/ComponentImplementation.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#15-91" title="Go to source code">Neos.Fusion/Classes/FusionObjects/ComponentImplementation.php</a>
 		<br>
 	</div>
 
@@ -915,14 +915,14 @@ afterwards the <code>renderer</code> is evaluated</p>
 
 			<td class="attributes"><code>
 				 public 
-				|string
+				mixed
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_evaluate">#</a>
-			<code><a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#34-60" title="Go to source code">evaluate</a>( )</code>
+			<code><a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#34-46" title="Go to source code">evaluate</a>( )</code>
 
 			<div class="description short">
 				<p>Evaluate the fusion-keys and transfer the result into the context as <code>props</code>
@@ -937,13 +937,122 @@ afterwards evaluate the <code>renderer</code> with this context</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						|string
+						mixed
 					</div>
 
 
 
 					<h4>Overrides</h4>
 					<div class="list"><code><a href="class-Neos.Fusion.FusionObjects.JoinImplementation.html#_evaluate">Neos\Fusion\FusionObjects\JoinImplementation::evaluate</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="prepare" id="_prepare">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_prepare">#</a>
+			<code><a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#48-58" title="Go to source code">prepare</a>( <span>array <var>$context</var></span> )</code>
+
+			<div class="description short">
+				<p>Prepare the context for the renderer</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Prepare the context for the renderer</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getProps" id="_getProps">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getProps">#</a>
+			<code><a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#60-77" title="Go to source code">getProps</a>( )</code>
+
+			<div class="description short">
+				<p>Calculate the component props</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Calculate the component props</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="render" id="_render">
+
+			<td class="attributes"><code>
+				 protected 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_render">#</a>
+			<code><a href="source-class-Neos.Fusion.FusionObjects.ComponentImplementation.html#78-90" title="Go to source code">render</a>( <span> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				<p>Evaluate the renderer with the give context and return</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Evaluate the renderer with the give context and return</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed
+					</div>
+
+
+
 
 			</div>
 			</div></td>
@@ -1050,6 +1159,6 @@ afterwards evaluate the <code>renderer</code> with this context</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?8b8f9861156e41547e436b6b349680f837388189"></script>
+<script src="elementlist.js?85bf4fd9c77be9062ea0d677229d9876806844b5"></script>
 </body>
 </html>
