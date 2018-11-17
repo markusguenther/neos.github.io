@@ -883,7 +883,7 @@
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.ResourceManagement.html">ResourceManagement</a>\<a href="namespace-Neos.Flow.ResourceManagement.Target.html">Target</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#29-431" title="Go to source code">Neos.Flow/Classes/ResourceManagement/Target/FileSystemTarget.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#31-463" title="Go to source code">Neos.Flow/Classes/ResourceManagement/Target/FileSystemTarget.php</a>
 		<br>
 	</div>
 
@@ -903,7 +903,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#116-126" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#118-128" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -939,7 +939,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectLogger">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#128-137" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#130-139" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the (system) logger based on PSR-3.</p>
@@ -973,7 +973,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#139-163" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#141-165" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes this resource publishing target</p>
@@ -1006,7 +1006,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#165-173" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#167-175" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of this target instance</p>
@@ -1030,6 +1030,42 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="checkAndRemovePackageSymlinks" id="_checkAndRemovePackageSymlinks">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_checkAndRemovePackageSymlinks">#</a>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#177-195" title="Go to source code">checkAndRemovePackageSymlinks</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.Storage.StorageInterface.html">Neos\Flow\ResourceManagement\Storage\StorageInterface</a></code> <var>$storage</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if the PackageStorage has been previously initialized with symlinks
+and clears them. Otherwise the original sources would be overwritten.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the PackageStorage has been previously initialized with symlinks
+and clears them. Otherwise the original sources would be overwritten.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$storage</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="publishCollection" id="_publishCollection">
 
 			<td class="attributes"><code>
@@ -1041,7 +1077,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishCollection">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#175-194" title="Go to source code">publishCollection</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">Neos\Flow\ResourceManagement\CollectionInterface</a></code> <var>$collection</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#197-218" title="Go to source code">publishCollection</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">Neos\Flow\ResourceManagement\CollectionInterface</a></code> <var>$collection</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the whole collection to this target</p>
@@ -1079,7 +1115,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishResource">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#196-212" title="Go to source code">publishResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span><code><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">Neos\Flow\ResourceManagement\CollectionInterface</a></code> <var>$collection</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#220-236" title="Go to source code">publishResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span><code><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">Neos\Flow\ResourceManagement\CollectionInterface</a></code> <var>$collection</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given persistent resource from the given storage</p>
@@ -1121,7 +1157,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_handleMissingData">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#214-224" title="Go to source code">handleMissingData</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html">Neos\Flow\ResourceManagement\ResourceMetaDataInterface</a></code> <var>$resource</var></span>, <span><code><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">Neos\Flow\ResourceManagement\CollectionInterface</a></code> <var>$collection</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#238-248" title="Go to source code">handleMissingData</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html">Neos\Flow\ResourceManagement\ResourceMetaDataInterface</a></code> <var>$resource</var></span>, <span><code><a href="class-Neos.Flow.ResourceManagement.CollectionInterface.html">Neos\Flow\ResourceManagement\CollectionInterface</a></code> <var>$collection</var></span> )</code>
 
 			<div class="description short">
 				<p>Handle missing data notification</p>
@@ -1157,7 +1193,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unpublishResource">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#226-241" title="Go to source code">unpublishResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#250-265" title="Go to source code">unpublishResource</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Unpublishes the given persistent resource</p>
@@ -1193,7 +1229,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicStaticResourceUri">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#243-252" title="Go to source code">getPublicStaticResourceUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#267-276" title="Go to source code">getPublicStaticResourceUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the web accessible URI pointing to the given static resource</p>
@@ -1233,7 +1269,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicPersistentResourceUri">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#254-264" title="Go to source code">getPublicPersistentResourceUri</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#278-288" title="Go to source code">getPublicPersistentResourceUri</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the web accessible URI pointing to the specified persistent resource</p>
@@ -1277,7 +1313,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_encodeRelativePathAndFilenameForUri">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#266-275" title="Go to source code">encodeRelativePathAndFilenameForUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#290-299" title="Go to source code">encodeRelativePathAndFilenameForUri</a>( <span>string <var>$relativePathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Applies rawurlencode() to all path segments of the given $relativePathAndFilename</p>
@@ -1315,7 +1351,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_publishFile">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#277-318" title="Go to source code">publishFile</a>( <span>resource <var>$sourceStream</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#301-350" title="Go to source code">publishFile</a>( <span>resource <var>$sourceStream</var></span>, <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Publishes the given source stream to this target, with the given relative path.</p>
@@ -1355,7 +1391,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unpublishFile">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#320-342" title="Go to source code">unpublishFile</a>( <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#352-374" title="Go to source code">unpublishFile</a>( <span>string <var>$relativeTargetPathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified target file from the public directory</p>
@@ -1391,7 +1427,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResourcesBaseUri">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#344-356" title="Go to source code">getResourcesBaseUri</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#376-388" title="Go to source code">getResourcesBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the resolved absolute base URI for resources of this target.</p>
@@ -1424,7 +1460,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_detectResourcesBaseUri">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#358-379" title="Go to source code">detectResourcesBaseUri</a>( )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#390-411" title="Go to source code">detectResourcesBaseUri</a>( )</code>
 
 			<div class="description short">
 				<p>Detects and returns the website's absolute base URI</p>
@@ -1461,7 +1497,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRelativePublicationPathAndFilename">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#381-405" title="Go to source code">getRelativePublicationPathAndFilename</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html">Neos\Flow\ResourceManagement\ResourceMetaDataInterface</a></code> <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#413-437" title="Go to source code">getRelativePublicationPathAndFilename</a>( <span><code><a href="class-Neos.Flow.ResourceManagement.ResourceMetaDataInterface.html">Neos\Flow\ResourceManagement\ResourceMetaDataInterface</a></code> <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Determines and returns the relative path and filename for the given Storage Object or PersistentResource. If the given
@@ -1506,7 +1542,7 @@ if no relative publication path was defined in the given object.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOption">#</a>
-			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#407-430" title="Go to source code">setOption</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#439-462" title="Go to source code">setOption</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Set an option value and return if it was set.</p>
@@ -1558,7 +1594,7 @@ if no relative publication path was defined in the given object.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#34-37" title="Go to source code"><var>$options</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#36-39" title="Go to source code"><var>$options</var></a>
 
 				<div class="description short">
 					
@@ -1583,7 +1619,7 @@ if no relative publication path was defined in the given object.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#39-44" title="Go to source code"><var>$name</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#41-46" title="Go to source code"><var>$name</var></a>
 
 				<div class="description short">
 					<p>Name which identifies this publishing target</p>
@@ -1608,7 +1644,7 @@ if no relative publication path was defined in the given object.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#46-51" title="Go to source code"><var>$path</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#48-53" title="Go to source code"><var>$path</var></a>
 
 				<div class="description short">
 					<p>The path (in a filesystem) where resources are published to</p>
@@ -1633,7 +1669,7 @@ if no relative publication path was defined in the given object.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#53-60" title="Go to source code"><var>$baseUri</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#55-62" title="Go to source code"><var>$baseUri</var></a>
 
 				<div class="description short">
 					<p>The configured publicly accessible web URI which points to the root path of this target.
@@ -1662,7 +1698,7 @@ If resources should be served from a different domain, make sure to specify an a
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#62-69" title="Go to source code"><var>$httpBaseUri</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#64-71" title="Go to source code"><var>$httpBaseUri</var></a>
 
 				<div class="description short">
 					<p>The configured Neos.Flow.http.baseUri to use as fallback if no absolute baseUri is configured
@@ -1693,7 +1729,7 @@ and if it can't be determined from the current request (e.g. in CLI mode)</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#71-77" title="Go to source code"><var>$absoluteBaseUri</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#73-79" title="Go to source code"><var>$absoluteBaseUri</var></a>
 
 				<div class="description short">
 					<p>The resolved absolute web URI for this target. If $baseUri was absolute this will be the same,
@@ -1720,7 +1756,7 @@ otherwise the request base uri will be prepended.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#79-84" title="Go to source code"><var>$subdivideHashPathSegment</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#81-86" title="Go to source code"><var>$subdivideHashPathSegment</var></a>
 
 				<div class="description short">
 					<p>If the generated URI path segment containing the sha1 should be divided into multiple segments</p>
@@ -1745,7 +1781,7 @@ otherwise the request base uri will be prepended.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#86-91" title="Go to source code"><var>$extensionBlacklist</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#88-93" title="Go to source code"><var>$extensionBlacklist</var></a>
 
 				<div class="description short">
 					<p>A list of extensions that are blacklisted and must not be published by this target.</p>
@@ -1770,7 +1806,7 @@ otherwise the request base uri will be prepended.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#93-97" title="Go to source code"><var>$resourceRepository</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#95-99" title="Go to source code"><var>$resourceRepository</var></a>
 
 				<div class="description short">
 					
@@ -1798,7 +1834,7 @@ otherwise the request base uri will be prepended.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#99-103" title="Go to source code"><var>$bootstrap</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#101-105" title="Go to source code"><var>$bootstrap</var></a>
 
 				<div class="description short">
 					
@@ -1826,7 +1862,7 @@ otherwise the request base uri will be prepended.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#105-108" title="Go to source code"><var>$logger</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#107-110" title="Go to source code"><var>$logger</var></a>
 
 				<div class="description short">
 					
@@ -1851,7 +1887,7 @@ otherwise the request base uri will be prepended.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#110-114" title="Go to source code"><var>$messageCollector</var></a>
+					<a href="source-class-Neos.Flow.ResourceManagement.Target.FileSystemTarget.html#112-116" title="Go to source code"><var>$messageCollector</var></a>
 
 				<div class="description short">
 					
@@ -1888,6 +1924,6 @@ otherwise the request base uri will be prepended.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?3c786082ccc6cc5ba4b6734664afc3afbf1c73be"></script>
+<script src="elementlist.js?cf311500835d1dfbcb132e2dd1d7c9cc2d519ca4"></script>
 </body>
 </html>
