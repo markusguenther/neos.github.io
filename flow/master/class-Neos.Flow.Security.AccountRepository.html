@@ -889,7 +889,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Security.AccountRepository.html#20-97" title="Go to source code">Neos.Flow/Classes/Security/AccountRepository.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Security.AccountRepository.html#20-99" title="Go to source code">Neos.Flow/Classes/Security/AccountRepository.php</a>
 		<br>
 	</div>
 
@@ -909,7 +909,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Neos.Flow.Security.AccountRepository.html#43-56" title="Go to source code">remove</a>( <span>object <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.AccountRepository.html#45-58" title="Go to source code">remove</a>( <span>object <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes an account</p>
@@ -949,7 +949,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByAccountIdentifierAndAuthenticationProviderName">#</a>
-			<code><a href="source-class-Neos.Flow.Security.AccountRepository.html#58-74" title="Go to source code">findByAccountIdentifierAndAuthenticationProviderName</a>( <span>string <var>$accountIdentifier</var></span>, <span>string <var>$authenticationProviderName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.AccountRepository.html#60-76" title="Go to source code">findByAccountIdentifierAndAuthenticationProviderName</a>( <span>string <var>$accountIdentifier</var></span>, <span>string <var>$authenticationProviderName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the account for a specific authentication provider with the given identifier</p>
@@ -989,7 +989,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findActiveByAccountIdentifierAndAuthenticationProviderName">#</a>
-			<code><a href="source-class-Neos.Flow.Security.AccountRepository.html#76-96" title="Go to source code">findActiveByAccountIdentifierAndAuthenticationProviderName</a>( <span>string <var>$accountIdentifier</var></span>, <span>string <var>$authenticationProviderName</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.AccountRepository.html#78-98" title="Go to source code">findActiveByAccountIdentifierAndAuthenticationProviderName</a>( <span>string <var>$accountIdentifier</var></span>, <span>string <var>$authenticationProviderName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the account for a specific authentication provider with the given identifier if it's not expired</p>
@@ -1105,21 +1105,21 @@
 				</div>
 			</td>
 		</tr>
-		<tr data-order="sessionManager" id="$sessionManager">
+		<tr data-order="securityContext" id="$securityContext">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Session.SessionManagerInterface.html">Neos\Flow\Session\SessionManagerInterface</a></code>
+				Neos\Flow\Security\Context
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Security.AccountRepository.html#37-41" title="Go to source code"><var>$sessionManager</var></a>
+					<a href="source-class-Neos.Flow.Security.AccountRepository.html#37-43" title="Go to source code"><var>$securityContext</var></a>
 
 				<div class="description short">
-					
+					<p>Note: This is not required to be "the" SecurityContext of the current session, but any SecurityContext actually.</p>
 				</div>
 
 				<div class="description detailed hidden">
-					
+					<p>Note: This is not required to be "the" SecurityContext of the current session, but any SecurityContext actually.</p>
 
 						<h4>Flow\inject</h4>
 						<div class="list">
@@ -1128,7 +1128,7 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$sessionManager" class="anchor">#</a>
+					<a href="#$securityContext" class="anchor">#</a>
 					<code></code>
 				</div>
 			</td>
@@ -1156,6 +1156,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?cf311500835d1dfbcb132e2dd1d7c9cc2d519ca4"></script>
+<script src="elementlist.js?e135ae05356ee10a96a17a4acec9cfdb78dbb48c"></script>
 </body>
 </html>
