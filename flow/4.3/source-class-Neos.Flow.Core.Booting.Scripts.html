@@ -1133,7 +1133,7 @@
 </span><span id="276" class="l">        <span class="php-var">$cacheFactoryClass</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$cacheFactoryObjectConfiguration</span>[<span class="php-quote">'className'</span>]) ? <span class="php-var">$cacheFactoryObjectConfiguration</span>[<span class="php-quote">'className'</span>] : CacheFactory::<span class="php-keyword1">class</span>;
 </span><span id="277" class="l">
 </span><span id="278" class="l">        <span class="php-comment">/** @var CacheFactory $cacheFactory */</span>
-</span><span id="279" class="l">        <span class="php-var">$cacheFactory</span> = <span class="php-keyword1">new</span> <span class="php-var">$cacheFactoryClass</span>(<span class="php-var">$bootstrap</span>-&gt;getContext(), <span class="php-var">$environment</span>);
+</span><span id="279" class="l">        <span class="php-var">$cacheFactory</span> = <span class="php-keyword1">new</span> <span class="php-var">$cacheFactoryClass</span>(<span class="php-var">$bootstrap</span>-&gt;getContext(), <span class="php-var">$environment</span>, <span class="php-var">$configurationManager</span>-&gt;getConfiguration(ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, <span class="php-quote">'Neos.Flow.cache.applicationIdentifier'</span>));
 </span><span id="280" class="l">
 </span><span id="281" class="l">        <span class="php-var">$cacheManager</span> = <span class="php-keyword1">new</span> CacheManager();
 </span><span id="282" class="l">        <span class="php-var">$cacheManager</span>-&gt;setCacheConfigurations(<span class="php-var">$configurationManager</span>-&gt;getConfiguration(ConfigurationManager::CONFIGURATION_TYPE_CACHES));
