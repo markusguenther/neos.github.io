@@ -1027,7 +1027,7 @@
 </span><span id="161" class="l">            }
 </span><span id="162" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$source</span>[<span class="php-quote">'timezone_type'</span>])) {
 </span><span id="163" class="l">                <span class="php-comment">// DateTime internal format when being serialized with json_encode</span>
-</span><span id="164" class="l">                <span class="php-var">$dateFormat</span> = <span class="php-quote">&quot;Y-m-d\TH:i:s.v&quot;</span>;
+</span><span id="164" class="l">                <span class="php-var">$dateFormat</span> = <span class="php-quote">&quot;Y-m-d H:i:s.u&quot;</span>;
 </span><span id="165" class="l">            }
 </span><span id="166" class="l">            <span class="php-var">$date</span> = <span class="php-var">$targetType</span>::createFromFormat(<span class="php-var">$dateFormat</span>, <span class="php-var">$dateAsString</span>, <span class="php-var">$timezone</span>);
 </span><span id="167" class="l">        } <span class="php-keyword1">else</span> {
