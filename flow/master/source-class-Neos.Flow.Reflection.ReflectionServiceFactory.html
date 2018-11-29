@@ -869,7 +869,7 @@
 </span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Configuration\ConfigurationManager;
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Core\Bootstrap;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Flow\<span class="php-keyword2">Log</span>\PsrLoggerFactoryInterface;
-</span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Package\PackageManagerInterface;
+</span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Package\PackageManager;
 </span><span id="20" class="l"><span class="php-keyword1">use</span> Neos\Flow\Utility\Environment;
 </span><span id="21" class="l">
 </span><span id="22" class="l"><span class="php-comment">/**
@@ -917,7 +917,7 @@
 </span><span id="64" class="l">        <span class="php-var">$reflectionService</span> = <span class="php-keyword1">new</span> ReflectionService();
 </span><span id="65" class="l">        <span class="php-var">$reflectionService</span>-&gt;injectLogger(<span class="php-var">$this</span>-&gt;bootstrap-&gt;getEarlyInstance(PsrLoggerFactoryInterface::<span class="php-keyword1">class</span>)-&gt;get(<span class="php-quote">'systemLogger'</span>));
 </span><span id="66" class="l">        <span class="php-var">$reflectionService</span>-&gt;injectSettings(<span class="php-var">$settings</span>);
-</span><span id="67" class="l">        <span class="php-var">$reflectionService</span>-&gt;injectPackageManager(<span class="php-var">$this</span>-&gt;bootstrap-&gt;getEarlyInstance(PackageManagerInterface::<span class="php-keyword1">class</span>));
+</span><span id="67" class="l">        <span class="php-var">$reflectionService</span>-&gt;injectPackageManager(<span class="php-var">$this</span>-&gt;bootstrap-&gt;getEarlyInstance(PackageManager::<span class="php-keyword1">class</span>));
 </span><span id="68" class="l">        <span class="php-var">$reflectionService</span>-&gt;setStatusCache(<span class="php-var">$cacheManager</span>-&gt;getCache(<span class="php-quote">'Flow_Reflection_Status'</span>));
 </span><span id="69" class="l">        <span class="php-var">$reflectionService</span>-&gt;setReflectionDataCompiletimeCache(<span class="php-var">$cacheManager</span>-&gt;getCache(<span class="php-quote">'Flow_Reflection_CompiletimeData'</span>));
 </span><span id="70" class="l">        <span class="php-var">$reflectionService</span>-&gt;setReflectionDataRuntimeCache(<span class="php-var">$cacheManager</span>-&gt;getCache(<span class="php-quote">'Flow_Reflection_RuntimeData'</span>));
