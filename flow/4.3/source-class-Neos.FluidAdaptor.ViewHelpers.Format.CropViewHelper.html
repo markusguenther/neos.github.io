@@ -947,7 +947,7 @@
 </span><span id="77" class="l">    {
 </span><span id="78" class="l">        <span class="php-var">$value</span> = <span class="php-var">$arguments</span>[<span class="php-quote">'value'</span>];
 </span><span id="79" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$value</span> === <span class="php-keyword1">null</span>) {
-</span><span id="80" class="l">            <span class="php-var">$value</span> = <span class="php-var">$renderChildrenClosure</span>();
+</span><span id="80" class="l">            <span class="php-var">$value</span> = (string)<span class="php-var">$renderChildrenClosure</span>();
 </span><span id="81" class="l">        }
 </span><span id="82" class="l">
 </span><span id="83" class="l">        <span class="php-keyword1">if</span> (UnicodeUtilityFunctions::<span class="php-keyword2">strlen</span>(<span class="php-var">$value</span>) &gt; <span class="php-var">$arguments</span>[<span class="php-quote">'maxCharacters'</span>]) {
