@@ -832,6 +832,7 @@
 				<li><a href="class-Neos.Flow.Command.SchemaCommandController.html">SchemaCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.SecurityCommandController.html">SecurityCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.ServerCommandController.html">ServerCommandController</a></li>
+				<li><a href="class-Neos.Flow.Command.SessionCommandController.html">SessionCommandController</a></li>
 				<li><a href="class-Neos.Flow.Command.TypeConverterCommandController.html">TypeConverterCommandController</a></li>
 			</ul>
 
@@ -886,7 +887,7 @@ Neos\Flow\Cli\CommandController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Command.CacheCommandController.html#34-493" title="Go to source code">Neos.Flow/Classes/Command/CacheCommandController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Command.CacheCommandController.html#34-494" title="Go to source code">Neos.Flow/Classes/Command/CacheCommandController.php</a>
 		<br>
 	</div>
 
@@ -1110,7 +1111,7 @@ Neos\Flow\Cli\CommandController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#127-178" title="Go to source code">flushCommand</a>( <span>Neos\Flow\Command\bool <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#127-179" title="Go to source code">flushCommand</a>( <span>Neos\Flow\Command\bool <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Flush all caches</p>
@@ -1120,7 +1121,8 @@ Neos\Flow\Cli\CommandController
 				<p>Flush all caches</p>
 
 <p>The flush command flushes all caches (including code caches) which have been
-registered with Flow's Cache Manager. It also removes any session data.</p>
+registered with Flow's Cache Manager. It will NOT remove any session data, unless
+you specifically configure the session caches to not be persistent.</p>
 
 <p>If fatal errors caused by a package prevent the compile time bootstrap
 from running, the removal of any temporary data can be forced by specifying
@@ -1160,7 +1162,7 @@ packages unless the <b>--force</b> option is used.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_flushOneCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#180-220" title="Go to source code">flushOneCommand</a>( <span>Neos\Flow\Command\string <var>$identifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#181-221" title="Go to source code">flushOneCommand</a>( <span>Neos\Flow\Command\string <var>$identifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Flushes a particular cache by its identifier</p>
@@ -1207,7 +1209,7 @@ code files lack.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_warmupCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#222-238" title="Go to source code">warmupCommand</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#223-239" title="Go to source code">warmupCommand</a>( )</code>
 
 			<div class="description short">
 				<p>Warm up caches</p>
@@ -1246,7 +1248,7 @@ rush.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_listCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#240-299" title="Go to source code">listCommand</a>( <span>Neos\Flow\Command\bool <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#241-300" title="Go to source code">listCommand</a>( <span>Neos\Flow\Command\bool <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>List all configured caches and their status if available</p>
@@ -1291,7 +1293,7 @@ This allows the command to be easily integrated in CI setups (the --quiet flag c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#301-342" title="Go to source code">showCommand</a>( <span>Neos\Flow\Command\string <var>$cacheIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#302-343" title="Go to source code">showCommand</a>( <span>Neos\Flow\Command\string <var>$cacheIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Display details of a cache including a detailed status if available</p>
@@ -1333,7 +1335,7 @@ This allows the command to be easily integrated in CI setups (the --quiet flag c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setupCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#344-379" title="Go to source code">setupCommand</a>( <span>Neos\Flow\Command\string <var>$cacheIdentifier</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#345-380" title="Go to source code">setupCommand</a>( <span>Neos\Flow\Command\string <var>$cacheIdentifier</var></span> )</code>
 
 			<div class="description short">
 				<p>Setup the given Cache if possible</p>
@@ -1379,7 +1381,7 @@ which should setup and validate the backend (i.e. create required database table
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setupAllCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#381-418" title="Go to source code">setupAllCommand</a>( <span>Neos\Flow\Command\bool <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#382-419" title="Go to source code">setupAllCommand</a>( <span>Neos\Flow\Command\bool <var>$quiet</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Setup all Caches</p>
@@ -1427,7 +1429,7 @@ This allows the command to be easily integrated in CI setups (the --quiet flag c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sysCommand">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#420-439" title="Go to source code">sysCommand</a>( <span>Neos\Flow\Command\int <var>$address</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#421-440" title="Go to source code">sysCommand</a>( <span>Neos\Flow\Command\int <var>$address</var></span> )</code>
 
 			<div class="description short">
 				<p>Call system function</p>
@@ -1464,7 +1466,7 @@ This allows the command to be easily integrated in CI setups (the --quiet flag c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderResult">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#441-479" title="Go to source code">renderResult</a>( <span>Neos\Error\Messages\Result <var>$result</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#442-480" title="Go to source code">renderResult</a>( <span>Neos\Error\Messages\Result <var>$result</var></span> )</code>
 
 			<div class="description short">
 				<p>Outputs the given Result object in a human-readable way</p>
@@ -1498,7 +1500,7 @@ This allows the command to be easily integrated in CI setups (the --quiet flag c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitWarmupCaches">#</a>
-			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#481-492" title="Go to source code">emitWarmupCaches</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Command.CacheCommandController.html#482-493" title="Go to source code">emitWarmupCaches</a>( )</code>
 
 			<div class="description short">
 				<p>Signals that caches should be warmed up.</p>
@@ -1704,6 +1706,6 @@ tasks for preparing the application for the first request.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?e135ae05356ee10a96a17a4acec9cfdb78dbb48c"></script>
+<script src="elementlist.js?c49dbe5e3b031d954b5000d85221d2eeea8a0337"></script>
 </body>
 </html>
