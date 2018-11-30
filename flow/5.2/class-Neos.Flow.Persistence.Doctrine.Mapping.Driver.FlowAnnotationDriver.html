@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Neos\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver | Flow Framework (5.2 branch)</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Flow Framework (5.2 branch)</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html" title="Summary of Neos\Flow\Persistence\Doctrine\Mapping\Driver"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+						<li>
+							<a href="annotation-group-api.html" title="List of elements with api annotation">
+								<span>Api</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Neos.html">
+							Neos<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.html">
+							Cache<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Psr.html">
+							Psr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Cache.Psr.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Cache.Psr.SimpleCache.html">
+							SimpleCache						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.html">
+							Eel<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.html">
+							FlowQuery<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.html">
+							Operations<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Eel.FlowQuery.Operations.Object.html">
+							Object						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Eel.Helper.html">
+							Helper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Eel.Validation.html">
+							Validation						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Error.html">
+							Error<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Error.Messages.html">
+							Messages						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.html">
+							Flow<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Annotations.html">
+							Annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.html">
+							Aop<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Advice.html">
+							Advice						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Aop.Pointcut.html">
+							Pointcut						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Cli.html">
+							Cli						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.html">
+							Composer<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Composer.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.html">
+							Configuration<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Configuration.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.html">
+							Booting<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Booting.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Core.Migrations.html">
+							Migrations						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Error.html">
+							Error						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.html">
+							Http<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Client.html">
+							Client						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Http.Component.html">
+							Component						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.html">
+							I18n<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.html">
+							Cldr<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.html">
+							Reader<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Cldr.Reader.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.EelHelper.html">
+							EelHelper						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Formatter.html">
+							Formatter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Parser.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.html">
+							TranslationProvider<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.TranslationProvider.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.html">
+							Xliff<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.I18n.Xliff.Service.html">
+							Service						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.html">
+							Log<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Log.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.html">
+							Monitor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Monitor.ChangeDetectionStrategy.html">
+							ChangeDetectionStrategy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.html">
+							Mvc<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.html">
+							Controller<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Controller.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.html">
+							Routing<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.Routing.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Mvc.View.html">
+							View						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.html">
+							ObjectManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Configuration.html">
+							Configuration						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.DependencyInjection.html">
+							DependencyInjection						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ObjectManagement.Proxy.html">
+							Proxy						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Package.html">
+							Package<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Package.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.Persistence.html">
+							Persistence<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.html">
+							Doctrine<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.DataTypes.html">
+							DataTypes						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Logging.html">
+							Logging						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.html">
+							Mapping<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html">
+							Driver						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.html">
+							Generic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Backend.html">
+							Backend						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Persistence.Generic.Qom.html">
+							Qom						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.html">
+							Property<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.html">
+							TypeConverter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Property.TypeConverter.Error.html">
+							Error						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.html">
+							Reflection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Reflection.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.html">
+							ResourceManagement<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Filter.html">
+							Filter						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Publishing.html">
+							Publishing						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Storage.html">
+							Storage						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Streams.html">
+							Streams						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.ResourceManagement.Target.html">
+							Target						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.html">
+							Security<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.html">
+							Authentication<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.EntryPoint.html">
+							EntryPoint						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Provider.html">
+							Provider						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authentication.Token.html">
+							Token						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.html">
+							Authorization<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.html">
+							Privilege<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.html">
+							Entity<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Entity.Doctrine.html">
+							Doctrine						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Method.html">
+							Method						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Authorization.Privilege.Parameter.html">
+							Parameter						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Channel.html">
+							Channel						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Cryptography.html">
+							Cryptography						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.Policy.html">
+							Policy						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Security.RequestPattern.html">
+							RequestPattern						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.html">
+							Session<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Aspect.html">
+							Aspect						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Session.Http.html">
+							Http						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.html">
+							SignalSlot<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.SignalSlot.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.Flow.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.html">
+							Validation<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Flow.Validation.Validator.html">
+							Validator						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.html">
+							FluidAdaptor<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.html">
+							Core<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Cache.html">
+							Cache						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.html">
+							Parser<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.Interceptor.html">
+							Interceptor						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.html">
+							SyntaxTree<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.SyntaxTree.Expression.html">
+							Expression						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Parser.TemplateProcessor.html">
+							TemplateProcessor						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Rendering.html">
+							Rendering						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.html">
+							ViewHelper<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.ViewHelper.Facets.html">
+							Facets						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Core.Widget.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.View.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Form.html">
+							Form						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Link.html">
+							Link						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Security.html">
+							Security						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Uri.html">
+							Uri						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Validation.html">
+							Validation						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.html">
+							Widget<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.FluidAdaptor.ViewHelpers.Widget.Controller.html">
+							Controller						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.html">
+							Kickstarter<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Command.html">
+							Command						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Service.html">
+							Service						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.Utility.html">
+							Utility						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.html">
+							ViewHelpers<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Format.html">
+							Format						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Kickstarter.ViewHelpers.Inflect.html">
+							Inflect						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-Neos.Utility.html">
+							Utility<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.Utility.Exception.html">
+							Exception						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Lock.html">
+							Lock						</a>
+							</li>
+					<li>
+						<a href="namespace-Neos.Utility.Unicode.html">
+							Unicode						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html">FlowAnnotationDriver</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class FlowAnnotationDriver</h1>
+
+
+	<div class="description">
+	<p>This driver reads the mapping metadata from docblock annotations.</p>
+
+<p>It gives precedence to Doctrine annotations but fills gaps from other info
+if possible:</p>
+
+<ul>
+<li>Entity.repositoryClass is set to the repository found in the class schema</li>
+<li>Table.name is set to a sane value</li>
+<li>Column.type is set to property type</li>
+<li>*.targetEntity is set to property type</li>
+</ul>
+
+<p>If a property is not marked as an association the mapping type is set to
+"object" for objects.</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>Neos\Flow\Persistence\Doctrine\Mapping\Driver\FlowAnnotationDriver</span></b>			
+			 implements 
+<span>Doctrine\Common\Persistence\Mapping\Driver\MappingDriver</span>, 
+			
+				<a href="class-Neos.Flow.Aop.Pointcut.PointcutFilterInterface.html"><span>Neos\Flow\Aop\Pointcut\PointcutFilterInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Persistence.html">Persistence</a>\<a href="namespace-Neos.Flow.Persistence.Doctrine.html">Doctrine</a>\<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.html">Mapping</a>\<a href="namespace-Neos.Flow.Persistence.Doctrine.Mapping.Driver.html">Driver</a><br>
+		
+
+				<b>Flow\scope(&quot;singleton&quot;)</b>
+				<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#30-1252" title="Go to source code">Neos.Flow/Classes/Persistence/Doctrine/Mapping/Driver/FlowAnnotationDriver.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#79-86" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				<p>Initializes a new AnnotationDriver that uses the given AnnotationReader for reading
+docblock annotations.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Initializes a new AnnotationDriver that uses the given AnnotationReader for reading
+docblock annotations.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectReflectionService" id="_injectReflectionService">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectReflectionService">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#88-95" title="Go to source code">injectReflectionService</a>( <span><code><a href="class-Neos.Flow.Reflection.ReflectionService.html">Neos\Flow\Reflection\ReflectionService</a></code> <var>$reflectionService</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$reflectionService</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setEntityManager" id="_setEntityManager">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setEntityManager">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#97-104" title="Go to source code">setEntityManager</a>( <span>Doctrine\ORM\EntityManagerInterface <var>$entityManager</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entityManager</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getClassSchema" id="_getClassSchema">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Neos.Flow.Reflection.ClassSchema.html">Neos\Flow\Reflection\ClassSchema</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getClassSchema">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#106-121" title="Go to source code">getClassSchema</a>( <span>string <var>$className</var></span> )</code>
+
+			<div class="description short">
+				<p>Fetch a class schema for the given class, if possible.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Fetch a class schema for the given class, if possible.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Reflection.ClassSchema.html">Neos\Flow\Reflection\ClassSchema</a></code>
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Persistence.Doctrine.Mapping.Exception.ClassSchemaNotFoundException.html">Neos\Flow\Persistence\Doctrine\Mapping\Exception\ClassSchemaNotFoundException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isAggregateRoot" id="_isAggregateRoot">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isAggregateRoot">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#123-141" title="Go to source code">isAggregateRoot</a>( <span>string <var>$className</var></span>, <span>string <var>$propertySourceHint</var></span> )</code>
+
+			<div class="description short">
+				<p>Check for $className being an aggregate root.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check for $className being an aggregate root.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+						<dt><var>$propertySourceHint</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Persistence.Doctrine.Mapping.Exception.ClassSchemaNotFoundException.html">Neos\Flow\Persistence\Doctrine\Mapping\Exception\ClassSchemaNotFoundException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isValueObject" id="_isValueObject">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isValueObject">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#143-161" title="Go to source code">isValueObject</a>( <span>string <var>$className</var></span>, <span>string <var>$propertySourceHint</var></span> )</code>
+
+			<div class="description short">
+				<p>Check for $className being a value object.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check for $className being a value object.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+						<dt><var>$propertySourceHint</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Persistence.Doctrine.Mapping.Exception.ClassSchemaNotFoundException.html">Neos\Flow\Persistence\Doctrine\Mapping\Exception\ClassSchemaNotFoundException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadMetadataForClass" id="_loadMetadataForClass">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadMetadataForClass">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#163-441" title="Go to source code">loadMetadataForClass</a>( <span>string <var>$className</var></span>, <span>Doctrine\Common\Persistence\Mapping\ClassMetadata <var>$metadata</var></span> )</code>
+
+			<div class="description short">
+				<p>Loads the metadata for the specified class into the provided container.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Loads the metadata for the specified class into the provided container.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+						<dt><var>$metadata</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\Mapping\MappingException<br>
+						UnexpectedValueException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="inferTableNameFromClassName" id="_inferTableNameFromClassName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_inferTableNameFromClassName">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#443-453" title="Go to source code">inferTableNameFromClassName</a>( <span>string <var>$className</var></span>, <span>integer <var>$lengthLimit</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Given a class name a table name is returned. That name should be reasonably unique.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Given a class name a table name is returned. That name should be reasonably unique.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+						<dt><var>$lengthLimit</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="truncateIdentifier" id="_truncateIdentifier">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_truncateIdentifier">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#455-473" title="Go to source code">truncateIdentifier</a>( <span>string <var>$identifier</var></span>, <span>integer <var>$lengthLimit</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$hashSource</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Truncate an identifier if needed and append a hash to ensure uniqueness.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Truncate an identifier if needed and append a hash to ensure uniqueness.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$identifier</var></dt>
+						<dd></dd>
+						<dt><var>$lengthLimit</var></dt>
+						<dd></dd>
+						<dt><var>$hashSource</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="inferJoinTableNameFromClassAndPropertyName" id="_inferJoinTableNameFromClassAndPropertyName">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_inferJoinTableNameFromClassAndPropertyName">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#475-497" title="Go to source code">inferJoinTableNameFromClassAndPropertyName</a>( <span>string <var>$className</var></span>, <span>string <var>$propertyName</var></span> )</code>
+
+			<div class="description short">
+				<p>Given a class and property name a table name is returned. That name should be reasonably unique.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Given a class and property name a table name is returned. That name should be reasonably unique.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd>Model class name the table corresponds to</dd>
+						<dt><var>$propertyName</var></dt>
+						<dd>Name of the property to be joined</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Truncated database table name
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="buildJoinTableColumnName" id="_buildJoinTableColumnName">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_buildJoinTableColumnName">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#499-516" title="Go to source code">buildJoinTableColumnName</a>( <span>string <var>$className</var></span> )</code>
+
+			<div class="description short">
+				<p>Build a name for a column in a jointable.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Build a name for a column in a jointable.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="buildJoinColumnsIfNeeded" id="_buildJoinColumnsIfNeeded">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_buildJoinColumnsIfNeeded">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#518-557" title="Go to source code">buildJoinColumnsIfNeeded</a>( <span>array <var>$joinColumns</var></span>, <span>array <var>$mapping</var></span>, <span>ReflectionProperty <var>$property</var></span>, <span>integer <var>$direction</var> = self::MAPPING_REGULAR</span> )</code>
+
+			<div class="description short">
+				<p>Check if the referenced column name is set (and valid) and if not make sure
+it is initialized properly.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check if the referenced column name is set (and valid) and if not make sure
+it is initialized properly.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$joinColumns</var></dt>
+						<dd></dd>
+						<dt><var>$mapping</var></dt>
+						<dd></dd>
+						<dt><var>$property</var></dt>
+						<dd></dd>
+						<dt><var>$direction</var></dt>
+						<dd>regular or inverse mapping (use is to be coded)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluatePropertyAnnotations" id="_evaluatePropertyAnnotations">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluatePropertyAnnotations">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#559-804" title="Go to source code">evaluatePropertyAnnotations</a>( <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
+
+			<div class="description short">
+				<p>Evaluate the property annotations and amend the metadata accordingly.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Evaluate the property annotations and amend the metadata accordingly.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$metadata</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\Mapping\MappingException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluateJoinTableAnnotation" id="_evaluateJoinTableAnnotation">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluateJoinTableAnnotation">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#806-856" title="Go to source code">evaluateJoinTableAnnotation</a>( <span>Doctrine\ORM\Mapping\JoinTable <var>$joinTableAnnotation</var></span>, <span>ReflectionProperty <var>$property</var></span>, <span>string <var>$className</var></span>, <span>array <var>$mapping</var></span> )</code>
+
+			<div class="description short">
+				<p>Evaluate JoinTable annotations and fill missing bits as needed.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Evaluate JoinTable annotations and fill missing bits as needed.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$joinTableAnnotation</var></dt>
+						<dd></dd>
+						<dt><var>$property</var></dt>
+						<dd></dd>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+						<dt><var>$mapping</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluateJoinColumnAnnotations" id="_evaluateJoinColumnAnnotations">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluateJoinColumnAnnotations">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#858-880" title="Go to source code">evaluateJoinColumnAnnotations</a>( <span>ReflectionProperty <var>$property</var></span> )</code>
+
+			<div class="description short">
+				<p>Check for and build JoinColummn/JoinColumns annotations.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check for and build JoinColummn/JoinColumns annotations.</p>
+
+<p>If no annotations are found, a default is returned.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$property</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluateOverridesAnnotations" id="_evaluateOverridesAnnotations">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluateOverridesAnnotations">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#882-939" title="Go to source code">evaluateOverridesAnnotations</a>( <span>array <var>$classAnnotations</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
+
+			<div class="description short">
+				<p>Evaluate the association overrides annotations and amend the metadata accordingly.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Evaluate the association overrides annotations and amend the metadata accordingly.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$classAnnotations</var></dt>
+						<dd></dd>
+						<dt><var>$metadata</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluateEntityListenersAnnotation" id="_evaluateEntityListenersAnnotation">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluateEntityListenersAnnotation">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#941-981" title="Go to source code">evaluateEntityListenersAnnotation</a>( <span>ReflectionClass <var>$class</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadata <var>$metadata</var></span>, <span>array <var>$classAnnotations</var></span> )</code>
+
+			<div class="description short">
+				<p>Evaluate the EntityListeners annotation and amend the metadata accordingly.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Evaluate the EntityListeners annotation and amend the metadata accordingly.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$class</var></dt>
+						<dd></dd>
+						<dt><var>$metadata</var></dt>
+						<dd></dd>
+						<dt><var>$classAnnotations</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\Mapping\MappingException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluateLifeCycleAnnotations" id="_evaluateLifeCycleAnnotations">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluateLifeCycleAnnotations">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#983-1004" title="Go to source code">evaluateLifeCycleAnnotations</a>( <span>ReflectionClass <var>$class</var></span>, <span>Doctrine\ORM\Mapping\ClassMetadataInfo <var>$metadata</var></span> )</code>
+
+			<div class="description short">
+				<p>Evaluate the lifecycle annotations and amend the metadata accordingly.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Evaluate the lifecycle annotations and amend the metadata accordingly.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$class</var></dt>
+						<dd></dd>
+						<dt><var>$metadata</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMethodCallbacks" id="_getMethodCallbacks">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMethodCallbacks">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1006-1052" title="Go to source code">getMethodCallbacks</a>( <span>ReflectionMethod <var>$method</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns an array of callbacks for lifecycle annotations on the given method.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an array of callbacks for lifecycle annotations on the given method.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$method</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMaxIdentifierLength" id="_getMaxIdentifierLength">
+
+			<td class="attributes"><code>
+				 protected 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMaxIdentifierLength">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1054-1066" title="Go to source code">getMaxIdentifierLength</a>( )</code>
+
+			<div class="description short">
+				<p>Derive maximum identifier length from doctrine DBAL</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Derive maximum identifier length from doctrine DBAL</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isTransient" id="_isTransient">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isTransient">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1068-1085" title="Go to source code">isTransient</a>( <span>string <var>$className</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns whether the class with the specified name is transient. Only non-transient
+classes, that is entities and mapped superclasses, should have their metadata loaded.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns whether the class with the specified name is transient. Only non-transient
+classes, that is entities and mapped superclasses, should have their metadata loaded.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllClassNames" id="_getAllClassNames">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllClassNames">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1087-1113" title="Go to source code">getAllClassNames</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the names of all mapped (non-transient) classes known to this driver.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the names of all mapped (non-transient) classes known to this driver.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="joinColumnToArray" id="_joinColumnToArray">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_joinColumnToArray">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1115-1132" title="Go to source code">joinColumnToArray</a>( <span>Doctrine\ORM\Mapping\JoinColumn <var>$joinColumnAnnotation</var></span>, <span>string <var>$propertyName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Parse the given JoinColumn into an array</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parse the given JoinColumn into an array</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$joinColumnAnnotation</var></dt>
+						<dd></dd>
+						<dt><var>$propertyName</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addColumnToMappingArray" id="_addColumnToMappingArray">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addColumnToMappingArray">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1134-1168" title="Go to source code">addColumnToMappingArray</a>( <span>Doctrine\ORM\Mapping\Column <var>$columnAnnotation</var></span>, <span>array <var>$mapping</var> = []</span>, <span>string <var>$fieldName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Parse the given Column into an array</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parse the given Column into an array</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$columnAnnotation</var></dt>
+						<dd></dd>
+						<dt><var>$mapping</var></dt>
+						<dd></dd>
+						<dt><var>$fieldName</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUnproxiedClassName" id="_getUnproxiedClassName">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUnproxiedClassName">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1170-1181" title="Go to source code">getUnproxiedClassName</a>( <span>string <var>$className</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the classname after stripping a potentially present Compiler::ORIGINAL_CLASSNAME_SUFFIX.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the classname after stripping a potentially present Compiler::ORIGINAL_CLASSNAME_SUFFIX.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFetchMode" id="_getFetchMode">
+
+			<td class="attributes"><code>
+				 private 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFetchMode">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1183-1199" title="Go to source code">getFetchMode</a>( <span>string <var>$className</var></span>, <span>string <var>$fetchMode</var></span> )</code>
+
+			<div class="description short">
+				<p>Attempts to resolve the fetch mode.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Attempts to resolve the fetch mode.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd>The class name</dd>
+						<dt><var>$fetchMode</var></dt>
+						<dd>The fetch mode</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The fetch mode as defined in ClassMetadata
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\Mapping\MappingException<br>If the fetch mode is not valid
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="matches" id="_matches">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_matches">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1201-1220" title="Go to source code">matches</a>( <span>string <var>$className</var></span>, <span>string <var>$methodName</var></span>, <span>string <var>$methodDeclaringClassName</var></span>, <span>mixed <var>$pointcutQueryIdentifier</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if the specified class has a property annotated with Id</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the specified class has a property annotated with Id</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd>Name of the class to check against</dd>
+						<dt><var>$methodName</var></dt>
+						<dd>Name of the method to check against</dd>
+						<dt><var>$methodDeclaringClassName</var></dt>
+						<dd>Name of the class the method was originally declared in</dd>
+						<dt><var>$pointcutQueryIdentifier</var></dt>
+						<dd>Some identifier for this query - must at least differ from a previous identifier. Used for circular reference detection.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>true if the class has <em>no</em> Id properties
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Aop.Pointcut.PointcutFilterInterface.html#_matches">Neos\Flow\Aop\Pointcut\PointcutFilterInterface::matches()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasRuntimeEvaluationsDefinition" id="_hasRuntimeEvaluationsDefinition">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasRuntimeEvaluationsDefinition">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1222-1230" title="Go to source code">hasRuntimeEvaluationsDefinition</a>( )</code>
+
+			<div class="description short">
+				<p>Returns true if this filter holds runtime evaluations for a previously matched pointcut</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns true if this filter holds runtime evaluations for a previously matched pointcut</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>true if this filter has runtime evaluations
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Aop.Pointcut.PointcutFilterInterface.html#_hasRuntimeEvaluationsDefinition">Neos\Flow\Aop\Pointcut\PointcutFilterInterface::hasRuntimeEvaluationsDefinition()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRuntimeEvaluationsDefinition" id="_getRuntimeEvaluationsDefinition">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRuntimeEvaluationsDefinition">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1232-1240" title="Go to source code">getRuntimeEvaluationsDefinition</a>( )</code>
+
+			<div class="description short">
+				<p>Returns runtime evaluations for a previously matched pointcut</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns runtime evaluations for a previously matched pointcut</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Runtime evaluations
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Aop.Pointcut.PointcutFilterInterface.html#_getRuntimeEvaluationsDefinition">Neos\Flow\Aop\Pointcut\PointcutFilterInterface::getRuntimeEvaluationsDefinition()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="reduceTargetClassNames" id="_reduceTargetClassNames">
+
+			<td class="attributes"><code>
+				 public 
+				Neos\Flow\Aop\Builder\ClassNameIndex
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_reduceTargetClassNames">#</a>
+			<code><a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#1242-1251" title="Go to source code">reduceTargetClassNames</a>( <span>Neos\Flow\Aop\Builder\ClassNameIndex <var>$classNameIndex</var></span> )</code>
+
+			<div class="description short">
+				<p>This method is used to optimize the matching process.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>This method is used to optimize the matching process.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$classNameIndex</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						Neos\Flow\Aop\Builder\ClassNameIndex
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-Neos.Flow.Aop.Pointcut.PointcutFilterInterface.html#_reduceTargetClassNames">Neos\Flow\Aop\Pointcut\PointcutFilterInterface::reduceTargetClassNames()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="MAPPING_REGULAR" id="MAPPING_REGULAR">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-MAPPING_REGULAR.html#48-51" title="Go to source code"><b>MAPPING_REGULAR</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#MAPPING_REGULAR" class="anchor">#</a>
+						<code><span class="php-num">0</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="MAPPING_MM_REGULAR" id="MAPPING_MM_REGULAR">
+
+				<td class="attributes"><code>integer</code></td>
+				<td class="name">
+					<code>
+						<a href="source-constant-MAPPING_MM_REGULAR.html#52" title="Go to source code"><b>MAPPING_MM_REGULAR</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#MAPPING_MM_REGULAR" class="anchor">#</a>
+						<code><span class="php-num">1</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="reflectionService" id="$reflectionService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Flow.Reflection.ReflectionService.html">Neos\Flow\Reflection\ReflectionService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#54-57" title="Go to source code"><var>$reflectionService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$reflectionService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="reader" id="$reader">
+			<td class="attributes"><code>
+				protected  
+				Doctrine\Common\Annotations\AnnotationReader
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#59-62" title="Go to source code"><var>$reader</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$reader" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="entityManager" id="$entityManager">
+			<td class="attributes"><code>
+				protected  
+				Doctrine\ORM\EntityManagerInterface
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#64-67" title="Go to source code"><var>$entityManager</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$entityManager" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="classNames" id="$classNames">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#69-72" title="Go to source code"><var>$classNames</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$classNames" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="tableNameLengthLimit" id="$tableNameLengthLimit">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Persistence.Doctrine.Mapping.Driver.FlowAnnotationDriver.html#74-77" title="Go to source code"><var>$tableNameLengthLimit</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$tableNameLengthLimit" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Flow Framework (5.2 branch) API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
+<script src="elementlist.js?c49dbe5e3b031d954b5000d85221d2eeea8a0337"></script>
+</body>
+</html>
