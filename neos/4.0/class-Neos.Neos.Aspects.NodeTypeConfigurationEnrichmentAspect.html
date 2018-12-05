@@ -838,7 +838,7 @@
 				<br>
 				<b>Flow\aspect</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#21-419" title="Go to source code">Neos.Neos/Classes/Aspects/NodeTypeConfigurationEnrichmentAspect.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#21-429" title="Go to source code">Neos.Neos/Classes/Aspects/NodeTypeConfigurationEnrichmentAspect.php</a>
 		<br>
 	</div>
 
@@ -1002,7 +1002,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPropertyLabels">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#168-201" title="Go to source code">setPropertyLabels</a>( <span>string <var>$nodeTypeName</var></span>, <span>array <var>&amp; $configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#168-204" title="Go to source code">setPropertyLabels</a>( <span>string <var>$nodeTypeName</var></span>, <span>array <var>&amp; $configuration</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1038,7 +1038,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveHelpMessageThumbnail">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#203-230" title="Go to source code">resolveHelpMessageThumbnail</a>( <span>string <var>$nodeTypeName</var></span>, <span>string <var>$configurationThumbnail</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#206-233" title="Go to source code">resolveHelpMessageThumbnail</a>( <span>string <var>$nodeTypeName</var></span>, <span>string <var>$configurationThumbnail</var></span> )</code>
 
 			<div class="description short">
 				<p>Resolve help message thumbnail url</p>
@@ -1067,7 +1067,7 @@ names in the used icon implementation</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="applyInspectorEditorLabels" id="_applyInspectorEditorLabels">
+		<tr data-order="applyEditorLabels" id="_applyEditorLabels">
 
 			<td class="attributes"><code>
 				 protected 
@@ -1077,8 +1077,8 @@ names in the used icon implementation</p>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_applyInspectorEditorLabels">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#232-271" title="Go to source code">applyInspectorEditorLabels</a>( <span>string <var>$nodeTypeLabelIdPrefix</var></span>, <span>string <var>$propertyName</var></span>, <span>array <var>&amp; $propertyConfiguration</var></span> )</code>
+			<a class="anchor" href="#_applyEditorLabels">#</a>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#235-274" title="Go to source code">applyEditorLabels</a>( <span>string <var>$nodeTypeLabelIdPrefix</var></span>, <span>string <var>$propertyName</var></span>, <span>string <var>$editorName</var></span>, <span>array <var>&amp; $editorOptions</var></span>, <span>callable <var>$translationIdGenerator</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1094,7 +1094,11 @@ names in the used icon implementation</p>
 						<dd></dd>
 						<dt><var>$propertyName</var></dt>
 						<dd></dd>
-						<dt><var>$propertyConfiguration</var></dt>
+						<dt><var>$editorName</var></dt>
+						<dd></dd>
+						<dt><var>$editorOptions</var></dt>
+						<dd></dd>
+						<dt><var>$translationIdGenerator</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -1116,7 +1120,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setGlobalUiElementLabels">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#273-320" title="Go to source code">setGlobalUiElementLabels</a>( <span>string <var>$nodeTypeName</var></span>, <span>array <var>&amp; $configuration</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#276-330" title="Go to source code">setGlobalUiElementLabels</a>( <span>string <var>$nodeTypeName</var></span>, <span>array <var>&amp; $configuration</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets labels for global NodeType elements like tabs and groups and the general label.</p>
@@ -1152,7 +1156,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shouldFetchTranslation">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#322-334" title="Go to source code">shouldFetchTranslation</a>( <span>array <var>$parentConfiguration</var></span>, <span>string <var>$fieldName</var> = <span class="php-quote">'label'</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#332-344" title="Go to source code">shouldFetchTranslation</a>( <span>array <var>$parentConfiguration</var></span>, <span>string <var>$fieldName</var> = <span class="php-quote">'label'</span></span> )</code>
 
 			<div class="description short">
 				<p>Should a label be generated for the given field or is there something configured?</p>
@@ -1192,7 +1196,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInspectorElementTranslationId">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#336-347" title="Go to source code">getInspectorElementTranslationId</a>( <span>string <var>$nodeTypeSpecificPrefix</var></span>, <span>string <var>$elementType</var></span>, <span>string <var>$elementName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#346-357" title="Go to source code">getInspectorElementTranslationId</a>( <span>string <var>$nodeTypeSpecificPrefix</var></span>, <span>string <var>$elementType</var></span>, <span>string <var>$elementName</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates a generic inspector element label with the given $nodeTypeSpecificPrefix.</p>
@@ -1234,7 +1238,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyLabelTranslationId">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#349-359" title="Go to source code">getPropertyLabelTranslationId</a>( <span>string <var>$nodeTypeSpecificPrefix</var></span>, <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#359-369" title="Go to source code">getPropertyLabelTranslationId</a>( <span>string <var>$nodeTypeSpecificPrefix</var></span>, <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates a property label with the given $nodeTypeSpecificPrefix.</p>
@@ -1274,7 +1278,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyConfigurationTranslationId">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#361-372" title="Go to source code">getPropertyConfigurationTranslationId</a>( <span>string <var>$nodeTypeSpecificPrefix</var></span>, <span>string <var>$propertyName</var></span>, <span>string <var>$labelPath</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#371-382" title="Go to source code">getPropertyConfigurationTranslationId</a>( <span>string <var>$nodeTypeSpecificPrefix</var></span>, <span>string <var>$propertyName</var></span>, <span>string <var>$labelPath</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates a property configuration-label with the given $nodeTypeSpecificPrefix.</p>
@@ -1316,7 +1320,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateNodeTypeLabelIdPrefix">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#374-388" title="Go to source code">generateNodeTypeLabelIdPrefix</a>( <span>string <var>$nodeTypeName</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#384-398" title="Go to source code">generateNodeTypeLabelIdPrefix</a>( <span>string <var>$nodeTypeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Generates a label prefix for a specific node type with this format: "Vendor_Package:NodeTypes.NodeTypeName"</p>
@@ -1354,7 +1358,7 @@ names in the used icon implementation</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_splitIdentifier">#</a>
-			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#390-418" title="Go to source code">splitIdentifier</a>( <span>string <var>$id</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Aspects.NodeTypeConfigurationEnrichmentAspect.html#400-428" title="Go to source code">splitIdentifier</a>( <span>string <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Splits an identifier string of the form PackageKey:id or PackageKey:Source:id into an array with the keys
@@ -1557,6 +1561,6 @@ id, source and packageKey.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?83455b2909358944d0ad519b6fd7f5dde7beadc9"></script>
+<script src="elementlist.js?357aca978af1b51d9b7aed051a2b3348606a0971"></script>
 </body>
 </html>
