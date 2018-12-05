@@ -960,7 +960,7 @@
 </span></span><span id="152" class="l"><span class="php-comment">     * @param int $limit Limit the result of unused assets displayed and removed for this run.
 </span></span><span id="153" class="l"><span class="php-comment">     * @return void
 </span></span><span id="154" class="l"><span class="php-comment">     */</span>
-</span><span id="155" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> removeUnusedCommand(string <span class="php-var">$assetSource</span> = <span class="php-quote">''</span>, bool <span class="php-var">$quiet</span> = <span class="php-keyword1">false</span>, bool <span class="php-var">$assumeYes</span> = <span class="php-keyword1">false</span>, string <span class="php-var">$onlyTags</span> = <span class="php-quote">''</span>, int <span class="php-var">$limit</span> = <span class="php-num">0</span>)
+</span><span id="155" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> removeUnusedCommand(string <span class="php-var">$assetSource</span> = <span class="php-quote">''</span>, bool <span class="php-var">$quiet</span> = <span class="php-keyword1">false</span>, bool <span class="php-var">$assumeYes</span> = <span class="php-keyword1">false</span>, string <span class="php-var">$onlyTags</span> = <span class="php-quote">''</span>, int <span class="php-var">$limit</span> = <span class="php-keyword1">null</span>)
 </span><span id="156" class="l">    {
 </span><span id="157" class="l">        <span class="php-var">$iterator</span> = <span class="php-var">$this</span>-&gt;assetRepository-&gt;findAllIterator();
 </span><span id="158" class="l">        <span class="php-var">$assetCount</span> = <span class="php-var">$this</span>-&gt;assetRepository-&gt;countAll();
@@ -971,7 +971,7 @@
 </span><span id="163" class="l">
 </span><span id="164" class="l">        <span class="php-var">$filterByAssetSourceIdentifier</span> = <span class="php-var">$assetSource</span>;
 </span><span id="165" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$filterByAssetSourceIdentifier</span> === <span class="php-quote">''</span>) {
-</span><span id="166" class="l">            !<span class="php-var">$quiet</span> &amp;&amp; <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;Searching for unused assets:&lt;/b&gt;'</span>);
+</span><span id="166" class="l">            !<span class="php-var">$quiet</span> &amp;&amp; <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;Searching for unused assets in all asset sources:&lt;/b&gt;'</span>);
 </span><span id="167" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="168" class="l">            !<span class="php-var">$quiet</span> &amp;&amp; <span class="php-var">$this</span>-&gt;outputLine(<span class="php-quote">'&lt;b&gt;Searching for unused assets of asset source &quot;%s&quot;:&lt;/b&gt;'</span>, [<span class="php-var">$filterByAssetSourceIdentifier</span>]);
 </span><span id="169" class="l">        }
@@ -991,7 +991,7 @@
 </span><span id="183" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;assetRepository-&gt;iterate(<span class="php-var">$iterator</span>) <span class="php-keyword1">as</span> <span class="php-var">$asset</span>) {
 </span><span id="184" class="l">            !<span class="php-var">$quiet</span> &amp;&amp; <span class="php-var">$this</span>-&gt;output-&gt;progressAdvance(<span class="php-num">1</span>);
 </span><span id="185" class="l">
-</span><span id="186" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$unusedAssetCount</span> === <span class="php-var">$limit</span>) {
+</span><span id="186" class="l">            <span class="php-keyword1">if</span> (<span class="php-var">$limit</span> !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-var">$unusedAssetCount</span> === <span class="php-var">$limit</span>) {
 </span><span id="187" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="188" class="l">            }
 </span><span id="189" class="l">
@@ -1167,6 +1167,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?eb9ca67868f668caeccd186aa2711a977b3116b2"></script>
+<script src="elementlist.js?77a3849cbfaf5a41ef73bcee6e2cb4995f5dbeef"></script>
 </body>
 </html>
