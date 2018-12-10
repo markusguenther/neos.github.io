@@ -995,7 +995,7 @@
 </span><span id="178" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$pathSegments</span> <span class="php-keyword1">as</span> <span class="php-var">$pathSegment</span>) {
 </span><span id="179" class="l">            <span class="php-keyword1">switch</span> (<span class="php-var">$pathSegment</span>) {
 </span><span id="180" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'.'</span>:
-</span><span id="181" class="l">                    <span class="php-keyword1">continue</span>;
+</span><span id="181" class="l">                    <span class="php-keyword1">continue</span> <span class="php-num">2</span>;
 </span><span id="182" class="l">                <span class="php-keyword1">break</span>;
 </span><span id="183" class="l">                <span class="php-keyword1">case</span> <span class="php-quote">'..'</span>:
 </span><span id="184" class="l">                    <span class="php-var">$absolutePath</span> = NodePaths::getParentPath(<span class="php-var">$absolutePath</span>);
