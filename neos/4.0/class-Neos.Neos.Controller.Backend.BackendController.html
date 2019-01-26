@@ -854,7 +854,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#25-107" title="Go to source code">Neos.Neos/Classes/Controller/Backend/BackendController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#25-120" title="Go to source code">Neos.Neos/Classes/Controller/Backend/BackendController.php</a>
 		<br>
 	</div>
 
@@ -874,7 +874,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#63-75" title="Go to source code">indexAction</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#63-78" title="Go to source code">indexAction</a>( )</code>
 
 			<div class="description short">
 				<p>Default action of the backend controller.</p>
@@ -886,6 +886,12 @@ Neos\Flow\Mvc\Controller\ActionController
 
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Mvc\Exception\StopActionException<br>
+						Neos\Flow\Mvc\Exception\UnsupportedRequestTypeException<br>
+						Neos\Flow\Mvc\Routing\Exception\MissingActionNameException
+					</div>
 
 
 
@@ -903,7 +909,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_switchSiteAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#77-93" title="Go to source code">switchSiteAction</a>( <span><code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#80-103" title="Go to source code">switchSiteAction</a>( <span><code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code> <var>$site</var></span> )</code>
 
 			<div class="description short">
 				<p>Redirects to the Neos backend on the given site, passing a one-time login token</p>
@@ -920,6 +926,16 @@ Neos\Flow\Mvc\Controller\ActionController
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Cache\Exception<br>
+						Neos\Cache\Exception\InvalidDataException<br>
+						Neos\Flow\Mvc\Exception\StopActionException<br>
+						Neos\Flow\Mvc\Exception\UnsupportedRequestTypeException<br>
+						Neos\Flow\Mvc\Routing\Exception\MissingActionNameException<br>
+						Neos\Flow\Session\Exception\SessionNotStartedException<br>
+						<code><a href="class-Neos.Neos.Exception.html">Neos\Neos\Exception</a></code>
+					</div>
 
 
 
@@ -937,7 +953,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_xliffAsJsonAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#95-106" title="Go to source code">xliffAsJsonAction</a>( <span>string <var>$locale</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Backend.BackendController.html#105-119" title="Go to source code">xliffAsJsonAction</a>( <span>string <var>$locale</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the cached json array with the xliff labels</p>
@@ -958,6 +974,11 @@ Neos\Flow\Mvc\Controller\ActionController
 						string
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\I18n\Exception<br>
+						Neos\Flow\I18n\Exception\InvalidLocaleIdentifierException
+					</div>
 
 
 
