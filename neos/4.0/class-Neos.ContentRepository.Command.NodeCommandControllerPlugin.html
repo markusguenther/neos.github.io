@@ -949,7 +949,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_invokeSubCommand">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#217-265" title="Go to source code">invokeSubCommand</a>( <span>string <var>$controllerCommandName</var></span>, <span>Neos\Flow\Cli\ConsoleOutput <var>$output</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$cleanup</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$skip</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$only</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#217-265" title="Go to source code">invokeSubCommand</a>( <span>string <var>$controllerCommandName</var></span>, <span>Neos\Flow\Cli\ConsoleOutput <var>$output</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>boolean <var>$dryRun</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$cleanup</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$skip</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$only</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>A method which runs the task implemented by the plugin for the given command</p>
@@ -1035,7 +1035,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createMissingChildNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#290-316" title="Go to source code">createMissingChildNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#290-316" title="Go to source code">createMissingChildNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Performs checks for missing child nodes according to the node's auto-create configuration and creates
@@ -1075,7 +1075,7 @@ them if necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createChildNodesByNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#318-434" title="Go to source code">createChildNodesByNodeType</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#318-434" title="Go to source code">createChildNodesByNodeType</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span>, <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
 
 			<div class="description short">
 				<p>Create missing child nodes for the given node type</p>
@@ -1113,7 +1113,7 @@ them if necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addMissingDefaultValues">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#436-459" title="Go to source code">addMissingDefaultValues</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#436-459" title="Go to source code">addMissingDefaultValues</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Performs checks for unset properties that has default values and sets them if necessary.</p>
@@ -1151,7 +1151,7 @@ them if necessary.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addMissingDefaultValuesByNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#461-529" title="Go to source code">addMissingDefaultValuesByNodeType</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span>, <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#461-529" title="Go to source code">addMissingDefaultValuesByNodeType</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span>, <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds missing default values for the given node type</p>
@@ -1263,7 +1263,7 @@ and removes them if found.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeOrphanNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#661-730" title="Go to source code">removeOrphanNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#661-730" title="Go to source code">removeOrphanNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Performs checks for orphan nodes removes them if found.</p>
@@ -1301,7 +1301,7 @@ and removes them if found.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeUndefinedProperties">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#732-798" title="Go to source code">removeUndefinedProperties</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#732-798" title="Go to source code">removeUndefinedProperties</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Performs checks for orphan nodes removes them if found.</p>
@@ -1727,7 +1727,7 @@ live workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reorderChildNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1201-1226" title="Go to source code">reorderChildNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1201-1226" title="Go to source code">reorderChildNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Reorder child nodes according to the current position configuration of child nodes.</p>
@@ -1765,7 +1765,7 @@ live workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reorderChildNodesByNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1228-1285" title="Go to source code">reorderChildNodesByNodeType</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1228-1285" title="Go to source code">reorderChildNodesByNodeType</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Reorder child nodes for the given node type</p>
@@ -1803,7 +1803,7 @@ live workspace.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_repairShadowNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1287-1318" title="Go to source code">repairShadowNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1287-1318" title="Go to source code">repairShadowNodes</a>( <span>string <var>$workspaceName</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Repair nodes whose shadow nodes are missing</p>
@@ -1844,7 +1844,7 @@ have different node paths, but don't have a corresponding shadow node with a "mo
 
 			<td class="name"><div>
 			<a class="anchor" href="#_fixShadowNodesInWorkspace">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1320-1376" title="Go to source code">fixShadowNodesInWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>boolean <var>$dryRun</var></span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeType.html">Neos\ContentRepository\Domain\Model\NodeType</a></code> <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Command.NodeCommandControllerPlugin.html#1320-1376" title="Go to source code">fixShadowNodesInWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span>, <span>boolean <var>$dryRun</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Collects all nodes with missing shadow nodes</p>
@@ -2209,6 +2209,6 @@ have different node paths, but don't have a corresponding shadow node with a "mo
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?357aca978af1b51d9b7aed051a2b3348606a0971"></script>
+<script src="elementlist.js?a98dfc344fdb5e85239ce5cf3471057e710456bb"></script>
 </body>
 </html>
