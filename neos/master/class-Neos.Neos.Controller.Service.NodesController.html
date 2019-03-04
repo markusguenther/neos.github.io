@@ -847,7 +847,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Controller.Service.NodesController.html#30-248" title="Go to source code">Neos.Neos/Classes/Controller/Service/NodesController.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Controller.Service.NodesController.html#30-250" title="Go to source code">Neos.Neos/Classes/Controller/Service/NodesController.php</a>
 		<br>
 	</div>
 
@@ -867,7 +867,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_indexAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#83-119" title="Go to source code">indexAction</a>( <span>string <var>$searchTerm</var> = <span class="php-quote">''</span></span>, <span>array <var>$nodeIdentifiers</var> = []</span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span>, <span>array <var>$nodeTypes</var> = [<span class="php-quote">'Neos.Neos:Document'</span>]</span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$contextNode</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#83-121" title="Go to source code">indexAction</a>( <span>string <var>$searchTerm</var> = <span class="php-quote">''</span></span>, <span>array <var>$nodeIdentifiers</var> = []</span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span>, <span>array <var>$nodeTypes</var> = [<span class="php-quote">'Neos.Neos:Document'</span>]</span>, <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$contextNode</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Shows a list of nodes</p>
@@ -915,7 +915,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_showAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#121-151" title="Go to source code">showAction</a>( <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#123-153" title="Go to source code">showAction</a>( <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Shows a specific node</p>
@@ -957,7 +957,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createAction">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#153-191" title="Go to source code">createAction</a>( <span>string <var>$mode</var></span>, <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span>, <span>array <var>$sourceDimensions</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#155-193" title="Go to source code">createAction</a>( <span>string <var>$mode</var></span>, <span>string <var>$identifier</var></span>, <span>string <var>$workspaceName</var> = <span class="php-quote">'live'</span></span>, <span>array <var>$dimensions</var> = []</span>, <span>array <var>$sourceDimensions</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Create a new node from an existing one</p>
@@ -1009,7 +1009,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addExistingNodeVariantInformationToResponse">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#193-226" title="Go to source code">addExistingNodeVariantInformationToResponse</a>( <span> <var>$identifier</var></span>, <span>Neos\Neos\Domain\Service\ContentContext <var>$context</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#195-228" title="Go to source code">addExistingNodeVariantInformationToResponse</a>( <span> <var>$identifier</var></span>, <span>Neos\Neos\Domain\Service\ContentContext <var>$context</var></span> )</code>
 
 			<div class="description short">
 				<p>If the node is not found, we <em>first</em> want to figure out whether the node exists in other dimensions or is really non-existent</p>
@@ -1045,7 +1045,7 @@ Neos\Flow\Mvc\Controller\ActionController
 
 			<td class="name"><div>
 			<a class="anchor" href="#_adoptNodeAndParents">#</a>
-			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#228-247" title="Go to source code">adoptNodeAndParents</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>Neos\Neos\Domain\Service\ContentContext <var>$contentContext</var></span>, <span>boolean <var>$copyContent</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Controller.Service.NodesController.html#230-249" title="Go to source code">adoptNodeAndParents</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$node</var></span>, <span>Neos\Neos\Domain\Service\ContentContext <var>$contentContext</var></span>, <span>boolean <var>$copyContent</var></span> )</code>
 
 			<div class="description short">
 				<p>Adopt (translate) the given node and parents that are not yet visible to the given context</p>
@@ -1303,6 +1303,6 @@ Neos\Flow\Mvc\Controller\ActionController
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ecab165b33a1427de262e7b6aaf46c2998922b98"></script>
+<script src="elementlist.js?49fd4fba0b5bfb06ba863e115a1d566f011fdfe3"></script>
 </body>
 </html>
