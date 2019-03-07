@@ -830,7 +830,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Service.ImageService.html#36-294" title="Go to source code">Neos.Media/Classes/Domain/Service/ImageService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Service.ImageService.html#36-301" title="Go to source code">Neos.Media/Classes/Domain/Service/ImageService.php</a>
 		<br>
 	</div>
 
@@ -850,7 +850,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#78-85" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#83-90" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				
@@ -884,7 +884,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_processImage">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#87-198" title="Go to source code">processImage</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$originalResource</var></span>, <span>array <var>$adjustments</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#92-204" title="Go to source code">processImage</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$originalResource</var></span>, <span>array <var>$adjustments</var></span>, <span>Neos\Media\Domain\Service\string <var>$format</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -899,6 +899,8 @@
 						<dt><var>$originalResource</var></dt>
 						<dd></dd>
 						<dt><var>$adjustments</var></dt>
+						<dd></dd>
+						<dt><var>$format</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -930,7 +932,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOptionsMergedWithDefaults">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#200-226" title="Go to source code">getOptionsMergedWithDefaults</a>( <span>array <var>$additionalOptions</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#206-233" title="Go to source code">getOptionsMergedWithDefaults</a>( <span>array <var>$additionalOptions</var> = []</span> )</code>
 
 			<div class="description short">
 				
@@ -972,7 +974,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getImageSize">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#228-259" title="Go to source code">getImageSize</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#235-266" title="Go to source code">getImageSize</a>( <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the size of a Flow PersistentResource that contains an image file.</p>
@@ -1014,7 +1016,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_applyAdjustments">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#261-281" title="Go to source code">applyAdjustments</a>( <span>Imagine\Imagick\Imagine\Image\ImageInterface <var>$image</var></span>, <span>array <var>$adjustments</var></span>, <span>boolean <var>&amp; $adjustmentsApplied</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#268-288" title="Go to source code">applyAdjustments</a>( <span>Imagine\Imagick\Imagine\Image\ImageInterface <var>$image</var></span>, <span>array <var>$adjustments</var></span>, <span>boolean <var>&amp; $adjustmentsApplied</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1060,7 +1062,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAnimatedGif">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#283-293" title="Go to source code">isAnimatedGif</a>( <span>string <var>$image</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.ImageService.html#290-300" title="Go to source code">isAnimatedGif</a>( <span>string <var>$image</var></span> )</code>
 
 			<div class="description short">
 				<p>Detects whether the given GIF image data contains more than one frame</p>
@@ -1269,6 +1271,31 @@
 				</div>
 			</td>
 		</tr>
+		<tr data-order="allowedFormats" id="$allowedFormats">
+			<td class="attributes"><code>
+				protected static 
+				array&lt;string&gt;
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Media.Domain.Service.ImageService.html#78-81" title="Go to source code"><var>$allowedFormats</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$allowedFormats" class="anchor">#</a>
+					<code>[<span class="php-quote">'jpg'</span>, <span class="php-quote">'jpeg'</span>, <span class="php-quote">'gif'</span>, <span class="php-quote">'png'</span>, <span class="php-quote">'wbmp'</span>, <span class="php-quote">'xbm'</span>, <span class="php-quote">'webp'</span>, <span class="php-quote">'bmp'</span>]</code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -1285,6 +1312,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?5f027eb93376465eb2684b37750c27888cdfe3ce"></script>
+<script src="elementlist.js?d90400acf0924cbb87feb0bc0a394f3c11df5879"></script>
 </body>
 </html>
