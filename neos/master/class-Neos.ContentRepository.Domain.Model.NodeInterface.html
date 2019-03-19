@@ -123,6 +123,10 @@
 						<a href="namespace-Neos.ContentRepository.Domain.Utility.html">
 							Utility						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.ValueObject.html">
+							ValueObject						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.ContentRepository.Eel.html">
@@ -789,6 +793,7 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Neos.ContentRepository.Domain.Model.AbstractNodeData.html">AbstractNodeData</a></li>
+				<li><a href="class-Neos.ContentRepository.Domain.Model.ArrayPropertyCollection.html">ArrayPropertyCollection</a></li>
 				<li><a href="class-Neos.ContentRepository.Domain.Model.ContentDimension.html">ContentDimension</a></li>
 				<li><a href="class-Neos.ContentRepository.Domain.Model.ContentObjectProxy.html">ContentObjectProxy</a></li>
 				<li><a href="class-Neos.ContentRepository.Domain.Model.ExpressionBasedNodeLabelGenerator.html">ExpressionBasedNodeLabelGenerator</a></li>
@@ -821,7 +826,9 @@
 
 
 	<div class="description">
-	<p>Interface for a Node</p>
+	<p>Interface for a Node. This is the central interface for the Neos Content Repository
+up to version 4.X; it will be REMOVED in version 5.0 and is replaced
+by Neos\ContentRepository\Domain\Projection\Content\TraversableNodeInterface.</p>
 	</div>
 
 
@@ -840,7 +847,7 @@
 
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#17-637" title="Go to source code">Neos.ContentRepository/Classes/Domain/Model/NodeInterface.php</a>
+			<b>Located at</b> <a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#19-653" title="Go to source code">Neos.ContentRepository/Classes/Domain/Model/NodeInterface.php</a>
 		<br>
 	</div>
 
@@ -860,7 +867,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setName">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#67-75" title="Go to source code">setName</a>( <span>string <var>$newName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#71-79" title="Go to source code">setName</a>( <span>string <var>$newName</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the name of the node to $newName, keeping it's position as it is</p>
@@ -901,7 +908,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#77-83" title="Go to source code">getName</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#81-88" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the name of this node</p>
@@ -910,6 +917,10 @@
 			<div class="description detailed hidden">
 				<p>Returns the name of this node</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use getNodeName() instead.<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -937,7 +948,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLabel">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#85-91" title="Go to source code">getLabel</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#90-96" title="Go to source code">getLabel</a>( )</code>
 
 			<div class="description short">
 				<p>Returns a full length plain text label of this node</p>
@@ -973,7 +984,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProperty">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#93-104" title="Go to source code">setProperty</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#98-109" title="Go to source code">setProperty</a>( <span>string <var>$propertyName</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the specified property.</p>
@@ -1015,7 +1026,7 @@ if it is settable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasProperty">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#106-116" title="Go to source code">hasProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#111-121" title="Go to source code">hasProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>If this node has a property with the given name.</p>
@@ -1059,7 +1070,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperty">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#118-129" title="Go to source code">getProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#123-134" title="Go to source code">getProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the specified property.</p>
@@ -1107,7 +1118,7 @@ there if it is gettable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeProperty">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#131-142" title="Go to source code">removeProperty</a>( <span>string <var>$propertyName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#136-147" title="Go to source code">removeProperty</a>( <span>string <var>$propertyName</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes the specified property.</p>
@@ -1144,14 +1155,14 @@ that object if it exists.</p>
 
 			<td class="attributes"><code>
 				 public 
-				array
+				<code><a href="class-Neos.ContentRepository.Domain.ValueObject.PropertyCollectionInterface.html">Neos\ContentRepository\Domain\ValueObject\PropertyCollectionInterface</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProperties">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#144-153" title="Go to source code">getProperties</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#149-158" title="Go to source code">getProperties</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all properties of this node.</p>
@@ -1167,7 +1178,7 @@ there.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Property values, indexed by their name
+						<code><a href="class-Neos.ContentRepository.Domain.ValueObject.PropertyCollectionInterface.html">Neos\ContentRepository\Domain\ValueObject\PropertyCollectionInterface</a></code><br>Property values
 					</div>
 
 
@@ -1183,14 +1194,14 @@ there.</p>
 
 			<td class="attributes"><code>
 				 public 
-				array
+				string[]
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPropertyNames">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#155-161" title="Go to source code">getPropertyNames</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#160-166" title="Go to source code">getPropertyNames</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of all properties of this node.</p>
@@ -1203,7 +1214,7 @@ there.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Property names
+						string[]<br>Property names
 					</div>
 
 
@@ -1226,7 +1237,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setContentObject">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#163-171" title="Go to source code">setContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#168-176" title="Go to source code">setContentObject</a>( <span>object <var>$contentObject</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets a content object for this node.</p>
@@ -1235,6 +1246,10 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Sets a content object for this node.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Attaching entities to nodes never really worked. Instead you can reference objects as node properties via their identifier<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1248,9 +1263,6 @@ there.</p>
 						InvalidArgumentException<br>if the given contentObject is no object.
 					</div>
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1267,7 +1279,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContentObject">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#173-179" title="Go to source code">getContentObject</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#178-184" title="Go to source code">getContentObject</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the content object of this node (if any).</p>
@@ -1276,6 +1288,10 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Returns the content object of this node (if any).</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Attaching entities to nodes never really worked. Instead you can reference objects as node properties via their identifier<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1284,9 +1300,6 @@ there.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1303,7 +1316,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unsetContentObject">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#181-187" title="Go to source code">unsetContentObject</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#186-192" title="Go to source code">unsetContentObject</a>( )</code>
 
 			<div class="description short">
 				<p>Unsets the content object of this node.</p>
@@ -1312,13 +1325,14 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Unsets the content object of this node.</p>
 
-
-
-
-
-					<h4>Api</h4>
+					<h4>Deprecated</h4>
 					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Attaching entities to nodes never really worked. Instead you can reference objects as node properties via their identifier<br>
 					</div>
+
+
+
+
 
 
 			</div>
@@ -1335,7 +1349,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#189-196" title="Go to source code">setNodeType</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#194-201" title="Go to source code">setNodeType</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the node type of this node.</p>
@@ -1372,7 +1386,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeType">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#198-204" title="Go to source code">getNodeType</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#203-209" title="Go to source code">getNodeType</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the node type of this node.</p>
@@ -1408,7 +1422,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHidden">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#206-213" title="Go to source code">setHidden</a>( <span>boolean <var>$hidden</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#211-218" title="Go to source code">setHidden</a>( <span>boolean <var>$hidden</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the "hidden" flag for this node.</p>
@@ -1445,7 +1459,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isHidden">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#215-221" title="Go to source code">isHidden</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#220-226" title="Go to source code">isHidden</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current state of the hidden flag</p>
@@ -1454,6 +1468,10 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Returns the current state of the hidden flag</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - 5.0 will provide a new API with to retrieve visibility restrictions<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1462,9 +1480,6 @@ there.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1481,7 +1496,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenBeforeDateTime">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#223-230" title="Go to source code">setHiddenBeforeDateTime</a>( <span>DateTime <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#228-235" title="Go to source code">setHiddenBeforeDateTime</a>( <span>DateTimeInterface <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the date and time when this node becomes potentially visible.</p>
@@ -1511,14 +1526,14 @@ there.</p>
 
 			<td class="attributes"><code>
 				 public 
-				DateTime
+				DateTimeInterface|null
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHiddenBeforeDateTime">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#232-238" title="Go to source code">getHiddenBeforeDateTime</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#237-243" title="Go to source code">getHiddenBeforeDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date and time before which this node will be automatically hidden.</p>
@@ -1527,17 +1542,18 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Returns the date and time before which this node will be automatically hidden.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - 5.0 will provide a new API with to retrieve visibility restrictions<br>
+					</div>
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						DateTime<br>Date before this node will be hidden
+						DateTimeInterface|null<br>Date before this node will be hidden - or null if no hidden before date is set
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1554,7 +1570,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenAfterDateTime">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#240-247" title="Go to source code">setHiddenAfterDateTime</a>( <span>DateTime <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#245-252" title="Go to source code">setHiddenAfterDateTime</a>( <span>DateTimeInterface <var>$dateTime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the date and time when this node should be automatically hidden</p>
@@ -1584,14 +1600,14 @@ there.</p>
 
 			<td class="attributes"><code>
 				 public 
-				DateTime
+				DateTimeInterface|null
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHiddenAfterDateTime">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#249-255" title="Go to source code">getHiddenAfterDateTime</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#254-260" title="Go to source code">getHiddenAfterDateTime</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date and time after which this node will be automatically hidden.</p>
@@ -1600,17 +1616,18 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Returns the date and time after which this node will be automatically hidden.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - 5.0 will provide a new API with to retrieve visibility restrictions<br>
+					</div>
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						DateTime<br>Date after which this node will be hidden
+						DateTimeInterface|null<br>Date after which this node will be hidden - or null if no hidden after date is set
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1627,7 +1644,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHiddenInIndex">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#257-264" title="Go to source code">setHiddenInIndex</a>( <span>boolean <var>$hidden</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#262-269" title="Go to source code">setHiddenInIndex</a>( <span>boolean <var>$hidden</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets if this node should be hidden in indexes, such as a site navigation.</p>
@@ -1664,7 +1681,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isHiddenInIndex">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#266-272" title="Go to source code">isHiddenInIndex</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#271-277" title="Go to source code">isHiddenInIndex</a>( )</code>
 
 			<div class="description short">
 				<p>If this node should be hidden in indexes</p>
@@ -1700,7 +1717,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAccessRoles">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#274-281" title="Go to source code">setAccessRoles</a>( <span>array <var>$accessRoles</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#279-286" title="Go to source code">setAccessRoles</a>( <span>array <var>$accessRoles</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the roles which are required to access this node</p>
@@ -1709,6 +1726,10 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Sets the roles which are required to access this node</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Use a Policy to restrict access to nodes<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1718,9 +1739,6 @@ there.</p>
 
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1737,7 +1755,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAccessRoles">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#283-289" title="Go to source code">getAccessRoles</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#288-294" title="Go to source code">getAccessRoles</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the names of defined access roles</p>
@@ -1746,6 +1764,10 @@ there.</p>
 			<div class="description detailed hidden">
 				<p>Returns the names of defined access roles</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Use a Policy to restrict access to nodes<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1754,9 +1776,6 @@ there.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1773,7 +1792,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPath">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#291-299" title="Go to source code">getPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#296-305" title="Go to source code">getPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the path of this node</p>
@@ -1784,6 +1803,10 @@ there.</p>
 
 <p>Example: /sites/mysitecom/homepage/about</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use findNodePath() instead.<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1811,7 +1834,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContextPath">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#301-309" title="Go to source code">getContextPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#307-315" title="Go to source code">getContextPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the absolute path of this node with additional context information (such as the workspace name).</p>
@@ -1822,6 +1845,10 @@ there.</p>
 
 <p>Example: /sites/mysitecom/homepage/about@user-admin</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - Use the node's NodeAddress instead<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1830,9 +1857,6 @@ there.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1849,7 +1873,7 @@ there.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDepth">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#311-318" title="Go to source code">getDepth</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#317-324" title="Go to source code">getDepth</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the level at which this node is located.
@@ -1860,6 +1884,10 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 				<p>Returns the level at which this node is located.
 Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - Use TraversableNodeInterface::findNodePath()->getDepth() instead<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1868,9 +1896,6 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1887,7 +1912,7 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setWorkspace">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#320-329" title="Go to source code">setWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#326-336" title="Go to source code">setWorkspace</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.Workspace.html">Neos\ContentRepository\Domain\Model\Workspace</a></code> <var>$workspace</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the workspace of this node.</p>
@@ -1899,6 +1924,10 @@ Counting starts with 0 for "/", 1 for "/foo", 2 for "/foo/bar" etc.</p>
 <p>This method is only for internal use by the content repository. Changing
 the workspace of a node manually may lead to unexpected behavior.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - From 5.0 you will be able to use the ContentStream instead<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1924,7 +1953,7 @@ the workspace of a node manually may lead to unexpected behavior.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWorkspace">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#331-337" title="Go to source code">getWorkspace</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#338-344" title="Go to source code">getWorkspace</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the workspace this node is contained in</p>
@@ -1933,6 +1962,10 @@ the workspace of a node manually may lead to unexpected behavior.</p>
 			<div class="description detailed hidden">
 				<p>Returns the workspace this node is contained in</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - From 5.0 you will be able to use the ContentStream instead<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1941,9 +1974,6 @@ the workspace of a node manually may lead to unexpected behavior.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -1960,7 +1990,7 @@ the workspace of a node manually may lead to unexpected behavior.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getIdentifier">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#339-353" title="Go to source code">getIdentifier</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#346-360" title="Go to source code">getIdentifier</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the identifier of this node.</p>
@@ -1977,6 +2007,10 @@ workspaces.</p>
 <p>It is okay and recommended to use this identifier for synchronisation purposes
 as it does not change even if all of the nodes content or its path changes.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use getNodeAggregateIdentifier() instead.<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -1985,9 +2019,6 @@ as it does not change even if all of the nodes content or its path changes.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2004,7 +2035,7 @@ as it does not change even if all of the nodes content or its path changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setIndex">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#355-363" title="Go to source code">setIndex</a>( <span>integer <var>$index</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#362-371" title="Go to source code">setIndex</a>( <span>integer <var>$index</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the index of this node</p>
@@ -2015,6 +2046,10 @@ as it does not change even if all of the nodes content or its path changes.</p>
 
 <p>This method is for internal use and must only be used by other nodes!</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -2040,7 +2075,7 @@ as it does not change even if all of the nodes content or its path changes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getIndex">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#365-371" title="Go to source code">getIndex</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#373-380" title="Go to source code">getIndex</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the index of this node which determines the order among siblings
@@ -2051,6 +2086,10 @@ with the same parent node.</p>
 				<p>Returns the index of this node which determines the order among siblings
 with the same parent node.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2075,7 +2114,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParent">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#373-379" title="Go to source code">getParent</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#382-388" title="Go to source code">getParent</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the parent node of this node</p>
@@ -2084,6 +2123,10 @@ with the same parent node.</p>
 			<div class="description detailed hidden">
 				<p>Returns the parent node of this node</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use findParentNode() instead.<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2092,9 +2135,6 @@ with the same parent node.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2111,7 +2151,7 @@ with the same parent node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParentPath">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#381-387" title="Go to source code">getParentPath</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#390-396" title="Go to source code">getParentPath</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the parent node path</p>
@@ -2120,6 +2160,10 @@ with the same parent node.</p>
 			<div class="description detailed hidden">
 				<p>Returns the parent node path</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use findParentNode()->findNodePath() instead.<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2128,9 +2172,6 @@ with the same parent node.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2140,14 +2181,14 @@ with the same parent node.</p>
 
 			<td class="attributes"><code>
 				 public 
-				Node
+				<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNode">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#389-401" title="Go to source code">createNode</a>( <span>string <var>$name</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#398-410" title="Go to source code">createNode</a>( <span>string <var>$name</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates, adds and returns a child node of this node. Also sets default
@@ -2171,7 +2212,7 @@ properties and creates default subnodes.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						Node
+						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -2192,14 +2233,14 @@ properties and creates default subnodes.</p>
 
 			<td class="attributes"><code>
 				 public 
-				Node
+				<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createSingleNode">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#403-416" title="Go to source code">createSingleNode</a>( <span>string <var>$name</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#412-425" title="Go to source code">createSingleNode</a>( <span>string <var>$name</var></span>, <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$identifier</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates, adds and returns a child node of this node, without setting default
@@ -2225,7 +2266,7 @@ properties or creating subnodes.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						Node
+						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -2250,7 +2291,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createNodeFromTemplate">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#418-426" title="Go to source code">createNodeFromTemplate</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeTemplate.html">Neos\ContentRepository\Domain\Model\NodeTemplate</a></code> <var>$nodeTemplate</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#427-435" title="Go to source code">createNodeFromTemplate</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeTemplate.html">Neos\ContentRepository\Domain\Model\NodeTemplate</a></code> <var>$nodeTemplate</var></span>, <span>string <var>$nodeName</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates and persists a node from the given $nodeTemplate as child node</p>
@@ -2293,7 +2334,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNode">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#428-435" title="Go to source code">getNode</a>( <span>string <var>$path</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#437-444" title="Go to source code">getNode</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a node specified by the given relative path.</p>
@@ -2302,6 +2343,10 @@ properties or creating subnodes.</p>
 			<div class="description detailed hidden">
 				<p>Returns a node specified by the given relative path.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - use TraversableNodeInterface::findNamedChildNode() instead - for absolute paths a new API will be added with 5.0<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -2315,9 +2360,6 @@ properties or creating subnodes.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2334,7 +2376,7 @@ properties or creating subnodes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPrimaryChildNode">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#437-446" title="Go to source code">getPrimaryChildNode</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#446-455" title="Go to source code">getPrimaryChildNode</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the primary child node of this node.</p>
@@ -2343,9 +2385,13 @@ properties or creating subnodes.</p>
 			<div class="description detailed hidden">
 				<p>Returns the primary child node of this node.</p>
 
-<p>Which node acts as a primary child node will in the future depend on the
+<p>Which node acts as a primary child node will in the future depend on theLayeredWorkspacesTest
 node type. For now it is just the first child node.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, without any replacement.<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2354,9 +2400,6 @@ node type. For now it is just the first child node.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2373,7 +2416,7 @@ node type. For now it is just the first child node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getChildNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#448-458" title="Go to source code">getChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#457-467" title="Go to source code">getChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Returns all direct child nodes of this node.
@@ -2384,6 +2427,10 @@ If a node type is specified, only nodes of that type are returned.</p>
 				<p>Returns all direct child nodes of this node.
 If a node type is specified, only nodes of that type are returned.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use findChildNodes() instead.<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -2401,9 +2448,6 @@ If a node type is specified, only nodes of that type are returned.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2420,7 +2464,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasChildNodes">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#460-467" title="Go to source code">hasChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#469-476" title="Go to source code">hasChildNodes</a>( <span>string <var>$nodeTypeFilter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Checks if this node has any child nodes.</p>
@@ -2429,6 +2473,10 @@ If a node type is specified, only nodes of that type are returned.</p>
 			<div class="description detailed hidden">
 				<p>Checks if this node has any child nodes.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3, use findChildNodes() instead and count the result<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -2442,9 +2490,6 @@ If a node type is specified, only nodes of that type are returned.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2461,7 +2506,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#469-475" title="Go to source code">remove</a>( )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#478-484" title="Go to source code">remove</a>( )</code>
 
 			<div class="description short">
 				<p>Removes this node and all its child nodes. This is an alias for setRemoved(true)</p>
@@ -2493,7 +2538,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setRemoved">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#477-484" title="Go to source code">setRemoved</a>( <span>boolean <var>$removed</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#486-493" title="Go to source code">setRemoved</a>( <span>boolean <var>$removed</var></span> )</code>
 
 			<div class="description short">
 				<p>Removes this node and all its child nodes or sets ONLY this node to not being removed.</p>
@@ -2530,7 +2575,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemoved">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#486-492" title="Go to source code">isRemoved</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#495-501" title="Go to source code">isRemoved</a>( )</code>
 
 			<div class="description short">
 				<p>If this node is a removed node.</p>
@@ -2539,6 +2584,10 @@ If a node type is specified, only nodes of that type are returned.</p>
 			<div class="description detailed hidden">
 				<p>If this node is a removed node.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - 5.0 will provide a new API with to retrieve removed nodes<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2547,9 +2596,6 @@ If a node type is specified, only nodes of that type are returned.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2566,7 +2612,7 @@ If a node type is specified, only nodes of that type are returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isVisible">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#494-502" title="Go to source code">isVisible</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#503-511" title="Go to source code">isVisible</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this node is "visible".
@@ -2579,6 +2625,10 @@ taken into account.</p>
 For this the "hidden" flag and the "hiddenBeforeDateTime" and "hiddenAfterDateTime" dates are
 taken into account.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - 5.0 will provide a new API with to retrieve visibility restrictions<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2587,9 +2637,6 @@ taken into account.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2606,7 +2653,7 @@ taken into account.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAccessible">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#504-510" title="Go to source code">isAccessible</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#513-519" title="Go to source code">isAccessible</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if this node may be accessed according to the current security context.</p>
@@ -2615,6 +2662,10 @@ taken into account.</p>
 			<div class="description detailed hidden">
 				<p>Tells if this node may be accessed according to the current security context.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Use a Policy to restrict access to nodes<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2623,9 +2674,6 @@ taken into account.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2642,7 +2690,7 @@ taken into account.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasAccessRestrictions">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#512-519" title="Go to source code">hasAccessRestrictions</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#521-528" title="Go to source code">hasAccessRestrictions</a>( )</code>
 
 			<div class="description short">
 				<p>Tells if a node, in general,  has access restrictions, independent of the
@@ -2653,6 +2701,10 @@ current security context.</p>
 				<p>Tells if a node, in general,  has access restrictions, independent of the
 current security context.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement. Use a Policy to restrict access to nodes<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -2661,9 +2713,6 @@ current security context.</p>
 					</div>
 
 
-					<h4>Api</h4>
-					<div class="list">
-					</div>
 
 
 			</div>
@@ -2680,7 +2729,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isNodeTypeAllowedAsChildNode">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#521-527" title="Go to source code">isNodeTypeAllowedAsChildNode</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#530-537" title="Go to source code">isNodeTypeAllowedAsChildNode</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given $nodeType would be allowed as a child node of this node according to the configured constraints.</p>
@@ -2689,6 +2738,10 @@ current security context.</p>
 			<div class="description detailed hidden">
 				<p>Checks if the given $nodeType would be allowed as a child node of this node according to the configured constraints.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - There will be a new utility method with 5.0 (probably part of the NodeType API)<br>
+					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -2718,7 +2771,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveBefore">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#529-536" title="Go to source code">moveBefore</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#539-546" title="Go to source code">moveBefore</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Moves this node before the given node</p>
@@ -2755,7 +2808,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveAfter">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#538-545" title="Go to source code">moveAfter</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#548-555" title="Go to source code">moveAfter</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Moves this node after the given node</p>
@@ -2792,7 +2845,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_moveInto">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#547-554" title="Go to source code">moveInto</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#557-564" title="Go to source code">moveInto</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Moves this node into the given node</p>
@@ -2829,7 +2882,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyBefore">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#556-565" title="Go to source code">copyBefore</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#566-575" title="Go to source code">copyBefore</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies this node before the given node</p>
@@ -2849,7 +2902,7 @@ current security context.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code><br>The copied node
 					</div>
 
 					<h4>Throws</h4>
@@ -2876,7 +2929,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyAfter">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#567-576" title="Go to source code">copyAfter</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#577-586" title="Go to source code">copyAfter</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies this node after the given node</p>
@@ -2896,7 +2949,7 @@ current security context.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code><br>The copied node
 					</div>
 
 					<h4>Throws</h4>
@@ -2923,7 +2976,7 @@ current security context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copyInto">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#578-588" title="Go to source code">copyInto</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#588-598" title="Go to source code">copyInto</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$referenceNode</var></span>, <span>string <var>$nodeName</var></span> )</code>
 
 			<div class="description short">
 				<p>Copies this node to below the given node. The new node will be added behind
@@ -2945,7 +2998,7 @@ any existing sub nodes of the given node.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code>
+						<code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code><br>The copied node
 					</div>
 
 					<h4>Throws</h4>
@@ -2972,7 +3025,7 @@ any existing sub nodes of the given node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNodeData">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#590-595" title="Go to source code">getNodeData</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#600-606" title="Go to source code">getNodeData</a>( )</code>
 
 			<div class="description short">
 				<p>Return the NodeData representation of the node.</p>
@@ -2981,6 +3034,10 @@ any existing sub nodes of the given node.</p>
 			<div class="description detailed hidden">
 				<p>Return the NodeData representation of the node.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -3005,7 +3062,7 @@ any existing sub nodes of the given node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContext">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#597-602" title="Go to source code">getContext</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#608-614" title="Go to source code">getContext</a>( )</code>
 
 			<div class="description short">
 				<p>Return the context of the node</p>
@@ -3014,6 +3071,10 @@ any existing sub nodes of the given node.</p>
 			<div class="description detailed hidden">
 				<p>Return the context of the node</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed with 5.0 without replacement, but you can access the node's subgraph via TraversableNodeInterface::getSubgraph()<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -3038,7 +3099,7 @@ any existing sub nodes of the given node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDimensions">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#604-609" title="Go to source code">getDimensions</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#616-622" title="Go to source code">getDimensions</a>( )</code>
 
 			<div class="description short">
 				<p>Return the assigned content dimensions of the node.</p>
@@ -3047,6 +3108,10 @@ any existing sub nodes of the given node.</p>
 			<div class="description detailed hidden">
 				<p>Return the assigned content dimensions of the node.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be replaced in 5.0 by getOriginDimensionSpacePoint() and getDimensionSpacePoint()<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -3071,7 +3136,7 @@ any existing sub nodes of the given node.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createVariantForContext">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#611-618" title="Go to source code">createVariantForContext</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Service.Context.html">Neos\ContentRepository\Domain\Service\Context</a></code> <var>$context</var></span> )</code>
+			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#624-631" title="Go to source code">createVariantForContext</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Service.Context.html">Neos\ContentRepository\Domain\Service\Context</a></code> <var>$context</var></span> )</code>
 
 			<div class="description short">
 				<p>Given a context a new node is returned that is like this node, but
@@ -3111,7 +3176,7 @@ lives in the new context.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAutoCreated">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#620-626" title="Go to source code">isAutoCreated</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#633-641" title="Go to source code">isAutoCreated</a>( )</code>
 
 			<div class="description short">
 				<p>Determine if this node is configured as auto-created childNode of the parent node. If that is the case, it
@@ -3122,6 +3187,11 @@ should not be deleted.</p>
 				<p>Determine if this node is configured as auto-created childNode of the parent node. If that is the case, it
 should not be deleted.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							<p>with version 4.3 - will be removed with 5.0. This information should not be required usually. Otherwise it can be determined via:
+if (array_key_exists((string)$node->getNodeName(), $parent->getNodeType()->getAutoCreatedChildNodes()))</p><br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -3146,7 +3216,7 @@ should not be deleted.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOtherNodeVariants">#</a>
-			<code><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#628-636" title="Go to source code">getOtherNodeVariants</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.ContentRepository.Domain.Model.NodeInterface.html#643-652" title="Go to source code">getOtherNodeVariants</a>( )</code>
 
 			<div class="description short">
 				<p>Get other variants of this node (with different dimension values)</p>
@@ -3158,6 +3228,10 @@ should not be deleted.</p>
 <p>A variant of a node can have different dimension values and path (for non-aggregate nodes).
 The resulting node instances might belong to a different context.</p>
 
+					<h4>Deprecated</h4>
+					<div class="list">
+							with version 4.3 - will be removed in 5.0 without replacement. But the subGraph can be used to determine other variants of a node<br>
+					</div>
 
 
 					<h4>Returns</h4>
@@ -3189,7 +3263,7 @@ The resulting node instances might belong to a different context.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MATCH_PATTERN_PATH.html#24-27" title="Go to source code"><b>MATCH_PATTERN_PATH</b></a>
+						<a href="source-constant-MATCH_PATTERN_PATH.html#28-31" title="Go to source code"><b>MATCH_PATTERN_PATH</b></a>
 					</code>
 
 					<div class="description short">
@@ -3213,7 +3287,7 @@ The resulting node instances might belong to a different context.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MATCH_PATTERN_CONTEXTPATH.html#29-60" title="Go to source code"><b>MATCH_PATTERN_CONTEXTPATH</b></a>
+						<a href="source-constant-MATCH_PATTERN_CONTEXTPATH.html#33-64" title="Go to source code"><b>MATCH_PATTERN_CONTEXTPATH</b></a>
 					</code>
 
 					<div class="description short">
@@ -3266,7 +3340,7 @@ workspace name. This pattern is used at least in the route part handler.</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-constant-MATCH_PATTERN_NAME.html#62-65" title="Go to source code"><b>MATCH_PATTERN_NAME</b></a>
+						<a href="source-constant-MATCH_PATTERN_NAME.html#66-69" title="Go to source code"><b>MATCH_PATTERN_NAME</b></a>
 					</code>
 
 					<div class="description short">
@@ -3299,6 +3373,6 @@ workspace name. This pattern is used at least in the route part handler.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?d90400acf0924cbb87feb0bc0a394f3c11df5879"></script>
+<script src="elementlist.js?61ca0d40b2702479ad61a4527111b3e1c4d58d65"></script>
 </body>
 </html>

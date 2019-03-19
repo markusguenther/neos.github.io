@@ -123,6 +123,10 @@
 						<a href="namespace-Neos.ContentRepository.Domain.Utility.html">
 							Utility						</a>
 							</li>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.ValueObject.html">
+							ValueObject						</a>
+							</li>
 								</ul></li>
 					<li>
 						<a href="namespace-Neos.ContentRepository.Eel.html">
@@ -848,7 +852,7 @@
 				<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Neos.Domain.Service.FusionService.html#24-292" title="Go to source code">Neos.Neos/Classes/Domain/Service/FusionService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Neos.Domain.Service.FusionService.html#26-308" title="Go to source code">Neos.Neos/Classes/Domain/Service/FusionService.php</a>
 		<br>
 	</div>
 
@@ -868,7 +872,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createRuntime">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#104-118" title="Go to source code">createRuntime</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$currentSiteNode</var></span>, <span>Neos\Flow\Mvc\Controller\ControllerContext <var>$controllerContext</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#112-126" title="Go to source code">createRuntime</a>( <span>Neos\ContentRepository\Domain\Projection\Content\TraversableNodeInterface <var>$currentSiteNode</var></span>, <span>Neos\Flow\Mvc\Controller\ControllerContext <var>$controllerContext</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a runtime for the given site node</p>
@@ -913,7 +917,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMergedFusionObjectTree">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#120-144" title="Go to source code">getMergedFusionObjectTree</a>( <span><code><a href="class-Neos.ContentRepository.Domain.Model.NodeInterface.html">Neos\ContentRepository\Domain\Model\NodeInterface</a></code> <var>$startNode</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#128-151" title="Go to source code">getMergedFusionObjectTree</a>( <span>Neos\ContentRepository\Domain\Projection\Content\TraversableNodeInterface <var>$startNode</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns a merged Fusion object tree in the context of the given nodes</p>
@@ -926,7 +930,7 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$startNode</var></dt>
-						<dd>Node marking the starting point</dd>
+						<dd>Node marking the starting point (i.e. the "Site" node)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -945,6 +949,44 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="getSiteForSiteNode" id="_getSiteForSiteNode">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSiteForSiteNode">#</a>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#153-160" title="Go to source code">getSiteForSiteNode</a>( <span>Neos\ContentRepository\Domain\Projection\Content\TraversableNodeInterface <var>$siteNode</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$siteNode</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Neos.Neos.Domain.Model.Site.html">Neos\Neos\Domain\Model\Site</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="readExternalFusionFile" id="_readExternalFusionFile">
 
 			<td class="attributes"><code>
@@ -956,7 +998,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_readExternalFusionFile">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#146-156" title="Go to source code">readExternalFusionFile</a>( <span>string <var>$pathAndFilename</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#162-172" title="Go to source code">readExternalFusionFile</a>( <span>string <var>$pathAndFilename</var></span> )</code>
 
 			<div class="description short">
 				<p>Reads the Fusion file from the given path and filename.
@@ -996,7 +1038,7 @@ If it doesn't exist, this function will just return an empty string.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateNodeTypeDefinitions">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#158-174" title="Go to source code">generateNodeTypeDefinitions</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#174-190" title="Go to source code">generateNodeTypeDefinitions</a>( )</code>
 
 			<div class="description short">
 				<p>Generate Fusion prototype definitions for all node types</p>
@@ -1035,7 +1077,7 @@ If it doesn't exist, this function will just return an empty string.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateFusionForNodeType">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#176-200" title="Go to source code">generateFusionForNodeType</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#192-216" title="Go to source code">generateFusionForNodeType</a>( <span>Neos\ContentRepository\Domain\Model\NodeType <var>$nodeType</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate a Fusion prototype definition for a given node type</p>
@@ -1080,7 +1122,7 @@ nodeType-configuration 'fusion.prototypeGenerator'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFusionIncludes">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#202-216" title="Go to source code">getFusionIncludes</a>( <span>array <var>$fusionResources</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#218-232" title="Go to source code">getFusionIncludes</a>( <span>array <var>$fusionResources</var></span> )</code>
 
 			<div class="description short">
 				<p>Concatenate the given Fusion resources with include statements</p>
@@ -1118,7 +1160,7 @@ nodeType-configuration 'fusion.prototypeGenerator'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareAutoIncludeFusion">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#218-236" title="Go to source code">prepareAutoIncludeFusion</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#234-252" title="Go to source code">prepareAutoIncludeFusion</a>( )</code>
 
 			<div class="description short">
 				<p>Prepares an array with Fusion paths to auto include before the Site Fusion.</p>
@@ -1151,7 +1193,7 @@ nodeType-configuration 'fusion.prototypeGenerator'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setSiteRootFusionPattern">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#238-247" title="Go to source code">setSiteRootFusionPattern</a>( <span>string <var>$siteRootFusionPattern</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#254-263" title="Go to source code">setSiteRootFusionPattern</a>( <span>string <var>$siteRootFusionPattern</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the pattern for including the site root Fusion</p>
@@ -1185,7 +1227,7 @@ nodeType-configuration 'fusion.prototypeGenerator'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPrependFusionIncludes">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#249-257" title="Go to source code">getPrependFusionIncludes</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#265-273" title="Go to source code">getPrependFusionIncludes</a>( )</code>
 
 			<div class="description short">
 				<p>Get the Fusion resources that are included before the site Fusion.</p>
@@ -1218,7 +1260,7 @@ nodeType-configuration 'fusion.prototypeGenerator'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPrependFusionIncludes">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#259-269" title="Go to source code">setPrependFusionIncludes</a>( <span>array <var>$prependFusionIncludes</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#275-285" title="Go to source code">setPrependFusionIncludes</a>( <span>array <var>$prependFusionIncludes</var></span> )</code>
 
 			<div class="description short">
 				<p>Set Fusion resources that should be prepended before the site Fusion,
@@ -1254,7 +1296,7 @@ it defaults to the Neos Root.fusion Fusion.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAppendFusionIncludes">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#271-279" title="Go to source code">getAppendFusionIncludes</a>( )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#287-295" title="Go to source code">getAppendFusionIncludes</a>( )</code>
 
 			<div class="description short">
 				<p>Get Fusion resources that will be appended after the site Fusion.</p>
@@ -1287,7 +1329,7 @@ it defaults to the Neos Root.fusion Fusion.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setAppendFusionIncludes">#</a>
-			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#281-291" title="Go to source code">setAppendFusionIncludes</a>( <span>array <var>$appendFusionIncludes</var></span> )</code>
+			<code><a href="source-class-Neos.Neos.Domain.Service.FusionService.html#297-307" title="Go to source code">setAppendFusionIncludes</a>( <span>array <var>$appendFusionIncludes</var></span> )</code>
 
 			<div class="description short">
 				<p>Set Fusion resources that should be appended after the site Fusion,
@@ -1335,7 +1377,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#32-36" title="Go to source code"><var>$fusionParser</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#34-38" title="Go to source code"><var>$fusionParser</var></a>
 
 				<div class="description short">
 					
@@ -1356,6 +1398,34 @@ this defaults to an empty array.</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="siteRepository" id="$siteRepository">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Neos.Domain.Repository.SiteRepository.html">Neos\Neos\Domain\Repository\SiteRepository</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#40-44" title="Go to source code"><var>$siteRepository</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$siteRepository" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="objectManager" id="$objectManager">
 			<td class="attributes"><code>
 				protected  
@@ -1363,7 +1433,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#38-42" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#46-50" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1391,7 +1461,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#44-49" title="Go to source code"><var>$siteRootFusionPattern</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#52-57" title="Go to source code"><var>$siteRootFusionPattern</var></a>
 
 				<div class="description short">
 					<p>Pattern used for determining the Fusion root file for a site</p>
@@ -1416,7 +1486,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#51-56" title="Go to source code"><var>$autoIncludeFusionPattern</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#59-64" title="Go to source code"><var>$autoIncludeFusionPattern</var></a>
 
 				<div class="description short">
 					<p>Pattern used for determining the Fusion root file for autoIncludes</p>
@@ -1441,7 +1511,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#58-70" title="Go to source code"><var>$prependFusionIncludes</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#66-78" title="Go to source code"><var>$prependFusionIncludes</var></a>
 
 				<div class="description short">
 					<p>Array of Fusion files to include before the site Fusion</p>
@@ -1474,7 +1544,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#72-84" title="Go to source code"><var>$appendFusionIncludes</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#80-92" title="Go to source code"><var>$appendFusionIncludes</var></a>
 
 				<div class="description short">
 					<p>Array of Fusion files to include after the site Fusion</p>
@@ -1507,7 +1577,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#86-90" title="Go to source code"><var>$autoIncludeConfiguration</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#94-98" title="Go to source code"><var>$autoIncludeConfiguration</var></a>
 
 				<div class="description short">
 					
@@ -1535,7 +1605,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#92-96" title="Go to source code"><var>$nodeTypeManager</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#100-104" title="Go to source code"><var>$nodeTypeManager</var></a>
 
 				<div class="description short">
 					
@@ -1563,7 +1633,7 @@ this defaults to an empty array.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#98-102" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-Neos.Neos.Domain.Service.FusionService.html#106-110" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1600,6 +1670,6 @@ this defaults to an empty array.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?d90400acf0924cbb87feb0bc0a394f3c11df5879"></script>
+<script src="elementlist.js?61ca0d40b2702479ad61a4527111b3e1c4d58d65"></script>
 </body>
 </html>
