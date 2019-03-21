@@ -835,7 +835,7 @@ about usage of assets and rendering thumbnails.</p>
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Service.AssetService.html#36-349" title="Go to source code">Neos.Media/Classes/Domain/Service/AssetService.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Service.AssetService.html#38-353" title="Go to source code">Neos.Media/Classes/Domain/Service/AssetService.php</a>
 		<br>
 	</div>
 
@@ -855,7 +855,7 @@ about usage of assets and rendering thumbnails.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRepository">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#91-107" title="Go to source code">getRepository</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#93-109" title="Go to source code">getRepository</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the repository for an asset</p>
@@ -896,7 +896,7 @@ about usage of assets and rendering thumbnails.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getThumbnailUriAndSizeForAsset">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#109-149" title="Go to source code">getThumbnailUriAndSizeForAsset</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>Neos\Media\Domain\Model\ThumbnailConfiguration <var>$configuration</var></span>, <span>Neos\Flow\Mvc\ActionRequest <var>$request</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#111-153" title="Go to source code">getThumbnailUriAndSizeForAsset</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>Neos\Media\Domain\Model\ThumbnailConfiguration <var>$configuration</var></span>, <span>Neos\Flow\Mvc\ActionRequest <var>$request</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Calculates the dimensions of the thumbnail to be generated and returns the thumbnail URI.
@@ -925,7 +925,9 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-Neos.Media.Exception.AssetServiceException.html">Neos\Media\Exception\AssetServiceException</a></code>
+						<code><a href="class-Neos.Media.Exception.AssetServiceException.html">Neos\Media\Exception\AssetServiceException</a></code><br>
+						<code><a href="class-Neos.Media.Exception.ThumbnailServiceException.html">Neos\Media\Exception\ThumbnailServiceException</a></code><br>
+						Neos\Flow\Mvc\Routing\Exception\MissingActionNameException
 					</div>
 
 
@@ -944,7 +946,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsageStrategies">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#151-170" title="Go to source code">getUsageStrategies</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#155-174" title="Go to source code">getUsageStrategies</a>( )</code>
 
 			<div class="description short">
 				<p>Returns all registered asset usage strategies</p>
@@ -981,7 +983,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsageReferences">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#172-187" title="Go to source code">getUsageReferences</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#176-191" title="Go to source code">getUsageReferences</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of asset usage references.</p>
@@ -1019,7 +1021,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsageCount">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#189-204" title="Go to source code">getUsageCount</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#193-208" title="Go to source code">getUsageCount</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the total count of times an asset is used.</p>
@@ -1057,7 +1059,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInUse">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#206-222" title="Go to source code">isInUse</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#210-226" title="Go to source code">isInUse</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns true if the asset is used.</p>
@@ -1095,7 +1097,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_validateRemoval">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#224-239" title="Go to source code">validateRemoval</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#228-243" title="Go to source code">validateRemoval</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Validates if the asset can be removed</p>
@@ -1133,7 +1135,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replaceAssetResource">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#241-304" title="Go to source code">replaceAssetResource</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#245-308" title="Go to source code">replaceAssetResource</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>Neos\Flow\ResourceManagement\PersistentResource <var>$resource</var></span>, <span>array <var>$options</var> = []</span> )</code>
 
 			<div class="description short">
 				<p>Replace resource on an asset. Takes variants and redirect handling into account.</p>
@@ -1171,7 +1173,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAssetCreated">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#306-315" title="Go to source code">emitAssetCreated</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#310-319" title="Go to source code">emitAssetCreated</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that an asset was added.</p>
@@ -1208,7 +1210,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAssetRemoved">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#317-326" title="Go to source code">emitAssetRemoved</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#321-330" title="Go to source code">emitAssetRemoved</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that an asset was removed.</p>
@@ -1245,7 +1247,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAssetUpdated">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#328-337" title="Go to source code">emitAssetUpdated</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#332-341" title="Go to source code">emitAssetUpdated</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that an asset was updated.</p>
@@ -1282,7 +1284,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAssetResourceReplaced">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#339-348" title="Go to source code">emitAssetResourceReplaced</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Service.AssetService.html#343-352" title="Go to source code">emitAssetResourceReplaced</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span> )</code>
 
 			<div class="description short">
 				<p>Signals that a resource on an asset has been replaced</p>
@@ -1331,7 +1333,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#44-48" title="Go to source code"><var>$resourceManager</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#46-50" title="Go to source code"><var>$resourceManager</var></a>
 
 				<div class="description short">
 					
@@ -1359,7 +1361,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#50-54" title="Go to source code"><var>$thumbnailService</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#52-56" title="Go to source code"><var>$thumbnailService</var></a>
 
 				<div class="description short">
 					
@@ -1387,7 +1389,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#56-60" title="Go to source code"><var>$uriBuilder</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#58-62" title="Go to source code"><var>$uriBuilder</var></a>
 
 				<div class="description short">
 					
@@ -1415,7 +1417,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#62-66" title="Go to source code"><var>$objectManager</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#64-68" title="Go to source code"><var>$objectManager</var></a>
 
 				<div class="description short">
 					
@@ -1443,7 +1445,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#68-72" title="Go to source code"><var>$reflectionService</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#70-74" title="Go to source code"><var>$reflectionService</var></a>
 
 				<div class="description short">
 					
@@ -1471,7 +1473,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#74-77" title="Go to source code"><var>$usageStrategies</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#76-79" title="Go to source code"><var>$usageStrategies</var></a>
 
 				<div class="description short">
 					
@@ -1496,7 +1498,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#79-83" title="Go to source code"><var>$packageManager</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#81-85" title="Go to source code"><var>$packageManager</var></a>
 
 				<div class="description short">
 					
@@ -1524,7 +1526,7 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#85-89" title="Go to source code"><var>$imageService</var></a>
+					<a href="source-class-Neos.Media.Domain.Service.AssetService.html#87-91" title="Go to source code"><var>$imageService</var></a>
 
 				<div class="description short">
 					
@@ -1561,6 +1563,6 @@ In case of Images this is a thumbnail of the image, in case of other assets an i
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?61ca0d40b2702479ad61a4527111b3e1c4d58d65"></script>
+<script src="elementlist.js?a92ec730303c9ad493ea3ca51a9066c35a9cbe7f"></script>
 </body>
 </html>

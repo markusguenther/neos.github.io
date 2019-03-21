@@ -861,7 +861,7 @@ Neos\Flow\Persistence\Repository
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#27-336" title="Go to source code">Neos.Media/Classes/Domain/Repository/AssetRepository.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#30-354" title="Go to source code">Neos.Media/Classes/Domain/Repository/AssetRepository.php</a>
 		<br>
 	</div>
 
@@ -881,7 +881,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findBySearchTermOrTags">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#53-77" title="Go to source code">findBySearchTermOrTags</a>( <span>string <var>$searchTerm</var></span>, <span>array <var>$tags</var> = []</span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#56-81" title="Go to source code">findBySearchTermOrTags</a>( <span>string <var>$searchTerm</var></span>, <span>array <var>$tags</var> = []</span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find assets by title or given tags</p>
@@ -898,7 +898,7 @@ Neos\Flow\Persistence\Repository
 						<dt><var>$tags</var></dt>
 						<dd></dd>
 						<dt><var>$assetCollection</var></dt>
-						<dd>$assetCollection*</dd>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -906,6 +906,10 @@ Neos\Flow\Persistence\Repository
 						Neos\Flow\Persistence\QueryResultInterface
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\InvalidQueryException
+					</div>
 
 
 
@@ -923,7 +927,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByTag">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#79-93" title="Go to source code">findByTag</a>( <span><code><a href="class-Neos.Media.Domain.Model.Tag.html">Neos\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#83-98" title="Go to source code">findByTag</a>( <span><code><a href="class-Neos.Media.Domain.Model.Tag.html">Neos\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find Assets with the given Tag assigned</p>
@@ -946,6 +950,10 @@ Neos\Flow\Persistence\Repository
 						Neos\Flow\Persistence\QueryResultInterface
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\InvalidQueryException
+					</div>
 
 
 
@@ -963,7 +971,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countByTag">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#95-119" title="Go to source code">countByTag</a>( <span><code><a href="class-Neos.Media.Domain.Model.Tag.html">Neos\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#100-125" title="Go to source code">countByTag</a>( <span><code><a href="class-Neos.Media.Domain.Model.Tag.html">Neos\Media\Domain\Model\Tag</a></code> <var>$tag</var></span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Counts Assets with the given Tag assigned</p>
@@ -986,6 +994,10 @@ Neos\Flow\Persistence\Repository
 						integer
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\NonUniqueResultException
+					</div>
 
 
 
@@ -1003,7 +1015,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findAll">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#121-130" title="Go to source code">findAll</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#127-137" title="Go to source code">findAll</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1019,6 +1031,10 @@ Neos\Flow\Persistence\Repository
 						Neos\Flow\Persistence\QueryResultInterface
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\InvalidQueryException
+					</div>
 
 
 
@@ -1036,7 +1052,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countAll">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#132-144" title="Go to source code">countAll</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#139-152" title="Go to source code">countAll</a>( )</code>
 
 			<div class="description short">
 				
@@ -1052,6 +1068,10 @@ Neos\Flow\Persistence\Repository
 						integer
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\NonUniqueResultException
+					</div>
 
 
 
@@ -1069,7 +1089,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findUntagged">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#146-159" title="Go to source code">findUntagged</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#154-168" title="Go to source code">findUntagged</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Find Assets without any tag</p>
@@ -1090,6 +1110,10 @@ Neos\Flow\Persistence\Repository
 						Neos\Flow\Persistence\QueryResultInterface
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\InvalidQueryException
+					</div>
 
 
 
@@ -1107,7 +1131,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countUntagged">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#161-183" title="Go to source code">countUntagged</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#170-193" title="Go to source code">countUntagged</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Counts Assets without any tag</p>
@@ -1128,6 +1152,10 @@ Neos\Flow\Persistence\Repository
 						integer
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\NonUniqueResultException
+					</div>
 
 
 
@@ -1145,7 +1173,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findByAssetCollection">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#185-195" title="Go to source code">findByAssetCollection</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#195-206" title="Go to source code">findByAssetCollection</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1166,6 +1194,10 @@ Neos\Flow\Persistence\Repository
 						Neos\Flow\Persistence\QueryResultInterface
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\InvalidQueryException
+					</div>
 
 
 
@@ -1183,7 +1215,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countByAssetCollection">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#197-213" title="Go to source code">countByAssetCollection</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#208-225" title="Go to source code">countByAssetCollection</a>( <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var></span> )</code>
 
 			<div class="description short">
 				<p>Count assets by asset collection</p>
@@ -1204,6 +1236,10 @@ Neos\Flow\Persistence\Repository
 						integer
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						Doctrine\ORM\NonUniqueResultException
+					</div>
 
 
 
@@ -1221,7 +1257,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addAssetCollectionToQueryConstraints">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#215-228" title="Go to source code">addAssetCollectionToQueryConstraints</a>( <span>Neos\Flow\Persistence\Doctrine\Query <var>$query</var></span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#227-241" title="Go to source code">addAssetCollectionToQueryConstraints</a>( <span>Neos\Flow\Persistence\Doctrine\Query <var>$query</var></span>, <span>Neos\Media\Domain\Model\AssetCollection <var>$assetCollection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -1240,6 +1276,10 @@ Neos\Flow\Persistence\Repository
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\InvalidQueryException
+					</div>
 
 
 
@@ -1257,7 +1297,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addImageVariantFilterClause">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#230-239" title="Go to source code">addImageVariantFilterClause</a>( <span>Neos\Flow\Persistence\Doctrine\Query <var>$query</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#243-252" title="Go to source code">addImageVariantFilterClause</a>( <span>Neos\Flow\Persistence\Doctrine\Query <var>$query</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1294,7 +1334,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findOneByResourceSha1">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#241-250" title="Go to source code">findOneByResourceSha1</a>( <span>string <var>$sha1</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#254-263" title="Go to source code">findOneByResourceSha1</a>( <span>string <var>$sha1</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1332,7 +1372,7 @@ Neos\Flow\Persistence\Repository
 
 			<td class="name"><div>
 			<a class="anchor" href="#_iterate">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#252-273" title="Go to source code">iterate</a>( <span>Doctrine\ORM\Internal\Hydration\IterableResult <var>$iterator</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#265-286" title="Go to source code">iterate</a>( <span>Doctrine\ORM\Internal\Hydration\IterableResult <var>$iterator</var></span>, <span>callable <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Iterate over an IterableResult and return a Generator</p>
@@ -1375,7 +1415,7 @@ manager and detaches the current object on each iteration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findAllIterator">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#275-289" title="Go to source code">findAllIterator</a>( )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#288-302" title="Go to source code">findAllIterator</a>( )</code>
 
 			<div class="description short">
 				<p>Find all objects and return an IterableResult</p>
@@ -1408,7 +1448,7 @@ manager and detaches the current object on each iteration.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#291-303" title="Go to source code">remove</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#304-318" title="Go to source code">remove</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove an asset while first validating if the object can be removed or
@@ -1427,6 +1467,11 @@ if removal is blocked because the asset is still in use.</p>
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\IllegalObjectTypeException<br>
+						<code><a href="class-Neos.Media.Exception.AssetServiceException.html">Neos\Media\Exception\AssetServiceException</a></code>
+					</div>
 
 
 
@@ -1444,7 +1489,7 @@ if removal is blocked because the asset is still in use.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeWithoutUsageChecks">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#305-317" title="Go to source code">removeWithoutUsageChecks</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#320-333" title="Go to source code">removeWithoutUsageChecks</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove the asset even if it is still in use. Use with care, it is probably
@@ -1465,6 +1510,10 @@ the remove() method for removal.</p>
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\IllegalObjectTypeException
+					</div>
 
 
 
@@ -1482,7 +1531,7 @@ the remove() method for removal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#319-326" title="Go to source code">add</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#335-343" title="Go to source code">add</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1499,6 +1548,10 @@ the remove() method for removal.</p>
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\IllegalObjectTypeException
+					</div>
 
 
 
@@ -1516,7 +1569,7 @@ the remove() method for removal.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_update">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#328-335" title="Go to source code">update</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
+			<code><a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#345-353" title="Go to source code">update</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$object</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1533,6 +1586,10 @@ the remove() method for removal.</p>
 					</dl></div>
 
 
+					<h4>Throws</h4>
+					<div class="list">
+						Neos\Flow\Persistence\Exception\IllegalObjectTypeException
+					</div>
 
 
 
@@ -1562,7 +1619,7 @@ the remove() method for removal.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#34-40" title="Go to source code"><var>$entityManager</var></a>
+					<a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#37-43" title="Go to source code"><var>$entityManager</var></a>
 
 				<div class="description short">
 					<p>Doctrine's Entity Manager.</p>
@@ -1590,7 +1647,7 @@ the remove() method for removal.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#42-45" title="Go to source code"><var>$defaultOrderings</var></a>
+					<a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#45-48" title="Go to source code"><var>$defaultOrderings</var></a>
 
 				<div class="description short">
 					
@@ -1615,7 +1672,7 @@ the remove() method for removal.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#47-51" title="Go to source code"><var>$assetService</var></a>
+					<a href="source-class-Neos.Media.Domain.Repository.AssetRepository.html#50-54" title="Go to source code"><var>$assetService</var></a>
 
 				<div class="description short">
 					
@@ -1652,6 +1709,6 @@ the remove() method for removal.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?61ca0d40b2702479ad61a4527111b3e1c4d58d65"></script>
+<script src="elementlist.js?a92ec730303c9ad493ea3ca51a9066c35a9cbe7f"></script>
 </body>
 </html>
