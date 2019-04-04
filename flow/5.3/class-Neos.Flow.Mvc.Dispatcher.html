@@ -823,11 +823,10 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Mvc.ActionRequest.html">ActionRequest</a></li>
-				<li><a href="class-Neos.Flow.Mvc.DispatchComponent.html">DispatchComponent</a></li>
 				<li class="active"><a href="class-Neos.Flow.Mvc.Dispatcher.html">Dispatcher</a></li>
 				<li><a href="class-Neos.Flow.Mvc.FlashMessageContainer.html">FlashMessageContainer</a></li>
 				<li><a href="class-Neos.Flow.Mvc.RequestMatcher.html">RequestMatcher</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Mvc.Response.html" class="deprecated">Response</a></li>
 				<li><a href="class-Neos.Flow.Mvc.ViewConfigurationManager.html">ViewConfigurationManager</a></li>
 			</ul>
 
@@ -837,6 +836,10 @@
 				<li><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">ResponseInterface</a></li>
 			</ul>
 
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html" class="deprecated">ResponseDeprecationTrait</a></li>
+			</ul>
 
 			<h3>Exceptions</h3>
 			<ul>
@@ -879,7 +882,7 @@ returns the response the controller generated.</p>
 				<br>
 				<b>Api</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Dispatcher.html#34-216" title="Go to source code">Neos.Flow/Classes/Mvc/Dispatcher.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Dispatcher.html#34-218" title="Go to source code">Neos.Flow/Classes/Mvc/Dispatcher.php</a>
 		<br>
 	</div>
 
@@ -983,7 +986,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initiateDispatchLoop">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#127-156" title="Go to source code">initiateDispatchLoop</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#127-158" title="Go to source code">initiateDispatchLoop</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span> )</code>
 
 			<div class="description short">
 				<p>Try processing the request until it is successfully marked "dispatched"</p>
@@ -1004,7 +1007,7 @@ is not available during compile time.</p>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Mvc.Controller.Exception.InvalidControllerException.html">Neos\Flow\Mvc\Controller\Exception\InvalidControllerException</a></code>|<code><a href="class-Neos.Flow.Mvc.Exception.InfiniteLoopException.html">Neos\Flow\Mvc\Exception\InfiniteLoopException</a></code>|<code><a href="class-Neos.Flow.Configuration.Exception.NoSuchOptionException.html">Neos\Flow\Configuration\Exception\NoSuchOptionException</a></code>
+						<code><a href="class-Neos.Flow.Mvc.Controller.Exception.InvalidControllerException.html">Neos\Flow\Mvc\Controller\Exception\InvalidControllerException</a></code>|<code><a href="class-Neos.Flow.Mvc.Exception.InfiniteLoopException.html">Neos\Flow\Mvc\Exception\InfiniteLoopException</a></code>|<code><a href="class-Neos.Flow.Configuration.Exception.NoSuchOptionException.html">Neos\Flow\Configuration\Exception\NoSuchOptionException</a></code><br>TODO: From next major we might want to create one ActionResponse PER controller invocation and then merge results here
 					</div>
 
 
@@ -1023,7 +1026,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitBeforeControllerInvocation">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#158-169" title="Go to source code">emitBeforeControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#160-171" title="Go to source code">emitBeforeControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
 
 			<div class="description short">
 				<p>This signal is emitted directly before the request is been dispatched to a controller.</p>
@@ -1064,7 +1067,7 @@ is not available during compile time.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_emitAfterControllerInvocation">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#171-183" title="Go to source code">emitAfterControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#173-185" title="Go to source code">emitAfterControllerInvocation</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.ControllerInterface.html">Neos\Flow\Mvc\Controller\ControllerInterface</a></code> <var>$controller</var></span> )</code>
 
 			<div class="description short">
 				<p>This signal is emitted directly after the request has been dispatched to a controller and the controller
@@ -1107,7 +1110,7 @@ returned control back to the dispatcher.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resolveController">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#185-215" title="Go to source code">resolveController</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Dispatcher.html#187-217" title="Go to source code">resolveController</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Finds and instantiates a controller that matches the current request.
@@ -1198,6 +1201,6 @@ If no controller can be found, an instance of NotFoundControllerInterface is ret
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0ae0bc7e5d6807d0e4a76d7592871a2b22c7c2a0"></script>
+<script src="elementlist.js?cc12d13c024a2ce1d4ff4406f9b37ba3f97c8540"></script>
 </body>
 </html>

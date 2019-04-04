@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\Http\Response | Flow Framework (5.3 branch)</title>
+	<title>Deprecated Class Neos\Flow\Http\Response | Flow Framework (5.3 branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -822,12 +822,12 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">AbstractMessage</a></li>
 				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
-				<li class="active"><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li class="active"><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
 				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
@@ -854,7 +854,7 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class Response</h1>
+	<h1 class="deprecated">Class Response</h1>
 
 
 	<div class="description">
@@ -863,7 +863,7 @@
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Neos.Flow.Http.AbstractMessage.html"><span>Neos\Flow\Http\AbstractMessage</span></a>
+			<a href="class-Neos.Flow.Http.AbstractMessage.html"><span class="deprecated">Neos\Flow\Http\AbstractMessage</span></a>
 			
 			 implements 
 <span>Psr\Http\Message\MessageInterface</span>
@@ -872,7 +872,7 @@
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Neos\Flow\Http\Response</span></b>			
+<b><span class="deprecated">Neos\Flow\Http\Response</span></b>			
 			 implements 
 				<a href="class-Neos.Flow.Mvc.ResponseInterface.html"><span class="deprecated">Neos\Flow\Mvc\ResponseInterface</span></a>, 
 			
@@ -899,7 +899,9 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Response.html#18-630" title="Go to source code">Neos.Flow/Classes/Http/Response.php</a>
+				<b>Deprecated:</b>
+				Since Flow 5.3, to be removed with 6.0. The whole Flow HTTP implementation will use PSR-7 compatible implementations only from then.<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Http.Response.html#18-631" title="Go to source code">Neos.Flow/Classes/Http/Response.php</a>
 		<br>
 	</div>
 
@@ -919,7 +921,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStatusMessageByCode">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#49-60" title="Go to source code">getStatusMessageByCode</a>( <span>integer <var>$statusCode</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#50-61" title="Go to source code">getStatusMessageByCode</a>( <span>integer <var>$statusCode</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the human-readable message for the given status code.</p>
@@ -928,10 +930,6 @@
 			<div class="description detailed hidden">
 				<p>Returns the human-readable message for the given status code.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use ResponseInformationHelper::getStatusMessageByCode<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -965,7 +963,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Response.html#62-72" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$parentResponse</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#63-73" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code> <var>$parentResponse</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Construct this Response</p>
@@ -1001,7 +999,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createFromRaw">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#74-91" title="Go to source code">createFromRaw</a>( <span>string <var>$rawResponse</var></span>, <span><code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code> <var>$parentResponse</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#75-92" title="Go to source code">createFromRaw</a>( <span>string <var>$rawResponse</var></span>, <span><code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code> <var>$parentResponse</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Creates a response from the given raw, that is plain text, HTTP response.</p>
@@ -1010,10 +1008,6 @@
 			<div class="description detailed hidden">
 				<p>Creates a response from the given raw, that is plain text, HTTP response.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use ResponseInformationHelper::createFromRaw<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1046,14 +1040,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParentResponse">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#93-102" title="Go to source code">getParentResponse</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#94-103" title="Go to source code">getParentResponse</a>( )</code>
 
 			<div class="description short">
 				<p>Return the parent response or NULL if none exists.</p>
@@ -1062,15 +1056,11 @@
 			<div class="description detailed hidden">
 				<p>Return the parent response or NULL if none exists.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, without replacement<br>
-					</div>
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>the parent response, or NULL if none
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>the parent response, or NULL if none
 					</div>
 
 
@@ -1083,14 +1073,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_appendContent">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#104-115" title="Go to source code">appendContent</a>( <span>string <var>$content</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#105-116" title="Go to source code">appendContent</a>( <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Appends content to the already existing content.</p>
@@ -1099,10 +1089,6 @@
 			<div class="description detailed hidden">
 				<p>Appends content to the already existing content.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, without replacement<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1112,7 +1098,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
@@ -1134,7 +1120,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getContent">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#117-127" title="Go to source code">getContent</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#118-128" title="Go to source code">getContent</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the response content without sending it.</p>
@@ -1143,10 +1129,6 @@
 			<div class="description detailed hidden">
 				<p>Returns the response content without sending it.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use getBody<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1157,7 +1139,7 @@
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody">Neos\Flow\Http\AbstractMessage::getBody()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody" class="deprecated">Neos\Flow\Http\AbstractMessage::getBody()</a></code><br>
 					</div>
 
 					<h4>Overrides</h4>
@@ -1172,14 +1154,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setStatus">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#129-150" title="Go to source code">setStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$message</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#130-151" title="Go to source code">setStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$message</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the HTTP status code and (optionally) a customized message.</p>
@@ -1188,10 +1170,6 @@
 			<div class="description detailed hidden">
 				<p>Sets the HTTP status code and (optionally) a customized message.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use withStatus<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1203,7 +1181,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 					<h4>Throws</h4>
@@ -1213,7 +1191,7 @@
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.Response.html#_withStatus">Neos\Flow\Http\Response::withStatus()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.Response.html#_withStatus" class="deprecated">Neos\Flow\Http\Response::withStatus()</a></code><br>
 					</div>
 
 
@@ -1231,7 +1209,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStatus">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#152-162" title="Go to source code">getStatus</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#153-163" title="Go to source code">getStatus</a>( )</code>
 
 			<div class="description short">
 				<p>Returns status code and status message.</p>
@@ -1240,10 +1218,6 @@
 			<div class="description detailed hidden">
 				<p>Returns status code and status message.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use getStatusCode<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1254,7 +1228,7 @@
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.Response.html#_getStatusCode">Neos\Flow\Http\Response::getStatusCode()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.Response.html#_getStatusCode" class="deprecated">Neos\Flow\Http\Response::getStatusCode()</a></code><br>
 					</div>
 
 
@@ -1272,7 +1246,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStatusCode">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Response.html#164-173" title="Go to source code">getStatusCode</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#165-174" title="Go to source code">getStatusCode</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the status code.</p>
@@ -1308,7 +1282,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHeaders">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#175-185" title="Go to source code">setHeaders</a>( <span>Neos\Flow\Http\Headers <var>$headers</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#176-186" title="Go to source code">setHeaders</a>( <span>Neos\Flow\Http\Headers <var>$headers</var></span> )</code>
 
 			<div class="description short">
 				<p>Replaces all possibly existing HTTP headers with the ones specified</p>
@@ -1317,10 +1291,6 @@
 			<div class="description detailed hidden">
 				<p>Replaces all possibly existing HTTP headers with the ones specified</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, without replacement<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1346,7 +1316,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setNow">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#187-208" title="Go to source code">setNow</a>( <span>DateTime <var>$now</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#188-209" title="Go to source code">setNow</a>( <span>DateTime <var>$now</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the current point in time.</p>
@@ -1363,10 +1333,6 @@ through dependency injection, configured in the Objects.yaml of the Flow package
 to use this function. Also note that this method must be called before any
 of the Response methods are used and it must not be called a second time.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the "Date" header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1378,7 +1344,7 @@ of the Response methods are used and it must not be called a second time.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -1389,14 +1355,14 @@ of the Response methods are used and it must not be called a second time.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDate">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#210-226" title="Go to source code">setDate</a>( <span>string|DateTime <var>$date</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#211-227" title="Go to source code">setDate</a>( <span>string|DateTime <var>$date</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the Date header.</p>
@@ -1409,10 +1375,6 @@ of the Response methods are used and it must not be called a second time.</p>
 object. The timezone will be converted to GMT internally, but the point in
 time remains the same.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the "Date" header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1422,13 +1384,13 @@ time remains the same.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -1446,7 +1408,7 @@ time remains the same.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDate">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#228-240" title="Go to source code">getDate</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#229-241" title="Go to source code">getDate</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date from the Date header.</p>
@@ -1457,10 +1419,6 @@ time remains the same.</p>
 
 <p>The returned date is configured to be in the GMT timezone.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly get the "Date" header<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1471,7 +1429,7 @@ time remains the same.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
 					</div>
 
 
@@ -1482,14 +1440,14 @@ time remains the same.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setLastModified">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#242-258" title="Go to source code">setLastModified</a>( <span>string|DateTime <var>$date</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#243-259" title="Go to source code">setLastModified</a>( <span>string|DateTime <var>$date</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the Last-Modified header.</p>
@@ -1502,10 +1460,6 @@ time remains the same.</p>
 object. The timezone will be converted to GMT internally, but the point in
 time remains the same.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the Last-Modified header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1515,13 +1469,13 @@ time remains the same.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -1539,7 +1493,7 @@ time remains the same.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLastModified">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#260-273" title="Go to source code">getLastModified</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#261-274" title="Go to source code">getLastModified</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date from the Last-Modified header or NULL if no such header
@@ -1552,10 +1506,6 @@ is present.</p>
 
 <p>The returned date is configured to be in the GMT timezone.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly get the Last-Modified header<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1566,7 +1516,7 @@ is present.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
 					</div>
 
 
@@ -1577,14 +1527,14 @@ is present.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setExpires">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#275-298" title="Go to source code">setExpires</a>( <span>string|DateTime <var>$date</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#276-299" title="Go to source code">setExpires</a>( <span>string|DateTime <var>$date</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the Expires header.</p>
@@ -1604,10 +1554,6 @@ an infinite expiration time, the date should be set to one year in the future.</
 <p>Expiration times should not be more than one year in the future, according
 to RFC 2616 / 14.21</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the Expires header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1617,13 +1563,13 @@ to RFC 2616 / 14.21</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -1641,7 +1587,7 @@ to RFC 2616 / 14.21</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getExpires">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#300-313" title="Go to source code">getExpires</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#301-314" title="Go to source code">getExpires</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the date from the Expires header or NULL if no such header
@@ -1654,10 +1600,6 @@ is present.</p>
 
 <p>The returned date is configured to be in the GMT timezone.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly get the Expires header<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1668,7 +1610,7 @@ is present.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
 					</div>
 
 
@@ -1686,7 +1628,7 @@ is present.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAge">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#315-338" title="Go to source code">getAge</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#316-339" title="Go to source code">getAge</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the age of this responds in seconds.</p>
@@ -1702,10 +1644,6 @@ difference between Date and "now".</p>
 that the response is not first-hand. You should therefore only explicitly set
 an Age header if this is the case.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly get the Age header<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1716,7 +1654,7 @@ an Age header if this is the case.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
 					</div>
 
 
@@ -1727,14 +1665,14 @@ an Age header if this is the case.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setMaximumAge">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#340-354" title="Go to source code">setMaximumAge</a>( <span>integer <var>$age</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#341-355" title="Go to source code">setMaximumAge</a>( <span>integer <var>$age</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the maximum age in seconds before this response becomes stale.</p>
@@ -1745,10 +1683,6 @@ an Age header if this is the case.</p>
 
 <p>This method sets the "max-age" directive in the Cache-Control header.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the cache header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1758,13 +1692,13 @@ an Age header if this is the case.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -1782,7 +1716,7 @@ an Age header if this is the case.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMaximumAge">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#356-369" title="Go to source code">getMaximumAge</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#357-370" title="Go to source code">getMaximumAge</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the maximum age in seconds before this response becomes stale.</p>
@@ -1794,10 +1728,6 @@ an Age header if this is the case.</p>
 <p>This method returns the value from the "max-age" directive in the
 Cache-Control header.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly get the cache header and parse it<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1808,7 +1738,7 @@ Cache-Control header.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
 					</div>
 
 
@@ -1819,14 +1749,14 @@ Cache-Control header.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setSharedMaximumAge">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#371-386" title="Go to source code">setSharedMaximumAge</a>( <span>integer <var>$maximumAge</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#372-387" title="Go to source code">setSharedMaximumAge</a>( <span>integer <var>$maximumAge</var></span> )</code>
 
 			<div class="description short">
 				<p>Sets the maximum age in seconds before this response becomes stale in shared
@@ -1839,10 +1769,6 @@ caches, such as proxies.</p>
 
 <p>This method sets the "s-maxage" directive in the Cache-Control header.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the cache header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1852,13 +1778,13 @@ caches, such as proxies.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -1876,7 +1802,7 @@ caches, such as proxies.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSharedMaximumAge">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#388-402" title="Go to source code">getSharedMaximumAge</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#389-403" title="Go to source code">getSharedMaximumAge</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the maximum age in seconds before this response becomes stale in shared
@@ -1890,10 +1816,6 @@ caches, such as proxies.</p>
 <p>This method returns the value from the "s-maxage" directive in the
 Cache-Control header.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly get the cache header<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1904,7 +1826,7 @@ Cache-Control header.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::getHeader()</a></code><br>
 					</div>
 
 
@@ -1922,7 +1844,7 @@ Cache-Control header.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_renderHeaders">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#404-414" title="Go to source code">renderHeaders</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#405-415" title="Go to source code">renderHeaders</a>( )</code>
 
 			<div class="description short">
 				<p>Renders the HTTP headers - including the status header - of this response</p>
@@ -1931,10 +1853,6 @@ Cache-Control header.</p>
 			<div class="description detailed hidden">
 				<p>Renders the HTTP headers - including the status header - of this response</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use ResponseInformationHelper::prepareHeaders<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1956,14 +1874,14 @@ Cache-Control header.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPublic">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#416-430" title="Go to source code">setPublic</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#417-431" title="Go to source code">setPublic</a>( )</code>
 
 			<div class="description short">
 				<p>Sets the respective directive in the Cache-Control header.</p>
@@ -1975,21 +1893,17 @@ Cache-Control header.</p>
 <p>A response flagged as "public" may be cached by any cache, even if it normally
 wouldn't be cacheable in a shared cache.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the cache header<br>
-					</div>
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -2000,14 +1914,14 @@ wouldn't be cacheable in a shared cache.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPrivate">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#432-446" title="Go to source code">setPrivate</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#433-447" title="Go to source code">setPrivate</a>( )</code>
 
 			<div class="description short">
 				<p>Sets the respective directive in the Cache-Control header.</p>
@@ -2019,21 +1933,17 @@ wouldn't be cacheable in a shared cache.</p>
 <p>A response flagged as "private" tells that it is intended for a specific
 user and must not be cached by a shared cache.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, directly set the cache header<br>
-					</div>
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code><br>This response, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
 					</div>
 
 
@@ -2051,7 +1961,7 @@ user and must not be cached by a shared cache.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_makeStandardsCompliant">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#448-502" title="Go to source code">makeStandardsCompliant</a>( <span><code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code> <var>$request</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#449-503" title="Go to source code">makeStandardsCompliant</a>( <span><code><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></code> <var>$request</var></span> )</code>
 
 			<div class="description short">
 				<p>Analyzes this response, considering the given request and makes additions
@@ -2067,10 +1977,6 @@ RFC 2616 and related standards.</p>
 <p>It is recommended to call this method before the response is sent and Flow
 does so by default in its built-in HTTP request handler.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use ResponseInformationHelper::makeStandardsCompliant<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -2100,7 +2006,7 @@ does so by default in its built-in HTTP request handler.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sendHeaders">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#504-525" title="Go to source code">sendHeaders</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#505-526" title="Go to source code">sendHeaders</a>( )</code>
 
 			<div class="description short">
 				<p>Sends the HTTP headers.</p>
@@ -2111,11 +2017,6 @@ does so by default in its built-in HTTP request handler.</p>
 
 <p>If headers have been sent previously, this method fails silently.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							<p>Since Flow 5.1, without replacement
-TODO: Make private after deprecation period</p><br>
-					</div>
 
 
 
@@ -2139,7 +2040,7 @@ TODO: Make private after deprecation period</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_send">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Response.html#527-540" title="Go to source code">send</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#528-541" title="Go to source code">send</a>( )</code>
 
 			<div class="description short">
 				<p>Renders and sends the whole web response</p>
@@ -2177,7 +2078,7 @@ TODO: Make private after deprecation period</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStatusLine">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#542-554" title="Go to source code">getStatusLine</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#543-555" title="Go to source code">getStatusLine</a>( )</code>
 
 			<div class="description short">
 				<p>Return the Status-Line of this Response Message, consisting of the version, the status code and the reason phrase
@@ -2188,10 +2089,6 @@ Would be, for example, "HTTP/1.1 200 OK" or "HTTP/1.1 400 Bad Request"</p>
 				<p>Return the Status-Line of this Response Message, consisting of the version, the status code and the reason phrase
 Would be, for example, "HTTP/1.1 200 OK" or "HTTP/1.1 400 Bad Request"</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -2221,7 +2118,7 @@ Would be, for example, "HTTP/1.1 200 OK" or "HTTP/1.1 400 Bad Request"</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStartLine">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#556-567" title="Go to source code">getStartLine</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#557-568" title="Go to source code">getStartLine</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the first line of this Response Message, which is the Status-Line in this case</p>
@@ -2230,10 +2127,6 @@ Would be, for example, "HTTP/1.1 200 OK" or "HTTP/1.1 400 Bad Request"</p>
 			<div class="description detailed hidden">
 				<p>Returns the first line of this Response Message, which is the Status-Line in this case</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -2256,14 +2149,14 @@ Would be, for example, "HTTP/1.1 200 OK" or "HTTP/1.1 400 Bad Request"</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withStatus">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Response.html#569-595" title="Go to source code">withStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$reasonPhrase</var> = <span class="php-quote">''</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#570-596" title="Go to source code">withStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$reasonPhrase</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified status code and, optionally, reason phrase.</p>
@@ -2293,7 +2186,7 @@ updated status and reason phrase.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+						<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -2326,7 +2219,7 @@ updated status and reason phrase.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getReasonPhrase">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Response.html#597-614" title="Go to source code">getReasonPhrase</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#598-615" title="Go to source code">getReasonPhrase</a>( )</code>
 
 			<div class="description short">
 				<p>Gets the response reason phrase associated with the status code.</p>
@@ -2374,7 +2267,7 @@ status code.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Neos.Flow.Http.Response.html#616-629" title="Go to source code">__toString</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.Response.html#617-630" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Cast the response to a string: return the content part of this response</p>
@@ -2405,29 +2298,29 @@ status code.</p>
 		<div class="panel panel-default">
 	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Flow.Http.AbstractMessage.html#methods">Neos\Flow\Http\AbstractMessage</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#___clone">__clone()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody">getBody()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#___clone"><span class="deprecated">__clone()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody"><span class="deprecated">getBody()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCharset"><span class="deprecated">getCharset()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookie"><span class="deprecated">getCookie()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getCookies"><span class="deprecated">getCookies()</span></a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader">getHeader()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaderLine">getHeaderLine()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaders">getHeaders()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getProtocolVersion">getProtocolVersion()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeader"><span class="deprecated">getHeader()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaderLine"><span class="deprecated">getHeaderLine()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getHeaders"><span class="deprecated">getHeaders()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getProtocolVersion"><span class="deprecated">getProtocolVersion()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getVersion"><span class="deprecated">getVersion()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasCookie"><span class="deprecated">hasCookie()</span></a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasHeader">hasHeader()</a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_hasHeader"><span class="deprecated">hasHeader()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_removeCookie"><span class="deprecated">removeCookie()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCharset"><span class="deprecated">setCharset()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setContent"><span class="deprecated">setContent()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setCookie"><span class="deprecated">setCookie()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setHeader"><span class="deprecated">setHeader()</span></a></code>, 
 				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setVersion"><span class="deprecated">setVersion()</span></a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withAddedHeader">withAddedHeader()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withBody">withBody()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">withHeader()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withProtocolVersion">withProtocolVersion()</a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withoutHeader">withoutHeader()</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withAddedHeader"><span class="deprecated">withAddedHeader()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withBody"><span class="deprecated">withBody()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader"><span class="deprecated">withHeader()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withProtocolVersion"><span class="deprecated">withProtocolVersion()</span></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withoutHeader"><span class="deprecated">withoutHeader()</span></a></code>
 			</p>
 		</div>
 
@@ -2446,11 +2339,11 @@ status code.</p>
 		<tr data-order="parentResponse" id="$parentResponse">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				<code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Response.html#26-29" title="Go to source code"><var>$parentResponse</var></a>
+					<a href="source-class-Neos.Flow.Http.Response.html#27-30" title="Go to source code"><var>$parentResponse</var></a>
 
 				<div class="description short">
 					
@@ -2475,7 +2368,7 @@ status code.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Response.html#31-35" title="Go to source code"><var>$statusCode</var></a>
+					<a href="source-class-Neos.Flow.Http.Response.html#32-36" title="Go to source code"><var>$statusCode</var></a>
 
 				<div class="description short">
 					<p>The HTTP status code</p>
@@ -2500,7 +2393,7 @@ status code.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Response.html#37-41" title="Go to source code"><var>$statusMessage</var></a>
+					<a href="source-class-Neos.Flow.Http.Response.html#38-42" title="Go to source code"><var>$statusMessage</var></a>
 
 				<div class="description short">
 					<p>The HTTP status message</p>
@@ -2525,7 +2418,7 @@ status code.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.Response.html#43-47" title="Go to source code"><var>$now</var></a>
+					<a href="source-class-Neos.Flow.Http.Response.html#44-48" title="Go to source code"><var>$now</var></a>
 
 				<div class="description short">
 					<p>The current point in time, used for comparisons</p>
@@ -2549,10 +2442,10 @@ status code.</p>
 		<div class="panel panel-default">
             <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Flow.Http.AbstractMessage.html#properties">Neos\Flow\Http\AbstractMessage</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$charset"><var>$charset</var></a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$content"><var>$content</var></a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$headers"><var>$headers</var></a></code>, 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$version"><var>$version</var></a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$charset"><var><span class="deprecated">$charset</span></var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$content"><var><span class="deprecated">$content</span></var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$headers"><var><span class="deprecated">$headers</span></var></a></code>, 
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html#$version"><var><span class="deprecated">$version</span></var></a></code>
 			</p>
 		</div>
 
@@ -2568,6 +2461,6 @@ status code.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0ae0bc7e5d6807d0e4a76d7592871a2b22c7c2a0"></script>
+<script src="elementlist.js?cc12d13c024a2ce1d4ff4406f9b37ba3f97c8540"></script>
 </body>
 </html>
