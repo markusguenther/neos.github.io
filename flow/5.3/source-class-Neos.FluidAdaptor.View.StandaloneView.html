@@ -863,8 +863,8 @@
 </span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Flow\Core\Bootstrap;
 </span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\HttpRequestHandlerInterface;
 </span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\Request;
-</span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\Response;
-</span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\ActionRequest;
+</span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\ActionRequest;
+</span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\ActionResponse;
 </span><span id="20" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Controller\Arguments;
 </span><span id="21" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Controller\ControllerContext;
 </span><span id="22" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Routing\UriBuilder;
@@ -973,7 +973,7 @@
 </span><span id="125" class="l">
 </span><span id="126" class="l">        <span class="php-var">$this</span>-&gt;setControllerContext(<span class="php-keyword1">new</span> ControllerContext(
 </span><span id="127" class="l">            <span class="php-var">$this</span>-&gt;request,
-</span><span id="128" class="l">            <span class="php-keyword1">new</span> Response(),
+</span><span id="128" class="l">            <span class="php-keyword1">new</span> ActionResponse(),
 </span><span id="129" class="l">            <span class="php-keyword1">new</span> Arguments([]),
 </span><span id="130" class="l">            <span class="php-var">$uriBuilder</span>
 </span><span id="131" class="l">        ));

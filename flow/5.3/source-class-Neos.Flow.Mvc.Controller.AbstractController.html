@@ -1189,11 +1189,11 @@
 </span><span id="331" class="l">            <span class="php-keyword1">if</span> (!<span class="php-var">$uri</span> <span class="php-keyword1">instanceof</span> UriInterface) {
 </span><span id="332" class="l">                <span class="php-var">$uri</span> = <span class="php-keyword1">new</span> \Neos\Flow\Http\Uri(<span class="php-var">$uri</span>);
 </span><span id="333" class="l">            }
-</span><span id="334" class="l">
-</span><span id="335" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setRedirectUri(<span class="php-var">$uri</span>, <span class="php-var">$statusCode</span>);
+</span><span id="334" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setStatus(<span class="php-var">$statusCode</span>);
+</span><span id="335" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setHeader(<span class="php-quote">'Location'</span>, (string)<span class="php-var">$uri</span>);
 </span><span id="336" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="337" class="l">            <span class="php-var">$escapedUri</span> = <span class="php-keyword2">htmlentities</span>(<span class="php-var">$uri</span>, ENT_QUOTES, <span class="php-quote">'utf-8'</span>);
-</span><span id="338" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setStatusCode(<span class="php-var">$statusCode</span>);
+</span><span id="338" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setStatus(<span class="php-var">$statusCode</span>);
 </span><span id="339" class="l">            <span class="php-var">$this</span>-&gt;response-&gt;setContent(<span class="php-quote">'&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;'</span> . (int)<span class="php-var">$delay</span> . <span class="php-quote">';url='</span> . <span class="php-var">$escapedUri</span> . <span class="php-quote">'&quot;/&gt;&lt;/head&gt;&lt;/html&gt;'</span>);
 </span><span id="340" class="l">        }
 </span><span id="341" class="l">        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> StopActionException();
