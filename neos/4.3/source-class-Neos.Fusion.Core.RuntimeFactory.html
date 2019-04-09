@@ -838,8 +838,8 @@
 </span><span id="13" class="l">
 </span><span id="14" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
 </span><span id="15" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\Request;
-</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Http\Response;
-</span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\ActionRequest;
+</span><span id="16" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\ActionRequest;
+</span><span id="17" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\ActionResponse;
 </span><span id="18" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Controller\Arguments;
 </span><span id="19" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Controller\ControllerContext;
 </span><span id="20" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Routing\UriBuilder;
@@ -881,7 +881,7 @@
 </span><span id="56" class="l">
 </span><span id="57" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> ControllerContext(
 </span><span id="58" class="l">            <span class="php-var">$request</span>,
-</span><span id="59" class="l">            <span class="php-keyword1">new</span> Response(),
+</span><span id="59" class="l">            <span class="php-keyword1">new</span> ActionResponse(),
 </span><span id="60" class="l">            <span class="php-keyword1">new</span> Arguments([]),
 </span><span id="61" class="l">            <span class="php-var">$uriBuilder</span>
 </span><span id="62" class="l">        );
