@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Neos\Flow\Http\AbstractMessage | Flow Framework (master branch)</title>
+	<title>Deprecated Class Neos\Flow\Http\AbstractMessage | Flow Framework (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -822,12 +822,12 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Neos.Flow.Http.AbstractMessage.html">AbstractMessage</a></li>
+				<li class="active"><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">AbstractMessage</a></li>
 				<li><a href="class-Neos.Flow.Http.BaseRequest.html">BaseRequest</a></li>
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">FlowUploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Request</a></li>
-				<li><a href="class-Neos.Flow.Http.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Uri</a></li>
 				<li><a href="class-Neos.Flow.Http.UriTemplate.html">UriTemplate</a></li>
@@ -854,7 +854,7 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class AbstractMessage</h1>
+	<h1 class="deprecated">Class AbstractMessage</h1>
 
 
 	<div class="description">
@@ -863,7 +863,7 @@
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-<b><span>Neos\Flow\Http\AbstractMessage</span></b>			
+<b><span class="deprecated">Neos\Flow\Http\AbstractMessage</span></b>			
 			 implements 
 <span>Psr\Http\Message\MessageInterface</span>
 			
@@ -876,7 +876,7 @@
 		<h3>Direct known subclasses</h3>
 		<p class="elementList">
 			<code><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></code>, 
-			<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+			<code><a href="class-Neos.Flow.Http.Response.html"><span class="deprecated">Neos\Flow\Http\Response</span></a></code>
 		</p>
 	</div>
 
@@ -901,6 +901,8 @@
 				<br>
 				<b>Flow\proxy(false)</b>
 				<br>
+				<b>Deprecated:</b>
+				Since Flow 5.3, to be removed with 6.0. The whole Flow HTTP implementation will use PSR-7 compatible implementations only from then.<br>
 			<b>Located at</b> <a href="source-class-Neos.Flow.Http.AbstractMessage.html#19-518" title="Go to source code">Neos.Flow/Classes/Http/AbstractMessage.php</a>
 		<br>
 	</div>
@@ -921,7 +923,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#51-57" title="Go to source code">__construct</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#52-58" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				
@@ -950,7 +952,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHeaders">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#59-69" title="Go to source code">getHeaders</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#60-70" title="Go to source code">getHeaders</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the HTTP headers of this request</p>
@@ -987,7 +989,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#71-88" title="Go to source code">getHeader</a>( <span>string <var>$name</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#72-89" title="Go to source code">getHeader</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the value(s) of the specified header</p>
@@ -1035,7 +1037,7 @@ If no such header exists, NULL is returned.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_hasHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#90-100" title="Go to source code">hasHeader</a>( <span>string <var>$name</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#91-101" title="Go to source code">hasHeader</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the specified header exists.</p>
@@ -1069,14 +1071,14 @@ If no such header exists, NULL is returned.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setHeader">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#102-139" title="Go to source code">setHeader</a>( <span>string <var>$name</var></span>, <span>array|string|DateTime <var>$values</var></span>, <span>boolean <var>$replaceExistingHeader</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#103-140" title="Go to source code">setHeader</a>( <span>string <var>$name</var></span>, <span>array|string|DateTime <var>$values</var></span>, <span>boolean <var>$replaceExistingHeader</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Sets the specified HTTP header</p>
@@ -1092,10 +1094,6 @@ will be returned as DateTime objects on calling getHeader().</p>
 the same point in time, but not necessarily in the same timezone, if it was not
 GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use withHeader or withAddedHeader instead<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1109,7 +1107,7 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code><br>This message, for method chaining
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code><br>This message, for method chaining
 					</div>
 
 					<h4>Throws</h4>
@@ -1119,8 +1117,8 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withAddedHeader">Neos\Flow\Http\AbstractMessage::withAddedHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withHeader()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withAddedHeader" class="deprecated">Neos\Flow\Http\AbstractMessage::withAddedHeader()</a></code><br>
 					</div>
 
 
@@ -1131,14 +1129,14 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setContent">#</a>
-			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#141-165" title="Go to source code">setContent</a>( <span>string <var>$content</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#142-165" title="Go to source code">setContent</a>( <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Explicitly sets the content of the message body</p>
@@ -1147,10 +1145,6 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 			<div class="description detailed hidden">
 				<p>Explicitly sets the content of the message body</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use withBody<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1160,13 +1154,13 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code><br>This message, for method chaining
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code><br>This message, for method chaining
 					</div>
 
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withBody">Neos\Flow\Http\AbstractMessage::withBody()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withBody" class="deprecated">Neos\Flow\Http\AbstractMessage::withBody()</a></code><br>
 					</div>
 
 
@@ -1193,10 +1187,6 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 			<div class="description detailed hidden">
 				<p>Returns the content of the message body</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use getBody<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1207,7 +1197,7 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody">Neos\Flow\Http\AbstractMessage::getBody()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getBody" class="deprecated">Neos\Flow\Http\AbstractMessage::getBody()</a></code><br>
 					</div>
 
 
@@ -1218,7 +1208,7 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
@@ -1237,10 +1227,6 @@ GMT previously. GMT is used synonymously with UTC as per RFC 2616 3.3.1.</p>
 <p>If the content type of this message is a text/* media type, the character
 set in the respective Content-Type header will be updated by this method.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, just set the full Content-Type header<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1250,7 +1236,7 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code><br>This message, for method chaining
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code><br>This message, for method chaining
 					</div>
 
 
@@ -1285,10 +1271,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 <p>Note that the default character in Flow is UTF-8.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, parse it from the "Content-Type" header via RequestInformationHelper::getContentCharset<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1326,10 +1308,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 			<div class="description detailed hidden">
 				<p>Sets the HTTP version value of this message, for example "HTTP/1.1"</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use withProtocolVersion<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1341,7 +1319,7 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withProtocolVersion">Neos\Flow\Http\AbstractMessage::withProtocolVersion()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_withProtocolVersion" class="deprecated">Neos\Flow\Http\AbstractMessage::withProtocolVersion()</a></code><br>
 					</div>
 
 
@@ -1368,10 +1346,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 			<div class="description detailed hidden">
 				<p>Returns the HTTP version value of this message, for example "HTTP/1.1"</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use getProtocolVersion which gives ONLY the actual version, eg. "1.1"<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1382,7 +1356,7 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getProtocolVersion">Neos\Flow\Http\AbstractMessage::getProtocolVersion()</a></code><br>
+							<code><a href="class-Neos.Flow.Http.AbstractMessage.html#_getProtocolVersion" class="deprecated">Neos\Flow\Http\AbstractMessage::getProtocolVersion()</a></code><br>
 					</div>
 
 
@@ -1411,10 +1385,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 <p>This is a shortcut for $message->getHeaders()->setCookie($cookie);</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, replacement only on ServerRequestInterface<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1455,10 +1425,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 <p>This is a shortcut for $message->getHeaders()->getCookie($name);</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, replacement only on ServerRequestInterface<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1503,10 +1469,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 <p>This is a shortcut for $message->getHeaders()->getCookies();</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, replacement only on ServerRequestInterface<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -1546,10 +1508,6 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 <p>This is a shortcut for $message->getHeaders()->hasCookie($name);</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, replacement only on ServerRequestInterface<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1599,10 +1557,6 @@ set in the respective Content-Type header will be updated by this method.</p>
       the cookie's expire() method and <em>not</em> remove the cookie from the Headers
       container.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, replacement only on ServerRequestInterface<br>
-					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
@@ -1632,7 +1586,7 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProtocolVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#326-338" title="Go to source code">getProtocolVersion</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#326-338" title="Go to source code">getProtocolVersion</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieves the HTTP protocol version as a string.</p>
@@ -1662,14 +1616,14 @@ set in the respective Content-Type header will be updated by this method.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withProtocolVersion">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#340-361" title="Go to source code">withProtocolVersion</a>( <span>string <var>$version</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#340-361" title="Go to source code">withProtocolVersion</a>( <span>string <var>$version</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified HTTP protocol version.</p>
@@ -1696,7 +1650,7 @@ new protocol version.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 					</div>
 
 
@@ -1716,7 +1670,7 @@ new protocol version.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHeaderLine">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#363-394" title="Go to source code">getHeaderLine</a>( <span>string <var>$name</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#363-394" title="Go to source code">getHeaderLine</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Retrieves a comma-separated string of the values for a single header.</p>
@@ -1760,14 +1714,14 @@ an empty string.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#396-416" title="Go to source code">withHeader</a>( <span>string <var>$name</var></span>, <span>string|string[] <var>$value</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#396-416" title="Go to source code">withHeader</a>( <span>string <var>$name</var></span>, <span>string|string[] <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the provided value replacing the specified header.</p>
@@ -1794,7 +1748,7 @@ new and/or updated header and value.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -1811,14 +1765,14 @@ new and/or updated header and value.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withAddedHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#418-440" title="Go to source code">withAddedHeader</a>( <span>string <var>$name</var></span>, <span>string|string[] <var>$value</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#418-440" title="Go to source code">withAddedHeader</a>( <span>string <var>$name</var></span>, <span>string|string[] <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified header appended with the given value.</p>
@@ -1846,7 +1800,7 @@ new header and/or value.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -1863,14 +1817,14 @@ new header and/or value.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withoutHeader">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#442-460" title="Go to source code">withoutHeader</a>( <span>string <var>$name</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#442-460" title="Go to source code">withoutHeader</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance without the specified header.</p>
@@ -1894,7 +1848,7 @@ the named header.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 					</div>
 
 
@@ -1914,7 +1868,7 @@ the named header.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBody">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#462-478" title="Go to source code">getBody</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#462-478" title="Go to source code">getBody</a>( )</code>
 
 			<div class="description short">
 				<p>Gets the body of the message.</p>
@@ -1940,14 +1894,14 @@ the named header.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+				<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_withBody">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#480-499" title="Go to source code">withBody</a>( <span>Psr\Http\Message\StreamInterface <var>$body</var></span> )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#480-499" title="Go to source code">withBody</a>( <span>Psr\Http\Message\StreamInterface <var>$body</var></span> )</code>
 
 			<div class="description short">
 				<p>Return an instance with the specified message body.</p>
@@ -1971,7 +1925,7 @@ new body stream.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></code>
+						<code><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></code>
 					</div>
 
 					<h4>Throws</h4>
@@ -1995,7 +1949,7 @@ new body stream.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___clone">#</a>
-			<code><a href="source-class-Neos.Flow.Http.AbstractMessage.html#501-507" title="Go to source code">__clone</a>( )</code>
+			<code class="deprecated"><a href="source-class-Neos.Flow.Http.AbstractMessage.html#501-507" title="Go to source code">__clone</a>( )</code>
 
 			<div class="description short">
 				<p>Headers should also be cloned when the message is cloned.</p>
@@ -2033,10 +1987,6 @@ new body stream.</p>
 			<div class="description detailed hidden">
 				<p>Returns the first line of this message, which is the Request's Request-Line or the Response's Status-Line.</p>
 
-					<h4>Deprecated</h4>
-					<div class="list">
-							Since Flow 5.1, use the RequestInformationHelper instead<br>
-					</div>
 
 
 					<h4>Returns</h4>
@@ -2078,7 +2028,7 @@ new body stream.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#27-32" title="Go to source code"><var>$version</var></a>
+					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#28-33" title="Go to source code"><var>$version</var></a>
 
 				<div class="description short">
 					<p>The HTTP version value of this message, for example "HTTP/1.1"</p>
@@ -2103,7 +2053,7 @@ new body stream.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#34-37" title="Go to source code"><var>$headers</var></a>
+					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#35-38" title="Go to source code"><var>$headers</var></a>
 
 				<div class="description short">
 					
@@ -2128,7 +2078,7 @@ new body stream.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#39-44" title="Go to source code"><var>$content</var></a>
+					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#40-45" title="Go to source code"><var>$content</var></a>
 
 				<div class="description short">
 					<p>Entity body of this message</p>
@@ -2153,7 +2103,7 @@ new body stream.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#46-49" title="Go to source code"><var>$charset</var></a>
+					<a href="source-class-Neos.Flow.Http.AbstractMessage.html#47-50" title="Go to source code"><var>$charset</var></a>
 
 				<div class="description short">
 					
@@ -2187,6 +2137,6 @@ new body stream.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0ae0bc7e5d6807d0e4a76d7592871a2b22c7c2a0"></script>
+<script src="elementlist.js?cc12d13c024a2ce1d4ff4406f9b37ba3f97c8540"></script>
 </body>
 </html>

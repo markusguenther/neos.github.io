@@ -908,7 +908,7 @@
 				<li><a href="class-Neos.Flow.Core.ProxyClassLoader.html">Neos\Flow\Core\ProxyClassLoader</a></li>
 				<li><a href="class-Neos.Flow.Error.DebugExceptionHandler.html">Neos\Flow\Error\DebugExceptionHandler</a></li>
 				<li><a href="class-Neos.Flow.Error.ErrorHandler.html">Neos\Flow\Error\ErrorHandler</a></li>
-				<li><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></li>
+				<li><a href="class-Neos.Flow.Http.AbstractMessage.html" class="deprecated">Neos\Flow\Http\AbstractMessage</a></li>
 				<li><a href="class-Neos.Flow.Http.BaseRequest.html">Neos\Flow\Http\BaseRequest</a></li>
 				<li><a href="class-Neos.Flow.Http.Client.Browser.html">Neos\Flow\Http\Client\Browser</a></li>
 				<li><a href="class-Neos.Flow.Http.Client.CurlEngine.html">Neos\Flow\Http\Client\CurlEngine</a></li>
@@ -921,7 +921,7 @@
 				<li><a href="class-Neos.Flow.Http.Cookie.html">Neos\Flow\Http\Cookie</a></li>
 				<li><a href="class-Neos.Flow.Http.FlowUploadedFile.html">Neos\Flow\Http\FlowUploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Request.html">Neos\Flow\Http\Request</a></li>
-				<li><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></li>
+				<li><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></li>
 				<li><a href="class-Neos.Flow.Http.UploadedFile.html">Neos\Flow\Http\UploadedFile</a></li>
 				<li><a href="class-Neos.Flow.Http.Uri.html">Neos\Flow\Http\Uri</a></li>
 				<li><a href="class-Neos.Flow.Http.UriTemplate.html">Neos\Flow\Http\UriTemplate</a></li>
@@ -969,11 +969,10 @@
 				<li><a href="class-Neos.Flow.Mvc.Controller.MvcPropertyMappingConfigurationService.html">Neos\Flow\Mvc\Controller\MvcPropertyMappingConfigurationService</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Controller.RestController.html">Neos\Flow\Mvc\Controller\RestController</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Controller.StandardController.html">Neos\Flow\Mvc\Controller\StandardController</a></li>
-				<li><a href="class-Neos.Flow.Mvc.DispatchComponent.html">Neos\Flow\Mvc\DispatchComponent</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Dispatcher.html">Neos\Flow\Mvc\Dispatcher</a></li>
 				<li><a href="class-Neos.Flow.Mvc.FlashMessageContainer.html">Neos\Flow\Mvc\FlashMessageContainer</a></li>
 				<li><a href="class-Neos.Flow.Mvc.RequestMatcher.html">Neos\Flow\Mvc\RequestMatcher</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Response.html">Neos\Flow\Mvc\Response</a></li>
+				<li><a href="class-Neos.Flow.Mvc.Response.html" class="deprecated">Neos\Flow\Mvc\Response</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.AbstractRoutePart.html">Neos\Flow\Mvc\Routing\AbstractRoutePart</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.DynamicRoutePart.html">Neos\Flow\Mvc\Routing\DynamicRoutePart</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Routing.IdentityRoutePart.html">Neos\Flow\Mvc\Routing\IdentityRoutePart</a></li>
@@ -1378,6 +1377,7 @@
 			<h3>Traits</h3>
 			<ul>
 				<li><a href="class-Neos.Cache.Backend.RequireOnceFromValueTrait.html">Neos\Cache\Backend\RequireOnceFromValueTrait</a></li>
+				<li><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html" class="deprecated">Neos\Flow\Mvc\ResponseDeprecationTrait</a></li>
 				<li><a href="class-Neos.Flow.ObjectManagement.DependencyInjection.PropertyInjectionTrait.html">Neos\Flow\ObjectManagement\DependencyInjection\PropertyInjectionTrait</a></li>
 				<li><a href="class-Neos.Flow.ObjectManagement.Proxy.ObjectSerializationTrait.html">Neos\Flow\ObjectManagement\Proxy\ObjectSerializationTrait</a></li>
 			</ul>
@@ -1650,9 +1650,26 @@
                 <div class="panel-heading"><h2>Classes summary</h2></div>
 				<table class="summary table table-bordered table-striped" id="classes">
 	<tr>
+		<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
+		<td>
+					Since Flow 5.3, to be removed with 6.0. The whole Flow HTTP implementation will use PSR-7 compatible implementations only from then.<br>
+		</td>
+	</tr>
+	<tr>
+		<td class="name"><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></td>
+		<td>
+					Since Flow 5.3, to be removed with 6.0. The whole Flow HTTP implementation will use PSR-7 compatible implementations only from then.<br>
+		</td>
+	</tr>
+	<tr>
 		<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
 		<td>
 					Instead a \Psr\Log\LoggerInterface should be used in all places.<br>
+		</td>
+	</tr>
+	<tr>
+		<td class="name"><a href="class-Neos.Flow.Mvc.Response.html">Neos\Flow\Mvc\Response</a></td>
+		<td>
 		</td>
 	</tr>
 	<tr>
@@ -1710,6 +1727,17 @@
 				</table>
 			</div>
 
+			<div class="panel panel-default">
+                <div class="panel-heading"><h2>Traits summary</h2></div>
+				<table class="summary table table-bordered table-striped" id="traits">
+	<tr>
+		<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+		<td>
+					since Flow 5.3, to be removed in 6.0<br>
+		</td>
+	</tr>
+				</table>
+			</div>
 
 
 			<div class="panel panel-default">
@@ -1720,13 +1748,6 @@
 						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setHeader">setHeader()</a></code></td>
 						<td>
 										Since Flow 5.1, use withHeader or withAddedHeader instead<br>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Http.AbstractMessage.html">Neos\Flow\Http\AbstractMessage</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Http.AbstractMessage.html#_setContent">setContent()</a></code></td>
-						<td>
-										Since Flow 5.1, use withBody<br>
 						</td>
 					</tr>
 					<tr>
@@ -2308,6 +2329,377 @@ TODO: Make private after deprecation period</p><br>
 						<td class="name"><code><a href="class-Neos.Flow.Security.Authentication.AuthenticationManagerInterface.html#_setSecurityContext">setSecurityContext()</a></code></td>
 						<td>
 										Just get it injected<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getHeaders">getHeaders()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getHeader">getHeader()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_hasHeader">hasHeader()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setHeader">setHeader()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setContent">setContent()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setCharset">setCharset()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getCharset">getCharset()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setVersion">setVersion()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getVersion">getVersion()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setCookie">setCookie()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getCookie">getCookie()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getCookies">getCookies()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_hasCookie">hasCookie()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_removeCookie">removeCookie()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getProtocolVersion">getProtocolVersion()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_withProtocolVersion">withProtocolVersion()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getHeaderLine">getHeaderLine()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_withHeader">withHeader()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_withAddedHeader">withAddedHeader()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_withoutHeader">withoutHeader()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getBody">getBody()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_withBody">withBody()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getStatusMessageByCode">getStatusMessageByCode()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_createFromRaw">createFromRaw()</a></code></td>
+						<td>
+										TODO: Can be removed when the ActionResponse no longer extends HTTP response.<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getParentResponse">getParentResponse()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_appendContent">appendContent()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getContent">getContent()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setStatus">setStatus()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getStatus">getStatus()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getStatusCode">getStatusCode()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setHeaders">setHeaders()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setNow">setNow()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setDate">setDate()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getDate">getDate()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setLastModified">setLastModified()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getLastModified">getLastModified()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setExpires">setExpires()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getExpires">getExpires()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getAge">getAge()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setMaximumAge">setMaximumAge()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getMaximumAge">getMaximumAge()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setSharedMaximumAge">setSharedMaximumAge()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getSharedMaximumAge">getSharedMaximumAge()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_renderHeaders">renderHeaders()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setPublic">setPublic()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_setPrivate">setPrivate()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_makeStandardsCompliant">makeStandardsCompliant()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_sendHeaders">sendHeaders()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_send">send()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getStatusLine">getStatusLine()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getStartLine">getStartLine()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_withStatus">withStatus()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
+						</td>
+					</tr>
+					<tr>
+						<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html">Neos\Flow\Mvc\ResponseDeprecationTrait</a></td>
+						<td class="name"><code><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html#_getReasonPhrase">getReasonPhrase()</a></code></td>
+						<td>
+										since Flow 5.3, to be removed in 6.0<br>
 						</td>
 					</tr>
 				</table>

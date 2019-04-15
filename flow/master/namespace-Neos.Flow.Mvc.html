@@ -822,11 +822,10 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Neos.Flow.Mvc.ActionRequest.html">ActionRequest</a></li>
-				<li><a href="class-Neos.Flow.Mvc.DispatchComponent.html">DispatchComponent</a></li>
 				<li><a href="class-Neos.Flow.Mvc.Dispatcher.html">Dispatcher</a></li>
 				<li><a href="class-Neos.Flow.Mvc.FlashMessageContainer.html">FlashMessageContainer</a></li>
 				<li><a href="class-Neos.Flow.Mvc.RequestMatcher.html">RequestMatcher</a></li>
-				<li><a href="class-Neos.Flow.Mvc.Response.html">Response</a></li>
+				<li><a href="class-Neos.Flow.Mvc.Response.html" class="deprecated">Response</a></li>
 				<li><a href="class-Neos.Flow.Mvc.ViewConfigurationManager.html">ViewConfigurationManager</a></li>
 			</ul>
 
@@ -836,6 +835,10 @@
 				<li><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">ResponseInterface</a></li>
 			</ul>
 
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html" class="deprecated">ResponseDeprecationTrait</a></li>
+			</ul>
 
 			<h3>Exceptions</h3>
 			<ul>
@@ -881,10 +884,6 @@
 	<td>Represents an internal request targeted to a controller action</td>
 </tr>
 <tr>
-	<td class="name"><a href="class-Neos.Flow.Mvc.DispatchComponent.html">DispatchComponent</a></td>
-	<td>A dispatch component</td>
-</tr>
-<tr>
 	<td class="name"><a href="class-Neos.Flow.Mvc.Dispatcher.html">Dispatcher</a></td>
 	<td><p>Dispatches requests to the controller which was specified by the request and
 returns the response the controller generated.</p></td>
@@ -901,7 +900,7 @@ using the Eel Syntax. This is primarily used
 in the requestFilter of the Views.yaml configuration.</p></td>
 </tr>
 <tr>
-	<td class="name"><a href="class-Neos.Flow.Mvc.Response.html">Response</a></td>
+	<td class="name"><a href="class-Neos.Flow.Mvc.Response.html" class="deprecated">Response</a></td>
 	<td>A generic and very basic response implementation</td>
 </tr>
 <tr>
@@ -925,6 +924,21 @@ in the requestFilter of the Views.yaml configuration.</p></td>
 	</table>
 </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Traits summary</h2></div>
+	<table class="summary table table-bordered table-striped" id="traits">
+<tr>
+	<td class="name"><a href="class-Neos.Flow.Mvc.ResponseDeprecationTrait.html" class="deprecated">ResponseDeprecationTrait</a></td>
+	<td><p>This is merely a shim to allow the Http\Response still have their PSR-7 methods non deprecated
+while at the same time having all old methods deprecated in places where in future only an
+ActionResponse is permitted, while maintaining backwards compatibility by having ActionResponse
+extend the Http\Response.
+We could have deprecated those methods in the ActionResponse, but that would pollute the class
+with a lot of code that gets removed in the next major again. This way you can easily read
+the signature of the ActionResponse and we can throw away this shim for the next major.</p></td>
+</tr>
+	</table>
+</div>
 
 <div class="panel panel-default">
     <div class="panel-heading"><h2>Exceptions summary</h2></div>
@@ -945,6 +959,6 @@ in the requestFilter of the Views.yaml configuration.</p></td>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0ae0bc7e5d6807d0e4a76d7592871a2b22c7c2a0"></script>
+<script src="elementlist.js?cc12d13c024a2ce1d4ff4406f9b37ba3f97c8540"></script>
 </body>
 </html>

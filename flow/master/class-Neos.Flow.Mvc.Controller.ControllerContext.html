@@ -878,9 +878,9 @@ views being views or view helpers.</p>
 		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Flow.html">Flow</a>\<a href="namespace-Neos.Flow.Mvc.html">Mvc</a>\<a href="namespace-Neos.Flow.Mvc.Controller.html">Controller</a><br>
 		
 
-				<b>Api</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#22-128" title="Go to source code">Neos.Flow/Classes/Mvc/Controller/ControllerContext.php</a>
+				<b>Api:</b>
+				TODO: From next major this will use the ActionResponse<br>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#23-131" title="Go to source code">Neos.Flow/Classes/Mvc/Controller/ControllerContext.php</a>
 		<br>
 	</div>
 
@@ -900,7 +900,7 @@ views being views or view helpers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#58-72" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.Arguments.html">Neos\Flow\Mvc\Controller\Arguments</a></code> <var>$arguments</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Routing.UriBuilder.html">Neos\Flow\Mvc\Routing\UriBuilder</a></code> <var>$uriBuilder</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#61-75" title="Go to source code">__construct</a>( <span><code><a href="class-Neos.Flow.Mvc.RequestInterface.html">Neos\Flow\Mvc\RequestInterface</a></code> <var>$request</var></span>, <span><code><a href="class-Neos.Flow.Http.Response.html" class="deprecated">Neos\Flow\Http\Response</a></code> <var>$response</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Controller.Arguments.html">Neos\Flow\Mvc\Controller\Arguments</a></code> <var>$arguments</var></span>, <span><code><a href="class-Neos.Flow.Mvc.Routing.UriBuilder.html">Neos\Flow\Mvc\Routing\UriBuilder</a></code> <var>$uriBuilder</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs this context</p>
@@ -940,7 +940,7 @@ views being views or view helpers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRequest">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#74-83" title="Go to source code">getRequest</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#77-86" title="Go to source code">getRequest</a>( )</code>
 
 			<div class="description short">
 				<p>Get the request of the controller</p>
@@ -969,14 +969,14 @@ views being views or view helpers.</p>
 
 			<td class="attributes"><code>
 				 public 
-				<code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code>
+				<code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code>|Neos\Flow\Mvc\ActionResponse
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getResponse">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#85-94" title="Go to source code">getResponse</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#88-97" title="Go to source code">getResponse</a>( )</code>
 
 			<div class="description short">
 				<p>Get the response of the controller</p>
@@ -989,7 +989,7 @@ views being views or view helpers.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code>
+						<code><a href="class-Neos.Flow.Mvc.ResponseInterface.html" class="deprecated">Neos\Flow\Mvc\ResponseInterface</a></code>|Neos\Flow\Mvc\ActionResponse
 					</div>
 
 
@@ -1012,7 +1012,7 @@ views being views or view helpers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getArguments">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#96-105" title="Go to source code">getArguments</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#99-108" title="Go to source code">getArguments</a>( )</code>
 
 			<div class="description short">
 				<p>Get the arguments of the controller</p>
@@ -1048,7 +1048,7 @@ views being views or view helpers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUriBuilder">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#107-116" title="Go to source code">getUriBuilder</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#110-119" title="Go to source code">getUriBuilder</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the URI Builder bound to this context</p>
@@ -1084,7 +1084,7 @@ views being views or view helpers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFlashMessageContainer">#</a>
-			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#118-127" title="Go to source code">getFlashMessageContainer</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#121-130" title="Go to source code">getFlashMessageContainer</a>( )</code>
 
 			<div class="description short">
 				<p>Get the flash message container</p>
@@ -1132,7 +1132,7 @@ views being views or view helpers.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#32-35" title="Go to source code"><var>$request</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#35-38" title="Go to source code"><var>$request</var></a>
 
 				<div class="description short">
 					
@@ -1153,11 +1153,11 @@ views being views or view helpers.</p>
 		<tr data-order="response" id="$response">
 			<td class="attributes"><code>
 				protected  
-				<code><a href="class-Neos.Flow.Http.Response.html">Neos\Flow\Http\Response</a></code>
+				Neos\Flow\Mvc\ActionResponse
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#37-40" title="Go to source code"><var>$response</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#40-43" title="Go to source code"><var>$response</var></a>
 
 				<div class="description short">
 					
@@ -1182,7 +1182,7 @@ views being views or view helpers.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#42-45" title="Go to source code"><var>$arguments</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#45-48" title="Go to source code"><var>$arguments</var></a>
 
 				<div class="description short">
 					
@@ -1207,7 +1207,7 @@ views being views or view helpers.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#47-50" title="Go to source code"><var>$uriBuilder</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#50-53" title="Go to source code"><var>$uriBuilder</var></a>
 
 				<div class="description short">
 					
@@ -1232,7 +1232,7 @@ views being views or view helpers.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#52-56" title="Go to source code"><var>$flashMessageContainer</var></a>
+					<a href="source-class-Neos.Flow.Mvc.Controller.ControllerContext.html#55-59" title="Go to source code"><var>$flashMessageContainer</var></a>
 
 				<div class="description short">
 					
@@ -1269,6 +1269,6 @@ views being views or view helpers.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?0ae0bc7e5d6807d0e4a76d7592871a2b22c7c2a0"></script>
+<script src="elementlist.js?cc12d13c024a2ce1d4ff4406f9b37ba3f97c8540"></script>
 </body>
 </html>
