@@ -2,8 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
 
-	<title>Class Neos\Media\Domain\Service\ThumbnailService | Neos (master branch)</title>
+	<title>File Neos.Media.Browser/Classes/Controller/ImageVariantController.php | Neos (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -28,9 +29,9 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.Media.Domain.Service.html" title="Summary of Neos\Media\Domain\Service"><span>Namespace</span></a>
+						<a href="namespace-Neos.Media.Browser.Controller.html" title="Summary of Neos\Media\Browser\Controller"><span>Namespace</span></a>
 					</li>
-					<li class="active">
+					<li>
 <span>Class</span>					</li>
 
 
@@ -102,6 +103,16 @@
 							</li>
 								</ul></li></ul></li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Projection.html">
+							Projection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Projection.Content.html">
+							Content						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.Domain.Repository.html">
 							Repository						</a>
 							</li>
@@ -122,10 +133,6 @@
 					<li>
 						<a href="namespace-Neos.ContentRepository.Domain.Utility.html">
 							Utility						</a>
-							</li>
-					<li>
-						<a href="namespace-Neos.ContentRepository.Domain.ValueObject.html">
-							ValueObject						</a>
 							</li>
 								</ul></li>
 					<li>
@@ -346,12 +353,12 @@
 							Media<span></span>
 						</a>
 							<ul>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Media.Browser.html">
 							Browser<span></span>
 						</a>
 							<ul>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Media.Browser.Controller.html">
 							Controller						</a>
 							</li>
@@ -373,7 +380,7 @@
 						<a href="namespace-Neos.Media.Controller.html">
 							Controller						</a>
 							</li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Media.Domain.html">
 							Domain<span></span>
 						</a>
@@ -414,7 +421,7 @@
 						<a href="namespace-Neos.Media.Domain.Repository.html">
 							Repository						</a>
 							</li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.Media.Domain.Service.html">
 							Service						</a>
 							</li>
@@ -792,10 +799,10 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Neos.Media.Domain.Service.AssetService.html">AssetService</a></li>
-				<li><a href="class-Neos.Media.Domain.Service.ImageService.html">ImageService</a></li>
-				<li><a href="class-Neos.Media.Domain.Service.ThumbnailGenerator.html">ThumbnailGenerator</a></li>
-				<li class="active"><a href="class-Neos.Media.Domain.Service.ThumbnailService.html">ThumbnailService</a></li>
+				<li><a href="class-Neos.Media.Browser.Controller.AssetCollectionController.html">AssetCollectionController</a></li>
+				<li><a href="class-Neos.Media.Browser.Controller.ImageVariantController.html">ImageVariantController</a></li>
+				<li><a href="class-Neos.Media.Browser.Controller.TagController.html">TagController</a></li>
+				<li><a href="class-Neos.Media.Browser.Controller.UsageController.html">UsageController</a></li>
 			</ul>
 
 
@@ -810,622 +817,50 @@
 
 <div id="right">
 	<div id="rightInner">
-<div id="content" class="class">
-	<h1>Class ThumbnailService</h1>
-
-
-	<div class="description">
-	<p>An internal thumbnail service.</p>
-
-<p>Note that this repository is not part of the public API. Use the asset's getThumbnail() method instead.</p>
-	</div>
-
-
-
-
-
-
-
-
-
-	<div class="alert alert-info">
-		
-		
-		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Media.html">Media</a>\<a href="namespace-Neos.Media.Domain.html">Domain</a>\<a href="namespace-Neos.Media.Domain.Service.html">Service</a><br>
-		
-
-				<b>Flow\scope(&quot;singleton&quot;)</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#28-273" title="Go to source code">Neos.Media/Classes/Domain/Service/ThumbnailService.php</a>
-		<br>
-	</div>
-
-
-
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="injectLogger" id="_injectLogger">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_injectLogger">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#82-88" title="Go to source code">injectLogger</a>( <span>Psr\Log\LoggerInterface <var>$logger</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$logger</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="injectThrowableStorage" id="_injectThrowableStorage">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_injectThrowableStorage">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#90-96" title="Go to source code">injectThrowableStorage</a>( <span>Neos\Flow\Log\ThrowableStorageInterface <var>$throwableStorage</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$throwableStorage</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getThumbnail" id="_getThumbnail">
-
-			<td class="attributes"><code>
-				 public 
-				<code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code>
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getThumbnail">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#98-178" title="Go to source code">getThumbnail</a>( <span><code><a href="class-Neos.Media.Domain.Model.AssetInterface.html">Neos\Media\Domain\Model\AssetInterface</a></code> <var>$asset</var></span>, <span>Neos\Media\Domain\Model\ThumbnailConfiguration <var>$configuration</var></span> )</code>
-
-			<div class="description short">
-				<p>Returns a thumbnail of the given asset</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns a thumbnail of the given asset</p>
-
-<p>If the maximum width / height is not specified or exceeds the original asset's dimensions, the width / height of
-the original asset is used.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$asset</var></dt>
-						<dd>The asset to render a thumbnail for</dd>
-						<dt><var>$configuration</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code>
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						Exception
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getPresets" id="_getPresets">
-
-			<td class="attributes"><code>
-				 public 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getPresets">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#180-186" title="Go to source code">getPresets</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						array<br>Returns preset configuration for all presets
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getThumbnailConfigurationForPreset" id="_getThumbnailConfigurationForPreset">
-
-			<td class="attributes"><code>
-				 public 
-				Neos\Media\Domain\Model\ThumbnailConfiguration
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getThumbnailConfigurationForPreset">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#188-212" title="Go to source code">getThumbnailConfigurationForPreset</a>( <span>string <var>$preset</var></span>, <span>boolean <var>$async</var> = <span class="php-keyword1">false</span></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$preset</var></dt>
-						<dd>The preset identifier</dd>
-						<dt><var>$async</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						Neos\Media\Domain\Model\ThumbnailConfiguration
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Media.Exception.ThumbnailServiceException.html">Neos\Media\Exception\ThumbnailServiceException</a></code>
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="refreshThumbnail" id="_refreshThumbnail">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_refreshThumbnail">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#214-227" title="Go to source code">refreshThumbnail</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
-
-			<div class="description short">
-				<p>Refreshes a thumbnail and persists the thumbnail</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Refreshes a thumbnail and persists the thumbnail</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$thumbnail</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getUriForThumbnail" id="_getUriForThumbnail">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getUriForThumbnail">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#229-250" title="Go to source code">getUriForThumbnail</a>( <span><code><a href="class-Neos.Media.Domain.Model.ImageInterface.html">Neos\Media\Domain\Model\ImageInterface</a></code> <var>$thumbnail</var></span> )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$thumbnail</var></dt>
-						<dd></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-					<h4>Throws</h4>
-					<div class="list">
-						<code><a href="class-Neos.Media.Exception.ThumbnailServiceException.html">Neos\Media\Exception\ThumbnailServiceException</a></code>
-					</div>
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="emitThumbnailPersisted" id="_emitThumbnailPersisted">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_emitThumbnailPersisted">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#252-261" title="Go to source code">emitThumbnailPersisted</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
-
-			<div class="description short">
-				<p>Signals that a thumbnail was persisted.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Signals that a thumbnail was persisted.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$thumbnail</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-					<h4>Flow\signal</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="emitThumbnailCreated" id="_emitThumbnailCreated">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_emitThumbnailCreated">#</a>
-			<code><a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#263-272" title="Go to source code">emitThumbnailCreated</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
-
-			<div class="description short">
-				<p>Signals that a thumbnail was created.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Signals that a thumbnail was created.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$thumbnail</var></dt>
-						<dd></dd>
-					</dl></div>
-
-
-
-					<h4>Flow\signal</h4>
-					<div class="list">
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-			</table>
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="imageService" id="$imageService">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Service.ImageService.html">Neos\Media\Domain\Service\ImageService</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#37-41" title="Go to source code"><var>$imageService</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$imageService" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="thumbnailRepository" id="$thumbnailRepository">
-			<td class="attributes"><code>
-				protected  
-				<code><a href="class-Neos.Media.Domain.Repository.ThumbnailRepository.html">Neos\Media\Domain\Repository\ThumbnailRepository</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#43-47" title="Go to source code"><var>$thumbnailRepository</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$thumbnailRepository" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="persistenceManager" id="$persistenceManager">
-			<td class="attributes"><code>
-				protected  
-				Neos\Flow\Persistence\PersistenceManagerInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#49-53" title="Go to source code"><var>$persistenceManager</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$persistenceManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="resourceManager" id="$resourceManager">
-			<td class="attributes"><code>
-				protected  
-				Neos\Flow\ResourceManagement\ResourceManager
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#55-59" title="Go to source code"><var>$resourceManager</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\inject</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$resourceManager" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="presets" id="$presets">
-			<td class="attributes"><code>
-				protected  
-				boolean
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#61-65" title="Go to source code"><var>$presets</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-						<h4>Flow\injectconfiguration(&quot;thumbnailpresets&quot;)</h4>
-						<div class="list">
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$presets" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="thumbnailCache" id="$thumbnailCache">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#67-70" title="Go to source code"><var>$thumbnailCache</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$thumbnailCache" class="anchor">#</a>
-					<code>[]</code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="logger" id="$logger">
-			<td class="attributes"><code>
-				private  
-				Psr\Log\LoggerInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#72-75" title="Go to source code"><var>$logger</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$logger" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="throwableStorage" id="$throwableStorage">
-			<td class="attributes"><code>
-				private  
-				Neos\Flow\Log\ThrowableStorageInterface
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Neos.Media.Domain.Service.ThumbnailService.html#77-80" title="Go to source code"><var>$throwableStorage</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$throwableStorage" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-			</table>
-		</div>
-
-
-
-
-
-
+<div id="source">
+	<pre class="numbers"><code><span class="l"><a href="#1"> 1 </a></span><span class="l"><a href="#2"> 2 </a></span><span class="l"><a href="#3"> 3 </a></span><span class="l"><a href="#4"> 4 </a></span><span class="l"><a href="#5"> 5 </a></span><span class="l"><a href="#6"> 6 </a></span><span class="l"><a href="#7"> 7 </a></span><span class="l"><a href="#8"> 8 </a></span><span class="l"><a href="#9"> 9 </a></span><span class="l"><a href="#10">10 </a></span><span class="l"><a href="#11">11 </a></span><span class="l"><a href="#12">12 </a></span></span><span class="l"><a href="#13">13 </a></span></span><span class="l"><a href="#14">14 </a></span><span class="l"><a href="#15">15 </a></span><span class="l"><a href="#16">16 </a></span><span class="l"><a href="#17">17 </a></span></span><span class="l"><a href="#18">18 </a></span></span><span class="l"><a href="#19">19 </a></span></span><span class="l"><a href="#20">20 </a></span><span class="l"><a href="#21">21 </a></span><span class="l"><a href="#22">22 </a></span><span class="l"><a href="#23">23 </a></span><span class="l"><a href="#24">24 </a></span><span class="l"><a href="#25">25 </a></span><span class="l"><a href="#26">26 </a></span><span class="l"><a href="#27">27 </a></span><span class="l"><a href="#28">28 </a></span><span class="l"><a href="#29">29 </a></span><span class="l"><a href="#30">30 </a></span><span class="l"><a href="#31">31 </a></span><span class="l"><a href="#32">32 </a></span><span class="l"><a href="#33">33 </a></span></span><span class="l"><a href="#34">34 </a></span></span><span class="l"><a href="#35">35 </a></span><span class="l"><a href="#36">36 </a></span><span class="l"><a href="#37">37 </a></span><span class="l"><a href="#38">38 </a></span><span class="l"><a href="#39">39 </a></span><span class="l"><a href="#40">40 </a></span><span class="l"><a href="#41">41 </a></span><span class="l"><a href="#42">42 </a></span></code></pre>
+	<pre class="code"><code><span id="1" class="l"><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><span class="php-keyword1">namespace</span> Neos\Media\Browser\Controller;
+</span><span id="3" class="l">
+</span><span id="4" class="l"><span class="php-keyword1">use</span> Neos\Flow\Annotations <span class="php-keyword1">as</span> Flow;
+</span><span id="5" class="l"><span class="php-keyword1">use</span> Neos\Flow\Mvc\Controller\ActionController;
+</span><span id="6" class="l"><span class="php-keyword1">use</span> Neos\Flow\Property\TypeConverter\PersistentObjectConverter;
+</span><span id="7" class="l"><span class="php-keyword1">use</span> Neos\Media\Browser\Domain\ImageMapper;
+</span><span id="8" class="l"><span class="php-keyword1">use</span> Neos\Media\Domain\Model\Adjustment\CropImageAdjustment;
+</span><span id="9" class="l"><span class="php-keyword1">use</span> Neos\Media\Domain\Model\ImageVariant;
+</span><span id="10" class="l"><span class="php-keyword1">use</span> Neos\Media\Domain\Repository\AssetRepository;
+</span><span id="11" class="l">
+</span><span id="12" class="l"><span class="php-comment">/**
+</span></span><span id="13" class="l"><span class="php-comment"> *
+</span></span><span id="14" class="l"><span class="php-comment"> */</span>
+</span><span id="15" class="l"><span class="php-keyword1">class</span> ImageVariantController <span class="php-keyword1">extends</span> ActionController
+</span><span id="16" class="l">{
+</span><span id="17" class="l">    <span class="php-comment">/**
+</span></span><span id="18" class="l"><span class="php-comment">     * @Flow\Inject
+</span></span><span id="19" class="l"><span class="php-comment">     * @var AssetRepository
+</span></span><span id="20" class="l"><span class="php-comment">     */</span>
+</span><span id="21" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$assetRepository</span>;
+</span><span id="22" class="l">
+</span><span id="23" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> initializeUpdateAction()
+</span><span id="24" class="l">    {
+</span><span id="25" class="l">        <span class="php-var">$mappingConfiguration</span> = <span class="php-var">$this</span>-&gt;arguments-&gt;getArgument(<span class="php-quote">'imageVariant'</span>)-&gt;getPropertyMappingConfiguration();
+</span><span id="26" class="l">        <span class="php-var">$mappingConfiguration</span>-&gt;allowAllProperties();
+</span><span id="27" class="l">        <span class="php-var">$mappingConfiguration</span>-&gt;getConfigurationFor(<span class="php-quote">'adjustments'</span>)-&gt;allowAllProperties();
+</span><span id="28" class="l">        <span class="php-var">$mappingConfiguration</span>-&gt;getConfigurationFor(<span class="php-quote">'adjustments'</span>)-&gt;getConfigurationFor(<span class="php-quote">'*'</span>)-&gt;allowAllProperties();
+</span><span id="29" class="l">        <span class="php-var">$mappingConfiguration</span>-&gt;getConfigurationFor(<span class="php-quote">'adjustments'</span>)-&gt;getConfigurationFor(CropImageAdjustment::<span class="php-keyword1">class</span>)-&gt;allowAllProperties();
+</span><span id="30" class="l">        <span class="php-var">$mappingConfiguration</span>-&gt;setTypeConverterOption(PersistentObjectConverter::<span class="php-keyword1">class</span>, PersistentObjectConverter::CONFIGURATION_CREATION_ALLOWED, <span class="php-keyword1">true</span>);
+</span><span id="31" class="l">    }
+</span><span id="32" class="l">
+</span><span id="33" class="l">    <span class="php-comment">/**
+</span></span><span id="34" class="l"><span class="php-comment">     * @param ImageVariant $imageVariant
+</span></span><span id="35" class="l"><span class="php-comment">     */</span>
+</span><span id="36" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> updateAction(ImageVariant <span class="php-var">$imageVariant</span>)
+</span><span id="37" class="l">    {
+</span><span id="38" class="l">        <span class="php-var">$this</span>-&gt;assetRepository-&gt;update(<span class="php-var">$imageVariant</span>);
+</span><span id="39" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">json_encode</span>((<span class="php-keyword1">new</span> ImageMapper(<span class="php-var">$imageVariant</span>))-&gt;getMappingResult());
+</span><span id="40" class="l">    }
+</span><span id="41" class="l">}
+</span><span id="42" class="l"></span></code></pre>
 </div>
 	</div>
 
@@ -1434,6 +869,6 @@ the original asset is used.</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?68f0452e661dc9378ff0d852db68133e87d3fdda"></script>
+<script src="elementlist.js?cd8a0b68954d07f469fdf7c0980250e16119258c"></script>
 </body>
 </html>

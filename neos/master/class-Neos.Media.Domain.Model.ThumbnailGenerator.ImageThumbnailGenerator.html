@@ -2,9 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="robots" content="noindex">
 
-	<title>File Neos.ContentRepository/Classes/Domain/ValueObject/PropertyCollectionInterface.php | Neos (master branch)</title>
+	<title>Class Neos\Media\Domain\Model\ThumbnailGenerator\ImageThumbnailGenerator | Neos (master branch)</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -29,9 +28,9 @@
 
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="namespace-Neos.ContentRepository.Domain.ValueObject.html" title="Summary of Neos\ContentRepository\Domain\ValueObject"><span>Namespace</span></a>
+						<a href="namespace-Neos.Media.Domain.Model.ThumbnailGenerator.html" title="Summary of Neos\Media\Domain\Model\ThumbnailGenerator"><span>Namespace</span></a>
 					</li>
-					<li>
+					<li class="active">
 <span>Class</span>					</li>
 
 
@@ -69,7 +68,7 @@
 							Neos<span></span>
 						</a>
 							<ul>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.ContentRepository.html">
 							ContentRepository<span></span>
 						</a>
@@ -78,7 +77,7 @@
 						<a href="namespace-Neos.ContentRepository.Command.html">
 							Command						</a>
 							</li>
-					<li class="active">
+					<li>
 						<a href="namespace-Neos.ContentRepository.Domain.html">
 							Domain<span></span>
 						</a>
@@ -103,6 +102,16 @@
 							</li>
 								</ul></li></ul></li>
 					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Projection.html">
+							Projection<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Neos.ContentRepository.Domain.Projection.Content.html">
+							Content						</a>
+							</li>
+								</ul></li>
+					<li>
 						<a href="namespace-Neos.ContentRepository.Domain.Repository.html">
 							Repository						</a>
 							</li>
@@ -123,10 +132,6 @@
 					<li>
 						<a href="namespace-Neos.ContentRepository.Domain.Utility.html">
 							Utility						</a>
-							</li>
-					<li class="active">
-						<a href="namespace-Neos.ContentRepository.Domain.ValueObject.html">
-							ValueObject						</a>
 							</li>
 								</ul></li>
 					<li>
@@ -342,7 +347,7 @@
 							ViewHelpers						</a>
 							</li>
 								</ul></li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Media.html">
 							Media<span></span>
 						</a>
@@ -374,7 +379,7 @@
 						<a href="namespace-Neos.Media.Controller.html">
 							Controller						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Media.Domain.html">
 							Domain<span></span>
 						</a>
@@ -383,7 +388,7 @@
 						<a href="namespace-Neos.Media.Domain.EventListener.html">
 							EventListener						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Media.Domain.Model.html">
 							Model<span></span>
 						</a>
@@ -406,7 +411,7 @@
 						<a href="namespace-Neos.Media.Domain.Model.Dto.html">
 							Dto						</a>
 							</li>
-					<li>
+					<li class="active">
 						<a href="namespace-Neos.Media.Domain.Model.ThumbnailGenerator.html">
 							ThumbnailGenerator						</a>
 							</li>
@@ -791,10 +796,18 @@
 
 
 		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html">AbstractThumbnailGenerator</a></li>
+				<li><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.DocumentThumbnailGenerator.html">DocumentThumbnailGenerator</a></li>
+				<li><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.FontDocumentThumbnailGenerator.html">FontDocumentThumbnailGenerator</a></li>
+				<li><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.IconThumbnailGenerator.html">IconThumbnailGenerator</a></li>
+				<li class="active"><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html">ImageThumbnailGenerator</a></li>
+			</ul>
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-Neos.ContentRepository.Domain.ValueObject.PropertyCollectionInterface.html">PropertyCollectionInterface</a></li>
+				<li><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.ThumbnailGeneratorInterface.html">ThumbnailGeneratorInterface</a></li>
 			</ul>
 
 
@@ -808,28 +821,228 @@
 
 <div id="right">
 	<div id="rightInner">
-<div id="source">
-	<pre class="numbers"><code><span class="l"><a href="#1"> 1 </a></span><span class="l"><a href="#2"> 2 </a></span><span class="l"><a href="#3"> 3 </a></span><span class="l"><a href="#4"> 4 </a></span><span class="l"><a href="#5"> 5 </a></span><span class="l"><a href="#6"> 6 </a></span></span><span class="l"><a href="#7"> 7 </a></span></span><span class="l"><a href="#8"> 8 </a></span></span><span class="l"><a href="#9"> 9 </a></span></span><span class="l"><a href="#10">10 </a></span></span><span class="l"><a href="#11">11 </a></span></span><span class="l"><a href="#12">12 </a></span></span><span class="l"><a href="#13">13 </a></span></span><span class="l"><a href="#14">14 </a></span><span class="l"><a href="#15">15 </a></span><span class="l"><a href="#16">16 </a></span><span class="l"><a href="#17">17 </a></span><span class="l"><a href="#18">18 </a></span><span class="l"><a href="#19">19 </a></span><span class="l"><a href="#20">20 </a></span></code></pre>
-	<pre class="code"><code><span id="1" class="l"><span class="xlang">&lt;?php</span>
-</span><span id="2" class="l"><span class="php-keyword1">declare</span>(strict_types=<span class="php-num">1</span>);
-</span><span id="3" class="l">
-</span><span id="4" class="l"><span class="php-keyword1">namespace</span> Neos\ContentRepository\Domain\ValueObject;
-</span><span id="5" class="l">
-</span><span id="6" class="l"><span class="php-comment">/*
-</span></span><span id="7" class="l"><span class="php-comment"> * This file is part of the Neos.ContentRepository package.
-</span></span><span id="8" class="l"><span class="php-comment"> *
-</span></span><span id="9" class="l"><span class="php-comment"> * (c) Contributors of the Neos Project - www.neos.io
-</span></span><span id="10" class="l"><span class="php-comment"> *
-</span></span><span id="11" class="l"><span class="php-comment"> * This package is Open Source Software. For the full copyright and license
-</span></span><span id="12" class="l"><span class="php-comment"> * information, please view the LICENSE file which was distributed with this
-</span></span><span id="13" class="l"><span class="php-comment"> * source code.
-</span></span><span id="14" class="l"><span class="php-comment"> */</span>
-</span><span id="15" class="l">
-</span><span id="16" class="l">
-</span><span id="17" class="l"><span class="php-keyword1">interface</span> PropertyCollectionInterface <span class="php-keyword1">extends</span> \ArrayAccess, \IteratorAggregate
-</span><span id="18" class="l">{
-</span><span id="19" class="l">}
-</span><span id="20" class="l"></span></code></pre>
+<div id="content" class="class">
+	<h1>Class ImageThumbnailGenerator</h1>
+
+
+	<div class="description">
+	<p>A system-generated preview version of an Image</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html"><span>Neos\Media\Domain\Model\ThumbnailGenerator\AbstractThumbnailGenerator</span></a>
+			
+			 implements 
+				<a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.ThumbnailGeneratorInterface.html"><span>Neos\Media\Domain\Model\ThumbnailGenerator\ThumbnailGeneratorInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Neos\Media\Domain\Model\ThumbnailGenerator\ImageThumbnailGenerator</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Neos.html">Neos</a>\<a href="namespace-Neos.Media.html">Media</a>\<a href="namespace-Neos.Media.Domain.html">Domain</a>\<a href="namespace-Neos.Media.Domain.Model.html">Model</a>\<a href="namespace-Neos.Media.Domain.Model.ThumbnailGenerator.html">ThumbnailGenerator</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Neos.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html#22-90" title="Go to source code">Neos.Media/Classes/Domain/Model/ThumbnailGenerator/ImageThumbnailGenerator.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="canRefresh" id="_canRefresh">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_canRefresh">#</a>
+			<code><a href="source-class-Neos.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html#41-50" title="Go to source code">canRefresh</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$thumbnail</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#_canRefresh">Neos\Media\Domain\Model\ThumbnailGenerator\AbstractThumbnailGenerator::canRefresh</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="refresh" id="_refresh">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_refresh">#</a>
+			<code><a href="source-class-Neos.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html#52-89" title="Go to source code">refresh</a>( <span><code><a href="class-Neos.Media.Domain.Model.Thumbnail.html">Neos\Media\Domain\Model\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$thumbnail</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Media.Exception.NoThumbnailAvailableException.html">Neos\Media\Exception\NoThumbnailAvailableException</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#methods">Neos\Media\Domain\Model\ThumbnailGenerator\AbstractThumbnailGenerator</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#_getOption">getOption()</a></code>, 
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#_getPriority">getPriority()</a></code>, 
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#_isExtensionSupported">isExtensionSupported()</a></code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="priority" id="$priority">
+			<td class="attributes"><code>
+				protected static 
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html#27-33" title="Go to source code"><var>$priority</var></a>
+
+				<div class="description short">
+					<p>The priority for this thumbnail generator.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The priority for this thumbnail generator.</p>
+
+						<h4>Api</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$priority" class="anchor">#</a>
+					<code><span class="php-num">5</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="imageService" id="$imageService">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Neos.Media.Domain.Service.ImageService.html">Neos\Media\Domain\Service\ImageService</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Media.Domain.Model.ThumbnailGenerator.ImageThumbnailGenerator.html#35-39" title="Go to source code"><var>$imageService</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+						<h4>Flow\inject</h4>
+						<div class="list">
+						</div>
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$imageService" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#properties">Neos\Media\Domain\Model\ThumbnailGenerator\AbstractThumbnailGenerator</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#$environment"><var>$environment</var></a></code>, 
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#$imagineService"><var>$imagineService</var></a></code>, 
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#$options"><var>$options</var></a></code>, 
+				<code><a href="class-Neos.Media.Domain.Model.ThumbnailGenerator.AbstractThumbnailGenerator.html#$resourceManager"><var>$resourceManager</var></a></code>
+			</p>
+		</div>
+
+
+
+
+
 </div>
 	</div>
 
@@ -838,6 +1051,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?68f0452e661dc9378ff0d852db68133e87d3fdda"></script>
+<script src="elementlist.js?cd8a0b68954d07f469fdf7c0980250e16119258c"></script>
 </body>
 </html>
