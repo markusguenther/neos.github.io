@@ -889,8 +889,8 @@
 </span><span id="70" class="l">                    <span class="php-keyword1">break</span>;
 </span><span id="71" class="l">                }
 </span><span id="72" class="l">                <span class="php-comment">// stop at sites</span>
-</span><span id="73" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;findNodePath() === SiteService::SITES_ROOT_PATH) {
-</span><span id="74" class="l">                    <span class="php-keyword1">continue</span>;
+</span><span id="73" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$node</span>-&gt;findNodePath() == SiteService::SITES_ROOT_PATH) {
+</span><span id="74" class="l">                    <span class="php-keyword1">break</span>;
 </span><span id="75" class="l">                }
 </span><span id="76" class="l">                <span class="php-var">$parents</span>[] = <span class="php-var">$node</span>;
 </span><span id="77" class="l">            } <span class="php-keyword1">while</span> (<span class="php-keyword1">true</span>);
