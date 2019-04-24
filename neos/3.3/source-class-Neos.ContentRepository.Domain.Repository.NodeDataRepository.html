@@ -1901,13 +1901,13 @@
 </span><span id="1093" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="1094" class="l">                <span class="php-var">$negate</span> = <span class="php-keyword1">false</span>;
 </span><span id="1095" class="l">            }
-</span><span id="1096" class="l">            <span class="php-var">$nodeTypeFilterPartSubTypes</span> = <span class="php-keyword2">array_merge</span>([<span class="php-var">$nodeTypeFilterPart</span>], <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-var">$nodeTypeFilterPart</span>));
+</span><span id="1096" class="l">            <span class="php-var">$nodeTypeFilterPartSubTypes</span> = <span class="php-keyword2">array_merge</span>([<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType(<span class="php-var">$nodeTypeFilterPart</span>)], <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-var">$nodeTypeFilterPart</span>));
 </span><span id="1097" class="l">
 </span><span id="1098" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypeFilterPartSubTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeTypeFilterPartSubType</span>) {
 </span><span id="1099" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$negate</span> === <span class="php-keyword1">true</span>) {
-</span><span id="1100" class="l">                    <span class="php-var">$constraints</span>[<span class="php-quote">'excludeNodeTypes'</span>][] = <span class="php-var">$nodeTypeFilterPartSubType</span>;
+</span><span id="1100" class="l">                    <span class="php-var">$constraints</span>[<span class="php-quote">'excludeNodeTypes'</span>][] = <span class="php-var">$nodeTypeFilterPartSubType</span>-&gt;getName();
 </span><span id="1101" class="l">                } <span class="php-keyword1">else</span> {
-</span><span id="1102" class="l">                    <span class="php-var">$constraints</span>[<span class="php-quote">'includeNodeTypes'</span>][] = <span class="php-var">$nodeTypeFilterPartSubType</span>;
+</span><span id="1102" class="l">                    <span class="php-var">$constraints</span>[<span class="php-quote">'includeNodeTypes'</span>][] = <span class="php-var">$nodeTypeFilterPartSubType</span>-&gt;getName();
 </span><span id="1103" class="l">                }
 </span><span id="1104" class="l">            }
 </span><span id="1105" class="l">        }
@@ -1933,13 +1933,13 @@
 </span><span id="1125" class="l">            } <span class="php-keyword1">else</span> {
 </span><span id="1126" class="l">                <span class="php-var">$negate</span> = <span class="php-keyword1">false</span>;
 </span><span id="1127" class="l">            }
-</span><span id="1128" class="l">            <span class="php-var">$nodeTypeFilterPartSubTypes</span> = <span class="php-keyword2">array_merge</span>([<span class="php-var">$nodeTypeFilterPart</span>], <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-var">$nodeTypeFilterPart</span>, <span class="php-keyword1">false</span>));
+</span><span id="1128" class="l">            <span class="php-var">$nodeTypeFilterPartSubTypes</span> = <span class="php-keyword2">array_merge</span>([<span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getNodeType(<span class="php-var">$nodeTypeFilterPart</span>)], <span class="php-var">$this</span>-&gt;nodeTypeManager-&gt;getSubNodeTypes(<span class="php-var">$nodeTypeFilterPart</span>, <span class="php-keyword1">false</span>));
 </span><span id="1129" class="l">
 </span><span id="1130" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$nodeTypeFilterPartSubTypes</span> <span class="php-keyword1">as</span> <span class="php-var">$nodeTypeFilterPartSubType</span>) {
 </span><span id="1131" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$negate</span> === <span class="php-keyword1">true</span>) {
-</span><span id="1132" class="l">                    <span class="php-var">$excludeNodeTypeConstraints</span>[] = <span class="php-var">$query</span>-&gt;logicalNot(<span class="php-var">$query</span>-&gt;equals(<span class="php-quote">'nodeType'</span>, <span class="php-var">$nodeTypeFilterPartSubType</span>));
+</span><span id="1132" class="l">                    <span class="php-var">$excludeNodeTypeConstraints</span>[] = <span class="php-var">$query</span>-&gt;logicalNot(<span class="php-var">$query</span>-&gt;equals(<span class="php-quote">'nodeType'</span>, <span class="php-var">$nodeTypeFilterPartSubType</span>-&gt;getName()));
 </span><span id="1133" class="l">                } <span class="php-keyword1">else</span> {
-</span><span id="1134" class="l">                    <span class="php-var">$includeNodeTypeConstraints</span>[] = <span class="php-var">$query</span>-&gt;equals(<span class="php-quote">'nodeType'</span>, <span class="php-var">$nodeTypeFilterPartSubType</span>);
+</span><span id="1134" class="l">                    <span class="php-var">$includeNodeTypeConstraints</span>[] = <span class="php-var">$query</span>-&gt;equals(<span class="php-quote">'nodeType'</span>, <span class="php-var">$nodeTypeFilterPartSubType</span>-&gt;getName());
 </span><span id="1135" class="l">                }
 </span><span id="1136" class="l">            }
 </span><span id="1137" class="l">        }
