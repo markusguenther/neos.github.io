@@ -1125,11 +1125,11 @@
 </span><span id="271" class="l">
 </span><span id="272" class="l">    <span class="php-comment">/**
 </span></span><span id="273" class="l"><span class="php-comment">     * Returns a regex pattern including enclosing characters, that matches any of the configured
-</span></span><span id="274" class="l"><span class="php-comment">     * blacklist paths inside &quot;Neos.Flow.i18n.scan.excludePatterns&quot;.
+</span></span><span id="274" class="l"><span class="php-comment">     * exclude list configured inside &quot;Neos.Flow.i18n.scan.excludePatterns&quot;.
 </span></span><span id="275" class="l"><span class="php-comment">     *
-</span></span><span id="276" class="l"><span class="php-comment">     * @return string The regex pattern matching the configured blacklist
+</span></span><span id="276" class="l"><span class="php-comment">     * @return string The regex pattern matching the configured exclude list
 </span></span><span id="277" class="l"><span class="php-comment">     */</span>
-</span><span id="278" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getScanBlacklistPattern()
+</span><span id="278" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getScanExcludePattern()
 </span><span id="279" class="l">    {
 </span><span id="280" class="l">        <span class="php-var">$pattern</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">'|'</span>, <span class="php-keyword2">array_keys</span>(<span class="php-keyword2">array_filter</span>((<span class="php-keyword1">array</span>)<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'scan'</span>][<span class="php-quote">'excludePatterns'</span>])));
 </span><span id="281" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$pattern</span> !== <span class="php-quote">''</span>) {
@@ -1158,11 +1158,11 @@
 </span></span><span id="304" class="l"><span class="php-comment">     */</span>
 </span><span id="305" class="l">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> generateAvailableLocalesCollectionByScanningFilesystem()
 </span><span id="306" class="l">    {
-</span><span id="307" class="l">        <span class="php-var">$whitelistPaths</span> = <span class="php-keyword2">array_keys</span>(<span class="php-keyword2">array_filter</span>((<span class="php-keyword1">array</span>)<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'scan'</span>][<span class="php-quote">'includePaths'</span>]));
-</span><span id="308" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$whitelistPaths</span> === []) {
+</span><span id="307" class="l">        <span class="php-var">$includePaths</span> = <span class="php-keyword2">array_keys</span>(<span class="php-keyword2">array_filter</span>((<span class="php-keyword1">array</span>)<span class="php-var">$this</span>-&gt;settings[<span class="php-quote">'scan'</span>][<span class="php-quote">'includePaths'</span>]));
+</span><span id="308" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$includePaths</span> === []) {
 </span><span id="309" class="l">            <span class="php-keyword1">return</span>;
 </span><span id="310" class="l">        }
-</span><span id="311" class="l">        <span class="php-var">$blacklistPattern</span> = <span class="php-var">$this</span>-&gt;getScanBlacklistPattern();
+</span><span id="311" class="l">        <span class="php-var">$excludePattern</span> = <span class="php-var">$this</span>-&gt;getScanExcludePattern();
 </span><span id="312" class="l">
 </span><span id="313" class="l">        <span class="php-comment">/** @var FlowPackageInterface $activePackage */</span>
 </span><span id="314" class="l">        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;packageManager-&gt;getFlowPackages() <span class="php-keyword1">as</span> <span class="php-var">$activePackage</span>) {
@@ -1173,7 +1173,7 @@
 </span><span id="319" class="l">            }
 </span><span id="320" class="l">
 </span><span id="321" class="l">            <span class="php-var">$directories</span> = [];
-</span><span id="322" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$whitelistPaths</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span>) {
+</span><span id="322" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$includePaths</span> <span class="php-keyword1">as</span> <span class="php-var">$path</span>) {
 </span><span id="323" class="l">                <span class="php-var">$scanPath</span> = Files::concatenatePaths([<span class="php-var">$packageResourcesPath</span>, <span class="php-var">$path</span>]);
 </span><span id="324" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$scanPath</span>)) {
 </span><span id="325" class="l">                    <span class="php-keyword2">array_push</span>(<span class="php-var">$directories</span>, Files::getNormalizedPath(<span class="php-var">$scanPath</span>));
@@ -1183,7 +1183,7 @@
 </span><span id="329" class="l">            <span class="php-keyword1">while</span> (<span class="php-var">$directories</span> !== []) {
 </span><span id="330" class="l">                <span class="php-var">$currentDirectory</span> = <span class="php-keyword2">array_pop</span>(<span class="php-var">$directories</span>);
 </span><span id="331" class="l">                <span class="php-var">$relativeDirectory</span> = <span class="php-quote">'/'</span> . <span class="php-keyword2">str_replace</span>(<span class="php-var">$packageResourcesPath</span>, <span class="php-quote">''</span>, <span class="php-var">$currentDirectory</span>);
-</span><span id="332" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$blacklistPattern</span> !== <span class="php-quote">''</span> &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-var">$blacklistPattern</span>, <span class="php-var">$relativeDirectory</span>) === <span class="php-num">1</span>) {
+</span><span id="332" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$excludePattern</span> !== <span class="php-quote">''</span> &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-var">$excludePattern</span>, <span class="php-var">$relativeDirectory</span>) === <span class="php-num">1</span>) {
 </span><span id="333" class="l">                    <span class="php-keyword1">continue</span>;
 </span><span id="334" class="l">                }
 </span><span id="335" class="l">
@@ -1223,6 +1223,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?c49dbe5e3b031d954b5000d85221d2eeea8a0337"></script>
+<script src="elementlist.js?f98a8c5902203d7dd9b3904cc4de7c2dd61bd36b"></script>
 </body>
 </html>
