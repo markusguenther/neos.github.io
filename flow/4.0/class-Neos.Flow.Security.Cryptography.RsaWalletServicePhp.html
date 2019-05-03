@@ -883,7 +883,7 @@
 
 				<b>Flow\scope(&quot;singleton&quot;)</b>
 				<br>
-			<b>Located at</b> <a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#21-437" title="Go to source code">Neos.Flow/Classes/Security/Cryptography/RsaWalletServicePhp.php</a>
+			<b>Located at</b> <a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#21-471" title="Go to source code">Neos.Flow/Classes/Security/Cryptography/RsaWalletServicePhp.php</a>
 		<br>
 	</div>
 
@@ -903,7 +903,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_injectSettings">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#49-68" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#55-81" title="Go to source code">injectSettings</a>( <span>array <var>$settings</var></span> )</code>
 
 			<div class="description short">
 				<p>Injects the OpenSSL configuration to be used</p>
@@ -922,7 +922,8 @@
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><a href="class-Neos.Flow.Security.Exception.MissingConfigurationException.html">Neos\Flow\Security\Exception\MissingConfigurationException</a></code>
+						<code><a href="class-Neos.Flow.Security.Exception.MissingConfigurationException.html">Neos\Flow\Security\Exception\MissingConfigurationException</a></code><br>
+						<code><a href="class-Neos.Flow.Security.Exception.html">Neos\Flow\Security\Exception</a></code>
 					</div>
 
 
@@ -941,7 +942,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initializeObject">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#70-81" title="Go to source code">initializeObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#83-94" title="Go to source code">initializeObject</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the rsa wallet service by fetching the keys from the keystore file</p>
@@ -970,7 +971,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generateNewKeypair">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#83-106" title="Go to source code">generateNewKeypair</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#96-119" title="Go to source code">generateNewKeypair</a>( <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Generates a new keypair and returns a fingerprint to refer to it</p>
@@ -1014,7 +1015,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerKeyPairFromPrivateKeyString">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#108-126" title="Go to source code">registerKeyPairFromPrivateKeyString</a>( <span>string <var>$privateKeyString</var></span>, <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#121-139" title="Go to source code">registerKeyPairFromPrivateKeyString</a>( <span>string <var>$privateKeyString</var></span>, <span>boolean <var>$usedForPasswords</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Adds the specified keypair to the local store and returns a fingerprint to refer to it.</p>
@@ -1056,7 +1057,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_registerPublicKeyFromString">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#128-144" title="Go to source code">registerPublicKeyFromString</a>( <span>string <var>$publicKeyString</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#141-157" title="Go to source code">registerPublicKeyFromString</a>( <span>string <var>$publicKeyString</var></span> )</code>
 
 			<div class="description short">
 				<p>Adds the specified public key to the wallet and returns a fingerprint to refer to it.
@@ -1100,7 +1101,7 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicKey">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#146-160" title="Go to source code">getPublicKey</a>( <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#159-173" title="Go to source code">getPublicKey</a>( <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the public key for the given fingerprint</p>
@@ -1144,7 +1145,7 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_encryptWithPublicKey">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#162-175" title="Go to source code">encryptWithPublicKey</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#175-195" title="Go to source code">encryptWithPublicKey</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Encrypts the given plaintext with the public key identified by the given fingerprint</p>
@@ -1167,6 +1168,10 @@ verify incoming data.</p>
 						string<br>The ciphertext
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Security.Exception.html">Neos\Flow\Security\Exception</a></code><br>If encryption failed for some other reason
+					</div>
 
 
 
@@ -1186,7 +1191,7 @@ verify incoming data.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_decrypt">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#177-201" title="Go to source code">decrypt</a>( <span>string <var>$cipher</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#197-222" title="Go to source code">decrypt</a>( <span>string <var>$cipher</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Decrypts the given cipher with the private key identified by the given fingerprint
@@ -1216,7 +1221,8 @@ to check passwords!</p>
 					<h4>Throws</h4>
 					<div class="list">
 						<code><a href="class-Neos.Flow.Security.Exception.InvalidKeyPairIdException.html">Neos\Flow\Security\Exception\InvalidKeyPairIdException</a></code><br>If the given fingerprint identifies no valid keypair<br>
-						<code><a href="class-Neos.Flow.Security.Exception.DecryptionNotAllowedException.html">Neos\Flow\Security\Exception\DecryptionNotAllowedException</a></code><br>If the given fingerprint identifies a keypair for encrypted passwords
+						<code><a href="class-Neos.Flow.Security.Exception.DecryptionNotAllowedException.html">Neos\Flow\Security\Exception\DecryptionNotAllowedException</a></code><br>If the given fingerprint identifies a keypair for encrypted passwords<br>
+						<code><a href="class-Neos.Flow.Security.Exception.html">Neos\Flow\Security\Exception</a></code><br>If decryption failed for some other reason
 					</div>
 
 
@@ -1237,7 +1243,7 @@ to check passwords!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sign">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#203-221" title="Go to source code">sign</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#224-242" title="Go to source code">sign</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Signs the given plaintext with the private key identified by the given fingerprint</p>
@@ -1283,7 +1289,7 @@ to check passwords!</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifySignature">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#223-242" title="Go to source code">verifySignature</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$signature</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#244-263" title="Go to source code">verifySignature</a>( <span>string <var>$plaintext</var></span>, <span>string <var>$signature</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks whether the given signature is valid for the given plaintext
@@ -1333,7 +1339,7 @@ with the public key identified by the given fingerprint</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_checkRSAEncryptedPassword">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#244-264" title="Go to source code">checkRSAEncryptedPassword</a>( <span>string <var>$encryptedPassword</var></span>, <span>string <var>$passwordHash</var></span>, <span>string <var>$salt</var></span>, <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#265-285" title="Go to source code">checkRSAEncryptedPassword</a>( <span>string <var>$encryptedPassword</var></span>, <span>string <var>$passwordHash</var></span>, <span>string <var>$salt</var></span>, <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if the given encrypted password is correct by
@@ -1385,7 +1391,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_destroyKeypair">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#266-281" title="Go to source code">destroyKeypair</a>( <span>string <var>$fingerprint</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#287-302" title="Go to source code">destroyKeypair</a>( <span>string <var>$fingerprint</var></span> )</code>
 
 			<div class="description short">
 				<p>Destroys the keypair identified by the given fingerprint</p>
@@ -1425,7 +1431,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPrivateKeyString">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#283-293" title="Go to source code">getPrivateKeyString</a>( <span>resource <var>$keyResource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#304-314" title="Go to source code">getPrivateKeyString</a>( <span>resource <var>$keyResource</var></span> )</code>
 
 			<div class="description short">
 				<p>Exports the private key string from the KeyResource</p>
@@ -1463,7 +1469,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicKeyString">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#295-306" title="Go to source code">getPublicKeyString</a>( <span>resource <var>$keyResource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#316-327" title="Go to source code">getPublicKeyString</a>( <span>resource <var>$keyResource</var></span> )</code>
 
 			<div class="description short">
 				<p>Exports the public key string from the KeyResource</p>
@@ -1501,7 +1507,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getModulus">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#308-318" title="Go to source code">getModulus</a>( <span>resource <var>$keyResource</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#329-339" title="Go to source code">getModulus</a>( <span>resource <var>$keyResource</var></span> )</code>
 
 			<div class="description short">
 				<p>Exports the public modulus HEX string from the KeyResource</p>
@@ -1539,7 +1545,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_decryptWithPrivateKey">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#320-334" title="Go to source code">decryptWithPrivateKey</a>( <span>string <var>$cipher</var></span>, <span><code><a href="class-Neos.Flow.Security.Cryptography.OpenSslRsaKey.html">Neos\Flow\Security\Cryptography\OpenSslRsaKey</a></code> <var>$privateKey</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#341-368" title="Go to source code">decryptWithPrivateKey</a>( <span>string <var>$cipher</var></span>, <span><code><a href="class-Neos.Flow.Security.Cryptography.OpenSslRsaKey.html">Neos\Flow\Security\Cryptography\OpenSslRsaKey</a></code> <var>$privateKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Decrypts the given ciphertext with the given private key</p>
@@ -1562,6 +1568,10 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 						string<br>The decrypted plaintext
 					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Neos.Flow.Security.Exception.html">Neos\Flow\Security\Exception</a></code>
+					</div>
 
 
 
@@ -1579,7 +1589,7 @@ comparing it's md5 hash. The salt is appended to the decrypted password string b
 
 			<td class="name"><div>
 			<a class="anchor" href="#_storeKeyPair">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#336-360" title="Go to source code">storeKeyPair</a>( <span><code><a href="class-Neos.Flow.Security.Cryptography.OpenSslRsaKey.html">Neos\Flow\Security\Cryptography\OpenSslRsaKey</a></code> <var>$publicKey</var></span>, <span><code><a href="class-Neos.Flow.Security.Cryptography.OpenSslRsaKey.html">Neos\Flow\Security\Cryptography\OpenSslRsaKey</a></code> <var>$privateKey</var></span>, <span>boolean <var>$usedForPasswords</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#370-394" title="Go to source code">storeKeyPair</a>( <span><code><a href="class-Neos.Flow.Security.Cryptography.OpenSslRsaKey.html">Neos\Flow\Security\Cryptography\OpenSslRsaKey</a></code> <var>$publicKey</var></span>, <span><code><a href="class-Neos.Flow.Security.Cryptography.OpenSslRsaKey.html">Neos\Flow\Security\Cryptography\OpenSslRsaKey</a></code> <var>$privateKey</var></span>, <span>boolean <var>$usedForPasswords</var></span> )</code>
 
 			<div class="description short">
 				<p>Stores the given keypair and returns its fingerprint.</p>
@@ -1624,7 +1634,7 @@ consistent key access.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_shutdownObject">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#362-387" title="Go to source code">shutdownObject</a>( )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#396-421" title="Go to source code">shutdownObject</a>( )</code>
 
 			<div class="description short">
 				<p>Stores the keys array in the keystore file</p>
@@ -1657,7 +1667,7 @@ consistent key access.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFingerprintByPublicKey">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#389-415" title="Go to source code">getFingerprintByPublicKey</a>( <span>string <var>$publicKeyString</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#423-449" title="Go to source code">getFingerprintByPublicKey</a>( <span>string <var>$publicKeyString</var></span> )</code>
 
 			<div class="description short">
 				<p>Generate an OpenSSH fingerprint for a RSA public key</p>
@@ -1705,7 +1715,7 @@ using this:</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sshConvertMpint">#</a>
-			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#417-436" title="Go to source code">sshConvertMpint</a>( <span>string <var>$bytes</var></span> )</code>
+			<code><a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#451-470" title="Go to source code">sshConvertMpint</a>( <span>string <var>$bytes</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert a binary representation of a multiple precision integer
@@ -1827,6 +1837,31 @@ to mpint format defined for SSH RSA key exchange (used in "ssh-rsa" format).</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="paddingAlgorithm" id="$paddingAlgorithm">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#44-48" title="Go to source code"><var>$paddingAlgorithm</var></a>
+
+				<div class="description short">
+					<p>The padding to use for OpenSSL encryption/decryption</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The padding to use for OpenSSL encryption/decryption</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$paddingAlgorithm" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 		<tr data-order="saveKeysOnShutdown" id="$saveKeysOnShutdown">
 			<td class="attributes"><code>
 				protected  
@@ -1834,7 +1869,7 @@ to mpint format defined for SSH RSA key exchange (used in "ssh-rsa" format).</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#44-47" title="Go to source code"><var>$saveKeysOnShutdown</var></a>
+					<a href="source-class-Neos.Flow.Security.Cryptography.RsaWalletServicePhp.html#50-53" title="Go to source code"><var>$saveKeysOnShutdown</var></a>
 
 				<div class="description short">
 					
@@ -1868,6 +1903,6 @@ to mpint format defined for SSH RSA key exchange (used in "ssh-rsa" format).</p>
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?a7812365779fba8053f8fcb6e06113fe3f5d5b8a"></script>
+<script src="elementlist.js?124e1bd74bdfbdd49611785ec583cc4bd94dcedc"></script>
 </body>
 </html>
