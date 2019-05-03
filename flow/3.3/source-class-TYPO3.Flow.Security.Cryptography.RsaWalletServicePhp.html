@@ -1118,7 +1118,7 @@
 </span></span><span id="178" class="l"><span class="php-comment">     * @param string $plaintext The plaintext to encrypt
 </span></span><span id="179" class="l"><span class="php-comment">     * @param string $fingerprint The fingerprint to identify to correct public key
 </span></span><span id="180" class="l"><span class="php-comment">     * @return string The ciphertext
-</span></span><span id="181" class="l"><span class="php-comment">     * @throws Exception If encryption failed for some other reason
+</span></span><span id="181" class="l"><span class="php-comment">     * @throws SecurityException If encryption failed for some other reason
 </span></span><span id="182" class="l"><span class="php-comment">     */</span>
 </span><span id="183" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> encryptWithPublicKey(<span class="php-var">$plaintext</span>, <span class="php-var">$fingerprint</span>)
 </span><span id="184" class="l">    {
@@ -1128,7 +1128,7 @@
 </span><span id="188" class="l">            <span class="php-keyword1">while</span> ((<span class="php-var">$errorMessage</span> = <span class="php-keyword2">openssl_error_string</span>()) !== <span class="php-keyword1">false</span>) {
 </span><span id="189" class="l">                <span class="php-var">$openSslErrors</span>[] = <span class="php-var">$errorMessage</span>;
 </span><span id="190" class="l">            }
-</span><span id="191" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Encryption failed, OpenSSL error: %s'</span>, <span class="php-keyword2">implode</span>(<span class="php-keyword2">chr</span>(<span class="php-num">10</span>), <span class="php-var">$openSslErrors</span>)), <span class="php-num">1556609369</span>);
+</span><span id="191" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> SecurityException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Encryption failed, OpenSSL error: %s'</span>, <span class="php-keyword2">implode</span>(<span class="php-keyword2">chr</span>(<span class="php-num">10</span>), <span class="php-var">$openSslErrors</span>)), <span class="php-num">1556609369</span>);
 </span><span id="192" class="l">        }
 </span><span id="193" class="l">
 </span><span id="194" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$cipher</span>;
@@ -1144,7 +1144,7 @@
 </span></span><span id="204" class="l"><span class="php-comment">     * @return string The decrypted text
 </span></span><span id="205" class="l"><span class="php-comment">     * @throws InvalidKeyPairIdException If the given fingerprint identifies no valid keypair
 </span></span><span id="206" class="l"><span class="php-comment">     * @throws DecryptionNotAllowedException If the given fingerprint identifies a keypair for encrypted passwords
-</span></span><span id="207" class="l"><span class="php-comment">     * @throws Exception If decryption failed for some other reason
+</span></span><span id="207" class="l"><span class="php-comment">     * @throws SecurityException If decryption failed for some other reason
 </span></span><span id="208" class="l"><span class="php-comment">     */</span>
 </span><span id="209" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> decrypt(<span class="php-var">$cipher</span>, <span class="php-var">$fingerprint</span>)
 </span><span id="210" class="l">    {
@@ -1284,7 +1284,7 @@
 </span></span><span id="344" class="l"><span class="php-comment">     * @param string $cipher The ciphertext to decrypt
 </span></span><span id="345" class="l"><span class="php-comment">     * @param OpenSslRsaKey $privateKey The private key
 </span></span><span id="346" class="l"><span class="php-comment">     * @return string The decrypted plaintext
-</span></span><span id="347" class="l"><span class="php-comment">     * @throws Exception
+</span></span><span id="347" class="l"><span class="php-comment">     * @throws SecurityException
 </span></span><span id="348" class="l"><span class="php-comment">     */</span>
 </span><span id="349" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> decryptWithPrivateKey(<span class="php-var">$cipher</span>, OpenSslRsaKey <span class="php-var">$privateKey</span>)
 </span><span id="350" class="l">    {
@@ -1301,7 +1301,7 @@
 </span><span id="361" class="l">            <span class="php-keyword1">while</span> ((<span class="php-var">$errorMessage</span> = <span class="php-keyword2">openssl_error_string</span>()) !== <span class="php-keyword1">false</span>) {
 </span><span id="362" class="l">                <span class="php-var">$openSslErrors</span>[] = <span class="php-var">$errorMessage</span>;
 </span><span id="363" class="l">            }
-</span><span id="364" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Decryption failed, OpenSSL error: %s'</span>, <span class="php-keyword2">implode</span>(<span class="php-keyword2">chr</span>(<span class="php-num">10</span>), <span class="php-var">$openSslErrors</span>)), <span class="php-num">1556609762</span>);
+</span><span id="364" class="l">            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> SecurityException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Decryption failed, OpenSSL error: %s'</span>, <span class="php-keyword2">implode</span>(<span class="php-keyword2">chr</span>(<span class="php-num">10</span>), <span class="php-var">$openSslErrors</span>)), <span class="php-num">1556609762</span>);
 </span><span id="365" class="l">        }
 </span><span id="366" class="l">
 </span><span id="367" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$decrypted</span>;
