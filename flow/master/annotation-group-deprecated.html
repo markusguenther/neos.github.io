@@ -953,7 +953,6 @@
 				<li><a href="class-Neos.Flow.Log.Backend.FileBackend.html">Neos\Flow\Log\Backend\FileBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.JsonFileBackend.html">Neos\Flow\Log\Backend\JsonFileBackend</a></li>
 				<li><a href="class-Neos.Flow.Log.Backend.NullBackend.html">Neos\Flow\Log\Backend\NullBackend</a></li>
-				<li><a href="class-Neos.Flow.Log.Logger.html" class="deprecated">Neos\Flow\Log\Logger</a></li>
 				<li><a href="class-Neos.Flow.Log.PlainTextFormatter.html">Neos\Flow\Log\PlainTextFormatter</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.ModificationTimeStrategy.html">Neos\Flow\Monitor\ChangeDetectionStrategy\ModificationTimeStrategy</a></li>
 				<li><a href="class-Neos.Flow.Monitor.FileMonitor.html">Neos\Flow\Monitor\FileMonitor</a></li>
@@ -1286,11 +1285,8 @@
 				<li><a href="class-Neos.Flow.Log.Backend.BackendInterface.html">Neos\Flow\Log\Backend\BackendInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.LoggerInterface.html" class="deprecated">Neos\Flow\Log\LoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.PsrLoggerFactoryInterface.html">Neos\Flow\Log\PsrLoggerFactoryInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.PsrSecurityLoggerInterface.html">Neos\Flow\Log\PsrSecurityLoggerInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.PsrSystemLoggerInterface.html">Neos\Flow\Log\PsrSystemLoggerInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html" class="deprecated">Neos\Flow\Log\SecurityLoggerInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.SystemLoggerInterface.html" class="deprecated">Neos\Flow\Log\SystemLoggerInterface</a></li>
-				<li><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html" class="deprecated">Neos\Flow\Log\ThrowableLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.PsrSecurityLoggerInterface.html" class="deprecated">Neos\Flow\Log\PsrSecurityLoggerInterface</a></li>
+				<li><a href="class-Neos.Flow.Log.PsrSystemLoggerInterface.html" class="deprecated">Neos\Flow\Log\PsrSystemLoggerInterface</a></li>
 				<li><a href="class-Neos.Flow.Log.ThrowableStorageInterface.html">Neos\Flow\Log\ThrowableStorageInterface</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.ChangeDetectionStrategyInterface.html">Neos\Flow\Monitor\ChangeDetectionStrategy\ChangeDetectionStrategyInterface</a></li>
 				<li><a href="class-Neos.Flow.Monitor.ChangeDetectionStrategy.StrategyWithMarkDeletedInterface.html">Neos\Flow\Monitor\ChangeDetectionStrategy\StrategyWithMarkDeletedInterface</a></li>
@@ -1645,12 +1641,6 @@
 		</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-		<td>
-					Instead a \Psr\Log\LoggerInterface should be used in all places.<br>
-		</td>
-	</tr>
-	<tr>
 		<td class="name"><a href="class-Neos.Flow.Mvc.Response.html">Neos\Flow\Mvc\Response</a></td>
 		<td>
 		</td>
@@ -1668,21 +1658,15 @@
 		</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.SecurityLoggerInterface.html">Neos\Flow\Log\SecurityLoggerInterface</a></td>
+		<td class="name"><a href="class-Neos.Flow.Log.PsrSecurityLoggerInterface.html">Neos\Flow\Log\PsrSecurityLoggerInterface</a></td>
 		<td>
-					Replaced by PsrSecurityLoggerInterface<br>
+					since Flow 6.0<br>
 		</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.SystemLoggerInterface.html">Neos\Flow\Log\SystemLoggerInterface</a></td>
+		<td class="name"><a href="class-Neos.Flow.Log.PsrSystemLoggerInterface.html">Neos\Flow\Log\PsrSystemLoggerInterface</a></td>
 		<td>
-					replaced by PsrSystemLoggerInterface<br>
-		</td>
-	</tr>
-	<tr>
-		<td class="name"><a href="class-Neos.Flow.Log.ThrowableLoggerInterface.html">Neos\Flow\Log\ThrowableLoggerInterface</a></td>
-		<td>
-					Use a \Neos\Flow\Log\ThrowableStorageInterface instead.<br>
+					since Flow 6.0<br>
 		</td>
 	</tr>
 	<tr>
@@ -2261,12 +2245,6 @@ TODO: Make private after deprecation period</p><br>
 						</td>
 					</tr>
 					<tr>
-						<td class="name"><a href="class-Neos.Flow.Log.Logger.html">Neos\Flow\Log\Logger</a></td>
-						<td class="name"><code><a href="class-Neos.Flow.Log.Logger.html#_logException">logException()</a></code></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
 						<td class="name"><a href="class-Neos.Flow.ObjectManagement.ObjectManager.html">Neos\Flow\ObjectManagement\ObjectManager</a></td>
 						<td class="name"><code><a href="class-Neos.Flow.ObjectManagement.ObjectManager.html#_getSettingsByPath">getSettingsByPath()</a></code></td>
 						<td>
@@ -2684,19 +2662,6 @@ TODO: Make private after deprecation period</p><br>
 						<td class="name"><a href="class-Neos.Flow.Http.Uri.html#$arguments"><var>$arguments</var></a></td>
 						<td>
 									Since Flow 5.1, can be removed together with the respective method.<br>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Mvc.Controller.ActionController.html">Neos\Flow\Mvc\Controller\ActionController</a></td>
-						<td class="name"><a href="class-Neos.Flow.Mvc.Controller.ActionController.html#$systemLogger"><var>$systemLogger</var></a></td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td class="name"><a href="class-Neos.Flow.Persistence.Generic.Backend.AbstractBackend.html">Neos\Flow\Persistence\Generic\Backend\AbstractBackend</a></td>
-						<td class="name"><a href="class-Neos.Flow.Persistence.Generic.Backend.AbstractBackend.html#$systemLogger"><var>$systemLogger</var></a></td>
-						<td>
-									Use the PSR $this->logger<br>
 						</td>
 					</tr>
 					<tr>
