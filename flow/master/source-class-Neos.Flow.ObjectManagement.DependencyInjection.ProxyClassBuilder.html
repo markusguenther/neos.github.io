@@ -1152,7 +1152,7 @@
 </span><span id="305" class="l">                        <span class="php-keyword1">break</span>;
 </span><span id="306" class="l">
 </span><span id="307" class="l">                    <span class="php-keyword1">case</span> ConfigurationArgument::ARGUMENT_TYPES_SETTING:
-</span><span id="308" class="l">                        <span class="php-var">$assignments</span>[<span class="php-var">$argumentPosition</span>] = <span class="php-var">$assignmentPrologue</span> . <span class="php-quote">'\Neos\Flow\Core\Bootstrap::$staticObjectManager-&gt;getSettingsByPath(explode(\'.\', \''</span> . <span class="php-var">$argumentValue</span> . <span class="php-quote">'\'))'</span>;
+</span><span id="308" class="l">                        <span class="php-var">$assignments</span>[<span class="php-var">$argumentPosition</span>] = <span class="php-var">$assignmentPrologue</span> . <span class="php-quote">'\Neos\Flow\Core\Bootstrap::$staticObjectManager-&gt;get(\Neos\Flow\Configuration\ConfigurationManager::class)-&gt;getConfiguration(\Neos\Flow\Configuration\ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, \''</span> . <span class="php-var">$argumentValue</span> . <span class="php-quote">'\')'</span>;
 </span><span id="309" class="l">                        <span class="php-keyword1">break</span>;
 </span><span id="310" class="l">                }
 </span><span id="311" class="l">            }
@@ -1493,7 +1493,7 @@
 </span><span id="646" class="l">                        <span class="php-keyword1">break</span>;
 </span><span id="647" class="l">
 </span><span id="648" class="l">                    <span class="php-keyword1">case</span> ConfigurationArgument::ARGUMENT_TYPES_SETTING:
-</span><span id="649" class="l">                        <span class="php-var">$preparedArguments</span>[] = <span class="php-quote">'\Neos\Flow\Core\Bootstrap::$staticObjectManager-&gt;getSettingsByPath(explode(\'.\', \''</span> . <span class="php-var">$argumentValue</span> . <span class="php-quote">'\'))'</span>;
+</span><span id="649" class="l">                        <span class="php-var">$preparedArguments</span>[] = <span class="php-quote">'\Neos\Flow\Core\Bootstrap::$staticObjectManager-&gt;get(\Neos\Flow\Configuration\ConfigurationManager::class)-&gt;getConfiguration(\Neos\Flow\Configuration\ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, \''</span> . <span class="php-var">$argumentValue</span> . <span class="php-quote">'\')'</span>;
 </span><span id="650" class="l">                        <span class="php-keyword1">break</span>;
 </span><span id="651" class="l">                }
 </span><span id="652" class="l">            }
@@ -1550,6 +1550,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?ca0a2a9bacd76a8829db3109d9eb7de994d1efd8"></script>
+<script src="elementlist.js?f82a8d694d94a2e517ff6da9b8b660c2d6535b5d"></script>
 </body>
 </html>
