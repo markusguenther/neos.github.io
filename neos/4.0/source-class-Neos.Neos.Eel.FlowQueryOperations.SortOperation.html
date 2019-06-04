@@ -607,10 +607,6 @@
 						</a>
 							<ul>
 					<li>
-						<a href="namespace-Neos.Neos.Fusion.Cache.html">
-							Cache						</a>
-							</li>
-					<li>
 						<a href="namespace-Neos.Neos.Fusion.ExceptionHandlers.html">
 							ExceptionHandlers						</a>
 							</li>
@@ -859,7 +855,7 @@
 </span></span><span id="41" class="l"><span class="php-comment">     */</span>
 </span><span id="42" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> canEvaluate(<span class="php-var">$context</span>)
 </span><span id="43" class="l">    {
-</span><span id="44" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">count</span>(<span class="php-var">$context</span>) === <span class="php-num">0</span> || (<span class="php-keyword1">isset</span>(<span class="php-var">$context</span>[<span class="php-num">0</span>]) &amp;&amp; (<span class="php-var">$context</span>[<span class="php-num">0</span>] <span class="php-keyword1">instanceof</span> NodeInterface));
+</span><span id="44" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">count</span>(<span class="php-var">$context</span>) === <span class="php-num">0</span> || (<span class="php-keyword2">is_array</span>(<span class="php-var">$context</span>) === <span class="php-keyword1">true</span> &amp;&amp; (<span class="php-keyword2">current</span>(<span class="php-var">$context</span>) <span class="php-keyword1">instanceof</span> NodeInterface));
 </span><span id="45" class="l">    }
 </span><span id="46" class="l">
 </span><span id="47" class="l">    <span class="php-comment">/**
@@ -935,6 +931,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?d06d2e945153de19dc08f7500b41766b9d0e2985"></script>
-<script src="elementlist.js?cb6e5bec1c812a43b6957d753f00fa82ea65994e"></script>
+<script src="elementlist.js?d726fcf7aefabed0ce6f93bdedba30bb98bb6a67"></script>
 </body>
 </html>
