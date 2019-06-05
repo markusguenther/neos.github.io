@@ -918,7 +918,7 @@
 </span><span id="97" class="l">
 </span><span id="98" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$foundImageHandler</span> === <span class="php-keyword1">false</span>) {
 </span><span id="99" class="l">            <span class="php-var">$formElement</span> = <span class="php-var">$imageSection</span>-&gt;createElement(<span class="php-quote">'noImageLibrary'</span>, <span class="php-quote">'Neos.Form:StaticText'</span>);
-</span><span id="100" class="l">            <span class="php-var">$formElement</span>-&gt;setProperty(<span class="php-quote">'text'</span>, <span class="php-quote">'No suitable PHP extension for image manipulation was found. You can continue the setup but be aware that Neos might not work correctly without one of these extensions.'</span>);
+</span><span id="100" class="l">            <span class="php-var">$formElement</span>-&gt;setProperty(<span class="php-quote">'text'</span>, <span class="php-quote">'No suitable PHP extension for image manipulation was found. Please install one of the required PHP extensions and restart the php process. Then proceed with the setup.'</span>);
 </span><span id="101" class="l">            <span class="php-var">$formElement</span>-&gt;setProperty(<span class="php-quote">'elementClassAttribute'</span>, <span class="php-quote">'alert alert-error'</span>);
 </span><span id="102" class="l">        } <span class="php-keyword1">else</span> {
 </span><span id="103" class="l">            <span class="php-var">$formElement</span> = <span class="php-var">$imageSection</span>-&gt;createElement(<span class="php-quote">'configuredImageLibrary'</span>, <span class="php-quote">'Neos.Form:StaticText'</span>);
